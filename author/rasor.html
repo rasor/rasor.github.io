@@ -57,40 +57,41 @@
 <li>add a <code>favicon.ico</code> to root</li>
 <li>Fetch <code>.gitignore</code>from <a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore">https://github.com/getpelican/pelican-blog/blob/master/.gitignore</a> - save it to root</li>
 <li>Create a <code>~/README.md</code> - just for the repo</li>
-<li>Create a remote repo for your github page source in GitHub. Call it <code>username.github.io.pelican</code></li>
+<li>Install publich tool<ul>
+<li><code>pip install ghp-import</code></li>
+</ul>
+</li>
 <li>Create local git repo<ul>
-<li><code>git init</code>
-z* <code>git remote add origin https://github.com/rasor/rasor.github.io.pelican.git</code></li>
+<li><code>git init</code></li>
 </ul>
 </li>
-<li>Create a remote repo for your github page build in GitHub. Call it <code>username.github.io</code></li>
-<li>Connect to 2nd repo and print both remote repos<ul>
-<li><code>git remote add target https://github.com/rasor/rasor.github.io.git</code></li>
+<li>Create a remote repo via github.com for your github page build in GitHub. Call it <code>username.github.io</code></li>
+<li>Connect to repo and print remote repo<ul>
+<li><code>git remote add origin https://github.com/rasor/rasor.github.io.git</code></li>
 <li><code>git remote -v</code></li>
-<li><code>git branch pelican</code></li>
 </ul>
 </li>
-<li>Publish source<ul>
-<li><code>git checkout pelican</code></li>
+<li>Create new branch for the pelican source<ul>
+<li><code>git checkout -b pelican</code></li>
+</ul>
+</li>
+<li>(Foreach) Commit source<ul>
 <li><code>git add --all</code></li>
 <li><code>git commit -m "Initial commit"</code></li>
 <li><code>git push -u origin pelican</code></li>
 </ul>
 </li>
-<li>Install publich tool<ul>
-<li><code>pip install ghp-import</code></li>
-</ul>
-</li>
-<li><a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github">Publish build</a><ul>
+<li>(Foreach) <a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github">Publish build</a> build to master and publish<ul>
 <li><code>pelican content -o output -s pelicanconf.py</code></li>
 <li><code>ghp-import output -r origin -b master</code></li>
 <li><code>git push origin master</code></li>
+<li><code>git checkout pelican</code></li>
 </ul>
 </li>
 </ul>
 <h3>Links</h3>
 <ul>
-<li>Create a repo for your github page site following <a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li>Create a repo for your github page site <a href="https://pages.github.com/">https://pages.github.com/</a></li>
 <li><a href="http://docs.getpelican.com/en/stable/publish.html">http://docs.getpelican.com/en/stable/publish.html</a></li>
 <li><a href="http://docs.getpelican.com/en/stable/pelican-themes.html">http://docs.getpelican.com/en/stable/pelican-themes.html</a></li>
 <li><a href="https://github.com/tchapi/markdown-cheatsheet">https://github.com/tchapi/markdown-cheatsheet</a></li>
