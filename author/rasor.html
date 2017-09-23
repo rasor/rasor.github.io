@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Rasor's Tech Blog - @rasor</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Rasor's Tech Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/blog.html">#blog</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/welcome-to-my-pelican-blog-on-github-pages.html">Welcome to my Pelican blog on Github pages</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-09-23T20:20:00+02:00">
+                Published: lø 23 september 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
+        </address>
+<p>In <a href="/category/blog.html">#blog</a>.</p>
+
+</footer><!-- /.post-info --><p>The blog is created using <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a> and <a href="https://pages.github.com/">https://pages.github.com/</a></p>
+<h3>HowTo</h3>
+<ul>
+<li>Install Python</li>
+<li>As admin:<ul>
+<li><code>pip install pelican markdown</code></li>
+</ul>
+</li>
+<li>Create a folder for the Pelican source</li>
+<li><code>MKDIR username.github.io.pelican</code></li>
+<li><code>CD username.github.io.pelican</code></li>
+<li>Create a pelican site following <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a></li>
+<li><code>pelican-quickstart</code><ul>
+<li>Do you want to specify URL prefix? Answer https://username.github.io</li>
+<li>Do you want to upload using xxx? Answer N untill the xxx = GitHub Pages</li>
+</ul>
+</li>
+<li>Create a blog e.g <code>~/content/myfirstblog.md</code></li>
+<li><code>pelican content</code> </li>
+<li><code>cd output</code></li>
+<li><code>python -m pelican.server</code></li>
+<li>Browse to  http://localhost:8000/</li>
+<li>Optionally edit more settings in <code>pelicanconf.py</code> - see <a href="http://docs.getpelican.com/en/3.7.1/settings.html">http://docs.getpelican.com/en/3.7.1/settings.html</a></li>
+<li>add a <code>favicon.ico</code> to root</li>
+<li>Fetch <code>.gitignore</code>from <a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore">https://github.com/getpelican/pelican-blog/blob/master/.gitignore</a> - save it to root</li>
+<li>Create a <code>~/README.md</code> - just for the repo</li>
+<li>Create a remote repo for your github page source in GitHub. Call it <code>username.github.io.pelican</code></li>
+<li>Create local git repo<ul>
+<li><code>git init</code>
+z* <code>git remote add origin https://github.com/rasor/rasor.github.io.pelican.git</code></li>
+</ul>
+</li>
+<li>Create a remote repo for your github page build in GitHub. Call it <code>username.github.io</code></li>
+<li>Connect to 2nd repo and print both remote repos<ul>
+<li><code>git remote add target https://github.com/rasor/rasor.github.io.git</code></li>
+<li><code>git remote -v</code></li>
+<li><code>git branch pelican</code></li>
+</ul>
+</li>
+<li>Publish source<ul>
+<li><code>git checkout pelican</code></li>
+<li><code>git add --all</code></li>
+<li><code>git commit -m "Initial commit"</code></li>
+<li><code>git push -u origin pelican</code></li>
+</ul>
+</li>
+<li>Install publich tool<ul>
+<li><code>pip install ghp-import</code></li>
+</ul>
+</li>
+<li><a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github">Publish build</a><ul>
+<li><code>pelican content -o output -s pelicanconf.py</code></li>
+<li><code>ghp-import output -r origin -b master</code></li>
+<li><code>git push origin master</code></li>
+</ul>
+</li>
+</ul>
+<h3>Links</h3>
+<ul>
+<li>Create a repo for your github page site following <a href="https://pages.github.com/">https://pages.github.com/</a></li>
+<li><a href="http://docs.getpelican.com/en/stable/publish.html">http://docs.getpelican.com/en/stable/publish.html</a></li>
+<li><a href="http://docs.getpelican.com/en/stable/pelican-themes.html">http://docs.getpelican.com/en/stable/pelican-themes.html</a></li>
+<li><a href="https://github.com/tchapi/markdown-cheatsheet">https://github.com/tchapi/markdown-cheatsheet</a></li>
+<li><a href="http://pythonhosted.org/Markdown/reference.html">http://pythonhosted.org/Markdown/reference.html</a></li>
+<li><a href="http://docs.getpelican.com/en/stable/faq.html">http://docs.getpelican.com/en/stable/faq.html</a></li>
+<li><a href="https://blog.getpelican.com/">https://blog.getpelican.com/</a></li>
+<li><a href="https://help.github.com/articles/about-supported-custom-domains/">https://help.github.com/articles/about-supported-custom-domains/</a></li>
+<li>My old blog: <a href="https://rasor.wordpress.com/">https://rasor.wordpress.com/</a></li>
+</ul>
+<p>The End</p>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
