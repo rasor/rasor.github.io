@@ -40,8 +40,8 @@
 </ul>
 </li>
 <li>Create a folder for the Pelican source</li>
-<li><code>MKDIR username.github.io.pelican</code></li>
-<li><code>CD username.github.io.pelican</code></li>
+<li><code>MKDIR username.github.io</code></li>
+<li><code>CD username.github.io</code></li>
 <li>Create a pelican site following <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a></li>
 <li><code>pelican-quickstart</code><ul>
 <li>Do you want to specify URL prefix? Answer https://username.github.io</li>
@@ -76,18 +76,30 @@
 </ul>
 </li>
 <li>(Foreach) Commit source<ul>
-<li><code>git add --all</code></li>
-<li><code>git commit -m "Initial commit"</code></li>
+<li><code>git commit -a -m "Initial commit"</code></li>
 <li><code>git push -u origin pelican</code></li>
 </ul>
 </li>
-<li>(Foreach) <a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github">Publish build</a> build to master and publish<ul>
+<li>(Foreach) <a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github">Publish</a> build to master then publish<ul>
 <li><code>pelican content -o output -s pelicanconf.py</code></li>
 <li><code>ghp-import output -r origin -b master</code></li>
 <li><code>git push origin master</code></li>
 <li><code>git checkout pelican</code></li>
 </ul>
 </li>
+<li>On Windows - in root create a file called publish.bat with the content:</li>
+</ul>
+<div class="highlight"><pre><span></span>git commit -a -m %1
+git push -u origin pelican
+pelican content -o output -s pelicanconf.py
+ghp-import output -r origin -b master
+git push origin master
+git checkout pelican
+</pre></div>
+
+
+<ul>
+<li>... then you can publish by <code>publish.bat "some comment"</code></li>
 </ul>
 <h3>Links</h3>
 <ul>
