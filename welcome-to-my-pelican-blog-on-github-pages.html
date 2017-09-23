@@ -81,6 +81,7 @@
 </ul>
 </li>
 <li>(Foreach) Commit source<ul>
+<li><code>git add .</code></li>
 <li><code>git commit -a -m "Initial commit"</code></li>
 <li><code>git push -u origin pelican</code></li>
 </ul>
@@ -94,7 +95,8 @@
 </li>
 <li>On Windows - in root create a file called publish.bat with the content:</li>
 </ul>
-<div class="highlight"><pre><span></span>git commit -a -m %1
+<div class="highlight"><pre><span></span>git add .
+git commit -a -m %1
 git push -u origin pelican
 pelican content -o output -s pelicanconf.py
 ghp-import output -r origin -b master
