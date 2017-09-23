@@ -10,8 +10,8 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
 * As admin:
     * `pip install pelican markdown`
 * Create a folder for the Pelican source
-* `MKDIR username.github.io.pelican`
-* `CD username.github.io.pelican`
+* `MKDIR username.github.io`
+* `CD username.github.io`
 * Create a pelican site following <http://docs.getpelican.com/en/stable/quickstart.html>
 * `pelican-quickstart`
     * Do you want to specify URL prefix? Answer https://username.github.io
@@ -36,14 +36,23 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
 * Create new branch for the pelican source
     * `git checkout -b pelican`
 * (Foreach) Commit source
-    * `git add --all`
-    * `git commit -m "Initial commit"`
+    * `git commit -a -m "Initial commit"`
     * `git push -u origin pelican`
-* (Foreach) [Publish build](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github) build to master and publish
+* (Foreach) [Publish](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github) build to master then publish
     * `pelican content -o output -s pelicanconf.py`
     * `ghp-import output -r origin -b master`
     * `git push origin master`
     * `git checkout pelican`
+* On Windows - in root create a file called publish.bat with the content:
+```bash
+git commit -a -m %1
+git push -u origin pelican
+pelican content -o output -s pelicanconf.py
+ghp-import output -r origin -b master
+git push origin master
+git checkout pelican
+```
+* ... then you can publish by `publish.bat "some comment"`
 
 ### Links
 * Create a repo for your github page site <https://pages.github.com/>
