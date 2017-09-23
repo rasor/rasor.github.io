@@ -36,6 +36,7 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
 * Create new branch for the pelican source
     * `git checkout -b pelican`
 * (Foreach) Commit source
+    * `git add .`
     * `git commit -a -m "Initial commit"`
     * `git push -u origin pelican`
 * (Foreach) [Publish](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github) build to master then publish
@@ -45,6 +46,7 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
     * `git checkout pelican`
 * On Windows - in root create a file called publish.bat with the content:
 ```bash
+git add .
 git commit -a -m %1
 git push -u origin pelican
 pelican content -o output -s pelicanconf.py
