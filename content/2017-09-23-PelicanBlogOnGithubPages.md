@@ -25,29 +25,28 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
 * add a `favicon.ico` to root
 * Fetch `.gitignore `from <https://github.com/getpelican/pelican-blog/blob/master/.gitignore> - save it to root
 * Create a `~/README.md` - just for the repo
-* Create a remote repo for your github page source in GitHub. Call it `username.github.io.pelican`
+* Install publich tool
+    * `pip install ghp-import`
 * Create local git repo
     * `git init`
-    z* `git remote add origin https://github.com/rasor/rasor.github.io.pelican.git`
-* Create a remote repo for your github page build in GitHub. Call it `username.github.io`
-* Connect to 2nd repo and print both remote repos
-    * `git remote add target https://github.com/rasor/rasor.github.io.git`
+* Create a remote repo via github.com for your github page build in GitHub. Call it `username.github.io`
+* Connect to repo and print remote repo
+    * `git remote add origin https://github.com/rasor/rasor.github.io.git`
     * `git remote -v`
-    * `git branch pelican`
-* Publish source
-    * `git checkout pelican`
+* Create new branch for the pelican source
+    * `git checkout -b pelican`
+* (Foreach) Commit source
     * `git add --all`
     * `git commit -m "Initial commit"`
     * `git push -u origin pelican`
-* Install publich tool
-    * `pip install ghp-import`
-* [Publish build](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github)
+* (Foreach) [Publish build](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github) build to master and publish
     * `pelican content -o output -s pelicanconf.py`
     * `ghp-import output -r origin -b master`
     * `git push origin master`
+    * `git checkout pelican`
 
 ### Links
-* Create a repo for your github page site following <https://pages.github.com/>
+* Create a repo for your github page site <https://pages.github.com/>
 * <http://docs.getpelican.com/en/stable/publish.html>
 * <http://docs.getpelican.com/en/stable/pelican-themes.html>
 * <https://github.com/tchapi/markdown-cheatsheet>
