@@ -1,6 +1,7 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
 Modified: 2017-09-24 10:00
+Category: Study
 Tags: #blog, #pelican, #githubpages, #cms
 
 The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html> and <https://pages.github.com/>
