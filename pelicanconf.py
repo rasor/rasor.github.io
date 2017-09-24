@@ -21,13 +21,14 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Rasor on Worpress', 'https://rasor.wordpress.com/'),
-         ('Pelican', 'http://getpelican.com/'),
+LINKS = (('Pelican', 'http://getpelican.com/'),
          ('Python.org', 'http://python.org/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),)
 
 # Social widget
-SOCIAL = (('Twitter', 'https://twitter.com/rasor'),)
+SOCIAL = (('Twitter', 'https://twitter.com/rasor'),
+          ('GitHub', 'https://github.com/rasor'),
+          ('Worpress', 'https://rasor.wordpress.com/'),)
 
 DEFAULT_PAGINATION = 30
 
