@@ -44,7 +44,7 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
     * `ghp-import output -r origin -b master`
     * `git push origin master`
     * `git checkout pelican`
-* On Windows - in root create a file called publish.bat with the content:
+* On Windows - in root create a file called [publish.bat](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat) with the content:
 ```bash
 git add .
 git commit -a -m %1
