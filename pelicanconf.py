@@ -28,7 +28,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/rasor'),
           ('GitHub', 'https://github.com/rasor'),
-          ('Worpress', 'https://rasor.wordpress.com/'),)
+          ('Wordpress', 'https://rasor.wordpress.com/'),)
 
 DEFAULT_PAGINATION = 30
 
