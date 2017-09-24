@@ -1,8 +1,8 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-09-24 10:00
+Modified: 2017-09-24 11:00
 Category: Study
-Tags: #blog, #pelican, #githubpages, #cms
+Tags: #blog, #pelican, #githubpages, #cms, #git
 
 The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html> and <https://pages.github.com/>
 
@@ -80,6 +80,7 @@ But you could use NotePad for that matter.
 * Create a repo for your github page site <https://pages.github.com/>
 * <http://docs.getpelican.com/en/stable/publish.html>
 * <http://docs.getpelican.com/en/stable/pelican-themes.html>
+* <http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files>
 * <https://github.com/tchapi/markdown-cheatsheet>
 * <http://pythonhosted.org/Markdown/reference.html>
 * <http://docs.getpelican.com/en/stable/faq.html>
