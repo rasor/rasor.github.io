@@ -1,7 +1,7 @@
 Title: Welcome to my Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Category: #blog
-[//]: # (Category: #pelican, #githubpages, #cms)
+Modified: 2017-09-24 02:10
+Tags: #blog, #pelican, #githubpages, #cms
 
 The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html> and <https://pages.github.com/>
 
