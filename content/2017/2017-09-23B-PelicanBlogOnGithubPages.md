@@ -35,7 +35,7 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
 `![picture alt](img/hello.png "Mickey Mouse")`
 * Optionally edit more settings in `pelicanconf.py` - see <http://docs.getpelican.com/en/3.7.1/settings.html>
 * add a `favicon.ico` to root
-### Prepare GIT as VSC
+### Prepare GIT as VersionControlSystem
 * Fetch `.gitignore `from <https://github.com/getpelican/pelican-blog/blob/master/.gitignore> - save it to root
 * Create a `~/README.md` - just for the source branch
 * Install publich tool
