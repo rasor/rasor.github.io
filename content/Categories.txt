@@ -1,1 +1,12 @@
-Category: Study
+Here I add the categories, that I use in the blogs.
+Reason for not using ~/content/categoryname1/someblog.md is that I want the blogs stored by year.
+I think that gives me a better way to be able to find a blog again and still not having all blogs just in one folder.
+So by using this file I have means to keep track of all categories.
+The categories are much fewer than in my last blog.
+----------------
+Category: Biz - #StartUp, #ProdMgmt, #ProjMgmt, #ITS
+Category: Design - #Media, #Graphics
+Category: DevOp - #HW, #Admin, #Network, #Install, #Cloud, #Servers, #OS
+Category: Develop - #SW, #Programming, #VCS
+Category: Study - #Blog, #Exam
+Category: NonGeek

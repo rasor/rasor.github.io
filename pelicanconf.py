@@ -7,6 +7,7 @@ SITENAME = "Rasor's Tech Blog"
 #SITEURL = 'https://rasor.github.io'
 
 PATH = 'content'
+STATIC_PATHS = ['img', 'pdf']
 
 TIMEZONE = 'Europe/Copenhagen'
 
@@ -26,15 +27,12 @@ LINKS = (('Rasor on Worpress', 'https://rasor.wordpress.com/'),
          ('Jinja2', 'http://jinja.pocoo.org/'),)
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (('Twitter', 'https://twitter.com/rasor'),)
 
 DEFAULT_PAGINATION = 30
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-
-STATIC_PATHS = ['img', 'pdf']
 
 #MARKDOWN = {
 #    'extension_configs': {

@@ -1,8 +1,8 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
 Modified: 2017-09-24 11:00
-Category: Study
-Tags: #blog, #pelican, #githubpages, #cms, #git
+Category: DevOp
+Tags: #blog, #pelican, #githubpages, #cms, #git, #Install
 
 I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons [here]({filename}/2017/2017-09-23A-Welcome.md)
 
@@ -35,6 +35,9 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
     * Create an image e.g `~/content/img/hello.png`
     * Link to the file with
 `![picture alt](img/hello.png "Mickey Mouse")`
+* Links
+    * External: `[link desc](https://blog.getpelican.com/){:target="_blank"}`
+    * Internal: `[link desc]({filename}/yourcategoryno1/myfirstblog.md){:target="_blank"}`
 * Optionally edit more settings in `pelicanconf.py` - see <http://docs.getpelican.com/en/3.7.1/settings.html>
 * add a `favicon.ico` to root
 ### Prepare GIT as VersionControlSystem
@@ -81,6 +84,7 @@ But you could use NotePad for that matter.
 ### Links
 * Create a repo for your github page site <https://pages.github.com/>
 * <http://docs.getpelican.com/en/stable/publish.html>
+* <http://www.pelicanthemes.com/>
 * <http://docs.getpelican.com/en/stable/pelican-themes.html>
 * <http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files>
 * <https://github.com/tchapi/markdown-cheatsheet>
