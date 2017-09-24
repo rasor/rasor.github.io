@@ -14,6 +14,7 @@
         <header id="banner" class="body">
                 <h1><a href="/">Rasor's Tech Blog </a></h1>
                 <nav><ul>
+                    <li><a href="/category/develop.html">Develop</a></li>
                     <li><a href="/category/devop.html">DevOp</a></li>
                     <li><a href="/category/study.html">Study</a></li>
                 </ul></nav>
@@ -21,13 +22,105 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/using-pelican-blog-on-github-pages.html">Using Pelican blog on Github pages</a></h1>
+                    <h1 class="entry-title"><a href="/ngx-template-for-visual-studio-2017.html">Ngx: Template for Visual Studio 2017</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-09-24T17:00:00+02:00">
+                Published: sø 24 september 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
+        </address>
+<p>In <a href="/category/develop.html">Develop</a>.</p>
+<p>tags: <a href="/tag/ngx.html">#ngx</a> <a href="/tag/typescript.html">#typescript</a> <a href="/tag/visualstudio.html">#visualstudio</a> <a href="/tag/tfs.html">#tfs</a> </p>
+</footer><!-- /.post-info --><p>At my work all web developers are getting a Angular 4 course.
+But there are a couple of issues with that.</p>
+<ul>
+<li>When you work with ngx in Visual Studio code you get a .gitnore file from the Angular CLI to take care of what not to commit to GIT.
+Since we are not yet using GIT at work (but TFS), then TFS don't know what to checkin.</li>
+<li>Since the develpers feel more comfortable with VS 2017, then we also have a chance to get control of files to Checkin with a <code>.csproj</code> file.</li>
+</ul>
+<p>So HowTo import a Angular CLI project into VS 2017 on Windows?</p>
+<p>Luckily there is a <code>.vsix</code> for that: <a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank">Angular CLI Project Template</a></p>
+<h3>Installation</h3>
+<ul>
+<li>Install <a href="https://www.visualstudio.com/vs/community/" target="_blank">VS 2017</a><ul>
+<li>Include web development including TypeScript</li>
+<li>Framework ASP.NET Core 1.1.2</li>
+</ul>
+</li>
+<li>Node 6.9.0 or higher (<code>node -v</code>) - Should come with VS</li>
+<li>Npm 3 or higher (<code>npm -v</code>) - Should come with VS</li>
+<li><a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a> (<code>git -version</code>) - Should come with VS </li>
+<li>Install latest <a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank">Angular CLI</a> (<code>ng version</code>)</li>
+<li>Exit VisualStudio</li>
+<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank">Angular CLI Project Template</a> by executing the <code>.vsix</code></li>
+</ul>
+<h3>Ready-Set-Go</h3>
+<ul>
+<li>Start VisualStudio</li>
+<li>New - Project - Other Languages - TypeScript - Angular CLI Application - Name: <YourNgAppName></li>
+</ul>
+<p><img alt="picture alt" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"></p>
+<ul>
+<li>In the project options choises select both if you are in doubt</li>
+</ul>
+<p><img alt="picture alt" src="img/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"></p>
+<ul>
+<li>Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails<ul>
+<li>Open a command prompt and CD into the root of your Angular project</li>
+<li><code>npm install # install all the node_modules found in package.json</code></li>
+</ul>
+</li>
+<li>
+<p>Now start the app with F5</p>
+<ul>
+<li>VS 2017 will read .\properties\launchsettings.json<ul>
+<li>If you started IIS Express, then VS will start dotnet.exe on <a href="http://localhost:58162/">http://localhost:58162/</a></li>
+<li>If you started <yourapp>, then VS will start dotnet.exe on <a href="http://localhost:58163/">http://localhost:58163/</a></li>
+</ul>
+</li>
+</ul>
+<p><img alt="picture alt" src="img/2017-09-24-F5Startup1.PNG" title="F5 startup 1"></p>
+<ul>
+<li>In both cases Angular CLI will serve you app after buiding it with the Angular CLI on <a href="http://localhost:4200/">http://localhost:4200/</a></li>
+</ul>
+<p><img alt="picture alt" src="img/2017-09-24-F5Startup2.PNG" title="F5 startup 2"></p>
+<ul>
+<li>This is very good news. Why? Because it does not matter what webserver or editor you are using.
+But the best of is that you use standard node.js deployment methods, so you can deploy your app anywhere. You can use standard npm or yarn managers without having to do a lot of strange Visual Studio configuration.</li>
+<li>You can now stop F5 debugging.</li>
+<li>Instead start a webserver manually from a command prompt (in the root of your project) with <code>ng serve</code>
+Now you can see that it is Angular CLI (via .angular-cli.json) that in both cases uses webpack to build packages (via \src\tsconfig.app.json) to serve once again on <a href="http://localhost:4200/">http://localhost:4200/</a></li>
+<li>Press Ctrl-C to stop the webserver</li>
+<li>Checkin your code using your favorite VCS (e.g. TFS or GIT)</li>
+</ul>
+</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/@angular/cli/" target="_blank">@angular/cli</a></li>
+</ul>
+<p>The End</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/using-pelican-blog-on-github-pages.html" rel="bookmark"
+                           title="Permalink to Using Pelican blog on Github pages">Using Pelican blog on Github pages</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2017-09-23T20:20:00+02:00">
                 Published: lø 23 september 2017
         </abbr>
 		<br />
-        <abbr class="modified" title="2017-09-24T11:00:00+02:00">
+        <abbr class="modified" title="2017-09-24T15:00:00+02:00">
                 Updated: sø 24 september 2017
         </abbr>
 
@@ -36,137 +129,16 @@
         </address>
 <p>In <a href="/category/devop.html">DevOp</a>.</p>
 <p>tags: <a href="/tag/blog.html">#blog</a> <a href="/tag/pelican.html">#pelican</a> <a href="/tag/githubpages.html">#githubpages</a> <a href="/tag/cms.html">#cms</a> <a href="/tag/git.html">#git</a> <a href="/tag/install.html">#Install</a> </p>
-</footer><!-- /.post-info --><p>I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons <a href="/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank">here</a></p>
-<p>The blog is created using <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a> and <a href="https://pages.github.com/">https://pages.github.com/</a></p>
+</footer><!-- /.post-info -->                <p>I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons <a href="/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank">here</a></p>
+<p>In this blog I setup a <a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank">Pelican blog site</a> from Windows and host it on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
 <h2>HowTo</h2>
 <h3>Installation - Prerequisites</h3>
 <ul>
 <li>Install <a href="https://www.python.org/downloads/" target="_blank">Python</a></li>
-<li>Create an account at <a href="https://github.com">https://github.com</a></li>
-<li>On Windows: Install <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a></li>
-</ul>
-<h3>Installation - Pelican</h3>
-<ul>
-<li>As admin:<ul>
-<li><code>pip install pelican markdown</code></li>
-</ul>
-</li>
-<li>Create a folder for the Pelican source<ul>
-<li><code>MKDIR username.github.io</code></li>
-<li><code>CD username.github.io</code></li>
-</ul>
-</li>
-<li>Create a pelican site following <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a></li>
-<li><code>pelican-quickstart</code><ul>
-<li>Do you want to specify URL prefix? Answer https://username.github.io</li>
-<li>Do you want to upload using xxx? Answer N untill the xxx = GitHub Pages</li>
-</ul>
-</li>
-</ul>
-<h3>Create some content</h3>
-<ul>
-<li>Create a blog e.g <code>~/content/yourcategoryno1/myfirstblog.md</code></li>
-<li>Preview content<ul>
-<li><code>pelican content</code> </li>
-<li><code>cd output</code></li>
-<li><code>python -m pelican.server</code></li>
-<li>Browse to  <a href="http://localhost:8000/">http://localhost:8000/</a></li>
-</ul>
-</li>
-<li>Images<ul>
-<li>In <code>pelicanconf.py</code> add line <code>STATIC_PATHS = ['img', 'pdf']</code></li>
-<li>Create an image e.g <code>~/content/img/hello.png</code></li>
-<li>Link to the file with
-<code>![picture alt](img/hello.png "Mickey Mouse")</code></li>
-</ul>
-</li>
-<li>Links<ul>
-<li>External: <code>[link desc](https://blog.getpelican.com/){:target="_blank"}</code></li>
-<li>Internal: <code>[link desc]({filename}/yourcategoryno1/myfirstblog.md){:target="_blank"}</code></li>
-</ul>
-</li>
-<li>Optionally edit more settings in <code>pelicanconf.py</code> - see <a href="http://docs.getpelican.com/en/3.7.1/settings.html">http://docs.getpelican.com/en/3.7.1/settings.html</a></li>
-<li>add a <code>favicon.ico</code> to root</li>
-</ul>
-<h3>Prepare GIT as VersionControlSystem</h3>
-<ul>
-<li>Fetch <code>.gitignore</code>from <a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore">https://github.com/getpelican/pelican-blog/blob/master/.gitignore</a> - save it to root</li>
-<li>Create a <code>~/README.md</code> - just for the source branch</li>
-<li>Install publich tool<ul>
-<li><code>pip install ghp-import</code></li>
-</ul>
-</li>
-<li>Create local git repo<ul>
-<li><code>git init</code></li>
-</ul>
-</li>
-<li>Create a remote repo via github.com for your github page build in GitHub. Call it <code>username.github.io</code></li>
-<li>Connect to repo and print remote repo<ul>
-<li><code>git remote add origin https://github.com/rasor/rasor.github.io.git</code></li>
-<li><code>git remote -v</code></li>
-</ul>
-</li>
-<li>Create new branch for the pelican source<ul>
-<li><code>git checkout -b pelican</code></li>
-</ul>
-</li>
-</ul>
-<h3>Deploy you blog</h3>
-<ul>
-<li>(Foreach) Commit source<ul>
-<li><code>git add .</code></li>
-<li><code>git commit -a -m "Initial commit"</code></li>
-<li><code>git push -u origin pelican</code></li>
-</ul>
-</li>
-<li>(Foreach) <a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github" target="_blank">Publish</a> build to master then publish<ul>
-<li><code>pelican content -o output -s pelicanconf.py</code></li>
-<li><code>ghp-import output -r origin -b master</code></li>
-<li><code>git push origin master</code></li>
-<li><code>git checkout pelican</code></li>
-</ul>
-</li>
-<li>On Windows - in root create a file called <a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat" target="_blank">publish.bat</a> with the content:</li>
-</ul>
-<div class="highlight"><pre><span></span>git add .
-git commit -a -m %1
-git push -u origin pelican
-pelican content -o output -s pelicanconf.py
-ghp-import output -r origin -b master
-git push origin master
-git checkout pelican
-</pre></div>
-
-
-<ul>
-<li>... then you can publish by <code>publish.bat "some comment"</code></li>
-</ul>
-<h2>Editor</h2>
-<p>I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
-But you could use NotePad for that matter.</p>
-<p><img alt="picture alt" src="img/2017-09-23-PelicanInVSCode.PNG" title="Pelican In VS Code"></p>
-<h3>Links</h3>
-<ul>
-<li><a href="https://pages.github.com/" target="_blank">Create a repo for your github page site</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/publish.html">http://docs.getpelican.com/en/stable/publish.html</a></li>
-<li><a href="http://www.pelicanthemes.com/">http://www.pelicanthemes.com/</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/pelican-themes.html">http://docs.getpelican.com/en/stable/pelican-themes.html</a></li>
-<li><a href="http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files">http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files</a></li>
-<li><a href="https://github.com/tchapi/markdown-cheatsheet">https://github.com/tchapi/markdown-cheatsheet</a></li>
-<li><a href="http://pythonhosted.org/Markdown/reference.html">http://pythonhosted.org/Markdown/reference.html</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/faq.html">http://docs.getpelican.com/en/stable/faq.html</a></li>
-<li><a href="https://blog.getpelican.com/">https://blog.getpelican.com/</a></li>
-<li><a href="https://help.github.com/articles/about-supported-custom-domains/">https://help.github.com/articles/about-supported-custom-domains/</a></li>
-<li>Another <a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank">install Pelican blog</a></li>
-<li><a href="https://twitter.com/getpelican" target="_blank">Pelican on Twitter</a></li>
-<li><a href="https://rasor.wordpress.com/" target="_blank">My old Wordpress blog</a></li>
-</ul>
-<p>The End</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<li>Create an account at <a href="https://github.com">https://github.com …</a></li></ul>
+                <a class="readmore" href="/using-pelican-blog-on-github-pages.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
