@@ -14,7 +14,7 @@
         <header id="banner" class="body">
                 <h1><a href="/">Rasor's Tech Blog </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/misc.html">misc</a></li>
+                    <li class="active"><a href="/category/study.html">study</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
@@ -27,104 +27,42 @@
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2017-09-23T20:20:00+02:00">
+        <abbr class="published" title="2017-09-23T20:00:00+02:00">
                 Published: lø 23 september 2017
         </abbr>
 		<br />
-        <abbr class="modified" title="2017-09-24T02:10:00+02:00">
+        <abbr class="modified" title="2017-09-24T09:00:00+02:00">
                 Updated: sø 24 september 2017
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
         </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>In <a href="/category/study.html">study</a>.</p>
 <p>tags: <a href="/tag/blog.html">#blog</a> <a href="/tag/pelican.html">#pelican</a> <a href="/tag/githubpages.html">#githubpages</a> <a href="/tag/cms.html">#cms</a> </p>
-</footer><!-- /.post-info -->      <p>The blog is created using <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a> and <a href="https://pages.github.com/">https://pages.github.com/</a></p>
-<h3>HowTo</h3>
+</footer><!-- /.post-info -->      <p>Hi there.</p>
+<p>I have moved. Previously I was living on <a href="https://rasor.wordpress.com/">https://rasor.wordpress.com/</a>.</p>
+<h3>Reason for move</h3>
 <ul>
-<li>Install Python</li>
-<li>As admin:<ul>
-<li><code>pip install pelican markdown</code></li>
+<li>I wanted Mardown markup</li>
+<li>I wanted better syntax highligting for code</li>
 </ul>
-</li>
-<li>Create a folder for the Pelican source</li>
-<li><code>MKDIR username.github.io</code></li>
-<li><code>CD username.github.io</code></li>
-<li>Create a pelican site following <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a></li>
-<li><code>pelican-quickstart</code><ul>
-<li>Do you want to specify URL prefix? Answer https://username.github.io</li>
-<li>Do you want to upload using xxx? Answer N untill the xxx = GitHub Pages</li>
-</ul>
-</li>
-<li>Create a blog e.g <code>~/content/myfirstblog.md</code></li>
-<li><code>pelican content</code> </li>
-<li><code>cd output</code></li>
-<li><code>python -m pelican.server</code></li>
-<li>Browse to  http://localhost:8000/</li>
-<li>Optionally edit more settings in <code>pelicanconf.py</code> - see <a href="http://docs.getpelican.com/en/3.7.1/settings.html">http://docs.getpelican.com/en/3.7.1/settings.html</a></li>
-<li>add a <code>favicon.ico</code> to root</li>
-<li>Fetch <code>.gitignore</code>from <a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore">https://github.com/getpelican/pelican-blog/blob/master/.gitignore</a> - save it to root</li>
-<li>Create a <code>~/README.md</code> - just for the repo</li>
-<li>Install publich tool<ul>
-<li><code>pip install ghp-import</code></li>
-</ul>
-</li>
-<li>Create local git repo<ul>
-<li><code>git init</code></li>
-</ul>
-</li>
-<li>Create a remote repo via github.com for your github page build in GitHub. Call it <code>username.github.io</code></li>
-<li>Connect to repo and print remote repo<ul>
-<li><code>git remote add origin https://github.com/rasor/rasor.github.io.git</code></li>
-<li><code>git remote -v</code></li>
-</ul>
-</li>
-<li>Create new branch for the pelican source<ul>
-<li><code>git checkout -b pelican</code></li>
-</ul>
-</li>
-<li>(Foreach) Commit source<ul>
-<li><code>git add .</code></li>
-<li><code>git commit -a -m "Initial commit"</code></li>
-<li><code>git push -u origin pelican</code></li>
-</ul>
-</li>
-<li>(Foreach) <a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github">Publish</a> build to master then publish<ul>
-<li><code>pelican content -o output -s pelicanconf.py</code></li>
-<li><code>ghp-import output -r origin -b master</code></li>
-<li><code>git push origin master</code></li>
-<li><code>git checkout pelican</code></li>
-</ul>
-</li>
-<li>On Windows - in root create a file called <a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat">publish.bat</a> with the content:</li>
-</ul>
-<div class="highlight"><pre><span></span>git add .
-git commit -a -m %1
-git push -u origin pelican
-pelican content -o output -s pelicanconf.py
-ghp-import output -r origin -b master
-git push origin master
-git checkout pelican
-</pre></div>
-
-
+<h3>Pros</h3>
 <ul>
-<li>... then you can publish by <code>publish.bat "some comment"</code></li>
+<li>I got an easier way of editing categories and tags<ul>
+<li>Categories: In your content folder you create a subfolder for each tag and you store your .md file in there.</li>
+<li>Tags: You just write them inside your .md</li>
 </ul>
-<h3>Links</h3>
+</li>
+<li>Updates to a blog has its own field e.g. Modified: 2017-09-24 09:00</li>
+</ul>
+<h3>Cons</h3>
 <ul>
-<li>Create a repo for your github page site <a href="https://pages.github.com/">https://pages.github.com/</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/publish.html">http://docs.getpelican.com/en/stable/publish.html</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/pelican-themes.html">http://docs.getpelican.com/en/stable/pelican-themes.html</a></li>
-<li><a href="https://github.com/tchapi/markdown-cheatsheet">https://github.com/tchapi/markdown-cheatsheet</a></li>
-<li><a href="http://pythonhosted.org/Markdown/reference.html">http://pythonhosted.org/Markdown/reference.html</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/faq.html">http://docs.getpelican.com/en/stable/faq.html</a></li>
-<li><a href="https://blog.getpelican.com/">https://blog.getpelican.com/</a></li>
-<li><a href="https://help.github.com/articles/about-supported-custom-domains/">https://help.github.com/articles/about-supported-custom-domains/</a></li>
-<li>My old blog: <a href="https://rasor.wordpress.com/">https://rasor.wordpress.com/</a></li>
+<li>No central editing of tags - well that is a releaf, because it was cumbersome to add one, when you in the middle of editing in Wordpress</li>
+<li>No img size editing tool</li>
+<li>Setting up to be published in GitHupPages was not described well, so I had to create a <a href="/using-pelican-blog-on-github-pages.html">procedure</a> myself. I am quite pleased with the workflow now. Not too much hazzle, when you are working with code and a terminal anyway.</li>
 </ul>
-<p>The End</p>
+<p>The end</p>
     </div><!-- /.entry-content -->
 
   </article>
@@ -133,10 +71,10 @@ git checkout pelican
                 <div class="blogroll">
                         <h2>links</h2>
                         <ul>
+                            <li><a href="https://rasor.wordpress.com/">Rasor on Worpress</a></li>
                             <li><a href="http://getpelican.com/">Pelican</a></li>
                             <li><a href="http://python.org/">Python.org</a></li>
                             <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
                 <div class="social">
