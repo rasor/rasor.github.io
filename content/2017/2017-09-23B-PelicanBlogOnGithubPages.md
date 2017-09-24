@@ -4,6 +4,8 @@ Modified: 2017-09-24 11:00
 Category: Study
 Tags: #blog, #pelican, #githubpages, #cms, #git
 
+I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons [here]({filename}/2017/2017-09-23A-Welcome.md)
+
 The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html> and <https://pages.github.com/>
 
 ## HowTo
