@@ -4,15 +4,15 @@ Modified: 2017-09-24 11:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #Install
 
-I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons [here]({filename}/2017/2017-09-23A-Welcome.md)
+I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons [here]({filename}/2017/2017-09-23A-Welcome.md){:target="_blank"}
 
 The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html> and <https://pages.github.com/>
 
 ## HowTo
 ### Installation - Prerequisites
-* Install [Python](https://www.python.org/downloads/)
+* Install [Python](https://www.python.org/downloads/){:target="_blank"}
 * Create an account at <https://github.com>
-* On Windows: Install [Git for Windows](https://git-scm.com/download/win)
+* On Windows: Install [Git for Windows](https://git-scm.com/download/win){:target="_blank"}
 ### Installation - Pelican
 * As admin:
     * `pip install pelican markdown`
@@ -58,12 +58,12 @@ The blog is created using <http://docs.getpelican.com/en/stable/quickstart.html>
     * `git add .`
     * `git commit -a -m "Initial commit"`
     * `git push -u origin pelican`
-* (Foreach) [Publish](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github) build to master then publish
+* (Foreach) [Publish](http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github){:target="_blank"} build to master then publish
     * `pelican content -o output -s pelicanconf.py`
     * `ghp-import output -r origin -b master`
     * `git push origin master`
     * `git checkout pelican`
-* On Windows - in root create a file called [publish.bat](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat) with the content:
+* On Windows - in root create a file called [publish.bat](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat){:target="_blank"} with the content:
 ```bash
 git add .
 git commit -a -m %1
@@ -82,7 +82,7 @@ But you could use NotePad for that matter.
 ![picture alt](img/2017-09-23-PelicanInVSCode.PNG "Pelican In VS Code")
 
 ### Links
-* Create a repo for your github page site <https://pages.github.com/>
+* [Create a repo for your github page site](https://pages.github.com/){:target="_blank"}
 * <http://docs.getpelican.com/en/stable/publish.html>
 * <http://www.pelicanthemes.com/>
 * <http://docs.getpelican.com/en/stable/pelican-themes.html>
@@ -92,6 +92,8 @@ But you could use NotePad for that matter.
 * <http://docs.getpelican.com/en/stable/faq.html>
 * <https://blog.getpelican.com/>
 * <https://help.github.com/articles/about-supported-custom-domains/>
-* My old blog: <https://rasor.wordpress.com/>
+* Another [install Pelican blog](https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html){:target="_blank"}
+* [Pelican on Twitter](https://twitter.com/getpelican){:target="_blank"}
+* [My old Wordpress blog](https://rasor.wordpress.com/){:target="_blank"}
 
 The End
