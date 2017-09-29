@@ -6,7 +6,8 @@ from __future__ import unicode_literals
 AUTHOR = 'rasor'
 SITENAME = "Rasor\'s Tech Blog"
 #SITEURL = '.'
-SITEURL = 'http://localhost:8000'
+#SITEURL = 'http://localhost:8000'
+SITEURL = 'https://rasor.github.io'
 SITETITLE = SITENAME
 #SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 #SITEDESCRIPTION = '%s\'s playground' % AUTHOR
