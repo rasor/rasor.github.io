@@ -134,7 +134,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;li&gt;A browser opens and navigates to http://localhost:8000&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Add a new .md file in \content\ and add some content&lt;/li&gt;
+&lt;li&gt;Add a new &lt;code&gt;.md&lt;/code&gt; file in \content\ and add some content&lt;/li&gt;
 &lt;li&gt;Open VS Code terminal 2 - T2&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;.\build&lt;/code&gt; &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/build.bat"&gt;#code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;F5 - refresh browser to see the new content&lt;/li&gt;
@@ -143,6 +143,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;Browse to https://rasor.github.io&lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;Tip: If I don't want to publish a file I rename it to &lt;code&gt;.txt&lt;/code&gt; - then it won't be visible before I rename it back to &lt;code&gt;.md&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
 &lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
 To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an absolute path.&lt;/p&gt;
