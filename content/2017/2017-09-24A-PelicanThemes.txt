@@ -29,8 +29,7 @@ Links
 
 
 # Themes test
-## View installed themes
-* `pelican-themes -v -l`
+## View installed themes and themes you can install
 ```
 pelican-themes -v -l
 c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\notmyidea

@@ -1,17 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+#https://github.com/getpelican/pelican/blob/master/pelican/settings.py
 
-AUTHOR = '@rasor'
+AUTHOR = 'rasor'
 SITENAME = "Rasor\'s Tech Blog"
-SITEURL = '.'
-#SITEURL = 'https://rasor.github.io'
+#SITEURL = '.'
+SITEURL = 'http://localhost:8000'
 SITETITLE = SITENAME
 #SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 #SITEDESCRIPTION = '%s\'s playground' % AUTHOR
 SITESUBTITLE = '... still playing with this Lego'
 SITELOGO = '//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120'
 #FAVICON = '/images/favicon.ico'
+
 #BROWSER_COLOR = '#333333'
 #PYGMENTS_STYLE = 'monokai'
 
@@ -49,15 +51,17 @@ PLUGINS = ['sitemap']
 
 #https://github.com/alexandrevicenzi/blog/blob/master/pelicanconf.py
 THEME = 'Flex'
+#THEME = 'notmyidea'
 
 TIMEZONE = 'Europe/Copenhagen'
 
+#OG_LOCALE = 'en_US'
+#LOCALE = 'en_US'
 I18N_TEMPLATES_LANG = 'en'
 DEFAULT_LANG = 'en'
-OG_LOCALE = 'en_US'
-#LOCALE = 'en_US'
+DEFAULT_DATE_FORMAT = '%B %d, %Y'
 DATE_FORMATS = {
-    'en': '%B %d, %Y',
+    'en': DEFAULT_DATE_FORMAT,
 }
 
 # Feed generation is usually not desired when developing
@@ -93,7 +97,6 @@ DEFAULT_PAGINATION = 30
 #    'output_format': 'html5',
 #}
 
-
 #Footer ---------------------------
 CC_LICENSE = {
     'name': 'Creative Commons Attribution-ShareAlike',
@@ -101,4 +104,5 @@ CC_LICENSE = {
     'slug': 'by-sa'
 }
 
+COPYRIGHT_NAME = AUTHOR
 COPYRIGHT_YEAR = 2017
