@@ -73,7 +73,7 @@ REM Ctrl-C to quit
 &lt;ul&gt;
 &lt;li&gt;Fetch &lt;code&gt;.gitignore&lt;/code&gt;from &lt;a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore"&gt;https://github.com/getpelican/pelican-blog/blob/master/.gitignore&lt;/a&gt; - save it to root&lt;/li&gt;
 &lt;li&gt;Create a &lt;code&gt;~/README.md&lt;/code&gt; - just for the source branch&lt;/li&gt;
-&lt;li&gt;Install publich tool&lt;ul&gt;
+&lt;li&gt;Install publish tool&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;pip install ghp-import&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -83,7 +83,7 @@ REM Ctrl-C to quit
 &lt;/li&gt;
 &lt;li&gt;Create a remote repo via github.com for your github page build in GitHub. Call it &lt;code&gt;username.github.io&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Connect to repo and print remote repo&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;git remote add origin https://github.com/rasor/rasor.github.io.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote add origin https://github.com/username/username.github.io.git&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;git remote -v&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -141,7 +141,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;.\publish "file new.md published"&lt;/code&gt; &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat"&gt;#code&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Browse to https://rasor.github.io&lt;/li&gt;
+&lt;li&gt;Browse to https://username.github.io&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Tip: If I don't want to publish a file I rename it to &lt;code&gt;.txt&lt;/code&gt; - then it won't be visible before I rename it back to &lt;code&gt;.md&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
