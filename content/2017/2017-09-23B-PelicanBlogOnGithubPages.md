@@ -52,13 +52,13 @@ REM Ctrl-C to quit
 ### Prepare GIT as VersionControlSystem
 * Fetch `.gitignore `from <https://github.com/getpelican/pelican-blog/blob/master/.gitignore> - save it to root
 * Create a `~/README.md` - just for the source branch
-* Install publich tool
+* Install publish tool
     * `pip install ghp-import`
 * Create local git repo
     * `git init`
 * Create a remote repo via github.com for your github page build in GitHub. Call it `username.github.io`
 * Connect to repo and print remote repo
-    * `git remote add origin https://github.com/rasor/rasor.github.io.git`
+    * `git remote add origin https://github.com/username/username.github.io.git`
     * `git remote -v`
 * Create new branch for the pelican source
     * `git checkout -b pelican`
@@ -100,7 +100,7 @@ But you could use NotePad for that matter.
     * `.\build` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/build.bat)
     * F5 - refresh browser to see the new content
     * `.\publish "file new.md published"` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat)
-5. Browse to https://rasor.github.io
+5. Browse to https://username.github.io
 
 Tip: If I don't want to publish a file I rename it to `.txt` - then it won't be visible before I rename it back to `.md`
 
