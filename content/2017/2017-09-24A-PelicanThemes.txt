@@ -9,16 +9,74 @@ Links
 
 * http://pygments.org/languages/
 * Plugins https://github.com/getpelican/pelican-plugins
-* Themes
+* Pelican Themes
     * http://www.pelicanthemes.com/
     * https://github.com/getpelican/pelican-themes
     * http://docs.getpelican.com/en/stable/pelican-themes.html
     * Days https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
-    * 6M https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up
+    * - 6M https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up
     * 10M https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44
     * 2Y https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8
     * 2Y https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9
     * 3Y https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8
     * Edit https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html
+* Jekyll Themes https://github.com/rasor/rasor.github.io/settings/pages/themes?utf8=%E2%9C%93&source=master
 
 * Images https://unsplash.com/ 
+
+
+
+
+
+# Themes test
+## View installed themes
+* `pelican-themes -v -l`
+```
+pelican-themes -v -l
+c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\notmyidea
+c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\simple
+start C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\
+```
+
+## Flex
+### Install
+[Instruction](https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44)
+* `pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\Flex --verbose`
+* Add to `pythonconf.py`
+```Python
+THEME = 'Flex'
+```
+### Verdict
+#### Pros
+* Nice looking
+* Images are shown in its full width - and resized to screen width
+* Syntax highligting is ggood
+#### Cons
+* It is missing links categories in left black sidemenu
+* Links in the left black sidemenu is only hooked to LINKS from publishconf. SOCIAL is missing
+* Home image is not pointing to root
+* Name of blog is missing
+* Modified/Updated date is not shown
+
+## HTML5 Up striped
+### Install
+[Instruction](https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up)
+* `pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\pelican-striped-html5up --verbose`
+
+Plugin `neighbors` is needed by the theme
+* Add to `pythonconf.py`
+```Python
+PLUGIN_PATHS = ['C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins']
+PLUGINS = ['neighbors']
+THEME = 'pelican-striped-html5up'
+```
+### Verdict
+#### Pros
+* Nice looking
+* Images are shown in its full width
+#### Cons
+* It does not have any syntax coding and block around code
+* It is missing links to categories and tags links
+* Links in the left black sidemenu are not hooked to content from publishconf or other
+
+The end.

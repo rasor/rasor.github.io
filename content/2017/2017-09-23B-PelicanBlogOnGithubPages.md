@@ -1,6 +1,6 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-09-24 15:00
+Modified: 2017-09-29 15:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #Install
 
@@ -30,6 +30,15 @@ In this blog I setup a [Pelican blog site](http://docs.getpelican.com/en/stable/
     * `cd output`
     * `python -m pelican.server`
     * Browse to  <http://localhost:8000/>
+* On Windows - in root create a file called [serve.bat](https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat){:target="_blank"} with the content:
+```bash
+pelican content
+cd output
+start "" "http://localhost:8000/"
+python -m pelican.server
+REM Ctrl-C to quit
+```
+* ... then you can pre-view your content with `.\serve`
 * Images
     * In `pelicanconf.py` add line `STATIC_PATHS = ['img', 'pdf']`
     * Create an image e.g `~/content/img/hello.png`
@@ -73,13 +82,29 @@ ghp-import output -r origin -b master
 git push origin master
 git checkout pelican
 ```
-* ... then you can publish by `publish.bat "some comment"`
+* ... then you can publish by `.\publish "some comment"`
 
 ## Editor
 I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
 But you could use NotePad for that matter.
 
 ![picture alt](img/2017-09-23-PelicanInVSCode.PNG "Pelican In VS Code")
+
+## Installation - Plugins and Themes
+Plugins and Themes are two seperate repos being used by some themes.
+To be able to reach them from `pelicanconf.py` is best to clone them to place with a absolute path.
+Since preference will differ I will put part of the path in system-wide environment variables
+* `SystemPropertiesAdvanced.exe`
+    * Environment Variables – System vars – New
+    * Name: `PYTHON_HOME`, Value: `C:\ProgramFilesExtra\Python\Python36-32` – OK - OK #Use the path to Python installed in top of this blog
+* Start new cmd promt # with new variable loaded and create a folder for the cloned repos
+* `c:`    
+* `cd %PYTHON_HOME%`
+* `md pelican-addon-clones`
+* `cd pelican-addon-clones`
+* `git clone --recursive https://github.com/getpelican/pelican-plugins`
+* `git clone --recursive https://github.com/getpelican/pelican-themes`
+* Optional continue with heading [Installation of themes and plugins]({filename}/2017/2017-09-24A-PelicanThemes.md) to install a specific theme
 
 ### Links
 * [Create a repo for your github page site](https://pages.github.com/){:target="_blank"}

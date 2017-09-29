@@ -9,6 +9,10 @@ SITENAME = "Rasor's Tech Blog"
 PATH = 'content'
 STATIC_PATHS = ['img', 'pdf']
 
+PLUGIN_PATHS = ['C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins']
+#PLUGINS = ['neighbors']
+THEME = 'Flex'
+
 TIMEZONE = 'Europe/Copenhagen'
 
 DEFAULT_LANG = 'EN'
