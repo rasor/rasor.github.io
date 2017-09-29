@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="./" rel="alternate"></link><link href="./feeds/develop.atom.xml" rel="self"></link><id>./</id><updated>2017-09-24T17:00:00+02:00</updated><entry><title>Ngx: Template for Visual Studio 2017</title><link href="./ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-09-24T17:00:00+02:00</updated><author><name>@rasor</name></author><id>tag:None,2017-09-24:./ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting a Angular 4 course.
+But there are a couple of issues with that.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When you work with ngx in Visual Studio code you get a .gitnore file from the Angular CLI to take care of what not to commit to GIT.
+Since …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;At my work all web developers are getting a Angular 4 course.
+But there are a couple of issues with that.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When you work with ngx in Visual Studio code you get a .gitnore file from the Angular CLI to take care of what not to commit to GIT.
+Since we are not yet using GIT at work (but TFS), then TFS don't know what to checkin.&lt;/li&gt;
+&lt;li&gt;Since the develpers feel more comfortable with VS 2017, then we also have a chance to get control of files to Checkin with a &lt;code&gt;.csproj&lt;/code&gt; file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So HowTo import a Angular CLI project into VS 2017 on Windows?&lt;/p&gt;
+&lt;p&gt;Luckily there is a &lt;code&gt;.vsix&lt;/code&gt; for that: &lt;a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank"&gt;Angular CLI Project Template&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://www.visualstudio.com/vs/community/" target="_blank"&gt;VS 2017&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Include web development including TypeScript&lt;/li&gt;
+&lt;li&gt;Framework ASP.NET Core 1.1.2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Node 6.9.0 or higher (&lt;code&gt;node -v&lt;/code&gt;) - Should come with VS&lt;/li&gt;
+&lt;li&gt;Npm 3 or higher (&lt;code&gt;npm -v&lt;/code&gt;) - Should come with VS&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://git-scm.com/download/win" target="_blank"&gt;Git for Windows&lt;/a&gt; (&lt;code&gt;git -version&lt;/code&gt;) - Should come with VS &lt;/li&gt;
+&lt;li&gt;Install latest &lt;a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank"&gt;Angular CLI&lt;/a&gt; (&lt;code&gt;ng version&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Exit VisualStudio&lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank"&gt;Angular CLI Project Template&lt;/a&gt; by executing the &lt;code&gt;.vsix&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Ready-Set-Go&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Start VisualStudio&lt;/li&gt;
+&lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In the project options choises select both if you are in doubt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails&lt;ul&gt;
+&lt;li&gt;Open a command prompt and CD into the root of your Angular project&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm install # install all the node_modules found in package.json&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Now start the app with F5&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VS 2017 will read .\properties\launchsettings.json&lt;ul&gt;
+&lt;li&gt;If you started IIS Express, then VS will start dotnet.exe on &lt;a href="http://localhost:58162/"&gt;http://localhost:58162/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;If you started &lt;yourapp&gt;, then VS will start dotnet.exe on &lt;a href="http://localhost:58163/"&gt;http://localhost:58163/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-F5Startup1.PNG" title="F5 startup 1"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In both cases Angular CLI will serve you app after buiding it with the Angular CLI on &lt;a href="http://localhost:4200/"&gt;http://localhost:4200/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-F5Startup2.PNG" title="F5 startup 2"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;This is very good news. Why? Because it does not matter what webserver or editor you are using.
+But the best of is that you use standard node.js deployment methods, so you can deploy your app anywhere. You can use standard npm or yarn managers without having to do a lot of strange Visual Studio configuration.&lt;/li&gt;
+&lt;li&gt;You can now stop F5 debugging.&lt;/li&gt;
+&lt;li&gt;Instead start a webserver manually from a command prompt (in the root of your project) with &lt;code&gt;ng serve&lt;/code&gt;
+Now you can see that it is Angular CLI (via .angular-cli.json) that in both cases uses webpack to build packages (via \src\tsconfig.app.json) to serve once again on &lt;a href="http://localhost:4200/"&gt;http://localhost:4200/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Press Ctrl-C to stop the webserver&lt;/li&gt;
+&lt;li&gt;Checkin your code using your favorite VCS (e.g. TFS or GIT)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry></feed>

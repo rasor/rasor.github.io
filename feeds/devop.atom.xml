@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="./" rel="alternate"></link><link href="./feeds/devop.atom.xml" rel="self"></link><id>./</id><updated>2017-09-29T16:00:00+02:00</updated><entry><title>Using Pelican blog on Github pages</title><link href="./using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-09-29T16:00:00+02:00</updated><author><name>@rasor</name></author><id>tag:None,2017-09-23:./using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="./welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host it on &lt;a href="https://pages.github.com/" target="_blank"&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;HowTo&lt;/h2&gt;
+&lt;h3&gt;Installation - Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create an account at &lt;a href="https://github.com"&gt;https://github.com …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="./welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host it on &lt;a href="https://pages.github.com/" target="_blank"&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;HowTo&lt;/h2&gt;
+&lt;h3&gt;Installation - Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create an account at &lt;a href="https://github.com"&gt;https://github.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;On Windows: Install &lt;a href="https://git-scm.com/download/win" target="_blank"&gt;Git for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Installation - Pelican&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;As admin:&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip install pelican markdown&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a folder for the Pelican source&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;MKDIR username.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CD username.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a pelican site following &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html"&gt;http://docs.getpelican.com/en/stable/quickstart.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Do you want to specify URL prefix? Answer https://username.github.io&lt;/li&gt;
+&lt;li&gt;Do you want to upload using xxx? Answer N untill the xxx = GitHub Pages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Create some content&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a blog e.g &lt;code&gt;~/content/yourcategoryno1/myfirstblog.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Preview content&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pelican content&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd output&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;python -m pelican.server&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Browse to  &lt;a href="http://localhost:8000/"&gt;http://localhost:8000/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;On Windows - in root create a file called &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat" target="_blank"&gt;serve.bat&lt;/a&gt; with the content:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pelican content
+&lt;span class="nb"&gt;cd&lt;/span&gt; output
+start &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http://localhost:8000/&amp;quot;&lt;/span&gt;
+python -m pelican.server
+REM Ctrl-C to quit
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;... then you can pre-view your content with &lt;code&gt;.\serve&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Images&lt;ul&gt;
+&lt;li&gt;In &lt;code&gt;pelicanconf.py&lt;/code&gt; add line &lt;code&gt;STATIC_PATHS = ['img', 'pdf']&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create an image e.g &lt;code&gt;~/content/img/hello.png&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Link to the file with
+&lt;code&gt;![picture alt](img/hello.png "Mickey Mouse")&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Links&lt;ul&gt;
+&lt;li&gt;External: &lt;code&gt;[link desc](https://blog.getpelican.com/){:target="_blank"}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Internal: &lt;code&gt;[link desc]({filename}/yourcategoryno1/myfirstblog.md){:target="_blank"}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Optionally edit more settings in &lt;code&gt;pelicanconf.py&lt;/code&gt; - see &lt;a href="http://docs.getpelican.com/en/3.7.1/settings.html"&gt;http://docs.getpelican.com/en/3.7.1/settings.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;add a &lt;code&gt;favicon.ico&lt;/code&gt; to root&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Prepare GIT as VersionControlSystem&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Fetch &lt;code&gt;.gitignore&lt;/code&gt;from &lt;a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore"&gt;https://github.com/getpelican/pelican-blog/blob/master/.gitignore&lt;/a&gt; - save it to root&lt;/li&gt;
+&lt;li&gt;Create a &lt;code&gt;~/README.md&lt;/code&gt; - just for the source branch&lt;/li&gt;
+&lt;li&gt;Install publich tool&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pip install ghp-import&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create local git repo&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create a remote repo via github.com for your github page build in GitHub. Call it &lt;code&gt;username.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Connect to repo and print remote repo&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git remote add origin https://github.com/rasor/rasor.github.io.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git remote -v&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create new branch for the pelican source&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git checkout -b pelican&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deploy you blog&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;(Foreach) Commit source&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git commit -a -m "Initial commit"&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push -u origin pelican&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;(Foreach) &lt;a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github" target="_blank"&gt;Publish&lt;/a&gt; build to master then publish&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pelican content -o output -s pelicanconf.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ghp-import output -r origin -b master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git checkout pelican&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;On Windows - in root create a file called &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat" target="_blank"&gt;publish.bat&lt;/a&gt; with the content:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git add .
+git commit -a -m %1
+git push -u origin pelican
+pelican content -o output -s pelicanconf.py
+ghp-import output -r origin -b master
+git push origin master
+git checkout pelican
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;... then you can publish by &lt;code&gt;.\publish "some comment"&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Editor&lt;/h2&gt;
+&lt;p&gt;I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
+But you could use NotePad for that matter.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-23-PelicanInVSCode.PNG" title="Pelican In VS Code"&gt;&lt;/p&gt;
+&lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
+&lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
+To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an absolute path.&lt;/p&gt;
+&lt;p&gt;Since preference will differ I will put part of the path in system-wide environment variables&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;SystemPropertiesAdvanced.exe&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Environment Variables – System vars – New&lt;/li&gt;
+&lt;li&gt;Name: &lt;code&gt;PYTHON_HOME&lt;/code&gt;, Value: &lt;code&gt;C:\ProgramFilesExtra\Python\Python36-32&lt;/code&gt; – OK - OK (Use the path to Python installed in top of this blog)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Start new cmd promt (this will load the new environment variable&lt;/li&gt;
+&lt;li&gt;Create a folder for the cloned repos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
+&lt;span class="nb"&gt;cd&lt;/span&gt; %PYTHON_HOME%
+md pelican-addon-clones
+&lt;span class="nb"&gt;cd&lt;/span&gt; pelican-addon-clones
+git clone --recursive https://github.com/getpelican/pelican-plugins
+git clone --recursive https://github.com/getpelican/pelican-themes
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Optional continue with heading &lt;a href="{filename}/2017/2017-09-24A-PelicanThemes.md"&gt;Installation of themes and plugins&lt;/a&gt; to install a specific theme&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://pages.github.com/" target="_blank"&gt;Create a repo for your github page site&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/publish.html"&gt;http://docs.getpelican.com/en/stable/publish.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.pelicanthemes.com/"&gt;http://www.pelicanthemes.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/pelican-themes.html"&gt;http://docs.getpelican.com/en/stable/pelican-themes.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files"&gt;http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/tchapi/markdown-cheatsheet"&gt;https://github.com/tchapi/markdown-cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pythonhosted.org/Markdown/reference.html"&gt;http://pythonhosted.org/Markdown/reference.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/faq.html"&gt;http://docs.getpelican.com/en/stable/faq.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.getpelican.com/"&gt;https://blog.getpelican.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/about-supported-custom-domains/"&gt;https://help.github.com/articles/about-supported-custom-domains/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Another &lt;a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank"&gt;install Pelican blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/getpelican" target="_blank"&gt;Pelican on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.wordpress.com/" target="_blank"&gt;My old Wordpress blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category><category term="#git"></category><category term="#Install"></category></entry></feed>
