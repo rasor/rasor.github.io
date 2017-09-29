@@ -221,6 +221,23 @@ git checkout pelican
 <p>I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
 But you could use NotePad for that matter.</p>
 <p><img alt="picture alt" src="img/2017-09-23-PelicanInVSCode.PNG" title="Pelican In VS Code"></p>
+<h2>Day to day Workflow</h2>
+<ol>
+<li>Open VS Code</li>
+<li>Open VS Code terminal 1 - T1<ul>
+<li><code>.\serve</code> <a href="https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat">#code</a></li>
+<li>A browser opens and navigates to http://localhost:8000</li>
+</ul>
+</li>
+<li>Add a new .md file in \content\ and add some content</li>
+<li>Open VS Code terminal 2 - T2<ul>
+<li><code>.\build</code> <a href="https://github.com/rasor/rasor.github.io/blob/pelican/build.bat">#code</a></li>
+<li>F5 - refresh browser to see the new content</li>
+<li><code>.\publish "file new.md published"</code> <a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat">#code</a></li>
+</ul>
+</li>
+<li>Browse to https://rasor.github.io</li>
+</ol>
 <h2>Installation - Plugins and Themes</h2>
 <p>Plugins and Themes are two seperate repos being used by some themes.
 To be able to reach them from <code>pelicanconf.py</code> is best to clone them to place with an absolute path.</p>

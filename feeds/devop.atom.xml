@@ -126,6 +126,23 @@ git checkout pelican
 &lt;p&gt;I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
 But you could use NotePad for that matter.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-23-PelicanInVSCode.PNG" title="Pelican In VS Code"&gt;&lt;/p&gt;
+&lt;h2&gt;Day to day Workflow&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Open VS Code&lt;/li&gt;
+&lt;li&gt;Open VS Code terminal 1 - T1&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.\serve&lt;/code&gt; &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat"&gt;#code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A browser opens and navigates to http://localhost:8000&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add a new .md file in \content\ and add some content&lt;/li&gt;
+&lt;li&gt;Open VS Code terminal 2 - T2&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;.\build&lt;/code&gt; &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/build.bat"&gt;#code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;F5 - refresh browser to see the new content&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.\publish "file new.md published"&lt;/code&gt; &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat"&gt;#code&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Browse to https://rasor.github.io&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
 &lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
 To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an absolute path.&lt;/p&gt;
