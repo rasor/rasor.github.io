@@ -4,147 +4,147 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://localhost:8000/</loc>
-<lastmod>2017-09-29T22:59:47-00:00</lastmod>
+<loc>https://rasor.github.io/</loc>
+<lastmod>2017-09-29T23:03:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/archives.html</loc>
-<lastmod>2017-09-29T22:59:47-00:00</lastmod>
+<loc>https://rasor.github.io/archives.html</loc>
+<lastmod>2017-09-29T23:03:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tags.html</loc>
-<lastmod>2017-09-29T22:59:47-00:00</lastmod>
+<loc>https://rasor.github.io/tags.html</loc>
+<lastmod>2017-09-29T23:03:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/categories.html</loc>
-<lastmod>2017-09-29T22:59:47-00:00</lastmod>
+<loc>https://rasor.github.io/categories.html</loc>
+<lastmod>2017-09-29T23:03:08-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/ngx-template-for-visual-studio-2017.html</loc>
+<loc>https://rasor.github.io/ngx-template-for-visual-studio-2017.html</loc>
 <lastmod>2017-09-24T17:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/using-pelican-blog-on-github-pages.html</loc>
+<loc>https://rasor.github.io/using-pelican-blog-on-github-pages.html</loc>
 <lastmod>2017-09-29T23:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/welcome-to-my-pelican-blog-on-github-pages.html</loc>
+<loc>https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html</loc>
 <lastmod>2017-09-24T09:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/category/develop.html</loc>
+<loc>https://rasor.github.io/category/develop.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/category/devop.html</loc>
+<loc>https://rasor.github.io/category/devop.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/category/study.html</loc>
+<loc>https://rasor.github.io/category/study.html</loc>
 <lastmod>2017-09-24T09:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/ngx.html</loc>
+<loc>https://rasor.github.io/tag/ngx.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/typescript.html</loc>
+<loc>https://rasor.github.io/tag/typescript.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/visualstudio.html</loc>
+<loc>https://rasor.github.io/tag/visualstudio.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/tfs.html</loc>
+<loc>https://rasor.github.io/tag/tfs.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/blog.html</loc>
+<loc>https://rasor.github.io/tag/blog.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/pelican.html</loc>
+<loc>https://rasor.github.io/tag/pelican.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/githubpages.html</loc>
+<loc>https://rasor.github.io/tag/githubpages.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/cms.html</loc>
+<loc>https://rasor.github.io/tag/cms.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/git.html</loc>
+<loc>https://rasor.github.io/tag/git.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/tag/install.html</loc>
+<loc>https://rasor.github.io/tag/install.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>http://localhost:8000/author/rasor.html</loc>
+<loc>https://rasor.github.io/author/rasor.html</loc>
 <lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
