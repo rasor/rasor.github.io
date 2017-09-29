@@ -4,148 +4,148 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>./</loc>
-<lastmod>2017-09-29T17:47:00-00:00</lastmod>
+<loc>http://localhost:8000/</loc>
+<lastmod>2017-09-29T22:59:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./archives.html</loc>
-<lastmod>2017-09-29T17:47:00-00:00</lastmod>
+<loc>http://localhost:8000/archives.html</loc>
+<lastmod>2017-09-29T22:59:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tags.html</loc>
-<lastmod>2017-09-29T17:47:00-00:00</lastmod>
+<loc>http://localhost:8000/tags.html</loc>
+<lastmod>2017-09-29T22:59:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./categories.html</loc>
-<lastmod>2017-09-29T17:47:00-00:00</lastmod>
+<loc>http://localhost:8000/categories.html</loc>
+<lastmod>2017-09-29T22:59:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./ngx-template-for-visual-studio-2017.html</loc>
+<loc>http://localhost:8000/ngx-template-for-visual-studio-2017.html</loc>
 <lastmod>2017-09-24T17:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./using-pelican-blog-on-github-pages.html</loc>
-<lastmod>2017-09-29T16:00:00+02:00</lastmod>
+<loc>http://localhost:8000/using-pelican-blog-on-github-pages.html</loc>
+<lastmod>2017-09-29T23:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./welcome-to-my-pelican-blog-on-github-pages.html</loc>
+<loc>http://localhost:8000/welcome-to-my-pelican-blog-on-github-pages.html</loc>
 <lastmod>2017-09-24T09:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./category/develop.html</loc>
+<loc>http://localhost:8000/category/develop.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./category/devop.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/category/devop.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./category/study.html</loc>
+<loc>http://localhost:8000/category/study.html</loc>
 <lastmod>2017-09-24T09:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/ngx.html</loc>
+<loc>http://localhost:8000/tag/ngx.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/typescript.html</loc>
+<loc>http://localhost:8000/tag/typescript.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/visualstudio.html</loc>
+<loc>http://localhost:8000/tag/visualstudio.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/tfs.html</loc>
+<loc>http://localhost:8000/tag/tfs.html</loc>
 <lastmod>2017-09-24T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/blog.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/tag/blog.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/pelican.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/tag/pelican.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/githubpages.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/tag/githubpages.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/cms.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/tag/cms.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/git.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/tag/git.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./tag/install.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/tag/install.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>./author/rasor.html</loc>
-<lastmod>2017-09-29T16:00:00+00:50</lastmod>
+<loc>http://localhost:8000/author/rasor.html</loc>
+<lastmod>2017-09-29T23:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
