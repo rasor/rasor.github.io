@@ -95,12 +95,14 @@ But you could use NotePad for that matter.
 2. Open VS Code terminal 1 - T1
     * `.\serve` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat)
     * A browser opens and navigates to http://localhost:8000
-3. Add a new .md file in \content\ and add some content
+3. Add a new `.md` file in \content\ and add some content
 4. Open VS Code terminal 2 - T2
     * `.\build` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/build.bat)
     * F5 - refresh browser to see the new content
     * `.\publish "file new.md published"` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat)
-6. Browse to https://rasor.github.io
+5. Browse to https://rasor.github.io
+
+Tip: If I don't want to publish a file I rename it to `.txt` - then it won't be visible before I rename it back to `.md`
 
 ## Installation - Plugins and Themes
 Plugins and Themes are two seperate repos being used by some themes.
