@@ -1,135 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Rasor's Tech Blog - #tfs</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+    <meta name="author" content="@rasor" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Rasor's Tech Blog"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=""/>
+
+  <title>Rasor's Tech Blog &ndash;     Tag #tfs
+</title>
+
 </head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Rasor's Tech Blog </a></h1>
-                <nav><ul>
-                    <li><a href="/category/develop.html">Develop</a></li>
-                    <li><a href="/category/devop.html">DevOp</a></li>
-                    <li><a href="/category/study.html">Study</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/ngx-template-for-visual-studio-2017.html">Ngx: Template for Visual Studio 2017</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2017-09-24T17:00:00+02:00">
-                Published: sø 24 september 2017
-        </abbr>
+      <nav>
+        <ul class="list">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
-        </address>
-<p>In <a href="/category/develop.html">Develop</a>.</p>
-<p>tags: <a href="/tag/ngx.html">#ngx</a> <a href="/tag/typescript.html">#typescript</a> <a href="/tag/visualstudio.html">#visualstudio</a> <a href="/tag/tfs.html">#tfs</a> </p>
-</footer><!-- /.post-info --><p>At my work all web developers are getting a Angular 4 course.
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-Twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-Twitter"></i></a></li>
+        <li><a class="sc-GitHub" href="https://github.com/rasor" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-Wordpress"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+
+
+<article>
+  <header>
+    <h2><a href="/ngx-template-for-visual-studio-2017.html#ngx-template-for-visual-studio-2017">Ngx: Template for Visual Studio 2017</a></h2>
+    <p>
+          Posted on sø 24 september 2017 in <a href="/category/develop.html">Develop</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="/tag/ngx.html">#ngx</a>,              <a href="/tag/typescript.html">#typescript</a>,              <a href="/tag/visualstudio.html">#visualstudio</a>,              <a href="/tag/tfs.html">#tfs</a>
+    </p>
+  </header>
+  <div>
+      <p>At my work all web developers are getting a Angular 4 course.
 But there are a couple of issues with that.</p>
 <ul>
 <li>When you work with ngx in Visual Studio code you get a .gitnore file from the Angular CLI to take care of what not to commit to GIT.
-Since we are not yet using GIT at work (but TFS), then TFS don't know what to checkin.</li>
-<li>Since the develpers feel more comfortable with VS 2017, then we also have a chance to get control of files to Checkin with a <code>.csproj</code> file.</li>
-</ul>
-<p>So HowTo import a Angular CLI project into VS 2017 on Windows?</p>
-<p>Luckily there is a <code>.vsix</code> for that: <a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank">Angular CLI Project Template</a></p>
-<h3>Installation</h3>
-<ul>
-<li>Install <a href="https://www.visualstudio.com/vs/community/" target="_blank">VS 2017</a><ul>
-<li>Include web development including TypeScript</li>
-<li>Framework ASP.NET Core 1.1.2</li>
-</ul>
-</li>
-<li>Node 6.9.0 or higher (<code>node -v</code>) - Should come with VS</li>
-<li>Npm 3 or higher (<code>npm -v</code>) - Should come with VS</li>
-<li><a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a> (<code>git -version</code>) - Should come with VS </li>
-<li>Install latest <a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank">Angular CLI</a> (<code>ng version</code>)</li>
-<li>Exit VisualStudio</li>
-<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank">Angular CLI Project Template</a> by executing the <code>.vsix</code></li>
-</ul>
-<h3>Ready-Set-Go</h3>
-<ul>
-<li>Start VisualStudio</li>
-<li>New - Project - Other Languages - TypeScript - Angular CLI Application - Name: <YourNgAppName></li>
-</ul>
-<p><img alt="picture alt" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"></p>
-<ul>
-<li>In the project options choises select both if you are in doubt</li>
-</ul>
-<p><img alt="picture alt" src="img/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"></p>
-<ul>
-<li>Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails<ul>
-<li>Open a command prompt and CD into the root of your Angular project</li>
-<li><code>npm install # install all the node_modules found in package.json</code></li>
-</ul>
-</li>
-<li>
-<p>Now start the app with F5</p>
-<ul>
-<li>VS 2017 will read .\properties\launchsettings.json<ul>
-<li>If you started IIS Express, then VS will start dotnet.exe on <a href="http://localhost:58162/">http://localhost:58162/</a></li>
-<li>If you started <yourapp>, then VS will start dotnet.exe on <a href="http://localhost:58163/">http://localhost:58163/</a></li>
-</ul>
-</li>
-</ul>
-<p><img alt="picture alt" src="img/2017-09-24-F5Startup1.PNG" title="F5 startup 1"></p>
-<ul>
-<li>In both cases Angular CLI will serve you app after buiding it with the Angular CLI on <a href="http://localhost:4200/">http://localhost:4200/</a></li>
-</ul>
-<p><img alt="picture alt" src="img/2017-09-24-F5Startup2.PNG" title="F5 startup 2"></p>
-<ul>
-<li>This is very good news. Why? Because it does not matter what webserver or editor you are using.
-But the best of is that you use standard node.js deployment methods, so you can deploy your app anywhere. You can use standard npm or yarn managers without having to do a lot of strange Visual Studio configuration.</li>
-<li>You can now stop F5 debugging.</li>
-<li>Instead start a webserver manually from a command prompt (in the root of your project) with <code>ng serve</code>
-Now you can see that it is Angular CLI (via .angular-cli.json) that in both cases uses webpack to build packages (via \src\tsconfig.app.json) to serve once again on <a href="http://localhost:4200/">http://localhost:4200/</a></li>
-<li>Press Ctrl-C to stop the webserver</li>
-<li>Checkin your code using your favorite VCS (e.g. TFS or GIT)</li>
-</ul>
-</li>
-</ul>
-<h2>Links</h2>
-<ul>
-<li><a href="https://www.npmjs.com/package/@angular/cli/" target="_blank">@angular/cli</a></li>
-</ul>
-<p>The End</p>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+Since …</li></ul>
+      <br>
+      <a class="btn" href="/ngx-template-for-visual-studio-2017.html#ngx-template-for-visual-studio-2017">    Continue reading
+</a>
+  </div>
+</article>
 
-                            <li><a href="https://twitter.com/rasor">Twitter</a></li>
-                            <li><a href="https://github.com/rasor">GitHub</a></li>
-                            <li><a href="https://rasor.wordpress.com/">Wordpress</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+  <div class="pagination">
+  </div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
 
+
+    <footer>
+<p>&copy; @rasor </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
 </body>
 </html>

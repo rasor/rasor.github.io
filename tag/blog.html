@@ -1,196 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Rasor's Tech Blog - #blog</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+    <meta name="author" content="@rasor" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Rasor's Tech Blog"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=""/>
+
+  <title>Rasor's Tech Blog &ndash;     Tag #blog
+</title>
+
 </head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Rasor's Tech Blog </a></h1>
-                <nav><ul>
-                    <li><a href="/category/develop.html">Develop</a></li>
-                    <li><a href="/category/devop.html">DevOp</a></li>
-                    <li><a href="/category/study.html">Study</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/using-pelican-blog-on-github-pages.html">Using Pelican blog on Github pages</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2017-09-23T20:20:00+02:00">
-                Published: lø 23 september 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-09-24T15:00:00+02:00">
-                Updated: sø 24 september 2017
-        </abbr>
+      <nav>
+        <ul class="list">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
-        </address>
-<p>In <a href="/category/devop.html">DevOp</a>.</p>
-<p>tags: <a href="/tag/blog.html">#blog</a> <a href="/tag/pelican.html">#pelican</a> <a href="/tag/githubpages.html">#githubpages</a> <a href="/tag/cms.html">#cms</a> <a href="/tag/git.html">#git</a> <a href="/tag/install.html">#Install</a> </p>
-</footer><!-- /.post-info --><p>I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons <a href="/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank">here</a></p>
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-Twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-Twitter"></i></a></li>
+        <li><a class="sc-GitHub" href="https://github.com/rasor" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-Wordpress"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+
+
+<article>
+  <header>
+    <h2><a href="/using-pelican-blog-on-github-pages.html#using-pelican-blog-on-github-pages">Using Pelican blog on Github pages</a></h2>
+    <p>
+          Posted on lø 23 september 2017 in <a href="/category/devop.html">DevOp</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="/tag/blog.html">#blog</a>,              <a href="/tag/pelican.html">#pelican</a>,              <a href="/tag/githubpages.html">#githubpages</a>,              <a href="/tag/cms.html">#cms</a>,              <a href="/tag/git.html">#git</a>,              <a href="/tag/install.html">#Install</a>
+    </p>
+  </header>
+  <div>
+      <p>I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons <a href="/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank">here</a></p>
 <p>In this blog I setup a <a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank">Pelican blog site</a> from Windows and host it on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
 <h2>HowTo</h2>
 <h3>Installation - Prerequisites</h3>
 <ul>
 <li>Install <a href="https://www.python.org/downloads/" target="_blank">Python</a></li>
-<li>Create an account at <a href="https://github.com">https://github.com</a></li>
-<li>On Windows: Install <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a></li>
-</ul>
-<h3>Installation - Pelican</h3>
-<ul>
-<li>As admin:<ul>
-<li><code>pip install pelican markdown</code></li>
-</ul>
-</li>
-<li>Create a folder for the Pelican source<ul>
-<li><code>MKDIR username.github.io</code></li>
-<li><code>CD username.github.io</code></li>
-</ul>
-</li>
-<li>Create a pelican site following <a href="http://docs.getpelican.com/en/stable/quickstart.html">http://docs.getpelican.com/en/stable/quickstart.html</a></li>
-<li><code>pelican-quickstart</code><ul>
-<li>Do you want to specify URL prefix? Answer https://username.github.io</li>
-<li>Do you want to upload using xxx? Answer N untill the xxx = GitHub Pages</li>
-</ul>
-</li>
-</ul>
-<h3>Create some content</h3>
-<ul>
-<li>Create a blog e.g <code>~/content/yourcategoryno1/myfirstblog.md</code></li>
-<li>Preview content<ul>
-<li><code>pelican content</code> </li>
-<li><code>cd output</code></li>
-<li><code>python -m pelican.server</code></li>
-<li>Browse to  <a href="http://localhost:8000/">http://localhost:8000/</a></li>
-</ul>
-</li>
-<li>Images<ul>
-<li>In <code>pelicanconf.py</code> add line <code>STATIC_PATHS = ['img', 'pdf']</code></li>
-<li>Create an image e.g <code>~/content/img/hello.png</code></li>
-<li>Link to the file with
-<code>![picture alt](img/hello.png "Mickey Mouse")</code></li>
-</ul>
-</li>
-<li>Links<ul>
-<li>External: <code>[link desc](https://blog.getpelican.com/){:target="_blank"}</code></li>
-<li>Internal: <code>[link desc]({filename}/yourcategoryno1/myfirstblog.md){:target="_blank"}</code></li>
-</ul>
-</li>
-<li>Optionally edit more settings in <code>pelicanconf.py</code> - see <a href="http://docs.getpelican.com/en/3.7.1/settings.html">http://docs.getpelican.com/en/3.7.1/settings.html</a></li>
-<li>add a <code>favicon.ico</code> to root</li>
-</ul>
-<h3>Prepare GIT as VersionControlSystem</h3>
-<ul>
-<li>Fetch <code>.gitignore</code>from <a href="https://github.com/getpelican/pelican-blog/blob/master/.gitignore">https://github.com/getpelican/pelican-blog/blob/master/.gitignore</a> - save it to root</li>
-<li>Create a <code>~/README.md</code> - just for the source branch</li>
-<li>Install publich tool<ul>
-<li><code>pip install ghp-import</code></li>
-</ul>
-</li>
-<li>Create local git repo<ul>
-<li><code>git init</code></li>
-</ul>
-</li>
-<li>Create a remote repo via github.com for your github page build in GitHub. Call it <code>username.github.io</code></li>
-<li>Connect to repo and print remote repo<ul>
-<li><code>git remote add origin https://github.com/rasor/rasor.github.io.git</code></li>
-<li><code>git remote -v</code></li>
-</ul>
-</li>
-<li>Create new branch for the pelican source<ul>
-<li><code>git checkout -b pelican</code></li>
-</ul>
-</li>
-</ul>
-<h3>Deploy you blog</h3>
-<ul>
-<li>(Foreach) Commit source<ul>
-<li><code>git add .</code></li>
-<li><code>git commit -a -m "Initial commit"</code></li>
-<li><code>git push -u origin pelican</code></li>
-</ul>
-</li>
-<li>(Foreach) <a href="http://docs.getpelican.com/en/3.7.1/tips.html#publishing-to-github" target="_blank">Publish</a> build to master then publish<ul>
-<li><code>pelican content -o output -s pelicanconf.py</code></li>
-<li><code>ghp-import output -r origin -b master</code></li>
-<li><code>git push origin master</code></li>
-<li><code>git checkout pelican</code></li>
-</ul>
-</li>
-<li>On Windows - in root create a file called <a href="https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat" target="_blank">publish.bat</a> with the content:</li>
-</ul>
-<div class="highlight"><pre><span></span>git add .
-git commit -a -m %1
-git push -u origin pelican
-pelican content -o output -s pelicanconf.py
-ghp-import output -r origin -b master
-git push origin master
-git checkout pelican
-</pre></div>
+<li>Create an account at <a href="https://github.com">https://github.com …</a></li></ul>
+      <br>
+      <a class="btn" href="/using-pelican-blog-on-github-pages.html#using-pelican-blog-on-github-pages">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="/welcome-to-my-pelican-blog-on-github-pages.html#welcome-to-my-pelican-blog-on-github-pages">Welcome to my Pelican blog on Github pages</a></h2>
+    <p>
+          Posted on lø 23 september 2017 in <a href="/category/study.html">Study</a>
 
 
-<ul>
-<li>... then you can publish by <code>publish.bat "some comment"</code></li>
-</ul>
-<h2>Editor</h2>
-<p>I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
-But you could use NotePad for that matter.</p>
-<p><img alt="picture alt" src="img/2017-09-23-PelicanInVSCode.PNG" title="Pelican In VS Code"></p>
-<h3>Links</h3>
-<ul>
-<li><a href="https://pages.github.com/" target="_blank">Create a repo for your github page site</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/publish.html">http://docs.getpelican.com/en/stable/publish.html</a></li>
-<li><a href="http://www.pelicanthemes.com/">http://www.pelicanthemes.com/</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/pelican-themes.html">http://docs.getpelican.com/en/stable/pelican-themes.html</a></li>
-<li><a href="http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files">http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files</a></li>
-<li><a href="https://github.com/tchapi/markdown-cheatsheet">https://github.com/tchapi/markdown-cheatsheet</a></li>
-<li><a href="http://pythonhosted.org/Markdown/reference.html">http://pythonhosted.org/Markdown/reference.html</a></li>
-<li><a href="http://docs.getpelican.com/en/stable/faq.html">http://docs.getpelican.com/en/stable/faq.html</a></li>
-<li><a href="https://blog.getpelican.com/">https://blog.getpelican.com/</a></li>
-<li><a href="https://help.github.com/articles/about-supported-custom-domains/">https://help.github.com/articles/about-supported-custom-domains/</a></li>
-<li>Another <a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank">install Pelican blog</a></li>
-<li><a href="https://twitter.com/getpelican" target="_blank">Pelican on Twitter</a></li>
-<li><a href="https://rasor.wordpress.com/" target="_blank">My old Wordpress blog</a></li>
-</ul>
-<p>The End</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+          &#8226;     Tagged with
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/welcome-to-my-pelican-blog-on-github-pages.html" rel="bookmark"
-                           title="Permalink to Welcome to my Pelican blog on Github pages">Welcome to my Pelican blog on Github pages</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-09-23T20:00:00+02:00">
-                Published: lø 23 september 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-09-24T09:00:00+02:00">
-                Updated: sø 24 september 2017
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
-        </address>
-<p>In <a href="/category/study.html">Study</a>.</p>
-<p>tags: <a href="/tag/blog.html">#blog</a> <a href="/tag/pelican.html">#pelican</a> <a href="/tag/githubpages.html">#githubpages</a> <a href="/tag/cms.html">#cms</a> </p>
-</footer><!-- /.post-info -->                <p>Hi there.</p>
+              <a href="/tag/blog.html">#blog</a>,              <a href="/tag/pelican.html">#pelican</a>,              <a href="/tag/githubpages.html">#githubpages</a>,              <a href="/tag/cms.html">#cms</a>
+    </p>
+  </header>
+  <div>
+      <p>Hi there.</p>
 <p>I have moved. Previously I was living on <a href="https://rasor.wordpress.com/">https://rasor.wordpress.com/</a>.</p>
 <h3>Reason for move</h3>
 <ul>
@@ -202,38 +116,37 @@ But you could use NotePad for that matter.</p>
 <ul>
 <li>I got an easier way of editing categories and tags<ul>
 <li>Categories: In your content folder …</li></ul></li></ul>
-                <a class="readmore" href="/welcome-to-my-pelican-blog-on-github-pages.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
+      <br>
+      <a class="btn" href="/welcome-to-my-pelican-blog-on-github-pages.html#welcome-to-my-pelican-blog-on-github-pages">    Continue reading
+</a>
+  </div>
+</article>
 
-                            <li><a href="https://twitter.com/rasor">Twitter</a></li>
-                            <li><a href="https://github.com/rasor">GitHub</a></li>
-                            <li><a href="https://rasor.wordpress.com/">Wordpress</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+  <div class="pagination">
+  </div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
 
+
+    <footer>
+<p>&copy; @rasor </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
 </body>
 </html>

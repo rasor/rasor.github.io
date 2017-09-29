@@ -1,48 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Using Pelican blog on Github pages</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="@rasor" />
+<meta name="description" content="I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons here In this blog I setup a Pelican blog site from Windows and host it on GitHub Pages. HowTo Installation - Prerequisites Install Python Create an account at https://github.com …" />
+<meta name="keywords" content="#blog, #pelican, #githubpages, #cms, #git, #Install">
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Using Pelican blog on Github pages"/>
+<meta property="og:description" content="I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons here In this blog I setup a Pelican blog site from Windows and host it on GitHub Pages. HowTo Installation - Prerequisites Install Python Create an account at https://github.com …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/using-pelican-blog-on-github-pages.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-09-23 20:20:00+02:00"/>
+<meta property="article:modified_time" content="2017-09-29 15:00:00+02:00"/>
+<meta property="article:author" content="/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#blog"/>
+<meta property="article:tag" content="#pelican"/>
+<meta property="article:tag" content="#githubpages"/>
+<meta property="article:tag" content="#cms"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#Install"/>
+<meta property="og:image" content="">
+
+  <title>Rasor's Tech Blog &ndash; Using Pelican blog on Github pages</title>
+
 </head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Rasor's Tech Blog </a></h1>
-                <nav><ul>
-                    <li><a href="/category/develop.html">Develop</a></li>
-                    <li class="active"><a href="/category/devop.html">DevOp</a></li>
-                    <li><a href="/category/study.html">Study</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/using-pelican-blog-on-github-pages.html" rel="bookmark"
-           title="Permalink to Using Pelican blog on Github pages">Using Pelican blog on Github pages</a></h1>
-    </header>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2017-09-23T20:20:00+02:00">
-                Published: lø 23 september 2017
-        </abbr>
-		<br />
-        <abbr class="modified" title="2017-09-24T15:00:00+02:00">
-                Updated: sø 24 september 2017
-        </abbr>
+      <nav>
+        <ul class="list">
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/rasor.html">@rasor</a>
-        </address>
-<p>In <a href="/category/devop.html">DevOp</a>.</p>
-<p>tags: <a href="/tag/blog.html">#blog</a> <a href="/tag/pelican.html">#pelican</a> <a href="/tag/githubpages.html">#githubpages</a> <a href="/tag/cms.html">#cms</a> <a href="/tag/git.html">#git</a> <a href="/tag/install.html">#Install</a> </p>
-</footer><!-- /.post-info -->      <p>I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons <a href="/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank">here</a></p>
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-Twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-Twitter"></i></a></li>
+        <li><a class="sc-GitHub" href="https://github.com/rasor" target="_blank"><i class="fa fa-GitHub"></i></a></li>
+        <li><a class="sc-Wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-Wordpress"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+    <h1 id="using-pelican-blog-on-github-pages">Using Pelican blog on Github pages</h1>
+    <p>
+          Posted on lø 23 september 2017 in <a href="/category/devop.html">DevOp</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons <a href="/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank">here</a></p>
 <p>In this blog I setup a <a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank">Pelican blog site</a> from Windows and host it on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.</p>
 <h2>HowTo</h2>
 <h3>Installation - Prerequisites</h3>
@@ -79,6 +123,18 @@
 <li>Browse to  <a href="http://localhost:8000/">http://localhost:8000/</a></li>
 </ul>
 </li>
+<li>On Windows - in root create a file called <a href="https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat" target="_blank">serve.bat</a> with the content:</li>
+</ul>
+<div class="highlight"><pre><span></span>pelican content
+<span class="nb">cd</span> output
+start <span class="s2">&quot;&quot;</span> <span class="s2">&quot;http://localhost:8000/&quot;</span>
+python -m pelican.server
+REM Ctrl-C to quit
+</pre></div>
+
+
+<ul>
+<li>... then you can pre-view your content with <code>.\serve</code></li>
 <li>Images<ul>
 <li>In <code>pelicanconf.py</code> add line <code>STATIC_PATHS = ['img', 'pdf']</code></li>
 <li>Create an image e.g <code>~/content/img/hello.png</code></li>
@@ -145,12 +201,27 @@ git checkout pelican
 
 
 <ul>
-<li>... then you can publish by <code>publish.bat "some comment"</code></li>
+<li>... then you can publish by <code>.\publish "some comment"</code></li>
 </ul>
 <h2>Editor</h2>
 <p>I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
 But you could use NotePad for that matter.</p>
 <p><img alt="picture alt" src="img/2017-09-23-PelicanInVSCode.PNG" title="Pelican In VS Code"></p>
+<h2>Installation - Plugins and Themes</h2>
+<p>Plugins and Themes are two seperate repos being used by some themes.
+To be able to reach them from <code>pelicanconf.py</code> is best to clone them to place with a absolute path.
+Since preference will differ I will put part of the path in system-wide environment variables
+<em> <code>SystemPropertiesAdvanced.exe</code>
+    * Environment Variables – System vars – New
+    * Name: <code>PYTHON_HOME</code>, Value: <code>C:\ProgramFilesExtra\Python\Python36-32</code> – OK - OK #Use the path to Python installed in top of this blog
+</em> Start new cmd promt # with new variable loaded and create a folder for the cloned repos
+<em> <code>c:</code>  <br>
+</em> <code>cd %PYTHON_HOME%</code>
+<em> <code>md pelican-addon-clones</code>
+</em> <code>cd pelican-addon-clones</code>
+<em> <code>git clone --recursive https://github.com/getpelican/pelican-plugins</code>
+</em> <code>git clone --recursive https://github.com/getpelican/pelican-themes</code>
+* Optional continue with heading <a href="{filename}/2017/2017-09-24A-PelicanThemes.md">Installation of themes and plugins</a> to install a specific theme</p>
 <h3>Links</h3>
 <ul>
 <li><a href="https://pages.github.com/" target="_blank">Create a repo for your github page site</a></li>
@@ -168,37 +239,42 @@ But you could use NotePad for that matter.</p>
 <li><a href="https://rasor.wordpress.com/" target="_blank">My old Wordpress blog</a></li>
 </ul>
 <p>The End</p>
-    </div><!-- /.entry-content -->
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/blog.html">#blog</a>
+      <a href="/tag/pelican.html">#pelican</a>
+      <a href="/tag/githubpages.html">#githubpages</a>
+      <a href="/tag/cms.html">#cms</a>
+      <a href="/tag/git.html">#git</a>
+      <a href="/tag/install.html">#Install</a>
+    </p>
+  </div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
 
-                            <li><a href="https://twitter.com/rasor">Twitter</a></li>
-                            <li><a href="https://github.com/rasor">GitHub</a></li>
-                            <li><a href="https://rasor.wordpress.com/">Wordpress</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+</article>
 
+    <footer>
+<p>&copy; @rasor </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
 </body>
 </html>
