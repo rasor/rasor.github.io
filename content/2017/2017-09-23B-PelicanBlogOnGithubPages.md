@@ -90,6 +90,18 @@ But you could use NotePad for that matter.
 
 ![picture alt](img/2017-09-23-PelicanInVSCode.PNG "Pelican In VS Code")
 
+## Day to day Workflow
+1. Open VS Code
+2. Open VS Code terminal 1 - T1
+    * `.\serve` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/serve.bat)
+    * A browser opens and navigates to http://localhost:8000
+3. Add a new .md file in \content\ and add some content
+4. Open VS Code terminal 2 - T2
+    * `.\build` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/build.bat)
+    * F5 - refresh browser to see the new content
+    * `.\publish "file new.md published"` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat)
+6. Browse to https://rasor.github.io
+
 ## Installation - Plugins and Themes
 Plugins and Themes are two seperate repos being used by some themes.
 To be able to reach them from `pelicanconf.py` is best to clone them to place with an absolute path.
