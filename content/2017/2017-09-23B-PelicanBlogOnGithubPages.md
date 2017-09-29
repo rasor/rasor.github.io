@@ -1,6 +1,6 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-09-29 15:00
+Modified: 2017-09-29 16:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #Install
 
@@ -92,18 +92,23 @@ But you could use NotePad for that matter.
 
 ## Installation - Plugins and Themes
 Plugins and Themes are two seperate repos being used by some themes.
-To be able to reach them from `pelicanconf.py` is best to clone them to place with a absolute path.
+To be able to reach them from `pelicanconf.py` is best to clone them to place with an absolute path.
+
 Since preference will differ I will put part of the path in system-wide environment variables
+
 * `SystemPropertiesAdvanced.exe`
     * Environment Variables – System vars – New
-    * Name: `PYTHON_HOME`, Value: `C:\ProgramFilesExtra\Python\Python36-32` – OK - OK #Use the path to Python installed in top of this blog
-* Start new cmd promt # with new variable loaded and create a folder for the cloned repos
-* `c:`    
-* `cd %PYTHON_HOME%`
-* `md pelican-addon-clones`
-* `cd pelican-addon-clones`
-* `git clone --recursive https://github.com/getpelican/pelican-plugins`
-* `git clone --recursive https://github.com/getpelican/pelican-themes`
+    * Name: `PYTHON_HOME`, Value: `C:\ProgramFilesExtra\Python\Python36-32` – OK - OK (Use the path to Python installed in top of this blog)
+* Start new cmd promt (this will load the new environment variable
+* Create a folder for the cloned repos:
+```bash
+c:
+cd %PYTHON_HOME%
+md pelican-addon-clones
+cd pelican-addon-clones
+git clone --recursive https://github.com/getpelican/pelican-plugins
+git clone --recursive https://github.com/getpelican/pelican-themes
+```
 * Optional continue with heading [Installation of themes and plugins]({filename}/2017/2017-09-24A-PelicanThemes.md) to install a specific theme
 
 ### Links

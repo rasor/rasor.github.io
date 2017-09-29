@@ -40,12 +40,22 @@ start C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-theme
 
 ## Flex
 ### Install
-[Instruction](https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44)
-* `pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\Flex --verbose`
-* Add to `pythonconf.py`
+[Instruction](https://github.com/alexandrevicenzi/Flex
+```bash
+c:
+cd %PYTHON_HOME%\pelican-addon-clones
+md pelican-themes-extra
+cd pelican-themes-extra
+git clone https://github.com/alexandrevicenzi/Flex
+[pelican-themes](http://docs.getpelican.com/en/stable/pelican-themes.html) --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes-extra\Flex --verbose
+#pelican-themes --remove Flex
+```
+* Add to `pythonconf.py` 
 ```Python
 THEME = 'Flex'
 ```
+* More to add: <https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example>
+
 ### Verdict
 #### Pros
 * Nice looking
@@ -54,14 +64,16 @@ THEME = 'Flex'
 #### Cons
 * It is missing links categories in left black sidemenu
 * Links in the left black sidemenu is only hooked to LINKS from publishconf. SOCIAL is missing
-* Home image is not pointing to root
-* Name of blog is missing
 * Modified/Updated date is not shown
 
 ## HTML5 Up striped
 ### Install
 [Instruction](https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up)
-* `pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\pelican-striped-html5up --verbose`
+```bash
+c:
+pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\pelican-striped-html5up --verbose
+#pelican-themes --remove pelican-striped-html5up
+```
 
 Plugin `neighbors` is needed by the theme
 * Add to `pythonconf.py`
