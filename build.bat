@@ -1,1 +1,1 @@
-pelican content
+pelican content -s pelicanconf.py

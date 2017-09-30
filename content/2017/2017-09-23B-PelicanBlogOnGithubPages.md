@@ -1,8 +1,13 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-09-29 23:00
+Modified: 2017-09-30 10:00
 Category: DevOp
-Tags: #blog, #pelican, #githubpages, #cms, #git, #Install
+Tags: #blog, #pelican, #githubpages, #cms, #git, #install
+
+This blog is part of a serie 
+
+1. [Using Pelican blog on Github pages]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md)
+2. [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
 
 I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons [here]({filename}/2017/2017-09-23A-Welcome.md){:target="_blank"}
 
@@ -104,32 +109,12 @@ But you could use NotePad for that matter.
 
 Tip: If I don't want to publish a file I rename it to `.txt` - then it won't be visible before I rename it back to `.md`
 
-## Installation - Plugins and Themes
-Plugins and Themes are two seperate repos being used by some themes.
-To be able to reach them from `pelicanconf.py` is best to clone them to place with an absolute path.
-
-Since preference will differ I will put part of the path in system-wide environment variables
-
-* `SystemPropertiesAdvanced.exe`
-    * Environment Variables – System vars – New
-    * Name: `PYTHON_HOME`, Value: `C:\ProgramFilesExtra\Python\Python36-32` – OK - OK (Use the path to Python installed in top of this blog)
-* Start new cmd promt (this will load the new environment variable
-* Create a folder for the cloned repos:
-```bash
-c:
-cd %PYTHON_HOME%
-md pelican-addon-clones
-cd pelican-addon-clones
-git clone --recursive https://github.com/getpelican/pelican-plugins
-git clone --recursive https://github.com/getpelican/pelican-themes
-```
-* Optional continue with heading [Installation of themes and plugins]({filename}/2017/2017-09-24A-PelicanThemes.md) to install a specific theme
+Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md){:target="_blank"}
 
 ### Links
+
 * [Create a repo for your github page site](https://pages.github.com/){:target="_blank"}
 * <http://docs.getpelican.com/en/stable/publish.html>
-* <http://www.pelicanthemes.com/>
-* <http://docs.getpelican.com/en/stable/pelican-themes.html>
 * <http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files>
 * <https://github.com/tchapi/markdown-cheatsheet>
 * <http://pythonhosted.org/Markdown/reference.html>
