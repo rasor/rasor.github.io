@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T14:00:00+02:00</updated><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T14:00:00+02:00</published><updated>2017-09-30T14:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T15:00:00+02:00</updated><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -83,6 +83,7 @@ pelican-themes --install C:&lt;span class="se"&gt;\P&lt;/span&gt;rogramFilesExtr
 
 
 &lt;ul&gt;
+&lt;li&gt;Notice: If you don't want to add extra CSS, then &lt;code&gt;THEME&lt;/code&gt; is all you have to set&lt;/li&gt;
 &lt;li&gt;In the CUSTOM_CSS I am just adding a shadow to images&lt;/li&gt;
 &lt;li&gt;In \content\static\ create a file called &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/content/static/custom.css" target="_blank"&gt;&lt;code&gt;custom.css&lt;/code&gt;&lt;/a&gt; with the content:&lt;/li&gt;
 &lt;/ul&gt;
@@ -93,7 +94,7 @@ pelican-themes --install C:&lt;span class="se"&gt;\P&lt;/span&gt;rogramFilesExtr
 
 
 &lt;ul&gt;
-&lt;li&gt;More configurations you can add: &lt;a href="https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example" target="_blank"&gt;https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More configurations you can add: &lt;a href="https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example" target="_blank"&gt;https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example&lt;/a&gt;. You probably will want many of them.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Verdict&lt;/h3&gt;
 &lt;h4&gt;Pros&lt;/h4&gt;
@@ -148,7 +149,38 @@ pelican-themes --install C:&lt;span class="se"&gt;\P&lt;/span&gt;rogramFilesExtr
 &lt;li&gt;Build your output and see the change&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;1. Edit Theme&lt;/h3&gt;
-&lt;p&gt;More to bee added....&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goto the root of your theme folder and open the theme in your favorite editor. In this case I edit Flex in VS Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
+&lt;span class="nb"&gt;cd&lt;/span&gt; %PYHON_HOME%&lt;span class="se"&gt;\p&lt;/span&gt;elican-addon-clones&lt;span class="se"&gt;\p&lt;/span&gt;elican-themes-extra&lt;span class="se"&gt;\F&lt;/span&gt;lex
+&lt;span class="c1"&gt;# start VS Code&lt;/span&gt;
+code .
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;On each blog post I want to add the &lt;code&gt;Modified&lt;/code&gt; field below the publish date. Add to &lt;a href="https://github.com/alexandrevicenzi/Flex/blob/master/templates/article.html" target="_blank"&gt;&lt;code&gt;templates\article.html&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;      &lt;span class="c"&gt;&amp;lt;!-- Inside p-tag contining when=article.locale_date --&amp;gt;&lt;/span&gt;
+      &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;br&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+      {% if article.modified %}
+        Updated: {{ article.modified |strftime(DEFAULT_DATE_FORMAT) }}
+      {% endif %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Before you re-install the theme you should also goto your Pelican project and make sure you have &lt;code&gt;DEFAULT_DATE_FORMAT&lt;/code&gt; set to the same format as &lt;code&gt;locale_date&lt;/code&gt;. In &lt;code&gt;pelicanconf.py&lt;/code&gt; you could do it like this&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;DEFAULT_LANG&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;en&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;DEFAULT_DATE_FORMAT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;%B &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;, %Y&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;DATE_FORMATS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s1"&gt;&amp;#39;en&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;DEFAULT_DATE_FORMAT&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h3&gt;2. Remove Theme from Pelican&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Easiest way to remove a theme from Pelican is to delete the folder where it is installed into&lt;/span&gt;
 start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&gt;\s&lt;/span&gt;ite-packages&lt;span class="se"&gt;\p&lt;/span&gt;elican&lt;span class="se"&gt;\t&lt;/span&gt;hemes
@@ -156,9 +188,9 @@ start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&g
 
 
 &lt;h3&gt;3. Install Theme to Pelican&lt;/h3&gt;
-&lt;p&gt;See Testing Theme above.&lt;/p&gt;
+&lt;p&gt;See "Switch to Theme" above.&lt;/p&gt;
 &lt;h3&gt;4. Build and see output&lt;/h3&gt;
-&lt;p&gt;See previous blog.&lt;/p&gt;
+&lt;p&gt;See "Day to day Workflow" in &lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" target="_blank"&gt;previous&lt;/a&gt; blog.&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.pelicanthemes.com/" target="_blank"&gt;http://www.pelicanthemes.com/&lt;/a&gt;&lt;/li&gt;
