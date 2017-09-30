@@ -43,7 +43,7 @@ SITEMAP = {
 DELETE_OUTPUT_DIRECTORY = True
 PATH = 'content'
 STATIC_PATHS = ['img', 'static', 'pdf']
-#FAVICON = 'img/favicon.ico'
+FAVICON = 'img/favicon.ico'
 CUSTOM_CSS = 'static/custom.css'
 
 PLUGIN_PATHS = ['C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins']
@@ -91,9 +91,6 @@ SOCIAL = (('twitter', 'https://twitter.com/rasor'),
           ('rss', '/feeds/all.atom.xml'),)
 
 DEFAULT_PAGINATION = 30
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
 
 #MARKDOWN = {
 #    'extension_configs': {
