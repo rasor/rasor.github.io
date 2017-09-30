@@ -1,5 +1,5 @@
 Title: Using Pelican Themes
-Date: 2017-09-30 10:00
+Date: 2017-09-30 14:00
 Category: DevOp
 Tags: #blog, #pelican, #themes, #cms, #install
 
@@ -79,10 +79,22 @@ pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-c
 # pelican-themes --remove Flex
 ```
 
-* Select theme in `pythonconf.py`
+* Add to [`pelicanconf.py`](https://github.com/rasor/rasor.github.io/blob/pelican/pelicanconf.py){:target="_blank"}
 
-```Python
+```python
 THEME = 'Flex'
+STATIC_PATHS = ['img', 'static']
+FAVICON = 'img/favicon.ico'
+CUSTOM_CSS = 'static/custom.css'
+```
+
+* In the CUSTOM_CSS I am just adding a shadow to images
+* In \content create a file called [`custom.css`](https://github.com/rasor/rasor.github.io/blob/pelican/content/custom.css){:target="_blank"} with the content:
+
+```css
+img {
+    box-shadow: 5px 5px 12px grey;
+}
 ```
 
 * More configurations you can add: <https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example>{:target="_blank"}

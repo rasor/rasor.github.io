@@ -13,8 +13,6 @@ SITETITLE = SITENAME
 #SITEDESCRIPTION = '%s\'s playground' % AUTHOR
 SITESUBTITLE = '... still playing with this Lego'
 SITELOGO = '//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120'
-#FAVICON = '/images/favicon.ico'
-
 #BROWSER_COLOR = '#333333'
 #PYGMENTS_STYLE = 'monokai'
 
@@ -44,7 +42,9 @@ SITEMAP = {
 
 DELETE_OUTPUT_DIRECTORY = True
 PATH = 'content'
-STATIC_PATHS = ['img', 'pdf']
+STATIC_PATHS = ['img', 'static', 'pdf']
+#FAVICON = 'img/favicon.ico'
+CUSTOM_CSS = 'static/custom.css'
 
 PLUGIN_PATHS = ['C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins']
 #PLUGINS = ['neighbors']
