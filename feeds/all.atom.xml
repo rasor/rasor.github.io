@@ -247,7 +247,7 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -409,6 +409,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://blog.getpelican.com/" target="_blank"&gt;https://blog.getpelican.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank"&gt;https://help.github.com/articles/about-supported-custom-domains/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Another &lt;a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank"&gt;install Pelican blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Pelican &lt;a href="https://github.com/getpelican/pelican/wiki/Tutorials" target="_blank"&gt;tutorial for deployment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/getpelican" target="_blank"&gt;Pelican on Twitter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/" target="_blank"&gt;My old Wordpress blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
