@@ -89,7 +89,7 @@ CUSTOM_CSS = 'static/custom.css'
 ```
 
 * In the CUSTOM_CSS I am just adding a shadow to images
-* In \content create a file called [`custom.css`](https://github.com/rasor/rasor.github.io/blob/pelican/content/custom.css){:target="_blank"} with the content:
+* In \content\static\ create a file called [`custom.css`](https://github.com/rasor/rasor.github.io/blob/pelican/content/static/custom.css){:target="_blank"} with the content:
 
 ```css
 img {
