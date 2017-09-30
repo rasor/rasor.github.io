@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Study</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/study.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-24T09:00:00+02:00</updated><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-24T09:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Study</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/study.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T10:00:00+02:00</updated><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;
 &lt;p&gt;I have moved. Previously I was living on &lt;a href="https://rasor.wordpress.com/"&gt;https://rasor.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Reason for move&lt;/h3&gt;
 &lt;ul&gt;
@@ -28,6 +28,7 @@
 &lt;li&gt;You own your content and have a local copy of it&lt;/li&gt;
 &lt;li&gt;Your content is very easy to move to somehwere else, since you have a local copy on your PC&lt;/li&gt;
 &lt;li&gt;Updates to a blog has its own field e.g. Modified: 2017-09-24 09:00&lt;/li&gt;
+&lt;li&gt;If you have a blog series then it is much easier to add the list of articles in top of all articles inclused, since they are all on your PC and will all be republished&lt;/li&gt;
 &lt;li&gt;An &lt;a href="http://docs.getpelican.com/en/stable/importer.html"&gt;importer&lt;/a&gt; exists&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Cons&lt;/h3&gt;
@@ -37,6 +38,7 @@
 &lt;li&gt;You need to be used to work with GIT and a command promt&lt;/li&gt;
 &lt;li&gt;Preview of markup is only instantly, if your editor supports it. Same goes for WYSIWIG editor.&lt;/li&gt;
 &lt;li&gt;Setting up to be published in GitHupPages was not described well, so I had to create a &lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;procedure&lt;/a&gt; myself. I am quite pleased with the workflow now. Not too much hazzle, when you are working with code and a terminal anyway.&lt;/li&gt;
+&lt;li&gt;Making links open in a new window with {:target="_blank"} really needs a snippet.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Links&lt;/h3&gt;
 &lt;ul&gt;

@@ -1,11 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-29T23:00:00+02:00</updated><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-09-29T23:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host it on &lt;a href="https://pages.github.com/" target="_blank"&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;HowTo&lt;/h2&gt;
-&lt;h3&gt;Installation - Prerequisites&lt;/h3&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T10:00:00+02:00</updated><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T10:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
+&lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
+To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
+&lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
+To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an absolute path.&lt;/p&gt;
+&lt;p&gt;Since preference will differ I will put part of the path in system-wide environment variables&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Install &lt;a href="https://www.python.org/downloads/" target="_blank"&gt;Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Create an account at &lt;a href="https://github.com"&gt;https://github.com …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;code&gt;SystemPropertiesAdvanced.exe&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Environment Variables – System vars – New&lt;/li&gt;
+&lt;li&gt;Name: &lt;code&gt;PYTHON_HOME&lt;/code&gt;, Value: &lt;code&gt;C:\ProgramFilesExtra\Python\Python36-32&lt;/code&gt;(Use the path to Python installed in top of previous blog)&lt;/li&gt;
+&lt;li&gt;Press OK until all dialogs are closed, so you are sure the variable is stored&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Start new cmd promt (this will load the new environment variable)&lt;/li&gt;
+&lt;li&gt;Create a folder for the cloned repos:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
+&lt;span class="nb"&gt;cd&lt;/span&gt; %PYTHON_HOME%
+md pelican-addon-clones
+&lt;span class="nb"&gt;cd&lt;/span&gt; pelican-addon-clones
+&lt;span class="c1"&gt;# Download plugins and themes&lt;/span&gt;
+git clone --recursive https://github.com/getpelican/pelican-plugins
+git clone --recursive https://github.com/getpelican/pelican-themes
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The above repo pelican-themes in some cases is not linked to the latest version of a theme.
+So for those themes you can clone them into another folder called pelican-themes-extra.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
+&lt;span class="nb"&gt;cd&lt;/span&gt; %PYTHON_HOME%&lt;span class="se"&gt;\p&lt;/span&gt;elican-addon-clones
+md pelican-themes-extra
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Testing Themes&lt;/h1&gt;
+&lt;h2&gt;View installed themes and themes you can install&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Which themes are ready to use by Pelican? - By default Pelican is running theme &amp;quot;notmyidea&amp;quot;&lt;/span&gt;
+&amp;gt; pelican-themes -v -l
+c:&lt;span class="se"&gt;\p&lt;/span&gt;rogramfilesextra&lt;span class="se"&gt;\p&lt;/span&gt;ython&lt;span class="se"&gt;\p&lt;/span&gt;ython36-32&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&gt;\s&lt;/span&gt;ite-packages&lt;span class="se"&gt;\p&lt;/span&gt;elican&lt;span class="se"&gt;\t&lt;/span&gt;hemes&lt;span class="se"&gt;\n&lt;/span&gt;otmyidea
+c:&lt;span class="se"&gt;\p&lt;/span&gt;rogramfilesextra&lt;span class="se"&gt;\p&lt;/span&gt;ython&lt;span class="se"&gt;\p&lt;/span&gt;ython36-32&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&gt;\s&lt;/span&gt;ite-packages&lt;span class="se"&gt;\p&lt;/span&gt;elican&lt;span class="se"&gt;\t&lt;/span&gt;hemes&lt;span class="se"&gt;\s&lt;/span&gt;imple
+&lt;span class="c1"&gt;# Which themes are downloaded and ready to install?&lt;/span&gt;
+&amp;gt; start %PYTHON_HOME%&lt;span class="se"&gt;\p&lt;/span&gt;elican-addon-clones&lt;span class="se"&gt;\p&lt;/span&gt;elican-themes&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Command &lt;code&gt;start&lt;/code&gt; opens an explorer, so you can go into the folders and see if there are any images showing how the theme looks like.
+Or you can checkout &lt;a href="http://www.pelicanthemes.com/" target="_blank"&gt;http://www.pelicanthemes.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am at time of writing running with theme Flex.&lt;/p&gt;
+&lt;p&gt;Ref: Command &lt;a href="http://docs.getpelican.com/en/stable/pelican-themes.html"&gt;pelican-themes&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Switch to Theme "Flex"&lt;/h2&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/alexandrevicenzi/Flex" target="_blank"&gt;Online Instruction&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Flex is one of the themes that is not latest in pelican-themes repo, so I want to download latest from its own repo.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
+&lt;span class="nb"&gt;cd&lt;/span&gt; %PYTHON_HOME%&lt;span class="se"&gt;\p&lt;/span&gt;elican-addon-clones&lt;span class="se"&gt;\p&lt;/span&gt;elican-themes-extra
+&lt;span class="c1"&gt;# Download Flex&lt;/span&gt;
+git clone https://github.com/alexandrevicenzi/Flex
+&lt;span class="c1"&gt;# Install Flex into Pelican&lt;/span&gt;
+pelican-themes --install C:&lt;span class="se"&gt;\P&lt;/span&gt;rogramFilesExtra&lt;span class="se"&gt;\P&lt;/span&gt;ython&lt;span class="se"&gt;\P&lt;/span&gt;ython36-32&lt;span class="se"&gt;\p&lt;/span&gt;elican-addon-clones&lt;span class="se"&gt;\p&lt;/span&gt;elican-themes-extra&lt;span class="se"&gt;\F&lt;/span&gt;lex --verbose
+&lt;span class="c1"&gt;# pelican-themes --remove Flex&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Select theme in &lt;code&gt;pythonconf.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Flex&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;More configurations you can add: &lt;a href="https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example" target="_blank"&gt;https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Verdict&lt;/h3&gt;
+&lt;h4&gt;Pros&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Nice looking&lt;/li&gt;
+&lt;li&gt;Images are shown in its full width - and resized to screen width&lt;/li&gt;
+&lt;li&gt;Syntax highligting is good&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Cons&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Modified/Updated date is not shown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Switch to Theme "HTML5 Up striped"&lt;/h2&gt;
+&lt;h3&gt;Installation&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up" target="_blank"&gt;Online Instruction&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
+&lt;span class="c1"&gt;# Install striped-html5up into Pelican&lt;/span&gt;
+pelican-themes --install C:&lt;span class="se"&gt;\P&lt;/span&gt;rogramFilesExtra&lt;span class="se"&gt;\P&lt;/span&gt;ython&lt;span class="se"&gt;\P&lt;/span&gt;ython36-32&lt;span class="se"&gt;\p&lt;/span&gt;elican-addon-clones&lt;span class="se"&gt;\p&lt;/span&gt;elican-themes&lt;span class="se"&gt;\p&lt;/span&gt;elican-striped-html5up --verbose
+&lt;span class="c1"&gt;#pelican-themes --remove pelican-striped-html5up&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Plugin &lt;code&gt;neighbors&lt;/code&gt; is needed by the theme&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Add to &lt;code&gt;pythonconf.py&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;PLUGIN_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;PLUGINS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;neighbors&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;pelican-striped-html5up&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Verdict&lt;/h3&gt;
+&lt;h4&gt;Pros&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Nice looking&lt;/li&gt;
+&lt;li&gt;Images are shown in its full width&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Cons&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;It does not have any syntax coding and block around code&lt;/li&gt;
+&lt;li&gt;It is missing links to categories and tags links&lt;/li&gt;
+&lt;li&gt;Links in the left black sidemenu are not hooked to content from publishconf or other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Extending Themes&lt;/h1&gt;
+&lt;p&gt;I extended theme "Flex" so it shows Modified date.&lt;/p&gt;
+&lt;p&gt;The workflow for updating a theme can be:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Edit the theme in its local repo&lt;/li&gt;
+&lt;li&gt;Remove the theme from Pelican&lt;/li&gt;
+&lt;li&gt;Re-intall the theme to Pelican&lt;/li&gt;
+&lt;li&gt;Build your output and see the change&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;1. Edit Theme&lt;/h3&gt;
+&lt;p&gt;More to bee added....&lt;/p&gt;
+&lt;h3&gt;2. Remove Theme from Pelican&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Easiest way to remove a theme from Pelican is to delete the folder where it is installed into&lt;/span&gt;
+start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&gt;\s&lt;/span&gt;ite-packages&lt;span class="se"&gt;\p&lt;/span&gt;elican&lt;span class="se"&gt;\t&lt;/span&gt;hemes
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;3. Install Theme to Pelican&lt;/h3&gt;
+&lt;p&gt;See Testing Theme above.&lt;/p&gt;
+&lt;h3&gt;4. Build and see output&lt;/h3&gt;
+&lt;p&gt;See previous blog.&lt;/p&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.pelicanthemes.com/" target="_blank"&gt;http://www.pelicanthemes.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-themes" target="_blank"&gt;https://github.com/getpelican/pelican-themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/pelican-themes.html" target="_blank"&gt;http://docs.getpelican.com/en/stable/pelican-themes.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" target="_blank"&gt;https://media.readthedocs.org/css/sphinx_rtd_theme.css&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pygments.org/languages/" target="_blank"&gt;http://pygments.org/languages/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/getpelican/pelican-plugins" target="_blank"&gt;https://github.com/getpelican/pelican-plugins&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank"&gt;https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Some Pelican Themes I looked at&lt;ul&gt;
+&lt;li&gt;Days &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank"&gt;https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;6M &lt;a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up" target="_blank"&gt;https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;10M &lt;a href="https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44" target="_blank"&gt;https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2Y &lt;a href="https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8" target="_blank"&gt;https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2Y &lt;a href="https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9" target="_blank"&gt;https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;3Y &lt;a href="https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8" target="_blank"&gt;https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Images &lt;a href="https://unsplash.com/" target="_blank"&gt;https://unsplash.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host it on &lt;a href="https://pages.github.com/" target="_blank"&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;HowTo&lt;/h2&gt;
 &lt;h3&gt;Installation - Prerequisites&lt;/h3&gt;
@@ -21,7 +193,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Create a folder for the Pelican source&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;MKDIR username.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;MD username.github.io&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;CD username.github.io&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -144,45 +316,19 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;li&gt;Browse to https://username.github.io&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Tip: If I don't want to publish a file I rename it to &lt;code&gt;.txt&lt;/code&gt; - then it won't be visible before I rename it back to &lt;code&gt;.md&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
-&lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
-To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an absolute path.&lt;/p&gt;
-&lt;p&gt;Since preference will differ I will put part of the path in system-wide environment variables&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;SystemPropertiesAdvanced.exe&lt;/code&gt;&lt;ul&gt;
-&lt;li&gt;Environment Variables – System vars – New&lt;/li&gt;
-&lt;li&gt;Name: &lt;code&gt;PYTHON_HOME&lt;/code&gt;, Value: &lt;code&gt;C:\ProgramFilesExtra\Python\Python36-32&lt;/code&gt; – OK - OK (Use the path to Python installed in top of this blog)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Start new cmd promt (this will load the new environment variable&lt;/li&gt;
-&lt;li&gt;Create a folder for the cloned repos:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;c:
-&lt;span class="nb"&gt;cd&lt;/span&gt; %PYTHON_HOME%
-md pelican-addon-clones
-&lt;span class="nb"&gt;cd&lt;/span&gt; pelican-addon-clones
-git clone --recursive https://github.com/getpelican/pelican-plugins
-git clone --recursive https://github.com/getpelican/pelican-themes
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;Optional continue with heading &lt;a href="{filename}/2017/2017-09-24A-PelicanThemes.md"&gt;Installation of themes and plugins&lt;/a&gt; to install a specific theme&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;Continue in &lt;a href="https://rasor.github.io/using-pelican-themes.html" target="_blank"&gt;Using Pelican Themes&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Links&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://pages.github.com/" target="_blank"&gt;Create a repo for your github page site&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/publish.html"&gt;http://docs.getpelican.com/en/stable/publish.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.pelicanthemes.com/"&gt;http://www.pelicanthemes.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/pelican-themes.html"&gt;http://docs.getpelican.com/en/stable/pelican-themes.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files"&gt;http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/tchapi/markdown-cheatsheet"&gt;https://github.com/tchapi/markdown-cheatsheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://pythonhosted.org/Markdown/reference.html"&gt;http://pythonhosted.org/Markdown/reference.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/faq.html"&gt;http://docs.getpelican.com/en/stable/faq.html&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://blog.getpelican.com/"&gt;https://blog.getpelican.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://help.github.com/articles/about-supported-custom-domains/"&gt;https://help.github.com/articles/about-supported-custom-domains/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/publish.html" target="_blank"&gt;http://docs.getpelican.com/en/stable/publish.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files" target="_blank"&gt;http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/tchapi/markdown-cheatsheet" target="_blank"&gt;https://github.com/tchapi/markdown-cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pythonhosted.org/Markdown/reference.html" target="_blank"&gt;http://pythonhosted.org/Markdown/reference.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/faq.html" target="_blank"&gt;http://docs.getpelican.com/en/stable/faq.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.getpelican.com/" target="_blank"&gt;https://blog.getpelican.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank"&gt;https://help.github.com/articles/about-supported-custom-domains/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Another &lt;a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank"&gt;install Pelican blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/getpelican" target="_blank"&gt;Pelican on Twitter&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/" target="_blank"&gt;My old Wordpress blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category><category term="#git"></category><category term="#Install"></category></entry></feed>
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category><category term="#git"></category><category term="#install"></category></entry></feed>

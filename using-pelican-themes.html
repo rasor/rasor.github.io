@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="This blog is part of a serie Using Pelican blog on Github pages Using Pelican Themes Installation - Plugins and Themes Plugins and Themes are two seperate repos being used by some themes. To be able to reach them from pelicanconf.py is best to clone them to place with an …" />
+<meta name="keywords" content="#blog, #pelican, themes, #cms, #install">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Using Pelican Themes"/>
+<meta property="og:description" content="This blog is part of a serie Using Pelican blog on Github pages Using Pelican Themes Installation - Plugins and Themes Plugins and Themes are two seperate repos being used by some themes. To be able to reach them from pelicanconf.py is best to clone them to place with an …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/using-pelican-themes.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-09-30 10:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#blog"/>
+<meta property="article:tag" content="#pelican"/>
+<meta property="article:tag" content="themes"/>
+<meta property="article:tag" content="#cms"/>
+<meta property="article:tag" content="#install"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Using Pelican Themes</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="using-pelican-themes">Using Pelican Themes</h1>
+    <p>
+          Posted on september 30, 2017 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>This blog is part of a serie </p>
+<ol>
+<li><a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html">Using Pelican blog on Github pages</a></li>
+<li><a href="https://rasor.github.io/using-pelican-themes.html">Using Pelican Themes</a></li>
+</ol>
+<h2>Installation - Plugins and Themes</h2>
+<p>Plugins and Themes are two seperate repos being used by some themes.
+To be able to reach them from <code>pelicanconf.py</code> is best to clone them to place with an absolute path.</p>
+<p>Since preference will differ I will put part of the path in system-wide environment variables</p>
+<ul>
+<li><code>SystemPropertiesAdvanced.exe</code><ul>
+<li>Environment Variables – System vars – New</li>
+<li>Name: <code>PYTHON_HOME</code>, Value: <code>C:\ProgramFilesExtra\Python\Python36-32</code>(Use the path to Python installed in top of previous blog)</li>
+<li>Press OK until all dialogs are closed, so you are sure the variable is stored</li>
+</ul>
+</li>
+<li>Start new cmd promt (this will load the new environment variable)</li>
+<li>Create a folder for the cloned repos:</li>
+</ul>
+<div class="highlight"><pre><span></span>c:
+<span class="nb">cd</span> %PYTHON_HOME%
+md pelican-addon-clones
+<span class="nb">cd</span> pelican-addon-clones
+<span class="c1"># Download plugins and themes</span>
+git clone --recursive https://github.com/getpelican/pelican-plugins
+git clone --recursive https://github.com/getpelican/pelican-themes
+</pre></div>
+
+
+<p>The above repo pelican-themes in some cases is not linked to the latest version of a theme.
+So for those themes you can clone them into another folder called pelican-themes-extra.</p>
+<div class="highlight"><pre><span></span>c:
+<span class="nb">cd</span> %PYTHON_HOME%<span class="se">\p</span>elican-addon-clones
+md pelican-themes-extra
+</pre></div>
+
+
+<h1>Testing Themes</h1>
+<h2>View installed themes and themes you can install</h2>
+<div class="highlight"><pre><span></span><span class="c1"># Which themes are ready to use by Pelican? - By default Pelican is running theme &quot;notmyidea&quot;</span>
+&gt; pelican-themes -v -l
+c:<span class="se">\p</span>rogramfilesextra<span class="se">\p</span>ython<span class="se">\p</span>ython36-32<span class="se">\l</span>ib<span class="se">\s</span>ite-packages<span class="se">\p</span>elican<span class="se">\t</span>hemes<span class="se">\n</span>otmyidea
+c:<span class="se">\p</span>rogramfilesextra<span class="se">\p</span>ython<span class="se">\p</span>ython36-32<span class="se">\l</span>ib<span class="se">\s</span>ite-packages<span class="se">\p</span>elican<span class="se">\t</span>hemes<span class="se">\s</span>imple
+<span class="c1"># Which themes are downloaded and ready to install?</span>
+&gt; start %PYTHON_HOME%<span class="se">\p</span>elican-addon-clones<span class="se">\p</span>elican-themes<span class="se">\</span>
+</pre></div>
+
+
+<p>Command <code>start</code> opens an explorer, so you can go into the folders and see if there are any images showing how the theme looks like.
+Or you can checkout <a href="http://www.pelicanthemes.com/" target="_blank">http://www.pelicanthemes.com/</a></p>
+<p>I am at time of writing running with theme Flex.</p>
+<p>Ref: Command <a href="http://docs.getpelican.com/en/stable/pelican-themes.html">pelican-themes</a></p>
+<h2>Switch to Theme "Flex"</h2>
+<h3>Installation</h3>
+<p><a href="https://github.com/alexandrevicenzi/Flex" target="_blank">Online Instruction</a></p>
+<p>Flex is one of the themes that is not latest in pelican-themes repo, so I want to download latest from its own repo.</p>
+<div class="highlight"><pre><span></span>c:
+<span class="nb">cd</span> %PYTHON_HOME%<span class="se">\p</span>elican-addon-clones<span class="se">\p</span>elican-themes-extra
+<span class="c1"># Download Flex</span>
+git clone https://github.com/alexandrevicenzi/Flex
+<span class="c1"># Install Flex into Pelican</span>
+pelican-themes --install C:<span class="se">\P</span>rogramFilesExtra<span class="se">\P</span>ython<span class="se">\P</span>ython36-32<span class="se">\p</span>elican-addon-clones<span class="se">\p</span>elican-themes-extra<span class="se">\F</span>lex --verbose
+<span class="c1"># pelican-themes --remove Flex</span>
+</pre></div>
+
+
+<ul>
+<li>Select theme in <code>pythonconf.py</code></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;Flex&#39;</span>
+</pre></div>
+
+
+<ul>
+<li>More configurations you can add: <a href="https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example" target="_blank">https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example</a></li>
+</ul>
+<h3>Verdict</h3>
+<h4>Pros</h4>
+<ul>
+<li>Nice looking</li>
+<li>Images are shown in its full width - and resized to screen width</li>
+<li>Syntax highligting is good</li>
+</ul>
+<h4>Cons</h4>
+<ul>
+<li>Modified/Updated date is not shown</li>
+</ul>
+<h2>Switch to Theme "HTML5 Up striped"</h2>
+<h3>Installation</h3>
+<p><a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up" target="_blank">Online Instruction</a></p>
+<div class="highlight"><pre><span></span>c:
+<span class="c1"># Install striped-html5up into Pelican</span>
+pelican-themes --install C:<span class="se">\P</span>rogramFilesExtra<span class="se">\P</span>ython<span class="se">\P</span>ython36-32<span class="se">\p</span>elican-addon-clones<span class="se">\p</span>elican-themes<span class="se">\p</span>elican-striped-html5up --verbose
+<span class="c1">#pelican-themes --remove pelican-striped-html5up</span>
+</pre></div>
+
+
+<p>Plugin <code>neighbors</code> is needed by the theme</p>
+<ul>
+<li>Add to <code>pythonconf.py</code></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins&#39;</span><span class="p">]</span>
+<span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;neighbors&#39;</span><span class="p">]</span>
+<span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;pelican-striped-html5up&#39;</span>
+</pre></div>
+
+
+<h3>Verdict</h3>
+<h4>Pros</h4>
+<ul>
+<li>Nice looking</li>
+<li>Images are shown in its full width</li>
+</ul>
+<h4>Cons</h4>
+<ul>
+<li>It does not have any syntax coding and block around code</li>
+<li>It is missing links to categories and tags links</li>
+<li>Links in the left black sidemenu are not hooked to content from publishconf or other</li>
+</ul>
+<h1>Extending Themes</h1>
+<p>I extended theme "Flex" so it shows Modified date.</p>
+<p>The workflow for updating a theme can be:</p>
+<ol>
+<li>Edit the theme in its local repo</li>
+<li>Remove the theme from Pelican</li>
+<li>Re-intall the theme to Pelican</li>
+<li>Build your output and see the change</li>
+</ol>
+<h3>1. Edit Theme</h3>
+<p>More to bee added....</p>
+<h3>2. Remove Theme from Pelican</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Easiest way to remove a theme from Pelican is to delete the folder where it is installed into</span>
+start %PYTHON_HOME%<span class="se">\l</span>ib<span class="se">\s</span>ite-packages<span class="se">\p</span>elican<span class="se">\t</span>hemes
+</pre></div>
+
+
+<h3>3. Install Theme to Pelican</h3>
+<p>See Testing Theme above.</p>
+<h3>4. Build and see output</h3>
+<p>See previous blog.</p>
+<h1>Links</h1>
+<ul>
+<li><a href="http://www.pelicanthemes.com/" target="_blank">http://www.pelicanthemes.com/</a></li>
+<li><a href="https://github.com/getpelican/pelican-themes" target="_blank">https://github.com/getpelican/pelican-themes</a></li>
+<li><a href="http://docs.getpelican.com/en/stable/pelican-themes.html" target="_blank">http://docs.getpelican.com/en/stable/pelican-themes.html</a></li>
+<li><a href="https://media.readthedocs.org/css/sphinx_rtd_theme.css" target="_blank">https://media.readthedocs.org/css/sphinx_rtd_theme.css</a></li>
+<li><a href="http://pygments.org/languages/" target="_blank">http://pygments.org/languages/</a></li>
+<li><a href="https://github.com/getpelican/pelican-plugins" target="_blank">https://github.com/getpelican/pelican-plugins</a></li>
+<li><a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank">https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html</a></li>
+<li>Some Pelican Themes I looked at<ul>
+<li>Days <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3</a></li>
+<li>6M <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up" target="_blank">https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up</a></li>
+<li>10M <a href="https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44" target="_blank">https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44</a></li>
+<li>2Y <a href="https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8" target="_blank">https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8</a></li>
+<li>2Y <a href="https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9" target="_blank">https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9</a></li>
+<li>3Y <a href="https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8" target="_blank">https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8</a></li>
+</ul>
+</li>
+<li>Images <a href="https://unsplash.com/" target="_blank">https://unsplash.com/</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/blog.html">#blog</a>
+      <a href="https://rasor.github.io/tag/pelican.html">#pelican</a>
+      <a href="https://rasor.github.io/tag/themes.html">themes</a>
+      <a href="https://rasor.github.io/tag/cms.html">#cms</a>
+      <a href="https://rasor.github.io/tag/install.html">#install</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
