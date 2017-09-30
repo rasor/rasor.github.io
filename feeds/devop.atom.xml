@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T12:00:00+02:00</updated><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T10:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T14:00:00+02:00</updated><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T14:00:00+02:00</published><updated>2017-09-30T14:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -73,9 +73,22 @@ pelican-themes --install C:&lt;span class="se"&gt;\P&lt;/span&gt;rogramFilesExtr
 
 
 &lt;ul&gt;
-&lt;li&gt;Select theme in &lt;code&gt;pythonconf.py&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add to &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/pelicanconf.py" target="_blank"&gt;&lt;code&gt;pelicanconf.py&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;THEME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Flex&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;STATIC_PATHS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;img&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;static&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;FAVICON&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;img/favicon.ico&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;CUSTOM_CSS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;static/custom.css&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;In the CUSTOM_CSS I am just adding a shadow to images&lt;/li&gt;
+&lt;li&gt;In \content create a file called &lt;a href="https://github.com/rasor/rasor.github.io/blob/pelican/content/custom.css" target="_blank"&gt;&lt;code&gt;custom.css&lt;/code&gt;&lt;/a&gt; with the content:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;box-shadow&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="kt"&gt;px&lt;/span&gt; &lt;span class="kc"&gt;grey&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

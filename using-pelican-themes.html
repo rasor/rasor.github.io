@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
 
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
     <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
 
@@ -32,7 +33,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/using-pelican-themes.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2017-09-30 10:00:00+02:00"/>
+<meta property="article:published_time" content="2017-09-30 14:00:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
@@ -165,9 +166,22 @@ pelican-themes --install C:<span class="se">\P</span>rogramFilesExtra<span class
 
 
 <ul>
-<li>Select theme in <code>pythonconf.py</code></li>
+<li>Add to <a href="https://github.com/rasor/rasor.github.io/blob/pelican/pelicanconf.py" target="_blank"><code>pelicanconf.py</code></a></li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">THEME</span> <span class="o">=</span> <span class="s1">&#39;Flex&#39;</span>
+<span class="n">STATIC_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;img&#39;</span><span class="p">,</span> <span class="s1">&#39;static&#39;</span><span class="p">]</span>
+<span class="n">FAVICON</span> <span class="o">=</span> <span class="s1">&#39;img/favicon.ico&#39;</span>
+<span class="n">CUSTOM_CSS</span> <span class="o">=</span> <span class="s1">&#39;static/custom.css&#39;</span>
+</pre></div>
+
+
+<ul>
+<li>In the CUSTOM_CSS I am just adding a shadow to images</li>
+<li>In \content create a file called <a href="https://github.com/rasor/rasor.github.io/blob/pelican/content/custom.css" target="_blank"><code>custom.css</code></a> with the content:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nt">img</span> <span class="p">{</span>
+    <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">12</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 
 
