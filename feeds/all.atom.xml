@@ -175,14 +175,14 @@ start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&g
 &lt;/li&gt;
 &lt;li&gt;Images &lt;a href="https://unsplash.com/" target="_blank"&gt;https://unsplash.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-09-24T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting a Angular 4 course.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-09-24T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;When you work with ngx in Visual Studio code you get a .gitnore file from the Angular CLI to take care of what not to commit to GIT.
-Since …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;At my work all web developers are getting a Angular 4 course.
+&lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
+Since …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;When you work with ngx in Visual Studio code you get a .gitnore file from the Angular CLI to take care of what not to commit to GIT.
+&lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
 Since we are not yet using GIT at work (but TFS), then TFS don't know what to checkin.&lt;/li&gt;
 &lt;li&gt;Since the develpers feel more comfortable with VS 2017, then we also have a chance to get control of files to Checkin with a &lt;code&gt;.csproj&lt;/code&gt; file.&lt;/li&gt;
 &lt;/ul&gt;
@@ -215,7 +215,7 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;ul&gt;
 &lt;li&gt;Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails&lt;ul&gt;
 &lt;li&gt;Open a command prompt and CD into the root of your Angular project&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;npm install # install all the node_modules found in package.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;npm install&lt;/code&gt; # install all the node_modules found in package.json&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -223,7 +223,7 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;ul&gt;
 &lt;li&gt;VS 2017 will read .\properties\launchsettings.json&lt;ul&gt;
 &lt;li&gt;If you started IIS Express, then VS will start dotnet.exe on &lt;a href="http://localhost:58162/"&gt;http://localhost:58162/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;If you started &lt;yourapp&gt;, then VS will start dotnet.exe on &lt;a href="http://localhost:58163/"&gt;http://localhost:58163/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;If you started [yourapp], then VS will start dotnet.exe on &lt;a href="http://localhost:58163/"&gt;http://localhost:58163/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
