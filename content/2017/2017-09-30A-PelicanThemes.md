@@ -1,7 +1,7 @@
 Title: Using Pelican Themes
 Date: 2017-09-30 10:00
 Category: DevOp
-Tags: #blog, #pelican, themes, #cms, #install
+Tags: #blog, #pelican, #themes, #cms, #install
 
 This blog is part of a serie 
 
