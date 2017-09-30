@@ -7,7 +7,7 @@ AUTHOR = 'rasor'
 SITENAME = "Rasor\'s Tech Blog"
 RELATIVE_URLS = False
 #SITEURL = '.'
-SITEURL = 'http://localhost:8000'
+SITEURL = 'https://rasor.github.io'
 SITETITLE = SITENAME
 #SITEDESCRIPTION = '%s\'s Thoughts and Writings' % AUTHOR
 #SITEDESCRIPTION = '%s\'s playground' % AUTHOR
@@ -42,7 +42,7 @@ SITEMAP = {
 }
 
 
-DELETE_OUTPUT_DIRECTORY = False
+DELETE_OUTPUT_DIRECTORY = True
 PATH = 'content'
 STATIC_PATHS = ['img', 'pdf']
 
@@ -67,8 +67,8 @@ DATE_FORMATS = {
 }
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
