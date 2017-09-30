@@ -1,5 +1,6 @@
 Title: Using Pelican Themes
-Date: 2017-09-30 14:00
+Date: 2017-09-30 11:00
+Modified: 2017-09-30 15:00
 Category: DevOp
 Tags: #blog, #pelican, #themes, #cms, #install
 
@@ -88,6 +89,7 @@ FAVICON = 'img/favicon.ico'
 CUSTOM_CSS = 'static/custom.css'
 ```
 
+* Notice: If you don't want to add extra CSS, then `THEME` is all you have to set
 * In the CUSTOM_CSS I am just adding a shadow to images
 * In \content\static\ create a file called [`custom.css`](https://github.com/rasor/rasor.github.io/blob/pelican/content/static/custom.css){:target="_blank"} with the content:
 
@@ -97,7 +99,7 @@ img {
 }
 ```
 
-* More configurations you can add: <https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example>{:target="_blank"}
+* More configurations you can add: <https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example>{:target="_blank"}. You probably will want many of them.
 
 ### Verdict
 
@@ -128,7 +130,7 @@ Plugin `neighbors` is needed by the theme
 
 * Add to `pythonconf.py`
 
-```Python
+```python
 PLUGIN_PATHS = ['C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-plugins']
 PLUGINS = ['neighbors']
 THEME = 'pelican-striped-html5up'
@@ -160,7 +162,34 @@ The workflow for updating a theme can be:
 
 ### 1. Edit Theme
 
-More to bee added....
+* Goto the root of your theme folder and open the theme in your favorite editor. In this case I edit Flex in VS Code
+
+```bash
+c:
+cd %PYHON_HOME%\pelican-addon-clones\pelican-themes-extra\Flex
+# start VS Code
+code .
+```
+
+* On each blog post I want to add the `Modified` field below the publish date. Add to [`templates\article.html`](https://github.com/alexandrevicenzi/Flex/blob/master/templates/article.html){:target="_blank"}
+
+```html
+      <!-- Inside p-tag contining when=article.locale_date -->
+      </br>
+      {% if article.modified %}
+        Updated: {{ article.modified |strftime(DEFAULT_DATE_FORMAT) }}
+      {% endif %}
+```
+
+* Before you re-install the theme you should also goto your Pelican project and make sure you have `DEFAULT_DATE_FORMAT` set to the same format as `locale_date`. In `pelicanconf.py` you could do it like this
+
+```python
+DEFAULT_LANG = 'en'
+DEFAULT_DATE_FORMAT = '%B %d, %Y'
+DATE_FORMATS = {
+    'en': DEFAULT_DATE_FORMAT,
+}
+```
 
 ### 2. Remove Theme from Pelican
 
@@ -171,11 +200,11 @@ start %PYTHON_HOME%\lib\site-packages\pelican\themes
 
 ### 3. Install Theme to Pelican
 
-See Testing Theme above.
+See "Switch to Theme" above.
 
 ### 4. Build and see output
 
-See previous blog.
+See "Day to day Workflow" in [previous]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md){:target="_blank"} blog.
 
 # Links
 
