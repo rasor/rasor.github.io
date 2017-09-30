@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T10:00:00+02:00</updated><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T10:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T12:00:00+02:00</updated><entry><title>Use Google Drive as your Desktop</title><link href="https://rasor.github.io/use-google-drive-as-your-desktop.html" rel="alternate"></link><published>2017-09-30T12:00:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/use-google-drive-as-your-desktop.html</id><summary type="html">&lt;p&gt;I you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
+&lt;p&gt;There are several plugins for Chrome.
+The first …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
+&lt;p&gt;There are several plugins for Chrome.
+The first one I found useful was &lt;a href="https://chrome.google.com/webstore/detail/linkto/goapcakmlfahhdehdkbejkcpoddbdikm" target="_blank"&gt;LinkTo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With LinkTo installed you can both right-click or double-click in Google Drive on a link to navigate to that URL.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-30-GDriveLinkTo.PNG" title="A Link in Google Drive"&gt;&lt;/p&gt;
+&lt;p&gt;It also has more features, but the double-click feature is the only one I need so far.&lt;/p&gt;
+&lt;p&gt;Thanks a lot, &lt;a href="https://github.com/ntxcode" target="_blank"&gt;ntxDev&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#googledrive"></category><category term="#chrome"></category><category term="#desktop"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T10:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -434,7 +443,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;li&gt;Updates to a blog has its own field e.g. Modified: 2017-09-24 09:00&lt;/li&gt;
 &lt;li&gt;If you have a blog series then it is much easier to add the list of articles in top of all articles inclused, since they are all on your PC and will all be republished&lt;/li&gt;
 &lt;li&gt;An &lt;a href="http://docs.getpelican.com/en/stable/importer.html"&gt;importer&lt;/a&gt; exists&lt;/li&gt;
-&lt;li&gt;You can customize a theme for your own needs - it is not much hazzle &lt;/li&gt;
+&lt;li&gt;You can customize a theme for your own needs - it is not much hazzle&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Cons&lt;/h3&gt;
 &lt;ul&gt;
