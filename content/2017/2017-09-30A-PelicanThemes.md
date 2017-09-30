@@ -32,48 +32,60 @@ git clone --recursive https://github.com/getpelican/pelican-plugins
 git clone --recursive https://github.com/getpelican/pelican-themes
 ```
 
-```bash
-```
-
-# Themes Test
-
-## View installed themes and themes you can install
-
-```bash
-# Which themes are ready to use by Pelican?
-> pelican-themes -v -l
-c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\notmyidea
-c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\simple
-# Which themes are downloaded and ready to install?
-> start C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\
-```
-Command start opens an explorer, so you can go into the folders and see if there are any images showing how the theme looks like.
-Or you can checkout <http://www.pelicanthemes.com/>
-
-I am at time of writing running with theme Flex.
-
-## Theme "Flex"
-
-### Installation
-
-[Online Instruction](https://github.com/alexandrevicenzi/Flex)
-
-
+The above repo pelican-themes in some cases is not linked to the latest version of a theme.
+So for those themes you can clone them into another folder called pelican-themes-extra.
 
 ```bash
 c:
 cd %PYTHON_HOME%\pelican-addon-clones
 md pelican-themes-extra
-cd pelican-themes-extra
-git clone https://github.com/alexandrevicenzi/Flex
-[pelican-themes](http://docs.getpelican.com/en/stable/pelican-themes.html) --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes-extra\Flex --verbose
-#pelican-themes --remove Flex
 ```
-* Add to `pythonconf.py` 
+
+# Testing Themes
+
+## View installed themes and themes you can install
+
+```bash
+# Which themes are ready to use by Pelican? - By default Pelican is running theme "notmyidea"
+> pelican-themes -v -l
+c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\notmyidea
+c:\programfilesextra\python\python36-32\lib\site-packages\pelican\themes\simple
+# Which themes are downloaded and ready to install?
+> start %PYTHON_HOME%\pelican-addon-clones\pelican-themes\
+```
+
+Command `start` opens an explorer, so you can go into the folders and see if there are any images showing how the theme looks like.
+Or you can checkout <http://www.pelicanthemes.com/>{:target="_blank"}
+
+I am at time of writing running with theme Flex.
+
+Ref: Command [pelican-themes](http://docs.getpelican.com/en/stable/pelican-themes.html)
+
+## Switch to Theme "Flex"
+
+### Installation
+
+[Online Instruction](https://github.com/alexandrevicenzi/Flex){:target="_blank"}
+
+Flex is one of the themes that is not latest in pelican-themes repo, so I want to download latest from its own repo.
+
+```bash
+c:
+cd %PYTHON_HOME%\pelican-addon-clones\pelican-themes-extra
+# Download Flex
+git clone https://github.com/alexandrevicenzi/Flex
+# Install Flex into Pelican
+pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes-extra\Flex --verbose
+# pelican-themes --remove Flex
+```
+
+* Select theme in `pythonconf.py`
+
 ```Python
 THEME = 'Flex'
 ```
-* More to add: <https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example>
+
+* More configurations you can add: <https://github.com/alexandrevicenzi/Flex/wiki/Configuration-example>{:target="_blank"}
 
 ### Verdict
 
@@ -81,26 +93,27 @@ THEME = 'Flex'
 
 * Nice looking
 * Images are shown in its full width - and resized to screen width
-* Syntax highligting is ggood
+* Syntax highligting is good
 
 #### Cons
 
-* It is missing links categories in left black sidemenu
-* Links in the left black sidemenu is only hooked to LINKS from publishconf. SOCIAL is missing
 * Modified/Updated date is not shown
 
-## Them "HTML5 Up striped"
+## Switch to Theme "HTML5 Up striped"
 
 ### Installation
 
-[Online Instruction](https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up)
+[Online Instruction](https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up){:target="_blank"}
+
 ```bash
 c:
+# Install striped-html5up into Pelican
 pelican-themes --install C:\ProgramFilesExtra\Python\Python36-32\pelican-addon-clones\pelican-themes\pelican-striped-html5up --verbose
 #pelican-themes --remove pelican-striped-html5up
 ```
 
 Plugin `neighbors` is needed by the theme
+
 * Add to `pythonconf.py`
 
 ```Python
@@ -122,38 +135,52 @@ THEME = 'pelican-striped-html5up'
 * It is missing links to categories and tags links
 * Links in the left black sidemenu are not hooked to content from publishconf or other
 
-################################################
+# Extending Themes
 
-Links
+I extended theme "Flex" so it shows Modified date.
 
-* <http://www.pelicanthemes.com/>
-* <http://docs.getpelican.com/en/stable/pelican-themes.html>
+The workflow for updating a theme can be:
 
-* In path: C:\ProgramFilesExtra\Python\Python36-32
-* C:\ProgramFilesExtra\Python\Python36-32\Lib\site-packages\pelican\themes
-* https://media.readthedocs.org/css/sphinx_rtd_theme.css
+1. Edit the theme in its local repo
+2. Remove the theme from Pelican
+3. Re-intall the theme to Pelican
+4. Build your output and see the change
 
+### 1. Edit Theme
 
+More to bee added....
 
+### 2. Remove Theme from Pelican
 
+```bash
+# Easiest way to remove a theme from Pelican is to delete the folder where it is installed into
+start %PYTHON_HOME%\lib\site-packages\pelican\themes
+```
 
-* http://pygments.org/languages/
-* Plugins https://github.com/getpelican/pelican-plugins
-* Pelican Themes
-    * http://www.pelicanthemes.com/
-    * https://github.com/getpelican/pelican-themes
-    * http://docs.getpelican.com/en/stable/pelican-themes.html
-    * Days https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
-    * - 6M https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up
-    * 10M https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44
-    * 2Y https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8
-    * 2Y https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9
-    * 3Y https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8
-    * Edit https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html
-* Jekyll Themes https://github.com/rasor/rasor.github.io/settings/pages/themes?utf8=%E2%9C%93&source=master
+### 3. Install Theme to Pelican
 
-* Images https://unsplash.com/ 
+See Testing Theme above.
 
-################################################
+### 4. Build and see output
+
+See previous blog.
+
+# Links
+
+* <http://www.pelicanthemes.com/>{:target="_blank"}
+* <https://github.com/getpelican/pelican-themes>{:target="_blank"}
+* <http://docs.getpelican.com/en/stable/pelican-themes.html>{:target="_blank"}
+* <https://media.readthedocs.org/css/sphinx_rtd_theme.css>{:target="_blank"}
+* <http://pygments.org/languages/>{:target="_blank"}
+* <https://github.com/getpelican/pelican-plugins>{:target="_blank"}
+* <https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html>{:target="_blank"}
+* Some Pelican Themes I looked at
+    * Days <https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3>{:target="_blank"}
+    * 6M <https://github.com/getpelican/pelican-themes/tree/master/pelican-striped-html5up>{:target="_blank"}
+    * 10M <https://github.com/alexandrevicenzi/Flex/tree/5bc235cf579cb03bcc8f54b6029ff74493a0cb44>{:target="_blank"}
+    * 2Y <https://github.com/Parbhat/pelican-blue/tree/1dda054242f9267f4bd49891b022ac41c9ecfbe8>{:target="_blank"}
+    * 2Y <https://github.com/jody-frankowski/blue-penguin/tree/c5e23e7753367b5beacce87b732cd1567c4818f9>{:target="_blank"}
+    * 3Y <https://github.com/nasskach/pelican-blueidea/tree/8f11c0e3b4b8e9ef45d1243b0175db91b7b42ba8>{:target="_blank"}
+* Images <https://unsplash.com/>{:target="_blank"}
 
 The End

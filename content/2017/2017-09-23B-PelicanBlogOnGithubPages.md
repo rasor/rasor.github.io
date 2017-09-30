@@ -22,7 +22,7 @@ In this blog I setup a [Pelican blog site](http://docs.getpelican.com/en/stable/
 * As admin:
     * `pip install pelican markdown`
 * Create a folder for the Pelican source
-    * `MKDIR username.github.io`
+    * `MD username.github.io`
     * `CD username.github.io`
 * Create a pelican site following <http://docs.getpelican.com/en/stable/quickstart.html>
 * `pelican-quickstart`
@@ -114,13 +114,13 @@ Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
 ### Links
 
 * [Create a repo for your github page site](https://pages.github.com/){:target="_blank"}
-* <http://docs.getpelican.com/en/stable/publish.html>
-* <http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files>
-* <https://github.com/tchapi/markdown-cheatsheet>
-* <http://pythonhosted.org/Markdown/reference.html>
-* <http://docs.getpelican.com/en/stable/faq.html>
-* <https://blog.getpelican.com/>
-* <https://help.github.com/articles/about-supported-custom-domains/>
+* <http://docs.getpelican.com/en/stable/publish.html>{:target="_blank"}
+* <http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files>{:target="_blank"}
+* <https://github.com/tchapi/markdown-cheatsheet>{:target="_blank"}
+* <http://pythonhosted.org/Markdown/reference.html>{:target="_blank"}
+* <http://docs.getpelican.com/en/stable/faq.html>{:target="_blank"}
+* <https://blog.getpelican.com/>{:target="_blank"}
+* <https://help.github.com/articles/about-supported-custom-domains/>{:target="_blank"}
 * Another [install Pelican blog](https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html){:target="_blank"}
 * [Pelican on Twitter](https://twitter.com/getpelican){:target="_blank"}
 * [My old Wordpress blog](https://rasor.wordpress.com/){:target="_blank"}
