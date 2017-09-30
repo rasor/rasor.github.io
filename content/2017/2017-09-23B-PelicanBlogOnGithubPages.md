@@ -1,6 +1,6 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-09-30 10:00
+Modified: 2017-09-30 12:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #install
 
@@ -122,6 +122,7 @@ Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
 * <https://blog.getpelican.com/>{:target="_blank"}
 * <https://help.github.com/articles/about-supported-custom-domains/>{:target="_blank"}
 * Another [install Pelican blog](https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html){:target="_blank"}
+* Pelican [tutorial for deployment](https://github.com/getpelican/pelican/wiki/Tutorials){:target="_blank"}
 * [Pelican on Twitter](https://twitter.com/getpelican){:target="_blank"}
 * [My old Wordpress blog](https://rasor.wordpress.com/){:target="_blank"}
 
