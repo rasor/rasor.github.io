@@ -434,6 +434,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;li&gt;Updates to a blog has its own field e.g. Modified: 2017-09-24 09:00&lt;/li&gt;
 &lt;li&gt;If you have a blog series then it is much easier to add the list of articles in top of all articles inclused, since they are all on your PC and will all be republished&lt;/li&gt;
 &lt;li&gt;An &lt;a href="http://docs.getpelican.com/en/stable/importer.html"&gt;importer&lt;/a&gt; exists&lt;/li&gt;
+&lt;li&gt;You can customize a theme for your own needs - it is not much hazzle &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Cons&lt;/h3&gt;
 &lt;ul&gt;
