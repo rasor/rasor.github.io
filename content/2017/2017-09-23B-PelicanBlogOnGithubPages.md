@@ -134,7 +134,7 @@ Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
 #### Markdown
 
 * <https://github.com/tchapi/markdown-cheatsheet>{:target="_blank"}
-* [Syntax highlighting languages]<http://tinker.kotaweaver.com/blog/?p=152>{:target="_blank"}
+* [Syntax highlighting languages](http://tinker.kotaweaver.com/blog/?p=152){:target="_blank"}
 * <http://pythonhosted.org/Markdown/reference.html>{:target="_blank"}
 
 ##### Other

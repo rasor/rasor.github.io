@@ -4,7 +4,7 @@ Category: Develop
 Tags: #git, #ssh, #ionic
 
 HowTo connect to Ionic Pro, when `ionic link` fails?  
-*[Ionic Pro](https://ionicframework.com/docs/pro/){:target="_blank"} is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service*
+*[Ionic Pro](https://ionicframework.com/docs/pro/){:target="_blank"} is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service*
 
 # Intro
 
@@ -153,5 +153,6 @@ refresh env
 # Links
 
 * <http://ionicframework.com/docs/pro/basics/getting-started/>{:target="_blank"}
+* <https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples>{:target="_blank"}
 
 The End
