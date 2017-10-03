@@ -1,6 +1,6 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-09-30 12:00
+Modified: 2017-10-03 20:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #install
 
@@ -112,19 +112,33 @@ Tip: If I don't want to publish a file I rename it to `.txt` - then it won't be 
 
 Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md){:target="_blank"}
 
+-----------------------------
+
 ### Links
 
+#### GitHub pages
+
 * [Create a repo for your github page site](https://pages.github.com/){:target="_blank"}
+
+#### Pelican
+
 * <http://docs.getpelican.com/en/stable/publish.html>{:target="_blank"}
 * <http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files>{:target="_blank"}
-* <https://github.com/tchapi/markdown-cheatsheet>{:target="_blank"}
-* <http://pythonhosted.org/Markdown/reference.html>{:target="_blank"}
 * <http://docs.getpelican.com/en/stable/faq.html>{:target="_blank"}
 * <https://blog.getpelican.com/>{:target="_blank"}
 * <https://help.github.com/articles/about-supported-custom-domains/>{:target="_blank"}
 * Another [install Pelican blog](https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html){:target="_blank"}
 * Pelican [tutorial for deployment](https://github.com/getpelican/pelican/wiki/Tutorials){:target="_blank"}
 * [Pelican on Twitter](https://twitter.com/getpelican){:target="_blank"}
+
+#### Markdown
+
+* <https://github.com/tchapi/markdown-cheatsheet>{:target="_blank"}
+* [Syntax highlighting languages]<http://tinker.kotaweaver.com/blog/?p=152>{:target="_blank"}
+* <http://pythonhosted.org/Markdown/reference.html>{:target="_blank"}
+
+##### Other
+
 * [My old Wordpress blog](https://rasor.wordpress.com/){:target="_blank"}
 
 The End
