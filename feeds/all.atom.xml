@@ -1,5 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-09-30T15:00:00+02:00</updated><entry><title>Use Google Drive as your Desktop</title><link href="https://rasor.github.io/use-google-drive-as-your-desktop.html" rel="alternate"></link><published>2017-09-30T12:00:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/use-google-drive-as-your-desktop.html</id><summary type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-03T20:30:00+02:00</updated><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
+&lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;h3&gt;The problem&lt;/h3&gt;
+&lt;p&gt;I wanted to connect to Ionic Pro from Windows.&lt;br&gt;
+But the attempt failed.&lt;/p&gt;
+&lt;p&gt;It kept coming with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
+&lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;h3&gt;The problem&lt;/h3&gt;
+&lt;p&gt;I wanted to connect to Ionic Pro from Windows.&lt;br&gt;
+But the attempt failed.&lt;/p&gt;
+&lt;p&gt;It kept coming with one error after the other. The latest I had difficulty to pass was:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;gt;ionic link
+× Looking up your apps - failed!
+Request: GET https://api.ionicjs.com/apps?page&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&lt;span class="nv"&gt;page_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;25&lt;/span&gt;
+Response: &lt;span class="m"&gt;401&lt;/span&gt;
+Body:
+&lt;span class="o"&gt;{&lt;/span&gt; type: &lt;span class="s1"&gt;&amp;#39;Unauthorized&amp;#39;&lt;/span&gt;, link: null, message: &lt;span class="s1"&gt;&amp;#39;Invalid Token&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This blog has a &lt;strong&gt;workaround&lt;/strong&gt; for &lt;code&gt;ionic link&lt;/code&gt;.&lt;/p&gt;
+&lt;h3&gt;ionic link&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://ionicframework.com/docs/cli/link/" target="_blank"&gt;&lt;code&gt;ionic link&lt;/code&gt;&lt;/a&gt; CLI command connects your local git repo with a remote repo at Ionic Pro.
+That remote repo was created when you manually created an app at &lt;a href="https://dashboard.ionicjs.com/apps" target="_blank"&gt;Ionic Pro&lt;/a&gt; site.&lt;/p&gt;
+&lt;p&gt;It does that by doing probably all these tasks&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;creating a set of SSH keys, &lt;/li&gt;
+&lt;li&gt;uploading the public key to Ionic Pro and&lt;/li&gt;
+&lt;li&gt;adding the app id to project-root\ionic.config.json&lt;/li&gt;
+&lt;li&gt;adding remote ionic repo to your local project&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;So when it won't we can do it ourselves.&lt;/p&gt;
+&lt;h1&gt;The workaround&lt;/h1&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a ionic app in &lt;a href="https://dashboard.ionicjs.com" target="_blank"&gt;Ionic Pro&lt;/a&gt;&lt;br&gt;
+After creation the id of the app will be the last part of the url - e.g. as in https://apps.ionic.io/app/09faf85a&lt;/li&gt;
+&lt;li&gt;Create a &lt;a href="http://ionicframework.com/getting-started/" target="_blank"&gt;ionic starter app&lt;/a&gt; on your PC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1. Create a set of SSH keys&lt;/h3&gt;
+&lt;p&gt;You need &lt;code&gt;ssh-keygen.exe&lt;/code&gt; to generate a set of public/private SSH keys.
+&lt;code&gt;ssh-keygen.exe&lt;/code&gt; is installed as part of &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Git (default installed into &lt;code&gt;C:\Program Files\Git\usr\bin&lt;/code&gt;) or&lt;/li&gt;
+&lt;li&gt;OpenSSH (default installed into &lt;code&gt;C:\Program Files\OpenSSH-Win64&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;On my PC I also had HerokuToolkit installed with a path in &lt;code&gt;ssh-keygen.bat&lt;/code&gt; to &lt;code&gt;ssh-keygen.exe&lt;/code&gt;.&lt;br&gt;
+But this path was wrong. It seemed to be part of some problems. Rename that file, so it is not called instead of one of the real .exe files.&lt;/p&gt;
+&lt;p&gt;From Git bash:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Generate key-pair into C:\Users\your_userid\.ssh\&lt;/span&gt;
+c:
+&lt;span class="nb"&gt;cd&lt;/span&gt; C:/Users/your_userid/.ssh
+&lt;span class="c1"&gt;# http://docs.ionic.io/services/ssh-keys/&lt;/span&gt;
+ssh-keygen.exe -t rsa -b &lt;span class="m"&gt;4096&lt;/span&gt; -C &lt;span class="s2"&gt;&amp;quot;your_email@example.com&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check if ssh agent is running&lt;/span&gt;
+&lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;ssh-agent -s&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Agent pid 12345 - yes&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Add private key to agent - &lt;/span&gt;
+ssh-add C:/Users/your_userid/.ssh/id_rsa
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;2. Upload the public key to Ionic Pro&lt;/h3&gt;
+&lt;p&gt;Paste the content of file &lt;code&gt;id_rsa.pub&lt;/code&gt; to a new key in &lt;a href="https://dashboard.ionicjs.com/settings/ssh-keys" target="_blank"&gt;Ionic Pro's SSH store&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;3. Add the app id to your Ionic config in your local repo&lt;/h3&gt;
+&lt;p&gt;Edit &lt;code&gt;project-root\ionic.config.json&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+  &lt;span class="s"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Your&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;Magic&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;App&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt;
+  &lt;span class="s"&gt;&amp;quot;app_id&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;09faf85a&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# replace with your id&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;4. Add remote ionic repo to your local project&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# https://dashboard.ionicjs.com/app/09faf85a/settings/git&lt;/span&gt;
+&lt;span class="c1"&gt;# Add Ionic Pro as remote repo&lt;/span&gt;
+git remote add ionic ssh://git@git.ionicjs.com:your_ionic_userid/your_ionic_appname.git
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;After the workaround&lt;/h1&gt;
+&lt;h3&gt;5. Upload your app to Ionic Pro&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Upload to Ionic Pro&lt;/span&gt;
+git push ionic master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;6. Make Github your default remote repo&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Add github as remote repo&lt;/span&gt;
+git remote add origin https://github.com/your_git_userid/your_git_appname.git
+&lt;span class="c1"&gt;# Upload to github and set it default (for pull)&lt;/span&gt;
+git push --set-upstream origin master
+&lt;span class="c1"&gt;# Check your remotes&lt;/span&gt;
+git remote -v
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;7. Continue to use Ionic Pro&lt;/h3&gt;
+&lt;p&gt;On the url for your app - e.g. https://dashboard.ionicjs.com/app/09faf85a/code/builds/list you can continue to deploy, preview and more.&lt;/p&gt;
+&lt;p&gt;You might also need to modify &lt;code&gt;src/app/app.module.ts&lt;/code&gt;. &lt;a href="http://docs.ionic.io/setup.html#configuration" target="_blank"&gt;Define a CloudSettings object&lt;/a&gt;. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Tips&lt;/h1&gt;
+&lt;h3&gt;Download an app as a starter app&lt;/h3&gt;
+&lt;p&gt;If you have access to a Ionic Pro app, you can &lt;code&gt;git clone&lt;/code&gt; it with&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ionic start --pro-id 09faf85a
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;... if I am asuming correct.&lt;/p&gt;
+&lt;h3&gt;If you want OpenSSH on Windows&lt;/h3&gt;
+&lt;p&gt;.. then here is how you &lt;a href="https://github.com/PowerShell/Win32-OpenSSH/wiki/Win32-OpenSSH-Automated-Install-and-Upgrade-using-Chocolatey" target="_blank"&gt;install OpenSSH&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# do this from an admin prompt&lt;/span&gt;
+choco install openssh &lt;span class="c1"&gt;# takes a while&lt;/span&gt;
+&lt;span class="c1"&gt;# reload environment variables&lt;/span&gt;
+refresh env
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://ionicframework.com/docs/pro/basics/getting-started/" target="_blank"&gt;http://ionicframework.com/docs/pro/basics/getting-started/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Use Google Drive as your Desktop</title><link href="https://rasor.github.io/use-google-drive-as-your-desktop.html" rel="alternate"></link><published>2017-09-30T12:00:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/use-google-drive-as-your-desktop.html</id><summary type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
 &lt;p&gt;There are several plugins for Chrome.
 The first …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
 &lt;p&gt;There are several plugins for Chrome.
@@ -292,7 +419,7 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-10-03T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -443,19 +570,31 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;Tip: If I don't want to publish a file I rename it to &lt;code&gt;.txt&lt;/code&gt; - then it won't be visible before I rename it back to &lt;code&gt;.md&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Continue in &lt;a href="https://rasor.github.io/using-pelican-themes.html" target="_blank"&gt;Using Pelican Themes&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
 &lt;h3&gt;Links&lt;/h3&gt;
+&lt;h4&gt;GitHub pages&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://pages.github.com/" target="_blank"&gt;Create a repo for your github page site&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Pelican&lt;/h4&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/publish.html" target="_blank"&gt;http://docs.getpelican.com/en/stable/publish.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files" target="_blank"&gt;http://docs.getpelican.com/en/3.6.3/content.html#linking-to-static-files&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/tchapi/markdown-cheatsheet" target="_blank"&gt;https://github.com/tchapi/markdown-cheatsheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://pythonhosted.org/Markdown/reference.html" target="_blank"&gt;http://pythonhosted.org/Markdown/reference.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://docs.getpelican.com/en/stable/faq.html" target="_blank"&gt;http://docs.getpelican.com/en/stable/faq.html&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://blog.getpelican.com/" target="_blank"&gt;https://blog.getpelican.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.github.com/articles/about-supported-custom-domains/" target="_blank"&gt;https://help.github.com/articles/about-supported-custom-domains/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Another &lt;a href="https://www.fullstackpython.com/blog/generating-static-websites-pelican-jinja2-markdown.html" target="_blank"&gt;install Pelican blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Pelican &lt;a href="https://github.com/getpelican/pelican/wiki/Tutorials" target="_blank"&gt;tutorial for deployment&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://twitter.com/getpelican" target="_blank"&gt;Pelican on Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Markdown&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/tchapi/markdown-cheatsheet" target="_blank"&gt;https://github.com/tchapi/markdown-cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;[Syntax highlighting languages]&lt;a href="http://tinker.kotaweaver.com/blog/?p=152" target="_blank"&gt;http://tinker.kotaweaver.com/blog/?p=152&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://pythonhosted.org/Markdown/reference.html" target="_blank"&gt;http://pythonhosted.org/Markdown/reference.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Other&lt;/h5&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/" target="_blank"&gt;My old Wordpress blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category><category term="#git"></category><category term="#install"></category></entry><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;

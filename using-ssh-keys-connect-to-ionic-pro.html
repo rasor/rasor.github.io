@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="HowTo connect to Ionic Pro, when ionic link fails? Ionic Pro is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service Intro The problem I wanted to connect to Ionic Pro from Windows. But the attempt failed. It kept coming with …" />
+<meta name="keywords" content="#git, #ssh, #ionic">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Using SSH keys - Connect to Ionic Pro"/>
+<meta property="og:description" content="HowTo connect to Ionic Pro, when ionic link fails? Ionic Pro is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service Intro The problem I wanted to connect to Ionic Pro from Windows. But the attempt failed. It kept coming with …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-10-03 20:30:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#ssh"/>
+<meta property="article:tag" content="#ionic"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Using SSH keys - Connect to Ionic Pro</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="using-ssh-keys-connect-to-ionic-pro">Using SSH keys - Connect to Ionic Pro</h1>
+    <p>
+          Posted on oktober 03, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>HowTo connect to Ionic Pro, when <code>ionic link</code> fails?<br>
+<em><a href="https://ionicframework.com/docs/pro/" target="_blank">Ionic Pro</a> is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service</em></p>
+<h1>Intro</h1>
+<h3>The problem</h3>
+<p>I wanted to connect to Ionic Pro from Windows.<br>
+But the attempt failed.</p>
+<p>It kept coming with one error after the other. The latest I had difficulty to pass was:</p>
+<div class="highlight"><pre><span></span>&gt;ionic link
+× Looking up your apps - failed!
+Request: GET https://api.ionicjs.com/apps?page<span class="o">=</span><span class="m">1</span><span class="p">&amp;</span><span class="nv">page_size</span><span class="o">=</span><span class="m">25</span>
+Response: <span class="m">401</span>
+Body:
+<span class="o">{</span> type: <span class="s1">&#39;Unauthorized&#39;</span>, link: null, message: <span class="s1">&#39;Invalid Token&#39;</span> <span class="o">}</span>
+</pre></div>
+
+
+<p>This blog has a <strong>workaround</strong> for <code>ionic link</code>.</p>
+<h3>ionic link</h3>
+<p><a href="https://ionicframework.com/docs/cli/link/" target="_blank"><code>ionic link</code></a> CLI command connects your local git repo with a remote repo at Ionic Pro.
+That remote repo was created when you manually created an app at <a href="https://dashboard.ionicjs.com/apps" target="_blank">Ionic Pro</a> site.</p>
+<p>It does that by doing probably all these tasks</p>
+<ol>
+<li>creating a set of SSH keys, </li>
+<li>uploading the public key to Ionic Pro and</li>
+<li>adding the app id to project-root\ionic.config.json</li>
+<li>adding remote ionic repo to your local project</li>
+</ol>
+<p>So when it won't we can do it ourselves.</p>
+<h1>The workaround</h1>
+<h3>Prerequisites</h3>
+<ul>
+<li>Create a ionic app in <a href="https://dashboard.ionicjs.com" target="_blank">Ionic Pro</a><br>
+After creation the id of the app will be the last part of the url - e.g. as in https://apps.ionic.io/app/09faf85a</li>
+<li>Create a <a href="http://ionicframework.com/getting-started/" target="_blank">ionic starter app</a> on your PC</li>
+</ul>
+<h3>1. Create a set of SSH keys</h3>
+<p>You need <code>ssh-keygen.exe</code> to generate a set of public/private SSH keys.
+<code>ssh-keygen.exe</code> is installed as part of </p>
+<ul>
+<li>Git (default installed into <code>C:\Program Files\Git\usr\bin</code>) or</li>
+<li>OpenSSH (default installed into <code>C:\Program Files\OpenSSH-Win64</code>)</li>
+</ul>
+<p>On my PC I also had HerokuToolkit installed with a path in <code>ssh-keygen.bat</code> to <code>ssh-keygen.exe</code>.<br>
+But this path was wrong. It seemed to be part of some problems. Rename that file, so it is not called instead of one of the real .exe files.</p>
+<p>From Git bash:</p>
+<div class="highlight"><pre><span></span><span class="c1"># https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/</span>
+
+<span class="c1"># Generate key-pair into C:\Users\your_userid\.ssh\</span>
+c:
+<span class="nb">cd</span> C:/Users/your_userid/.ssh
+<span class="c1"># http://docs.ionic.io/services/ssh-keys/</span>
+ssh-keygen.exe -t rsa -b <span class="m">4096</span> -C <span class="s2">&quot;your_email@example.com&quot;</span>
+
+<span class="c1"># Check if ssh agent is running</span>
+<span class="nb">eval</span> <span class="k">$(</span>ssh-agent -s<span class="k">)</span>
+<span class="c1"># Agent pid 12345 - yes</span>
+
+<span class="c1"># Add private key to agent - </span>
+ssh-add C:/Users/your_userid/.ssh/id_rsa
+</pre></div>
+
+
+<h3>2. Upload the public key to Ionic Pro</h3>
+<p>Paste the content of file <code>id_rsa.pub</code> to a new key in <a href="https://dashboard.ionicjs.com/settings/ssh-keys" target="_blank">Ionic Pro's SSH store</a></p>
+<h3>3. Add the app id to your Ionic config in your local repo</h3>
+<p>Edit <code>project-root\ionic.config.json</code></p>
+<div class="highlight"><pre><span></span><span class="p p-Indicator">{</span>
+  <span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;Your</span><span class="nv"> </span><span class="s">Magic</span><span class="nv"> </span><span class="s">App&quot;</span><span class="p p-Indicator">,</span>
+  <span class="s">&quot;app_id&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;09faf85a&quot;</span><span class="p p-Indicator">,</span> <span class="c1"># replace with your id</span>
+</pre></div>
+
+
+<h3>4. Add remote ionic repo to your local project</h3>
+<div class="highlight"><pre><span></span><span class="c1"># https://dashboard.ionicjs.com/app/09faf85a/settings/git</span>
+<span class="c1"># Add Ionic Pro as remote repo</span>
+git remote add ionic ssh://git@git.ionicjs.com:your_ionic_userid/your_ionic_appname.git
+</pre></div>
+
+
+<h1>After the workaround</h1>
+<h3>5. Upload your app to Ionic Pro</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Upload to Ionic Pro</span>
+git push ionic master
+</pre></div>
+
+
+<h3>6. Make Github your default remote repo</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Add github as remote repo</span>
+git remote add origin https://github.com/your_git_userid/your_git_appname.git
+<span class="c1"># Upload to github and set it default (for pull)</span>
+git push --set-upstream origin master
+<span class="c1"># Check your remotes</span>
+git remote -v
+</pre></div>
+
+
+<h3>7. Continue to use Ionic Pro</h3>
+<p>On the url for your app - e.g. https://dashboard.ionicjs.com/app/09faf85a/code/builds/list you can continue to deploy, preview and more.</p>
+<p>You might also need to modify <code>src/app/app.module.ts</code>. <a href="http://docs.ionic.io/setup.html#configuration" target="_blank">Define a CloudSettings object</a>. </p>
+<hr>
+<h1>Tips</h1>
+<h3>Download an app as a starter app</h3>
+<p>If you have access to a Ionic Pro app, you can <code>git clone</code> it with</p>
+<div class="highlight"><pre><span></span>ionic start --pro-id 09faf85a
+</pre></div>
+
+
+<p>... if I am asuming correct.</p>
+<h3>If you want OpenSSH on Windows</h3>
+<p>.. then here is how you <a href="https://github.com/PowerShell/Win32-OpenSSH/wiki/Win32-OpenSSH-Automated-Install-and-Upgrade-using-Chocolatey" target="_blank">install OpenSSH</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># do this from an admin prompt</span>
+choco install openssh <span class="c1"># takes a while</span>
+<span class="c1"># reload environment variables</span>
+refresh env
+</pre></div>
+
+
+<h1>Links</h1>
+<ul>
+<li><a href="http://ionicframework.com/docs/pro/basics/getting-started/" target="_blank">http://ionicframework.com/docs/pro/basics/getting-started/</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+      <a href="https://rasor.github.io/tag/ssh.html">#ssh</a>
+      <a href="https://rasor.github.io/tag/ionic.html">#ionic</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
