@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-03T20:30:00+02:00</updated><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
-&lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
+&lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
 &lt;p&gt;I wanted to connect to Ionic Pro from Windows.&lt;br&gt;
 But the attempt failed.&lt;/p&gt;
 &lt;p&gt;It kept coming with …&lt;/p&gt;</summary><content type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
-&lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taken over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
+&lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
 &lt;p&gt;I wanted to connect to Ionic Pro from Windows.&lt;br&gt;
@@ -125,6 +125,7 @@ refresh env
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://ionicframework.com/docs/pro/basics/getting-started/" target="_blank"&gt;http://ionicframework.com/docs/pro/basics/getting-started/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples" target="_blank"&gt;https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Use Google Drive as your Desktop</title><link href="https://rasor.github.io/use-google-drive-as-your-desktop.html" rel="alternate"></link><published>2017-09-30T12:00:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/use-google-drive-as-your-desktop.html</id><summary type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
 &lt;p&gt;There are several plugins for Chrome.
@@ -590,7 +591,7 @@ But you could use NotePad for that matter.&lt;/p&gt;
 &lt;h4&gt;Markdown&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/tchapi/markdown-cheatsheet" target="_blank"&gt;https://github.com/tchapi/markdown-cheatsheet&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;[Syntax highlighting languages]&lt;a href="http://tinker.kotaweaver.com/blog/?p=152" target="_blank"&gt;http://tinker.kotaweaver.com/blog/?p=152&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://tinker.kotaweaver.com/blog/?p=152" target="_blank"&gt;Syntax highlighting languages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://pythonhosted.org/Markdown/reference.html" target="_blank"&gt;http://pythonhosted.org/Markdown/reference.html&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h5&gt;Other&lt;/h5&gt;
