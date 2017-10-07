@@ -1,0 +1,18 @@
+Title: Deploying Ionic to Azure
+Date: 2017-10-03 22:30
+Category: DevOp
+Tags: #git, #ionic, #azure
+
+------------------
+
+
+
+# Links
+
+
+* Aug 2017 [npm run build --prod --aot](https://stackoverflow.com/questions/45549829/aot-ahead-of-time-compilation-for-ionic-2-3-mobile-browsers){:target="_blank"}
+* Jan 2017 [npm run ionic:build --aot](https://github.com/ionic-team/ionic-app-scripts/issues/651){:target="_blank"}
+* <https://angular.io/guide/aot-compiler>{:target="_blank"}
+* Yarn wit CI <https://yarnpkg.com/en/docs/install-ci#travis-tab>
+
+The End

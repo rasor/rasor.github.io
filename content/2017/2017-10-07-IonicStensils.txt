@@ -1,0 +1,11 @@
+The Stensils project is a WebComponent builder
+
+HowTo use?
+
+* <http://kensodemann.github.io/ionic/stencil/2017/08/20/stencil-toh.html>
+* <http://kensodemann.github.io/ionic/stencil/2017/08/26/stencil-toh.html>
+* <https://github.com/kensodemann/stencil-toh>
+* <https://github.com/ionic-team/stencil-app-starter>
+* [Angular Tour of Heroes](https://angular.io/tutorial)
+
+The End

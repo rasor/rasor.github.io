@@ -1,0 +1,26 @@
+Title: Exams and Study guides
+Date: 2017-10-05 22:30
+Category: Study
+Tags: #google, #mobile, #web, #pwa
+
+------------------
+
+
+
+# Links
+
+* <https://developers.google.com/training/certification/mobile-web-specialist/#info>{:target="_blank"}
+* <https://developers.google.com/training/certification/mobile-web-specialist/StudyGuide-MobileWebSpecialist.pdf>{:target="_blank"}
+* <https://www.w3schools.com/cert/>
+
+Training ngx
+* <https://mva.microsoft.com/en-us/training-courses/introduction-to-angular-2-0-16540?l=cdKMEZyfC_906218965>
+* <https://www.youtube.com/watch?v=cHIj-zHf3QQ>
+
+Training Web in general
+* API, React, D3 <https://www.freecodecamp.org/>
+* <https://academy.microsoft.com/en-us/professional-program/tracks/front-end-development/>
+* <https://github.com/h5bp/Front-end-Developer-Interview-Questions>
+
+
+The End
