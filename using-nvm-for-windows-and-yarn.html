@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="https://github.com/coreybutler/nvm-windows Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. With Nvm For Windows you can stay in the shell and select yourself what …" />
+<meta name="keywords" content="#nvm, #node, #npm, #yarn">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Using NVM for Windows and Yarn"/>
+<meta property="og:description" content="https://github.com/coreybutler/nvm-windows Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. With Nvm For Windows you can stay in the shell and select yourself what …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/using-nvm-for-windows-and-yarn.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-10-08 11:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#nvm"/>
+<meta property="article:tag" content="#node"/>
+<meta property="article:tag" content="#npm"/>
+<meta property="article:tag" content="#yarn"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Using NVM for Windows and Yarn</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="using-nvm-for-windows-and-yarn">Using NVM for Windows and Yarn</h1>
+    <p>
+          Posted on oktober 08, 2017 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>https://github.com/coreybutler/nvm-windows</p>
+<p>Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.</p>
+<p>With Nvm For Windows you can stay in the shell and select yourself what you want to include in your set.</p>
+<p>I need it to be able to switch between Node v6 and Node v8.
+In my usecase there is v6 installed on a host (Azure), so I also need v6 locally for debugging.
+And when not debugging for prod I can use newest v8.</p>
+<h2>Using nvm4windows</h2>
+<h3>Before you install nvm4windows you need to</h3>
+<ul>
+<li>uninstall node</li>
+<li>Delete C:\Program Files\nodejs</li>
+<li>Delete C:\Users\username\AppData\Roaming\npm</li>
+<li>Delete C:\Users\username\AppData\Roaming\npm-cache</li>
+<li>Remove envir var %NODE_ENV%</li>
+<li>Remove part of %path% C:\Users\username\AppData\Roaming\npm</li>
+</ul>
+<h3>Download, install and use <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank">nvm4windows</a></h3>
+<ul>
+<li><code>nvm list</code> # shows nothing installed</li>
+<li>goto <a href="https://nodejs.org/en/download/" target="_blank">Node downloads</a> and <ul>
+<li>checkout LTS version - currently 6.11.4 (includes npm 3.10.10)</li>
+<li>checkout current version - currently 8.6.0 (includes npm 5.3.0)</li>
+</ul>
+</li>
+<li>Install the two versions:</li>
+</ul>
+<div class="highlight"><pre><span></span>nvm install <span class="m">6</span>.11.4 <span class="c1"># Installs into \nvm\v6.11.4</span>
+nvm install <span class="m">8</span>.6.0 <span class="c1"># Installs into \nvm\v8.6.0</span>
+nvm list
+
+<span class="c1">#    8.6.0</span>
+<span class="c1">#    6.11.4</span>
+
+nvm use <span class="m">8</span>.6.0 <span class="c1"># Creates a shortcut \nodejs\ pointing to the above \vx.x.x\ folder</span>
+<span class="c1"># Now using node v8.6.0 (64-bit)</span>
+</pre></div>
+
+
+<p>The shortcut \nodejs\ is also saved as %NVM_SYMLINK% and saved to %path%</p>
+<div class="highlight"><pre><span></span>nvm list
+
+<span class="c1">#  * 8.6.0 (Currently using 64-bit executable)</span>
+<span class="c1">#    6.11.4</span>
+</pre></div>
+
+
+<p>You need to <code>npm install -g</code> (globally install js libs into each of the nodejs versions you are using) e.g. <code>npm install -g cordova</code>.</p>
+<p>You might also need to set environment variable (for Express?):
+<code>NODE_ENV=%NVM_SYMLINK%</code> and <code>refreshenv</code></p>
+<h2>Using Yarn</h2>
+<p>The npm v5 coming with node v8 has a package.lock file - yes idea taken from Yarn. Meaning we don't need Yarn anymore - unless you need other features from Yarn.<br>
+For npm v3 (node v6) we often need yarn.lock.</p>
+<p>We need the lock file to keep track of all exact versions of dependencies in a project.</p>
+<h3>Install Yarn</h3>
+<ul>
+<li><a href="https://yarnpkg.com/en/docs/install" target="_blank">Download Yarn</a></li>
+<li>Install <a href="https://chocolatey.org/install" target="_blank">Chokolatey</a></li>
+<li>Install Yarn </li>
+</ul>
+<div class="highlight"><pre><span></span>nvm use <span class="m">6</span>.11.4 <span class="c1"># yarn checks for npm</span>
+choco install yarn
+</pre></div>
+
+
+<h3>Using Yarn</h3>
+<h4>When starting from empty project</h4>
+<div class="highlight"><pre><span></span>yarn init <span class="c1"># create the yarn.lock file and a package.json</span>
+yarn add <span class="o">[</span>package<span class="o">]</span> <span class="c1"># same as npm -install -save [package]</span>
+</pre></div>
+
+
+<h4>When starting from a working npm project</h4>
+<div class="highlight"><pre><span></span>yarn import <span class="c1"># create the yarn.lock file from node_modules folder</span>
+</pre></div>
+
+
+<h4>When starting from a cloned npm project having yarn.lock</h4>
+<div class="highlight"><pre><span></span>git clone <span class="s2">&quot;https://github.com/.....&quot;</span>
+yarn install <span class="c1"># same as npm install, but using yarn.lock: download modules</span>
+</pre></div>
+
+
+<hr>
+<h2>Links</h2>
+<ul>
+<li><a href="https://yarnpkg.com/en/docs/usage" target="_blank">Yarn usage</a></li>
+<li><a href="https://yarnpkg.com/en/docs/migrating-from-npm" target="_blank">Npm vs. Yarn</a></li>
+<li><a href="https://yarnpkg.com/en/docs/cli/" target="_blank">Yarn commands</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/nvm.html">#nvm</a>
+      <a href="https://rasor.github.io/tag/node.html">#node</a>
+      <a href="https://rasor.github.io/tag/npm.html">#npm</a>
+      <a href="https://rasor.github.io/tag/yarn.html">#yarn</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

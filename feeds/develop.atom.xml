@@ -142,6 +142,7 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;p&gt;Luckily there is a &lt;code&gt;.vsix&lt;/code&gt; for that: &lt;a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank"&gt;Angular CLI Project Template&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Installation&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;Optionally install &lt;a href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" target="_blank"&gt;Nvm for Windows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Install &lt;a href="https://www.visualstudio.com/vs/community/" target="_blank"&gt;VS 2017&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;Include web development including TypeScript&lt;/li&gt;
 &lt;li&gt;Framework ASP.NET Core 1.1.2&lt;/li&gt;
@@ -200,4 +201,4 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;li&gt;&lt;a href="https://angular.io/guide/visual-studio-2015" target="_blank"&gt;Visual Studio 2015 QuickStart&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry></feed>
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry></feed>

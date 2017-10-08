@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2017-10-07T14:10:04-00:00</lastmod>
+<lastmod>2017-10-08T10:44:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2017-10-07T14:10:04-00:00</lastmod>
+<lastmod>2017-10-08T10:44:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2017-10-07T14:10:04-00:00</lastmod>
+<lastmod>2017-10-08T10:44:54-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2017-10-07T14:10:04-00:00</lastmod>
+<lastmod>2017-10-08T10:44:54-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/using-nvm-for-windows-and-yarn.html</loc>
+<lastmod>2017-10-08T11:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/devop.html</loc>
-<lastmod>2017-10-03T20:00:00+00:50</lastmod>
+<lastmod>2017-10-08T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -97,6 +104,34 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://rasor.github.io/category/study.html</loc>
 <lastmod>2017-09-30T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/nvm.html</loc>
+<lastmod>2017-10-08T11:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/node.html</loc>
+<lastmod>2017-10-08T11:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/npm.html</loc>
+<lastmod>2017-10-08T11:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/yarn.html</loc>
+<lastmod>2017-10-08T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -215,7 +250,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2017-10-07T14:00:00+00:50</lastmod>
+<lastmod>2017-10-08T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
