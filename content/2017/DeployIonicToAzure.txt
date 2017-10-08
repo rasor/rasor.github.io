@@ -1,18 +1,97 @@
 Title: Deploying Ionic to Azure
-Date: 2017-10-03 22:30
+Date: 2017-10-09 22:30
 Category: DevOp
-Tags: #npm, #git, #ionic, #azure
+Tags: #npm, #git, #ionic, #azure, #pwa
 
-------------------
+This blog is based on [@sethreidnz'scripts](https://twitter.com/sethreidnz) 
+article [Deploying an Angular CLI project using VSTS Build and Release](https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/).  
+This blog deploys a Ionic 3 app to Azure.
+
+# The final workflow
+
+After your Ionic project has been connected with Azure through VSTS then you have this workflow:
+
+1. From you editor: Add feature to you project and push to origin
+2. From VSTS: Queue a new build
+
+That's it. Done.
+
+So why doesn't the pipeline just hook a webhook into your git origin and queue a build by itself?  
+Well - perhaps I just don't know howto yet. Perhaps the feature is not there yet.
+
+And why would you want to deploy a Ionic app as a webapp, when it is supposed to be installed on phones?  
+Ionic is born as PWA - you might want to use those features.  
+Also you just might want to demo the app as webapp before sending it to the app store.  
+So with Ionic you have only one codebase to maintain - checkout [MillionEyez](https://www.millioneyez.com) on the web and download their app. Same code.  
+
+BTW - In the coming Ionic 4 Ionic will have moved to WebComponents, which enables layout components to be loaded before the content components giving a much better experience.  
+You will also be able to use Ionic from any other webframework - e.g. React or VueJs.
+
+# 
+
+user-agent = "npm/3.10.10 node/v6.10.0 win32 x64"
+
+Before you start deploy you need to verify that your code can build for for prod on node v6
+
+```
+# If you got nvm switch to v6
+nvm list
+nvm use 6.11.4
+# or just check that you have v6
+node -v
+# Build for prod
+npm run build --prod --aot
+```
+If no errors then we can continue
 
 
+Private Successful build <https://rasor.visualstudio.com/dreamhouse-mobile-ionic/_build/index?buildId=9&_a=summary>
 
 # Links
 
+* <https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/>
+* Deployed to http://dreamhouse-mobile-ionic.azurewebsites.net/
 
 * Aug 2017 [npm run build --prod --aot](https://stackoverflow.com/questions/45549829/aot-ahead-of-time-compilation-for-ionic-2-3-mobile-browsers){:target="_blank"}
 * Jan 2017 [npm run ionic:build --aot](https://github.com/ionic-team/ionic-app-scripts/issues/651){:target="_blank"}
 * <https://angular.io/guide/aot-compiler>{:target="_blank"}
 * Yarn wit CI <https://yarnpkg.com/en/docs/install-ci#travis-tab>
+
+----------------------------------------------------
+
+MSDN https://my.visualstudio.com
+GitWeb https://rasor.visualstudio.com/AzureSmart1/AzureSmart1%20Team/_git/AzureSmart1
+GitWeb https://rasor.visualstudio.com/AzureSmart1
+GitRepo https://rasor.visualstudio.com/DefaultCollection/_git/AzureSmart1
+E:\sor\projs-azure\$tf
+E:\sor\projs-azure\AzureSmart1
+
+
+Core Guide:
+https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts
+Clone from:
+https://github.com/adventworks/dotnetcore-sample
+Cloned to:
+https://rasor.visualstudio.com/DefaultCollection/_git/adventworks-dotnetcore-sample
+https://rasor.visualstudio.com/_git/adventworks-dotnetcore-sample
+https://rasor.visualstudio.com/adventworks-dotnetcore-sample
+BuildDef:
+https://rasor.visualstudio.com/5ec5541c-2530-46dd-8338-3d381e2d7b35/_build
+Azure:
+https://portal.azure.com/#resource/subscriptions/119643ba-5138-4a85-876c-afe57ad1f0e8/resourceGroups/ResGroupNorthEurope/providers/Microsoft.Web/sites/adventworks-dotnetcore-sample/appServices
+Site:
+http://adventworks-dotnetcore-sample.azurewebsites.net/
+
+Ng Guide:
+https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/
+Clone from
+https://github.com/rasor/dreamhouse-mobile-ionic
+to
+https://rasor.visualstudio.com/dreamhouse-mobile-ionic
+Azure:
+https://portal.azure.com/#resource/subscriptions/119643ba-5138-4a85-876c-afe57ad1f0e8/resourceGroups/ResGroupNorthEurope/providers/Microsoft.Web/sites/dreamhouse-mobile-ionic/appServices
+Site:
+http://dreamhouse-mobile-ionic.azurewebsites.net/
+
 
 The End

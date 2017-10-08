@@ -1,0 +1,55 @@
+
+Ionic upgrade check-list
+
+* From v3.4.2
+* To v3.7.1
+
+
+1. Create newest template and test
+```ps1
+ionic start newesttemplate blank --type=ionic-angular
+cd newesttemplate
+ionic serve
+```
+
+2. Diff the template with your old version
+
+3. Git updates
+
+* In `.gitignore` add lines
+```ps1
+.sourcemaps/
+www/
+```
+
+If you have committed files in `www\` you need to remove tracked files
+`git rm -r --cached`
+
+4. Dependencies - `package.json`
+
+* Replace `dependencies` and `devDependencies`
+* Extra added (project specific) dependencies you need to move and upgrade version manually
+
+5. `src/service-worker.js`
+
+* After main.js add
+```
+    './build/vendor.js',
+```
+
+6. `src/index.html`
+
+* Before main.js add
+```
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+```
+
+--------------
+
+# Links
+
+* [Compare](https://github.com/rasor/ionDogMap/commit/0a292fa2b5cd73594c233cad382abcaef08c213c)
+
+The End
