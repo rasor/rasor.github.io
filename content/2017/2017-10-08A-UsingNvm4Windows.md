@@ -1,11 +1,11 @@
 Title: Using NVM for Windows and Yarn
 Date: 2017-10-08 11:00
+Modified: 2017-10-08 15:00
 Category: DevOp
 Tags: #nvm, #node, #npm, #yarn
 
-https://github.com/coreybutler/nvm-windows
-
-Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+I blogged about it [here](https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/){:target="_blank"}
 
 With Nvm For Windows you can stay in the shell and select yourself what you want to include in your set.
 
@@ -18,9 +18,9 @@ And when not debugging for prod I can use newest v8.
 ### Before you install nvm4windows you need to 
 
 * uninstall node
-* Delete C:\Program Files\nodejs
-* Delete C:\Users\username\AppData\Roaming\npm
-* Delete C:\Users\username\AppData\Roaming\npm-cache
+* Delete folder C:\Program Files\nodejs
+* Delete folder C:\Users\username\AppData\Roaming\npm
+* Delete folder C:\Users\username\AppData\Roaming\npm-cache
 * Remove envir var %NODE_ENV%
 * Remove part of %path% C:\Users\username\AppData\Roaming\npm
 
@@ -54,6 +54,19 @@ nvm list
 
 You need to `npm install -g` (globally install js libs into each of the nodejs versions you are using) e.g. `npm install -g cordova`.
 
+Note
+
+* Cli tools (e.g. cordova) are installed in `%ProgramFiles%\nodejs`, which might not be the path you chose for node.  
+If not you need to add `%ProgramFiles%\nodejs` to `%path%`
+* node_modules are scattered around the disk(s)
+    * `C:\Users\username\AppData\Roaming\npm-cache`
+    * Nvm path `%NVM_HOME%\vx.x.x\node_modules\npm\node_modules`
+    * Nvm Nodejs paths `%NVM_SYMLINK%\node_modules`
+    * Normal Nodejs paths `%ProgramFiles%\nodejs\node_modules` - CLI's installed with -g
+    * and locally in project subfolder `\node_modules`
+
+Well it seems like installation of nvm must be done to the default paths, since in the setup on my PC -g installs still ends up in a common place. I'll have to test that on another occation.
+
 You might also need to set environment variable (for Express?):
 `NODE_ENV=%NVM_SYMLINK%` and `refreshenv`
 
@@ -73,6 +86,8 @@ We need the lock file to keep track of all exact versions of dependencies in a p
 ```bash
 nvm use 6.11.4 # yarn checks for npm
 choco install yarn
+yarn -v
+#1.1.0
 ```
 
 ### Using Yarn
@@ -89,6 +104,8 @@ yarn add [package] # same as npm -install -save [package]
 ```bash
 yarn import # create the yarn.lock file from node_modules folder
 ```
+If it fails with `error An unexpected error occurred: "should have a resolved reference"`  
+then it might work to just issue `yarn`.
 
 #### When starting from a cloned npm project having yarn.lock
 
