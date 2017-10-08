@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-08T11:00:00+02:00</updated><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2017-10-08T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;https://github.com/coreybutler/nvm-windows&lt;/p&gt;
-&lt;p&gt;Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.&lt;/p&gt;
-&lt;p&gt;With Nvm For Windows you can stay in the shell and select yourself what …&lt;/p&gt;</summary><content type="html">&lt;p&gt;https://github.com/coreybutler/nvm-windows&lt;/p&gt;
-&lt;p&gt;Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-08T15:00:00+02:00</updated><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2017-10-08T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;With Nvm For Windows you can stay in the shell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With Nvm For Windows you can stay in the shell and select yourself what you want to include in your set.&lt;/p&gt;
 &lt;p&gt;I need it to be able to switch between Node v6 and Node v8.
 In my usecase there is v6 installed on a host (Azure), so I also need v6 locally for debugging.
@@ -11,9 +11,9 @@ And when not debugging for prod I can use newest v8.&lt;/p&gt;
 &lt;h3&gt;Before you install nvm4windows you need to&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;uninstall node&lt;/li&gt;
-&lt;li&gt;Delete C:\Program Files\nodejs&lt;/li&gt;
-&lt;li&gt;Delete C:\Users\username\AppData\Roaming\npm&lt;/li&gt;
-&lt;li&gt;Delete C:\Users\username\AppData\Roaming\npm-cache&lt;/li&gt;
+&lt;li&gt;Delete folder C:\Program Files\nodejs&lt;/li&gt;
+&lt;li&gt;Delete folder C:\Users\username\AppData\Roaming\npm&lt;/li&gt;
+&lt;li&gt;Delete folder C:\Users\username\AppData\Roaming\npm-cache&lt;/li&gt;
 &lt;li&gt;Remove envir var %NODE_ENV%&lt;/li&gt;
 &lt;li&gt;Remove part of %path% C:\Users\username\AppData\Roaming\npm&lt;/li&gt;
 &lt;/ul&gt;
@@ -48,6 +48,20 @@ nvm use &lt;span class="m"&gt;8&lt;/span&gt;.6.0 &lt;span class="c1"&gt;# Create
 
 
 &lt;p&gt;You need to &lt;code&gt;npm install -g&lt;/code&gt; (globally install js libs into each of the nodejs versions you are using) e.g. &lt;code&gt;npm install -g cordova&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Note&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cli tools (e.g. cordova) are installed in &lt;code&gt;%ProgramFiles%\nodejs&lt;/code&gt;, which might not be the path you chose for node.&lt;br&gt;
+If not you need to add &lt;code&gt;%ProgramFiles%\nodejs&lt;/code&gt; to &lt;code&gt;%path%&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;node_modules are scattered around the disk(s)&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;C:\Users\username\AppData\Roaming\npm-cache&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Nvm path &lt;code&gt;%NVM_HOME%\vx.x.x\node_modules\npm\node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Nvm Nodejs paths &lt;code&gt;%NVM_SYMLINK%\node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Normal Nodejs paths &lt;code&gt;%ProgramFiles%\nodejs\node_modules&lt;/code&gt; - CLI's installed with -g&lt;/li&gt;
+&lt;li&gt;and locally in project subfolder &lt;code&gt;\node_modules&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well it seems like installation of nvm must be done to the default paths, since in the setup on my PC -g installs still ends up in a common place. I'll have to test that on another occation.&lt;/p&gt;
 &lt;p&gt;You might also need to set environment variable (for Express?):
 &lt;code&gt;NODE_ENV=%NVM_SYMLINK%&lt;/code&gt; and &lt;code&gt;refreshenv&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;Using Yarn&lt;/h2&gt;
@@ -62,6 +76,8 @@ For npm v3 (node v6) we often need yarn.lock.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;nvm use &lt;span class="m"&gt;6&lt;/span&gt;.11.4 &lt;span class="c1"&gt;# yarn checks for npm&lt;/span&gt;
 choco install yarn
+yarn -v
+&lt;span class="c1"&gt;#1.1.0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -77,6 +93,8 @@ yarn add &lt;span class="o"&gt;[&lt;/span&gt;package&lt;span class="o"&gt;]&lt;/
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;If it fails with &lt;code&gt;error An unexpected error occurred: "should have a resolved reference"&lt;/code&gt;&lt;br&gt;
+then it might work to just issue &lt;code&gt;yarn&lt;/code&gt;.&lt;/p&gt;
 &lt;h4&gt;When starting from a cloned npm project having yarn.lock&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone &lt;span class="s2"&gt;&amp;quot;https://github.com/.....&amp;quot;&lt;/span&gt;
 yarn install &lt;span class="c1"&gt;# same as npm install, but using yarn.lock: download modules&lt;/span&gt;

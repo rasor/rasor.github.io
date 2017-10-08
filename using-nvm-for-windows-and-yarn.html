@@ -26,17 +26,17 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="https://github.com/coreybutler/nvm-windows Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. With Nvm For Windows you can stay in the shell and select yourself what …" />
+<meta name="description" content="Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. I blogged about it here With Nvm For Windows you can stay in the shell …" />
 <meta name="keywords" content="#nvm, #node, #npm, #yarn">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Using NVM for Windows and Yarn"/>
-<meta property="og:description" content="https://github.com/coreybutler/nvm-windows Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. With Nvm For Windows you can stay in the shell and select yourself what …"/>
+<meta property="og:description" content="Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. I blogged about it here With Nvm For Windows you can stay in the shell …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/using-nvm-for-windows-and-yarn.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-08 11:00:00+02:00"/>
-<meta property="article:modified_time" content=""/>
+<meta property="article:modified_time" content="2017-10-08 15:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#nvm"/>
@@ -95,13 +95,14 @@
 
 
       </br>
+        Updated: oktober 08, 2017
     </p>
   </header>
 
 
   <div>
-    <p>https://github.com/coreybutler/nvm-windows</p>
-<p>Microsoft created Taco - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.</p>
+    <p>Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+I blogged about it <a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank">here</a></p>
 <p>With Nvm For Windows you can stay in the shell and select yourself what you want to include in your set.</p>
 <p>I need it to be able to switch between Node v6 and Node v8.
 In my usecase there is v6 installed on a host (Azure), so I also need v6 locally for debugging.
@@ -110,9 +111,9 @@ And when not debugging for prod I can use newest v8.</p>
 <h3>Before you install nvm4windows you need to</h3>
 <ul>
 <li>uninstall node</li>
-<li>Delete C:\Program Files\nodejs</li>
-<li>Delete C:\Users\username\AppData\Roaming\npm</li>
-<li>Delete C:\Users\username\AppData\Roaming\npm-cache</li>
+<li>Delete folder C:\Program Files\nodejs</li>
+<li>Delete folder C:\Users\username\AppData\Roaming\npm</li>
+<li>Delete folder C:\Users\username\AppData\Roaming\npm-cache</li>
 <li>Remove envir var %NODE_ENV%</li>
 <li>Remove part of %path% C:\Users\username\AppData\Roaming\npm</li>
 </ul>
@@ -147,6 +148,20 @@ nvm use <span class="m">8</span>.6.0 <span class="c1"># Creates a shortcut \node
 
 
 <p>You need to <code>npm install -g</code> (globally install js libs into each of the nodejs versions you are using) e.g. <code>npm install -g cordova</code>.</p>
+<p>Note</p>
+<ul>
+<li>Cli tools (e.g. cordova) are installed in <code>%ProgramFiles%\nodejs</code>, which might not be the path you chose for node.<br>
+If not you need to add <code>%ProgramFiles%\nodejs</code> to <code>%path%</code></li>
+<li>node_modules are scattered around the disk(s)<ul>
+<li><code>C:\Users\username\AppData\Roaming\npm-cache</code></li>
+<li>Nvm path <code>%NVM_HOME%\vx.x.x\node_modules\npm\node_modules</code></li>
+<li>Nvm Nodejs paths <code>%NVM_SYMLINK%\node_modules</code></li>
+<li>Normal Nodejs paths <code>%ProgramFiles%\nodejs\node_modules</code> - CLI's installed with -g</li>
+<li>and locally in project subfolder <code>\node_modules</code></li>
+</ul>
+</li>
+</ul>
+<p>Well it seems like installation of nvm must be done to the default paths, since in the setup on my PC -g installs still ends up in a common place. I'll have to test that on another occation.</p>
 <p>You might also need to set environment variable (for Express?):
 <code>NODE_ENV=%NVM_SYMLINK%</code> and <code>refreshenv</code></p>
 <h2>Using Yarn</h2>
@@ -161,6 +176,8 @@ For npm v3 (node v6) we often need yarn.lock.</p>
 </ul>
 <div class="highlight"><pre><span></span>nvm use <span class="m">6</span>.11.4 <span class="c1"># yarn checks for npm</span>
 choco install yarn
+yarn -v
+<span class="c1">#1.1.0</span>
 </pre></div>
 
 
@@ -176,6 +193,8 @@ yarn add <span class="o">[</span>package<span class="o">]</span> <span class="c1
 </pre></div>
 
 
+<p>If it fails with <code>error An unexpected error occurred: "should have a resolved reference"</code><br>
+then it might work to just issue <code>yarn</code>.</p>
 <h4>When starting from a cloned npm project having yarn.lock</h4>
 <div class="highlight"><pre><span></span>git clone <span class="s2">&quot;https://github.com/.....&quot;</span>
 yarn install <span class="c1"># same as npm install, but using yarn.lock: download modules</span>
