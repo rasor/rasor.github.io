@@ -1,0 +1,7 @@
+
+
+
+* []()
+* <https://blog.paulhalliday.io/2017/10/04/how-to-use-vue-js-with-ionic-4/>
+* <https://github.com/PaulHalliday/Ionic-4-Vue.js>
+* <https://vue-loader.vuejs.org/en/>

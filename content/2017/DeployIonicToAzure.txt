@@ -1,7 +1,7 @@
 Title: Deploying Ionic to Azure
 Date: 2017-10-03 22:30
 Category: DevOp
-Tags: #git, #ionic, #azure
+Tags: #npm, #git, #ionic, #azure
 
 ------------------
 

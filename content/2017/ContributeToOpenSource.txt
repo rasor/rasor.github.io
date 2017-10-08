@@ -1,0 +1,67 @@
+
+
+Abbreviations
+|Abbr|Full|Meaning|
+|PR|Pull Request|Your code submitted for review before merge into Upstream|
+|Repo|Repository|A project folder under source control having a \.git\ subfolder|
+|WIP|Work In Progress|Comment in PR for unfinished code - indication feedback wanted before going too far on a wrong tangent|
+|#|“Closes #37.”|Comment with reference to an issue|
+||Upstream|A repo where you want to merge PR's into|
+
+* <https://guides.github.com/introduction/flow/>
+* <https://help.github.com/articles/github-flow/>
+* [Fork and pull model](https://help.github.com/articles/about-collaborative-development-models/)
+* <https://help.github.com/articles/working-with-forks/>
+    * Preparation
+    ```bash
+    # Download your Fork (origin)
+    git clone https://github.com/your_userid/ORIGINAL_REPOSITORY.git
+    cd ORIGINAL_REPOSITORY
+    # Add Upstream as a remote
+    git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+    git remote -v
+    ```
+* [Content - When Asking for Pull Requests](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/)
+* [1. Merge local from upstream - when using Fork and pull](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/)
+    * ```bash
+    git checkout master
+    git pull upstream master
+    # handle possible conflicts: https://help.github.com/articles/addressing-merge-conflicts/
+    git status
+    git push origin master
+    ``` 
+* [2. Create a feature branch]()
+    * ````bash
+    git checkout -b mynewfeaturebranch
+    # Do some work
+    git commit -a -m "did something"
+    ```
+* [3. Push branch to fork]
+    * `git push -u origin mynewfeaturebranch`
+* [4. Allow maintainers to make changes to your branch](https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/)
+* [5. Pull Request to upstream - from Fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)
+* 6. Listen for feedback
+* 7. Maintainer merges feature branch to upstream
+* 8. Repeat 1 - verify your change is in master
+* 9. Delete mynewfeaturebranch
+    * ```bash
+    git checkout mynewfeaturebranch
+    git branch -d
+    git push origin
+    ```
+
+* <https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project>
+* <https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39>
+* <http://www.firsttimersonly.com/>
+
+Projects
+* <https://github.com/MunGell/awesome-for-beginners>
+* <https://github.com/showcases/great-for-new-contributors>
+* Read CONTRIBUTING, CODE_OF_CONDUCT and/or README
+* <https://github.com/ionic-team/ionic-app-scripts/blob/master/README.md>
+* <https://github.com/ionic-team/ionic-app-scripts/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22>
+
+Next steps
+* <https://opensource.guide/>
+
+The End

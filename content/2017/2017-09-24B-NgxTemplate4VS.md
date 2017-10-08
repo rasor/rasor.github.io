@@ -2,7 +2,7 @@ Title: Ngx: Template for Visual Studio 2017
 Date: 2017-09-24 17:00
 Modified: 2017-10-07 14:00
 Category: Develop
-Tags: #ngx, #typescript, #visualstudio, #tfs
+Tags: #npm, #ngx, #typescript, #visualstudio, #tfs
 
 At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.
@@ -17,6 +17,7 @@ Luckily there is a `.vsix` for that: [Angular CLI Project Template](https://mark
 
 ### Installation
 
+* Optionally install [Nvm for Windows]({filename}/2017/2017-10-08A-UsingNvm4Windows.md){:target="_blank"}
 * Install [VS 2017](https://www.visualstudio.com/vs/community/){:target="_blank"}
     * Include web development including TypeScript
     * Framework ASP.NET Core 1.1.2

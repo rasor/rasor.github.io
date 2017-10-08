@@ -1,0 +1,10 @@
+
+
+
+* <https://blog.ionic.io/what-is-a-progressive-web-app/>
+* <http://blog.ionic.io/what-progressive-web-apps-can-do-for-you/>
+* <http://blog.ionic.io/built-with-ionic-million-eyez-mobile-and-progressive-web-app/>
+* <http://ionicframework.com/case-studies/MillionEyez.pdf>
+* <https://www.millioneyez.com/photos>
+
+* [Why Build Progressive Web Apps?](https://www.youtube.com/watch?v=1QILz1lAzWY)
