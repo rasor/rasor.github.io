@@ -13,7 +13,7 @@ I need it to be able to switch between Node v6 and Node v8.
 In my usecase there is v6 installed on a host (Azure), so I also need v6 locally for debugging.
 And when not debugging for prod I can use newest v8.
 
-## Using nvm4windows
+## Using [nvm4windows](https://github.com/coreybutler/nvm-windows){:target="_blank"}
 
 ### Before you install nvm4windows you need to 
 
