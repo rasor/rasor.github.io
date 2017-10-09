@@ -51,5 +51,6 @@ If you have committed files in `www\` you need to remove tracked files
 # Links
 
 * [Compare](https://github.com/rasor/ionDogMap/commit/0a292fa2b5cd73594c233cad382abcaef08c213c)
+* <https://rasor.wordpress.com/2017/06/29/update-ionic1-poject-to-new-ioniccli-plugin-ionic1-2-0-0/>
 
 The End
