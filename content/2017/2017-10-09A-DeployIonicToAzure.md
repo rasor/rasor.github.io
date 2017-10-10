@@ -1,11 +1,11 @@
 Title: Deploying Ionic to Azure
-Date: 2017-10-09 22:30
+Date: 2017-10-10 21:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa
 
-This blog is based on [@sethreidnz'scripts](https://twitter.com/sethreidnz) 
+This blog is based on [@sethreidnz](https://twitter.com/sethreidnz)'s 
 article [Deploying an Angular CLI project using VSTS Build and Release](https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/).  
-This blog deploys a Ionic 3 app to Azure.
+This blog deploys a Ionic 3 / Angular 4 app to Azure.
 
 # The final workflow
 
@@ -17,7 +17,7 @@ After your Ionic project has been connected with Azure through VSTS then you hav
 That's it. Done. You have deployed your Ionic project to Azure as a webapp.
 
 So why doesn't the pipeline just hook a webhook into your git origin and queue a build by itself (as you are used to from e.g. Heroku)?  
-Well - perhaps I just don't know howto yet. Perhaps the feature is not there yet.
+Well - if you use VSTS as Version Control, then it will work - I have used "Remote repo" option - apparently it is not ready yet.
 
 And why would you want to deploy a Ionic app as a webapp, when it is supposed to be installed on phones?  
 Ionic is born as PWA - you might want to use those features.  
@@ -96,7 +96,7 @@ Next build task is `npm run build --prod --aot`. Go on - add yet a npm task as y
 Add `run build --prod --aot` as Command and arguments  
 You probably recognize `--aot` - [Ahead-of-Time](https://angular.io/guide/aot-compiler) from Angular 4. It gives faster load time, so it is quite important  
 ![Configure npm run](img/2017-10-09-VSTS7.PNG "Configure npm run")
-* So we run out of steps locally, but on the build server we still need to package the build output and send it to Azure  
+* So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure  
 Next task is a zip-task. Press `+` and select `Archive Files`  
 ![Select zip task](img/2017-10-09-VSTS8.PNG "Select zip task")
 * Root folder is the build code you want to deploy. It is located in the www folder - just as when you work locally  
@@ -110,6 +110,8 @@ Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if y
 Artifact Name is the name of the drop folder. It must be called `drop`  
 And Type must be `Server` (opposed to File Share)  
 ![Configure publish](img/2017-10-09-VSTS11.PNG "Configure publish")
+
+Have you noticed that these Build Tasks correspond to the features in TeamCity? 
 
 Next up is to deploy the package to Azure.
 
@@ -137,57 +139,63 @@ You're done in Azure. Next up is to release to Azure from VSTS.
 ## Release to Azure from VSTS
 
 * Go back to <https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build>
-* Click tab `Reeleases` then `+` - `Create Release Definition`
+* You can deploy to many environments and servivces. We just want to deploy to our App Service.  
+First step is to select that target environment in a Release  
+Click tab `Releases` then `+` - `Create Release Definition` - Select `Azure App Service Deployment` and click Apply   
+![Add Release Definition](img/2017-10-09-VSTSRelease1.PNG "Add Release Definition")
+* Notice the ´!´ - something needs attention - click either of them  
+![Tasks needs attention](img/2017-10-09-VSTSRelease2.PNG "Tasks needs attention")
+* Hey - that looks familiar - a list of steps in a task list - just as under tab `Build`  
+Yes, but heading is `Environment 1` - not `Phase 1`. And for the environmet you have to connect to Azure.
+Click on `Manage` subscribtion and go through an authentication process  
+When connected you can click the dropdown list to select your website  
+![Connect to Azure](img/2017-10-09-VSTSRelease3.PNG "Connect to Azure")
+* Head back to tab `Pipeline` - we need to fetch a source to deploy  
+Select `Add Artifact` and select source type: `Build`, so we can fetch the zip file from drop.  
+Notice: Source type can also be: `Git, GitHub, Jenkins and Team Foundation Version Control`.  
+Build Definition: Select the only one from the list.  
+Accept default values and press Add.  
+![Add Artifact](img/2017-10-09-VSTSRelease4.PNG "Add Artifact")
+* Press the lightning icon on the Artifact. Notice the trigger is whenever a new drop has been made.  
+![Release Trigger](img/2017-10-09-VSTSRelease5.PNG "Release Trigger")
+* Now that we have a source we can head back to `Tasks`, select `Deploy Azure App Service` and enter the missing zipfile: `$(System.DefaultWorkingDirectory)\**\*.zip`. You can browse to it by pressing `...`  
+![Pick zip file](img/2017-10-09-VSTSRelease6.PNG "Pick zip file")
+* Before we save the Release Definition head to `Pipeline` - and select the Lightning in the Environment  
+Notice you have a possibility to select persons to approve deployment. This can be tester that approves one environment before a build is rolled out for the next environment.  
+![Approvers](img/2017-10-09-VSTSRelease7.PNG "Approvers")
+We don't want approvers - so go on and save.
 
+Have you noticed that these Release workflow correspond to the features in Octopus Deploy? 
 
+## Trig a build and a release to Azure
+
+Now we are ready for the big show - deploy to Azure
+
+* Head back to `Builds` - tab `All Definitions` - click on the only one `dreamhouse-mobile-ionic-Build`  
+![Prepare to build](img/2017-10-09-VSTSQueue1.PNG "Prepare to build")
+* Click `Queue New Build...`  
+![Queue build](img/2017-10-09-VSTSQueue2.PNG "Queue build")
+* Click `Queue`
+![npm run build](img/2017-10-09-VSTSQueue3.PNG "npm run build")
+* If the Build succeded head to `Releases` tab and verify that the build triggered a release  
+![Triggered release](img/2017-10-09-VSTSQueue4.PNG "Triggered release")
+* If the release succeeded, too head to `Azure App Services` in [Azure](https://portal.azure.com)  
+Select your service and scroll down to `Continous Delivery`  
+You should see the Release has been Deployed Successfully  
+![Succeeded release](img/2017-10-09-VSTSQueue5.PNG "Succeeded release")
+
+If that is true then you site should be live on  
+<http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net>
+
+If you are just reading along you can also find my site [here](http://dreamhouse-mobile-ionic.azurewebsites.net/)
 
 ----------------------------
 
 # Links
 
 * [Deploying Ionic1 to Heroku](https://rasor.wordpress.com/2017/06/29/deploying-ionic1-as-a-webapp-to-heroku/)
-
-
-------------------------------------
-
-Private Successful build <https://rasor.visualstudio.com/dreamhouse-mobile-ionic/_build/index?buildId=9&_a=summary>
-* <https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/>
-* Deployed to http://dreamhouse-mobile-ionic.azurewebsites.net/
-
-* Aug 2017 [npm run build --prod --aot](https://stackoverflow.com/questions/45549829/aot-ahead-of-time-compilation-for-ionic-2-3-mobile-browsers){:target="_blank"}
-* Jan 2017 [npm run ionic:build --aot](https://github.com/ionic-team/ionic-app-scripts/issues/651){:target="_blank"}
-* <https://angular.io/guide/aot-compiler>{:target="_blank"}
-* Yarn wit CI <https://yarnpkg.com/en/docs/install-ci#travis-tab>
-
-----------------------------------------------------
-
-MSDN https://my.visualstudio.com
-GitWeb https://rasor.visualstudio.com/AzureSmart1/AzureSmart1%20Team/_git/AzureSmart1
-GitWeb https://rasor.visualstudio.com/AzureSmart1
-GitRepo https://rasor.visualstudio.com/DefaultCollection/_git/AzureSmart1
-E:\sor\projs-azure\$tf
-E:\sor\projs-azure\AzureSmart1
-
-
-Core Guide:
-https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts
-Clone from:
-https://github.com/adventworks/dotnetcore-sample
-Cloned to:
-https://rasor.visualstudio.com/DefaultCollection/_git/adventworks-dotnetcore-sample
-https://rasor.visualstudio.com/_git/adventworks-dotnetcore-sample
-https://rasor.visualstudio.com/adventworks-dotnetcore-sample
-Site:
-http://adventworks-dotnetcore-sample.azurewebsites.net/
-
-Ng Guide:
-https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/
-Clone from
-https://github.com/rasor/dreamhouse-mobile-ionic
-to
-https://rasor.visualstudio.com/dreamhouse-mobile-ionic
-Site:
-http://dreamhouse-mobile-ionic.azurewebsites.net/
-
+* [Deploy your .NET core app to an Azure web app](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts)
+* [MSDN](https://my.visualstudio.com)
+* [Yarn with Travis CI](https://yarnpkg.com/en/docs/install-ci#travis-tab)
 
 The End
