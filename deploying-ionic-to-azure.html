@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="This blog is based on @sethreidnz&#39;s article Deploying an Angular CLI project using VSTS Build and Release. This blog deploys a Ionic 3 / Angular 4 app to Azure. The final workflow After your Ionic project has been connected with Azure through VSTS then you have this workflow: From you …" />
+<meta name="keywords" content="#npm, #git, #ionic, #ngx, #azure, #pwa">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Deploying Ionic to Azure"/>
+<meta property="og:description" content="This blog is based on @sethreidnz&#39;s article Deploying an Angular CLI project using VSTS Build and Release. This blog deploys a Ionic 3 / Angular 4 app to Azure. The final workflow After your Ionic project has been connected with Azure through VSTS then you have this workflow: From you …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/deploying-ionic-to-azure.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-10-10 21:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#npm"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#ionic"/>
+<meta property="article:tag" content="#ngx"/>
+<meta property="article:tag" content="#azure"/>
+<meta property="article:tag" content="#pwa"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Deploying Ionic to Azure</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="deploying-ionic-to-azure">Deploying Ionic to Azure</h1>
+    <p>
+          Posted on oktober 10, 2017 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>This blog is based on <a href="https://twitter.com/sethreidnz">@sethreidnz</a>'s 
+article <a href="https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/">Deploying an Angular CLI project using VSTS Build and Release</a>.<br>
+This blog deploys a Ionic 3 / Angular 4 app to Azure.</p>
+<h1>The final workflow</h1>
+<p>After your Ionic project has been connected with Azure through VSTS then you have this workflow:</p>
+<ol>
+<li>From you editor: Add feature to you project and git push to origin</li>
+<li>From VSTS: Queue a new build</li>
+</ol>
+<p>That's it. Done. You have deployed your Ionic project to Azure as a webapp.</p>
+<p>So why doesn't the pipeline just hook a webhook into your git origin and queue a build by itself (as you are used to from e.g. Heroku)?<br>
+Well - if you use VSTS as Version Control, then it will work - I have used "Remote repo" option - apparently it is not ready yet.</p>
+<p>And why would you want to deploy a Ionic app as a webapp, when it is supposed to be installed on phones?<br>
+Ionic is born as PWA - you might want to use those features.<br>
+Also you just might want to demo the app as webapp before sending it to the app store.<br>
+So with Ionic you have only one codebase to maintain - checkout <a href="https://www.millioneyez.com">MillionEyez</a> on the web and download their app. Same code.  </p>
+<p>BTW - In the coming Ionic 4 Ionic will have moved to WebComponents, which enables layout components to be loaded before the content components giving a much better experience.<br>
+You will also be able to use Ionic from any other webframework - e.g. React or VueJs.</p>
+<h1>Here is how to do</h1>
+<h2>The Build server (VSTS)</h2>
+<p>Currently the build server (VSTS) is running<br>
+<code>user-agent = "npm/3.10.10 node/v6.10.0 win32 x64"</code>.</p>
+<p>So you should also build your app with <code>node v6</code> or perhaps a bit lower. It is a bit like in .NET you would also want to build with a framework e.g. <code>.NET 4.5.2</code> when the build server has <code>.NET 4.7</code> - at least you don't get too big surprises when your code is build on the build server.</p>
+<h2>Your local repo</h2>
+<p>So before you start deploy you should verify that your code can build for prod on <code>node v6</code>.</p>
+<div class="highlight"><pre><span></span><span class="c1"># If you got nvm switch to v6</span>
+nvm list
+nvm use <span class="m">6</span>.11.4
+<span class="c1"># or just check that you have v6</span>
+node -v
+<span class="c1"># If you don&#39;t have v6 you might get surprises when you build in VSTS, but purhaps you won&#39;t.</span>
+
+<span class="c1"># Build for prod</span>
+npm run build --prod --aot
+</pre></div>
+
+
+<p>If no errors then we can continue.</p>
+<h2>Your remote origin</h2>
+<p>I have forked <a href="https://github.com/dreamhouseapp/dreamhouse-mobile-ionic">dreamhouseapp/dreamhouse-mobile-ionic</a> by <a href="https://twitter.com/ccoenraets">Christophe Coenraets (@ccoenraets)</a> to <a href="https://github.com/rasor/dreamhouse-mobile-ionic">rasor/dreamhouse-mobile-ionic</a>.<br>
+Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.<br>
+You can fork mine, since it is modified a bit, making it runable in Azure.<br>
+BTW - You can read about @ccoenraets's code here: <a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/">DreamHouse: Sample Application with Ionic 3 and Angular 4</a>.</p>
+<h2>Your local repo</h2>
+<p>If you forked my repo do:</p>
+<div class="highlight"><pre><span></span>npm install -g cordova@7.0.1 ionic@3.12.0 <span class="c1"># just in case you have not installed Ionic</span>
+git clone https://github.com/yourgithubusername/dreamhouse-mobile-ionic
+<span class="nb">cd</span> dreamhouse-mobile-ionic
+npm install <span class="c1"># download node_modules</span>
+ionic serve <span class="c1"># does code run without build?</span>
+npm run build --prod --aot <span class="c1"># can you build?</span>
+</pre></div>
+
+
+<h2>Build to drop folder in VSTS</h2>
+<ul>
+<li>When you have created a VSTS account via <a href="https://www.visualstudio.com/">Visual Studio VSTS</a> browse to <a href="https://yourvstsusername.visualstudio.com/_projects">https://yourvstsusername.visualstudio.com/_projects</a></li>
+<li>Create a project for dreamhouse-mobile-ionic - Press <code>New Project</code> and enter name <code>dreamhouse-mobile-ionic</code>.<br>
+<img alt="New VSTS project" src="img/2017-10-09-VSTS1.PNG" title="New VSTS project"></li>
+<li>Since your code is in GitHub, you don't need to have it in VSTS, too. So no need to look in tab <code>Code</code>.</li>
+<li>Instead goto tab <code>Build and Release</code> and press <code>+ New</code> to add a new Build Definition - more or less as you might be used to from TFS.<br>
+<img alt="New Build definition" src="img/2017-10-09-VSTS2.PNG" title="New Build definition"></li>
+<li>Choose an Empty template - meaning there are no build steps to start out with<br>
+<img alt="Select Empty template" src="img/2017-10-09-VSTS3.PNG" title="Select Empty template"></li>
+<li>Now you need to connect to GitHub. Select <code>Get sources</code> in left pane and select <code>Remote repo</code> in right pane. You need to authenticate towards GitHub - go through that process. In the image below I have already connected<br>
+Notice - this is like when you did git clone locally
+<img alt="Connect to GitHub" src="img/2017-10-09-VSTS4.PNG" title="Connect to GitHub"></li>
+<li>So what did you do after git clone? <code>npm install</code>. In Phase 1 press <code>+</code> and select npm task.
+<img alt="Select npm task" src="img/2017-10-09-VSTS5.PNG" title="Select npm task"></li>
+<li>Configure npm task by pressing the dropdown list and select <code>install</code><br>
+<img alt="Configure npm install" src="img/2017-10-09-VSTS6.PNG" title="Configure npm install"></li>
+<li>After install you did <code>Ionic serve</code>. But that was a development task - not a build task<br>
+Next build task is <code>npm run build --prod --aot</code>. Go on - add yet a npm task as you did before</li>
+<li>Configure npm task by pressing the dropdown list and select <code>custom</code>, since you can't select run<br>
+Add <code>run build --prod --aot</code> as Command and arguments<br>
+You probably recognize <code>--aot</code> - <a href="https://angular.io/guide/aot-compiler">Ahead-of-Time</a> from Angular 4. It gives faster load time, so it is quite important<br>
+<img alt="Configure npm run" src="img/2017-10-09-VSTS7.PNG" title="Configure npm run"></li>
+<li>So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure<br>
+Next task is a zip-task. Press <code>+</code> and select <code>Archive Files</code><br>
+<img alt="Select zip task" src="img/2017-10-09-VSTS8.PNG" title="Select zip task"></li>
+<li>Root folder is the build code you want to deploy. It is located in the www folder - just as when you work locally<br>
+And the name of the zipped package should be <code>$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip</code><br>
+<img alt="Configure zip" src="img/2017-10-09-VSTS9.PNG" title="Configure zip"></li>
+<li>Final build step to do is to put the package in a drop folder<br>
+Next task is a publish task. Press <code>+</code> and select <code>Publish Build Artifacts</code><br>
+Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if you npm installed a nice utility, you could then do anything with it in a script which could be in your code e.g. `.\scripts\runkarmaandprotractortests.cmd
+<img alt="Select publish task" src="img/2017-10-09-VSTS10.PNG" title="Select publish task"></li>
+<li>Path to publish is the zip file you created in last step<br>
+Artifact Name is the name of the drop folder. It must be called <code>drop</code><br>
+And Type must be <code>Server</code> (opposed to File Share)<br>
+<img alt="Configure publish" src="img/2017-10-09-VSTS11.PNG" title="Configure publish"></li>
+</ul>
+<p>Have you noticed that these Build Tasks correspond to the features in TeamCity? </p>
+<p>Next up is to deploy the package to Azure.</p>
+<h2>Setup WebApp in Azure</h2>
+<ul>
+<li>When you have created a free Azure account via <a href="https://azure.microsoft.com/en-in/free/">Microsoft Azure</a> browse to <a href="https://portal.azure.com/">Azure Portal</a></li>
+<li>The first thing you need is a place for all you stuff at Azure to live. That is called a <code>Resource Group</code><br>
+Click <code>Resource Groups</code> then <code>+ Add</code><br>
+<img alt="Add Resource Group" src="img/2017-10-09-Azure1.PNG" title="Add Resource Group"></li>
+<li>Name - I have called mine <code>ResGroupNorthEurope</code><br>
+Location - I live in area <code>North Europe</code><br>
+<img alt="Configure Resource Group" src="img/2017-10-09-Azure2.PNG" title="Configure Resource Group"></li>
+<li>So what do you want there? A webapp. You find that under <code>App Services</code>. Click <code>+ Add</code> then <code>Filter</code><br>
+Then you see a variaty of categories of webapps
+<img alt="Add WebApp" src="img/2017-10-09-Azure3.PNG" title="Add WebApp"></li>
+<li>Select <code>Web App</code> 
+Since I have already taken subdomain dreamhouse-mobile-ionic you have to choose another one - e.g.  <code>yourvstsusername-dreamhouse-mobile-ionic</code><br>
+Resourse Group: Use the one you created before: <code>`Use Existing</code><br>
+App Service Plan is the Dyno in Heroku or EC2 in AWS - the size of your PaaS. I have chosen the smallest: S1<br>
+Tip: You can reuse the Resource Group and the App Service Plan for several resources e.g. webapps.
+<img alt="Configure WebApp" src="img/2017-10-09-Azure4.PNG" title="Configure WebApp"></li>
+</ul>
+<p>You're done in Azure. Next up is to release to Azure from VSTS.</p>
+<h2>Release to Azure from VSTS</h2>
+<ul>
+<li>Go back to <a href="https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build">https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build</a></li>
+<li>You can deploy to many environments and servivces. We just want to deploy to our App Service.<br>
+First step is to select that target environment in a Release<br>
+Click tab <code>Releases</code> then <code>+</code> - <code>Create Release Definition</code> - Select <code>Azure App Service Deployment</code> and click Apply <br>
+<img alt="Add Release Definition" src="img/2017-10-09-VSTSRelease1.PNG" title="Add Release Definition"></li>
+<li>Notice the ´!´ - something needs attention - click either of them<br>
+<img alt="Tasks needs attention" src="img/2017-10-09-VSTSRelease2.PNG" title="Tasks needs attention"></li>
+<li>Hey - that looks familiar - a list of steps in a task list - just as under tab <code>Build</code><br>
+Yes, but heading is <code>Environment 1</code> - not <code>Phase 1</code>. And for the environmet you have to connect to Azure.
+Click on <code>Manage</code> subscribtion and go through an authentication process<br>
+When connected you can click the dropdown list to select your website<br>
+<img alt="Connect to Azure" src="img/2017-10-09-VSTSRelease3.PNG" title="Connect to Azure"></li>
+<li>Head back to tab <code>Pipeline</code> - we need to fetch a source to deploy<br>
+Select <code>Add Artifact</code> and select source type: <code>Build</code>, so we can fetch the zip file from drop.<br>
+Notice: Source type can also be: <code>Git, GitHub, Jenkins and Team Foundation Version Control</code>.<br>
+Build Definition: Select the only one from the list.<br>
+Accept default values and press Add.<br>
+<img alt="Add Artifact" src="img/2017-10-09-VSTSRelease4.PNG" title="Add Artifact"></li>
+<li>Press the lightning icon on the Artifact. Notice the trigger is whenever a new drop has been made.<br>
+<img alt="Release Trigger" src="img/2017-10-09-VSTSRelease5.PNG" title="Release Trigger"></li>
+<li>Now that we have a source we can head back to <code>Tasks</code>, select <code>Deploy Azure App Service</code> and enter the missing zipfile: <code>$(System.DefaultWorkingDirectory)\**\*.zip</code>. You can browse to it by pressing <code>...</code><br>
+<img alt="Pick zip file" src="img/2017-10-09-VSTSRelease6.PNG" title="Pick zip file"></li>
+<li>Before we save the Release Definition head to <code>Pipeline</code> - and select the Lightning in the Environment<br>
+Notice you have a possibility to select persons to approve deployment. This can be tester that approves one environment before a build is rolled out for the next environment.<br>
+<img alt="Approvers" src="img/2017-10-09-VSTSRelease7.PNG" title="Approvers">
+We don't want approvers - so go on and save.</li>
+</ul>
+<p>Have you noticed that these Release workflow correspond to the features in Octopus Deploy? </p>
+<h2>Trig a build and a release to Azure</h2>
+<p>Now we are ready for the big show - deploy to Azure</p>
+<ul>
+<li>Head back to <code>Builds</code> - tab <code>All Definitions</code> - click on the only one <code>dreamhouse-mobile-ionic-Build</code><br>
+<img alt="Prepare to build" src="img/2017-10-09-VSTSQueue1.PNG" title="Prepare to build"></li>
+<li>Click <code>Queue New Build...</code><br>
+<img alt="Queue build" src="img/2017-10-09-VSTSQueue2.PNG" title="Queue build"></li>
+<li>Click <code>Queue</code>
+<img alt="npm run build" src="img/2017-10-09-VSTSQueue3.PNG" title="npm run build"></li>
+<li>If the Build succeded head to <code>Releases</code> tab and verify that the build triggered a release<br>
+<img alt="Triggered release" src="img/2017-10-09-VSTSQueue4.PNG" title="Triggered release"></li>
+<li>If the release succeeded, too head to <code>Azure App Services</code> in <a href="https://portal.azure.com">Azure</a><br>
+Select your service and scroll down to <code>Continous Delivery</code><br>
+You should see the Release has been Deployed Successfully<br>
+<img alt="Succeeded release" src="img/2017-10-09-VSTSQueue5.PNG" title="Succeeded release"></li>
+</ul>
+<p>If that is true then you site should be live on<br>
+<a href="http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net">http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net</a></p>
+<p>If you are just reading along you can also find my site <a href="http://dreamhouse-mobile-ionic.azurewebsites.net/">here</a></p>
+<hr>
+<h1>Links</h1>
+<ul>
+<li><a href="https://rasor.wordpress.com/2017/06/29/deploying-ionic1-as-a-webapp-to-heroku/">Deploying Ionic1 to Heroku</a></li>
+<li><a href="https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts">Deploy your .NET core app to an Azure web app</a></li>
+<li><a href="https://my.visualstudio.com">MSDN</a></li>
+<li><a href="https://yarnpkg.com/en/docs/install-ci#travis-tab">Yarn with Travis CI</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/npm.html">#npm</a>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+      <a href="https://rasor.github.io/tag/ionic.html">#ionic</a>
+      <a href="https://rasor.github.io/tag/ngx.html">#ngx</a>
+      <a href="https://rasor.github.io/tag/azure.html">#azure</a>
+      <a href="https://rasor.github.io/tag/pwa.html">#pwa</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

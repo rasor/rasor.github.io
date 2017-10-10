@@ -1,5 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-08T15:00:00+02:00</updated><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2017-10-08T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-10T21:00:00+02:00</updated><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-10T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
+article &lt;a href="https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/"&gt;Deploying an Angular CLI project using VSTS Build and Release&lt;/a&gt;.&lt;br&gt;
+This blog deploys a Ionic 3 / Angular 4 app to Azure.&lt;/p&gt;
+&lt;h1&gt;The final workflow&lt;/h1&gt;
+&lt;p&gt;After your Ionic project has been connected with Azure through VSTS then you have this workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;From you …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
+article &lt;a href="https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/"&gt;Deploying an Angular CLI project using VSTS Build and Release&lt;/a&gt;.&lt;br&gt;
+This blog deploys a Ionic 3 / Angular 4 app to Azure.&lt;/p&gt;
+&lt;h1&gt;The final workflow&lt;/h1&gt;
+&lt;p&gt;After your Ionic project has been connected with Azure through VSTS then you have this workflow:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;From you editor: Add feature to you project and git push to origin&lt;/li&gt;
+&lt;li&gt;From VSTS: Queue a new build&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;That's it. Done. You have deployed your Ionic project to Azure as a webapp.&lt;/p&gt;
+&lt;p&gt;So why doesn't the pipeline just hook a webhook into your git origin and queue a build by itself (as you are used to from e.g. Heroku)?&lt;br&gt;
+Well - if you use VSTS as Version Control, then it will work - I have used "Remote repo" option - apparently it is not ready yet.&lt;/p&gt;
+&lt;p&gt;And why would you want to deploy a Ionic app as a webapp, when it is supposed to be installed on phones?&lt;br&gt;
+Ionic is born as PWA - you might want to use those features.&lt;br&gt;
+Also you just might want to demo the app as webapp before sending it to the app store.&lt;br&gt;
+So with Ionic you have only one codebase to maintain - checkout &lt;a href="https://www.millioneyez.com"&gt;MillionEyez&lt;/a&gt; on the web and download their app. Same code.  &lt;/p&gt;
+&lt;p&gt;BTW - In the coming Ionic 4 Ionic will have moved to WebComponents, which enables layout components to be loaded before the content components giving a much better experience.&lt;br&gt;
+You will also be able to use Ionic from any other webframework - e.g. React or VueJs.&lt;/p&gt;
+&lt;h1&gt;Here is how to do&lt;/h1&gt;
+&lt;h2&gt;The Build server (VSTS)&lt;/h2&gt;
+&lt;p&gt;Currently the build server (VSTS) is running&lt;br&gt;
+&lt;code&gt;user-agent = "npm/3.10.10 node/v6.10.0 win32 x64"&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So you should also build your app with &lt;code&gt;node v6&lt;/code&gt; or perhaps a bit lower. It is a bit like in .NET you would also want to build with a framework e.g. &lt;code&gt;.NET 4.5.2&lt;/code&gt; when the build server has &lt;code&gt;.NET 4.7&lt;/code&gt; - at least you don't get too big surprises when your code is build on the build server.&lt;/p&gt;
+&lt;h2&gt;Your local repo&lt;/h2&gt;
+&lt;p&gt;So before you start deploy you should verify that your code can build for prod on &lt;code&gt;node v6&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# If you got nvm switch to v6&lt;/span&gt;
+nvm list
+nvm use &lt;span class="m"&gt;6&lt;/span&gt;.11.4
+&lt;span class="c1"&gt;# or just check that you have v6&lt;/span&gt;
+node -v
+&lt;span class="c1"&gt;# If you don&amp;#39;t have v6 you might get surprises when you build in VSTS, but purhaps you won&amp;#39;t.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Build for prod&lt;/span&gt;
+npm run build --prod --aot
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If no errors then we can continue.&lt;/p&gt;
+&lt;h2&gt;Your remote origin&lt;/h2&gt;
+&lt;p&gt;I have forked &lt;a href="https://github.com/dreamhouseapp/dreamhouse-mobile-ionic"&gt;dreamhouseapp/dreamhouse-mobile-ionic&lt;/a&gt; by &lt;a href="https://twitter.com/ccoenraets"&gt;Christophe Coenraets (@ccoenraets)&lt;/a&gt; to &lt;a href="https://github.com/rasor/dreamhouse-mobile-ionic"&gt;rasor/dreamhouse-mobile-ionic&lt;/a&gt;.&lt;br&gt;
+Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.&lt;br&gt;
+You can fork mine, since it is modified a bit, making it runable in Azure.&lt;br&gt;
+BTW - You can read about @ccoenraets's code here: &lt;a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/"&gt;DreamHouse: Sample Application with Ionic 3 and Angular 4&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Your local repo&lt;/h2&gt;
+&lt;p&gt;If you forked my repo do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g cordova@7.0.1 ionic@3.12.0 &lt;span class="c1"&gt;# just in case you have not installed Ionic&lt;/span&gt;
+git clone https://github.com/yourgithubusername/dreamhouse-mobile-ionic
+&lt;span class="nb"&gt;cd&lt;/span&gt; dreamhouse-mobile-ionic
+npm install &lt;span class="c1"&gt;# download node_modules&lt;/span&gt;
+ionic serve &lt;span class="c1"&gt;# does code run without build?&lt;/span&gt;
+npm run build --prod --aot &lt;span class="c1"&gt;# can you build?&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Build to drop folder in VSTS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;When you have created a VSTS account via &lt;a href="https://www.visualstudio.com/"&gt;Visual Studio VSTS&lt;/a&gt; browse to &lt;a href="https://yourvstsusername.visualstudio.com/_projects"&gt;https://yourvstsusername.visualstudio.com/_projects&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create a project for dreamhouse-mobile-ionic - Press &lt;code&gt;New Project&lt;/code&gt; and enter name &lt;code&gt;dreamhouse-mobile-ionic&lt;/code&gt;.&lt;br&gt;
+&lt;img alt="New VSTS project" src="img/2017-10-09-VSTS1.PNG" title="New VSTS project"&gt;&lt;/li&gt;
+&lt;li&gt;Since your code is in GitHub, you don't need to have it in VSTS, too. So no need to look in tab &lt;code&gt;Code&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Instead goto tab &lt;code&gt;Build and Release&lt;/code&gt; and press &lt;code&gt;+ New&lt;/code&gt; to add a new Build Definition - more or less as you might be used to from TFS.&lt;br&gt;
+&lt;img alt="New Build definition" src="img/2017-10-09-VSTS2.PNG" title="New Build definition"&gt;&lt;/li&gt;
+&lt;li&gt;Choose an Empty template - meaning there are no build steps to start out with&lt;br&gt;
+&lt;img alt="Select Empty template" src="img/2017-10-09-VSTS3.PNG" title="Select Empty template"&gt;&lt;/li&gt;
+&lt;li&gt;Now you need to connect to GitHub. Select &lt;code&gt;Get sources&lt;/code&gt; in left pane and select &lt;code&gt;Remote repo&lt;/code&gt; in right pane. You need to authenticate towards GitHub - go through that process. In the image below I have already connected&lt;br&gt;
+Notice - this is like when you did git clone locally
+&lt;img alt="Connect to GitHub" src="img/2017-10-09-VSTS4.PNG" title="Connect to GitHub"&gt;&lt;/li&gt;
+&lt;li&gt;So what did you do after git clone? &lt;code&gt;npm install&lt;/code&gt;. In Phase 1 press &lt;code&gt;+&lt;/code&gt; and select npm task.
+&lt;img alt="Select npm task" src="img/2017-10-09-VSTS5.PNG" title="Select npm task"&gt;&lt;/li&gt;
+&lt;li&gt;Configure npm task by pressing the dropdown list and select &lt;code&gt;install&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Configure npm install" src="img/2017-10-09-VSTS6.PNG" title="Configure npm install"&gt;&lt;/li&gt;
+&lt;li&gt;After install you did &lt;code&gt;Ionic serve&lt;/code&gt;. But that was a development task - not a build task&lt;br&gt;
+Next build task is &lt;code&gt;npm run build --prod --aot&lt;/code&gt;. Go on - add yet a npm task as you did before&lt;/li&gt;
+&lt;li&gt;Configure npm task by pressing the dropdown list and select &lt;code&gt;custom&lt;/code&gt;, since you can't select run&lt;br&gt;
+Add &lt;code&gt;run build --prod --aot&lt;/code&gt; as Command and arguments&lt;br&gt;
+You probably recognize &lt;code&gt;--aot&lt;/code&gt; - &lt;a href="https://angular.io/guide/aot-compiler"&gt;Ahead-of-Time&lt;/a&gt; from Angular 4. It gives faster load time, so it is quite important&lt;br&gt;
+&lt;img alt="Configure npm run" src="img/2017-10-09-VSTS7.PNG" title="Configure npm run"&gt;&lt;/li&gt;
+&lt;li&gt;So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure&lt;br&gt;
+Next task is a zip-task. Press &lt;code&gt;+&lt;/code&gt; and select &lt;code&gt;Archive Files&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Select zip task" src="img/2017-10-09-VSTS8.PNG" title="Select zip task"&gt;&lt;/li&gt;
+&lt;li&gt;Root folder is the build code you want to deploy. It is located in the www folder - just as when you work locally&lt;br&gt;
+And the name of the zipped package should be &lt;code&gt;$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Configure zip" src="img/2017-10-09-VSTS9.PNG" title="Configure zip"&gt;&lt;/li&gt;
+&lt;li&gt;Final build step to do is to put the package in a drop folder&lt;br&gt;
+Next task is a publish task. Press &lt;code&gt;+&lt;/code&gt; and select &lt;code&gt;Publish Build Artifacts&lt;/code&gt;&lt;br&gt;
+Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if you npm installed a nice utility, you could then do anything with it in a script which could be in your code e.g. `.\scripts\runkarmaandprotractortests.cmd
+&lt;img alt="Select publish task" src="img/2017-10-09-VSTS10.PNG" title="Select publish task"&gt;&lt;/li&gt;
+&lt;li&gt;Path to publish is the zip file you created in last step&lt;br&gt;
+Artifact Name is the name of the drop folder. It must be called &lt;code&gt;drop&lt;/code&gt;&lt;br&gt;
+And Type must be &lt;code&gt;Server&lt;/code&gt; (opposed to File Share)&lt;br&gt;
+&lt;img alt="Configure publish" src="img/2017-10-09-VSTS11.PNG" title="Configure publish"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Have you noticed that these Build Tasks correspond to the features in TeamCity? &lt;/p&gt;
+&lt;p&gt;Next up is to deploy the package to Azure.&lt;/p&gt;
+&lt;h2&gt;Setup WebApp in Azure&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;When you have created a free Azure account via &lt;a href="https://azure.microsoft.com/en-in/free/"&gt;Microsoft Azure&lt;/a&gt; browse to &lt;a href="https://portal.azure.com/"&gt;Azure Portal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The first thing you need is a place for all you stuff at Azure to live. That is called a &lt;code&gt;Resource Group&lt;/code&gt;&lt;br&gt;
+Click &lt;code&gt;Resource Groups&lt;/code&gt; then &lt;code&gt;+ Add&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Add Resource Group" src="img/2017-10-09-Azure1.PNG" title="Add Resource Group"&gt;&lt;/li&gt;
+&lt;li&gt;Name - I have called mine &lt;code&gt;ResGroupNorthEurope&lt;/code&gt;&lt;br&gt;
+Location - I live in area &lt;code&gt;North Europe&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Configure Resource Group" src="img/2017-10-09-Azure2.PNG" title="Configure Resource Group"&gt;&lt;/li&gt;
+&lt;li&gt;So what do you want there? A webapp. You find that under &lt;code&gt;App Services&lt;/code&gt;. Click &lt;code&gt;+ Add&lt;/code&gt; then &lt;code&gt;Filter&lt;/code&gt;&lt;br&gt;
+Then you see a variaty of categories of webapps
+&lt;img alt="Add WebApp" src="img/2017-10-09-Azure3.PNG" title="Add WebApp"&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;code&gt;Web App&lt;/code&gt; 
+Since I have already taken subdomain dreamhouse-mobile-ionic you have to choose another one - e.g.  &lt;code&gt;yourvstsusername-dreamhouse-mobile-ionic&lt;/code&gt;&lt;br&gt;
+Resourse Group: Use the one you created before: &lt;code&gt;`Use Existing&lt;/code&gt;&lt;br&gt;
+App Service Plan is the Dyno in Heroku or EC2 in AWS - the size of your PaaS. I have chosen the smallest: S1&lt;br&gt;
+Tip: You can reuse the Resource Group and the App Service Plan for several resources e.g. webapps.
+&lt;img alt="Configure WebApp" src="img/2017-10-09-Azure4.PNG" title="Configure WebApp"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You're done in Azure. Next up is to release to Azure from VSTS.&lt;/p&gt;
+&lt;h2&gt;Release to Azure from VSTS&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Go back to &lt;a href="https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build"&gt;https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;You can deploy to many environments and servivces. We just want to deploy to our App Service.&lt;br&gt;
+First step is to select that target environment in a Release&lt;br&gt;
+Click tab &lt;code&gt;Releases&lt;/code&gt; then &lt;code&gt;+&lt;/code&gt; - &lt;code&gt;Create Release Definition&lt;/code&gt; - Select &lt;code&gt;Azure App Service Deployment&lt;/code&gt; and click Apply &lt;br&gt;
+&lt;img alt="Add Release Definition" src="img/2017-10-09-VSTSRelease1.PNG" title="Add Release Definition"&gt;&lt;/li&gt;
+&lt;li&gt;Notice the ´!´ - something needs attention - click either of them&lt;br&gt;
+&lt;img alt="Tasks needs attention" src="img/2017-10-09-VSTSRelease2.PNG" title="Tasks needs attention"&gt;&lt;/li&gt;
+&lt;li&gt;Hey - that looks familiar - a list of steps in a task list - just as under tab &lt;code&gt;Build&lt;/code&gt;&lt;br&gt;
+Yes, but heading is &lt;code&gt;Environment 1&lt;/code&gt; - not &lt;code&gt;Phase 1&lt;/code&gt;. And for the environmet you have to connect to Azure.
+Click on &lt;code&gt;Manage&lt;/code&gt; subscribtion and go through an authentication process&lt;br&gt;
+When connected you can click the dropdown list to select your website&lt;br&gt;
+&lt;img alt="Connect to Azure" src="img/2017-10-09-VSTSRelease3.PNG" title="Connect to Azure"&gt;&lt;/li&gt;
+&lt;li&gt;Head back to tab &lt;code&gt;Pipeline&lt;/code&gt; - we need to fetch a source to deploy&lt;br&gt;
+Select &lt;code&gt;Add Artifact&lt;/code&gt; and select source type: &lt;code&gt;Build&lt;/code&gt;, so we can fetch the zip file from drop.&lt;br&gt;
+Notice: Source type can also be: &lt;code&gt;Git, GitHub, Jenkins and Team Foundation Version Control&lt;/code&gt;.&lt;br&gt;
+Build Definition: Select the only one from the list.&lt;br&gt;
+Accept default values and press Add.&lt;br&gt;
+&lt;img alt="Add Artifact" src="img/2017-10-09-VSTSRelease4.PNG" title="Add Artifact"&gt;&lt;/li&gt;
+&lt;li&gt;Press the lightning icon on the Artifact. Notice the trigger is whenever a new drop has been made.&lt;br&gt;
+&lt;img alt="Release Trigger" src="img/2017-10-09-VSTSRelease5.PNG" title="Release Trigger"&gt;&lt;/li&gt;
+&lt;li&gt;Now that we have a source we can head back to &lt;code&gt;Tasks&lt;/code&gt;, select &lt;code&gt;Deploy Azure App Service&lt;/code&gt; and enter the missing zipfile: &lt;code&gt;$(System.DefaultWorkingDirectory)\**\*.zip&lt;/code&gt;. You can browse to it by pressing &lt;code&gt;...&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Pick zip file" src="img/2017-10-09-VSTSRelease6.PNG" title="Pick zip file"&gt;&lt;/li&gt;
+&lt;li&gt;Before we save the Release Definition head to &lt;code&gt;Pipeline&lt;/code&gt; - and select the Lightning in the Environment&lt;br&gt;
+Notice you have a possibility to select persons to approve deployment. This can be tester that approves one environment before a build is rolled out for the next environment.&lt;br&gt;
+&lt;img alt="Approvers" src="img/2017-10-09-VSTSRelease7.PNG" title="Approvers"&gt;
+We don't want approvers - so go on and save.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Have you noticed that these Release workflow correspond to the features in Octopus Deploy? &lt;/p&gt;
+&lt;h2&gt;Trig a build and a release to Azure&lt;/h2&gt;
+&lt;p&gt;Now we are ready for the big show - deploy to Azure&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Head back to &lt;code&gt;Builds&lt;/code&gt; - tab &lt;code&gt;All Definitions&lt;/code&gt; - click on the only one &lt;code&gt;dreamhouse-mobile-ionic-Build&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Prepare to build" src="img/2017-10-09-VSTSQueue1.PNG" title="Prepare to build"&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;code&gt;Queue New Build...&lt;/code&gt;&lt;br&gt;
+&lt;img alt="Queue build" src="img/2017-10-09-VSTSQueue2.PNG" title="Queue build"&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;code&gt;Queue&lt;/code&gt;
+&lt;img alt="npm run build" src="img/2017-10-09-VSTSQueue3.PNG" title="npm run build"&gt;&lt;/li&gt;
+&lt;li&gt;If the Build succeded head to &lt;code&gt;Releases&lt;/code&gt; tab and verify that the build triggered a release&lt;br&gt;
+&lt;img alt="Triggered release" src="img/2017-10-09-VSTSQueue4.PNG" title="Triggered release"&gt;&lt;/li&gt;
+&lt;li&gt;If the release succeeded, too head to &lt;code&gt;Azure App Services&lt;/code&gt; in &lt;a href="https://portal.azure.com"&gt;Azure&lt;/a&gt;&lt;br&gt;
+Select your service and scroll down to &lt;code&gt;Continous Delivery&lt;/code&gt;&lt;br&gt;
+You should see the Release has been Deployed Successfully&lt;br&gt;
+&lt;img alt="Succeeded release" src="img/2017-10-09-VSTSQueue5.PNG" title="Succeeded release"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If that is true then you site should be live on&lt;br&gt;
+&lt;a href="http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net"&gt;http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you are just reading along you can also find my site &lt;a href="http://dreamhouse-mobile-ionic.azurewebsites.net/"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.wordpress.com/2017/06/29/deploying-ionic1-as-a-webapp-to-heroku/"&gt;Deploying Ionic1 to Heroku&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts"&gt;Deploy your .NET core app to an Azure web app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://my.visualstudio.com"&gt;MSDN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/install-ci#travis-tab"&gt;Yarn with Travis CI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2017-10-08T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With Nvm For Windows you can stay in the shell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
