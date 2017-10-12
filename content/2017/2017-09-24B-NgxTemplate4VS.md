@@ -1,6 +1,6 @@
 Title: Ngx: Template for Visual Studio 2017
 Date: 2017-09-24 17:00
-Modified: 2017-10-07 14:00
+Modified: 2017-10-12 22:00
 Category: Develop
 Tags: #npm, #ngx, #typescript, #visualstudio, #tfs
 
@@ -63,7 +63,8 @@ Luckily there is a `.vsix` for that: [Angular CLI Project Template](https://mark
 
 ## Links
 
-* [Visual Studio 2015 QuickStart](https://angular.io/guide/visual-studio-2015){:target="_blank"}
+* [SSR with .NET Core](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
 * [@angular/cli](https://www.npmjs.com/package/@angular/cli/){:target="_blank"}
+* [Visual Studio 2015 QuickStart](https://angular.io/guide/visual-studio-2015){:target="_blank"}
 
 The End

@@ -1,5 +1,6 @@
 Title: Deploying Ionic to Azure
 Date: 2017-10-10 21:00
+Modified: 2017-10-12 22:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa
 
@@ -197,5 +198,12 @@ If you are just reading along you can also find my site [here](http://dreamhouse
 * [Deploy your .NET core app to an Azure web app](https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts)
 * [MSDN](https://my.visualstudio.com)
 * [Yarn with Travis CI](https://yarnpkg.com/en/docs/install-ci#travis-tab)
+* [Authentication and authorization in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)
+* [Add authentication on Cordova with Mobile Apps](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-get-started-users)
+* [SSR with .NET Core](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
+* [Azure Mobile Apps - MBaaS - C#](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk)
+* [Azure Mobile Apps - MBaaS - NodeJs](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk)
+* [Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest)
+* [Azure CLI Samples - App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-cli-samples)
 
 The End
