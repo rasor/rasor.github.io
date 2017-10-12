@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-10T21:00:00+02:00</updated><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-10T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-12T22:00:00+02:00</updated><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-12T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
 article &lt;a href="https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/"&gt;Deploying an Angular CLI project using VSTS Build and Release&lt;/a&gt;.&lt;br&gt;
 This blog deploys a Ionic 3 / Angular 4 app to Azure.&lt;/p&gt;
 &lt;h1&gt;The final workflow&lt;/h1&gt;
@@ -175,6 +175,13 @@ You should see the Release has been Deployed Successfully&lt;br&gt;
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/vsts/build-release/apps/cd/azure/aspnet-core-to-azure-webapp?tabs=vsts"&gt;Deploy your .NET core app to an Azure web app&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://my.visualstudio.com"&gt;MSDN&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/install-ci#travis-tab"&gt;Yarn with Travis CI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview"&gt;Authentication and authorization in Azure App Service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-get-started-users"&gt;Add authentication on Cordova with Mobile Apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services"&gt;SSR with .NET Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk"&gt;Azure Mobile Apps - MBaaS - C#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk"&gt;Azure Mobile Apps - MBaaS - NodeJs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest"&gt;Azure CLI 2.0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-cli-samples"&gt;Azure CLI Samples - App Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2017-10-08T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
@@ -634,7 +641,7 @@ start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&g
 &lt;/li&gt;
 &lt;li&gt;Images &lt;a href="https://unsplash.com/" target="_blank"&gt;https://unsplash.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-10-07T14:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-10-12T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
@@ -705,8 +712,9 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;/ul&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://angular.io/guide/visual-studio-2015" target="_blank"&gt;Visual Studio 2015 QuickStart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services"&gt;SSR with .NET Core&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://angular.io/guide/visual-studio-2015" target="_blank"&gt;Visual Studio 2015 QuickStart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-10-03T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
