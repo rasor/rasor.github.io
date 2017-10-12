@@ -19,9 +19,12 @@ Setting up .NET core 2.0 as  Web-BaaS
 ## Authentication
 * [Authentication and authorization in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)
 * [Add authentication on Cordova with Mobile Apps](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-get-started-users)
-* [Configure Azure AD authentication](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication)
 * [Azure Mobile Apps - MBaaS - C#](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-dotnet-backend-how-to-use-server-sdk)
 * [Azure Mobile Apps - MBaaS - NodeJs](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk)
+* [Authentication Scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios)
+* [Configure Azure AD authentication](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication)
+* [Azure-Samples/AD .net-webapp-openidconnect-aspnetcore](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect-aspnetcore)
+* [Azure AD Code Samples - SPA](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-code-samples#single-page-application-spa)
 
 ## Links
 * [.NET Core CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/index?tabs=netcore2x)
