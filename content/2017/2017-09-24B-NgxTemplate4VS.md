@@ -33,11 +33,11 @@ Luckily there is a `.vsix` for that: [Angular CLI Project Template](https://mark
 * Start VisualStudio
 * New - Project - Other Languages - TypeScript - Angular CLI Application - Name: <YourNgAppName>
 
-![picture alt](img/2017-09-24-NewAngularCLIProject.PNG "New Angular CLI Project in Visual Studio 2017")
+![New Angular CLI Project in Visual Studio 2017](img/2017-09-24-NewAngularCLIProject.PNG "New Angular CLI Project in Visual Studio 2017")
 
 * In the project options choises select both if you are in doubt
 
-![picture alt](img/2017-09-24-AngularCLIProjectOptions.PNG "Angular CLI Project options")
+![Angular CLI Project options](img/2017-09-24-AngularCLIProjectOptions.PNG "Angular CLI Project options")
 
 * Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails
     * Open a command prompt and CD into the root of your Angular project
@@ -47,11 +47,11 @@ Luckily there is a `.vsix` for that: [Angular CLI Project Template](https://mark
         * If you started IIS Express, then VS will start dotnet.exe on <http://localhost:58162/>
         * If you started [yourapp], then VS will start dotnet.exe on <http://localhost:58163/>
 
-    ![picture alt](img/2017-09-24-F5Startup1.PNG "F5 startup 1")
+    ![F5 startup 1](img/2017-09-24-F5Startup1.PNG "F5 startup 1")
 
     * In both cases Angular CLI will serve you app after buiding it with the Angular CLI on <http://localhost:4200/>
 
-    ![picture alt](img/2017-09-24-F5Startup2.PNG "F5 startup 2")
+    ![F5 startup 2](img/2017-09-24-F5Startup2.PNG "F5 startup 2")
 
     * This is very good news. Why? Because it does not matter what webserver or editor you are using.
     But the best of is that you use standard node.js deployment methods, so you can deploy your app anywhere. You can use standard npm or yarn managers without having to do a lot of strange Visual Studio configuration.
