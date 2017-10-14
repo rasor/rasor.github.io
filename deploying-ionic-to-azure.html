@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/deploying-ionic-to-azure.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-10 21:00:00+02:00"/>
-<meta property="article:modified_time" content="2017-10-12 22:00:00+02:00"/>
+<meta property="article:modified_time" content="2017-10-13 22:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#npm"/>
@@ -59,12 +59,19 @@
       <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
 
 <p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
 
       <ul class="social">
         <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
         <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com/" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
         <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
       </ul>
     </div>
@@ -97,7 +104,7 @@
 
 
       </br>
-        Updated: oktober 12, 2017
+        Updated: oktober 13, 2017
     </p>
   </header>
 
@@ -126,6 +133,7 @@ You will also be able to use Ionic from any other webframework - e.g. React or V
 <p>Currently the build server (VSTS) is running<br>
 <code>user-agent = "npm/3.10.10 node/v6.10.0 win32 x64"</code>.</p>
 <p>So you should also build your app with <code>node v6</code> or perhaps a bit lower. It is a bit like in .NET you would also want to build with a framework e.g. <code>.NET 4.5.2</code> when the build server has <code>.NET 4.7</code> - at least you don't get too big surprises when your code is build on the build server.</p>
+<p>It should be possible to specify another node version with <code>WEBSITE_NODE_DEFAULT_VERSION</code>, though I haven't tried. Look for more info <a href="http://blog.stevensanderson.com/2016/10/04/angular2-template-for-visual-studio/">here</a>.</p>
 <h2>Your local repo</h2>
 <p>So before you start deploy you should verify that your code can build for prod on <code>node v6</code>.</p>
 <div class="highlight"><pre><span></span><span class="c1"># If you got nvm switch to v6</span>
