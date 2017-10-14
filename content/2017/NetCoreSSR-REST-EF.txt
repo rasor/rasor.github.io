@@ -25,6 +25,7 @@ Setting up .NET core 2.0 as  Web-BaaS
 * [Configure Azure AD authentication](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication)
 * [Azure-Samples/AD .net-webapp-openidconnect-aspnetcore](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect-aspnetcore)
 * [Azure AD Code Samples - SPA](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-code-samples#single-page-application-spa)
+* [Sunsetting Ionic Cloud Push and Auth](https://blog.ionic.io/sunsetting-ionic-cloud-push-and-auth/)
 
 ## Links
 * [.NET Core CLI](https://docs.microsoft.com/en-us/dotnet/core/tools/index?tabs=netcore2x)
@@ -33,5 +34,9 @@ Setting up .NET core 2.0 as  Web-BaaS
 * [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)
 * [.NET Core Guide](https://docs.microsoft.com/en-us/dotnet/core/)
 * [ASP.NET Core samples](https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials)
+* [kriasoft/aspnet-starter-kit - React w. SSR](https://github.com/kriasoft/aspnet-starter-kit)
+* [MarkPieszak/aspnetcore-angular2 - w. SSR](https://github.com/MarkPieszak/aspnetcore-angular2-universal)
+* [ASP.NET Core + Angular 2 template for Visual Studio](http://blog.stevensanderson.com/2016/10/04/angular2-template-for-visual-studio/)
+
 
 The End.

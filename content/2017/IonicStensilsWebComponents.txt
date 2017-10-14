@@ -7,6 +7,7 @@ Vid
 * [Faster Web Apps Using Stencil](https://www.youtube.com/watch?v=mnsjL-WYzKQ)
 * [A Tutorial on How I Use Stencil](https://www.youtube.com/watch?v=cUU08Rc0ZQY)
 * [Using Web Components with Angular (Google I/O '17)](https://www.youtube.com/watch?v=Ucq9F-7Xp8I)
+* [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
 
 HowTo use?
 
@@ -15,6 +16,7 @@ HowTo use?
 * <https://github.com/kensodemann/stencil-toh>
 * <https://github.com/ionic-team/stencil-app-starter>
 * <http://thewebplatformpodcast.com/133-ionic-web-components>
+* [stenciljs demos](https://stenciljs.com/demos)
 
 
 * [Angular Tour of Heroes](https://angular.io/tutorial)

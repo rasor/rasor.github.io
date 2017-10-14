@@ -25,7 +25,7 @@ Abbreviations
 * [1. Merge local from upstream - when using Fork and pull](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/)
     * ```bash
     git checkout master
-    git pull upstream master
+    git pull upstream master # or rebase
     # handle possible conflicts: https://help.github.com/articles/addressing-merge-conflicts/
     git status
     git push origin master
@@ -50,6 +50,10 @@ Abbreviations
     git push origin
     ```
 
+
+![@osteele's GIT commands](http://images.osteele.com/2008/git-transport.png "@osteele's GIT commands")
+
+* [@osteele's GIT Workflow](http://blog.osteele.com/2008/05/my-git-workflow/)
 * <https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project>
 * <https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39>
 * <http://www.firsttimersonly.com/>

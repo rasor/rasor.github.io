@@ -8,3 +8,6 @@
 * <https://www.millioneyez.com/photos>
 
 * [Why Build Progressive Web Apps?](https://www.youtube.com/watch?v=1QILz1lAzWY)
+* [Build A Fast Offline-First PWA with StencilJs](https://blog.manifold.co/build-a-fast-offline-first-pwa-with-stenciljs-596727624e5c)
+* [christiannwamba/stencil-pwa](https://github.com/christiannwamba/stencil-pwa)
+* [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)

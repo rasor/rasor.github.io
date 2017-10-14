@@ -4,3 +4,11 @@
 * [Angular 2 Universal - Server Side Rendering Part 2](https://www.youtube.com/watch?v=2WSYMUIbKhA)
 * [Angular 2 Server Side Rendering by Wassim Chegham](https://www.youtube.com/watch?v=UAgljIYAar8)
 * [SSR with .NET Core](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
+* [kriasoft/aspnet-starter-kit - React w. SSR](https://github.com/kriasoft/aspnet-starter-kit)
+* [MarkPieszak/aspnetcore-angular2 - w. SSR](https://github.com/MarkPieszak/aspnetcore-angular2-universal)
+* [angular/angular-cli - SSR](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
+* [SSR in Angular 2 with Angular Universal](https://scotch.io/tutorials/server-side-rendering-in-angular-2-with-angular-universal)
+* [angular/universal-starter](https://github.com/angular/universal-starter)
+* [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
+* [stenciljs server-side-rendering](https://stenciljs.com/docs/server-side-rendering)
+

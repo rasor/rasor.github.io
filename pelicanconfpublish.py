@@ -79,15 +79,18 @@ AUTHOR_FEED_RSS = None
 #GOOGLE_ANALYTICS = ""
 
 # Blogroll
-#LINKS = (('Pelican', 'http://getpelican.com/'),
+LINKS = (('StackOverflow', 'https://stackoverflow.com/users/750989/rasor'),
+#         ('Pelican', 'http://getpelican.com/'),
 #         ('Python.org', 'http://python.org/'),
-#         ('Jinja2', 'http://jinja.pocoo.org/'),)
+#         ('Jinja2', 'http://jinja.pocoo.org/'),
+)
 
 # Social widget
 SOCIAL = (('twitter', 'https://twitter.com/rasor'),
+          ('linkedin', 'https://www.linkedin.com/in/rasor'),
+          ('wordpress', 'https://rasor.wordpress.com'),
           ('github', 'https://github.com/rasor'),
-          ('wordpress', 'https://rasor.wordpress.com/'),
-          ('linkedin', 'https://www.linkedin.com/in/rasor/'),
+          ('bitbucket', 'https://bitbucket.org/rasor'),
           ('rss', '/feeds/all.atom.xml'),)
 
 DEFAULT_PAGINATION = 30

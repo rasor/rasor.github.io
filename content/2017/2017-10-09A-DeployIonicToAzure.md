@@ -1,6 +1,6 @@
 Title: Deploying Ionic to Azure
 Date: 2017-10-10 21:00
-Modified: 2017-10-12 22:00
+Modified: 2017-10-13 22:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa
 
@@ -36,6 +36,8 @@ Currently the build server (VSTS) is running
 `user-agent = "npm/3.10.10 node/v6.10.0 win32 x64"`.
 
 So you should also build your app with `node v6` or perhaps a bit lower. It is a bit like in .NET you would also want to build with a framework e.g. `.NET 4.5.2` when the build server has `.NET 4.7` - at least you don't get too big surprises when your code is build on the build server.
+
+It should be possible to specify another node version with `WEBSITE_NODE_DEFAULT_VERSION`, though I haven't tried. Look for more info [here](http://blog.stevensanderson.com/2016/10/04/angular2-template-for-visual-studio/).
 
 ## Your local repo
 
