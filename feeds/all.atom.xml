@@ -1,5 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-13T22:00:00+02:00</updated><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-13T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-14T23:00:00+02:00</updated><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-14T23:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
+It is quite a bit - read all about it &lt;a href="https://opensource.guide/how-to-contribute/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This blog post assumes you contribute by doing changes to a git repo.&lt;br&gt;
+So In short you need to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose a project you will do changes into&lt;/li&gt;
+&lt;li&gt;Follow below …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
+It is quite a bit - read all about it &lt;a href="https://opensource.guide/how-to-contribute/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This blog post assumes you contribute by doing changes to a git repo.&lt;br&gt;
+So In short you need to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Choose a project you will do changes into&lt;/li&gt;
+&lt;li&gt;Follow below Git Workflow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Abbreviations&lt;/h2&gt;
+&lt;p&gt;Before start you need to get a little list of vocabulary&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Abbr&lt;/th&gt;
+&lt;th&gt;Full&lt;/th&gt;
+&lt;th&gt;Meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;PR&lt;/td&gt;
+&lt;td&gt;Pull Request&lt;/td&gt;
+&lt;td&gt;Your code submitted for review before merge into Upstream&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Repo&lt;/td&gt;
+&lt;td&gt;Repository&lt;/td&gt;
+&lt;td&gt;A project folder under source control having a \.git\ subfolder&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WIP&lt;/td&gt;
+&lt;td&gt;Work In Progress&lt;/td&gt;
+&lt;td&gt;Comment in PR for unfinished code - indication feedback wanted before going too far on a wrong tangent&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;#&lt;/td&gt;
+&lt;td&gt;“Closes #37.”&lt;/td&gt;
+&lt;td&gt;Comment with reference to an issue&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Git Contributer&lt;/td&gt;
+&lt;td&gt;Person, who sends a Pull Request&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Git Maintainer&lt;/td&gt;
+&lt;td&gt;Person, who merges a Pull Request&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Fork and Pull model&lt;/td&gt;
+&lt;td&gt;One out of two &lt;a href="https://help.github.com/articles/about-collaborative-development-models/"&gt;development models&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Shared Repository model&lt;/td&gt;
+&lt;td&gt;One out of two &lt;a href="https://help.github.com/articles/about-collaborative-development-models/"&gt;development models&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Upstream&lt;/td&gt;
+&lt;td&gt;A repo where you want to merge PR's into&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Next thing you need to know is that the &lt;code&gt;master&lt;/code&gt; branch is always production - meaning - you do your work in a feature branch and you ask the owner of the repo if he wants your changes. Often a discussion will follow and possible more changes you will have to do - including deploy to test - before it perhaps is accepted by being merged into the master.
+In more details &lt;a href="https://guides.github.com/introduction/flow/"&gt;here is a visual flow&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since you are just starting you are probably not member of a team, that has access to a shared repo.&lt;br&gt;
+Thus you need to contribute with the &lt;a href="https://help.github.com/articles/about-collaborative-development-models/"&gt;Fork and Pull model&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fork and Pull model" src="img/2017-10-14-Fork-and-Pull.png" title="Fork and Pull model"&gt;&lt;/p&gt;
+&lt;p&gt;I use two phases&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A. Prepare&lt;/li&gt;
+&lt;li&gt;B. Do the work, PR and cleanup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In that way you can do A. Prepare only once and repeat phase B.&lt;/p&gt;
+&lt;h3&gt;A. Prepare&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 1. Create a Fork of the repo you will contribute to&lt;/span&gt;
+&lt;span class="c1"&gt;# 2. Download your Fork (origin)&lt;/span&gt;
+git clone https://github.com/your_userid/ORIGINAL_REPOSITORY.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; ORIGINAL_REPOSITORY
+&lt;span class="c1"&gt;# 3. Add Upstream as a remote&lt;/span&gt;
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote -v
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;B. Do the work, PR and cleanup&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 4. Download latest changes from upstream&lt;/span&gt;
+git pull upstream master &lt;span class="c1"&gt;# or rebase&lt;/span&gt;
+&lt;span class="c1"&gt;# handle possible conflicts: https://help.github.com/articles/addressing-merge-conflicts/&lt;/span&gt;
+git status
+git commit -a -m &lt;span class="s2"&gt;&amp;quot;upstream changes added&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# 5. Create a feature branch&lt;/span&gt;
+git checkout -b mynewfeaturebranch
+&lt;span class="c1"&gt;# 6. Do some work and save&lt;/span&gt;
+git commit -a -m &lt;span class="s2"&gt;&amp;quot;made a nice feature&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# 7. Push branch to fork&lt;/span&gt;
+git push -u origin mynewfeaturebranch
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/"&gt;8a. Pull Request to upstream - from Fork&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;You are then rewarded with this image for the first PR, if it was GitHub you contributed to&lt;br&gt;
+&lt;img alt="The first Pull Request" src="img/2017-10-14-profile-first-pr.png" title="The first Pull Request"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;8b. Listen for feedback&lt;br&gt;
+You can see your PR's &lt;a href="https://github.com/pulls"&gt;here&lt;/a&gt;. Maintainers will make comments in there.&lt;/li&gt;
+&lt;li&gt;8c. Maintainer merges feature branch to upstream&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Remember - Always be polite. Maintainers are in their good right to not care about your contribution.&lt;br&gt;
+If you don't like that you can just keep working on your perfect fork.&lt;/p&gt;
+&lt;p&gt;But if you only have your fork for PR's, then it is time to do clean-up, so you can do another cycle.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 9. Delete mynewfeaturebranch&lt;/span&gt;
+git checkout mynewfeaturebranch
+git branch -d
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Find a project&lt;/h3&gt;
+&lt;p&gt;Knowing how to create a PR, you can now go out and look for a project to contribute to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Read CONTRIBUTING, CODE_OF_CONDUCT and/or README&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/MunGell/awesome-for-beginners"&gt;https://github.com/MunGell/awesome-for-beginners&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/showcases/great-for-new-contributors"&gt;https://github.com/showcases/great-for-new-contributors&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Next steps&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://opensource.guide/"&gt;https://opensource.guide/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;@osteele's GIT commands&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="@osteele's GIT commands" src="http://images.osteele.com/2008/git-transport.png" title="@osteele's GIT commands"&gt;&lt;/p&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.osteele.com/2008/05/my-git-workflow/"&gt;@osteele's GIT Workflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project"&gt;https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39"&gt;https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.firsttimersonly.com/"&gt;http://www.firsttimersonly.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/github-flow/"&gt;https://help.github.com/articles/github-flow/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/working-with-forks/"&gt;https://help.github.com/articles/working-with-forks/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/categories/collaborating-with-issues-and-pull-requests/"&gt;Content - When Asking for Pull Requests&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/"&gt;Merge local from upstream - when using Fork and pull&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/"&gt;Allow maintainers to make changes to your branch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-13T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
 article &lt;a href="https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/"&gt;Deploying an Angular CLI project using VSTS Build and Release&lt;/a&gt;.&lt;br&gt;
 This blog deploys a Ionic 3 / Angular 4 app to Azure.&lt;/p&gt;
 &lt;h1&gt;The final workflow&lt;/h1&gt;
@@ -675,11 +826,11 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;li&gt;Start VisualStudio&lt;/li&gt;
 &lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Angular CLI Project in Visual Studio 2017" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In the project options choises select both if you are in doubt&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Angular CLI Project options" src="img/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails&lt;ul&gt;
 &lt;li&gt;Open a command prompt and CD into the root of your Angular project&lt;/li&gt;
@@ -695,11 +846,11 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-F5Startup1.PNG" title="F5 startup 1"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="F5 startup 1" src="img/2017-09-24-F5Startup1.PNG" title="F5 startup 1"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In both cases Angular CLI will serve you app after buiding it with the Angular CLI on &lt;a href="http://localhost:4200/"&gt;http://localhost:4200/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="picture alt" src="img/2017-09-24-F5Startup2.PNG" title="F5 startup 2"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="F5 startup 2" src="img/2017-09-24-F5Startup2.PNG" title="F5 startup 2"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;This is very good news. Why? Because it does not matter what webserver or editor you are using.
 But the best of is that you use standard node.js deployment methods, so you can deploy your app anywhere. You can use standard npm or yarn managers without having to do a lot of strange Visual Studio configuration.&lt;/li&gt;

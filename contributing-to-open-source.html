@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="What is needed to contribute to Open Source hosted in Git? It is quite a bit - read all about it here. This blog post assumes you contribute by doing changes to a git repo. So In short you need to Choose a project you will do changes into Follow below …" />
+<meta name="keywords" content="#git">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Contributing to Open Source"/>
+<meta property="og:description" content="What is needed to contribute to Open Source hosted in Git? It is quite a bit - read all about it here. This blog post assumes you contribute by doing changes to a git repo. So In short you need to Choose a project you will do changes into Follow below …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/contributing-to-open-source.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-10-14 23:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#git"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Contributing to Open Source</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="contributing-to-open-source">Contributing to Open Source</h1>
+    <p>
+          Posted on oktober 14, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>What is needed to contribute to Open Source hosted in Git?<br>
+It is quite a bit - read all about it <a href="https://opensource.guide/how-to-contribute/">here</a>.</p>
+<p>This blog post assumes you contribute by doing changes to a git repo.<br>
+So In short you need to</p>
+<ul>
+<li>Choose a project you will do changes into</li>
+<li>Follow below Git Workflow</li>
+</ul>
+<h2>Abbreviations</h2>
+<p>Before start you need to get a little list of vocabulary</p>
+<table>
+<thead>
+<tr>
+<th>Abbr</th>
+<th>Full</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PR</td>
+<td>Pull Request</td>
+<td>Your code submitted for review before merge into Upstream</td>
+</tr>
+<tr>
+<td>Repo</td>
+<td>Repository</td>
+<td>A project folder under source control having a \.git\ subfolder</td>
+</tr>
+<tr>
+<td>WIP</td>
+<td>Work In Progress</td>
+<td>Comment in PR for unfinished code - indication feedback wanted before going too far on a wrong tangent</td>
+</tr>
+<tr>
+<td>#</td>
+<td>“Closes #37.”</td>
+<td>Comment with reference to an issue</td>
+</tr>
+<tr>
+<td></td>
+<td>Git Contributer</td>
+<td>Person, who sends a Pull Request</td>
+</tr>
+<tr>
+<td></td>
+<td>Git Maintainer</td>
+<td>Person, who merges a Pull Request</td>
+</tr>
+<tr>
+<td></td>
+<td>Fork and Pull model</td>
+<td>One out of two <a href="https://help.github.com/articles/about-collaborative-development-models/">development models</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Shared Repository model</td>
+<td>One out of two <a href="https://help.github.com/articles/about-collaborative-development-models/">development models</a></td>
+</tr>
+<tr>
+<td></td>
+<td>Upstream</td>
+<td>A repo where you want to merge PR's into</td>
+</tr>
+</tbody>
+</table>
+<p>Next thing you need to know is that the <code>master</code> branch is always production - meaning - you do your work in a feature branch and you ask the owner of the repo if he wants your changes. Often a discussion will follow and possible more changes you will have to do - including deploy to test - before it perhaps is accepted by being merged into the master.
+In more details <a href="https://guides.github.com/introduction/flow/">here is a visual flow</a>.</p>
+<p>Since you are just starting you are probably not member of a team, that has access to a shared repo.<br>
+Thus you need to contribute with the <a href="https://help.github.com/articles/about-collaborative-development-models/">Fork and Pull model</a></p>
+<p><img alt="Fork and Pull model" src="img/2017-10-14-Fork-and-Pull.png" title="Fork and Pull model"></p>
+<p>I use two phases</p>
+<ul>
+<li>A. Prepare</li>
+<li>B. Do the work, PR and cleanup</li>
+</ul>
+<p>In that way you can do A. Prepare only once and repeat phase B.</p>
+<h3>A. Prepare</h3>
+<div class="highlight"><pre><span></span><span class="c1"># 1. Create a Fork of the repo you will contribute to</span>
+<span class="c1"># 2. Download your Fork (origin)</span>
+git clone https://github.com/your_userid/ORIGINAL_REPOSITORY.git
+<span class="nb">cd</span> ORIGINAL_REPOSITORY
+<span class="c1"># 3. Add Upstream as a remote</span>
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote -v
+</pre></div>
+
+
+<h3>B. Do the work, PR and cleanup</h3>
+<div class="highlight"><pre><span></span><span class="c1"># 4. Download latest changes from upstream</span>
+git pull upstream master <span class="c1"># or rebase</span>
+<span class="c1"># handle possible conflicts: https://help.github.com/articles/addressing-merge-conflicts/</span>
+git status
+git commit -a -m <span class="s2">&quot;upstream changes added&quot;</span>
+<span class="c1"># 5. Create a feature branch</span>
+git checkout -b mynewfeaturebranch
+<span class="c1"># 6. Do some work and save</span>
+git commit -a -m <span class="s2">&quot;made a nice feature&quot;</span>
+<span class="c1"># 7. Push branch to fork</span>
+git push -u origin mynewfeaturebranch
+</pre></div>
+
+
+<p><a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/">8a. Pull Request to upstream - from Fork</a>  </p>
+<p>You are then rewarded with this image for the first PR, if it was GitHub you contributed to<br>
+<img alt="The first Pull Request" src="img/2017-10-14-profile-first-pr.png" title="The first Pull Request"></p>
+<ul>
+<li>8b. Listen for feedback<br>
+You can see your PR's <a href="https://github.com/pulls">here</a>. Maintainers will make comments in there.</li>
+<li>8c. Maintainer merges feature branch to upstream</li>
+</ul>
+<p>Remember - Always be polite. Maintainers are in their good right to not care about your contribution.<br>
+If you don't like that you can just keep working on your perfect fork.</p>
+<p>But if you only have your fork for PR's, then it is time to do clean-up, so you can do another cycle.</p>
+<div class="highlight"><pre><span></span><span class="c1"># 9. Delete mynewfeaturebranch</span>
+git checkout mynewfeaturebranch
+git branch -d
+</pre></div>
+
+
+<h3>Find a project</h3>
+<p>Knowing how to create a PR, you can now go out and look for a project to contribute to</p>
+<ul>
+<li>Read CONTRIBUTING, CODE_OF_CONDUCT and/or README</li>
+<li><a href="https://github.com/MunGell/awesome-for-beginners">https://github.com/MunGell/awesome-for-beginners</a></li>
+<li><a href="https://github.com/showcases/great-for-new-contributors">https://github.com/showcases/great-for-new-contributors</a></li>
+</ul>
+<h3>Next steps</h3>
+<ul>
+<li><a href="https://opensource.guide/">https://opensource.guide/</a></li>
+</ul>
+<h2>@osteele's GIT commands</h2>
+<p><img alt="@osteele's GIT commands" src="http://images.osteele.com/2008/git-transport.png" title="@osteele's GIT commands"></p>
+<h2>Links</h2>
+<ul>
+<li><a href="http://blog.osteele.com/2008/05/my-git-workflow/">@osteele's GIT Workflow</a></li>
+<li><a href="https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project">https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project</a></li>
+<li><a href="https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39">https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39</a></li>
+<li><a href="http://www.firsttimersonly.com/">http://www.firsttimersonly.com/</a></li>
+<li><a href="https://help.github.com/articles/github-flow/">https://help.github.com/articles/github-flow/</a></li>
+<li><a href="https://help.github.com/articles/working-with-forks/">https://help.github.com/articles/working-with-forks/</a></li>
+<li><a href="https://help.github.com/categories/collaborating-with-issues-and-pull-requests/">Content - When Asking for Pull Requests</a></li>
+<li><a href="https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/">Merge local from upstream - when using Fork and pull</a></li>
+<li><a href="https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/">Allow maintainers to make changes to your branch</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
