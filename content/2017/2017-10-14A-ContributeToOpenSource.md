@@ -98,7 +98,8 @@ Knowing how to create a PR, you can now go out and look for a project to contrib
 * Read CONTRIBUTING, CODE_OF_CONDUCT and/or README
 * <https://github.com/MunGell/awesome-for-beginners>
 * <https://github.com/showcases/great-for-new-contributors>
-* [Hacktoberfest 2017 - DigitalOcean](https://hacktoberfest.digitalocean.com/?utm_source=local&utm_medium=email&utm_campaign=Hacktoberfest2017#projects)
+* [Hacktoberfest - DigitalOcean](https://hacktoberfest.digitalocean.com/?utm_source=local&utm_medium=email&utm_campaign=Hacktoberfest2017#projects)
+* [#Hacktoberfest](https://github.com/search?q=state%3Aopen+label%3Ahacktoberfest+is%3Aissue&type=Issues&utf8=%E2%9C%93&utm_source=DigitalOcean_Hacktoberfest2017)
 
 ### Next steps
 
