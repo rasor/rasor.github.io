@@ -111,6 +111,7 @@ Knowing how to create a PR, you can now go out and look for a project to contrib
 ## Links
 
 * [@osteele's GIT Workflow](http://blog.osteele.com/2008/05/my-git-workflow/)
+* [How To Rebase and Update a PR](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request)
 * <https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project>
 * <https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39>
 * <http://www.firsttimersonly.com/>
