@@ -1,5 +1,6 @@
 Title: Contributing to Open Source
 Date: 2017-10-14 23:00
+Modified: 2017-10-15 21:00
 Category: Develop
 Tags: #git
 
@@ -97,6 +98,7 @@ Knowing how to create a PR, you can now go out and look for a project to contrib
 * Read CONTRIBUTING, CODE_OF_CONDUCT and/or README
 * <https://github.com/MunGell/awesome-for-beginners>
 * <https://github.com/showcases/great-for-new-contributors>
+* [Hacktoberfest 2017 - DigitalOcean](https://hacktoberfest.digitalocean.com/?utm_source=local&utm_medium=email&utm_campaign=Hacktoberfest2017#projects)
 
 ### Next steps
 
