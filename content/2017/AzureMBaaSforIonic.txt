@@ -1,0 +1,51 @@
+
+## Azure Guides
+
+* [All Azure Guides](https://azure.microsoft.com/en-us/documentation/learning-paths/)
+
+## Guides - Azure Connect Ionic to MBaaS
+
+* [Azure MBaaS Overview](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/)
+* [Protect MBaaS with authentication](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-get-started-users)
+* [Configure MBaaS with Azure AD authentication](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication)
+* [Add login to Ionic](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-how-to-use-client-library)
+
+## Guides - WebAPI Core
+
+* [Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend)
+* [Sample for above - ToDoApi Mobile](https://github.com/aspnet/Docs/tree/master/aspnetcore/mobile/native-mobile-backend/sample/ToDoApi)
+* [Guide - Web API Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api)
+* [Sample for above - ToDoApi](https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials/first-web-api/sample/TodoApi)
+* [Using Swashbuckle.AspNetCore](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+* [NuGet Swashbuckle.AspNetCore 1.0.0](https://www.nuget.org/packages/Swashbuckle.AspNetCore/)
+
+## Guides - Azure WebApps
+
+* [Azure Web Apps Overview](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-webapps/)
+* [Azure App Service, Virtual Machines, Service Fabric, and Cloud Services comparison](https://docs.microsoft.com/en-us/azure/app-service/choose-web-site-cloud-service-vm)
+
+## Guides - Azure API Proxy
+
+* [APIs Overview](https://azure.microsoft.com/en-us/documentation/learning-paths/api-management/)
+* [Import/Export an API as Swagger](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-import-api)
+* [Public and Private API with Application Gateway](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway)
+* [Public or Private API with virtual networks](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet)
+* [Configure Private API (internal virtual networks)](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-internal-vnet)
+* [Certificate authentication to backend](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-mutual-certificates)
+
+## Connect MBaaS REST to WCF .NET FW
+
+* [Guide - WCF to Swaggr with Swagger4WCF](https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for)
+* [Swagger Editor](http://editor.swagger.io/#/)
+* [NuGet Swagger4WCF 1.0.0](https://www.nuget.org/packages/Swagger4WCF/)
+* [NuGet SwaggerWcf 0.1.28](https://www.nuget.org/packages/SwaggerWcf)
+* [WebAPI to Swagger - Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)
+* [NuGet Swashbuckle 5.6.0](https://www.nuget.org/packages/Swashbuckle)
+* [Using Swashbuckle](http://blog.learningtree.com/documenting-net-web-services-using-openapi-formally-swagger-and-swashbuckle/)
+* [Rewrite Url with Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-add-operations#a-nameadd-operation-aadd-an-operation)
+
+## Azure setup
+
+* [Azure App Services - Including MBaaS](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Web%2Fsites)
+
+The End
