@@ -1,4 +1,5 @@
 
+* Official HowTo [Angular Universal Integration](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 * [Angular Universal and Firebase Hosting (Server-side Rendering with JavaScript Frameworks)](https://www.youtube.com/watch?v=gxCu5TEmxXE)
 * [Angular 2 Universal - Server Side Rendering Part 1](https://www.youtube.com/watch?v=H8mtIqrvvnM)
 * [Angular 2 Universal - Server Side Rendering Part 2](https://www.youtube.com/watch?v=2WSYMUIbKhA)
