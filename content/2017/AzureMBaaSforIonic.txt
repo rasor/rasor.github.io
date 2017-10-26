@@ -19,6 +19,18 @@
 * [Using Swashbuckle.AspNetCore](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
 * [NuGet Swashbuckle.AspNetCore 1.0.0](https://www.nuget.org/packages/Swashbuckle.AspNetCore/)
 
+## Guides - Node.js
+
+* [Node.js REST with Mongoose](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd)
+* [Feathers REST and Sockets](https://docs.feathersjs.com/guides/step-by-step/readme.html)
+* [Generate with Feathers](https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html)
+* [feathers-cli](https://www.npmjs.com/package/feathers-cli)
+* [feathersjs/client](https://github.com/feathersjs/client)
+* [feathers API](https://docs.feathersjs.com/api/readme.html)
+* [OAuth with passport](https://github.com/jaredhanson/passport)
+* [Restify](http://restify.com/docs/home/)
+* [restify-example](https://github.com/VividcodeIO/restify-example)
+
 ## Guides - Azure WebApps
 
 * [Azure Web Apps Overview](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-webapps/)
@@ -35,14 +47,36 @@
 
 ## Connect MBaaS REST to WCF .NET FW
 
-* [Guide - WCF to Swaggr with Swagger4WCF](https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for)
-* [Swagger Editor](http://editor.swagger.io/#/)
+* [Guide - WCF to Swagger with Swagger4WCF](https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for)
 * [NuGet Swagger4WCF 1.0.0](https://www.nuget.org/packages/Swagger4WCF/)
 * [NuGet SwaggerWcf 0.1.28](https://www.nuget.org/packages/SwaggerWcf)
 * [WebAPI to Swagger - Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)
 * [NuGet Swashbuckle 5.6.0](https://www.nuget.org/packages/Swashbuckle)
 * [Using Swashbuckle](http://blog.learningtree.com/documenting-net-web-services-using-openapi-formally-swagger-and-swashbuckle/)
 * [Rewrite Url with Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-add-operations#a-nameadd-operation-aadd-an-operation)
+
+## Test/Design Swagger API
+* [Writing REST API](https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/)
+* [SwaggerHub Article](http://idratherbewriting.com/2017/10/05/swaggerhub-collaborative-platform-for-swagger-openapi-projects/)
+* [SwaggerHub Mocks](http://idratherbewriting.com/learnapidoc/pubapis_swaggerhub_smartbear.html#mocking-servers)
+* [SwaggerHub - Design API incl CodeGen](https://swaggerhub.com/)
+* [@datafire/swaggerhub](https://www.npmjs.com/package/@datafire/swaggerhub/)
+* [Swagger UI Article](http://idratherbewriting.com/learnapidoc/pubapis_swagger.html)
+* [Swagger UI Web](https://swagger.io/swagger-ui/)
+* [swagger-ui GitHub](https://github.com/swagger-api/swagger-ui)
+* [Using Swagger Editor](https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for)
+* [Swagger Editor](http://editor.swagger.io/#/)
+
+## API CodeGen
+* [swagger-node](https://github.com/swagger-api/swagger-node)
+* [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
+* [RESTUnited - $](https://restunited.com/)
+
+## SDK's - API Clients
+* [Hacker News - Using swagger-js](http://restunited.com/docs/6ltzbse3t0te)
+* [swagger-js](https://github.com/swagger-api/swagger-js)
+* [SoapUI 5.2.1 + SwaggerHub](https://www.soapui.org/news/soapui-5-2-1-released.html)
+* [SoapUI-Plugins](https://github.com/SmartBear/SoapUI-Plugins)
 
 ## Azure setup
 
