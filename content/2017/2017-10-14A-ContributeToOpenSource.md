@@ -1,6 +1,6 @@
 Title: Contributing to Open Source
 Date: 2017-10-14 23:00
-Modified: 2017-10-15 21:00
+Modified: 2017-10-27 21:00
 Category: Develop
 Tags: #git
 
@@ -104,6 +104,7 @@ Knowing how to create a PR, you can now go out and look for a project to contrib
 ### Next steps
 
 * <https://opensource.guide/>
+* See bottom of [Patchwork](http://jlord.us/patchwork/)
 
 ## @osteele's GIT commands
 
@@ -111,7 +112,6 @@ Knowing how to create a PR, you can now go out and look for a project to contrib
 
 ## Links
 
-* [@osteele's GIT Workflow](http://blog.osteele.com/2008/05/my-git-workflow/)
 * [How To Rebase and Update a PR](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request)
 * <https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project>
 * <https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39>
@@ -121,5 +121,17 @@ Knowing how to create a PR, you can now go out and look for a project to contrib
 * [Content - When Asking for Pull Requests](https://help.github.com/categories/collaborating-with-issues-and-pull-requests/)
 * [Merge local from upstream - when using Fork and pull](https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/)
 * [Allow maintainers to make changes to your branch](https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/)
+
+## Get started links
+
+* [Git-it - a git exercise](http://* [Git-it (Desktop App)](https://github.com/jlord/git-it-electron)
+)
+* [@osteele's GIT Workflow](http://blog.osteele.com/2008/05/my-git-workflow/)
+* [Git - by slides by @acanimal](http://slides.com/acanimal/git#/)
+* [Git Cheatsheet](http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;)
+* [the GitHub Flow](https://guides.github.com/introduction/flow/)
+* [GitHub hello-world](https://guides.github.com/activities/hello-world/)
+* [Git and VS2017](https://docs.microsoft.com/en-us/vsts/git/gitquickstart?tabs=visual-studio)
+* [A Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 
 The End
