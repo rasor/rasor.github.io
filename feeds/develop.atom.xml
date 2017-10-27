@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-15T21:00:00+02:00</updated><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-15T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-27T21:00:00+02:00</updated><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
 It is quite a bit - read all about it &lt;a href="https://opensource.guide/how-to-contribute/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This blog post assumes you contribute by doing changes to a git repo.&lt;br&gt;
 So In short you need to&lt;/p&gt;
@@ -137,12 +137,12 @@ git branch -d
 &lt;h3&gt;Next steps&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://opensource.guide/"&gt;https://opensource.guide/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;See bottom of &lt;a href="http://jlord.us/patchwork/"&gt;Patchwork&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;@osteele's GIT commands&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="@osteele's GIT commands" src="http://images.osteele.com/2008/git-transport.png" title="@osteele's GIT commands"&gt;&lt;/p&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://blog.osteele.com/2008/05/my-git-workflow/"&gt;@osteele's GIT Workflow&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request"&gt;How To Rebase and Update a PR&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project"&gt;https://opensource.guide/how-to-contribute/#orienting-yourself-to-a-new-project&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39"&gt;https://medium.freecodecamp.org/a-beginners-very-bumpy-journey-through-the-world-of-open-source-4d108d540b39&lt;/a&gt;&lt;/li&gt;
@@ -152,6 +152,17 @@ git branch -d
 &lt;li&gt;&lt;a href="https://help.github.com/categories/collaborating-with-issues-and-pull-requests/"&gt;Content - When Asking for Pull Requests&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.github.com/articles/merging-an-upstream-repository-into-your-fork/"&gt;Merge local from upstream - when using Fork and pull&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://help.github.com/articles/allowing-changes-to-a-pull-request-branch-created-from-a-fork/"&gt;Allow maintainers to make changes to your branch&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Get started links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://* [Git-it (Desktop App)](https://github.com/jlord/git-it-electron)"&gt;Git-it - a git exercise&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.osteele.com/2008/05/my-git-workflow/"&gt;@osteele's GIT Workflow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://slides.com/acanimal/git#/"&gt;Git - by slides by @acanimal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://ndpsoftware.com/git-cheatsheet.html#loc=remote_repo;"&gt;Git Cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://guides.github.com/introduction/flow/"&gt;the GitHub Flow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://guides.github.com/activities/hello-world/"&gt;GitHub hello-world&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/vsts/git/gitquickstart?tabs=visual-studio"&gt;Git and VS2017&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;A Git branching model&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
 &lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
