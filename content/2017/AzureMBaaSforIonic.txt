@@ -10,6 +10,10 @@
 * [Configure MBaaS with Azure AD authentication](https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication)
 * [Add login to Ionic](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-how-to-use-client-library)
 
+## Guides - Azure Rest
+
+* [Authentication and authorization in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)
+
 ## Guides - WebAPI Core
 
 * [Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend)
@@ -22,22 +26,35 @@
 ## Guides - Node.js
 
 * [Node.js REST with Mongoose](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd)
+* [Guide - mean4plus](https://coursetro.com/posts/code/84/Setting-up-an-Angular-4-MEAN-Stack-(Tutorial))
+* [Code -mean4plus](https://github.com/designcourse/mean4plus)
 * [Feathers REST and Sockets](https://docs.feathersjs.com/guides/step-by-step/readme.html)
-* [Generate with Feathers](https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html)
 * [feathers-cli](https://www.npmjs.com/package/feathers-cli)
+* [Generate with Feathers](https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html)
+* [Generate Auth with Feathers](https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html)
+* [Add authentication · FeatherJS](https://docs.feathersjs.com/guides/step-by-step/generators/gen-authentication.html)
 * [feathersjs/client](https://github.com/feathersjs/client)
 * [feathers API](https://docs.feathersjs.com/api/readme.html)
+* [feathers-swagger](https://www.npmjs.com/package/feathers-swagger)
 * [OAuth with passport](https://github.com/jaredhanson/passport)
 * [Restify](http://restify.com/docs/home/)
 * [restify-example](https://github.com/VividcodeIO/restify-example)
+* [Azure-mobile-apps w. auth](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/todo/tables/TodoItem.js)
+* [SDK for Mobile Apps](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk#howto-tables-getidentity)
+* [azure-mobile-apps having build in Swagger docs](https://www.npmjs.com/package/azure-mobile-apps)
+* [Azure AD sign-in and sign-out using Node.js](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-openidconnect-nodejs)
+* [passport-azure-ad](https://github.com/AzureAD/passport-azure-ad)
+* [azure-activedirectory-library-for-nodejs](https://github.com/AzureAD/azure-activedirectory-library-for-nodejs)
 
 ## Guides - Azure WebApps
 
 * [Azure Web Apps Overview](https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-webapps/)
 * [Azure App Service, Virtual Machines, Service Fabric, and Cloud Services comparison](https://docs.microsoft.com/en-us/azure/app-service/choose-web-site-cloud-service-vm)
 
-## Guides - Azure API Proxy
+## Guides - Azure GWs
 
+* [Integrate an app with an Azure Virtual Network](https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet)
+* [App Service Hybrid Connections](https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections)
 * [APIs Overview](https://azure.microsoft.com/en-us/documentation/learning-paths/api-management/)
 * [Import/Export an API as Swagger](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-import-api)
 * [Public and Private API with Application Gateway](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway)
@@ -60,6 +77,7 @@
 * [SwaggerHub Article](http://idratherbewriting.com/2017/10/05/swaggerhub-collaborative-platform-for-swagger-openapi-projects/)
 * [SwaggerHub Mocks](http://idratherbewriting.com/learnapidoc/pubapis_swaggerhub_smartbear.html#mocking-servers)
 * [SwaggerHub - Design API incl CodeGen](https://swaggerhub.com/)
+* [Stoplight](https://app.stoplight.io/)
 * [@datafire/swaggerhub](https://www.npmjs.com/package/@datafire/swaggerhub/)
 * [Swagger UI Article](http://idratherbewriting.com/learnapidoc/pubapis_swagger.html)
 * [Swagger UI Web](https://swagger.io/swagger-ui/)
@@ -68,8 +86,11 @@
 * [Swagger Editor](http://editor.swagger.io/#/)
 
 ## API CodeGen
-* [swagger-node](https://github.com/swagger-api/swagger-node)
-* [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
+* API First - [swagger-node](https://github.com/swagger-api/swagger-node)
+* API First - [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
+* API First - [swaggerize-express](https://www.npmjs.com/package/swaggerize-express)
+* CodeGen for For Express, Hapi or Restify [generator-swaggerize](https://github.com/krakenjs/generator-swaggerize)
+* Guide - [swaggerize-express in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest-api)
 * [RESTUnited - $](https://restunited.com/)
 
 ## SDK's - API Clients
@@ -77,6 +98,10 @@
 * [swagger-js](https://github.com/swagger-api/swagger-js)
 * [SoapUI 5.2.1 + SwaggerHub](https://www.soapui.org/news/soapui-5-2-1-released.html)
 * [SoapUI-Plugins](https://github.com/SmartBear/SoapUI-Plugins)
+
+## Building Clients
+
+* [Angular consuming FeathersJS service](https://berndsgn.ch/observables-with-angular-and-feathersjs/)
 
 ## Azure setup
 

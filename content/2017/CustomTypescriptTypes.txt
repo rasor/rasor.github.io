@@ -4,6 +4,7 @@ Where
 * [Allow module definitions to be declared as global vars](https://github.com/Microsoft/TypeScript/issues/3180#issuecomment-102523512)
 * [tsconfig.json](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
 * [leaflet-draw/tsconfig.json](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/leaflet-draw/tsconfig.json)
+* [In package typings example in azure-mobile-apps-node](https://github.com/Azure/azure-mobile-apps-node/blob/master/typings/azure-mobile-apps/azure-mobile-apps.d.ts)
 
 HowTo write
 
