@@ -43,7 +43,7 @@ If no errors then we can continue.
 
 I have forked [dreamhouseapp/dreamhouse-rest-services](https://github.com/dreamhouseapp/dreamhouse-rest-services) by [Christophe Coenraets (@ccoenraets)](https://twitter.com/ccoenraets) to [rasor/dreamhouse-rest-services](https://github.com/rasor/dreamhouse-rest-services).  
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.  
-You can fork mine, since it is modified a bit with web.config, making it runable in Azure.  
+You can fork [mine](https://github.com/rasor/dreamhouse-rest-services), since it is modified a bit with web.config, making it runable in Azure.  
 BTW - You can read about @ccoenraets's code here: [DreamHouse: Sample Application with Ionic 3 and Angular 4](http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/).
 
 ## Your local repo
