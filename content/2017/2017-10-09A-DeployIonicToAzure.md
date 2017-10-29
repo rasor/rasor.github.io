@@ -4,7 +4,12 @@ Modified: 2017-10-29 22:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa
 
-This blog is based on [@sethreidnz](https://twitter.com/sethreidnz)'s 
+This blog is part of a series.
+
+1. [Deploying Ionic to Azure]({filename}/2017/2017-10-09A-DeployIonicToAzure.md)
+2. [Deploying Express REST API to Azure]({filename}/2017/2017-10-29A-DeployExpressRestToAzure.md)
+
+The blog is based on [@sethreidnz](https://twitter.com/sethreidnz)'s 
 article [Deploying an Angular CLI project using VSTS Build and Release](https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/).  
 This blog deploys a Ionic 3 / Angular 4 app to Azure.
 
@@ -61,7 +66,7 @@ If no errors then we can continue.
 
 I have forked [dreamhouseapp/dreamhouse-mobile-ionic](https://github.com/dreamhouseapp/dreamhouse-mobile-ionic) by [Christophe Coenraets (@ccoenraets)](https://twitter.com/ccoenraets) to [rasor/dreamhouse-mobile-ionic](https://github.com/rasor/dreamhouse-mobile-ionic).  
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.  
-You can fork mine, since it is modified a bit, making it runable in Azure.  
+You can fork mine, since it is modified a bit with web.config, making it runable in Azure.  
 BTW - You can read about @ccoenraets's code here: [DreamHouse: Sample Application with Ionic 3 and Angular 4](http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/).
 
 ## Your local repo
@@ -133,7 +138,7 @@ Next up is to deploy the package to Azure.
 ## Setup WebApp in Azure
 
 * When you have created a free Azure account via [Microsoft Azure](https://azure.microsoft.com/en-in/free/) browse to [Azure Portal](https://portal.azure.com/)
-* The first thing you need is a place for all you stuff at Azure to live. That is called a `Resource Group`  
+* The first thing you need is a place for all your stuff at Azure to live. That is called a `Resource Group`  
 Click `Resource Groups` then `+ Add`  
 ![Add Resource Group](img/2017-10-09-Azure1.PNG "Add Resource Group")
 * Name - I have called mine `ResGroupNorthEurope`  
@@ -154,7 +159,7 @@ You're done in Azure. Next up is to release to Azure from VSTS.
 ## Release to Azure from VSTS
 
 * Go back to <https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build>
-* You can deploy to many environments and servivces. We just want to deploy to our App Service.  
+* You can deploy to many environments and services. We just want to deploy to our App Service.  
 First step is to select that target environment in a Release  
 Click tab `Releases` then `+` - `Create Release Definition` - Select `Azure App Service Deployment` and click Apply   
 ![Add Release Definition](img/2017-10-09-VSTSRelease1.PNG "Add Release Definition")
@@ -178,7 +183,7 @@ Accept default values and press Add.
 * Before we save the Release Definition head to `Pipeline` - and select the Lightning in the Environment  
 Notice you have a possibility to select persons to approve deployment. This can be tester that approves one environment before a build is rolled out for the next environment.  
 ![Approvers](img/2017-10-09-VSTSRelease7.PNG "Approvers")
-We don't want approvers - so go on and save.
+We don't want approvers - so go on and save as `dreamhouse-Release`.
 
 Have you noticed that these Release workflow correspond to the features in [Octopus Deploy](https://octopus.com/)? 
 
