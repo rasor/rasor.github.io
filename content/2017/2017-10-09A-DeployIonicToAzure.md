@@ -1,6 +1,6 @@
 Title: Deploying Ionic to Azure
 Date: 2017-10-10 21:00
-Modified: 2017-10-13 22:00
+Modified: 2017-10-29 22:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa
 
@@ -87,8 +87,14 @@ npm run build --prod --aot # can you build?
 * Choose an Empty template - meaning there are no build steps to start out with  
 ![Select Empty template](img/2017-10-09-VSTS3.PNG "Select Empty template")
 * Now you need to connect to GitHub. Select `Get sources` in left pane and select `Remote repo` in right pane. You need to authenticate towards GitHub - go through that process. In the image below I have already connected  
+Name: `yourgithubusername_dreamhouse-mobile-ionic`
+Repo: `https://github.com/yourgithubusername/dreamhouse-mobile-ionic`
+Set Clean to `true` - Set clean options to `Sources`  
 Notice - this is like when you did git clone locally
 ![Connect to GitHub](img/2017-10-09-VSTS4.PNG "Connect to GitHub")
+* Just above `Get Sources` there is `Process` - select it.  
+Name: dreamhouse-mobile-ionic-Build  
+Agent Queue: Hosted VS2017
 * So what did you do after git clone? `npm install`. In Phase 1 press `+` and select npm task.
 ![Select npm task](img/2017-10-09-VSTS5.PNG "Select npm task")
 * Configure npm task by pressing the dropdown list and select `install`  
@@ -102,8 +108,9 @@ You probably recognize `--aot` - [Ahead-of-Time](https://angular.io/guide/aot-co
 * So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure  
 Next task is a zip-task. Press `+` and select `Archive Files`  
 ![Select zip task](img/2017-10-09-VSTS8.PNG "Select zip task")
-* Root folder is the build code you want to deploy. It is located in the www folder - just as when you work locally  
-And the name of the zipped package should be `$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip`  
+* Root folder is the build code you want to deploy. It is located in the `www` folder - just as when you work locally  
+Unselect "Prefix root folder ..."  
+The name of the zipped package should be `$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip`  
 ![Configure zip](img/2017-10-09-VSTS9.PNG "Configure zip")
 * Final build step to do is to put the package in a drop folder  
 Next task is a publish task. Press `+` and select `Publish Build Artifacts`  
@@ -111,10 +118,15 @@ Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if y
 ![Select publish task](img/2017-10-09-VSTS10.PNG "Select publish task")
 * Path to publish is the zip file you created in last step  
 Artifact Name is the name of the drop folder. It must be called `drop`  
-And Type must be `Server` (opposed to File Share)  
+And Location must be `TFS` - that used to be called Type: `Server` (opposed to File Share)  
 ![Configure publish](img/2017-10-09-VSTS11.PNG "Configure publish")
+* Press `Save & queue`. In top of the screen you'll see `Build #<some-number> has been queued.`
+* Click on `#<some-number>`. Now you can see the progress of the build.  
+When the build has finished you'll see `Build Succeeded` and above that `dreamhouse-mobile-ionic-Build / Build <some-number> / Phase 1`  
+* Click on `Build <some-number>`. Now you get 5 tabs for that build: `Summary - Timeline - Artifacts - Code coverage* - Tests`  
+* Click on `Artifacts`. Now you see the dropfolder. Check it out and see if it contains what you expected.  
 
-Have you noticed that these Build Tasks correspond to the features in TeamCity? 
+Have you noticed that these Build Tasks correspond to the features in [TeamCity](https://www.jetbrains.com/teamcity/)? 
 
 Next up is to deploy the package to Azure.
 
@@ -168,7 +180,7 @@ Notice you have a possibility to select persons to approve deployment. This can 
 ![Approvers](img/2017-10-09-VSTSRelease7.PNG "Approvers")
 We don't want approvers - so go on and save.
 
-Have you noticed that these Release workflow correspond to the features in Octopus Deploy? 
+Have you noticed that these Release workflow correspond to the features in [Octopus Deploy](https://octopus.com/)? 
 
 ## Trig a build and a release to Azure
 

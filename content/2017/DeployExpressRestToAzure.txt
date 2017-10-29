@@ -1,0 +1,109 @@
+Title: Deploying Express REST API to Azure
+Date: 2017-10-29 21:00
+Category: DevOp
+Tags: #npm, #git, #express, #nodejs, #azure
+
+This blog is part of a series.
+
+1. [Deploying Ionic to Azure]({filename}/2017/2017-10-09A-DeployIonicToAzure.md)
+2. [Deploying Express REST API to Azure]({filename}/2017/2017-10-xxA-DeployExpressRestToAzure.md)
+3. Add Facebook Authentication to your Express REST API - Planned
+
+In this blog I will deploy an Express REST API to Azure Mobile Apps.
+
+The exercise is almost identical to Part 1 - Deploy Ionic to Azure, so in this blog I'll leave out the pictures.
+
+# Here is how to do
+
+## The Build server (VSTS)
+
+Currently the build server (VSTS) is running  
+`user-agent = "npm/3.10.10 node/v6.10.0 win32 x64"`.
+
+So you should also build your API with `node v6` or perhaps a bit lower. It is a bit like in .NET you would also want to build with a framework e.g. `.NET 4.5.2` when the build server has `.NET 4.7` - at least you don't get too big surprises when your code is build on the build server.
+
+It should be possible to specify another node version with `WEBSITE_NODE_DEFAULT_VERSION`, though I haven't tried. Look for more info [here](http://blog.stevensanderson.com/2016/10/04/angular2-template-for-visual-studio/).
+
+## Your local repo
+
+So before you start deploy you should verify that your code can build for prod on `node v6`.
+
+```bash
+# If you got nvm switch to v6
+nvm list
+nvm use 6.11.4
+# or just check that you have v6
+node -v
+# If you don't have v6 you might get surprises when you build in VSTS, but purhaps you won't.
+```
+
+If no errors then we can continue.
+
+## Your remote origin
+
+I have forked [dreamhouseapp/dreamhouse-rest-services](https://github.com/dreamhouseapp/dreamhouse-rest-services) by [Christophe Coenraets (@ccoenraets)](https://twitter.com/ccoenraets) to [rasor/dreamhouse-rest-services](https://github.com/rasor/dreamhouse-rest-services).  
+Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.  
+You can fork mine. It has a package.lock file, so you can be sure it will run.  
+BTW - You can read about @ccoenraets's code here: [DreamHouse: Sample Application with Ionic 3 and Angular 4](http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/).
+
+## Your local repo
+
+When you have forked a repo do:
+```bash
+git clone https://github.com/yourgithubusername/dreamhouse-rest-services
+cd dreamhouse-rest-services
+npm install # download node_modules
+start "" "http://localhost:5000/properties" #start browser - this work in windows
+node server # start webserver
+# refresh browser (F5) if it timed out before the server was started
+```
+
+## Build to drop folder in VSTS
+
+* When you have created a VSTS account via [Visual Studio VSTS](https://www.visualstudio.com/) browse to <https://yourvstsusername.visualstudio.com/_projects>
+* Since you already have a build project from part 1, you can reuse that project and just create yet a build definion on:
+<https://yourvstsusername.visualstudio.com/dreamhouse-mobile-ionic/_build?path=%5C&_a=allDefinitions>  
+or you can browse to there: Press `Build and Release` then  `All Definitions`. There you see your Build Definition for building your Ionic project.
+* press `+ New` to add a new Build Definition - more or less as you might be used to from TFS.  
+* Choose an Empty process - meaning there are no build steps to start out with  
+* Now you need to connect to GitHub. Select `Get sources` in left pane and select `Remote repo` in right pane. You need to authenticate towards GitHub - go through that process.  
+Name: `yourgithubusername_dreamhouse-rest-services`
+Repo: `https://github.com/yourgithubusername/dreamhouse-rest-services`
+Set Clean to `true`, so the source files from the Ionic build will be removed - Set clean options to `Sources`  
+Notice - this is like when you did git clone locally
+* Just above `Get Sources` there is `Process` - select it.  
+Name: dreamhouse-rest-services-Build  
+Agent Queue: Hosted VS2017
+* So what did you do after git clone? `npm install`. In Phase 1 press `+` and select npm task.
+![Select npm task](img/2017-10-09-VSTS5.PNG "Select npm task")
+* Configure npm task by pressing the dropdown list and select `install`  
+![Configure npm install](img/2017-10-09-VSTS6.PNG "Configure npm install")
+* After install you started the browser and did `node server`. But that was a development task - not a build task  
+* So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure  
+Next task is a zip-task. Press `+` and select `Archive Files`  
+![Select zip task](img/2017-10-09-VSTS8.PNG "Select zip task")
+* Root folder is the build code you want to deploy. It is located in the `.\` folder - just as when you work locally.  
+Unselect "Prefix root folder ..."  
+The name of the zipped package should be `$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip`  
+* Final build step to do is to put the package in a drop folder  
+Next task is a publish task. Press `+` and select `Publish Build Artifacts`  
+Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if you npm installed a nice utility, you could then do anything with it in a script which could be in your code e.g. `.\scripts\runkarmaandprotractortests.cmd
+![Select publish task](img/2017-10-09-VSTS10.PNG "Select publish task")
+* Path to publish is the zip file you created in last step  
+Artifact Name is the name of the drop folder. Call it `drop-rest`, so it can't be confused with the Ionic drop.  
+And location must be `TFS` (opposed to File Share)  
+* Press `Save & queue`. In top of the screen you'll see `Build #<some-number> has been queued.`
+* Click on `#<some-number>`. Now you can see the progress of the build.  
+When the build has finished you'll see `Build Succeeded` and above that `dreamhouse-rest-services-Build / Build <some-number> / Phase 1`  
+* Click on `Build <some-number>`. Now you get 5 tabs for that build: `Summary - Timeline - Artifacts - Code coverage* - Tests`  
+* Click on `Artifacts`. Now you see the dropfolder. Check it out and see if it contains what you expected.  
+
+Have you noticed that these Build Tasks correspond to the features in [TeamCity](https://www.jetbrains.com/teamcity/)? 
+
+Next up is to deploy the package to Azure.
+
+
+
+
+The End.
+
