@@ -35,7 +35,7 @@ node -v
 &lt;h2&gt;Your remote origin&lt;/h2&gt;
 &lt;p&gt;I have forked &lt;a href="https://github.com/dreamhouseapp/dreamhouse-rest-services"&gt;dreamhouseapp/dreamhouse-rest-services&lt;/a&gt; by &lt;a href="https://twitter.com/ccoenraets"&gt;Christophe Coenraets (@ccoenraets)&lt;/a&gt; to &lt;a href="https://github.com/rasor/dreamhouse-rest-services"&gt;rasor/dreamhouse-rest-services&lt;/a&gt;.&lt;br&gt;
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.&lt;br&gt;
-You can fork mine, since it is modified a bit with web.config, making it runable in Azure.&lt;br&gt;
+You can fork &lt;a href="https://github.com/rasor/dreamhouse-rest-services"&gt;mine&lt;/a&gt;, since it is modified a bit with web.config, making it runable in Azure.&lt;br&gt;
 BTW - You can read about @ccoenraets's code here: &lt;a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/"&gt;DreamHouse: Sample Application with Ionic 3 and Angular 4&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Your local repo&lt;/h2&gt;
 &lt;p&gt;When you have forked a repo do:&lt;/p&gt;
@@ -383,7 +383,7 @@ npm run build --prod --aot
 &lt;h2&gt;Your remote origin&lt;/h2&gt;
 &lt;p&gt;I have forked &lt;a href="https://github.com/dreamhouseapp/dreamhouse-mobile-ionic"&gt;dreamhouseapp/dreamhouse-mobile-ionic&lt;/a&gt; by &lt;a href="https://twitter.com/ccoenraets"&gt;Christophe Coenraets (@ccoenraets)&lt;/a&gt; to &lt;a href="https://github.com/rasor/dreamhouse-mobile-ionic"&gt;rasor/dreamhouse-mobile-ionic&lt;/a&gt;.&lt;br&gt;
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.&lt;br&gt;
-You can fork mine, since it is modified a bit with web.config, making it runable in Azure.&lt;br&gt;
+You can fork &lt;a href="https://github.com/rasor/dreamhouse-mobile-ionic"&gt;mine&lt;/a&gt;, since it is modified a bit with web.config, making it runable in Azure.&lt;br&gt;
 BTW - You can read about @ccoenraets's code here: &lt;a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/"&gt;DreamHouse: Sample Application with Ionic 3 and Angular 4&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;Your local repo&lt;/h2&gt;
 &lt;p&gt;If you forked my repo do:&lt;/p&gt;
