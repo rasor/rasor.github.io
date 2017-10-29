@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/deploying-ionic-to-azure.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-10 21:00:00+02:00"/>
-<meta property="article:modified_time" content="2017-10-13 22:00:00+02:00"/>
+<meta property="article:modified_time" content="2017-10-29 22:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#npm"/>
@@ -104,7 +104,7 @@
 
 
       </br>
-        Updated: oktober 13, 2017
+        Updated: oktober 29, 2017
     </p>
   </header>
 
@@ -176,8 +176,14 @@ npm run build --prod --aot <span class="c1"># can you build?</span>
 <li>Choose an Empty template - meaning there are no build steps to start out with<br>
 <img alt="Select Empty template" src="img/2017-10-09-VSTS3.PNG" title="Select Empty template"></li>
 <li>Now you need to connect to GitHub. Select <code>Get sources</code> in left pane and select <code>Remote repo</code> in right pane. You need to authenticate towards GitHub - go through that process. In the image below I have already connected<br>
+Name: <code>yourgithubusername_dreamhouse-mobile-ionic</code>
+Repo: <code>https://github.com/yourgithubusername/dreamhouse-mobile-ionic</code>
+Set Clean to <code>true</code> - Set clean options to <code>Sources</code><br>
 Notice - this is like when you did git clone locally
 <img alt="Connect to GitHub" src="img/2017-10-09-VSTS4.PNG" title="Connect to GitHub"></li>
+<li>Just above <code>Get Sources</code> there is <code>Process</code> - select it.<br>
+Name: dreamhouse-mobile-ionic-Build<br>
+Agent Queue: Hosted VS2017</li>
 <li>So what did you do after git clone? <code>npm install</code>. In Phase 1 press <code>+</code> and select npm task.
 <img alt="Select npm task" src="img/2017-10-09-VSTS5.PNG" title="Select npm task"></li>
 <li>Configure npm task by pressing the dropdown list and select <code>install</code><br>
@@ -191,8 +197,9 @@ You probably recognize <code>--aot</code> - <a href="https://angular.io/guide/ao
 <li>So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure<br>
 Next task is a zip-task. Press <code>+</code> and select <code>Archive Files</code><br>
 <img alt="Select zip task" src="img/2017-10-09-VSTS8.PNG" title="Select zip task"></li>
-<li>Root folder is the build code you want to deploy. It is located in the www folder - just as when you work locally<br>
-And the name of the zipped package should be <code>$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip</code><br>
+<li>Root folder is the build code you want to deploy. It is located in the <code>www</code> folder - just as when you work locally<br>
+Unselect "Prefix root folder ..."<br>
+The name of the zipped package should be <code>$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip</code><br>
 <img alt="Configure zip" src="img/2017-10-09-VSTS9.PNG" title="Configure zip"></li>
 <li>Final build step to do is to put the package in a drop folder<br>
 Next task is a publish task. Press <code>+</code> and select <code>Publish Build Artifacts</code><br>
@@ -200,10 +207,15 @@ Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if y
 <img alt="Select publish task" src="img/2017-10-09-VSTS10.PNG" title="Select publish task"></li>
 <li>Path to publish is the zip file you created in last step<br>
 Artifact Name is the name of the drop folder. It must be called <code>drop</code><br>
-And Type must be <code>Server</code> (opposed to File Share)<br>
+And Location must be <code>TFS</code> - that used to be called Type: <code>Server</code> (opposed to File Share)<br>
 <img alt="Configure publish" src="img/2017-10-09-VSTS11.PNG" title="Configure publish"></li>
+<li>Press <code>Save &amp; queue</code>. In top of the screen you'll see <code>Build #&lt;some-number&gt; has been queued.</code></li>
+<li>Click on <code>#&lt;some-number&gt;</code>. Now you can see the progress of the build.<br>
+When the build has finished you'll see <code>Build Succeeded</code> and above that <code>dreamhouse-mobile-ionic-Build / Build &lt;some-number&gt; / Phase 1</code>  </li>
+<li>Click on <code>Build &lt;some-number&gt;</code>. Now you get 5 tabs for that build: <code>Summary - Timeline - Artifacts - Code coverage* - Tests</code>  </li>
+<li>Click on <code>Artifacts</code>. Now you see the dropfolder. Check it out and see if it contains what you expected.  </li>
 </ul>
-<p>Have you noticed that these Build Tasks correspond to the features in TeamCity? </p>
+<p>Have you noticed that these Build Tasks correspond to the features in <a href="https://www.jetbrains.com/teamcity/">TeamCity</a>? </p>
 <p>Next up is to deploy the package to Azure.</p>
 <h2>Setup WebApp in Azure</h2>
 <ul>
@@ -254,7 +266,7 @@ Notice you have a possibility to select persons to approve deployment. This can 
 <img alt="Approvers" src="img/2017-10-09-VSTSRelease7.PNG" title="Approvers">
 We don't want approvers - so go on and save.</li>
 </ul>
-<p>Have you noticed that these Release workflow correspond to the features in Octopus Deploy? </p>
+<p>Have you noticed that these Release workflow correspond to the features in <a href="https://octopus.com/">Octopus Deploy</a>? </p>
 <h2>Trig a build and a release to Azure</h2>
 <p>Now we are ready for the big show - deploy to Azure</p>
 <ul>

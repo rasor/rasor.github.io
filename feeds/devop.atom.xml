@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-27T20:00:00+02:00</updated><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-13T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-29T22:00:00+01:00</updated><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-29T22:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is based on &lt;a href="https://twitter.com/sethreidnz"&gt;@sethreidnz&lt;/a&gt;'s 
 article &lt;a href="https://sethreid.co.nz/deploying-angular-cli-project-using-vsts-build-release/"&gt;Deploying an Angular CLI project using VSTS Build and Release&lt;/a&gt;.&lt;br&gt;
 This blog deploys a Ionic 3 / Angular 4 app to Azure.&lt;/p&gt;
 &lt;h1&gt;The final workflow&lt;/h1&gt;
@@ -71,8 +71,14 @@ npm run build --prod --aot &lt;span class="c1"&gt;# can you build?&lt;/span&gt;
 &lt;li&gt;Choose an Empty template - meaning there are no build steps to start out with&lt;br&gt;
 &lt;img alt="Select Empty template" src="img/2017-10-09-VSTS3.PNG" title="Select Empty template"&gt;&lt;/li&gt;
 &lt;li&gt;Now you need to connect to GitHub. Select &lt;code&gt;Get sources&lt;/code&gt; in left pane and select &lt;code&gt;Remote repo&lt;/code&gt; in right pane. You need to authenticate towards GitHub - go through that process. In the image below I have already connected&lt;br&gt;
+Name: &lt;code&gt;yourgithubusername_dreamhouse-mobile-ionic&lt;/code&gt;
+Repo: &lt;code&gt;https://github.com/yourgithubusername/dreamhouse-mobile-ionic&lt;/code&gt;
+Set Clean to &lt;code&gt;true&lt;/code&gt; - Set clean options to &lt;code&gt;Sources&lt;/code&gt;&lt;br&gt;
 Notice - this is like when you did git clone locally
 &lt;img alt="Connect to GitHub" src="img/2017-10-09-VSTS4.PNG" title="Connect to GitHub"&gt;&lt;/li&gt;
+&lt;li&gt;Just above &lt;code&gt;Get Sources&lt;/code&gt; there is &lt;code&gt;Process&lt;/code&gt; - select it.&lt;br&gt;
+Name: dreamhouse-mobile-ionic-Build&lt;br&gt;
+Agent Queue: Hosted VS2017&lt;/li&gt;
 &lt;li&gt;So what did you do after git clone? &lt;code&gt;npm install&lt;/code&gt;. In Phase 1 press &lt;code&gt;+&lt;/code&gt; and select npm task.
 &lt;img alt="Select npm task" src="img/2017-10-09-VSTS5.PNG" title="Select npm task"&gt;&lt;/li&gt;
 &lt;li&gt;Configure npm task by pressing the dropdown list and select &lt;code&gt;install&lt;/code&gt;&lt;br&gt;
@@ -86,8 +92,9 @@ You probably recognize &lt;code&gt;--aot&lt;/code&gt; - &lt;a href="https://angu
 &lt;li&gt;So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure&lt;br&gt;
 Next task is a zip-task. Press &lt;code&gt;+&lt;/code&gt; and select &lt;code&gt;Archive Files&lt;/code&gt;&lt;br&gt;
 &lt;img alt="Select zip task" src="img/2017-10-09-VSTS8.PNG" title="Select zip task"&gt;&lt;/li&gt;
-&lt;li&gt;Root folder is the build code you want to deploy. It is located in the www folder - just as when you work locally&lt;br&gt;
-And the name of the zipped package should be &lt;code&gt;$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip&lt;/code&gt;&lt;br&gt;
+&lt;li&gt;Root folder is the build code you want to deploy. It is located in the &lt;code&gt;www&lt;/code&gt; folder - just as when you work locally&lt;br&gt;
+Unselect "Prefix root folder ..."&lt;br&gt;
+The name of the zipped package should be &lt;code&gt;$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip&lt;/code&gt;&lt;br&gt;
 &lt;img alt="Configure zip" src="img/2017-10-09-VSTS9.PNG" title="Configure zip"&gt;&lt;/li&gt;
 &lt;li&gt;Final build step to do is to put the package in a drop folder&lt;br&gt;
 Next task is a publish task. Press &lt;code&gt;+&lt;/code&gt; and select &lt;code&gt;Publish Build Artifacts&lt;/code&gt;&lt;br&gt;
@@ -95,10 +102,15 @@ Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if y
 &lt;img alt="Select publish task" src="img/2017-10-09-VSTS10.PNG" title="Select publish task"&gt;&lt;/li&gt;
 &lt;li&gt;Path to publish is the zip file you created in last step&lt;br&gt;
 Artifact Name is the name of the drop folder. It must be called &lt;code&gt;drop&lt;/code&gt;&lt;br&gt;
-And Type must be &lt;code&gt;Server&lt;/code&gt; (opposed to File Share)&lt;br&gt;
+And Location must be &lt;code&gt;TFS&lt;/code&gt; - that used to be called Type: &lt;code&gt;Server&lt;/code&gt; (opposed to File Share)&lt;br&gt;
 &lt;img alt="Configure publish" src="img/2017-10-09-VSTS11.PNG" title="Configure publish"&gt;&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;Save &amp;amp; queue&lt;/code&gt;. In top of the screen you'll see &lt;code&gt;Build #&amp;lt;some-number&amp;gt; has been queued.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;#&amp;lt;some-number&amp;gt;&lt;/code&gt;. Now you can see the progress of the build.&lt;br&gt;
+When the build has finished you'll see &lt;code&gt;Build Succeeded&lt;/code&gt; and above that &lt;code&gt;dreamhouse-mobile-ionic-Build / Build &amp;lt;some-number&amp;gt; / Phase 1&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Build &amp;lt;some-number&amp;gt;&lt;/code&gt;. Now you get 5 tabs for that build: &lt;code&gt;Summary - Timeline - Artifacts - Code coverage* - Tests&lt;/code&gt;  &lt;/li&gt;
+&lt;li&gt;Click on &lt;code&gt;Artifacts&lt;/code&gt;. Now you see the dropfolder. Check it out and see if it contains what you expected.  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Have you noticed that these Build Tasks correspond to the features in TeamCity? &lt;/p&gt;
+&lt;p&gt;Have you noticed that these Build Tasks correspond to the features in &lt;a href="https://www.jetbrains.com/teamcity/"&gt;TeamCity&lt;/a&gt;? &lt;/p&gt;
 &lt;p&gt;Next up is to deploy the package to Azure.&lt;/p&gt;
 &lt;h2&gt;Setup WebApp in Azure&lt;/h2&gt;
 &lt;ul&gt;
@@ -149,7 +161,7 @@ Notice you have a possibility to select persons to approve deployment. This can 
 &lt;img alt="Approvers" src="img/2017-10-09-VSTSRelease7.PNG" title="Approvers"&gt;
 We don't want approvers - so go on and save.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Have you noticed that these Release workflow correspond to the features in Octopus Deploy? &lt;/p&gt;
+&lt;p&gt;Have you noticed that these Release workflow correspond to the features in &lt;a href="https://octopus.com/"&gt;Octopus Deploy&lt;/a&gt;? &lt;/p&gt;
 &lt;h2&gt;Trig a build and a release to Azure&lt;/h2&gt;
 &lt;p&gt;Now we are ready for the big show - deploy to Azure&lt;/p&gt;
 &lt;ul&gt;
