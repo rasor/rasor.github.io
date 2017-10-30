@@ -33,6 +33,7 @@
 * [Generate with Feathers](https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html)
 * [Generate Auth with Feathers](https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html)
 * [Add authentication · FeatherJS](https://docs.feathersjs.com/guides/step-by-step/generators/gen-authentication.html)
+* [Recipe: Basic OAuth · FeatherJS](https://docs.feathersjs.com/guides/auth/recipe.oauth-basic.html)
 * [feathersjs/client](https://github.com/feathersjs/client)
 * [feathers API](https://docs.feathersjs.com/api/readme.html)
 * [feathers-swagger](https://www.npmjs.com/package/feathers-swagger)

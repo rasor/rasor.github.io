@@ -5,4 +5,14 @@
 * [Passport](https://github.com/jaredhanson/passport)
 * [Passport - connect-ensure-login](https://github.com/jaredhanson/connect-ensure-login)
 
+* [JSON Web Tokens (JWT) in Auth0](https://auth0.com/docs/jwt)
+* [JWT.IO](https://jwt.io/)
+* [Cookies vs Tokens. Getting auth right with Angular.JS](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
+* [Cookies vs Tokens: The Definitive Guide](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+* [angular-auth0-aside](https://github.com/auth0-blog/angular-auth0-aside)
+* [auth0-angular-samples](https://github.com/auth0-samples/auth0-angular-samples/tree/master/01-Login)
+* [Aside: Authenticate an Angular App and Node API with Auth0](https://github.com/auth0/blog/blob/master/_includes/asides/angular.markdown)
+* [JWT Handbook](https://auth0.com/e-books/jwt-handbook)
+* [10 Things You Should Know about Tokens](https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/)
+
 The End
