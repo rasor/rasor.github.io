@@ -7,12 +7,40 @@
 
 * [JSON Web Tokens (JWT) in Auth0](https://auth0.com/docs/jwt)
 * [JWT.IO](https://jwt.io/)
-* [Cookies vs Tokens. Getting auth right with Angular.JS](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
-* [Cookies vs Tokens: The Definitive Guide](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
-* [angular-auth0-aside](https://github.com/auth0-blog/angular-auth0-aside)
-* [auth0-angular-samples](https://github.com/auth0-samples/auth0-angular-samples/tree/master/01-Login)
-* [Aside: Authenticate an Angular App and Node API with Auth0](https://github.com/auth0/blog/blob/master/_includes/asides/angular.markdown)
 * [JWT Handbook](https://auth0.com/e-books/jwt-handbook)
 * [10 Things You Should Know about Tokens](https://auth0.com/blog/ten-things-you-should-know-about-tokens-and-cookies/)
+
+## Web
+
+* [Auth0 ASP.NET (System.Web) SDK Quickstarts: Login](https://auth0.com/docs/quickstart/webapp/aspnet)
+* [Auth0 ASP.NET (OWIN) SDK Quickstarts: Introduction](https://auth0.com/docs/quickstart/webapp/aspnet-owin)
+* [Auth0 ServiceStack SDK Quickstarts: Login](https://auth0.com/docs/quickstart/webapp/servicestack)
+* [Auth0 ASP.NET Core SDK Quickstarts: Introduction](https://auth0.com/docs/quickstart/webapp/aspnet-core)
+* [Auth0 NancyFX SDK Quickstarts: Login](https://auth0.com/docs/quickstart/webapp/nancyfx)
+* [Auth0 Node.js SDK Quickstarts: Login](https://auth0.com/docs/quickstart/webapp/nodejs)
+
+## SPA
+
+* [Cookies vs Tokens. Getting auth right with Angular.JS](https://auth0.com/blog/angularjs-authentication-with-cookies-vs-token/)
+* [Cookies vs Tokens: The Definitive Guide](https://auth0.com/blog/cookies-vs-tokens-definitive-guide/)
+* [Auth0 Vue SDK Quickstarts: Login](https://auth0.com/docs/quickstart/spa/vuejs)
+* [Auth0 Angular 2+ SDK Quickstarts: Login](https://auth0.com/docs/quickstart/spa/angular2)
+* [angular-auth0-aside](https://github.com/auth0-blog/angular-auth0-aside)
+* [Aside: Authenticate an Angular App and Node API with Auth0](https://github.com/auth0/blog/blob/master/_includes/asides/angular.markdown)
+
+## Mobile / Native
+
+* [Auth0 Ionic 2+ SDK Quickstarts: Login](https://auth0.com/docs/quickstart/native/ionic2)
+* [Auth0 Electron SDK Quickstarts: Login](https://auth0.com/docs/quickstart/native/electron)
+
+## Backend
+
+* [Auth0 ASP.NET Web API (OWIN) SDK Quickstarts: Authorization](https://auth0.com/docs/quickstart/backend/webapi-owin)
+* [Auth0 ASP.NET Core Web API SDK Quickstarts: Authorization](https://auth0.com/docs/quickstart/backend/aspnet-core-webapi)
+* [Auth0 Hapi API SDK Quickstarts: Authorization](https://auth0.com/docs/quickstart/backend/hapi)
+* [Auth0 Node (Express) API SDK Quickstarts: Authorization](https://auth0.com/docs/quickstart/backend/nodejs)
+* [Auth0 Falcor API SDK Quickstarts: Authentication](https://auth0.com/docs/quickstart/backend/falcor)
+* [Auth0 Hapi API SDK Quickstarts: Authorization](https://auth0.com/docs/quickstart/backend/hapi)
+* [Auth0 Relay API SDK Quickstarts: Authentication](https://auth0.com/docs/quickstart/backend/relay)
 
 The End
