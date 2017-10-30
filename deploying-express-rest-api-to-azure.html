@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/deploying-express-rest-api-to-azure.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-29 21:00:00+01:00"/>
-<meta property="article:modified_time" content=""/>
+<meta property="article:modified_time" content="2017-10-30 17:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#npm"/>
@@ -103,6 +103,7 @@
 
 
       </br>
+        Updated: oktober 30, 2017
     </p>
   </header>
 
@@ -139,6 +140,70 @@ node -v
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.<br>
 You can fork <a href="https://github.com/rasor/dreamhouse-rest-services">mine</a>, since it is modified a bit with web.config, making it runable in Azure.<br>
 BTW - You can read about @ccoenraets's code here: <a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/">DreamHouse: Sample Application with Ionic 3 and Angular 4</a>.</p>
+<p>The <code>web.config</code> file you need for node.js projects running in IIS looks like this:</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">     This configuration file is required if iisnode is used to run node processes behind</span>
+<span class="c">     IIS or IIS Express.  For more information, visit:</span>
+<span class="c">     https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;configuration&gt;</span>
+  <span class="nt">&lt;system.webServer&gt;</span>
+    <span class="c">&lt;!-- Visit http://blogs.msdn.com/b/windowsazure/archive/2013/11/14/introduction-to-websockets-on-windows-azure-web-sites.aspx for more information on WebSocket support --&gt;</span>
+    <span class="nt">&lt;webSocket</span> <span class="na">enabled=</span><span class="s">&quot;false&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;handlers&gt;</span>
+      <span class="c">&lt;!-- Indicates that the server.js file is a node.js site to be handled by the iisnode module --&gt;</span>
+      <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;iisnode&quot;</span> <span class="na">path=</span><span class="s">&quot;server.js&quot;</span> <span class="na">verb=</span><span class="s">&quot;*&quot;</span> <span class="na">modules=</span><span class="s">&quot;iisnode&quot;</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/handlers&gt;</span>
+    <span class="nt">&lt;rewrite&gt;</span>
+      <span class="nt">&lt;rules&gt;</span>
+        <span class="c">&lt;!-- Do not interfere with requests for node-inspector debugging --&gt;</span>
+        <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">&quot;NodeInspector&quot;</span> <span class="na">patternSyntax=</span><span class="s">&quot;ECMAScript&quot;</span> <span class="na">stopProcessing=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;match</span> <span class="na">url=</span><span class="s">&quot;^server.js\/debug[\/]?&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/rule&gt;</span>
+
+        <span class="c">&lt;!-- First we consider whether the incoming URL matches a physical file in the /public folder --&gt;</span>
+        <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">&quot;StaticContent&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">&quot;Rewrite&quot;</span> <span class="na">url=</span><span class="s">&quot;public{REQUEST_URI}&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/rule&gt;</span>
+
+        <span class="c">&lt;!-- All other URLs are mapped to the node.js site entry point --&gt;</span>
+        <span class="nt">&lt;rule</span> <span class="na">name=</span><span class="s">&quot;DynamicContent&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;conditions&gt;</span>
+            <span class="nt">&lt;add</span> <span class="na">input=</span><span class="s">&quot;{REQUEST_FILENAME}&quot;</span> <span class="na">matchType=</span><span class="s">&quot;IsFile&quot;</span> <span class="na">negate=</span><span class="s">&quot;True&quot;</span><span class="nt">/&gt;</span>
+          <span class="nt">&lt;/conditions&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">type=</span><span class="s">&quot;Rewrite&quot;</span> <span class="na">url=</span><span class="s">&quot;server.js&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/rule&gt;</span>
+      <span class="nt">&lt;/rules&gt;</span>
+    <span class="nt">&lt;/rewrite&gt;</span>
+
+    <span class="c">&lt;!-- &#39;bin&#39; directory has no special meaning in node.js and apps can be placed in it --&gt;</span>
+    <span class="nt">&lt;security&gt;</span>
+      <span class="nt">&lt;requestFiltering&gt;</span>
+        <span class="nt">&lt;hiddenSegments&gt;</span>
+          <span class="nt">&lt;remove</span> <span class="na">segment=</span><span class="s">&quot;bin&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/hiddenSegments&gt;</span>
+      <span class="nt">&lt;/requestFiltering&gt;</span>
+    <span class="nt">&lt;/security&gt;</span>
+
+    <span class="c">&lt;!-- Make sure error responses are left untouched --&gt;</span>
+    <span class="nt">&lt;httpErrors</span> <span class="na">existingResponse=</span><span class="s">&quot;PassThrough&quot;</span> <span class="nt">/&gt;</span>
+
+    <span class="c">&lt;!--</span>
+<span class="c">      You can control how Node is hosted within IIS using the following options:</span>
+<span class="c">        * watchedFiles: semi-colon separated list of files that will be watched for changes to restart the server</span>
+<span class="c">        * node_env: will be propagated to node as NODE_ENV environment variable</span>
+<span class="c">        * debuggingEnabled - controls whether the built-in debugger is enabled</span>
+
+<span class="c">      See https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config for a full list of options</span>
+<span class="c">    --&gt;</span>
+    <span class="c">&lt;!--&lt;iisnode watchedFiles=&quot;web.config;*.js&quot;/&gt;--&gt;</span>
+  <span class="nt">&lt;/system.webServer&gt;</span>
+<span class="nt">&lt;/configuration&gt;</span>
+</pre></div>
+
+
+<p>It seems like the web.confog is generated for you, when you choose Node.js as target environment during Release Definition in VSTS.</p>
 <h2>Your local repo</h2>
 <p>When you have forked a repo do:</p>
 <div class="highlight"><pre><span></span>git clone https://github.com/yourgithubusername/dreamhouse-rest-services

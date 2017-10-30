@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2017-10-29T21:49:48-00:00</lastmod>
+<lastmod>2017-10-30T17:08:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2017-10-29T21:49:48-00:00</lastmod>
+<lastmod>2017-10-30T17:08:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2017-10-29T21:49:48-00:00</lastmod>
+<lastmod>2017-10-30T17:08:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2017-10-29T21:49:48-00:00</lastmod>
+<lastmod>2017-10-30T17:08:59-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/deploying-express-rest-api-to-azure.html</loc>
-<lastmod>2017-10-29T21:00:00+01:00</lastmod>
+<lastmod>2017-10-30T17:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -47,7 +47,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/deploying-ionic-to-azure.html</loc>
-<lastmod>2017-10-29T22:00:00+01:00</lastmod>
+<lastmod>2017-10-30T17:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -117,7 +117,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/devop.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -131,56 +131,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/npm.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/git.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/express.html</loc>
-<lastmod>2017-10-29T21:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/nodejs.html</loc>
-<lastmod>2017-10-29T21:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/azure.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/ionic.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/ngx.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/pwa.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -299,7 +299,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2017-10-29T22:00:00+00:50</lastmod>
+<lastmod>2017-10-30T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

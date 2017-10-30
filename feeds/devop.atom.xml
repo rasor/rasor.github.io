@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-29T22:00:00+01:00</updated><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-29T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-30T17:00:00+01:00</updated><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;
@@ -37,6 +37,70 @@ node -v
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.&lt;br&gt;
 You can fork &lt;a href="https://github.com/rasor/dreamhouse-rest-services"&gt;mine&lt;/a&gt;, since it is modified a bit with web.config, making it runable in Azure.&lt;br&gt;
 BTW - You can read about @ccoenraets's code here: &lt;a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/"&gt;DreamHouse: Sample Application with Ionic 3 and Angular 4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;web.config&lt;/code&gt; file you need for node.js projects running in IIS looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;lt;!--&lt;/span&gt;
+&lt;span class="c"&gt;     This configuration file is required if iisnode is used to run node processes behind&lt;/span&gt;
+&lt;span class="c"&gt;     IIS or IIS Express.  For more information, visit:&lt;/span&gt;
+&lt;span class="c"&gt;     https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config&lt;/span&gt;
+&lt;span class="c"&gt;--&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+    &lt;span class="c"&gt;&amp;lt;!-- Visit http://blogs.msdn.com/b/windowsazure/archive/2013/11/14/introduction-to-websockets-on-windows-azure-web-sites.aspx for more information on WebSocket support --&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;webSocket&lt;/span&gt; &lt;span class="na"&gt;enabled=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;false&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;handlers&amp;gt;&lt;/span&gt;
+      &lt;span class="c"&gt;&amp;lt;!-- Indicates that the server.js file is a node.js site to be handled by the iisnode module --&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;iisnode&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;path=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server.js&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;verb=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;*&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;modules=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;iisnode&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/handlers&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;rewrite&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;rules&amp;gt;&lt;/span&gt;
+        &lt;span class="c"&gt;&amp;lt;!-- Do not interfere with requests for node-inspector debugging --&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;rule&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;NodeInspector&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;patternSyntax=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;ECMAScript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;stopProcessing=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;match&lt;/span&gt; &lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;^server.js\/debug[\/]?&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/rule&amp;gt;&lt;/span&gt;
+
+        &lt;span class="c"&gt;&amp;lt;!-- First we consider whether the incoming URL matches a physical file in the /public folder --&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;rule&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;StaticContent&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;action&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Rewrite&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;public{REQUEST_URI}&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/rule&amp;gt;&lt;/span&gt;
+
+        &lt;span class="c"&gt;&amp;lt;!-- All other URLs are mapped to the node.js site entry point --&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;rule&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DynamicContent&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;conditions&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;input=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{REQUEST_FILENAME}&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;matchType=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;IsFile&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;negate=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;True&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;/conditions&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;action&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Rewrite&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;server.js&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/rule&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/rules&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/rewrite&amp;gt;&lt;/span&gt;
+
+    &lt;span class="c"&gt;&amp;lt;!-- &amp;#39;bin&amp;#39; directory has no special meaning in node.js and apps can be placed in it --&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;security&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;requestFiltering&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;hiddenSegments&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;remove&lt;/span&gt; &lt;span class="na"&gt;segment=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;bin&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/hiddenSegments&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/requestFiltering&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/security&amp;gt;&lt;/span&gt;
+
+    &lt;span class="c"&gt;&amp;lt;!-- Make sure error responses are left untouched --&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;httpErrors&lt;/span&gt; &lt;span class="na"&gt;existingResponse=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;PassThrough&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+
+    &lt;span class="c"&gt;&amp;lt;!--&lt;/span&gt;
+&lt;span class="c"&gt;      You can control how Node is hosted within IIS using the following options:&lt;/span&gt;
+&lt;span class="c"&gt;        * watchedFiles: semi-colon separated list of files that will be watched for changes to restart the server&lt;/span&gt;
+&lt;span class="c"&gt;        * node_env: will be propagated to node as NODE_ENV environment variable&lt;/span&gt;
+&lt;span class="c"&gt;        * debuggingEnabled - controls whether the built-in debugger is enabled&lt;/span&gt;
+
+&lt;span class="c"&gt;      See https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config for a full list of options&lt;/span&gt;
+&lt;span class="c"&gt;    --&amp;gt;&lt;/span&gt;
+    &lt;span class="c"&gt;&amp;lt;!--&amp;lt;iisnode watchedFiles=&amp;quot;web.config;*.js&amp;quot;/&amp;gt;--&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It seems like the web.confog is generated for you, when you choose Node.js as target environment during Release Definition in VSTS.&lt;/p&gt;
 &lt;h2&gt;Your local repo&lt;/h2&gt;
 &lt;p&gt;When you have forked a repo do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/yourgithubusername/dreamhouse-rest-services
@@ -162,7 +226,7 @@ Instead I could browse in the App Service Console and the files were alse viewab
 &lt;p&gt;So to verify that browse to you service on&lt;br&gt;
 &lt;a href="http://yourvstsusername-dreamhouse-mobile-rest.azurewebsites.net/properties"&gt;http://yourvstsusername-dreamhouse-mobile-rest.azurewebsites.net/properties&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you are just reading along you can also find my site &lt;a href="http://dreamhouse-mobile-rest.azurewebsites.net/properties"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#express"></category><category term="#nodejs"></category><category term="#azure"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-29T22:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#express"></category><category term="#nodejs"></category><category term="#azure"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;
@@ -220,6 +284,45 @@ npm run build --prod --aot
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.&lt;br&gt;
 You can fork &lt;a href="https://github.com/rasor/dreamhouse-mobile-ionic"&gt;mine&lt;/a&gt;, since it is modified a bit with web.config, making it runable in Azure.&lt;br&gt;
 BTW - You can read about @ccoenraets's code here: &lt;a href="http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/"&gt;DreamHouse: Sample Application with Ionic 3 and Angular 4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;\src\web.config&lt;/code&gt; file you need (again - thanks to @sethreidnz) for Angular projects running in IIS looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;rewrite&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;rules&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;rule&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;AngularJS Routes&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;stopProcessing=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;match&lt;/span&gt; &lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;.*&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;conditions&lt;/span&gt; &lt;span class="na"&gt;logicalGrouping=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;MatchAll&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;input=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{REQUEST_FILENAME}&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;matchType=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;IsFile&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;negate=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;lt;add&lt;/span&gt; &lt;span class="na"&gt;input=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;{REQUEST_FILENAME}&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;matchType=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;IsDirectory&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;negate=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;true&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;/conditions&amp;gt;&lt;/span&gt;
+          &lt;span class="nt"&gt;&amp;lt;action&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Rewrite&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;url=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;/rule&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/rules&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/rewrite&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;It accepts Angular roouting.&lt;/p&gt;
+&lt;p&gt;To be able to include the web.config in the build you could do like this:&lt;/p&gt;
+&lt;p&gt;package.json&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;config&amp;quot;&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;quot;ionic_copy&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./config/copy.config.js&amp;quot;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The ionic-app-scripts will then pick up the file, when it comes to its copy step.&lt;/p&gt;
+&lt;p&gt;\config\copy.config.json&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// Copy extra files from /src/ to /www/&lt;/span&gt;
+&lt;span class="c1"&gt;// https://forum.ionicframework.com/t/rc0-injecting-custom-scripts/65281/20&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;exports&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;@ionic/app-scripts/config/copy.config.js&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;exports&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;copyIndexContent&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;src&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;push&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;{{SRC}}/web.config&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Your local repo&lt;/h2&gt;
 &lt;p&gt;If you forked my repo do:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;npm install -g cordova@7.0.1 ionic@3.12.0 &lt;span class="c1"&gt;# just in case you have not installed Ionic&lt;/span&gt;
