@@ -1,5 +1,6 @@
 Title: Deploying Express REST API to Azure
 Date: 2017-10-29 21:00
+Modified: 2017-10-30 17:00
 Category: DevOp
 Tags: #npm, #git, #express, #nodejs, #azure
 
@@ -45,6 +46,72 @@ I have forked [dreamhouseapp/dreamhouse-rest-services](https://github.com/dreamh
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.  
 You can fork [mine](https://github.com/rasor/dreamhouse-rest-services), since it is modified a bit with web.config, making it runable in Azure.  
 BTW - You can read about @ccoenraets's code here: [DreamHouse: Sample Application with Ionic 3 and Angular 4](http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/).
+
+The `web.config` file you need for node.js projects running in IIS looks like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     This configuration file is required if iisnode is used to run node processes behind
+     IIS or IIS Express.  For more information, visit:
+     https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config
+-->
+<configuration>
+  <system.webServer>
+    <!-- Visit http://blogs.msdn.com/b/windowsazure/archive/2013/11/14/introduction-to-websockets-on-windows-azure-web-sites.aspx for more information on WebSocket support -->
+    <webSocket enabled="false" />
+    <handlers>
+      <!-- Indicates that the server.js file is a node.js site to be handled by the iisnode module -->
+      <add name="iisnode" path="server.js" verb="*" modules="iisnode"/>
+    </handlers>
+    <rewrite>
+      <rules>
+        <!-- Do not interfere with requests for node-inspector debugging -->
+        <rule name="NodeInspector" patternSyntax="ECMAScript" stopProcessing="true">
+          <match url="^server.js\/debug[\/]?" />
+        </rule>
+
+        <!-- First we consider whether the incoming URL matches a physical file in the /public folder -->
+        <rule name="StaticContent">
+          <action type="Rewrite" url="public{REQUEST_URI}"/>
+        </rule>
+
+        <!-- All other URLs are mapped to the node.js site entry point -->
+        <rule name="DynamicContent">
+          <conditions>
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="True"/>
+          </conditions>
+          <action type="Rewrite" url="server.js"/>
+        </rule>
+      </rules>
+    </rewrite>
+    
+    <!-- 'bin' directory has no special meaning in node.js and apps can be placed in it -->
+    <security>
+      <requestFiltering>
+        <hiddenSegments>
+          <remove segment="bin"/>
+        </hiddenSegments>
+      </requestFiltering>
+    </security>
+
+    <!-- Make sure error responses are left untouched -->
+    <httpErrors existingResponse="PassThrough" />
+
+    <!--
+      You can control how Node is hosted within IIS using the following options:
+        * watchedFiles: semi-colon separated list of files that will be watched for changes to restart the server
+        * node_env: will be propagated to node as NODE_ENV environment variable
+        * debuggingEnabled - controls whether the built-in debugger is enabled
+
+      See https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config for a full list of options
+    -->
+    <!--<iisnode watchedFiles="web.config;*.js"/>-->
+  </system.webServer>
+</configuration>
+```
+
+It seems like the web.confog is generated for you, when you choose Node.js as target environment during Release Definition in VSTS.
 
 ## Your local repo
 

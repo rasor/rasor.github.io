@@ -1,6 +1,6 @@
 Title: Deploying Ionic to Azure
 Date: 2017-10-10 21:00
-Modified: 2017-10-29 22:00
+Modified: 2017-10-30 17:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa
 
@@ -68,6 +68,51 @@ I have forked [dreamhouseapp/dreamhouse-mobile-ionic](https://github.com/dreamho
 Why? Because I need to give VSTS access to my GitHub account. I can't give it access to @ccoenraets's repo.  
 You can fork [mine](https://github.com/rasor/dreamhouse-mobile-ionic), since it is modified a bit with web.config, making it runable in Azure.  
 BTW - You can read about @ccoenraets's code here: [DreamHouse: Sample Application with Ionic 3 and Angular 4](http://coenraets.org/blog/2017/04/dreamhouse-sample-application-ionic3-angular4/).
+
+The `\src\web.config` file you need (again - thanks to @sethreidnz) for Angular projects running in IIS looks like this:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="AngularJS Routes" stopProcessing="true">
+          <match url=".*" />
+          <conditions logicalGrouping="MatchAll">
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+          </conditions>
+          <action type="Rewrite" url="/" />
+        </rule>
+      </rules>
+    </rewrite>
+  </system.webServer>
+</configuration>
+```
+
+It accepts Angular roouting.
+
+To be able to include the web.config in the build you could do like this:
+
+package.json
+
+```json
+  "config": {
+    "ionic_copy": "./config/copy.config.js"
+  },
+```
+
+The ionic-app-scripts will then pick up the file, when it comes to its copy step.
+
+\config\copy.config.json
+
+```javascript
+// Copy extra files from /src/ to /www/
+// https://forum.ionicframework.com/t/rc0-injecting-custom-scripts/65281/20
+var exports = require('@ionic/app-scripts/config/copy.config.js');
+exports.copyIndexContent.src.push('{{SRC}}/web.config');
+```
 
 ## Your local repo
 
