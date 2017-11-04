@@ -14,5 +14,6 @@
 * Package: Oidc helper for ngx - [nmp angular-auth-oidc-client](https://github.com/damienbod/angular-auth-oidc-client)
 * Sample for angular-auth-oidc-client - [Angular OIDC Google sample](https://github.com/damienbod/angular-auth-oidc-sample-google-openid)
 * [angular2-jwt: A Library for Angular 2 Authentication](https://auth0.com/blog/introducing-angular2-jwt-a-library-for-angular2-authentication/)
+* [ng5 SPA with Core WebAPI with IdentityServer4 protection](https://github.com/robisim74/AngularSPAWebAPI)
 
 The End
