@@ -1,0 +1,14 @@
+# IdentityServer4
+
+* [IdServer - Setup and Overview](http://docs.identityserver.io/en/release/quickstarts/0_overview.html)
+* [Protecting an API using Client Credentials](http://docs.identityserver.io/en/release/quickstarts/1_client_credentials.html)
+* [Server - Startup](http://docs.identityserver.io/en/release/topics/startup.html)
+* [Server - Defining Resources](http://docs.identityserver.io/en/release/topics/resources.html)
+* [Client - Defining Clients](http://docs.identityserver.io/en/release/topics/clients.html)[Defining Clients &mdash; IdentityServer4 1.0.0 documentation](http://docs.identityserver.io/en/release/topics/clients.html)
+* [Windows Authentication](http://docs.identityserver.io/en/release/topics/windows.html)
+* [OpenID Connect (OIDC)](http://docs.identityserver.io/en/release/quickstarts/3_interactive_login.html)
+* [External Authentication - Google and OIDC](http://docs.identityserver.io/en/release/quickstarts/4_external_authentication.html)
+
+# OIDC w. Angular
+
+The End
