@@ -1,6 +1,6 @@
 Title: Ngx: Template for Visual Studio 2017
 Date: 2017-09-24 17:00
-Modified: 2017-10-12 22:00
+Modified: 2017-11-05 14:00
 Category: Develop
 Tags: #npm, #ngx, #typescript, #visualstudio, #tfs
 
@@ -25,6 +25,7 @@ Luckily there is a `.vsix` for that: [Angular CLI Project Template](https://mark
 * Npm 3 or higher (`npm -v`) - Should come with VS
 * [Git for Windows](https://git-scm.com/download/win){:target="_blank"} (`git -version`) - Should come with VS 
 * Install latest [Angular CLI](https://www.npmjs.com/package/@angular/cli/tutorial){:target="_blank"} (`ng version`)
+** Note: The CLI you install will be the one that is used for creating Ng SPA
 * Exit VisualStudio
 * Install [Angular CLI Project Template](https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate){:target="_blank"} by executing the `.vsix`
 
@@ -32,6 +33,7 @@ Luckily there is a `.vsix` for that: [Angular CLI Project Template](https://mark
 
 * Start VisualStudio
 * New - Project - Other Languages - TypeScript - Angular CLI Application - Name: <YourNgAppName>
+** Note: You can also do New - Item into an existing .NET Core project - [details](https://github.com/damienbod/angular-auth-oidc-client)
 
 ![New Angular CLI Project in Visual Studio 2017](img/2017-09-24-NewAngularCLIProject.PNG "New Angular CLI Project in Visual Studio 2017")
 
