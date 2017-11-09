@@ -1,0 +1,32 @@
+
+
+
+![SPA host](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-spa "SPA host")
+
+![WebApp host](https://docs.microsoft.com/en-us/azure/media/active-directory-v2-flows/convergence_scenarios_webapp.png "WebApp host")
+
+## Articles
+
+* [When To Use Which (OAuth2) Grants and (OIDC) Flows](https://medium.com/@robert.broeckelmann/when-to-use-which-oauth2-grants-and-oidc-flows-ec6a5c00d864)
+* [Which OpenID Connect/OAuth 2.0 Flow is the right One?](https://leastprivilege.com/2016/01/17/which-openid-connectoauth-2-o-flow-is-the-right-one/)
+
+## Code
+
+### SPA
+
+* [ng CLI sample](https://github.com/rasor/angular-cli-auth-oidc-sample-google-openid)
+* [SPA built on MSAL.js with Azure AD B2C](https://github.com/Azure-Samples/active-directory-b2c-javascript-msal-singlepageapp)
+* [SPA CLI & ASP.NET Core WebAPI](https://github.com/robisim74/AngularCliAspNetCore)
+
+### REST
+
+* [WebApp/WebAPI with Microsoft.Owin.Security.OpenIdConnect](https://auth0.com/docs/protocols/oidc/openid-connect-discovery)
+
+# Identity Providers
+
+* <https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration>
+* <https://login.microsoftonline.com/common/.well-known/openid-configuration>
+* <https://auth.login.yahoo.co.jp/yconnect/v2/.well-known/openid-configuration>
+* <https://www.paypalobjects.com/.well-known/openid-configuration>
+
+The End.
