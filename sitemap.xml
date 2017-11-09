@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2017-11-04T11:09:39-00:00</lastmod>
+<lastmod>2017-11-09T21:29:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2017-11-04T11:09:39-00:00</lastmod>
+<lastmod>2017-11-09T21:29:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2017-11-04T11:09:39-00:00</lastmod>
+<lastmod>2017-11-09T21:29:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2017-11-04T11:09:39-00:00</lastmod>
+<lastmod>2017-11-09T21:29:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -82,7 +82,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/ngx-template-for-visual-studio-2017.html</loc>
-<lastmod>2017-10-12T22:00:00+02:00</lastmod>
+<lastmod>2017-11-05T14:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -110,7 +110,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2017-10-27T21:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -131,7 +131,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/npm.html</loc>
-<lastmod>2017-10-30T17:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -173,7 +173,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/ngx.html</loc>
-<lastmod>2017-10-30T17:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -187,13 +187,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/nvm.html</loc>
-<lastmod>2017-10-08T15:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/node.html</loc>
 <lastmod>2017-10-08T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -271,21 +264,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/typescript.html</loc>
-<lastmod>2017-10-12T22:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/visualstudio.html</loc>
-<lastmod>2017-10-12T22:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/tfs.html</loc>
-<lastmod>2017-10-12T22:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -299,7 +292,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2017-10-30T17:00:00+00:50</lastmod>
+<lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

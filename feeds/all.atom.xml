@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-30T17:00:00+01:00</updated><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-11-05T14:00:00+01:00</updated><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;
@@ -744,7 +744,7 @@ yarn install &lt;span class="c1"&gt;# same as npm install, but using yarn.lock: 
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/migrating-from-npm" target="_blank"&gt;Npm vs. Yarn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/cli/" target="_blank"&gt;Yarn commands&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#nvm"></category><category term="#node"></category><category term="#npm"></category><category term="#yarn"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
 &lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
@@ -1093,7 +1093,7 @@ start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&g
 &lt;/li&gt;
 &lt;li&gt;Images &lt;a href="https://unsplash.com/" target="_blank"&gt;https://unsplash.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-10-12T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-11-05T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
@@ -1117,14 +1117,16 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;li&gt;Node 6.9.0 or higher (&lt;code&gt;node -v&lt;/code&gt;) - Should come with VS&lt;/li&gt;
 &lt;li&gt;Npm 3 or higher (&lt;code&gt;npm -v&lt;/code&gt;) - Should come with VS&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://git-scm.com/download/win" target="_blank"&gt;Git for Windows&lt;/a&gt; (&lt;code&gt;git -version&lt;/code&gt;) - Should come with VS &lt;/li&gt;
-&lt;li&gt;Install latest &lt;a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank"&gt;Angular CLI&lt;/a&gt; (&lt;code&gt;ng version&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Install latest &lt;a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank"&gt;Angular CLI&lt;/a&gt; (&lt;code&gt;ng version&lt;/code&gt;)
+** Note: The CLI you install will be the one that is used for creating Ng SPA&lt;/li&gt;
 &lt;li&gt;Exit VisualStudio&lt;/li&gt;
 &lt;li&gt;Install &lt;a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank"&gt;Angular CLI Project Template&lt;/a&gt; by executing the &lt;code&gt;.vsix&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Ready-Set-Go&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Start VisualStudio&lt;/li&gt;
-&lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;&lt;/li&gt;
+&lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;
+** Note: You can also do New - Item into an existing .NET Core project - &lt;a href="https://github.com/damienbod/angular-auth-oidc-client"&gt;details&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="New Angular CLI Project in Visual Studio 2017" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
 &lt;ul&gt;

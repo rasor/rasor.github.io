@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-10-27T21:00:00+02:00</updated><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-11-05T14:00:00+01:00</updated><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
 It is quite a bit - read all about it &lt;a href="https://opensource.guide/how-to-contribute/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This blog post assumes you contribute by doing changes to a git repo.&lt;br&gt;
 So In short you need to&lt;/p&gt;
@@ -292,7 +292,7 @@ refresh env
 &lt;li&gt;&lt;a href="http://ionicframework.com/docs/pro/basics/getting-started/" target="_blank"&gt;http://ionicframework.com/docs/pro/basics/getting-started/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples" target="_blank"&gt;https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-10-12T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-11-05T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
@@ -316,14 +316,16 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;li&gt;Node 6.9.0 or higher (&lt;code&gt;node -v&lt;/code&gt;) - Should come with VS&lt;/li&gt;
 &lt;li&gt;Npm 3 or higher (&lt;code&gt;npm -v&lt;/code&gt;) - Should come with VS&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://git-scm.com/download/win" target="_blank"&gt;Git for Windows&lt;/a&gt; (&lt;code&gt;git -version&lt;/code&gt;) - Should come with VS &lt;/li&gt;
-&lt;li&gt;Install latest &lt;a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank"&gt;Angular CLI&lt;/a&gt; (&lt;code&gt;ng version&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Install latest &lt;a href="https://www.npmjs.com/package/@angular/cli/tutorial" target="_blank"&gt;Angular CLI&lt;/a&gt; (&lt;code&gt;ng version&lt;/code&gt;)
+** Note: The CLI you install will be the one that is used for creating Ng SPA&lt;/li&gt;
 &lt;li&gt;Exit VisualStudio&lt;/li&gt;
 &lt;li&gt;Install &lt;a href="https://marketplace.visualstudio.com/items?itemName=AndreyFomin.AngularCLIProjectTemplate" target="_blank"&gt;Angular CLI Project Template&lt;/a&gt; by executing the &lt;code&gt;.vsix&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Ready-Set-Go&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Start VisualStudio&lt;/li&gt;
-&lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;&lt;/li&gt;
+&lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;
+** Note: You can also do New - Item into an existing .NET Core project - &lt;a href="https://github.com/damienbod/angular-auth-oidc-client"&gt;details&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img alt="New Angular CLI Project in Visual Studio 2017" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
 &lt;ul&gt;

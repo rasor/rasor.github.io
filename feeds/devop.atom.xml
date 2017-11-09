@@ -579,7 +579,7 @@ yarn install &lt;span class="c1"&gt;# same as npm install, but using yarn.lock: 
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/migrating-from-npm" target="_blank"&gt;Npm vs. Yarn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/cli/" target="_blank"&gt;Yarn commands&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#nvm"></category><category term="#node"></category><category term="#npm"></category><category term="#yarn"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
