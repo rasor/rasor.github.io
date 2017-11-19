@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="If you are working with .NET you probably have WCF services. You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends. Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning …" />
+<meta name="keywords" content="#wcf, #rest, #swagger, #depencyinjection, #dotnet, #visualstudio">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Expand your WCF service with REST"/>
+<meta property="og:description" content="If you are working with .NET you probably have WCF services. You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends. Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/expand-your-wcf-service-with-rest.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-11-19 13:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#wcf"/>
+<meta property="article:tag" content="#rest"/>
+<meta property="article:tag" content="#swagger"/>
+<meta property="article:tag" content="#depencyinjection"/>
+<meta property="article:tag" content="#dotnet"/>
+<meta property="article:tag" content="#visualstudio"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Expand your WCF service with REST</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="expand-your-wcf-service-with-rest">Expand your WCF service with REST</h1>
+    <p>
+          Posted on november 19, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>If you are working with .NET you probably have WCF services.<br>
+You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.<br>
+Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning curve for other developers.</p>
+<p>After this walk-through you have a REST service and swagger.yaml that you can use for creating client code via <a href="https://editor.swagger.io/">https://editor.swagger.io/</a></p>
+<p><img alt="IBookService.yaml" src="img/2017-11-18-IBookService.yaml.PNG" title="IBookService.yaml"></p>
+<p>You can find <a href="https://github.com/rasor/wcf-rest">code for this guide on github</a>.</p>
+<h1>HowTo create a REST service (including Swagger.yaml) from a WCF service</h1>
+<p>If you have an existing service you create yet an endpoint allowing you to keep the existing service.</p>
+<p>In most cases the best thing is to create yet a WCF service using the same contract as your original WCF service. Just start from bullet 2 then.</p>
+<h2>1. The templates</h2>
+<p>This guide is based on Visusal Studio 2017.4</p>
+<ul>
+<li>Create an empty web<ul>
+<li>File - New - Project - ASP.NET Web Application - Empty  </li>
+<li>=&gt; This gives you a project without Global.Ajax and startup files</li>
+</ul>
+</li>
+<li>Add Ajax-enabled WCF service<ul>
+<li>Solution - RightClick project - Add - New Item (Ctrl-Shft-A) - WCF Service (Ajax-enabled) - You could call it <code>RestService1</code>  </li>
+<li>=&gt; This gives you a WCF service with webHttpBinding and a ref to System.ServiceModel.Web</li>
+</ul>
+</li>
+</ul>
+<h2>2. The first response</h2>
+<ul>
+<li>Change from SOAP to REST response<ul>
+<li>In <code>RestService1.svc.cs</code> add below <code>[OperationContract]</code>:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="na">    [WebGet(RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]</span>
+</pre></div>
+
+
+<ul>
+<li>
+<ul>
+<li>Set a breakpoint in DoWork() and debug project (F5)</li>
+<li>Open <a href="http://localhost:15563/RestService1.svc/DoWork">http://localhost:15563/RestService1.svc/DoWork</a> in Chrome</li>
+<li>=&gt; Breakpoint is hit. Response: {"d":null}</li>
+<li>GET <a href="http://localhost:15563/RestService1.svc/DoWork">http://localhost:15563/RestService1.svc/DoWork</a> in Postman</li>
+<li>=&gt; Response: {"d":null}</li>
+</ul>
+</li>
+</ul>
+<h2>3. Change response to <code>&lt;empty&gt;</code> for void functions</h2>
+<ul>
+<li>Change from Ajax to REST client<ul>
+<li>In web.config <code>&lt;behavior&gt;</code>: Replace <code>&lt;enableWebScript /&gt;</code> with <code>&lt;webHttp /&gt;</code></li>
+<li>Debug project (F5)</li>
+<li>GET <a href="http://localhost:15563/RestService1.svc/DoWork">http://localhost:15563/RestService1.svc/DoWork</a> in Postman</li>
+<li>=&gt; Response: <code>&lt;empty&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h2>4. Add Sample Interface</h2>
+<ul>
+<li>Add a sample interface<ul>
+<li>Paste <code>\models\Book.cs</code> from <a href="https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for">https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for</a></li>
+<li>Paste <code>\interfaces\IBookService.cs</code> from <a href="https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for">https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for</a></li>
+<li>Notice the code in <code>IBookService</code> in this project is changed a bit to allow to POST and PUT a <code>Book</code> object using JSON in the body of the request.</li>
+<li>In <code>RestService1.svc.cs</code> inherit from interface:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>    <span class="k">public</span> <span class="k">class</span> <span class="nc">RestService1</span> <span class="p">:</span> <span class="n">IBookService</span>
+</pre></div>
+
+
+<ul>
+<li>
+<ul>
+<li>Click on LigthBulp - Implement Interface</li>
+</ul>
+</li>
+<li>Change contract. In <code>web.config</code> change 
+    from <code>&lt;service contract="WebApplicationWcfRest1.RestService1</code><br>
+    to <code>&lt;service contract="WebApplicationWcfRest1.interfaces.IBookService</code></li>
+<li>Implement <code>GetBookById()</code>. Add line:</li>
+</ul>
+<div class="highlight"><pre><span></span>    <span class="k">return</span> <span class="k">new</span> <span class="nf">Book</span><span class="p">()</span> <span class="p">{</span><span class="n">Id</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">Name</span><span class="p">=</span> <span class="s">&quot;The incredible stamp&quot;</span> <span class="p">};</span>
+</pre></div>
+
+
+<ul>
+<li>Debug project (F5)<ul>
+<li>GET <a href="http://localhost:15563/RestService1.svc/Book/1">http://localhost:15563/RestService1.svc/Book/1</a> in Postman</li>
+<li>=&gt; Response: <code>{"Id": 1, "Name": "The incredible stamp"}</code></li>
+<li>POST <a href="http://localhost:15563/RestService1.svc/Book">http://localhost:15563/RestService1.svc/Book</a> in Postman - Set Body to <code>raw</code> and write <code>{"Id": 2, "Name": "The invincible stamp"}</code></li>
+<li>=&gt; Notice - you receive the object as a <code>Book</code> in C#</li>
+</ul>
+</li>
+</ul>
+<h2>5. Create Swagger Yaml</h2>
+<ul>
+<li>Create Swagger.yaml - this is the wsdl for REST<ul>
+<li>In Project Properties (Alt-Enter) - Build - Select <code>XML Documentation file</code> - Clear the path</li>
+<li>Install <a href="https://www.nuget.org/packages/Swagger4WCF">https://www.nuget.org/packages/Swagger4WCF</a> into the project containing the interfaces</li>
+<li>Build project</li>
+<li>=&gt; The yaml file is in <code>\bin\WebApplicationWcfRest1.IBookService.yaml</code></li>
+</ul>
+</li>
+<li>Edit yaml file<ul>
+<li>Replace <code>host</code> from <code>localhost</code> to <code>localhost:15563</code> (or to the test- or prod server host)</li>
+<li>Replace <code>basePath</code> from  <code>/IBookService</code> to <code>/RestService1.svc</code></li>
+<li>Replace all <code>path</code>s from e.g. <code>/GetBooksList:</code> to <code>/Book:</code> (as you wrote in UriTemplate)</li>
+<li>Group operations with same <code>path</code> together and delete the duplicate paths</li>
+<li>Those paths having path parameters e.g. <code>/{id}</code> change parameters from <code>in: query</code> to <code>in: path</code></li>
+<li>Save the yaml file into <code>\interfaces\</code> - update version number each time you send a new version to the client</li>
+</ul>
+</li>
+<li>Test the yaml file<ul>
+<li>Goto <a href="http://editor.swagger.io/">http://editor.swagger.io/</a> </li>
+<li>Replace left pane with the content of the yaml file (if you use chrome, you can paste)</li>
+<li>=&gt; In top of right pane: The should be no errors</li>
+</ul>
+</li>
+</ul>
+<h2>6. Move contracts to new library</h2>
+<ul>
+<li>Swagger4WCF does not work well with Unity.WCF, so we move the contracts to a new library<ul>
+<li>File - New - Project (Ctrl-Shft-N) - Class Library - Name: Contracts</li>
+<li>Drag'n'drop folder interfaces to Contracts</li>
+<li>Drag'n'drop folder models to Contracts</li>
+<li>Add Refs to project Contracts:<ul>
+<li><code>System.ServiceModel</code></li>
+<li><code>System.ServiceModel.Web</code></li>
+<li><code>System.Runtime.Serialization</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Create Swagger.yaml - this is the wsdl for REST<ul>
+<li>In Project Properties (Alt-Enter) - Build - Selt "XML Documentation file" - Clear the path</li>
+<li>Install <a href="https://www.nuget.org/packages/Swagger4WCF">https://www.nuget.org/packages/Swagger4WCF</a> into the project containing the interfaces (Contracts)</li>
+<li>Build project</li>
+<li>=&gt; The yaml file is in <code>\bin\WebApplicationWcfRest1.IBookService.yaml</code></li>
+</ul>
+</li>
+<li>Remove <code>Swagger4WCF</code> from project <code>WebApplicationWcfRest1</code><ul>
+<li>In project <code>WebApplicationWcfRest1</code> add ref to project <code>Contracts</code></li>
+<li>In <code>packages.config</code> remove line having <code>Swagger4WCF</code></li>
+<li>Rebuild Solution</li>
+</ul>
+</li>
+</ul>
+<h2>7. Add dependency injection with Unity</h2>
+<ul>
+<li>Remove <code>Swagger4WCF</code> from service project<ul>
+<li>Unload project <code>WebApplicationWcfRest1</code></li>
+<li>Remove two lines containing <code>Swagger4WCF</code> near bottom</li>
+</ul>
+</li>
+<li>Add dependency injection<ul>
+<li>Install <a href="https://www.nuget.org/packages/Unity.Wcf">https://www.nuget.org/packages/Unity.Wcf</a> into the project containing the services (<code>WebApplicationWcfRest1</code>)</li>
+<li>=&gt; This created file <code>WcfServiceFactory.cs</code></li>
+<li>View Markup of <code>RestService1.svc</code></li>
+<li>Replace: <code>CodeBehind="RestService1.svc.cs"</code><ul>
+<li>with: <code>Factory="WebApplicationWcfRest1.WcfServiceFactory"</code></li>
+</ul>
+</li>
+<li>In <code>WcfServiceFactory.cs</code> register the service:</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>               <span class="p">.</span><span class="n">RegisterType</span><span class="p">&lt;</span><span class="n">IBookService</span><span class="p">,</span> <span class="n">RestService1</span><span class="p">&gt;();</span>
+</pre></div>
+
+
+<ul>
+<li>
+<ul>
+<li>Build the solution</li>
+</ul>
+</li>
+<li>Debug project (F5)<ul>
+<li>GET <a href="http://localhost:15563/RestService1.svc/Book/1">http://localhost:15563/RestService1.svc/Book/1</a> in Postman</li>
+<li>=&gt; Response: <code>{"Id": 1, "Name": "The incredible stamp"}</code></li>
+</ul>
+</li>
+</ul>
+<h2>8. Use HTTP Status Codes</h2>
+<ul>
+<li>Add HTTP Status Codes to your service<ul>
+<li>In your service <code>RestService1.svc.cs</code> - method <code>AddBook()</code> add content</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>            <span class="n">WebOperationContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">OutgoingResponse</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">Created</span><span class="p">;</span> <span class="c1">// 201</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">book</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="s">&quot;The incredible stamp&quot;</span><span class="p">)</span> <span class="p">{</span>   <span class="c1">// Book exist</span>
+                <span class="n">WebOperationContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">OutgoingResponse</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">Conflict</span><span class="p">;</span> <span class="c1">// 409</span>
+            <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>
+<ul>
+<li>In method <code>UpdateBook()</code> add content</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">book</span><span class="p">.</span><span class="n">Id</span> <span class="p">==</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Book does not exist - 404</span>
+                <span class="n">WebOperationContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">OutgoingResponse</span><span class="p">.</span><span class="n">SetStatusAsNotFound</span><span class="p">(</span><span class="s">&quot;Resource not found&quot;</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">book</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="s">&quot;&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Invalid request</span>
+                <span class="n">WebOperationContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">OutgoingResponse</span><span class="p">.</span><span class="n">StatusCode</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">HttpStatusCode</span><span class="p">.</span><span class="n">MethodNotAllowed</span><span class="p">;</span> <span class="c1">// 405</span>
+            <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>
+<ul>
+<li>In method <code>GetBookById()</code> add content</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>            <span class="k">if</span> <span class="p">(</span><span class="n">id</span> <span class="p">==</span> <span class="s">&quot;2&quot;</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Book does not exist - 404</span>
+                <span class="n">WebOperationContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">OutgoingResponse</span><span class="p">.</span><span class="n">SetStatusAsNotFound</span><span class="p">(</span><span class="s">&quot;Resource not found&quot;</span><span class="p">);</span>
+                <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="k">return</span> <span class="k">new</span> <span class="nf">Book</span><span class="p">()</span> <span class="p">{</span> <span class="n">Id</span> <span class="p">=</span> <span class="m">1</span><span class="p">,</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;The incredible stamp&quot;</span> <span class="p">};</span>
+            <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>
+<ul>
+<li>Follow the guidance for HTTP Status Codes in <a href="https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/">https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/</a></li>
+<li>=&gt; Test the change using Postman</li>
+</ul>
+</li>
+<li>Update your yaml with the Status Codes<ul>
+<li>In <code>IBookService.yaml</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span>    <span class="l l-Scalar l-Scalar-Plain">put</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">responses</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">201</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Book</span><span class="nv"> </span><span class="s">created&quot;</span>
+        <span class="l l-Scalar l-Scalar-Plain">409</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Book</span><span class="nv"> </span><span class="s">exist&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">post</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">responses</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">404</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Book</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found&quot;</span>
+        <span class="l l-Scalar l-Scalar-Plain">405</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Validation</span><span class="nv"> </span><span class="s">exception&quot;</span>
+    <span class="l l-Scalar l-Scalar-Plain">get</span><span class="p p-Indicator">:</span>
+      <span class="l l-Scalar l-Scalar-Plain">responses</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">404</span><span class="p p-Indicator">:</span>
+          <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="s">&quot;Book</span><span class="nv"> </span><span class="s">not</span><span class="nv"> </span><span class="s">found&quot;</span>
+</pre></div>
+
+
+<h2>Refs</h2>
+<ul>
+<li>Postman: <a href="https://www.getpostman.com/">https://www.getpostman.com/</a> or <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en">https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en</a></li>
+<li>Swagger4WCF: <a href="https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for">https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for</a></li>
+<li>NuGet Swagger4WCF: <a href="https://www.nuget.org/packages/Swagger4WCF">https://www.nuget.org/packages/Swagger4WCF</a></li>
+<li>Unity.WCF: <a href="https://www.devtrends.co.uk/blog/introducing-unity.wcf-providing-easy-ioc-integration-for-your-wcf-services">https://www.devtrends.co.uk/blog/introducing-unity.wcf-providing-easy-ioc-integration-for-your-wcf-services</a></li>
+<li>Set StatusCode: <a href="https://codeblitz.wordpress.com/2009/04/27/how-to-host-and-consume-wcf-restful-services/">https://codeblitz.wordpress.com/2009/04/27/how-to-host-and-consume-wcf-restful-services/</a></li>
+<li>API Best Practices: <a href="https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/#">https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/#</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/wcf.html">#wcf</a>
+      <a href="https://rasor.github.io/tag/rest.html">#rest</a>
+      <a href="https://rasor.github.io/tag/swagger.html">#swagger</a>
+      <a href="https://rasor.github.io/tag/depencyinjection.html">#depencyinjection</a>
+      <a href="https://rasor.github.io/tag/dotnet.html">#dotnet</a>
+      <a href="https://rasor.github.io/tag/visualstudio.html">#visualstudio</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

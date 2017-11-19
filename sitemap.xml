@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2017-11-10T23:55:42-00:00</lastmod>
+<lastmod>2017-11-19T12:37:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2017-11-10T23:55:42-00:00</lastmod>
+<lastmod>2017-11-19T12:37:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2017-11-10T23:55:42-00:00</lastmod>
+<lastmod>2017-11-19T12:37:05-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2017-11-10T23:55:42-00:00</lastmod>
+<lastmod>2017-11-19T12:37:05-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/expand-your-wcf-service-with-rest.html</loc>
+<lastmod>2017-11-19T13:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -110,7 +117,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2017-11-05T14:00:00+00:50</lastmod>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -125,6 +132,48 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://rasor.github.io/category/study.html</loc>
 <lastmod>2017-09-30T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/wcf.html</loc>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/rest.html</loc>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/swagger.html</loc>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/depencyinjection.html</loc>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/dotnet.html</loc>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/visualstudio.html</loc>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -270,13 +319,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/visualstudio.html</loc>
-<lastmod>2017-11-05T14:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/tfs.html</loc>
 <lastmod>2017-11-05T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -292,7 +334,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2017-11-05T14:00:00+00:50</lastmod>
+<lastmod>2017-11-19T13:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
