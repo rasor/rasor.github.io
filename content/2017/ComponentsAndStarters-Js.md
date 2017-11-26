@@ -1,3 +1,5 @@
+Title: Components and starters - Javascript
+Date: 2099-01-01 00:00
 
 * [Lib: SweetAlert2 - replacement for JavaScript's popup boxes](https://limonte.github.io/sweetalert2/)
 * [Lib: Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)

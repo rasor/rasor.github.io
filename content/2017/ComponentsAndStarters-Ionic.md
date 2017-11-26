@@ -1,3 +1,5 @@
+Title: Components and starters - Ionic
+Date: 2099-01-01 00:00
 
 * [Component: Angular2 Charts](https://valor-software.com/ng2-charts/)
 * [Plugin: Ionic Storage w. Sqqlite, IndexedDB, WebSQL, and localstorage](https://ionicframework.com/docs/storage/)

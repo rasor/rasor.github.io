@@ -1,3 +1,5 @@
+Title: Google Onboard CPH
+Date: 2099-01-01 00:00
 
 Visiting [Cloud OnBoard - Copenhagen](https://lp.google-mkto.com/2017-OnBoard-Copenhagen)
 

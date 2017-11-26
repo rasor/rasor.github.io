@@ -1,3 +1,5 @@
+Title: Javascript Scrapers
+Date: 2099-01-01 00:00
 
 ## <https://cheerio.js.org/>
 

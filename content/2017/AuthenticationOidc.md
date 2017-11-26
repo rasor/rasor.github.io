@@ -1,5 +1,5 @@
-
-
+Title: OIdC Authentication
+Date: 2099-01-01 00:00
 
 ![SPA host](https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-spa "SPA host")
 
@@ -29,4 +29,4 @@
 * <https://auth.login.yahoo.co.jp/yconnect/v2/.well-known/openid-configuration>
 * <https://www.paypalobjects.com/.well-known/openid-configuration>
 
-The End.
+The End

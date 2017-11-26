@@ -1,3 +1,6 @@
+Title: Ionic Stensils WebComponents
+Date: 2099-01-01 00:00
+
 The Stensils project is a WebComponent builder
 
 Vid

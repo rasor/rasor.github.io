@@ -1,5 +1,5 @@
-
-
+Title: Ionic PWA
+Date: 2099-01-01 00:00
 
 * <https://blog.ionic.io/what-is-a-progressive-web-app/>
 * <http://blog.ionic.io/what-progressive-web-apps-can-do-for-you/>
@@ -13,3 +13,5 @@
 * [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
 
 * [Ionic lazyLoad2-components](https://github.com/mhartington/lazyLoad2-components)
+
+The End

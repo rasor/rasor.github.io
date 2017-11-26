@@ -1,4 +1,5 @@
-e-Commerse Architechture
+Title: e-Commerse Architechture
+Date: 2099-01-01 00:00
 
 ![Extended e-commerce reference architecture 5.2 Online Retail Process](http://www.scielo.cl/fbpe/img/jtaer/v11n1/art03_fig8.jpg "Online Retail Process")
 [A Service-Oriented E-Commerce Reference Architecture](http://www.scielo.cl/scielo.php?script=sci_arttext&pid=S0718-18762016000100003)

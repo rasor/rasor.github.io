@@ -1,3 +1,6 @@
+Title: Custom Typescript Types
+Date: 2099-01-01 00:00
+
 Where
 
 * [Where should I place custom .d.ts files?](https://stackoverflow.com/questions/45382951/where-should-i-place-custom-d-ts-files)

@@ -1,4 +1,6 @@
-Setting up .NET core 2.0 as  Web-BaaS
+Title: Setting up .NET core 2.0 as  Web-BaaS
+Date: 2099-01-01 00:00
+
 #vs2017, #netcore
 
 ## PreRquisites
@@ -39,4 +41,4 @@ Setting up .NET core 2.0 as  Web-BaaS
 * [ASP.NET Core + Angular 2 template for Visual Studio](http://blog.stevensanderson.com/2016/10/04/angular2-template-for-visual-studio/)
 
 
-The End.
+The End

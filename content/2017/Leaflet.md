@@ -1,4 +1,5 @@
-# Using Leaflet with Angular
+Title: Using Leaflet with Angular
+Date: 2099-01-01 00:00
 
  [Leaflet](http://leafletjs.com/) is JavaScript mapping library by [Vladimir Agafonkin (@mourner)](https://twitter.com/mourner).
 

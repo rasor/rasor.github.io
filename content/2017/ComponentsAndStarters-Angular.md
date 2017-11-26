@@ -1,4 +1,5 @@
-
+Title: Components and starters - Angular
+Date: 2099-01-01 00:00
 
 * [Component: Angular2 Charts](https://valor-software.com/ng2-charts/)
 * [Starter: mean-expert-official/fire-starter](https://github.com/mean-expert-official/fire-starter)

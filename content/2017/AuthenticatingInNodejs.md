@@ -1,4 +1,5 @@
-
+Title: Authentication in NodeJs
+Date: 2099-01-01 00:00
 
 * [Guide - Passport - Social Strategy](http://mherman.org/blog/2015/09/26/social-authentication-in-node-dot-js-with-passport/#.WfTLgmhL9hE)
 * [Guide - Passport - Local Strategy - w. mongodb](http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4/#.WfTQ62hL9hE)

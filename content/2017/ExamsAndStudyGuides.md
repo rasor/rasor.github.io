@@ -5,8 +5,6 @@ Tags: #google, #mobile, #web, #pwa
 
 ------------------
 
-
-
 # Links
 
 * <https://developers.google.com/training/certification/mobile-web-specialist/#info>{:target="_blank"}
@@ -21,6 +19,5 @@ Training Web in general
 * API, React, D3 <https://www.freecodecamp.org/>
 * <https://academy.microsoft.com/en-us/professional-program/tracks/front-end-development/>
 * <https://github.com/h5bp/Front-end-Developer-Interview-Questions>
-
 
 The End

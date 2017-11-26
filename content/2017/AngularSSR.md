@@ -1,3 +1,5 @@
+Title: Angular SSR
+Date: 2099-01-01 00:00
 
 * Official HowTo [Angular Universal Integration](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 * [Angular Universal and Firebase Hosting (Server-side Rendering with JavaScript Frameworks)](https://www.youtube.com/watch?v=gxCu5TEmxXE)
@@ -13,3 +15,4 @@
 * [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
 * [stenciljs server-side-rendering](https://stenciljs.com/docs/server-side-rendering)
 
+The End
