@@ -85,6 +85,9 @@
 * [swagger-ui GitHub](https://github.com/swagger-api/swagger-ui)
 * [Using Swagger Editor](https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for)
 * [Swagger Editor](http://editor.swagger.io/#/)
+* [LoopBack - Getting Started](http://loopback.io/getting-started/)
+* [IBM API Connect](https://developer.ibm.com/apiconnect/) - Based on LoopBack
+* [Guide to LoopBack and API Connect](https://www.ibm.com/developerworks/library/wa-get-started-with-loopback-neward-1/index.html?cm_sp=developer-_-apic-dev-center-_-view-guide)
 
 ## API CodeGen
 * API First - [swagger-node](https://github.com/swagger-api/swagger-node)
@@ -93,6 +96,23 @@
 * CodeGen for For Express, Hapi or Restify [generator-swaggerize](https://github.com/krakenjs/generator-swaggerize)
 * Guide - [swaggerize-express in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest-api)
 * [RESTUnited - $](https://restunited.com/)
+* [LoopBack](http://loopback.io/resources/#compare)
+* [Creating FireLoop Models](http://docs.fireloop.io/en/creating-fireloop-models/) - In TypeScript
+
+## LoopBack / IBM API Connect / FireLoop
+* [LoopBack - Getting Started](http://loopback.io/getting-started/)
+* [Use API Explorer](http://loopback.io/doc/en/lb3/Use-API-Explorer.html)
+* [LoopBack - Compare](http://loopback.io/resources/#compare)
+* [mean-expert-official/loopback-sdk-builder](https://github.com/mean-expert-official/loopback-sdk-builder/wiki)
+* [mean-expert-official/loopback-component-realtime](https://github.com/mean-expert-official/loopback-component-realtime) - upgrade LoopBack to RTC
+* [mean-expert-official/fireloop.io](https://github.com/mean-expert-official/fireloop.io)
+* [API Connect](https://developer.ibm.com/apiconnect/)
+* [FireLoop Comparison Table](http://docs.fireloop.io/en/comparison-table/) - 1 command line tool for all (Server, Web Clients, Mobile Clients, SDK Builder)
+* [Creating FireLoop Models](http://docs.fireloop.io/en/creating-fireloop-models/) - In TypeScript
+* [Ionic LoopBack client: Social-app-template](https://market.ionicframework.com/starters/social-app-template)
+
+## Mocking data/API
+* [Mockaroo  - Random Data Generator and API Mocking Tool | JSON / CSV / SQL / Excel](http://www.mockaroo.com/)
 
 ## SDK's - API Clients
 * [Hacker News - Using swagger-js](http://restunited.com/docs/6ltzbse3t0te)
@@ -103,6 +123,7 @@
 ## Building Clients
 
 * [Angular consuming FeathersJS service](https://berndsgn.ch/observables-with-angular-and-feathersjs/)
+* [mean-expert-official/openapi-sdk-builder](https://github.com/mean-expert-official/openapi-sdk-builder)
 
 ## Azure setup
 

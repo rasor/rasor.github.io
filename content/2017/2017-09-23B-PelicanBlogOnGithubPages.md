@@ -1,6 +1,6 @@
 Title: Using Pelican blog on Github pages
 Date: 2017-09-23 20:20
-Modified: 2017-10-27 20:00
+Modified: 2017-11-26 20:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #install
 
@@ -134,6 +134,7 @@ Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
 
 #### Markdown
 
+* [StackEdit – Editor](https://stackedit.io/editor){:target="_blank"}
 * <https://github.com/tchapi/markdown-cheatsheet>{:target="_blank"}
 * [Syntax highlighting languages](http://tinker.kotaweaver.com/blog/?p=152){:target="_blank"}
 * <http://pythonhosted.org/Markdown/reference.html>{:target="_blank"}

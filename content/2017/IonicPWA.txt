@@ -11,3 +11,5 @@
 * [Build A Fast Offline-First PWA with StencilJs](https://blog.manifold.co/build-a-fast-offline-first-pwa-with-stenciljs-596727624e5c)
 * [christiannwamba/stencil-pwa](https://github.com/christiannwamba/stencil-pwa)
 * [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
+
+* [Ionic lazyLoad2-components](https://github.com/mhartington/lazyLoad2-components)

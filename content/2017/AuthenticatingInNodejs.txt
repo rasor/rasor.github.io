@@ -32,6 +32,8 @@
 
 * [Auth0 Ionic 2+ SDK Quickstarts: Login](https://auth0.com/docs/quickstart/native/ionic2)
 * [Auth0 Electron SDK Quickstarts: Login](https://auth0.com/docs/quickstart/native/electron)
+* [Ionic Starter w. WeChat Login](https://market.ionicframework.com/starters/heycommunity)
+* [Ion2auth Ionic starter](https://market.ionicframework.com/starters/ion2auth)
 
 ## Backend
 
