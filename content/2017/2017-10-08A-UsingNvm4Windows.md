@@ -1,4 +1,5 @@
 Title: Using NVM for Windows and Yarn
+Status: published
 Date: 2017-10-08 11:00
 Modified: 2017-10-08 15:00
 Category: DevOp

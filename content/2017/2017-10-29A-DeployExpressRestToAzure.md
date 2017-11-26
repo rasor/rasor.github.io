@@ -1,4 +1,5 @@
 Title: Deploying Express REST API to Azure
+Status: published
 Date: 2017-10-29 21:00
 Modified: 2017-10-30 17:00
 Category: DevOp

@@ -1,4 +1,5 @@
 Title: Expand your WCF service with REST
+Status: published
 Date: 2017-11-19 13:00
 Category: Develop
 Tags: #wcf, #rest, #swagger, #depencyinjection, #dotnet, #visualstudio

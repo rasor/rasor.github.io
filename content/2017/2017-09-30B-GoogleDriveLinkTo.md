@@ -1,4 +1,5 @@
 Title: Use Google Drive as your Desktop
+Status: published
 Date: 2017-09-30 12:00
 Category: Biz
 Tags: #googledrive, #chrome, #desktop

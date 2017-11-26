@@ -1,4 +1,5 @@
 Title: Ngx: Template for Visual Studio 2017
+Status: published
 Date: 2017-09-24 17:00
 Modified: 2017-11-05 14:00
 Category: Develop

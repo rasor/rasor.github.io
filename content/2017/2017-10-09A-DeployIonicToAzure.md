@@ -1,4 +1,5 @@
 Title: Deploying Ionic to Azure
+Status: published
 Date: 2017-10-10 21:00
 Modified: 2017-10-30 17:00
 Category: DevOp

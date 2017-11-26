@@ -1,4 +1,5 @@
 Title: Contributing to Open Source
+Status: published
 Date: 2017-10-14 23:00
 Modified: 2017-10-27 21:00
 Category: Develop

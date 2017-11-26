@@ -43,6 +43,9 @@ SITEMAP = {
 DELETE_OUTPUT_DIRECTORY = False
 PATH = 'content'
 STATIC_PATHS = ['img', 'static', 'pdf']
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
 FAVICON = 'img/favicon.ico'
 CUSTOM_CSS = 'static/custom.css'
 

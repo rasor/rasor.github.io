@@ -1,4 +1,5 @@
 Title: Using Pelican blog on Github pages
+Status: published
 Date: 2017-09-23 20:20
 Modified: 2017-11-26 20:00
 Category: DevOp

@@ -1,4 +1,5 @@
 Title: Using Pelican Themes
+Status: published
 Date: 2017-09-30 11:00
 Modified: 2017-09-30 15:00
 Category: DevOp

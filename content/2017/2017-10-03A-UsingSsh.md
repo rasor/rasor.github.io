@@ -1,4 +1,5 @@
 Title: Using SSH keys - Connect to Ionic Pro
+Status: published
 Date: 2017-10-03 20:30
 Category: Develop
 Tags: #git, #ssh, #ionic
