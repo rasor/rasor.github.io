@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Where Where should I place custom .d.ts files? Allow module definitions to be declared as global vars tsconfig.json leaflet-draw/tsconfig.json In package typings example in azure-mobile-apps-node HowTo write Contribution guide | DefinitelyTyped D. Still great: How to write your own TypeScript Definition Files TypeScript Best practices | DefinitelyTyped module-function …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Custom Typescript Types"/>
+<meta property="og:description" content="Where Where should I place custom .d.ts files? Allow module definitions to be declared as global vars tsconfig.json leaflet-draw/tsconfig.json In package typings example in azure-mobile-apps-node HowTo write Contribution guide | DefinitelyTyped D. Still great: How to write your own TypeScript Definition Files TypeScript Best practices | DefinitelyTyped module-function …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/custom-typescript-types.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="misc"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Custom Typescript Types</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="custom-typescript-types">Custom Typescript Types</h1>
+    <p>
+          Posted on januar 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>Where</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/45382951/where-should-i-place-custom-d-ts-files">Where should I place custom .d.ts files?</a></li>
+<li><a href="https://github.com/Microsoft/TypeScript/issues/3180#issuecomment-102523512">Allow module definitions to be declared as global vars</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/tsconfig-json.html">tsconfig.json</a></li>
+<li><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/leaflet-draw/tsconfig.json">leaflet-draw/tsconfig.json</a></li>
+<li><a href="https://github.com/Azure/azure-mobile-apps-node/blob/master/typings/azure-mobile-apps/azure-mobile-apps.d.ts">In package typings example in azure-mobile-apps-node</a></li>
+</ul>
+<p>HowTo write</p>
+<ul>
+<li><a href="http://definitelytyped.org/guides/contributing.html">Contribution guide | DefinitelyTyped</a></li>
+<li>D. Still great: <a href="http://peter.grman.at/how-to-write-typescript-definition-files/">How to write your own TypeScript Definition Files</a></li>
+<li><a href="https://typescript.codeplex.com/wikipage?title=Writing%20Definition%20%28.d.ts%29%20Files">TypeScript</a></li>
+<li><a href="http://definitelytyped.org/guides/best-practices.html">Best practices | DefinitelyTyped</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-files/templates/module-function-d-ts.html">module-function.d.ts</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-files/by-example.html">By Example</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-files/deep-dive.html">Deep Dive</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html">Do's and Don'ts</a></li>
+</ul>
+<p>Publish</p>
+<ul>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html">Publish new custom @Types - guide</a></li>
+<li><a href="https://github.com/Microsoft/types-publisher">Publish new custom @Types - tool</a></li>
+<li><a href="https://www.npmjs.com/~types">Will be published to @types</a></li>
+<li><a href="http://definitelytyped.org/guides/pull-request.html">Pull Requests - update existing</a></li>
+</ul>
+<p>Consuming</p>
+<ul>
+<li><a href="https://www.typescriptlang.org/docs/handbook/declaration-files/consumption.html">Consumption</a></li>
+</ul>
+<p>Deprecated (D.)</p>
+<ul>
+<li>D. <a href="https://www.npmjs.com/package/typings">typings - The TypeScript Definition Manager</a><br>
+typings@2.1.1: Typings is deprecated in favor of NPM @types</li>
+<li>D. <a href="https://ihack.us/2017/03/22/typescript-2-adding-custom-d-ts-typings-files-for-existing-javascript-modules/">Adding custom.d.ts Typings Files for Existing JavaScript Modules</a></li>
+<li>D. <a href="https://www.bennadel.com/blog/3169-adding-custom-typings-files-d-ts-in-an-angular-2-typescript-application.htm">Adding Custom Typings Files (*.d.ts) In An Angular 2 App</a></li>
+</ul>
+<p>Related</p>
+<ul>
+<li><a href="https://stackoverflow.com/questions/12709074/how-do-you-explicitly-set-a-new-property-on-window-in-typescript?rq=1">How do you explicitly set a new property on <code>window</code> in TypeScript?</a></li>
+<li><a href="https://stackoverflow.com/questions/37297241/typescript-extend-external-javascript-library">extend external Javascript library</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

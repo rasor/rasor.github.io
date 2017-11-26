@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Azure Guides All Azure Guides Guides - Azure Connect Ionic to MBaaS Azure MBaaS Overview Protect MBaaS with authentication Configure MBaaS with Azure AD authentication Add login to Ionic Guides - Azure Rest Authentication and authorization in Azure App Service Guides - WebAPI Core Backend Services for Native Mobile Applications Sample for above …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Azure MBaaS for Ionic"/>
+<meta property="og:description" content="Azure Guides All Azure Guides Guides - Azure Connect Ionic to MBaaS Azure MBaaS Overview Protect MBaaS with authentication Configure MBaaS with Azure AD authentication Add login to Ionic Guides - Azure Rest Authentication and authorization in Azure App Service Guides - WebAPI Core Backend Services for Native Mobile Applications Sample for above …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/azure-mbaas-for-ionic.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="misc"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Azure MBaaS for Ionic</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="azure-mbaas-for-ionic">Azure MBaaS for Ionic</h1>
+    <p>
+          Posted on januar 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+
+
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h2>Azure Guides</h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/documentation/learning-paths/">All Azure Guides</a></li>
+</ul>
+<h2>Guides - Azure Connect Ionic to MBaaS</h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-mobileapps/">Azure MBaaS Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-get-started-users">Protect MBaaS with authentication</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication">Configure MBaaS with Azure AD authentication</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-cordova-how-to-use-client-library">Add login to Ionic</a></li>
+</ul>
+<h2>Guides - Azure Rest</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview">Authentication and authorization in Azure App Service</a></li>
+</ul>
+<h2>Guides - WebAPI Core</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend">Backend Services for Native Mobile Applications</a></li>
+<li><a href="https://github.com/aspnet/Docs/tree/master/aspnetcore/mobile/native-mobile-backend/sample/ToDoApi">Sample for above - ToDoApi Mobile</a></li>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api">Guide - Web API Core</a></li>
+<li><a href="https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials/first-web-api/sample/TodoApi">Sample for above - ToDoApi</a></li>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio">Using Swashbuckle.AspNetCore</a></li>
+<li><a href="https://www.nuget.org/packages/Swashbuckle.AspNetCore/">NuGet Swashbuckle.AspNetCore 1.0.0</a></li>
+</ul>
+<h2>Guides - Node.js</h2>
+<ul>
+<li><a href="https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd">Node.js REST with Mongoose</a></li>
+<li><a href="https://coursetro.com/posts/code/84/Setting-up-an-Angular-4-MEAN-Stack-(Tutorial)">Guide - mean4plus</a></li>
+<li><a href="https://github.com/designcourse/mean4plus">Code -mean4plus</a></li>
+<li><a href="https://docs.feathersjs.com/guides/step-by-step/readme.html">Feathers REST and Sockets</a></li>
+<li><a href="https://www.npmjs.com/package/feathers-cli">feathers-cli</a></li>
+<li><a href="https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html">Generate with Feathers</a></li>
+<li><a href="https://docs.feathersjs.com/guides/step-by-step/generators/gen-app.html">Generate Auth with Feathers</a></li>
+<li><a href="https://docs.feathersjs.com/guides/step-by-step/generators/gen-authentication.html">Add authentication · FeatherJS</a></li>
+<li><a href="https://docs.feathersjs.com/guides/auth/recipe.oauth-basic.html">Recipe: Basic OAuth · FeatherJS</a></li>
+<li><a href="https://github.com/feathersjs/client">feathersjs/client</a></li>
+<li><a href="https://docs.feathersjs.com/api/readme.html">feathers API</a></li>
+<li><a href="https://www.npmjs.com/package/feathers-swagger">feathers-swagger</a></li>
+<li><a href="https://github.com/jaredhanson/passport">OAuth with passport</a></li>
+<li><a href="http://restify.com/docs/home/">Restify</a></li>
+<li><a href="https://github.com/VividcodeIO/restify-example">restify-example</a></li>
+<li><a href="https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/todo/tables/TodoItem.js">Azure-mobile-apps w. auth</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-node-backend-how-to-use-server-sdk#howto-tables-getidentity">SDK for Mobile Apps</a></li>
+<li><a href="https://www.npmjs.com/package/azure-mobile-apps">azure-mobile-apps having build in Swagger docs</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-openidconnect-nodejs">Azure AD sign-in and sign-out using Node.js</a></li>
+<li><a href="https://github.com/AzureAD/passport-azure-ad">passport-azure-ad</a></li>
+<li><a href="https://github.com/AzureAD/azure-activedirectory-library-for-nodejs">azure-activedirectory-library-for-nodejs</a></li>
+</ul>
+<h2>Guides - Azure WebApps</h2>
+<ul>
+<li><a href="https://azure.microsoft.com/en-us/documentation/learning-paths/appservice-webapps/">Azure Web Apps Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/choose-web-site-cloud-service-vm">Azure App Service, Virtual Machines, Service Fabric, and Cloud Services comparison</a></li>
+</ul>
+<h2>Guides - Azure GWs</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/web-sites-integrate-with-vnet">Integrate an app with an Azure Virtual Network</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-hybrid-connections">App Service Hybrid Connections</a></li>
+<li><a href="https://azure.microsoft.com/en-us/documentation/learning-paths/api-management/">APIs Overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-import-api">Import/Export an API as Swagger</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-integrate-internal-vnet-appgateway">Public and Private API with Application Gateway</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-vnet">Public or Private API with virtual networks</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-internal-vnet">Configure Private API (internal virtual networks)</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-mutual-certificates">Certificate authentication to backend</a></li>
+</ul>
+<h2>Connect MBaaS REST to WCF .NET FW</h2>
+<ul>
+<li><a href="https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for">Guide - WCF to Swagger with Swagger4WCF</a></li>
+<li><a href="https://www.nuget.org/packages/Swagger4WCF/">NuGet Swagger4WCF 1.0.0</a></li>
+<li><a href="https://www.nuget.org/packages/SwaggerWcf">NuGet SwaggerWcf 0.1.28</a></li>
+<li><a href="https://github.com/domaindrivendev/Swashbuckle">WebAPI to Swagger - Swashbuckle</a></li>
+<li><a href="https://www.nuget.org/packages/Swashbuckle">NuGet Swashbuckle 5.6.0</a></li>
+<li><a href="http://blog.learningtree.com/documenting-net-web-services-using-openapi-formally-swagger-and-swashbuckle/">Using Swashbuckle</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-add-operations#a-nameadd-operation-aadd-an-operation">Rewrite Url with Azure API Management</a></li>
+</ul>
+<h2>Test/Design Swagger API</h2>
+<ul>
+<li><a href="https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/">Writing REST API</a></li>
+<li><a href="http://idratherbewriting.com/2017/10/05/swaggerhub-collaborative-platform-for-swagger-openapi-projects/">SwaggerHub Article</a></li>
+<li><a href="http://idratherbewriting.com/learnapidoc/pubapis_swaggerhub_smartbear.html#mocking-servers">SwaggerHub Mocks</a></li>
+<li><a href="https://swaggerhub.com/">SwaggerHub - Design API incl CodeGen</a></li>
+<li><a href="https://app.stoplight.io/">Stoplight</a></li>
+<li><a href="https://www.npmjs.com/package/@datafire/swaggerhub/">@datafire/swaggerhub</a></li>
+<li><a href="http://idratherbewriting.com/learnapidoc/pubapis_swagger.html">Swagger UI Article</a></li>
+<li><a href="https://swagger.io/swagger-ui/">Swagger UI Web</a></li>
+<li><a href="https://github.com/swagger-api/swagger-ui">swagger-ui GitHub</a></li>
+<li><a href="https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for">Using Swagger Editor</a></li>
+<li><a href="http://editor.swagger.io/#/">Swagger Editor</a></li>
+<li><a href="http://loopback.io/getting-started/">LoopBack - Getting Started</a></li>
+<li><a href="https://developer.ibm.com/apiconnect/">IBM API Connect</a> - Based on LoopBack</li>
+<li><a href="https://www.ibm.com/developerworks/library/wa-get-started-with-loopback-neward-1/index.html?cm_sp=developer-_-apic-dev-center-_-view-guide">Guide to LoopBack and API Connect</a></li>
+</ul>
+<h2>API CodeGen</h2>
+<ul>
+<li>API First - <a href="https://github.com/swagger-api/swagger-node">swagger-node</a></li>
+<li>API First - <a href="https://github.com/swagger-api/swagger-codegen">swagger-codegen</a></li>
+<li>API First - <a href="https://www.npmjs.com/package/swaggerize-express">swaggerize-express</a></li>
+<li>CodeGen for For Express, Hapi or Restify <a href="https://github.com/krakenjs/generator-swaggerize">generator-swaggerize</a></li>
+<li>Guide - <a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest-api">swaggerize-express in Azure App Service</a></li>
+<li><a href="https://restunited.com/">RESTUnited - $</a></li>
+<li><a href="http://loopback.io/resources/#compare">LoopBack</a></li>
+<li><a href="http://docs.fireloop.io/en/creating-fireloop-models/">Creating FireLoop Models</a> - In TypeScript</li>
+</ul>
+<h2>LoopBack / IBM API Connect / FireLoop</h2>
+<ul>
+<li><a href="http://loopback.io/getting-started/">LoopBack - Getting Started</a></li>
+<li><a href="http://loopback.io/doc/en/lb3/Use-API-Explorer.html">Use API Explorer</a></li>
+<li><a href="http://loopback.io/resources/#compare">LoopBack - Compare</a></li>
+<li><a href="https://github.com/mean-expert-official/loopback-sdk-builder/wiki">mean-expert-official/loopback-sdk-builder</a></li>
+<li><a href="https://github.com/mean-expert-official/loopback-component-realtime">mean-expert-official/loopback-component-realtime</a> - upgrade LoopBack to RTC</li>
+<li><a href="https://github.com/mean-expert-official/fireloop.io">mean-expert-official/fireloop.io</a></li>
+<li><a href="https://developer.ibm.com/apiconnect/">API Connect</a></li>
+<li><a href="http://docs.fireloop.io/en/comparison-table/">FireLoop Comparison Table</a> - 1 command line tool for all (Server, Web Clients, Mobile Clients, SDK Builder)</li>
+<li><a href="http://docs.fireloop.io/en/creating-fireloop-models/">Creating FireLoop Models</a> - In TypeScript</li>
+<li><a href="https://market.ionicframework.com/starters/social-app-template">Ionic LoopBack client: Social-app-template</a></li>
+</ul>
+<h2>Mocking data/API</h2>
+<ul>
+<li><a href="http://www.mockaroo.com/">Mockaroo  - Random Data Generator and API Mocking Tool | JSON / CSV / SQL / Excel</a></li>
+</ul>
+<h2>SDK's - API Clients</h2>
+<ul>
+<li><a href="http://restunited.com/docs/6ltzbse3t0te">Hacker News - Using swagger-js</a></li>
+<li><a href="https://github.com/swagger-api/swagger-js">swagger-js</a></li>
+<li><a href="https://www.soapui.org/news/soapui-5-2-1-released.html">SoapUI 5.2.1 + SwaggerHub</a></li>
+<li><a href="https://github.com/SmartBear/SoapUI-Plugins">SoapUI-Plugins</a></li>
+</ul>
+<h2>Building Clients</h2>
+<ul>
+<li><a href="https://berndsgn.ch/observables-with-angular-and-feathersjs/">Angular consuming FeathersJS service</a></li>
+<li><a href="https://github.com/mean-expert-official/openapi-sdk-builder">mean-expert-official/openapi-sdk-builder</a></li>
+</ul>
+<h2>Azure setup</h2>
+<ul>
+<li><a href="https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Web%2Fsites">Azure App Services - Including MBaaS</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
