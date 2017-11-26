@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/using-pelican-blog-on-github-pages.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-09-23 20:20:00+02:00"/>
-<meta property="article:modified_time" content="2017-11-26 20:00:00+01:00"/>
+<meta property="article:modified_time" content="2017-11-26 21:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#blog"/>
@@ -253,7 +253,10 @@ But you could use NotePad for that matter.</p>
 </li>
 <li>Browse to https://username.github.io</li>
 </ol>
-<p>Tip: If I don't want to publish a file I rename it to <code>.txt</code> - then it won't be visible before I rename it back to <code>.md</code></p>
+<p>Tip: If I don't want to publish a file I rename it to <code>.txt</code> - then it won't be published before I rename it back to <code>.md</code>.<br>
+It will still end up on your host - GitHubPages, so don't keep secrests in there.<br>
+If you want it published for review without being included in any content lists, then you can <a href="http://docs.getpelican.com/en/3.6.3/content.html#publishing-drafts">publish the document as draft</a> with <code>Status: draft</code>.<br>
+Then the document will be put in the <code>/drafts/</code> folder. </p>
 <p>Continue in <a href="https://rasor.github.io/using-pelican-themes.html" target="_blank">Using Pelican Themes</a></p>
 <hr>
 <h3>Links</h3>
