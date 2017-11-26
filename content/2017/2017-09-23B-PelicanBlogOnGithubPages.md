@@ -1,7 +1,7 @@
 Title: Using Pelican blog on Github pages
 Status: published
 Date: 2017-09-23 20:20
-Modified: 2017-11-26 20:00
+Modified: 2017-11-26 21:00
 Category: DevOp
 Tags: #blog, #pelican, #githubpages, #cms, #git, #install
 
@@ -109,7 +109,10 @@ But you could use NotePad for that matter.
     * `.\publish "file new.md published"` [#code](https://github.com/rasor/rasor.github.io/blob/pelican/publish.bat)
 5. Browse to https://username.github.io
 
-Tip: If I don't want to publish a file I rename it to `.txt` - then it won't be visible before I rename it back to `.md`
+Tip: If I don't want to publish a file I rename it to `.txt` - then it won't be published before I rename it back to `.md`.  
+It will still end up on your host - GitHubPages, so don't keep secrests in there.  
+If you want it published for review without being included in any content lists, then you can [publish the document as draft](http://docs.getpelican.com/en/3.6.3/content.html#publishing-drafts) with `Status: draft`.  
+Then the document will be put in the `/drafts/` folder. 
 
 Continue in [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md){:target="_blank"}
 
