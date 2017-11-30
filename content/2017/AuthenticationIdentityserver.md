@@ -3,13 +3,14 @@ Date: 2099-01-01 00:00
 
 ### Creating and protect .NET Core WebAPI 
 
-* [Protecting an API using Client Credentials](http://docs.identityserver.io/en/release/quickstarts/1_client_credentials.html)
+* [Protecting an API using Client Credentials w. samples](http://docs.identityserver.io/en/release/quickstarts/1_client_credentials.html)
 * [Code: Core WebAPI](https://github.com/IdentityServer/IdentityServer4.Samples/tree/release/Quickstarts/1_ClientCredentials/src/Api)
 * -> [Code: Core WebAPI Implicit Flow](https://github.com/IdentityServer/IdentityServer4.Samples/tree/release/Quickstarts/3_ImplicitFlowAuthentication/src/Api)
 * [Code: Core WebAPI Implicit Flow - Google (called external from idp)](https://github.com/IdentityServer/IdentityServer4.Samples/tree/release/Quickstarts/4_ImplicitFlowAuthenticationWithExternal)
 * [Many samples](https://github.com/IdentityServer/IdentityServer4.Samples/tree/release/Quickstarts)
-* [HowTo test you .NET Core API protect by Oidc](https://medium.com/all-technology-feeds/testing-your-asp-net-core-webapi-secured-with-identityserver4-in-postman-97eee976aa16)
+* [HowTo test you .NET Core API protect by Oidc w. samples](https://medium.com/all-technology-feeds/testing-your-asp-net-core-webapi-secured-with-identityserver4-in-postman-97eee976aa16)
 * [Nuget AccessTokenValidation](https://www.nuget.org/packages/IdentityServer4.AccessTokenValidation)
+* [Secure a backend web API - w. samples](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/web-api)
 * [Nuget JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer/)
 
 ### Client
