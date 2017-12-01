@@ -37,6 +37,9 @@ Date: 2099-01-01 00:00
 * [Starter: Ionic3-seed-with-jwt](https://market.ionicframework.com/starters/ionic3-seed-with-jwt)
 * [Starter: Oauth-linkedin-starter](https://market.ionicframework.com/starters/oauth-linkedin-starter)
 * $15 [Starter: TFA using Facebook AccountKit](https://market.ionicframework.com/starters/ionfirebaseaccountkitphoneauth)
+* $15 [Theme: Ionic-login-set-template](https://market.ionicframework.com/themes/ionic-login-set-template)
+* [Starter: Authentication](https://market.ionicframework.com/themes/authentication)
+* [Code: Use Header](https://www.joshmorony.com/when-to-use-providersservicesinjectables-in-ionic/)
 
 ## Pro Self-hosted backends
 * $20 [Starter: Fire-spotify - self host social music](https://market.ionicframework.com/starters/fire-spotify)
@@ -58,5 +61,19 @@ Date: 2099-01-01 00:00
 * [d0cz/CordovaYoutubeVideoPlayer](https://github.com/d0cz/CordovaYoutubeVideoPlayer)
 * [Plugin: Ionic Native Storage](https://ionicframework.com/docs/native/native-storage/)
 * [Plugin: Ionic Storage w. SQLite](https://ionicframework.com/docs/storage/)
+
+## Themes
+* [Starter base: ionic-team/ionic2-app-base](https://github.com/ionic-team/ionic2-app-base)
+* [Color-pack](https://market.ionicframework.com/themes/color-pack)
+* [Blog theme](https://market.ionicframework.com/themes/ion2theme)
+
+## Code
+* [Using the Web Animations API in Ionic 2](https://www.joshmorony.com/using-the-web-animations-api-in-ionic-2/)
+* [Show loading when using Providers](https://www.joshmorony.com/when-to-use-providersservicesinjectables-in-ionic/)
+* [Ionic Tutorials | joshmorony - Build Mobile Apps with HTML5](https://www.joshmorony.com/category/ionic-tutorials/)
+
+## Tools
+* [Ionic-sketch](https://market.ionicframework.com/themes/ionic-sketch)
+* [Top 15 Free SVG Tools](https://colorlib.com/wp/free-svg-editor-tools/)
 
 The End

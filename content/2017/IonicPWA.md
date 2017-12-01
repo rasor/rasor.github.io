@@ -10,8 +10,12 @@ Date: 2099-01-01 00:00
 * [Why Build Progressive Web Apps?](https://www.youtube.com/watch?v=1QILz1lAzWY)
 * [Build A Fast Offline-First PWA with StencilJs](https://blog.manifold.co/build-a-fast-offline-first-pwa-with-stenciljs-596727624e5c)
 * [christiannwamba/stencil-pwa](https://github.com/christiannwamba/stencil-pwa)
-* [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
+* Starter: [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
 
-* [Ionic lazyLoad2-components](https://github.com/mhartington/lazyLoad2-components)
+* Starter: [Ionic lazyLoad2-components](https://github.com/mhartington/lazyLoad2-components)
+
+* Blog: [Production Progressive Web Apps with JavaScript Frameworks | CSS-Tricks](https://css-tricks.com/production-progressive-web-apps-javascript-frameworks/#more-255094)
+
+* Code Demo: [HNPWA](https://hnpwa.com/)
 
 The End
