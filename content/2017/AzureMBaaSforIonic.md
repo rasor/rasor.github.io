@@ -1,5 +1,6 @@
 Title: Azure MBaaS for Ionic
 Date: 2099-01-01 00:00
+Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, #nodejs, #feathers, #restify, #passport, #loopback, #fireloop, #apiconnect, #mockaroo, #soapui, #restunited
 
 ## Azure Guides
 
@@ -18,12 +19,13 @@ Date: 2099-01-01 00:00
 
 ## Guides - WebAPI Core
 
-* [Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend)
-* [Sample for above - ToDoApi Mobile](https://github.com/aspnet/Docs/tree/master/aspnetcore/mobile/native-mobile-backend/sample/ToDoApi)
-* [Guide - Web API Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api)
-* [Sample for above - ToDoApi](https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials/first-web-api/sample/TodoApi)
-* [Using Swashbuckle.AspNetCore](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
-* [NuGet Swashbuckle.AspNetCore 1.0.0](https://www.nuget.org/packages/Swashbuckle.AspNetCore/)
+* MS Doc: [Help protect a web API by using bearer tokens from Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-webapi-dotnet)
+* MS Doc: [Backend Services for Native Mobile Applications](https://docs.microsoft.com/en-us/aspnet/core/mobile/native-mobile-backend)
+* Sample for above: [ToDoApi Mobile](https://github.com/aspnet/Docs/tree/master/aspnetcore/mobile/native-mobile-backend/sample/ToDoApi)
+* MS Doc: [Web API Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api)
+* Sample for above: [ToDoApi](https://github.com/aspnet/Docs/tree/master/aspnetcore/tutorials/first-web-api/sample/TodoApi)
+* MS Doc: [Using Swashbuckle.AspNetCore](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+* NuGet: [Swashbuckle.AspNetCore 1.0.0](https://www.nuget.org/packages/Swashbuckle.AspNetCore/)
 
 ## Guides - Node.js
 
