@@ -25,6 +25,21 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 * Code: [active-directory-angularjs-singlepageapp-dotnet-webapi](https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp-dotnet-webapi)
 * MS Doc: [What's new in Enterprise Application management in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-enterprise-apps-whats-new-azure-portal)
 
+## AAD Authentication Failure - AADSTS70001: Application is not supported for this API version
+
+* [Application is not supported for this API version](https://github.com/murbanski/omniauth-microsoft-office365/issues/4)
+* Nice large article: [Azure Active Directory application model](https://www.microsoftpressstore.com/articles/article.aspx?p=2473127)
+* [Application Registration Portal](https://apps.dev.microsoft.com/#/appList)
+* [Error Code Analyzer](https://apps.dev.microsoft.com/portal/tools/errors)
+* [Should I use the v2.0 endpoint?](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-limitations)
+* [How to register an app with the v2.0 endpoint](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-app-registration)
+* -> [v2.0 Protocols - SPAs using the implicit flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols-implicit)
+* [What's different about the v2.0 endpoint?](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-compare)
+* [Working with the converged Azure AD v2 app model](https://blogs.msdn.microsoft.com/richard_dizeregas_blog/2015/09/04/working-with-the-converged-azure-ad-v2-app-model/)
+* [AAD v2.0 tokens reference](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-tokens)
+* [Scopes, permissions, and consent in the Azure Active Directory v2.0 endpoint](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-scopes)
+* [AAD v2.0 authentication libraries](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-libraries)
+
 ## Guides - WebAPI Core
 
 * MS Doc: [Help protect a web API by using bearer tokens from Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-webapi-dotnet)
