@@ -17,6 +17,14 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 
 * [Authentication and authorization in Azure App Service](https://docs.microsoft.com/en-us/azure/app-service/app-service-authentication-overview)
 
+## Guides - Azure AD
+
+* MS Doc: [AAD for developers](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-developers-guide)
+* MS Doc: [Authentication Scenarios for Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-authentication-scenarios#single-page-application-spa)
+* MS Doc: [Register your application with your Azure Active Directory tenant](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-app-registration)
+* Code: [active-directory-angularjs-singlepageapp-dotnet-webapi](https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp-dotnet-webapi)
+* MS Doc: [What's new in Enterprise Application management in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-enterprise-apps-whats-new-azure-portal)
+
 ## Guides - WebAPI Core
 
 * MS Doc: [Help protect a web API by using bearer tokens from Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-webapi-dotnet)
