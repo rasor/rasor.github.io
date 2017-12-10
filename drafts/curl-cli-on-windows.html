@@ -26,12 +26,12 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="cUrl on Windows is not troublefree to get working, when posting to SSL domains. The End" />
+<meta name="description" content="cUrl on Windows is not troublefree to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …" />
 <meta name="keywords" content="">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="cUrl CLI on Windows"/>
-<meta property="og:description" content="cUrl on Windows is not troublefree to get working, when posting to SSL domains. The End"/>
+<meta property="og:description" content="cUrl on Windows is not troublefree to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/curl-cli-on-windows.html"/>
 <meta property="og:type" content="article"/>
@@ -104,6 +104,45 @@
 
   <div>
     <p>cUrl on Windows is not troublefree to get working, when posting to SSL domains.</p>
+<p>Here is howto:</p>
+<ul>
+<li>Download latest <a href="https://curl.haxx.se/dlwiz/?type=bin&amp;os=Win64&amp;flav=-&amp;ver=*&amp;cpu=x86_64">windows version of cUrl</a>. I used <a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip">curl-7.57.0</a>, which is SSL and SSH enabled.</li>
+<li>Extract the files from the zip file to <code>C:\Program Files\curl-7.57.0\</code></li>
+<li>Add to enviroment PATH (running as admin): <code>C:\Program Files\curl-7.57.0\src</code></li>
+</ul>
+<p>So now you can call the CLI from a prompt</p>
+<div class="highlight"><pre><span></span>curl --version
+
+<span class="c1"># Response:</span>
+<span class="c1"># curl 7.57.0 (x86_64-w64-mingw32) libcurl/7.57.0 OpenSSL/1.0.2h (WinSSL) zlib/1.2.8 WinIDN libssh2/1.7.0_DEV</span>
+<span class="c1"># Release-Date: 2017-11-30</span>
+<span class="c1"># Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp scp sftp smtp smtps telnet tftp</span>
+<span class="c1">#Features: AsynchDNS IDN IPv6 Largefile SSPI Kerberos SPNEGO NTLM SSL libz TLS-SRP HTTPS-proxy MultiSSL</span>
+
+<span class="c1"># Call an API:</span>
+curl -X GET <span class="s2">&quot;http://petstore.swagger.io/v2/pet/1&quot;</span> -H <span class="s2">&quot;accept: application/json&quot;</span>
+
+<span class="c1"># Response:</span>
+<span class="c1"># {&quot;id&quot;:1,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;1&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;1&quot;}</span>
+</pre></div>
+
+
+<p>But if you try an SSL endpoint you get an error</p>
+<div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://petstore.swagger.io/v2/pet/1&quot;</span> -H <span class="s2">&quot;accept: application/json&quot;</span>
+
+<span class="c1"># Response:</span>
+<span class="c1"># curl: (60) SSL certificate problem: unable to get local issuer certificate</span>
+<span class="c1"># More details here: https://curl.haxx.se/docs/sslcerts.html</span>
+</pre></div>
+
+
+<p>The reason seems to be that <a href="https://laracasts.com/discuss/channels/general-discussion/curl-error-60-ssl-certificate-problem-unable-to-get-local-issuer-certificate/replies/95548">cUrl can't access Windows's certificate store</a>.</p>
+<p>HowTo fix curl: (60) SSL certificate problem:</p>
+<ul>
+<li>Let curl read allowed SSL providers from file <a href="https://curl.haxx.se/docs/caextract.html">cacert.pem</a>. Put the file in the <code>\src\</code> folder.</li>
+<li>Create <a href="https://curl.haxx.se/docs/sslcerts.html">new enviroment variable</a> (running as admin) <code>set CURL_CA_BUNDLE=C:\Program Files\curl-7.57.0\src\cacert.pem</code></li>
+<li>Refresh environment: <code>refreshenv</code></li>
+</ul>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
