@@ -7,5 +7,6 @@ Date: 2099-01-01 00:00
 * $36 [Ionic Starter using Chart.js and movements: Quizionic3](https://market.ionicframework.com/starters/quizionic3)
 * [Lib: Recognition of gestures API - mgechev/movement.js](https://github.com/mgechev/movement.js)
 * [Lib: mgechev/javascript-algorithms](https://github.com/mgechev/javascript-algorithms/tree/master/src)
+* [Lib: Snap.svg](http://snapsvg.io/start/)
 
 The End
