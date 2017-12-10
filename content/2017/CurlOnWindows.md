@@ -45,6 +45,4 @@ HowTo fix curl: (60) SSL certificate problem:
 * Create [new enviroment variable](https://curl.haxx.se/docs/sslcerts.html) (running as admin) `set CURL_CA_BUNDLE=C:\Program Files\curl-7.57.0\src\cacert.pem`
 * Refresh environment: `refreshenv`
 
-
-
 The End
