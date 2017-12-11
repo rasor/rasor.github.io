@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-11-19T13:00:00+01:00</updated><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-11-19T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-12-11T21:00:00+01:00</updated><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2017-12-11T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
+&lt;p&gt;Here is howto:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download latest &lt;a href="https://curl.haxx.se/dlwiz/?type=bin&amp;amp;os=Win64&amp;amp;flav=-&amp;amp;ver=*&amp;amp;cpu=x86_64"&gt;windows version of cUrl&lt;/a&gt;. I used &lt;a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip"&gt;curl-7.57.0&lt;/a&gt;, which is SSL and SSH enabled.&lt;/li&gt;
+&lt;li&gt;Extract the files from the zip file to &lt;code&gt;C:\Program Files\curl-7.57.0\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add to …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
+&lt;p&gt;Here is howto:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Download latest &lt;a href="https://curl.haxx.se/dlwiz/?type=bin&amp;amp;os=Win64&amp;amp;flav=-&amp;amp;ver=*&amp;amp;cpu=x86_64"&gt;windows version of cUrl&lt;/a&gt;. I used &lt;a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip"&gt;curl-7.57.0&lt;/a&gt;, which is SSL and SSH enabled.&lt;/li&gt;
+&lt;li&gt;Extract the files from the zip file to &lt;code&gt;C:\Program Files\curl-7.57.0\&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add to enviroment PATH (running as admin): &lt;code&gt;C:\Program Files\curl-7.57.0\src&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So now you can call the CLI from a prompt&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl --version
+
+&lt;span class="c1"&gt;# Response:&lt;/span&gt;
+&lt;span class="c1"&gt;# curl 7.57.0 (x86_64-w64-mingw32) libcurl/7.57.0 OpenSSL/1.0.2h (WinSSL) zlib/1.2.8 WinIDN libssh2/1.7.0_DEV&lt;/span&gt;
+&lt;span class="c1"&gt;# Release-Date: 2017-11-30&lt;/span&gt;
+&lt;span class="c1"&gt;# Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp scp sftp smtp smtps telnet tftp&lt;/span&gt;
+&lt;span class="c1"&gt;#Features: AsynchDNS IDN IPv6 Largefile SSPI Kerberos SPNEGO NTLM SSL libz TLS-SRP HTTPS-proxy MultiSSL&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Call an API:&lt;/span&gt;
+curl -X GET &lt;span class="s2"&gt;&amp;quot;http://petstore.swagger.io/v2/pet/1&amp;quot;&lt;/span&gt; -H &lt;span class="s2"&gt;&amp;quot;accept: application/json&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Response:&lt;/span&gt;
+&lt;span class="c1"&gt;# {&amp;quot;id&amp;quot;:1,&amp;quot;category&amp;quot;:{&amp;quot;id&amp;quot;:1,&amp;quot;name&amp;quot;:&amp;quot;string&amp;quot;},&amp;quot;name&amp;quot;:&amp;quot;1&amp;quot;,&amp;quot;photoUrls&amp;quot;:[&amp;quot;string&amp;quot;],&amp;quot;tags&amp;quot;:[{&amp;quot;id&amp;quot;:1,&amp;quot;name&amp;quot;:&amp;quot;string&amp;quot;}],&amp;quot;status&amp;quot;:&amp;quot;1&amp;quot;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;But if you try an SSL endpoint you get an error&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -X GET &lt;span class="s2"&gt;&amp;quot;https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Response:&lt;/span&gt;
+&lt;span class="c1"&gt;# curl: (60) SSL certificate problem: unable to get local issuer certificate&lt;/span&gt;
+&lt;span class="c1"&gt;# More details here: https://curl.haxx.se/docs/sslcerts.html&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The reason seems to be that &lt;a href="https://laracasts.com/discuss/channels/general-discussion/curl-error-60-ssl-certificate-problem-unable-to-get-local-issuer-certificate/replies/95548"&gt;cUrl can't access Windows's certificate store&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;HowTo fix curl: (60) SSL certificate problem:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Let curl read allowed SSL providers from file &lt;a href="https://curl.haxx.se/docs/caextract.html"&gt;cacert.pem&lt;/a&gt;. Put the file in the &lt;code&gt;\src\&lt;/code&gt; folder.&lt;/li&gt;
+&lt;li&gt;Create &lt;a href="https://curl.haxx.se/docs/sslcerts.html"&gt;new enviroment variable&lt;/a&gt; (running as admin) &lt;code&gt;set CURL_CA_BUNDLE=C:\Program Files\curl-7.57.0\src\cacert.pem&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Refresh environment: &lt;code&gt;refreshenv&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl -X GET &lt;span class="s2"&gt;&amp;quot;https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Response:&lt;/span&gt;
+&lt;span class="c1"&gt;# {&lt;/span&gt;
+&lt;span class="c1"&gt;#    &amp;quot;by&amp;quot; : &amp;quot;dhouston&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#    &amp;quot;descendants&amp;quot; : 71,&lt;/span&gt;
+&lt;span class="c1"&gt;#    &amp;quot;id&amp;quot; : 8863,...&lt;/span&gt;
+&lt;span class="c1"&gt;# }&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#curl"></category><category term="#windows"></category><category term="#shell"></category></entry><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-11-19T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
 Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;

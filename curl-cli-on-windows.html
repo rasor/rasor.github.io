@@ -26,19 +26,22 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="cUrl on Windows is not troublefree to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …" />
-<meta name="keywords" content="">
+<meta name="description" content="cUrl on Windows is not trouble-free to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …" />
+<meta name="keywords" content="#curl, #windows, #shell">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="cUrl CLI on Windows"/>
-<meta property="og:description" content="cUrl on Windows is not troublefree to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …"/>
+<meta property="og:description" content="cUrl on Windows is not trouble-free to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rasor.github.io/drafts/curl-cli-on-windows.html"/>
+<meta property="og:url" content="https://rasor.github.io/curl-cli-on-windows.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:published_time" content="2017-12-11 21:00:00+01:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
-<meta property="article:section" content="misc"/>
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#curl"/>
+<meta property="article:tag" content="#windows"/>
+<meta property="article:tag" content="#shell"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; cUrl CLI on Windows</title>
@@ -93,7 +96,7 @@
       
     <h1 id="curl-cli-on-windows">cUrl CLI on Windows</h1>
     <p>
-          Posted on januar 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+          Posted on december 11, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
 
 
@@ -103,7 +106,7 @@
 
 
   <div>
-    <p>cUrl on Windows is not troublefree to get working, when posting to SSL domains.</p>
+    <p>cUrl on Windows is not trouble-free to get working, when posting to SSL domains.</p>
 <p>Here is howto:</p>
 <ul>
 <li>Download latest <a href="https://curl.haxx.se/dlwiz/?type=bin&amp;os=Win64&amp;flav=-&amp;ver=*&amp;cpu=x86_64">windows version of cUrl</a>. I used <a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip">curl-7.57.0</a>, which is SSL and SSH enabled.</li>
@@ -128,7 +131,7 @@ curl -X GET <span class="s2">&quot;http://petstore.swagger.io/v2/pet/1&quot;</sp
 
 
 <p>But if you try an SSL endpoint you get an error</p>
-<div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://petstore.swagger.io/v2/pet/1&quot;</span> -H <span class="s2">&quot;accept: application/json&quot;</span>
+<div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty&quot;</span>
 
 <span class="c1"># Response:</span>
 <span class="c1"># curl: (60) SSL certificate problem: unable to get local issuer certificate</span>
@@ -143,10 +146,24 @@ curl -X GET <span class="s2">&quot;http://petstore.swagger.io/v2/pet/1&quot;</sp
 <li>Create <a href="https://curl.haxx.se/docs/sslcerts.html">new enviroment variable</a> (running as admin) <code>set CURL_CA_BUNDLE=C:\Program Files\curl-7.57.0\src\cacert.pem</code></li>
 <li>Refresh environment: <code>refreshenv</code></li>
 </ul>
+<div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty&quot;</span>
+
+<span class="c1"># Response:</span>
+<span class="c1"># {</span>
+<span class="c1">#    &quot;by&quot; : &quot;dhouston&quot;,</span>
+<span class="c1">#    &quot;descendants&quot; : 71,</span>
+<span class="c1">#    &quot;id&quot; : 8863,...</span>
+<span class="c1"># }</span>
+</pre></div>
+
+
 <p>The End</p>
   </div>
   <div class="tag-cloud">
     <p>
+      <a href="https://rasor.github.io/tag/curl.html">#curl</a>
+      <a href="https://rasor.github.io/tag/windows.html">#windows</a>
+      <a href="https://rasor.github.io/tag/shell.html">#shell</a>
     </p>
   </div>
 
