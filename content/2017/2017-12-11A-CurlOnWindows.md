@@ -1,7 +1,10 @@
 Title: cUrl CLI on Windows
-Date: 2099-01-01 00:00
+Status: published
+Date: 2017-12-11 21:00
+Category: Develop
+Tags: #curl, #windows, #shell
 
-cUrl on Windows is not troublefree to get working, when posting to SSL domains.
+cUrl on Windows is not trouble-free to get working, when posting to SSL domains.
 
 Here is howto:
 
@@ -30,7 +33,7 @@ curl -X GET "http://petstore.swagger.io/v2/pet/1" -H "accept: application/json"
 But if you try an SSL endpoint you get an error
 
 ```bash
-curl -X GET "https://petstore.swagger.io/v2/pet/1" -H "accept: application/json"
+curl -X GET "https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty"
 
 # Response:
 # curl: (60) SSL certificate problem: unable to get local issuer certificate
@@ -44,5 +47,16 @@ HowTo fix curl: (60) SSL certificate problem:
 * Let curl read allowed SSL providers from file [cacert.pem](https://curl.haxx.se/docs/caextract.html). Put the file in the `\src\` folder.
 * Create [new enviroment variable](https://curl.haxx.se/docs/sslcerts.html) (running as admin) `set CURL_CA_BUNDLE=C:\Program Files\curl-7.57.0\src\cacert.pem`
 * Refresh environment: `refreshenv`
+
+```bash
+curl -X GET "https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty"
+
+# Response:
+# {
+#    "by" : "dhouston",
+#    "descendants" : 71,
+#    "id" : 8863,...
+# }
+```
 
 The End
