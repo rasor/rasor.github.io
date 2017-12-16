@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/expand-your-wcf-service-with-rest.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-11-19 13:00:00+01:00"/>
-<meta property="article:modified_time" content=""/>
+<meta property="article:modified_time" content="2017-12-16 10:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#wcf"/>
@@ -104,6 +104,7 @@
 
 
       </br>
+        Updated: december 16, 2017
     </p>
   </header>
 
@@ -366,7 +367,27 @@ Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This h
 </pre></div>
 
 
-<h2>Refs</h2>
+<h2>9. CORS</h2>
+<p>To be able to call the API you need to allow clients to call it. You can do that already in global.asax</p>
+<div class="highlight"><pre><span></span><span class="k">protected</span> <span class="k">void</span> <span class="nf">Application_BeginRequest</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Access-Control-Allow-Origin&quot;</span><span class="p">,</span> <span class="s">&quot;http://localhost&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">HttpMethod</span> <span class="p">==</span> <span class="s">&quot;OPTIONS&quot;</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Access-Control-Allow-Methods&quot;</span><span class="p">,</span> <span class="s">&quot;POST, PUT, DELETE&quot;</span><span class="p">);</span>
+
+        <span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Access-Control-Allow-Headers&quot;</span><span class="p">,</span> <span class="s">&quot;Content-Type, Accept&quot;</span><span class="p">);</span>
+        <span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">AddHeader</span><span class="p">(</span><span class="s">&quot;Access-Control-Max-Age&quot;</span><span class="p">,</span> <span class="s">&quot;1728000&quot;</span><span class="p">);</span>
+        <span class="n">HttpContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Response</span><span class="p">.</span><span class="n">End</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>10. Security</h2>
+<p>Towards a SPA or mobile you could use OAuth as demonstrated in <a href="https://www.codeproject.com/Tips/372422/Secure-WCF-RESTful-service-using-OAUTH">Secure WCF RESTful service using OAUTH</a><br>
+Towards a partner you could use certificates as demonstrated in <a href="http://hiteshkesharia.blogspot.dk/2014/01/secure-wcf-rest-service-with-x509.html">Secure a WCF REST Service with an X509 Certificate, hosted on IIS</a>  </p>
+<h2>Refs / Credits</h2>
 <ul>
 <li>Postman: <a href="https://www.getpostman.com/">https://www.getpostman.com/</a> or <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en">https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en</a></li>
 <li>Swagger4WCF: <a href="https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for">https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for</a></li>
@@ -374,6 +395,9 @@ Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This h
 <li>Unity.WCF: <a href="https://www.devtrends.co.uk/blog/introducing-unity.wcf-providing-easy-ioc-integration-for-your-wcf-services">https://www.devtrends.co.uk/blog/introducing-unity.wcf-providing-easy-ioc-integration-for-your-wcf-services</a></li>
 <li>Set StatusCode: <a href="https://codeblitz.wordpress.com/2009/04/27/how-to-host-and-consume-wcf-restful-services/">https://codeblitz.wordpress.com/2009/04/27/how-to-host-and-consume-wcf-restful-services/</a></li>
 <li>API Best Practices: <a href="https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/#">https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/#</a></li>
+<li>Enabling CORS in WCF: <a href="https://www.codeproject.com/Articles/845474/Enabling-CORS-in-WCF">https://www.codeproject.com/Articles/845474/Enabling-CORS-in-WCF</a></li>
+<li>Official WCF REST Docs: <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web">https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web</a></li>
+<li>WCF REST with ASP.NET routing: <a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration">https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration</a></li>
 </ul>
 <p>The End</p>
   </div>
