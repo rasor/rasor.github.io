@@ -1,6 +1,7 @@
 Title: Expand your WCF service with REST
 Status: published
 Date: 2017-11-19 13:00
+Modified: 2017-12-16 10:00
 Category: Develop
 Tags: #wcf, #rest, #swagger, #depencyinjection, #dotnet, #visualstudio
 
@@ -206,7 +207,31 @@ This guide is based on Visusal Studio 2017.4
           description: "Book not found"
 ```
 
-## Refs
+## 9. CORS
+
+To be able to call the API you need to allow clients to call it. You can do that already in global.asax
+
+```csharp
+protected void Application_BeginRequest(object sender, EventArgs e)
+{
+    HttpContext.Current.Response.AddHeader("Access-Control-Allow-Origin", "http://localhost");
+    if (HttpContext.Current.Request.HttpMethod == "OPTIONS")
+    {
+        HttpContext.Current.Response.AddHeader("Access-Control-Allow-Methods", "POST, PUT, DELETE");
+
+        HttpContext.Current.Response.AddHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
+        HttpContext.Current.Response.AddHeader("Access-Control-Max-Age", "1728000");
+        HttpContext.Current.Response.End();
+    }
+}
+```
+
+## 10. Security
+
+Towards a SPA or mobile you could use OAuth as demonstrated in [Secure WCF RESTful service using OAUTH](https://www.codeproject.com/Tips/372422/Secure-WCF-RESTful-service-using-OAUTH)  
+Towards a partner you could use certificates as demonstrated in [Secure a WCF REST Service with an X509 Certificate, hosted on IIS](http://hiteshkesharia.blogspot.dk/2014/01/secure-wcf-rest-service-with-x509.html)  
+
+## Refs / Credits
 
 - Postman: <https://www.getpostman.com/> or <https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en>
 - Swagger4WCF: <https://www.codeproject.com/Tips/1190441/How-to-generate-basic-swagger-yaml-description-for>
@@ -214,5 +239,8 @@ This guide is based on Visusal Studio 2017.4
 - Unity.WCF: <https://www.devtrends.co.uk/blog/introducing-unity.wcf-providing-easy-ioc-integration-for-your-wcf-services>
 - Set StatusCode: <https://codeblitz.wordpress.com/2009/04/27/how-to-host-and-consume-wcf-restful-services/>
 - API Best Practices: <https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/#>
+- Enabling CORS in WCF: <https://www.codeproject.com/Articles/845474/Enabling-CORS-in-WCF>
+- Official WCF REST Docs: <https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web>
+- WCF REST with ASP.NET routing: <https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration>
 
 The End
