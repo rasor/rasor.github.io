@@ -157,14 +157,24 @@
 </pre></div>
 
 
+<p>... or just replace the whole file.</p>
 <ol>
 <li>
 <p><code>src/index.html</code></p>
 </li>
 <li>
-<p>Before main.js add</p>
+<p>Before cordova.js add</p>
 </li>
 </ol>
+<div class="highlight"><pre><span></span>  &lt;!-- add to homescreen for ios --&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;
+</pre></div>
+
+
+<ul>
+<li>Before main.js add</li>
+</ul>
 <div class="highlight"><pre><span></span>  <span class="c">&lt;!-- The vendor js is generated during the build process</span>
 <span class="c">       It contains all of the dependencies in node_modules --&gt;</span>
   <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;build/vendor.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
