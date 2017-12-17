@@ -37,7 +37,16 @@ If you have committed files in `www\` you need to remove tracked files
     './build/vendor.js',
 ```
 
+... or just replace the whole file.
+
 6. `src/index.html`
+
+* Before cordova.js add
+```
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+```
 
 * Before main.js add
 ```
