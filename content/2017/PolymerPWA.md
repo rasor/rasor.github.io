@@ -8,5 +8,6 @@ Date: 2099-01-01 00:00
 * [News Progressive Web App - Polymer Project](https://www.polymer-project.org/blog/2017-02-13-news-pwa)
 * [Polymer NEWS demo](https://www.youtube.com/watch?v=Dsv5NT4PYG0)
 * [Building Progressive Web Apps](https://books.google.dk/books/about/Building_Progressive_Web_Apps.html?id=H8o0DwAAQBAJ&printsec=frontcover&source=kp_read_button&redir_esc=y#v=onepage&q&f=false)
+* [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
 
 The End

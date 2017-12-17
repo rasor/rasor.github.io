@@ -17,5 +17,7 @@ Date: 2099-01-01 00:00
 * Blog: [Production Progressive Web Apps with JavaScript Frameworks | CSS-Tricks](https://css-tricks.com/production-progressive-web-apps-javascript-frameworks/#more-255094)
 
 * Code Demo: [HNPWA](https://hnpwa.com/)
+* [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
+* Book: [Beginning Progressive Web App Development](https://www.apress.com/gp/book/9781484230893)
 
 The End
