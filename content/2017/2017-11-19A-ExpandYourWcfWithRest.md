@@ -231,6 +231,10 @@ protected void Application_BeginRequest(object sender, EventArgs e)
 Towards a SPA or mobile you could use OAuth as demonstrated in [Secure WCF RESTful service using OAUTH](https://www.codeproject.com/Tips/372422/Secure-WCF-RESTful-service-using-OAUTH)  
 Towards a partner you could use certificates as demonstrated in [Secure a WCF REST Service with an X509 Certificate, hosted on IIS](http://hiteshkesharia.blogspot.dk/2014/01/secure-wcf-rest-service-with-x509.html)  
 
+## 11. Adding Swagger examples
+
+To make your API clearer to understand you can add [Swagger examples](https://swagger.io/docs/specification/2-0/adding-examples/)
+
 ## Refs / Credits
 
 - Postman: <https://www.getpostman.com/> or <https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en>
