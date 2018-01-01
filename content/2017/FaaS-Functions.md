@@ -1,4 +1,4 @@
-Title: FaaS - Functions as a Service
+Title: FaaS - Functions as a Service - Serveless
 Date: 2017-10-05 22:30
 Category: Study
 Tags: #google, #mobile, #web, #pwa

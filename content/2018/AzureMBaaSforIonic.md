@@ -52,6 +52,7 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 
 ## Guides - Node.js
 
+* [KeystoneJS over Express and MongoDB](http://keystonejs.com/docs/getting-started/)
 * [Node.js REST with Mongoose](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd)
 * [Guide - mean4plus](https://coursetro.com/posts/code/84/Setting-up-an-Angular-4-MEAN-Stack-(Tutorial))
 * [Code -mean4plus](https://github.com/designcourse/mean4plus)

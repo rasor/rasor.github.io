@@ -1,5 +1,7 @@
-Title: Angular Animations
+Title: Animations
 Date: 2099-01-01 00:00
+
+## Angular
 
 * [Angular Docs: Animations](https://angular.io/guide/animations)
 * [Blog: Using an SVG for Animation in Ionic](https://www.joshmorony.com/using-an-svg-for-animation-in-ionic/)
@@ -13,5 +15,9 @@ Date: 2099-01-01 00:00
 * [Code: ionic-team/ionic - animation.ts](https://github.com/ionic-team/ionic/blob/master/src/animations/animation.ts)
 * [Ionic Component: Tile-navigation](https://market.ionicframework.com/themes/tile-navigation)
 * [Vid: of above](https://www.youtube.com/watch?v=MONPo0wJcn0)
+
+## React
+
+* Lib: [React VR Animations](https://facebook.github.io/react-vr/docs/animations.html)
 
 The End

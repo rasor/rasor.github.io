@@ -1,7 +1,7 @@
-Title: Exams and Study guides
-Date: 2017-10-05 22:30
+Title: Exams, Study guides and eBooks
+Date: 2099-01-01 00:00
 Category: Study
-Tags: #google, #mobile, #web, #pwa
+Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks
 
 ------------------
 
@@ -19,5 +19,9 @@ Training Web in general
 * API, React, D3 <https://www.freecodecamp.org/>
 * <https://academy.microsoft.com/en-us/professional-program/tracks/front-end-development/>
 * <https://github.com/h5bp/Front-end-Developer-Interview-Questions>
+
+Ebooks
+* [Ebooks Syncfusion](https://www.syncfusion.com/resources/techportal/ebooks)
+* [Rxjs 5 ultimate · GitBook](https://www.gitbook.com/book/chrisnoring/rxjs-5-ultimate/details)
 
 The End
