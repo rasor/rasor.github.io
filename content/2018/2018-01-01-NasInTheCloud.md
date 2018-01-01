@@ -6,11 +6,11 @@ Tags: #nas, #storage, #cloud
 
 For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.
 
-I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
 One of those providers being pCloud.
 They have for long been sending me notices about my free space (10 GB) running out.
-This time I acted on one such notice and was sent to [Cloud Storage Pricing & Cost, Cloud Storage Plans](https://www.pcloud.com/cloud-storage-pricing-plans.html)
-![Cloud Storage Pricing & Cost, Cloud Storage Plans](img/2018/2017-12-31-pCloud.PNG)
+This time I acted on one such notice and was sent to  
+[![Cloud Storage Pricing](img/2018/2017-12-31-pCloud.PNG)](https://www.pcloud.com/cloud-storage-pricing-plans.html)
 
 Now it was possible to get 2 TB storage for a onetime payment for a lifetime period for a price probably lower than I could get a mirrowed disk solution at home for.  
 Price: EUR 250,-
