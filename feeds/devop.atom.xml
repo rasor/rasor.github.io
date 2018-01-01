@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-11-26T21:00:00+01:00</updated><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-01T12:00:00+01:00</updated><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+&lt;p&gt;I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+One of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+&lt;p&gt;I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+One of those providers being pCloud.
+They have for long been sending me notices about my free space (10 GB) running out.
+This time I acted on one such notice and was sent to &lt;a href="https://www.pcloud.com/cloud-storage-pricing-plans.html"&gt;Cloud Storage Pricing &amp;amp; Cost, Cloud Storage Plans&lt;/a&gt;
+&lt;img alt="Cloud Storage Pricing &amp;amp; Cost, Cloud Storage Plans" src="img/2018/2017-12-31-pCloud.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;Now it was possible to get 2 TB storage for a onetime payment for a lifetime period for a price probably lower than I could get a mirrowed disk solution at home for.&lt;br&gt;
+Price: EUR 250,-&lt;/p&gt;
+&lt;h3&gt;Pros&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Storage is striped or mirrowed on 5 disks - not only 2&lt;/li&gt;
+&lt;li&gt;If one disk dies, I won't have to replace it - that's managed and included&lt;/li&gt;
+&lt;li&gt;30 days backup - if wannacry hits my PC and encrypts my drives, I can just restore that cloud drive with a click&lt;/li&gt;
+&lt;li&gt;I can share folders with other people without affecting adding cost for them&lt;/li&gt;
+&lt;li&gt;Apps for IOS and Android&lt;/li&gt;
+&lt;li&gt;Two phase authentication using my facebook account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bandwitdh much lower than local wifi or USB&lt;/li&gt;
+&lt;li&gt;The could drive takes up some space for caching on your local drive, which it uses for sync, so you won't have 2 TB locally, only whatever you assing for your cache&lt;/li&gt;
+&lt;li&gt;Seems to not the best integration with uppload photos from IOS, but neither would a local NAS be, probably&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So finally I won't have to worry about loosing photos and other content.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#nas"></category><category term="#storage"></category><category term="#cloud"></category></entry><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;

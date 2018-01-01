@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2017-12-16T10:00:00+01:00</updated><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2017-12-11T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-01T12:00:00+01:00</updated><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+&lt;p&gt;I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+One of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+&lt;p&gt;I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+One of those providers being pCloud.
+They have for long been sending me notices about my free space (10 GB) running out.
+This time I acted on one such notice and was sent to &lt;a href="https://www.pcloud.com/cloud-storage-pricing-plans.html"&gt;Cloud Storage Pricing &amp;amp; Cost, Cloud Storage Plans&lt;/a&gt;
+&lt;img alt="Cloud Storage Pricing &amp;amp; Cost, Cloud Storage Plans" src="img/2018/2017-12-31-pCloud.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;Now it was possible to get 2 TB storage for a onetime payment for a lifetime period for a price probably lower than I could get a mirrowed disk solution at home for.&lt;br&gt;
+Price: EUR 250,-&lt;/p&gt;
+&lt;h3&gt;Pros&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Storage is striped or mirrowed on 5 disks - not only 2&lt;/li&gt;
+&lt;li&gt;If one disk dies, I won't have to replace it - that's managed and included&lt;/li&gt;
+&lt;li&gt;30 days backup - if wannacry hits my PC and encrypts my drives, I can just restore that cloud drive with a click&lt;/li&gt;
+&lt;li&gt;I can share folders with other people without affecting adding cost for them&lt;/li&gt;
+&lt;li&gt;Apps for IOS and Android&lt;/li&gt;
+&lt;li&gt;Two phase authentication using my facebook account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Bandwitdh much lower than local wifi or USB&lt;/li&gt;
+&lt;li&gt;The could drive takes up some space for caching on your local drive, which it uses for sync, so you won't have 2 TB locally, only whatever you assing for your cache&lt;/li&gt;
+&lt;li&gt;Seems to not the best integration with uppload photos from IOS, but neither would a local NAS be, probably&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So finally I won't have to worry about loosing photos and other content.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#nas"></category><category term="#storage"></category><category term="#cloud"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2017-12-11T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
 &lt;p&gt;Here is howto:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Download latest &lt;a href="https://curl.haxx.se/dlwiz/?type=bin&amp;amp;os=Win64&amp;amp;flav=-&amp;amp;ver=*&amp;amp;cpu=x86_64"&gt;windows version of cUrl&lt;/a&gt;. I used &lt;a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip"&gt;curl-7.57.0&lt;/a&gt;, which is SSL and SSH enabled.&lt;/li&gt;
