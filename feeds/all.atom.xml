@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-01T12:00:00+01:00</updated><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
-&lt;p&gt;I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+&lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
 One of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
-&lt;p&gt;I have I-drives at several providers, since the free veersion does nog give much space compared to what you often wants to backup.
+&lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
 One of those providers being pCloud.
 They have for long been sending me notices about my free space (10 GB) running out.
-This time I acted on one such notice and was sent to &lt;a href="https://www.pcloud.com/cloud-storage-pricing-plans.html"&gt;Cloud Storage Pricing &amp;amp; Cost, Cloud Storage Plans&lt;/a&gt;
-&lt;img alt="Cloud Storage Pricing &amp;amp; Cost, Cloud Storage Plans" src="img/2018/2017-12-31-pCloud.PNG"&gt;&lt;/p&gt;
+This time I acted on one such notice and was sent to&lt;br&gt;
+&lt;a href="https://www.pcloud.com/cloud-storage-pricing-plans.html"&gt;&lt;img alt="Cloud Storage Pricing" src="img/2018/2017-12-31-pCloud.PNG"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Now it was possible to get 2 TB storage for a onetime payment for a lifetime period for a price probably lower than I could get a mirrowed disk solution at home for.&lt;br&gt;
 Price: EUR 250,-&lt;/p&gt;
 &lt;h3&gt;Pros&lt;/h3&gt;
