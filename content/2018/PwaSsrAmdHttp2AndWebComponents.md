@@ -1,5 +1,14 @@
-Title: PWA, SSR and AMD with Polymer, Ionic Stencils, Angular and Google
+Title: PWA, SSR, AMD and HTTP/2 with Polymer, Ionic Stencils, Angular and Google
 Date: 2099-01-01 00:00
+
+HTTP/2
+* [What is HTTP/2 and how to deploy it?](https://www.symfony.fi/entry/what-is-http-2-and-how-to-deploy)
+
+Prerender.io (only prerendercache) / Netlify (host with prerendercache)
+* SaaS: [Prerender - AngularJS SEO / ASP.NET](https://prerender.io/documentation/install-middleware#asp-net)
+* SaaS: [Prerender - AngularJS SEO / Express](https://prerender.io/documentation/install-middleware#prerender-node)
+* Host: [Netlify](https://www.netlify.com/)
+* Blog: [How to Build a Serverless, SEO-friendly React blog with Netlify](https://buttercms.com/blog/serverless-react-blog-tutorial)
 
 Angular SSR 
 
@@ -53,7 +62,7 @@ Ionic Stencils
   * [Faster Web Apps Using Stencil](https://www.youtube.com/watch?v=mnsjL-WYzKQ)
   * [A Tutorial on How I Use Stencil](https://www.youtube.com/watch?v=cUU08Rc0ZQY)
   * [Using Web Components with Angular (Google I/O '17)](https://www.youtube.com/watch?v=Ucq9F-7Xp8I)
- * [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
+  * [ionic-team/stencil-app-starter](https://github.com/ionic-team/stencil-app-starter)
 * HowTo use?
   * <http://kensodemann.github.io/ionic/stencil/2017/08/20/stencil-toh.html>
   * <http://kensodemann.github.io/ionic/stencil/2017/08/26/stencil-toh.html>
