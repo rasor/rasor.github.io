@@ -1,8 +1,9 @@
 Title: cUrl CLI on Windows
 Status: published
 Date: 2017-12-11 21:00
+Modified: 2018-01-05 23:00
 Category: Develop
-Tags: #curl, #windows, #shell
+Tags: #curl, #windows, #shell, #ssl, #git, #openssl
 
 cUrl on Windows is not trouble-free to get working, when posting to SSL domains.
 
@@ -58,5 +59,13 @@ curl -X GET "https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty"
 #    "id" : 8863,...
 # }
 ```
+
+## SSL with GIT
+
+Just like cUrl Git-for-windows also checks the SSL path.  
+By default ca-bundle.crt file from OpenSSL  
+![GitInstall-SSL](img/2017-12-11-GitInstall1.PNG)
+
+If you during installation change to use Windows Certificate Store, then Windows will keep the ca-list updated for you, I assume.
 
 The End
