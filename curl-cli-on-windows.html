@@ -2,6 +2,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
@@ -18,16 +24,10 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
-
 
 <meta name="author" content="rasor" />
 <meta name="description" content="cUrl on Windows is not trouble-free to get working, when posting to SSL domains. Here is howto: Download latest windows version of cUrl. I used curl-7.57.0, which is SSL and SSH enabled. Extract the files from the zip file to C:\Program Files\curl-7.57.0\ Add to …" />
-<meta name="keywords" content="#curl, #windows, #shell">
+<meta name="keywords" content="#curl, #windows, #shell, #ssl, #git, #openssl">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="cUrl CLI on Windows"/>
@@ -36,12 +36,15 @@
 <meta property="og:url" content="https://rasor.github.io/curl-cli-on-windows.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-12-11 21:00:00+01:00"/>
-<meta property="article:modified_time" content=""/>
+<meta property="article:modified_time" content="2018-01-05 23:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#curl"/>
 <meta property="article:tag" content="#windows"/>
 <meta property="article:tag" content="#shell"/>
+<meta property="article:tag" content="#ssl"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#openssl"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; cUrl CLI on Windows</title>
@@ -96,11 +99,10 @@
       
     <h1 id="curl-cli-on-windows">cUrl CLI on Windows</h1>
     <p>
-          Posted on december 11, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+          Posted on December 11, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
-
-
-      </br>
+          </br>
+            Updated: January 05, 2018
     </p>
   </header>
 
@@ -157,6 +159,11 @@ curl -X GET <span class="s2">&quot;http://petstore.swagger.io/v2/pet/1&quot;</sp
 </pre></div>
 
 
+<h2>SSL with GIT</h2>
+<p>Just like cUrl Git-for-windows also checks the SSL path.<br>
+By default ca-bundle.crt file from OpenSSL<br>
+<img alt="GitInstall-SSL" src="img/2017-12-11-GitInstall1.PNG"></p>
+<p>If you during installation change to use Windows Certificate Store, then Windows will keep the ca-list updated for you, I assume.</p>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
@@ -164,6 +171,9 @@ curl -X GET <span class="s2">&quot;http://petstore.swagger.io/v2/pet/1&quot;</sp
       <a href="https://rasor.github.io/tag/curl.html">#curl</a>
       <a href="https://rasor.github.io/tag/windows.html">#windows</a>
       <a href="https://rasor.github.io/tag/shell.html">#shell</a>
+      <a href="https://rasor.github.io/tag/ssl.html">#ssl</a>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+      <a href="https://rasor.github.io/tag/openssl.html">#openssl</a>
     </p>
   </div>
 
