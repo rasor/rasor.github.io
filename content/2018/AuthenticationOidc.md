@@ -24,6 +24,7 @@ Date: 2099-01-01 00:00
 
 # Identity Providers
 
+* <https://accounts.google.com/.well-known/openid-configuration>
 * <https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration>
 * <https://login.microsoftonline.com/common/.well-known/openid-configuration>
 * <https://auth.login.yahoo.co.jp/yconnect/v2/.well-known/openid-configuration>

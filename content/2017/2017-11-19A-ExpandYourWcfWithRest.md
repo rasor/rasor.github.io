@@ -3,7 +3,7 @@ Status: published
 Date: 2017-11-19 13:00
 Modified: 2017-12-16 10:00
 Category: Develop
-Tags: #wcf, #rest, #swagger, #depencyinjection, #dotnet, #visualstudio
+Tags: #wcf, #rest, #swagger, #depencyinjection, #dotnet, #visualstudio, #cors
 
 If you are working with .NET you probably have WCF services.  
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.  
