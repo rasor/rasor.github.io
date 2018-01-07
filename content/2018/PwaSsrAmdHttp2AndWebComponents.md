@@ -10,6 +10,10 @@ Prerender.io (only prerendercache) / Netlify (host with prerendercache)
 * Host: [Netlify](https://www.netlify.com/)
 * Blog: [How to Build a Serverless, SEO-friendly React blog with Netlify](https://buttercms.com/blog/serverless-react-blog-tutorial)
 
+Razzle
+* [Razzle enables Universal JavaScript apps decoupled from frameworks and libraries | React, etc. Tech Stack](https://react-etc.net/entry/razzle-enables-universal-javascript-apps-decoupled-from-frameworks-and-libraries)
+* [jaredpalmer/razzle](https://github.com/jaredpalmer/razzle)
+
 Angular SSR 
 
 * Official HowTo [Angular Universal Integration](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
@@ -79,6 +83,10 @@ Polymer PWA
 * [Polymer NEWS demo](https://www.youtube.com/watch?v=Dsv5NT4PYG0)
 * [Building Progressive Web Apps](https://books.google.dk/books/about/Building_Progressive_Web_Apps.html?id=H8o0DwAAQBAJ&printsec=frontcover&source=kp_read_button&redir_esc=y#v=onepage&q&f=false)
 * [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
+* [Polymer 3.0 moves to NPM and ES6 Modules with templates in JavaScript | React, etc. Tech Stack](https://react-etc.net/entry/polymer-3-0-moves-to-npm-and-es6-modules-with-templates-in-javascript)
+
+Next (React)
+* [Next.js is the Universal React Framework you&#039;ve been looking for | React, etc. Tech Stack](https://react-etc.net/entry/next-js-is-the-universal-react-framework-you-ve-been-looking-for)
 
 Google AMD
 * [Accelerated Mobile Pages Project – AMP](https://www.ampproject.org/)
