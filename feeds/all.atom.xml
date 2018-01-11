@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-11T20:00:00+01:00</updated><entry><title>hpaPaaS</title><link href="https://rasor.github.io/hpapaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-01-11T20:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/hpapaas.html</id><summary type="html">&lt;p&gt;In 2017 Microsoft Access RAD tools are called &lt;strong&gt;High Productivity Application Platform as a Service&lt;/strong&gt; (hpaPaaS)&lt;br&gt;
-[&lt;img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"&gt;]
-(https://www.mendix.com/resources/gartner-high-productivity-apaas/)&lt;/p&gt;
+&lt;a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"&gt;&lt;img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In the top quadrant there are only 3 players&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.salesforce.com/"&gt;Salesforce&lt;/a&gt;&lt;/li&gt;
@@ -9,9 +8,8 @@
 &lt;li&gt;&lt;a href="https://www.outsystems.com/"&gt;OutSystems&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Download the &lt;a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"&gt;Gartner Quadrant&lt;/a&gt; to learn more.&lt;br&gt;
-&lt;em&gt;According to Gartner, by 2020, at least 50 percent …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In 2017 Microsoft Access RAD tools are called &lt;strong&gt;High Productivity Application Platform as a Service&lt;/strong&gt; (hpaPaaS)&lt;br&gt;
-[&lt;img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"&gt;]
-(https://www.mendix.com/resources/gartner-high-productivity-apaas/)&lt;/p&gt;
+&lt;em&gt;According to Gartner, by 2020, at least 50 percent of all new business applications will …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In 2017 Microsoft Access RAD tools are called &lt;strong&gt;High Productivity Application Platform as a Service&lt;/strong&gt; (hpaPaaS)&lt;br&gt;
+&lt;a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"&gt;&lt;img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In the top quadrant there are only 3 players&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.salesforce.com/"&gt;Salesforce&lt;/a&gt;&lt;/li&gt;
