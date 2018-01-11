@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-11T19:00:00+01:00</updated><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-11T20:00:00+01:00</updated><entry><title>hpaPaaS</title><link href="https://rasor.github.io/hpapaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-01-11T20:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/hpapaas.html</id><summary type="html">&lt;p&gt;In 2017 Microsoft Access RAD tools are called &lt;strong&gt;High Productivity Application Platform as a Service&lt;/strong&gt; (hpaPaaS)&lt;br&gt;
+[&lt;img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"&gt;]
+(https://www.mendix.com/resources/gartner-high-productivity-apaas/)&lt;/p&gt;
+&lt;p&gt;In the top quadrant there are only 3 players&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.salesforce.com/"&gt;Salesforce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.mendix.com/"&gt;Mendix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.outsystems.com/"&gt;OutSystems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Download the &lt;a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"&gt;Gartner Quadrant&lt;/a&gt; to learn more.&lt;br&gt;
+&lt;em&gt;According to Gartner, by 2020, at least 50 percent …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;In 2017 Microsoft Access RAD tools are called &lt;strong&gt;High Productivity Application Platform as a Service&lt;/strong&gt; (hpaPaaS)&lt;br&gt;
+[&lt;img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"&gt;]
+(https://www.mendix.com/resources/gartner-high-productivity-apaas/)&lt;/p&gt;
+&lt;p&gt;In the top quadrant there are only 3 players&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.salesforce.com/"&gt;Salesforce&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.mendix.com/"&gt;Mendix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.outsystems.com/"&gt;OutSystems&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Download the &lt;a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"&gt;Gartner Quadrant&lt;/a&gt; to learn more.&lt;br&gt;
+&lt;em&gt;According to Gartner, by 2020, at least 50 percent of all new business applications will be created with high-productivity toolsets&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
 &lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;
