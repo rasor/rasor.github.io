@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-05T23:00:00+01:00</updated><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-01-11T19:00:00+01:00</updated><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few day ago I reset my Windows 10, so I could start from scratch.&lt;/p&gt;
+&lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
+&lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;
+Then I installed &lt;a href="http://www.movescount.com/connect/moveslink"&gt;Moveslink2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I would see Moveslink in the taskbar and the taskmanager for a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A few day ago I reset my Windows 10, so I could start from scratch.&lt;/p&gt;
+&lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
+&lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;
+Then I installed &lt;a href="http://www.movescount.com/connect/moveslink"&gt;Moveslink2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I would see Moveslink in the taskbar and the taskmanager for a while and then it would disappear.&lt;/p&gt;
+&lt;p&gt;I thought it was a problem that I had the watch connected while I installed Moveslink, but no.&lt;/p&gt;
+&lt;p&gt;It turned out that it is a &lt;a href="http://www.suunto.com/Support/faq-articles/features/what-should-i-do-if-moveslink2-does-not-start-after-installing-the-windows-10-fall-creators-update/"&gt;known error&lt;/a&gt; which appears with Windows 10 Fall Creators Update (1709).&lt;/p&gt;
+&lt;p&gt;The problem causes moveslink2 to crash.&lt;/p&gt;
+&lt;p&gt;What I had to do to make it disappear was:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Turn off Wifi&lt;/li&gt;
+&lt;li&gt;Reconnect watch with USB wire&lt;br&gt;
+=&amp;gt; Now moveslink would show&lt;/li&gt;
+&lt;li&gt;Turn on Wifi&lt;/li&gt;
+&lt;li&gt;Sign in to movescount.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All back to normal - Me happy&lt;/p&gt;
+&lt;p&gt;In System Information I could see&lt;br&gt;
+&lt;img alt="Error in System Information" src="img/2018/2018-01-11-Ambit4.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;In Event Viewer I could see&lt;br&gt;
+&lt;img alt="Error in Event Viewer" src="img/2018/2018-01-11-Ambit5.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;In Devices and Printers I could see Ambit&lt;br&gt;
+&lt;img alt="Ambit in Devices and Printers" src="img/2018/2018-01-11-Ambit1.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;Ambit has two drivers&lt;br&gt;
+&lt;img alt="Ambit has to drivers" src="img/2018/2018-01-11-Ambit2.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;In Devices Manager I could not see Ambit, but now I knew which drivers it used&lt;br&gt;
+&lt;img alt="Ambit in Devices Manager" src="img/2018/2018-01-11-Ambit3.PNG"&gt;&lt;/p&gt;
+&lt;h2&gt;My related articles&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.wordpress.com/2012/11/09/garmin-305-display-misbehaving/"&gt;Garmin 305 display misbehaving&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasordk.wordpress.com/2015/01/08/suunto-ruter/"&gt;Suunto Ruter (in danish)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ambit"></category><category term="#moveslink"></category><category term="#drivers"></category><category term="#windows"></category></entry><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
 &lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
 One of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
 &lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.

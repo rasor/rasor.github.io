@@ -25,18 +25,27 @@
 
 
 
-    <meta name="author" content="rasor" />
-    <meta name="description" content="" />
+<meta name="author" content="rasor" />
+<meta name="description" content="A few day ago I reset my Windows 10, so I could start from scratch. The USB driver for my GPS watch, Suunto Ambit 2 misbehaved. I just connected the watch with USB cable. Then I installed Moveslink2. I would see Moveslink in the taskbar and the taskmanager for a …" />
+<meta name="keywords" content="#ambit, #moveslink, #drivers, #windows">
+
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Rasor's Tech Blog"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="Moveslink 2 crash"/>
+<meta property="og:description" content="A few day ago I reset my Windows 10, so I could start from scratch. The USB driver for my GPS watch, Suunto Ambit 2 misbehaved. I just connected the watch with USB cable. Then I installed Moveslink2. I would see Moveslink in the taskbar and the taskmanager for a …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rasor.github.io"/>
+<meta property="og:url" content="https://rasor.github.io/moveslink-2-crash.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-01-11 19:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#ambit"/>
+<meta property="article:tag" content="#moveslink"/>
+<meta property="article:tag" content="#drivers"/>
+<meta property="article:tag" content="#windows"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
-  <title>Rasor's Tech Blog &ndash;     Tag #windows
-</title>
+  <title>Rasor's Tech Blog &ndash; Moveslink 2 crash</title>
 
 </head>
 <body>
@@ -83,62 +92,68 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://rasor.github.io/moveslink-2-crash.html#moveslink-2-crash">Moveslink 2 crash</a></h2>
+      
+    <h1 id="moveslink-2-crash">Moveslink 2 crash</h1>
     <p>
           Posted on January 11, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
-
-          &#8226;     Tagged with
-
-              <a href="https://rasor.github.io/tag/ambit.html">#ambit</a>,              <a href="https://rasor.github.io/tag/moveslink.html">#moveslink</a>,              <a href="https://rasor.github.io/tag/drivers.html">#drivers</a>,              <a href="https://rasor.github.io/tag/windows.html">#windows</a>
+          </br>
     </p>
   </header>
+
+
   <div>
-      <p>A few day ago I reset my Windows 10, so I could start from scratch.</p>
+    <p>A few day ago I reset my Windows 10, so I could start from scratch.</p>
 <p>The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.</p>
 <p>I just connected the watch with USB cable.<br>
 Then I installed <a href="http://www.movescount.com/connect/moveslink">Moveslink2</a>.</p>
-<p>I would see Moveslink in the taskbar and the taskmanager for a …</p>
-      <br>
-      <a class="btn" href="https://rasor.github.io/moveslink-2-crash.html#moveslink-2-crash">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows">cUrl CLI on Windows</a></h2>
-    <p>
-          Posted on December 11, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="https://rasor.github.io/tag/curl.html">#curl</a>,              <a href="https://rasor.github.io/tag/windows.html">#windows</a>,              <a href="https://rasor.github.io/tag/shell.html">#shell</a>,              <a href="https://rasor.github.io/tag/ssl.html">#ssl</a>,              <a href="https://rasor.github.io/tag/git.html">#git</a>,              <a href="https://rasor.github.io/tag/openssl.html">#openssl</a>
-    </p>
-  </header>
-  <div>
-      <p>cUrl on Windows is not trouble-free to get working, when posting to SSL domains.</p>
-<p>Here is howto:</p>
+<p>I would see Moveslink in the taskbar and the taskmanager for a while and then it would disappear.</p>
+<p>I thought it was a problem that I had the watch connected while I installed Moveslink, but no.</p>
+<p>It turned out that it is a <a href="http://www.suunto.com/Support/faq-articles/features/what-should-i-do-if-moveslink2-does-not-start-after-installing-the-windows-10-fall-creators-update/">known error</a> which appears with Windows 10 Fall Creators Update (1709).</p>
+<p>The problem causes moveslink2 to crash.</p>
+<p>What I had to do to make it disappear was:</p>
 <ul>
-<li>Download latest <a href="https://curl.haxx.se/dlwiz/?type=bin&amp;os=Win64&amp;flav=-&amp;ver=*&amp;cpu=x86_64">windows version of cUrl</a>. I used <a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip">curl-7.57.0</a>, which is SSL and SSH enabled.</li>
-<li>Extract the files from the zip file to <code>C:\Program Files\curl-7.57.0\</code></li>
-<li>Add to …</li></ul>
-      <br>
-      <a class="btn" href="https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows">    Continue reading
-</a>
+<li>Turn off Wifi</li>
+<li>Reconnect watch with USB wire<br>
+=&gt; Now moveslink would show</li>
+<li>Turn on Wifi</li>
+<li>Sign in to movescount.com</li>
+</ul>
+<p>All back to normal - Me happy</p>
+<p>In System Information I could see<br>
+<img alt="Error in System Information" src="img/2018/2018-01-11-Ambit4.PNG"></p>
+<p>In Event Viewer I could see<br>
+<img alt="Error in Event Viewer" src="img/2018/2018-01-11-Ambit5.PNG"></p>
+<p>In Devices and Printers I could see Ambit<br>
+<img alt="Ambit in Devices and Printers" src="img/2018/2018-01-11-Ambit1.PNG"></p>
+<p>Ambit has two drivers<br>
+<img alt="Ambit has to drivers" src="img/2018/2018-01-11-Ambit2.PNG"></p>
+<p>In Devices Manager I could not see Ambit, but now I knew which drivers it used<br>
+<img alt="Ambit in Devices Manager" src="img/2018/2018-01-11-Ambit3.PNG"></p>
+<h2>My related articles</h2>
+<ul>
+<li><a href="https://rasor.wordpress.com/2012/11/09/garmin-305-display-misbehaving/">Garmin 305 display misbehaving</a></li>
+<li><a href="https://rasordk.wordpress.com/2015/01/08/suunto-ruter/">Suunto Ruter (in danish)</a></li>
+</ul>
+<p>The End</p>
   </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/ambit.html">#ambit</a>
+      <a href="https://rasor.github.io/tag/moveslink.html">#moveslink</a>
+      <a href="https://rasor.github.io/tag/drivers.html">#drivers</a>
+      <a href="https://rasor.github.io/tag/windows.html">#windows</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>
