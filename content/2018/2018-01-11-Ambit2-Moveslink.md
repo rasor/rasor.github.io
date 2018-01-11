@@ -4,7 +4,7 @@ Date: 2018-01-11 19:00
 Category: DevOp
 Tags: #ambit, #moveslink, #drivers, #windows
 
-A few day ago I reset my Windows 10, so I could start from scratch.
+A few day ago I [resat my Windows 10](https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options), so I could start from scratch.
 
 The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.
 
