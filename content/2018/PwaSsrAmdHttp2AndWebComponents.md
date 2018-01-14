@@ -36,6 +36,8 @@ Dontnet new angular
 * <https://www.hanselman.com/blog/dotnetNewAngularAndDotnetNewReact.aspx>
 * <https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/>
 * [ASP.Net Core Angular OpenID Connect using Keycloak](https://medium.com/@xavier.hahn/asp-net-core-angular-openid-connect-using-keycloak-6437948c008)
+* [Building Single Page Applications on ASP.NET Core with JavaScriptServices](https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/)
+* [Using JavaScriptServices for Creating Single Page Applications](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
 
 Ionic PWA
 
