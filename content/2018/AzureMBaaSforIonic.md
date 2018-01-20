@@ -157,4 +157,9 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 
 * [Azure App Services - Including MBaaS](https://portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.Web%2Fsites)
 
+## Azure Mobile/App Center Crashes, Analytics, Push Notifications
+
+* [React Riot](https://www.reactriot.com/blog/microsoft-blog)
+* [Get Started with Apache Cordova](https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/cordova)
+
 The End

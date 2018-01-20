@@ -1,5 +1,6 @@
 Title: Components and starters - Angular
 Date: 2099-01-01 00:00
+Tags: #starter, #components, #ngx
 
 * Resources: [Angular Docs](https://angular.io/resources)
 * Component collections: [brillout/awesome-angular-components](https://github.com/brillout/awesome-angular-components#component-collections)

@@ -18,5 +18,9 @@ There are several ways to show how code looks like - or seen from the other side
   * Lib: [d3/d3-hexbin](https://github.com/d3/d3-hexbin)
 * Other
   * Lib: [Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)
+* SaaS
+  * Cloudinary img filters: [Make Awesome Visual Hacks](https://www.reactriot.com/blog/cloudinary-blog-post)
+* Examples
+ * Inspiration: [Structure and Representation](http://structure-and-representation.com/)
 
 The End
