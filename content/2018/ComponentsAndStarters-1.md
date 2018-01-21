@@ -1,4 +1,4 @@
-Title: App Starters
+Title: Components and starters
 Date: 2099-01-01 00:00
 Tags: #starter, #boilerplate, #generator, #scaffolding, #react, #sencha, #saas, #manifold
 
@@ -26,16 +26,12 @@ HowTo start up your project?
   * H5BP V5, Bootstrap 3, jQuery 1.11
   * List: [Components and starters - Javastript](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Js.md)
 
-## Ionic
+## JS Frameworks
 
+  * List: [Components and starters - Polymer](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Polymer.md)
   * List: [Components and starters - Ionic](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Ionic.md)
-
-## Angular
-
   * List: [Components and starters - Angular](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Angular.md)
-
-## React
-
+  * List: [Components and starters - Vue](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Vue.md)
   * List: [Components and starters - React](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-React.md)
 
 # Backend
