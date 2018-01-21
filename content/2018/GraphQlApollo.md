@@ -25,4 +25,9 @@ Tags: #graphql, #react, #cms, #apollo, #graphcool, #typescript, #docker
 * Server Code: [apollo-server for Express, Hapi, Restify, AWS Lambda, AzureFunctions etc.](https://github.com/apollographql/apollo-server)
   * Serves [graphiql IDE for GraphQL](https://github.com/graphql/graphiql)
 
+### OCaml
+
+* Event: [Andreas Garnæs: Type-Safe GraphQL with OCaml](https://www.meetup.com/MoedegruppeFunktionelleKoebenhavnere/events/245605883/)
+* Lib: [andreas/ocaml-graphql-server](https://github.com/andreas/ocaml-graphql-server)
+
 The End
