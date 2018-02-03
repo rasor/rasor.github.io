@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-02-03T15:00:00+01:00</updated><entry><title>D'n'd development with RPA, hpaPaaS and ESB</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-and-esb.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-03T15:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-and-esb.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-02-03T18:00:00+01:00</updated><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-03T18:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
 &lt;ol&gt;
@@ -10,7 +10,8 @@
 &lt;ol&gt;
 &lt;li&gt;Automated Business UI Process development - &lt;a href="https://en.wikipedia.org/wiki/Robotic_process_automation"&gt;RPA&lt;/a&gt;. Automated frontend using existing UI as data transfer channel are created in this category. &lt;/li&gt;
 &lt;li&gt;Application development - &lt;a href="https://en.wikipedia.org/wiki/Platform_as_a_service"&gt;hpaPaaS&lt;/a&gt;. Apps, Webapps (frontends) and APIs (backends) are created in this category.&lt;/li&gt;
-&lt;li&gt;Application integration - &lt;a href="https://en.wikipedia.org/wiki/Enterprise_service_bus"&gt;ESB / iPaaS&lt;/a&gt;. This is middleware/backend using and exposing APIs to transfer data.&lt;/li&gt;
+&lt;li&gt;Application APIs - &lt;a href="https://en.wikipedia.org/wiki/Mobile_backend_as_a_service"&gt;mBaaS&lt;/a&gt;. This is backend exposing APIs to receive/produce data.&lt;/li&gt;
+&lt;li&gt;Application integration - &lt;a href="https://en.wikipedia.org/wiki/Enterprise_service_bus"&gt;ESB / iPaaS&lt;/a&gt;. This is middleware/backend using and exposing APIs to transfer data (B2B).&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;1. RPA&lt;/h2&gt;
 &lt;p&gt;Top RPA players are&lt;br&gt;
@@ -33,16 +34,29 @@
 &lt;em&gt;According to Gartner, by 2020, at least 50 percent of all new business applications will be created with high-productivity toolsets&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;And compare features and integrations&lt;br&gt;
 &lt;a href="https://www.getapp.com/it-management-software/a/mendix-business-agility-suite/compare/mule-esb-vs-outsystems-platform-vs-salesforce/"&gt;&lt;img alt="compare features and integrations" src="img/2018/2018-01-11-hpaPaaS1.PNG"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;3. ESB / iPaaS&lt;/h2&gt;
-&lt;p&gt;To tie applications together (or to create IOT or mobile backends) there are integration (iPaaS) tools also called ESBs&lt;br&gt;
-&lt;a href="https://www.mulesoft.com/ty/report/gartner-magic-quadrant-api"&gt;&lt;img alt="gartner iPaaS tools" src="https://www.gartner.com/resources/277600/277632/277632_0001.png;wa4459b121dae44439?reprintKey=1-3KZGFI4"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;3. API&lt;/h2&gt;
+&lt;p&gt;To create IOT or mobile backends there are API tools&lt;br&gt;
+&lt;a href="https://www.mulesoft.com/ty/report/gartner-magic-quadrant-api"&gt;&lt;img alt="gartner API tools" src="https://www.gartner.com/resources/277600/277632/277632_0001.png;wa4459b121dae44439?reprintKey=1-3KZGFI4"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.mulesoft.com/platform/enterprise-integration"&gt;MuleSoft&lt;/a&gt; - Java&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.mulesoft.com/platform/api/anypoint-designer"&gt;MuleSoft Anypoint API Designer&lt;/a&gt; - Java&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://apigee.com/api-management/"&gt;Apigee&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.ca.com/us/products/ca-live-api-creator.html"&gt;CA Live API Creator&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;4. ESB / iPaaS&lt;/h2&gt;
+&lt;p&gt;To tie applications together there are integration tools also called ESBs&lt;br&gt;
+&lt;a href="http://info.jitterbit.com/Adwords-Gartner-Magic-Quadrant-iPaaS-2017-Report.html"&gt;&lt;img alt="gartner iPaaS tools" src="https://www.gartner.com/resources/304000/304070/304070_0001.png?reprintKey=1-3ZKX04V"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.informatica.com"&gt;Informatica&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://boomi.com"&gt;Dell Boomi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.mulesoft.com/platform/soa/mule-esb-open-source-esb"&gt;MuleSoft ESB&lt;/a&gt; - Java&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.neuronesb.com/#"&gt;Neuron ESB&lt;/a&gt; - C#&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#esb"></category><category term="#rpa"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Microservices, SOA, and APIs: Friends or enemies?&lt;br&gt;
+&lt;a href="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html"&gt;&lt;img alt="Microservices, SOA, and APIs" src="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/images/figure8.jpg"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="mbaas"></category><category term="ipaas"></category><category term="#esb"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
 &lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;

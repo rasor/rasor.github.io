@@ -27,24 +27,26 @@
 
 <meta name="author" content="rasor" />
 <meta name="description" content="Development using Drag&#39;n&#39;drop (Low-code development platforms - LCDP) is also taking a share in development pipelines with test/prod environments and version control. Some of the areas are Automated Business UI Process development - RPA. Automated frontend using existing UI as data transfer channel are created in this category. Application development - hpaPaaS …" />
-<meta name="keywords" content="#hpapaas, #esb, #rpa">
+<meta name="keywords" content="#hpapaas, #rpa, mbaas, ipaas, #esb">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
-<meta property="og:title" content="D&#39;n&#39;d development with RPA, hpaPaaS and ESB"/>
+<meta property="og:title" content="D&#39;n&#39;d development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)"/>
 <meta property="og:description" content="Development using Drag&#39;n&#39;drop (Low-code development platforms - LCDP) is also taking a share in development pipelines with test/prod environments and version control. Some of the areas are Automated Business UI Process development - RPA. Automated frontend using existing UI as data transfer channel are created in this category. Application development - hpaPaaS …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rasor.github.io/dnd-development-with-rpa-hpapaas-and-esb.html"/>
+<meta property="og:url" content="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-01-11 20:00:00+01:00"/>
-<meta property="article:modified_time" content="2018-02-03 15:00:00+01:00"/>
+<meta property="article:modified_time" content="2018-02-03 18:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#hpapaas"/>
-<meta property="article:tag" content="#esb"/>
 <meta property="article:tag" content="#rpa"/>
+<meta property="article:tag" content="mbaas"/>
+<meta property="article:tag" content="ipaas"/>
+<meta property="article:tag" content="#esb"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
-  <title>Rasor's Tech Blog &ndash; D&#39;n&#39;d development with RPA, hpaPaaS and ESB</title>
+  <title>Rasor's Tech Blog &ndash; D&#39;n&#39;d development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title>
 
 </head>
 <body>
@@ -94,7 +96,7 @@
 <article class="single">
   <header>
       
-    <h1 id="dnd-development-with-rpa-hpapaas-and-esb">D'n'd development with RPA, hpaPaaS and ESB</h1>
+    <h1 id="dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas">D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</h1>
     <p>
           Posted on January 11, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
@@ -111,7 +113,8 @@
 <ol>
 <li>Automated Business UI Process development - <a href="https://en.wikipedia.org/wiki/Robotic_process_automation">RPA</a>. Automated frontend using existing UI as data transfer channel are created in this category. </li>
 <li>Application development - <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">hpaPaaS</a>. Apps, Webapps (frontends) and APIs (backends) are created in this category.</li>
-<li>Application integration - <a href="https://en.wikipedia.org/wiki/Enterprise_service_bus">ESB / iPaaS</a>. This is middleware/backend using and exposing APIs to transfer data.</li>
+<li>Application APIs - <a href="https://en.wikipedia.org/wiki/Mobile_backend_as_a_service">mBaaS</a>. This is backend exposing APIs to receive/produce data.</li>
+<li>Application integration - <a href="https://en.wikipedia.org/wiki/Enterprise_service_bus">ESB / iPaaS</a>. This is middleware/backend using and exposing APIs to transfer data (B2B).</li>
 </ol>
 <h2>1. RPA</h2>
 <p>Top RPA players are<br>
@@ -134,22 +137,37 @@
 <em>According to Gartner, by 2020, at least 50 percent of all new business applications will be created with high-productivity toolsets</em></p>
 <p>And compare features and integrations<br>
 <a href="https://www.getapp.com/it-management-software/a/mendix-business-agility-suite/compare/mule-esb-vs-outsystems-platform-vs-salesforce/"><img alt="compare features and integrations" src="img/2018/2018-01-11-hpaPaaS1.PNG"></a></p>
-<h2>3. ESB / iPaaS</h2>
-<p>To tie applications together (or to create IOT or mobile backends) there are integration (iPaaS) tools also called ESBs<br>
-<a href="https://www.mulesoft.com/ty/report/gartner-magic-quadrant-api"><img alt="gartner iPaaS tools" src="https://www.gartner.com/resources/277600/277632/277632_0001.png;wa4459b121dae44439?reprintKey=1-3KZGFI4"></a></p>
+<h2>3. API</h2>
+<p>To create IOT or mobile backends there are API tools<br>
+<a href="https://www.mulesoft.com/ty/report/gartner-magic-quadrant-api"><img alt="gartner API tools" src="https://www.gartner.com/resources/277600/277632/277632_0001.png;wa4459b121dae44439?reprintKey=1-3KZGFI4"></a></p>
 <ul>
-<li><a href="https://www.mulesoft.com/platform/enterprise-integration">MuleSoft</a> - Java</li>
+<li><a href="https://www.mulesoft.com/platform/api/anypoint-designer">MuleSoft Anypoint API Designer</a> - Java</li>
 <li><a href="https://apigee.com/api-management/">Apigee</a></li>
 <li><a href="https://www.ca.com/us/products/ca-live-api-creator.html">CA Live API Creator</a></li>
+</ul>
+<h2>4. ESB / iPaaS</h2>
+<p>To tie applications together there are integration tools also called ESBs<br>
+<a href="http://info.jitterbit.com/Adwords-Gartner-Magic-Quadrant-iPaaS-2017-Report.html"><img alt="gartner iPaaS tools" src="https://www.gartner.com/resources/304000/304070/304070_0001.png?reprintKey=1-3ZKX04V"></a></p>
+<ul>
+<li><a href="https://www.informatica.com">Informatica</a></li>
+<li><a href="https://boomi.com">Dell Boomi</a></li>
+<li><a href="https://www.mulesoft.com/platform/soa/mule-esb-open-source-esb">MuleSoft ESB</a> - Java</li>
 <li><a href="http://www.neuronesb.com/#">Neuron ESB</a> - C#</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li>Microservices, SOA, and APIs: Friends or enemies?<br>
+<a href="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html"><img alt="Microservices, SOA, and APIs" src="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/images/figure8.jpg"></a></li>
 </ul>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
     <p>
       <a href="https://rasor.github.io/tag/hpapaas.html">#hpapaas</a>
-      <a href="https://rasor.github.io/tag/esb.html">#esb</a>
       <a href="https://rasor.github.io/tag/rpa.html">#rpa</a>
+      <a href="https://rasor.github.io/tag/mbaas.html">mbaas</a>
+      <a href="https://rasor.github.io/tag/ipaas.html">ipaas</a>
+      <a href="https://rasor.github.io/tag/esb.html">#esb</a>
     </p>
   </div>
 
