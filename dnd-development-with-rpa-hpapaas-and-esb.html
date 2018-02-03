@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Development using Drag&#39;n&#39;drop (Low-code development platforms - LCDP) is also taking a share in development pipelines with test/prod environments and version control. Some of the areas are Automated Business UI Process development - RPA. Automated frontend using existing UI as data transfer channel are created in this category. Application development - hpaPaaS …" />
+<meta name="keywords" content="#hpapaas, #esb, #rpa">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="D&#39;n&#39;d development with RPA, hpaPaaS and ESB"/>
+<meta property="og:description" content="Development using Drag&#39;n&#39;drop (Low-code development platforms - LCDP) is also taking a share in development pipelines with test/prod environments and version control. Some of the areas are Automated Business UI Process development - RPA. Automated frontend using existing UI as data transfer channel are created in this category. Application development - hpaPaaS …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/dnd-development-with-rpa-hpapaas-and-esb.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-01-11 20:00:00+01:00"/>
+<meta property="article:modified_time" content="2018-02-03 15:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#hpapaas"/>
+<meta property="article:tag" content="#esb"/>
+<meta property="article:tag" content="#rpa"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; D&#39;n&#39;d development with RPA, hpaPaaS and ESB</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="dnd-development-with-rpa-hpapaas-and-esb">D'n'd development with RPA, hpaPaaS and ESB</h1>
+    <p>
+          Posted on January 11, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+          </br>
+            Updated: February 03, 2018
+    </p>
+  </header>
+
+
+  <div>
+    <p>Development using Drag'n'drop (<a href="https://en.wikipedia.org/wiki/Low-code_development_platforms">Low-code development platforms - LCDP</a>)
+ is also taking a share in development pipelines with test/prod environments and version control.</p>
+<p>Some of the areas are</p>
+<ol>
+<li>Automated Business UI Process development - <a href="https://en.wikipedia.org/wiki/Robotic_process_automation">RPA</a>. Automated frontend using existing UI as data transfer channel are created in this category. </li>
+<li>Application development - <a href="https://en.wikipedia.org/wiki/Platform_as_a_service">hpaPaaS</a>. Apps, Webapps (frontends) and APIs (backends) are created in this category.</li>
+<li>Application integration - <a href="https://en.wikipedia.org/wiki/Enterprise_service_bus">ESB / iPaaS</a>. This is middleware/backend using and exposing APIs to transfer data.</li>
+</ol>
+<h2>1. RPA</h2>
+<p>Top RPA players are<br>
+<a href="https://forum.uipath.com/t/uipath-vs-other-rpa-vendor/1748/9"><img alt="Forrester RPA" src="https://discourse-cdn-sjc1.com/business2/uploads/uipath/optimized/2X/6/640e7c77d0e13254150952ee7d6ed66959201abf_1_577x500.png"></a></p>
+<ul>
+<li><a href="https://www.automationanywhere.com/">Automation Anywhere</a></li>
+<li><a href="http://www.blueprism.com/">Blue Prism</a> - C#</li>
+<li><a href="https://www.uipath.com/">UiPath</a></li>
+</ul>
+<h2>2. hpaPaaS</h2>
+<p>In 2017 Microsoft Access RAD tools are called <strong>High Productivity Application Platform as a Service</strong> (hpaPaaS)<br>
+<a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"><img alt="gartner hpaPaaS tools" src="https://images.mendix.com/wp-content/uploads/Gartner-High-Productivity-aPaaS-Magic-Quadrant.png"></a></p>
+<p>In the top quadrant there are only 3 players</p>
+<ul>
+<li><a href="https://www.salesforce.com/">Salesforce</a></li>
+<li><a href="https://www.mendix.com/">Mendix</a> - C# + Java</li>
+<li><a href="https://www.outsystems.com/">OutSystems</a> - C#</li>
+</ul>
+<p>Download the <a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/">Gartner Quadrant</a> to learn more.<br>
+<em>According to Gartner, by 2020, at least 50 percent of all new business applications will be created with high-productivity toolsets</em></p>
+<p>And compare features and integrations<br>
+<a href="https://www.getapp.com/it-management-software/a/mendix-business-agility-suite/compare/mule-esb-vs-outsystems-platform-vs-salesforce/"><img alt="compare features and integrations" src="img/2018/2018-01-11-hpaPaaS1.PNG"></a></p>
+<h2>3. ESB / iPaaS</h2>
+<p>To tie applications together (or to create IOT or mobile backends) there are integration (iPaaS) tools also called ESBs<br>
+<a href="https://www.mulesoft.com/ty/report/gartner-magic-quadrant-api"><img alt="gartner iPaaS tools" src="https://www.gartner.com/resources/277600/277632/277632_0001.png;wa4459b121dae44439?reprintKey=1-3KZGFI4"></a></p>
+<ul>
+<li><a href="https://www.mulesoft.com/platform/enterprise-integration">MuleSoft</a> - Java</li>
+<li><a href="https://apigee.com/api-management/">Apigee</a></li>
+<li><a href="https://www.ca.com/us/products/ca-live-api-creator.html">CA Live API Creator</a></li>
+<li><a href="http://www.neuronesb.com/#">Neuron ESB</a> - C#</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/hpapaas.html">#hpapaas</a>
+      <a href="https://rasor.github.io/tag/esb.html">#esb</a>
+      <a href="https://rasor.github.io/tag/rpa.html">#rpa</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

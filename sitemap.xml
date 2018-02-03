@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2018-01-21T16:13:56-00:00</lastmod>
+<lastmod>2018-02-03T16:37:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2018-01-21T16:13:56-00:00</lastmod>
+<lastmod>2018-02-03T16:37:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2018-01-21T16:13:56-00:00</lastmod>
+<lastmod>2018-02-03T16:37:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2018-01-21T16:13:56-00:00</lastmod>
+<lastmod>2018-02-03T16:37:29-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://rasor.github.io/hpapaas.html</loc>
-<lastmod>2018-01-14T15:00:00+01:00</lastmod>
+<loc>https://rasor.github.io/dnd-development-with-rpa-hpapaas-and-esb.html</loc>
+<lastmod>2018-02-03T15:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -145,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2018-01-14T15:00:00+00:50</lastmod>
+<lastmod>2018-02-03T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -166,7 +166,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/hpapaas.html</loc>
-<lastmod>2018-01-14T15:00:00+00:50</lastmod>
+<lastmod>2018-02-03T15:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/esb.html</loc>
+<lastmod>2018-02-03T15:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/rpa.html</loc>
+<lastmod>2018-02-03T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -453,7 +467,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2018-01-14T15:00:00+00:50</lastmod>
+<lastmod>2018-02-03T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
