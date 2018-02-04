@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-02-03T20:00:00+01:00</updated><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-03T20:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-02-04T15:30:00+01:00</updated><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-04T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
 &lt;ol&gt;
@@ -29,7 +29,7 @@
 &lt;li&gt;&lt;a href="https://www.salesforce.com/"&gt;Salesforce&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.mendix.com/"&gt;Mendix&lt;/a&gt; - C# + Java&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.outsystems.com/"&gt;OutSystems&lt;/a&gt; - C#&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=hFwiZYxQboQ"&gt;Microsoft Azure Power Apps + (Flow + Logic Apps)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=hFwiZYxQboQ"&gt;Microsoft Azure Mobile Apps or Power Apps (+ Flow + Logic Apps) + Functions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Download the &lt;a href="https://www.mendix.com/resources/gartner-high-productivity-apaas/"&gt;Gartner Quadrant&lt;/a&gt; to learn more.&lt;br&gt;
 &lt;em&gt;According to Gartner, by 2020, at least 50 percent of all new business applications will be created with high-productivity toolsets&lt;/em&gt;&lt;/p&gt;
@@ -42,7 +42,7 @@
 &lt;li&gt;&lt;a href="https://www.mulesoft.com/platform/api/anypoint-designer"&gt;MuleSoft Anypoint API Designer&lt;/a&gt; - Java&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://apigee.com/api-management/"&gt;Apigee&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.ca.com/us/products/ca-live-api-creator.html"&gt;CA Live API Creator&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=hFwiZYxQboQ"&gt;Microsoft Azure Logic Apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://azure.microsoft.com/en-us/services/functions/"&gt;Microsoft Azure Functions or API Apps or Mobile Services&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;4. ESB / iPaaS / MaaS&lt;/h2&gt;
 &lt;p&gt;To tie applications together there are integration tools also called ESBs&lt;br&gt;
@@ -60,6 +60,8 @@
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=f6ysuQUZ2wQ"&gt;Microsoft Flow: Multi-Step Approvals&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Microsoft Flow resources&lt;br&gt;
 &lt;a href="https://youtu.be/hFwiZYxQboQ?t=34m43s"&gt;&lt;img alt="Microsoft Flow resources" src="img/2018/2018-01-11-hpaPaaS2.PNG"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Microsoft Messaging&lt;br&gt;
+&lt;a href="https://www.servicebus360.com/blogs/azure-service-bus-event-hub-event-grid-one-choose/"&gt;&lt;img alt="Microsoft Messaging" src="https://www.servicebus360.com/wp-content/uploads/2017/08/azure-service-bus-event-hub-event-grid.jpg"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Other Links&lt;/h2&gt;
 &lt;ul&gt;
