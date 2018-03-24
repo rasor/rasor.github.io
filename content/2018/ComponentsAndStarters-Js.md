@@ -1,6 +1,6 @@
 Title: Components and starters - Javascript
 Date: 2099-01-01 00:00
-Tags: #starter, #components, #javascript
+Tags: #starter, #components, #javascript, #chartjs, #bootstrap, #baconjs, #immutablejs, #snapsvg, #threejs, #react, #vr
 
 * Components: [Bootstrap 4](https://getbootstrap.com/)
 * Components: [Bootstrap 3](https://www.nuget.org/packages/bootstrap/3.0.0)
