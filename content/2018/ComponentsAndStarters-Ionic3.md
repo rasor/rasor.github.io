@@ -1,4 +1,4 @@
-Title: Components and starters - Ionic
+Title: Components and starters - Ionic 3
 Date: 2099-01-01 00:00
 Tags: #starter, #components, #ionic
 
@@ -25,15 +25,16 @@ Tags: #starter, #components, #ionic
 * [CMS like starter: Ionfire](https://market.ionicframework.com/starters/ionfire)
 
 ## Grid and SplitPane
+
 * [Component: NEW Responsive Grid](http://blog.ionicframework.com/build-awesome-desktop-apps-with-ionics-new-responsive-grid/)
 * [Component: Ionic Grid](https://www.tutorialspoint.com/ionic/ionic_grid.htm)
 * [Component: New Split Pane](http://blog.ionicframework.com/ionic-2-2-0-is-out/)
-
 
 * $29: [Starter: Ionic-3-ui MD-yellow-dark - lots of features](https://market.ionicframework.com/starters/ionic-3-ui-theme-template-app-material-design-yellow-dark)
 * Nice looking [Starter: Layoutswitcher2](https://market.ionicframework.com/starters/layoutswitcher2)
 
 ## Auth
+
 * [Starter: Ionic3-auth form validator](https://market.ionicframework.com/starters/ionic3-auth-example)
 * [Starter: Ionic3-seed-with-jwt](https://market.ionicframework.com/starters/ionic3-seed-with-jwt)
 * [Starter: Oauth-linkedin-starter](https://market.ionicframework.com/starters/oauth-linkedin-starter)
@@ -43,6 +44,7 @@ Tags: #starter, #components, #ionic
 * [Code: Use Header](https://www.joshmorony.com/when-to-use-providersservicesinjectables-in-ionic/)
 
 ## Pro Self-hosted backends
+
 * $20 [Starter: Fire-spotify - self host social music](https://market.ionicframework.com/starters/fire-spotify)
 * $25 [Starter: Instacopy - self hosted w. photo filters](https://market.ionicframework.com/starters/instacopy)
 * $50 [Starter: Firebase-taxi](https://market.ionicframework.com/starters/firebase-taxi)
@@ -51,6 +53,7 @@ Tags: #starter, #components, #ionic
 * [Starter: Facebook-messenger-clone](https://market.ionicframework.com/starters/facebook-messenger-clone)
 
 ## AppSeed
+
 * [Starter: Supermodular-2-ionic](https://market.ionicframework.com/starters/supermodular-2-ionic---free-application)
 * [Starter: appseed-io/supermodular2](https://github.com/appseed-io/supermodular2)
 * $20 [Starter: Facebook page frontend](https://market.ionicframework.com/starters/facebook-business-ionic-3)
@@ -59,21 +62,26 @@ Tags: #starter, #components, #ionic
 * [More AppSeed Starter Kits | AppSeed](http://appseed.io/products/ionic)
 
 ## Native
+
 * [d0cz/CordovaYoutubeVideoPlayer](https://github.com/d0cz/CordovaYoutubeVideoPlayer)
 * [Plugin: Ionic Native Storage](https://ionicframework.com/docs/native/native-storage/)
 * [Plugin: Ionic Storage w. SQLite](https://ionicframework.com/docs/storage/)
 
 ## Themes
+
 * [Starter base: ionic-team/ionic2-app-base](https://github.com/ionic-team/ionic2-app-base)
 * [Color-pack](https://market.ionicframework.com/themes/color-pack)
 * [Blog theme](https://market.ionicframework.com/themes/ion2theme)
 
 ## Code
+
 * [Using the Web Animations API in Ionic 2](https://www.joshmorony.com/using-the-web-animations-api-in-ionic-2/)
 * [Show loading when using Providers](https://www.joshmorony.com/when-to-use-providersservicesinjectables-in-ionic/)
 * [Ionic Tutorials | joshmorony - Build Mobile Apps with HTML5](https://www.joshmorony.com/category/ionic-tutorials/)
+* [Creating a Custom Expandable Header Component for Ionic 2+](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)
 
 ## Tools
+
 * [Ionic-sketch](https://market.ionicframework.com/themes/ionic-sketch)
 * [Top 15 Free SVG Tools](https://colorlib.com/wp/free-svg-editor-tools/)
 

@@ -102,6 +102,7 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 * [Rewrite Url with Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-add-operations#a-nameadd-operation-aadd-an-operation)
 
 ## Test/Design Swagger API
+
 * [Writing REST API](https://developers.redhat.com/blog/2017/01/19/applying-api-best-practices-in-fuse/)
 * [SwaggerHub Article](http://idratherbewriting.com/2017/10/05/swaggerhub-collaborative-platform-for-swagger-openapi-projects/)
 * [SwaggerHub Mocks](http://idratherbewriting.com/learnapidoc/pubapis_swaggerhub_smartbear.html#mocking-servers)
@@ -118,6 +119,8 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 * [Guide to LoopBack and API Connect](https://www.ibm.com/developerworks/library/wa-get-started-with-loopback-neward-1/index.html?cm_sp=developer-_-apic-dev-center-_-view-guide)
 
 ## API CodeGen
+
+* [Azure/autorest](https://github.com/Azure/autorest)
 * API First - [swagger-node](https://github.com/swagger-api/swagger-node)
 * API First - [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
 * API First - [swaggerize-express](https://www.npmjs.com/package/swaggerize-express)

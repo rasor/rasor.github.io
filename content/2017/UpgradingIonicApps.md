@@ -1,6 +1,8 @@
 Title: Ionic upgrade check-list
 Date: 2099-01-01 00:00
 
+* [Update.Ionic.Zone](https://update.ionic.zone/)
+
 * From v3.4.2
 * To v3.7.1
 

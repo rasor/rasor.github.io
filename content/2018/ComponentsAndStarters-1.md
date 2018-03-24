@@ -29,8 +29,9 @@ HowTo start up your project?
 ## JS Frameworks
 
   * List: [Components and starters - Polymer](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Polymer.md)
-  * List: [Components and starters - Ionic](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Ionic.md)
-  * List: [Components and starters - Angular](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Angular.md)
+  * List: [Components and starters - Ionic 3](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Ionic3.md)
+  * List: [Components and starters - Ionic 4](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Ionic4.md)
+  * List: [Components and starters - Angular 2+](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Angular2.md)
   * List: [Components and starters - Vue](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-Vue.md)
   * List: [Components and starters - React](https://github.com/rasor/rasor.github.io/blob/pelican/content/2018/ComponentsAndStarters-React.md)
 
