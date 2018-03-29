@@ -1,5 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-02-04T15:30:00+01:00</updated><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-04T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-03-29T22:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-03-29T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Code from the post can be found &lt;a href="https://github.com/rasor/ng-maze-vr-blank"&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Problem #1 - Angular by default expects to know all html elements&lt;/h2&gt;
+&lt;p&gt;Given some A-Frame html (in this case separated in its own ng component) - aframe-vr.component.html having selector: 'aframe-vr' in class AframeVrComponent&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- src/app/components/aframe-vr.component.html --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-scene&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-box&lt;/span&gt; &lt;span class="na"&gt;position&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;-1 0.5 -4&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;scale&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0.25 0.5 1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rotation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;-45 0 0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#4CC3D9&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-box&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-plane&lt;/span&gt; &lt;span class="na"&gt;position&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0 -1 -4&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rotation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;-45 0 0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;15&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;80&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#7BC8A4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-plane&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-sky&lt;/span&gt; &lt;span class="na"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#ECECEC&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-sky&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-scene&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Angular will complain:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- cosole ---&lt;/span&gt;
+Uncaught Error: Template parse errors:
+&amp;#39;a-box&amp;#39; is not a known element:
+1. If &amp;#39;a-box&amp;#39; is an Angular component, then verify that it is part of this module.
+2. If &amp;#39;a-box&amp;#39; is a Web Component then add &amp;#39;CUSTOM_ELEMENTS_SCHEMA&amp;#39; to the &amp;#39;@NgModule.schemas&amp;#39; of this component to suppress this message. (&amp;quot;&amp;lt;a-scene&amp;gt;
+  [ERROR -&amp;gt;]&amp;lt;a-box position=&amp;quot;-1 0.5 -4&amp;quot; scale=&amp;quot;0.25 0.5 1&amp;quot; rotation=&amp;quot;-45 0 0&amp;quot; color=&amp;quot;#4CC3D9&amp;quot;&amp;gt;&amp;lt;/a-box&amp;gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Solution #1.1&lt;/h3&gt;
+&lt;p&gt;And as it says there is an easy fix:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// --- app.module.ts ---&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;CUSTOM_ELEMENTS_SCHEMA&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;@angular/core&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;@NgModule&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;
+  &lt;span class="c1"&gt;// Allow elements not to be compiled by Angular &lt;/span&gt;
+  &lt;span class="nx"&gt;schemas&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;CUSTOM_ELEMENTS_SCHEMA&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Problem #2 - You cannot load A-Frame in the main bundle&lt;/h2&gt;
+&lt;p&gt;I want to load A-Frame just before the component from above.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// --- app.module.ts ---&lt;/span&gt;
+&lt;span class="c1"&gt;// Require aframe in main bundle before an aframe component is loaded&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;aframe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;aframe-extras&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;AframeVrComponent&lt;/span&gt; &lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="nx"&gt;from&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;./components/aframe-vr/aframe-vr.component&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In other words - I want to load A-Frame in the main bundle.  &lt;/p&gt;
+&lt;h3&gt;Result #2&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- cosole ---&lt;/span&gt;
+zone.js:2803 Uncaught TypeError: Cannot assign to read only property &amp;#39;attributeChangedCallback&amp;#39; of object &amp;#39;[object HTMLElement]&amp;#39;
+    at eval (zone.js:2803)
+    at Array.forEach (&amp;lt;anonymous&amp;gt;)
+    at HTMLDocument.document.registerElement (`zone.js`:2789)
+    at module.exports.registerElement (`aframe-master.js`:74843)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/69b38f4b340fe14d1676e2749f78061e24254ac8"&gt;ng-maze-vr-blank/commit 4&lt;/a&gt; demonstrates the problem.  &lt;/p&gt;
+&lt;p&gt;If you view-page-source of the page you will see&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- index.html --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;app-root&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;app-root&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inline.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;polyfills.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;styles.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;vendor.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;main.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;zone.js&lt;/code&gt; is stored in &lt;code&gt;polyfills.bundle.js&lt;/code&gt;,&lt;br&gt;
+&lt;code&gt;aframe-master.js&lt;/code&gt; (and all other node_modules from package.json) is stored in &lt;code&gt;vendor.bundle.js&lt;/code&gt; and in&lt;br&gt;
+&lt;code&gt;main.bundle.js&lt;/code&gt; the error is thrown when we try to load A-Frame with &lt;code&gt;import 'aframe';&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Tip: Do also install aframe types (so you can use it in TypeScript) by adding  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;// --- package.json ---&lt;/span&gt; 
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;&amp;quot;devDependencies&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;@types/aframe&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;^0.7.0&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;More details on @types: &lt;a href="https://github.com/angular/angular-cli/wiki/stories-third-party-lib"&gt;3rd Party Library Installation&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The blog ´&lt;a href="https://medium.com/@pitipon/a-frame-with-angular-setup-project-5797b2f2a03b"&gt;A-frame with Angular&lt;/a&gt;´ will tell you that you need to load A-Frame earlier - before zone.js. It suggests polyfills.js.  &lt;/p&gt;
+&lt;h3&gt;Solution attempt #2.1&lt;/h3&gt;
+&lt;p&gt;Angular CLI has a way to load libraries globally, as if they were in script tags.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove the aframe import from app.module.ts&lt;/li&gt;
+&lt;li&gt;Add the A-Frame library to Angular Cli config&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;// --- .angular-cli.json ---&lt;/span&gt; 
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;&amp;quot;apps&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;../node_modules/aframe/dist/aframe-master.js&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;../node_modules/aframe-extras/dist/aframe-extras.min.js&amp;quot;&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;],&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Result #2.1&lt;/h3&gt;
+&lt;p&gt;If you view-page-source of the page you will see&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- index.html --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;app-root&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;app-root&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;inline.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;polyfills.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;styles.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;scripts.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;vendor.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;main.bundle.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;New is ´scripts.bundle.js´. &lt;/p&gt;
+&lt;p&gt;But still we have an error:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- cosole ---&lt;/span&gt;
+zone.js:2803 Uncaught TypeError: Cannot assign to read only property &amp;#39;attributeChangedCallback&amp;#39; of object &amp;#39;[object HTMLElement]&amp;#39;
+    at eval (zone.js:2803)
+    at Array.forEach (&amp;lt;anonymous&amp;gt;)
+    at HTMLDocument.document.registerElement (zone.js:2789)
+    at module.exports.registerElement (scripts.bundle.js:74843)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;code&gt;zone.js&lt;/code&gt; is stored in &lt;code&gt;polyfills.bundle.js&lt;/code&gt;,&lt;br&gt;
+&lt;code&gt;aframe-master.js&lt;/code&gt; is stored and loaded in &lt;code&gt;scripts.bundle.js&lt;/code&gt; and&lt;br&gt;
+all other node_modules from package.json is stored in &lt;code&gt;vendor.bundle.js&lt;/code&gt;.&lt;br&gt;
+The error is thrown when we try to auto-load A-Frame inside &lt;code&gt;scripts.bundle.js&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The common pattern is again that A-Frame is loaded after zone.js.&lt;/p&gt;
+&lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/cd0fd787cb4aa9dcc287925e2ddd9310e7b837ab"&gt;ng-maze-vr-blank/commit 5&lt;/a&gt; demonstrates the error.  &lt;/p&gt;
+&lt;h3&gt;Solution attempt #2.2&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;scripts.bundle.js&lt;/code&gt; is loaded after &lt;code&gt;polyfills.bundle.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;As the blog ´&lt;a href="https://medium.com/@pitipon/a-frame-with-angular-setup-project-5797b2f2a03b"&gt;A-frame with Angular&lt;/a&gt;´ told you, you needed to load A-Frame before zone.js.  &lt;/p&gt;
+&lt;p&gt;So this time we go one more level up to polyfills.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove the stripts in &lt;code&gt;.angular-cli.json&lt;/code&gt; (or just rename the scripts property)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;// --- .angular-cli.json ---&lt;/span&gt; 
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;&amp;quot;apps&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;someUnusedScripts&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;../node_modules/aframe/dist/aframe-master.js&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;../node_modules/aframe-extras/dist/aframe-extras.min.js&amp;quot;&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;],&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Add aframe to polyfills before zone.js&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// --- src/polyfills.ts ---&lt;/span&gt;
+&lt;span class="c1"&gt;// Load aframe before zone.js&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;aframe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;aframe-extras&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;zone.js/dist/zone&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="c1"&gt;// Included with Angular CLI.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Result #2.2&lt;/h3&gt;
+&lt;p&gt;Now A-Frame is loaded in &lt;code&gt;polyfills.bundle.js&lt;/code&gt; before zone.js and A-Frame content is rendered  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Aframe loaded from polyfills.bundle.js" src="img/2018/2018-03-29-Ng-cli.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/d15d7271277ba6b8bc5c16fc35bd06d8497569f2"&gt;ng-maze-vr-blank/commit 6&lt;/a&gt; shows the result.  &lt;/p&gt;
+&lt;h2&gt;Problem #3 - Some A-Frame extras doesn't render&lt;/h2&gt;
+&lt;p&gt;If you want to replace the floor &lt;code&gt;&amp;lt;a-plane&amp;gt;&lt;/code&gt; with the floor from A-Frame extras &lt;code&gt;&amp;lt;a-grid&amp;gt;&lt;/code&gt; you can't see it. This happens with following change:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- src/app/components/aframe-vr.component.html --&amp;gt;&lt;/span&gt;
+  &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;a-plane position=&amp;quot;0 -1 -4&amp;quot; rotation=&amp;quot;-45 0 0&amp;quot; width=&amp;quot;15&amp;quot; height=&amp;quot;80&amp;quot; color=&amp;quot;#7BC8A4&amp;quot;&amp;gt;&amp;lt;/a-plane&amp;gt; --&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-grid&lt;/span&gt; &lt;span class="na"&gt;position&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0 -1 -4&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rotation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;-90 0 0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;static-body&lt;/span&gt; &lt;span class="na"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;15&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;80&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#7BC8A4&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-grid&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Solution #3&lt;/h3&gt;
+&lt;p&gt;Now we will move loading of A-Frame even further up from polyfills to the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove A-Frame from polyfills&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// --- src/polyfills.ts ---&lt;/span&gt;
+&lt;span class="c1"&gt;// Load aframe before zone.js&lt;/span&gt;
+&lt;span class="c1"&gt;//import &amp;#39;aframe&amp;#39;;&lt;/span&gt;
+&lt;span class="c1"&gt;//import &amp;#39;aframe-extras&amp;#39;;&lt;/span&gt;
+&lt;span class="kr"&gt;import&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;zone.js/dist/zone&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;  &lt;span class="c1"&gt;// Included with Angular CLI.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;In Ng Cli config copy A-Frame dist to assets  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;// --- .angular-cli.json ---&lt;/span&gt; 
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;&amp;quot;apps&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+      &lt;span class="s"&gt;&amp;quot;assets&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
+        &lt;span class="p p-Indicator"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;glob&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;**/*&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;input&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;../node_modules/aframe/dist&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;./assets/lib/aframe/dist/&amp;quot;&lt;/span&gt; &lt;span class="p p-Indicator"&gt;},&lt;/span&gt;
+        &lt;span class="p p-Indicator"&gt;{&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;glob&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;**/*&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;input&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;../node_modules/aframe-extras/dist&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;./assets/lib/aframe-extras/dist/&amp;quot;&lt;/span&gt; &lt;span class="p p-Indicator"&gt;}&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;],&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;em&gt;Link: Copy assets via &lt;a href="https://github.com/angular/angular-cli/wiki/stories-asset-configuration"&gt;angular-cli&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In index.html head load A-Frame + extras  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- src/index.html --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;assets/lib/aframe/dist/aframe-master.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;assets/lib/aframe-extras/dist/aframe-extras.min.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Result #3&lt;/h3&gt;
+&lt;p&gt;Now A-Frame is loaded already in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; before &lt;code&gt;polyfills.bundle.js&lt;/code&gt; and also &lt;code&gt;&amp;lt;a-grid&amp;gt;&lt;/code&gt; is rendered  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Aframe loaded from head" src="img/2018/2018-03-29-Ng-cli2.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398"&gt;ng-maze-vr-blank/commit 7&lt;/a&gt; shows the result.  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;More on zone.js: &lt;a href="https://medium.com/@MertzAlertz/what-the-hell-is-zone-js-and-why-is-it-in-my-angular-2-6ff28bcf943e"&gt;What the hell is Zone.js and why is it in my Angular 2?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lots of other &lt;a href="https://github.com/angular/angular-cli/wiki/stories"&gt;Angular CLI tricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/angular/angular-cli/wiki/angular-cli"&gt;Angular CLI Config Schema&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-04T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
 &lt;ol&gt;
