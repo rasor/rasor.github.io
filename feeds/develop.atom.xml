@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-03-29T22:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-03-29T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-01T15:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-04-01T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
@@ -209,16 +209,56 @@ The error is thrown when we try to auto-load A-Frame inside &lt;code&gt;scripts.
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h3&gt;Result #3&lt;/h3&gt;
+&lt;h3&gt;Result #3 - Commit 7&lt;/h3&gt;
 &lt;p&gt;Now A-Frame is loaded already in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; before &lt;code&gt;polyfills.bundle.js&lt;/code&gt; and also &lt;code&gt;&amp;lt;a-grid&amp;gt;&lt;/code&gt; is rendered  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Aframe loaded from head" src="img/2018/2018-03-29-Ng-cli2.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398"&gt;ng-maze-vr-blank/commit 7&lt;/a&gt; shows the result.  &lt;/p&gt;
+&lt;h2&gt;Problem #4 - When using &lt;script&gt; for loading, then @types are not loaded and you cannot use the types in code&lt;/h2&gt;
+&lt;p&gt;Having the libraries loaded now I want to use them in code. Example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;VrBox&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;position&lt;/span&gt;: &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+  &lt;span class="kr"&gt;constructor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pos&lt;/span&gt;: &lt;span class="kt"&gt;AFrame.Coordinate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;position&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;AFRAME&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;utils&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;coordinates&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;stringify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;pos&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;WebPack complains:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;error TS2552: Cannot find name &amp;#39;AFRAME&amp;#39;. Did you mean &amp;#39;frames&amp;#39;
+error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Solution #4a&lt;/h3&gt;
+&lt;p&gt;If you did not have the @types/aframe you could define the types yourself&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;declare&lt;/span&gt; &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;AFRAME&lt;/span&gt;: &lt;span class="kt"&gt;any&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; 
+&lt;span class="kr"&gt;declare&lt;/span&gt; &lt;span class="nx"&gt;namespace&lt;/span&gt; &lt;span class="nx"&gt;AFrame&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="kr"&gt;interface&lt;/span&gt; &lt;span class="nx"&gt;Coordinate&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Solution #4b&lt;/h3&gt;
+&lt;p&gt;But since you have the @types/aframe you instead just can import them&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;/// &amp;lt;reference types=&amp;quot;aframe&amp;quot; /&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;// Above ref is needed when aframe is loaded from &amp;lt;script&amp;gt; instead of&lt;/span&gt;
+&lt;span class="c1"&gt;// import &amp;#39;aframe&amp;#39;;&lt;/span&gt;
+&lt;span class="c1"&gt;// It will use the types from @types/aframe&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Result #4 - Commit 10&lt;/h3&gt;
+&lt;p&gt;Now we can use A-Frame library in our code.&lt;/p&gt;
+&lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/7535b3cca27f3354b061deff21005c863907b06e"&gt;ng-maze-vr-blank/commit 10&lt;/a&gt; shows the result.  &lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;More on zone.js: &lt;a href="https://medium.com/@MertzAlertz/what-the-hell-is-zone-js-and-why-is-it-in-my-angular-2-6ff28bcf943e"&gt;What the hell is Zone.js and why is it in my Angular 2?&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Lots of other &lt;a href="https://github.com/angular/angular-cli/wiki/stories"&gt;Angular CLI tricks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/angular/angular-cli/wiki/angular-cli"&gt;Angular CLI Config Schema&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html"&gt;TypeScript Compiler Options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-04T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;

@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-03-29 22:00:00+02:00"/>
-<meta property="article:modified_time" content=""/>
+<meta property="article:modified_time" content="2018-04-01 15:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#ng"/>
@@ -100,6 +100,7 @@
           Posted on March 29, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
+            Updated: April 01, 2018
     </p>
   </header>
 
@@ -313,16 +314,56 @@ The error is thrown when we try to auto-load A-Frame inside <code>scripts.bundle
 </pre></div>
 
 
-<h3>Result #3</h3>
+<h3>Result #3 - Commit 7</h3>
 <p>Now A-Frame is loaded already in the <code>&lt;head&gt;</code> before <code>polyfills.bundle.js</code> and also <code>&lt;a-grid&gt;</code> is rendered  </p>
 <p><img alt="Aframe loaded from head" src="img/2018/2018-03-29-Ng-cli2.PNG"></p>
 <p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398">ng-maze-vr-blank/commit 7</a> shows the result.  </p>
+<h2>Problem #4 - When using <script> for loading, then @types are not loaded and you cannot use the types in code</h2>
+<p>Having the libraries loaded now I want to use them in code. Example:</p>
+<div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">VrBox</span> <span class="p">{</span>
+  <span class="nx">position</span>: <span class="kt">string</span><span class="p">;</span>
+
+  <span class="kr">constructor</span><span class="p">(</span><span class="nx">pos</span>: <span class="kt">AFrame.Coordinate</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">position</span> <span class="o">=</span> <span class="nx">AFRAME</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">coordinates</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">pos</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>WebPack complains:</p>
+<div class="highlight"><pre><span></span>error TS2552: Cannot find name &#39;AFRAME&#39;. Did you mean &#39;frames&#39;
+error TS2503: Cannot find namespace &#39;AFrame&#39;.
+</pre></div>
+
+
+<h3>Solution #4a</h3>
+<p>If you did not have the @types/aframe you could define the types yourself</p>
+<div class="highlight"><pre><span></span><span class="kr">declare</span> <span class="kd">var</span> <span class="nx">AFRAME</span>: <span class="kt">any</span><span class="p">;</span> 
+<span class="kr">declare</span> <span class="nx">namespace</span> <span class="nx">AFrame</span><span class="p">{</span>
+  <span class="kr">interface</span> <span class="nx">Coordinate</span><span class="p">{}</span>
+<span class="p">}</span> 
+</pre></div>
+
+
+<h3>Solution #4b</h3>
+<p>But since you have the @types/aframe you instead just can import them</p>
+<div class="highlight"><pre><span></span><span class="c1">/// &lt;reference types=&quot;aframe&quot; /&gt;</span>
+<span class="c1">// Above ref is needed when aframe is loaded from &lt;script&gt; instead of</span>
+<span class="c1">// import &#39;aframe&#39;;</span>
+<span class="c1">// It will use the types from @types/aframe</span>
+</pre></div>
+
+
+<h3>Result #4 - Commit 10</h3>
+<p>Now we can use A-Frame library in our code.</p>
+<p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/7535b3cca27f3354b061deff21005c863907b06e">ng-maze-vr-blank/commit 10</a> shows the result.  </p>
 <hr>
 <h2>Links</h2>
 <ul>
 <li>More on zone.js: <a href="https://medium.com/@MertzAlertz/what-the-hell-is-zone-js-and-why-is-it-in-my-angular-2-6ff28bcf943e">What the hell is Zone.js and why is it in my Angular 2?</a></li>
 <li>Lots of other <a href="https://github.com/angular/angular-cli/wiki/stories">Angular CLI tricks</a></li>
 <li><a href="https://github.com/angular/angular-cli/wiki/angular-cli">Angular CLI Config Schema</a></li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html">TypeScript Compiler Options</a></li>
 </ul>
 <p>The End</p>
   </div>
