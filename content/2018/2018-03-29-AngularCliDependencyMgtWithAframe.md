@@ -1,6 +1,7 @@
 Title: Dependency management in Angular CLI - Lib: A-Frame
 Status: published
 Date: 2018-03-29 22:00
+Modified: 2018-04-01 15:00
 Category: Develop
 Tags: #ng, #aframe, #webpack, #vr
 
@@ -245,13 +246,62 @@ _Link: Copy assets via [angular-cli](https://github.com/angular/angular-cli/wiki
 </head>
 ```
 
-### Result #3
+### Result #3 - Commit 7
 
 Now A-Frame is loaded already in the `<head>` before `polyfills.bundle.js` and also `<a-grid>` is rendered  
 
 ![Aframe loaded from head](img/2018/2018-03-29-Ng-cli2.PNG)
 
 Sample [ng-maze-vr-blank/commit 7](https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398) shows the result.  
+
+## Problem #4 - When using <script> for loading, then @types are not loaded and you cannot use the types in code
+
+Having the libraries loaded now I want to use them in code. Example:
+
+```typescript
+class VrBox {
+  position: string;
+
+  constructor(pos: AFrame.Coordinate) {
+    this.position = AFRAME.utils.coordinates.stringify(pos);
+  }
+}
+```
+
+WebPack complains:
+
+```
+error TS2552: Cannot find name 'AFRAME'. Did you mean 'frames'
+error TS2503: Cannot find namespace 'AFrame'.
+```
+
+### Solution #4a
+
+If you did not have the @types/aframe you could define the types yourself
+
+```typescript
+declare var AFRAME: any; 
+declare namespace AFrame{
+  interface Coordinate{}
+} 
+```
+
+### Solution #4b
+
+But since you have the @types/aframe you instead just can import them
+
+```typescript
+/// <reference types="aframe" />
+// Above ref is needed when aframe is loaded from <script> instead of
+// import 'aframe';
+// It will use the types from @types/aframe
+```
+
+### Result #4 - Commit 10
+
+Now we can use A-Frame library in our code.
+
+Sample [ng-maze-vr-blank/commit 10](https://github.com/rasor/ng-maze-vr-blank/tree/7535b3cca27f3354b061deff21005c863907b06e) shows the result.  
 
 -----------------------
 
@@ -260,5 +310,6 @@ Sample [ng-maze-vr-blank/commit 7](https://github.com/rasor/ng-maze-vr-blank/tre
 * More on zone.js: [What the hell is Zone.js and why is it in my Angular 2?](https://medium.com/@MertzAlertz/what-the-hell-is-zone-js-and-why-is-it-in-my-angular-2-6ff28bcf943e)
 * Lots of other [Angular CLI tricks](https://github.com/angular/angular-cli/wiki/stories)
 * [Angular CLI Config Schema](https://github.com/angular/angular-cli/wiki/angular-cli)
+* [TypeScript Compiler Options](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 
 The End
