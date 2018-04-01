@@ -254,7 +254,7 @@ Now A-Frame is loaded already in the `<head>` before `polyfills.bundle.js` and a
 
 Sample [ng-maze-vr-blank/commit 7](https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398) shows the result.  
 
-## Problem #4 - When using <script> for loading, then @types are not loaded and you cannot use the types in code
+## Problem #4 - When using `<script>` for loading, then @types are not loaded and you cannot use the types in code
 
 Having the libraries loaded now I want to use them in code. Example:
 
