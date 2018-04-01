@@ -318,7 +318,7 @@ The error is thrown when we try to auto-load A-Frame inside <code>scripts.bundle
 <p>Now A-Frame is loaded already in the <code>&lt;head&gt;</code> before <code>polyfills.bundle.js</code> and also <code>&lt;a-grid&gt;</code> is rendered  </p>
 <p><img alt="Aframe loaded from head" src="img/2018/2018-03-29-Ng-cli2.PNG"></p>
 <p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398">ng-maze-vr-blank/commit 7</a> shows the result.  </p>
-<h2>Problem #4 - When using <script> for loading, then @types are not loaded and you cannot use the types in code</h2>
+<h2>Problem #4 - When using <code>&lt;script&gt;</code> for loading, then @types are not loaded and you cannot use the types in code</h2>
 <p>Having the libraries loaded now I want to use them in code. Example:</p>
 <div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">VrBox</span> <span class="p">{</span>
   <span class="nx">position</span>: <span class="kt">string</span><span class="p">;</span>

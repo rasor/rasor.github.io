@@ -213,7 +213,7 @@ The error is thrown when we try to auto-load A-Frame inside &lt;code&gt;scripts.
 &lt;p&gt;Now A-Frame is loaded already in the &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; before &lt;code&gt;polyfills.bundle.js&lt;/code&gt; and also &lt;code&gt;&amp;lt;a-grid&amp;gt;&lt;/code&gt; is rendered  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="Aframe loaded from head" src="img/2018/2018-03-29-Ng-cli2.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/4f666ce66cf74e211ee06df0f019b528723c2398"&gt;ng-maze-vr-blank/commit 7&lt;/a&gt; shows the result.  &lt;/p&gt;
-&lt;h2&gt;Problem #4 - When using &lt;script&gt; for loading, then @types are not loaded and you cannot use the types in code&lt;/h2&gt;
+&lt;h2&gt;Problem #4 - When using &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; for loading, then @types are not loaded and you cannot use the types in code&lt;/h2&gt;
 &lt;p&gt;Having the libraries loaded now I want to use them in code. Example:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;class&lt;/span&gt; &lt;span class="nx"&gt;VrBox&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="nx"&gt;position&lt;/span&gt;: &lt;span class="kt"&gt;string&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
