@@ -1,7 +1,7 @@
 Title: Dependency management in Angular CLI - Lib: A-Frame
 Status: published
 Date: 2018-03-29 22:00
-Modified: 2018-04-01 15:00
+Modified: 2018-04-02 09:00
 Category: Develop
 Tags: #ng, #aframe, #webpack, #vr
 
@@ -26,7 +26,7 @@ Given some A-Frame html (in this case separated in its own ng component) - afram
 Angular will complain:
 
 ```
---- cosole ---
+--- console ---
 Uncaught Error: Template parse errors:
 'a-box' is not a known element:
 1. If 'a-box' is an Angular component, then verify that it is part of this module.
@@ -65,7 +65,7 @@ In other words - I want to load A-Frame in the main bundle.
 ### Result #2
 
 ```
---- cosole ---
+--- console ---
 zone.js:2803 Uncaught TypeError: Cannot assign to read only property 'attributeChangedCallback' of object '[object HTMLElement]'
     at eval (zone.js:2803)
     at Array.forEach (<anonymous>)
@@ -143,7 +143,7 @@ New is ´scripts.bundle.js´.
 But still we have an error:
 
 ```
---- cosole ---
+--- console ---
 zone.js:2803 Uncaught TypeError: Cannot assign to read only property 'attributeChangedCallback' of object '[object HTMLElement]'
     at eval (zone.js:2803)
     at Array.forEach (<anonymous>)
@@ -168,7 +168,7 @@ As the blog ´[A-frame with Angular](https://medium.com/@pitipon/a-frame-with-an
 
 So this time we go one more level up to polyfills.
 
-* Remove the stripts in `.angular-cli.json` (or just rename the scripts property)
+* Remove the scripts in `.angular-cli.json` (or just rename the scripts property)
 
 ```yaml
 // --- .angular-cli.json --- 
@@ -291,6 +291,7 @@ declare namespace AFrame{
 But since you have the @types/aframe you instead just can import them
 
 ```typescript
+// src/app/components/aframe-vr.component.ts
 /// <reference types="aframe" />
 // Above ref is needed when aframe is loaded from <script> instead of
 // import 'aframe';
@@ -302,6 +303,33 @@ But since you have the @types/aframe you instead just can import them
 Now we can use A-Frame library in our code.
 
 Sample [ng-maze-vr-blank/commit 10](https://github.com/rasor/ng-maze-vr-blank/tree/7535b3cca27f3354b061deff21005c863907b06e) shows the result.  
+
+## Problem #5 - A-Frame doen't work with Angular binding
+
+Next up is to use Angular binding. In this case I want to create `<a-box>`'s from a list of data.  
+Looping through the list with `*ngFor` is not a problem, but setting the position proporty does not work.  
+
+In the view a `div` on top of A-Frame demonstrates how `*ngFor` sets a property.  
+But in the `a-scene` the same way of binding does not work. 
+
+```html
+<!-- src/app/components/aframe-vr.component.html -->
+<div>
+    <div class="box" *ngFor="let b of vrBoxes" [title]="b.position">I am a div {{b.position}}</div>
+</div>
+<a-scene #scene>
+  <!-- <a-box position="-1 0.5 -4" scale="0.25 0.5 1" rotation="-45 0 0" color="#4CC3D9"></a-box> -->
+  <a-box *ngFor="let b of vrBoxes" [position]="b.position" scale="0.25 0.5 1" rotation="-45 0 0" color="#4CC3D9"></a-box>
+</a-scene>
+```
+
+![Angular binding not working with Aframe](img/2018/2018-03-29-Ng-cli3.PNG)  
+
+Sample [ng-maze-vr-blank/commit 11](https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea) demonstrates this situation.  
+
+So what are the options? 
+
+To be continued...
 
 -----------------------
 

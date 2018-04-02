@@ -1,11 +1,13 @@
 Title: Exams, Study guides and eBooks
 Date: 2099-01-01 00:00
 Category: Study
-Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks
+Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 
 ------------------
 
 # Links
+
+* [CryptoCurrency Certification Consortium (C4)](https://cryptoconsortium.org/certifications)
 
 * <https://developers.google.com/training/certification/mobile-web-specialist/#info>{:target="_blank"}
 * <https://developers.google.com/training/certification/mobile-web-specialist/StudyGuide-MobileWebSpecialist.pdf>{:target="_blank"}
