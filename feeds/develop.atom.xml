@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-01T15:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-04-01T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-02T09:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-04-02T09:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
@@ -16,7 +16,7 @@ In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Fr
 
 
 &lt;p&gt;Angular will complain:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- cosole ---&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- console ---&lt;/span&gt;
 Uncaught Error: Template parse errors:
 &amp;#39;a-box&amp;#39; is not a known element:
 1. If &amp;#39;a-box&amp;#39; is an Angular component, then verify that it is part of this module.
@@ -49,7 +49,7 @@ Uncaught Error: Template parse errors:
 
 &lt;p&gt;In other words - I want to load A-Frame in the main bundle.  &lt;/p&gt;
 &lt;h3&gt;Result #2&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- cosole ---&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- console ---&lt;/span&gt;
 zone.js:2803 Uncaught TypeError: Cannot assign to read only property &amp;#39;attributeChangedCallback&amp;#39; of object &amp;#39;[object HTMLElement]&amp;#39;
     at eval (zone.js:2803)
     at Array.forEach (&amp;lt;anonymous&amp;gt;)
@@ -116,7 +116,7 @@ zone.js:2803 Uncaught TypeError: Cannot assign to read only property &amp;#39;at
 
 &lt;p&gt;New is ´scripts.bundle.js´. &lt;/p&gt;
 &lt;p&gt;But still we have an error:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- cosole ---&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gd"&gt;--- console ---&lt;/span&gt;
 zone.js:2803 Uncaught TypeError: Cannot assign to read only property &amp;#39;attributeChangedCallback&amp;#39; of object &amp;#39;[object HTMLElement]&amp;#39;
     at eval (zone.js:2803)
     at Array.forEach (&amp;lt;anonymous&amp;gt;)
@@ -136,7 +136,7 @@ The error is thrown when we try to auto-load A-Frame inside &lt;code&gt;scripts.
 &lt;p&gt;As the blog ´&lt;a href="https://medium.com/@pitipon/a-frame-with-angular-setup-project-5797b2f2a03b"&gt;A-frame with Angular&lt;/a&gt;´ told you, you needed to load A-Frame before zone.js.  &lt;/p&gt;
 &lt;p&gt;So this time we go one more level up to polyfills.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Remove the stripts in &lt;code&gt;.angular-cli.json&lt;/code&gt; (or just rename the scripts property)&lt;/li&gt;
+&lt;li&gt;Remove the scripts in &lt;code&gt;.angular-cli.json&lt;/code&gt; (or just rename the scripts property)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;// --- .angular-cli.json ---&lt;/span&gt; 
   &lt;span class="l l-Scalar l-Scalar-Plain"&gt;&amp;quot;apps&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;
@@ -242,7 +242,8 @@ error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.
 
 &lt;h3&gt;Solution #4b&lt;/h3&gt;
 &lt;p&gt;But since you have the @types/aframe you instead just can import them&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;/// &amp;lt;reference types=&amp;quot;aframe&amp;quot; /&amp;gt;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// src/app/components/aframe-vr.component.ts&lt;/span&gt;
+&lt;span class="c1"&gt;/// &amp;lt;reference types=&amp;quot;aframe&amp;quot; /&amp;gt;&lt;/span&gt;
 &lt;span class="c1"&gt;// Above ref is needed when aframe is loaded from &amp;lt;script&amp;gt; instead of&lt;/span&gt;
 &lt;span class="c1"&gt;// import &amp;#39;aframe&amp;#39;;&lt;/span&gt;
 &lt;span class="c1"&gt;// It will use the types from @types/aframe&lt;/span&gt;
@@ -252,6 +253,26 @@ error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.
 &lt;h3&gt;Result #4 - Commit 10&lt;/h3&gt;
 &lt;p&gt;Now we can use A-Frame library in our code.&lt;/p&gt;
 &lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/7535b3cca27f3354b061deff21005c863907b06e"&gt;ng-maze-vr-blank/commit 10&lt;/a&gt; shows the result.  &lt;/p&gt;
+&lt;h2&gt;Problem #5 - A-Frame doen't work with Angular binding&lt;/h2&gt;
+&lt;p&gt;Next up is to use Angular binding. In this case I want to create &lt;code&gt;&amp;lt;a-box&amp;gt;&lt;/code&gt;'s from a list of data.&lt;br&gt;
+Looping through the list with &lt;code&gt;*ngFor&lt;/code&gt; is not a problem, but setting the position proporty does not work.  &lt;/p&gt;
+&lt;p&gt;In the view a &lt;code&gt;div&lt;/code&gt; on top of A-Frame demonstrates how &lt;code&gt;*ngFor&lt;/code&gt; sets a property.&lt;br&gt;
+But in the &lt;code&gt;a-scene&lt;/code&gt; the same way of binding does not work. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- src/app/components/aframe-vr.component.html --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;box&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;*&lt;/span&gt;&lt;span class="na"&gt;ngFor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;let b of vrBoxes&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="na"&gt;title&lt;/span&gt;&lt;span class="err"&gt;]=&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;b&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;position&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;I am a div {{b.position}}&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-scene&lt;/span&gt; &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="na"&gt;scene&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="c"&gt;&amp;lt;!-- &amp;lt;a-box position=&amp;quot;-1 0.5 -4&amp;quot; scale=&amp;quot;0.25 0.5 1&amp;quot; rotation=&amp;quot;-45 0 0&amp;quot; color=&amp;quot;#4CC3D9&amp;quot;&amp;gt;&amp;lt;/a-box&amp;gt; --&amp;gt;&lt;/span&gt;
+  &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a-box&lt;/span&gt; &lt;span class="err"&gt;*&lt;/span&gt;&lt;span class="na"&gt;ngFor&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;let b of vrBoxes&amp;quot;&lt;/span&gt; &lt;span class="err"&gt;[&lt;/span&gt;&lt;span class="na"&gt;position&lt;/span&gt;&lt;span class="err"&gt;]=&amp;quot;&lt;/span&gt;&lt;span class="na"&gt;b&lt;/span&gt;&lt;span class="err"&gt;.&lt;/span&gt;&lt;span class="na"&gt;position&lt;/span&gt;&lt;span class="err"&gt;&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;scale&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;0.25 0.5 1&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rotation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;-45 0 0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#4CC3D9&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-box&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a-scene&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Angular binding not working with Aframe" src="img/2018/2018-03-29-Ng-cli3.PNG"&gt;  &lt;/p&gt;
+&lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea"&gt;ng-maze-vr-blank/commit 11&lt;/a&gt; demonstrates this situation.  &lt;/p&gt;
+&lt;p&gt;So what are the options? &lt;/p&gt;
+&lt;p&gt;To be continued...&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;

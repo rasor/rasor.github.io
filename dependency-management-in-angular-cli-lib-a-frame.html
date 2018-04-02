@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-03-29 22:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-04-01 15:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-04-02 09:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#ng"/>
@@ -100,7 +100,7 @@
           Posted on March 29, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
-            Updated: April 01, 2018
+            Updated: April 02, 2018
     </p>
   </header>
 
@@ -121,7 +121,7 @@ In this blog the Virtual Reality library <a href="https://aframe.io/">A-Frame</a
 
 
 <p>Angular will complain:</p>
-<div class="highlight"><pre><span></span><span class="gd">--- cosole ---</span>
+<div class="highlight"><pre><span></span><span class="gd">--- console ---</span>
 Uncaught Error: Template parse errors:
 &#39;a-box&#39; is not a known element:
 1. If &#39;a-box&#39; is an Angular component, then verify that it is part of this module.
@@ -154,7 +154,7 @@ Uncaught Error: Template parse errors:
 
 <p>In other words - I want to load A-Frame in the main bundle.  </p>
 <h3>Result #2</h3>
-<div class="highlight"><pre><span></span><span class="gd">--- cosole ---</span>
+<div class="highlight"><pre><span></span><span class="gd">--- console ---</span>
 zone.js:2803 Uncaught TypeError: Cannot assign to read only property &#39;attributeChangedCallback&#39; of object &#39;[object HTMLElement]&#39;
     at eval (zone.js:2803)
     at Array.forEach (&lt;anonymous&gt;)
@@ -221,7 +221,7 @@ zone.js:2803 Uncaught TypeError: Cannot assign to read only property &#39;attrib
 
 <p>New is ´scripts.bundle.js´. </p>
 <p>But still we have an error:</p>
-<div class="highlight"><pre><span></span><span class="gd">--- cosole ---</span>
+<div class="highlight"><pre><span></span><span class="gd">--- console ---</span>
 zone.js:2803 Uncaught TypeError: Cannot assign to read only property &#39;attributeChangedCallback&#39; of object &#39;[object HTMLElement]&#39;
     at eval (zone.js:2803)
     at Array.forEach (&lt;anonymous&gt;)
@@ -241,7 +241,7 @@ The error is thrown when we try to auto-load A-Frame inside <code>scripts.bundle
 <p>As the blog ´<a href="https://medium.com/@pitipon/a-frame-with-angular-setup-project-5797b2f2a03b">A-frame with Angular</a>´ told you, you needed to load A-Frame before zone.js.  </p>
 <p>So this time we go one more level up to polyfills.</p>
 <ul>
-<li>Remove the stripts in <code>.angular-cli.json</code> (or just rename the scripts property)</li>
+<li>Remove the scripts in <code>.angular-cli.json</code> (or just rename the scripts property)</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">// --- .angular-cli.json ---</span> 
   <span class="l l-Scalar l-Scalar-Plain">&quot;apps&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span>
@@ -347,7 +347,8 @@ error TS2503: Cannot find namespace &#39;AFrame&#39;.
 
 <h3>Solution #4b</h3>
 <p>But since you have the @types/aframe you instead just can import them</p>
-<div class="highlight"><pre><span></span><span class="c1">/// &lt;reference types=&quot;aframe&quot; /&gt;</span>
+<div class="highlight"><pre><span></span><span class="c1">// src/app/components/aframe-vr.component.ts</span>
+<span class="c1">/// &lt;reference types=&quot;aframe&quot; /&gt;</span>
 <span class="c1">// Above ref is needed when aframe is loaded from &lt;script&gt; instead of</span>
 <span class="c1">// import &#39;aframe&#39;;</span>
 <span class="c1">// It will use the types from @types/aframe</span>
@@ -357,6 +358,26 @@ error TS2503: Cannot find namespace &#39;AFrame&#39;.
 <h3>Result #4 - Commit 10</h3>
 <p>Now we can use A-Frame library in our code.</p>
 <p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/7535b3cca27f3354b061deff21005c863907b06e">ng-maze-vr-blank/commit 10</a> shows the result.  </p>
+<h2>Problem #5 - A-Frame doen't work with Angular binding</h2>
+<p>Next up is to use Angular binding. In this case I want to create <code>&lt;a-box&gt;</code>'s from a list of data.<br>
+Looping through the list with <code>*ngFor</code> is not a problem, but setting the position proporty does not work.  </p>
+<p>In the view a <code>div</code> on top of A-Frame demonstrates how <code>*ngFor</code> sets a property.<br>
+But in the <code>a-scene</code> the same way of binding does not work. </p>
+<div class="highlight"><pre><span></span><span class="c">&lt;!-- src/app/components/aframe-vr.component.html --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box&quot;</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let b of vrBoxes&quot;</span> <span class="err">[</span><span class="na">title</span><span class="err">]=&quot;</span><span class="na">b</span><span class="err">.</span><span class="na">position</span><span class="err">&quot;</span><span class="p">&gt;</span>I am a div {{b.position}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">a-scene</span> <span class="err">#</span><span class="na">scene</span><span class="p">&gt;</span>
+  <span class="c">&lt;!-- &lt;a-box position=&quot;-1 0.5 -4&quot; scale=&quot;0.25 0.5 1&quot; rotation=&quot;-45 0 0&quot; color=&quot;#4CC3D9&quot;&gt;&lt;/a-box&gt; --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a-box</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let b of vrBoxes&quot;</span> <span class="err">[</span><span class="na">position</span><span class="err">]=&quot;</span><span class="na">b</span><span class="err">.</span><span class="na">position</span><span class="err">&quot;</span> <span class="na">scale</span><span class="o">=</span><span class="s">&quot;0.25 0.5 1&quot;</span> <span class="na">rotation</span><span class="o">=</span><span class="s">&quot;-45 0 0&quot;</span> <span class="na">color</span><span class="o">=</span><span class="s">&quot;#4CC3D9&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a-box</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">a-scene</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p><img alt="Angular binding not working with Aframe" src="img/2018/2018-03-29-Ng-cli3.PNG">  </p>
+<p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea">ng-maze-vr-blank/commit 11</a> demonstrates this situation.  </p>
+<p>So what are the options? </p>
+<p>To be continued...</p>
 <hr>
 <h2>Links</h2>
 <ul>
