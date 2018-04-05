@@ -16,6 +16,7 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 * [Code: ionic-team/ionic - animation.ts](https://github.com/ionic-team/ionic/blob/master/src/animations/animation.ts)
 * [Ionic Component: Tile-navigation](https://market.ionicframework.com/themes/tile-navigation)
 * [Vid: of above](https://www.youtube.com/watch?v=MONPo0wJcn0)
+* [Animating from the Void: Enter and Exit Animations in Ionic](https://www.joshmorony.com/animating-from-the-void-enter-and-exit-animations-in-ionic/)
 
 ## React
 

@@ -10,6 +10,7 @@ Tags: #starter, #components, #ngx, #apollo, #graphcool
 * Components: [SyncFusion Essential JS 2](https://www.syncfusion.com/products/essential-js2)
 * Component: [Angular2 Charts](https://valor-software.com/ng2-charts/)
 Protractor, Istanbul, Rollup, Docker
+* Code: [Using Stripe with Angular](http://blog.mgechev.com/2016/07/05/using-stripe-payment-with-angular-2/)
 
 ## Starters
 

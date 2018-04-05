@@ -73,12 +73,16 @@ Tags: #starter, #components, #ionic
 * [Color-pack](https://market.ionicframework.com/themes/color-pack)
 * [Blog theme](https://market.ionicframework.com/themes/ion2theme)
 
-## Code
+## Code / Blogs
 
+* List: [Angular Tutorials | joshmorony](https://www.joshmorony.com/category/angular-tutorials/)
+* List: [Ionic Tutorials | joshmorony](https://www.joshmorony.com/category/ionic-tutorials/)
 * [Using the Web Animations API in Ionic 2](https://www.joshmorony.com/using-the-web-animations-api-in-ionic-2/)
 * [Show loading when using Providers](https://www.joshmorony.com/when-to-use-providersservicesinjectables-in-ionic/)
-* [Ionic Tutorials | joshmorony - Build Mobile Apps with HTML5](https://www.joshmorony.com/category/ionic-tutorials/)
 * [Creating a Custom Expandable Header Component for Ionic 2+](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)
+* [Custom Components in Ionic 2](https://www.joshmorony.com/custom-components-in-ionic-2/)
+  * [YouTube Custom Components in Ionic](https://www.youtube.com/watch?v=Tg4FoOf4pBo)
+* [Using Google Maps and Geolocation in Ionic with Capacitor](https://www.joshmorony.com/using-google-maps-and-geolocation-in-ionic-with-capacitor/)
 
 ## Tools
 

@@ -1,7 +1,7 @@
 Title: Dependency management in Angular CLI - Lib: A-Frame
 Status: published
 Date: 2018-03-29 22:00
-Modified: 2018-04-02 09:00
+Modified: 2018-04-05 22:00
 Category: Develop
 Tags: #ng, #aframe, #webpack, #vr
 
@@ -328,6 +328,15 @@ But in the `a-scene` the same way of binding does not work. The created `<a-box>
 Sample [ng-maze-vr-blank/commit 11](https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea) demonstrates this situation.  
 
 So what are the options? 
+
+* Create an Angular wrapper component.  
+[zefoy/ngx-ace-wrapper](https://github.com/zefoy/ngx-ace-wrapper) is an example of a wrapper.  
+ZEF has a handfull of [other wrappers](https://github.com/zefoy?utf8=%E2%9C%93&q=wrapper&type=&language=)
+  * Publish to npm: [Building an Angular 4 Component Library with the Angular CLI and ng-packagr](https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e)
+* Create a Web Component wrapper component  
+[Publishing a Web Component Using Stencil (And Using It Anywhere)](https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/)
+  * Build and use a Web Component from Angular: [seveves/angular-stencil](https://github.com/seveves/angular-stencil)
+
 
 To be continued...
 

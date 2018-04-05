@@ -24,7 +24,7 @@ Tags: #starter, #components, #ionic, #capacitor, #stencils, #webcomponents
 * [Prerendering - Stencil](https://stenciljs.com/docs/prerendering/)
 * [Publishing a Web Component Using Stencil (And Using It Anywhere)](https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/)
 * [Creating a Google Maps Web Component with Stencil](https://www.joshmorony.com/creating-a-google-maps-web-component-with-stencil/)
-* [YouTube Custom Components in Ionic](https://www.youtube.com/watch?v=Tg4FoOf4pBo)
+* [Using Stencil to Create a Custom Web Component with a Public API Method](https://www.joshmorony.com/using-stencil-to-create-a-custom-web-component-with-a-public-api-method/)
 * [StencilJS Tutorials | joshmorony - Build Mobile Apps with HTML5](https://www.joshmorony.com/category/stencil-tutorials/)
 
 ## VueJs
