@@ -310,7 +310,7 @@ Next up is to use Angular binding. In this case I want to create `<a-box>`'s fro
 Looping through the list with `*ngFor` is not a problem, but setting the position proporty does not work.  
 
 In the view a `div` on top of A-Frame demonstrates how `*ngFor` sets a property.  
-But in the `a-scene` the same way of binding does not work. 
+But in the `a-scene` the same way of binding does not work. The created `<a-box>` is put in position "0 0 0". You have to go backwards to see the box. It is behind you.
 
 ```html
 <!-- src/app/components/aframe-vr.component.html -->

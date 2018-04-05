@@ -27,7 +27,6 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 * [Introduction – A-Frame](https://aframe.io/docs/0.8.0/introduction/)
 * [A-Frame School](https://aframe.io/aframe-school/#/)
 * [JavaScript, Events, DOM APIs – A-Frame](https://aframe.io/docs/0.7.0/introduction/javascript-events-dom-apis.html)
-* [@types/aframe](https://www.npmjs.com/package/@types/aframe?activeTab=versions)
 * [I built something with A-Frame in 2 days (and you can too)](https://hacks.mozilla.org/2017/09/i-built-something-with-a-frame-in-2-days-and-you-can-too/)
   * Code: [slightlyoffbeat/marketing-vr](https://github.com/slightlyoffbeat/marketing-vr)
 * [First Steps in VR](https://24ways.org/2016/first-steps-in-vr/)
@@ -40,11 +39,56 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 * [aframe-text-component](https://www.npmjs.com/package/aframe-text-component)
 * [etiennepinchon/aframe-material](https://github.com/etiennepinchon/aframe-material)
 * [nylki/aframe-fit-texture-component](https://github.com/nylki/aframe-fit-texture-component)
+* [K-Frame](https://ngokevin.github.io/kframe/)
 
 ## Angular and AFrame
 
+* [videogular/angular-connect-demo](https://github.com/videogular/angular-connect-demo/blob/master/app/app.component.html)
+  * [360 and VR Vídeo with Angular 2 by Raúl Jiménez](http://slides.com/elecash/360-and-vr-video-with-angular2#/)
+  * [360 & VR Vídeo with Angular 2 | Raul Jimenez](https://www.youtube.com/watch?v=E3P4KMoE3VU)
+  * [YouTube](https://www.youtube.com/watch?v=FyNvWM4WPX0)
 * [ngworld](https://www.npmjs.com/package/ngworld?activeTab=dependencies)
   * Code: [mgechev/ngworld](https://github.com/mgechev/ngworld/tree/ng-xmas)
-* [WebVR with A-Frame &amp; Angular](http://blog.brakmic.com/webvr-with-a-frame-angular/)
+* [WebVR with A-Frame & Angular](http://blog.brakmic.com/webvr-with-a-frame-angular/)
+  * [brakmic/Angular-VR-Starter](https://github.com/brakmic/Angular-VR-Starter)
+* [Angular CLI databinding for A-frame tags · Issue #2518 · aframevr/aframe](https://github.com/aframevr/aframe/issues/2518#issuecomment-289450266)
+* [src/app/app.component.ts · master · Javier Ros  / angularcli-kframe](https://gitlab.com/jros/angularcli-kframe/blob/master/src/app/app.component.ts)
+  * [Use untyped A-Frame components with Angular 2](https://stackoverflow.com/a/42551061/750989)
+
+## TS and AFrame
+
+* [TypeScript support · Issue #2706 · aframevr/aframe](https://github.com/aframevr/aframe/issues/2706)
+* [@types/aframe](https://github.com/devpaul/aframe-typings)
+  * Npm [@types/aframe](https://www.npmjs.com/package/@types/aframe?activeTab=versions)
+* [@types/webvr-api](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/webvr-api)
+* [devpaul/derpymon](https://github.com/devpaul/derpymon)
+* [http://michaelkappel.com/WebVr.pdf](http://michaelkappel.com/WebVr.pdf)
+  * [Freesound - Freesound](https://freesound.org/)
+  * [KhronosGroup/glTF-Sample-Models](https://github.com/KhronosGroup/glTF-Sample-Models)
+  * [glTF Model Converter](http://cesiumjs.org/convertmodel.html)
+
+## Extend AFrame
+
+* [How to Write an A-Frame VR Component](http://ngokevin.com/blog/aframe-component/)
+* [aframevr/aframe - writing-a-component](https://github.com/aframevr/aframe/blob/master/docs/introduction/writing-a-component.md)
+
+## WebGL
+
+* [amcdnl/ngx-webgl](https://github.com/amcdnl/ngx-webgl)
+  * [Getting Title at 35:33](https://youtu.be/L_eQKnl8sao?t=8m1s)
+  * [Getting Title at 39:29](https://youtu.be/L_eQKnl8sao?t=15m1s)
+* [Getting Title at 49:32](https://youtu.be/1eTg6fyc4zA?t=14m43s)
+
+## 
+
+* [misslivirose/learnvr](https://github.com/misslivirose/learnvr)
+
+## 360 photos
+
+* [Making a equirectangular panoramic image &#8211; Joel Gethin Lewis](http://joelgethinlewis.com/2016/10/18/making-a-panorama/)
+  * [360-degree Photography Guide (Ricoh Theta S)](http://ngokevin.com/blog/360-photography/)
+  * [Product | RICOH THETA](https://theta360.com/uk/about/theta/s.html)
+* [Google Photo Sphere now available for iOS](https://www.dpreview.com/news/9722425702/google-photosphere-now-available-for-ios)
+  * [Google Street View on the App Store](https://itunes.apple.com/app/id904418768?mt=8)
 
 The End

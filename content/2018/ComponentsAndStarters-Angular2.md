@@ -22,6 +22,6 @@ Protractor, Istanbul, Rollup, Docker
 
 ## Blogs
 
-* [Building an Angular 4 Component Library with the Angular CLI and ng-packagr](https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e)
+* See ngArticles.md
 
 The End

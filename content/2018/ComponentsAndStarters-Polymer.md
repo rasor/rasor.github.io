@@ -7,4 +7,8 @@ Tags: #starter, #components, #polymer, #apollo, #graphcool
 * HowTo: [polymer-apollo](https://github.com/aruntk/polymer-apollo)
 * Sample: [GitHunt-Polymer](https://github.com/aruntk/GitHunt-Polymer)
 
+## Blogs
+
+* [Custom Elements v1: Reusable Web Components - Google Developers](https://developers.google.com/web/fundamentals/web-components/customelements)
+
 The End
