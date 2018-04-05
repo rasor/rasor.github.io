@@ -362,7 +362,7 @@ error TS2503: Cannot find namespace &#39;AFrame&#39;.
 <p>Next up is to use Angular binding. In this case I want to create <code>&lt;a-box&gt;</code>'s from a list of data.<br>
 Looping through the list with <code>*ngFor</code> is not a problem, but setting the position proporty does not work.  </p>
 <p>In the view a <code>div</code> on top of A-Frame demonstrates how <code>*ngFor</code> sets a property.<br>
-But in the <code>a-scene</code> the same way of binding does not work. </p>
+But in the <code>a-scene</code> the same way of binding does not work. The created <code>&lt;a-box&gt;</code> is put in position "0 0 0". You have to go backwards to see the box. It is behind you.</p>
 <div class="highlight"><pre><span></span><span class="c">&lt;!-- src/app/components/aframe-vr.component.html --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;box&quot;</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let b of vrBoxes&quot;</span> <span class="err">[</span><span class="na">title</span><span class="err">]=&quot;</span><span class="na">b</span><span class="err">.</span><span class="na">position</span><span class="err">&quot;</span><span class="p">&gt;</span>I am a div {{b.position}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
