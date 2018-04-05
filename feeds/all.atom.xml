@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-02T09:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-04-02T09:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-05T22:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-04-05T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
@@ -272,6 +272,15 @@ But in the &lt;code&gt;a-scene&lt;/code&gt; the same way of binding does not wor
 &lt;p&gt;&lt;img alt="Angular binding not working with Aframe" src="img/2018/2018-03-29-Ng-cli3.PNG"&gt;  &lt;/p&gt;
 &lt;p&gt;Sample &lt;a href="https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea"&gt;ng-maze-vr-blank/commit 11&lt;/a&gt; demonstrates this situation.  &lt;/p&gt;
 &lt;p&gt;So what are the options? &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create an Angular wrapper component.&lt;br&gt;
+&lt;a href="https://github.com/zefoy/ngx-ace-wrapper"&gt;zefoy/ngx-ace-wrapper&lt;/a&gt; is an example of a wrapper.&lt;br&gt;
+ZEF has a handfull of &lt;a href="https://github.com/zefoy?utf8=%E2%9C%93&amp;amp;q=wrapper&amp;amp;type=&amp;amp;language="&gt;other wrappers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Publish to npm: &lt;a href="https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e"&gt;Building an Angular 4 Component Library with the Angular CLI and ng-packagr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create a Web Component wrapper component&lt;br&gt;
+&lt;a href="https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/"&gt;Publishing a Web Component Using Stencil (And Using It Anywhere)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Build and use a Web Component from Angular: &lt;a href="https://github.com/seveves/angular-stencil"&gt;seveves/angular-stencil&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;To be continued...&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;Links&lt;/h2&gt;

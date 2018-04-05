@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-03-29 22:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-04-02 09:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-04-05 22:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#ng"/>
@@ -100,7 +100,7 @@
           Posted on March 29, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
-            Updated: April 02, 2018
+            Updated: April 05, 2018
     </p>
   </header>
 
@@ -377,6 +377,15 @@ But in the <code>a-scene</code> the same way of binding does not work. The creat
 <p><img alt="Angular binding not working with Aframe" src="img/2018/2018-03-29-Ng-cli3.PNG">  </p>
 <p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea">ng-maze-vr-blank/commit 11</a> demonstrates this situation.  </p>
 <p>So what are the options? </p>
+<ul>
+<li>Create an Angular wrapper component.<br>
+<a href="https://github.com/zefoy/ngx-ace-wrapper">zefoy/ngx-ace-wrapper</a> is an example of a wrapper.<br>
+ZEF has a handfull of <a href="https://github.com/zefoy?utf8=%E2%9C%93&amp;q=wrapper&amp;type=&amp;language=">other wrappers</a></li>
+<li>Publish to npm: <a href="https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e">Building an Angular 4 Component Library with the Angular CLI and ng-packagr</a></li>
+<li>Create a Web Component wrapper component<br>
+<a href="https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/">Publishing a Web Component Using Stencil (And Using It Anywhere)</a></li>
+<li>Build and use a Web Component from Angular: <a href="https://github.com/seveves/angular-stencil">seveves/angular-stencil</a></li>
+</ul>
 <p>To be continued...</p>
 <hr>
 <h2>Links</h2>
