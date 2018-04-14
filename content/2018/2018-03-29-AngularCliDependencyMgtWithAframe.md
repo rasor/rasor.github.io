@@ -1,7 +1,7 @@
 Title: Dependency management in Angular CLI - Lib: A-Frame
 Status: published
 Date: 2018-03-29 22:00
-Modified: 2018-04-05 22:00
+Modified: 2018-04-14 13:00
 Category: Develop
 Tags: #ng, #aframe, #webpack, #vr
 
@@ -327,7 +327,9 @@ But in the `a-scene` the same way of binding does not work. The created `<a-box>
 
 Sample [ng-maze-vr-blank/commit 11](https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea) demonstrates this situation.  
 
-So what are the options? 
+### So what are the options? 
+
+Initially I picked options like these:
 
 * Create an Angular wrapper component.  
 [zefoy/ngx-ace-wrapper](https://github.com/zefoy/ngx-ace-wrapper) is an example of a wrapper.  
@@ -337,6 +339,22 @@ ZEF has a handfull of [other wrappers](https://github.com/zefoy?utf8=%E2%9C%93&q
 [Publishing a Web Component Using Stencil (And Using It Anywhere)](https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/)
   * Build and use a Web Component from Angular: [seveves/angular-stencil](https://github.com/seveves/angular-stencil)
 
+The first attempt I did was to look at the [seveves/angular-stencil](https://github.com/seveves/angular-stencil) repo and tried to see if I could bind A-Frame in a Stencil web component.
+That attempt failed. Repo is here: [rasor/stencil-aframe](https://github.com/rasor/stencil-aframe).  
+Notice: In that repo I am using the latest version of A-Frame: 0.8.0.
+
+Angular components builds on the web components-way of doing things - e.g. using ShaowDom. So I think, when binding with web components does not work, then I should not expect to getting it to work in Angular either. 
+
+### So what are the options, when ShadowDom does not play well with A-Frame?
+
+Well [trusktr](https://github.com/trusktr) actually found a way [to deal with Shadow DOM](https://github.com/aframevr/aframe/issues/1492#issuecomment-324124434), which he find easy, but to me is protocol workaround - a low level protocol change, which should not be necessary to twist as library a user.  
+
+### So when I don't want to make ShadowDOM workaround, then what are the options?
+
+* Use [trusktr](https://github.com/trusktr)s [Infamous](https://infamous.io/docs/index.html) library ([repo here](https://github.com/trusktr/infamous)) instead of A-Frame. Infamous supports Web Components (and Angular).
+* A-Frames creator [ngokevin](https://github.com/ngokevin) recommends using NunJucks/Static Templating:
+
+> I currently recommend using vanilla A-Frame and [aframe-state-component](https://www.npmjs.com/package/aframe-state-component) with [static templating](https://mozilla.github.io/nunjucks/) over [aframe-react](https://github.com/ngokevin/aframe-react).
 
 To be continued...
 

@@ -41,6 +41,14 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 * [etiennepinchon/aframe-material](https://github.com/etiennepinchon/aframe-material)
 * [nylki/aframe-fit-texture-component](https://github.com/nylki/aframe-fit-texture-component)
 * [K-Frame](https://ngokevin.github.io/kframe/)
+* [Introduction to A-Frame](https://www.slideshare.net/ellisonmu/introduction-to-aframe-57170744)
+* [How A-Frame VR is Different from Other 3D Markup Languages](http://ngokevin.com/blog/aframe-vs-3dml/)
+
+## Nunchcuk and AFrame
+
+* Template: [Nunjucks](https://mozilla.github.io/nunjucks/)
+* State mgmt: [aframe-state-component](https://www.npmjs.com/package/aframe-state-component)
+* Recommended from: [ngokevin/aframe-react](https://github.com/ngokevin/aframe-react)
 
 ## Angular and AFrame
 
@@ -55,9 +63,12 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 * [Angular CLI databinding for A-frame tags · Issue #2518 · aframevr/aframe](https://github.com/aframevr/aframe/issues/2518#issuecomment-289450266)
 * [src/app/app.component.ts · master · Javier Ros  / angularcli-kframe](https://gitlab.com/jros/angularcli-kframe/blob/master/src/app/app.component.ts)
   * [Use untyped A-Frame components with Angular 2](https://stackoverflow.com/a/42551061/750989)
+* [Any chance to port this demo to Ionic 2? · Issue #2 · brakmic/Angular-VR-Starter](https://github.com/brakmic/Angular-VR-Starter/issues/2)
+  * [lobo-tuerto/a-frame-ionic2-hello-world](https://github.com/lobo-tuerto/a-frame-ionic2-hello-world)
 
 ## TS and AFrame
 
+* [How does A-Frame define its own HTML elements?](https://stackoverflow.com/questions/49440047/how-does-a-frame-define-its-own-html-elements)
 * [TypeScript support · Issue #2706 · aframevr/aframe](https://github.com/aframevr/aframe/issues/2706)
 * [@types/aframe](https://github.com/devpaul/aframe-typings)
   * Npm [@types/aframe](https://www.npmjs.com/package/@types/aframe?activeTab=versions)
@@ -72,6 +83,14 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 
 * [How to Write an A-Frame VR Component](http://ngokevin.com/blog/aframe-component/)
 * [aframevr/aframe - writing-a-component](https://github.com/aframevr/aframe/blob/master/docs/introduction/writing-a-component.md)
+
+## Infamous
+
+* [Install - Infamous](https://infamous.io/docs/install.html)
+* [trusktr/infamous](https://github.com/trusktr/infamous/releases?after=v18.0.2)
+
+* [How to deal with Shadow DOM? · Issue #1492 · aframevr/aframe](https://github.com/aframevr/aframe/issues/1492)
+* [How can a custom element detect when it is transcluded into a shadow tree (slotchange)? · Issue #504 · w3c/webcomponents](https://github.com/w3c/webcomponents/issues/504)
 
 ## WebGL
 
