@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-03-29 22:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-04-05 22:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-04-14 13:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#ng"/>
@@ -100,7 +100,7 @@
           Posted on March 29, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
-            Updated: April 05, 2018
+            Updated: April 14, 2018
     </p>
   </header>
 
@@ -376,7 +376,8 @@ But in the <code>a-scene</code> the same way of binding does not work. The creat
 
 <p><img alt="Angular binding not working with Aframe" src="img/2018/2018-03-29-Ng-cli3.PNG">  </p>
 <p>Sample <a href="https://github.com/rasor/ng-maze-vr-blank/tree/f2933d4d324036c99df2739fb266c7cf5af21dea">ng-maze-vr-blank/commit 11</a> demonstrates this situation.  </p>
-<p>So what are the options? </p>
+<h3>So what are the options?</h3>
+<p>Initially I picked options like these:</p>
 <ul>
 <li>Create an Angular wrapper component.<br>
 <a href="https://github.com/zefoy/ngx-ace-wrapper">zefoy/ngx-ace-wrapper</a> is an example of a wrapper.<br>
@@ -386,6 +387,20 @@ ZEF has a handfull of <a href="https://github.com/zefoy?utf8=%E2%9C%93&amp;q=wra
 <a href="https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/">Publishing a Web Component Using Stencil (And Using It Anywhere)</a></li>
 <li>Build and use a Web Component from Angular: <a href="https://github.com/seveves/angular-stencil">seveves/angular-stencil</a></li>
 </ul>
+<p>The first attempt I did was to look at the <a href="https://github.com/seveves/angular-stencil">seveves/angular-stencil</a> repo and tried to see if I could bind A-Frame in a Stencil web component.
+That attempt failed. Repo is here: <a href="https://github.com/rasor/stencil-aframe">rasor/stencil-aframe</a>.<br>
+Notice: In that repo I am using the latest version of A-Frame: 0.8.0.</p>
+<p>Angular components builds on the web components-way of doing things - e.g. using ShaowDom. So I think, when binding with web components does not work, then I should not expect to getting it to work in Angular either. </p>
+<h3>So what are the options, when ShadowDom does not play well with A-Frame?</h3>
+<p>Well <a href="https://github.com/trusktr">trusktr</a> actually found a way <a href="https://github.com/aframevr/aframe/issues/1492#issuecomment-324124434">to deal with Shadow DOM</a>, which he find easy, but to me is protocol workaround - a low level protocol change, which should not be necessary to twist as library a user.  </p>
+<h3>So when I don't want to make ShadowDOM workaround, then what are the options?</h3>
+<ul>
+<li>Use <a href="https://github.com/trusktr">trusktr</a>s <a href="https://infamous.io/docs/index.html">Infamous</a> library (<a href="https://github.com/trusktr/infamous">repo here</a>) instead of A-Frame. Infamous supports Web Components (and Angular).</li>
+<li>A-Frames creator <a href="https://github.com/ngokevin">ngokevin</a> recommends using NunJucks/Static Templating:</li>
+</ul>
+<blockquote>
+<p>I currently recommend using vanilla A-Frame and <a href="https://www.npmjs.com/package/aframe-state-component">aframe-state-component</a> with <a href="https://mozilla.github.io/nunjucks/">static templating</a> over <a href="https://github.com/ngokevin/aframe-react">aframe-react</a>.</p>
+</blockquote>
 <p>To be continued...</p>
 <hr>
 <h2>Links</h2>
