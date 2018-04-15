@@ -1,3 +1,6 @@
+Title: ShadowDOM and Web Components
+Date: 2099-01-01 00:00
+Tags: #shadowdom, #webcomponents, #customelements
 
 # Web Components
 
