@@ -1,6 +1,7 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
+Modified: 2018-04-15 15:30
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas
 
@@ -22,7 +23,7 @@ On the [OpenShift documentation](https://docs.openshift.com/) homepage, you'll l
 * `OpenShift Dedicated` - Redhat's managed public cloud edition of `OpenShift Container Platform`
 * `OpenShift Online` - I think this is like the dedicated edition (single tenant) except that the VMs are not dedicated to only one customer, but are multi tenant.
 
-The prior two editions seems to be clouds hosted by RedHat.
+The latter two editions seems to be clouds hosted by RedHat.
 
 OpenShift is a managed PaaS, that must be deployed to some IaaS [explained here](https://developers.redhat.com/products/cdk/overview/) - Quote:
 > The containers you build can be easily deployed on any Red Hat container host or platform, including: Red Hat Enterprise Linux, Red Hat Enterprise Linux Atomic Host, and our platform-as-a-service solution, OpenShift Container Platform 3.
@@ -52,6 +53,10 @@ When you run the box there will be a REST API enabling you to manage the box
 
 Your code (in docker containers) will be deployed to Kubernetes Pods inside the box  
 [![OpenShift project (Namespace)](https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png)](https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift)
+
+RedHats own picture of OpenShift runtime environment looks like this:  
+[![OpenShift runtime environment](https://blog.openshift.com/wp-content/uploads/arch-diagram.png)](https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/)
+
 
 Next: Will install MiniShift
 
