@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-15T15:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-15T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-15T15:30:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-15T15:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.&lt;/p&gt;
 &lt;h2&gt;So how to get started with OpenShift?&lt;/h2&gt;
@@ -15,7 +15,7 @@ From there you'll learn that there are two editions (called products) of OpenShi
 &lt;li&gt;&lt;code&gt;OpenShift Dedicated&lt;/code&gt; - Redhat's managed public cloud edition of &lt;code&gt;OpenShift Container Platform&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;OpenShift Online&lt;/code&gt; - I think this is like the dedicated edition (single tenant) except that the VMs are not dedicated to only one customer, but are multi tenant.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The prior two editions seems to be clouds hosted by RedHat.&lt;/p&gt;
+&lt;p&gt;The latter two editions seems to be clouds hosted by RedHat.&lt;/p&gt;
 &lt;p&gt;OpenShift is a managed PaaS, that must be deployed to some IaaS &lt;a href="https://developers.redhat.com/products/cdk/overview/"&gt;explained here&lt;/a&gt; - Quote:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;The containers you build can be easily deployed on any Red Hat container host or platform, including: Red Hat Enterprise Linux, Red Hat Enterprise Linux Atomic Host, and our platform-as-a-service solution, OpenShift Container Platform 3.&lt;/p&gt;
@@ -71,6 +71,8 @@ In eBook &lt;code&gt;DevOps with OpenShift&lt;/code&gt; a local all-in-one clust
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift access and control" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Your code (in docker containers) will be deployed to Kubernetes Pods inside the box&lt;br&gt;
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift project (Namespace)" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;RedHats own picture of OpenShift runtime environment looks like this:&lt;br&gt;
+&lt;a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"&gt;&lt;img alt="OpenShift runtime environment" src="https://blog.openshift.com/wp-content/uploads/arch-diagram.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Next: Will install MiniShift&lt;/p&gt;
 &lt;p&gt;... to be continued&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
