@@ -1,7 +1,7 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-17 18:00
+Modified: 2018-04-17 19:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
 
@@ -104,7 +104,7 @@ If any issues consult [Installing Minishift](https://docs.openshift.org/latest/m
 # Start hypervisor
 C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
 # Start minishift
-[minishift start](https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html) --vm-driver=virtualbox
+minishift start --vm-driver=virtualbox
 ```
 
 Output
@@ -196,7 +196,7 @@ You could accidently power off the VM. No worries - you can just start from scra
 But MiniShift has a corresponding command for stopping:
 
 ```bash
-[minishift stop](https://docs.openshift.org/latest/minishift/command-ref/minishift_stop.html)
+minishift stop
 ```
 
 Did you notice during stop - the image is a [boot2docker](https://github.com/boot2docker/boot2docker) - which apparently is what b2d is short for. On their githup page they recommend that on Windows one should rather use [Docker For Windows](https://www.docker.com/docker-windows). I wonder if that will be the default image, if you choose hyper-v as hyperviser...
@@ -209,7 +209,7 @@ But where is it?
 
 ```bash
 # Start again
-[minishift start](https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html) --vm-driver=virtualbox
+minishift start --vm-driver=virtualbox
 # What does status print?
 minishift status
 # Output:
@@ -330,7 +330,7 @@ oc --help
 echo "minishift stop #when done"
 ```
 
-Next: Deploying to MiniShift
+Next: Deploying to MiniShift  
 ... to be continued in Part 2
 
 # Links
