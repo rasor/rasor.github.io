@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/developing-with-openshift.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-04-15 15:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-04-15 15:30:00+02:00"/>
+<meta property="article:modified_time" content="2018-04-17 16:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#openshift"/>
@@ -101,7 +101,7 @@
           Posted on April 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: April 15, 2018
+            Updated: April 17, 2018
     </p>
   </header>
 
@@ -180,7 +180,106 @@ In eBook <code>DevOps with OpenShift</code> a local all-in-one cluster is starte
 <a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"><img alt="OpenShift project (Namespace)" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png"></a></p>
 <p>RedHats own picture of OpenShift runtime environment looks like this:<br>
 <a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"><img alt="OpenShift runtime environment" src="https://blog.openshift.com/wp-content/uploads/arch-diagram.png"></a></p>
-<p>Next: Will install MiniShift</p>
+<h2>Installation</h2>
+<h3>VirtualBox</h3>
+<p>I am installing on Windows 10. Openshift needs a hypervisor. There are two options: Hyper-v or VirtualBox.<br>
+VirtualBox is the easy one to handle. It is also an option that can be chosen both on Windows, Linux and Mac.<br>
+I have used hypervisors some years ago on my local PC, so I know that I have already enabled Intel Virtualization Technology (also known as Intel VT) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.<br>
+Notice: Not all PC's comes with Intel VT.  </p>
+<p>When you have <a href="https://www.virtualbox.org/wiki/Downloads">downloaded VirtualBox</a> and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)<br>
+<img alt="Will disconnect network" src="img/2018/2018-04-15-OpenShift1.PNG"></p>
+<p>After restart I had an extra network adapter</p>
+<div class="highlight"><pre><span></span>ipconfig /all
+
+<span class="c1"># output:</span>
+<span class="c1"># Ethernet adapter VirtualBox Host-Only Network:</span>
+<span class="c1">#   Connection-specific DNS Suffix  . :</span>
+<span class="c1">#   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter</span>
+<span class="c1">#   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)</span>
+</pre></div>
+
+
+<h3>MiniShift</h3>
+<p>I downloded and unzipped <a href="https://github.com/minishift/minishift/releases">minishift/minishift</a> for Windows.<br>
+It could be unzipped to anywhere. I chose <code>C:\Program Files\</code>, so after unzip the MiniShift path was <code>C:\Program Files\minishift-1.15.1-windows-amd64</code>. That path had to be added to the enviroment %path%.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Verify minishift can be reached from any local path</span>
+<span class="c1"># Note: On Windows minishift cannot be executed from a network drive</span>
+minishift --help
+</pre></div>
+
+
+<p>If any issues consult <a href="https://docs.openshift.org/latest/minishift/getting-started/installing.html">Installing Minishift</a> guide.</p>
+<h2>Test driving MiniShift</h2>
+<div class="highlight"><pre><span></span><span class="c1"># Start hypervisor</span>
+C:<span class="se">\P</span>rogram Files<span class="se">\O</span>racle<span class="se">\V</span>irtualBox<span class="se">\V</span>irtualBox.exe
+<span class="c1"># Start minishift</span>
+minishift start --vm-driver<span class="o">=</span>virtualbox
+</pre></div>
+
+
+<p>Output</p>
+<div class="highlight"><pre><span></span>-- Starting profile &#39;minishift&#39;
+-- Checking if requested OpenShift version &#39;v3.7.2&#39; is valid ... OK
+-- Checking if requested OpenShift version &#39;v3.7.2&#39; is supported ... OK
+-- Checking if requested hypervisor &#39;virtualbox&#39; is supported on this platform ... OK
+-- Checking if VirtualBox is installed ... OK
+-- Checking the ISO URL ... OK
+-- Downloading OpenShift binary &#39;oc&#39; version &#39;v3.7.2&#39;
+ 38.44 MiB / 38.44 MiB [=======================================================================================================================================] 100.00% 0s-- Downloading OpenShift v3.7.2 checksums ... OK
+-- Checking if provided oc flags are supported ... OK
+-- Starting local OpenShift cluster using &#39;virtualbox&#39; hypervisor ...
+-- Minishift VM will be configured with ...
+   Memory:    2 GB
+   vCPUs :    2
+   Disk size: 20 GB
+
+   Downloading ISO &#39;https://github.com/minishift/minishift-b2d-iso/releases/download/v1.2.0/minishift-b2d.iso&#39;
+ 40.00 MiB / 40.00 MiB [=======================================================================================================================================] 100.00% 0s
+-- Starting Minishift VM ...................................... OK
+-- Checking for IP address ... OK
+-- Checking for nameservers ... OK
+-- Checking if external host is reachable from the Minishift VM ...
+   Pinging 8.8.8.8 ... OK
+-- Checking HTTP connectivity from the VM ...
+   Retrieving http://minishift.io/index.html ... OK
+-- Checking if persistent storage volume is mounted ... OK
+-- Checking available disk space ... 0% used OK
+   Importing &#39;openshift/origin:v3.7.2&#39; . CACHE MISS
+   Importing &#39;openshift/origin-docker-registry:v3.7.2&#39; . CACHE MISS
+   Importing &#39;openshift/origin-haproxy-router:v3.7.2&#39; . CACHE MISS
+-- OpenShift cluster will be configured with ...
+   Version: v3.7.2
+Starting OpenShift using openshift/origin:v3.7.2 ...
+Pulling image openshift/origin:v3.7.2
+Pulled 1/4 layers, 26% complete
+Pulled 2/4 layers, 78% complete
+Pulled 3/4 layers, 90% complete
+Pulled 4/4 layers, 100% complete
+Extracting
+Image pull complete
+OpenShift server started.
+
+The server is accessible via web console at:
+    https://192.168.99.100:8443
+
+You are logged in as:
+    User:     developer
+    Password: &lt;any value&gt;
+
+To login as administrator:
+    oc login -u system:admin
+
+-- Exporting of OpenShift images is occuring in background process with pid 11256.
+&gt;
+</pre></div>
+
+
+<p>If your screen looks like above the downloded minishift image wil be cached to<br>
+<code>c:\users\youruserid\.minishift\cache\iso\b2d\v1.2.0\</code></p>
+<p>In VirtualBox you'll see the VM running:
+<img alt="Minishift running" src="img/2018/2018-04-15-OpenShift2.PNG"></p>
+<p>If you have trouble consult <a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html">Minishift Quickstart</a>.</p>
+<p>Next: Operating Minishift</p>
 <p>... to be continued</p>
 <h1>Links</h1>
 <ul>
