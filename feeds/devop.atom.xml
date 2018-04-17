@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T16:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T16:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T17:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.&lt;/p&gt;
 &lt;h2&gt;So how to get started with OpenShift?&lt;/h2&gt;
@@ -67,11 +67,11 @@ From there you'll learn that there are two editions (called products) of OpenShi
 In eBook &lt;code&gt;DevOps with OpenShift&lt;/code&gt; a local all-in-one cluster is started using &lt;code&gt;oc cluster up&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;OK, so to play with it locally, then I can either use &lt;code&gt;MiniShift&lt;/code&gt; or &lt;code&gt;Container Development Kit&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;What is in the box?&lt;/h3&gt;
-&lt;p&gt;When you run the box there will be a REST API enabling you to manage the box&lt;br&gt;
+&lt;p&gt;Fig 1. When you run the box there will be a REST API enabling you to manage the box&lt;br&gt;
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift access and control" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Your code (in docker containers) will be deployed to Kubernetes Pods inside the box&lt;br&gt;
+&lt;p&gt;Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box&lt;br&gt;
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift project (Namespace)" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;RedHats own picture of OpenShift runtime environment looks like this:&lt;br&gt;
+&lt;p&gt;Fig 3. RedHats own picture of OpenShift runtime environment looks like this:&lt;br&gt;
 &lt;a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"&gt;&lt;img alt="OpenShift runtime environment" src="https://blog.openshift.com/wp-content/uploads/arch-diagram.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;h3&gt;VirtualBox&lt;/h3&gt;
@@ -80,6 +80,7 @@ VirtualBox is the easy one to handle. It is also an option that can be chosen bo
 I have used hypervisors some years ago on my local PC, so I know that I have already enabled Intel Virtualization Technology (also known as Intel VT) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.&lt;br&gt;
 Notice: Not all PC's comes with Intel VT.  &lt;/p&gt;
 &lt;p&gt;When you have &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;downloaded VirtualBox&lt;/a&gt; and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)&lt;br&gt;
+Fig 4. Your network will disconnect&lt;br&gt;
 &lt;img alt="Will disconnect network" src="img/2018/2018-04-15-OpenShift1.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;After restart I had an extra network adapter&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ipconfig /all
@@ -169,12 +170,55 @@ To login as administrator:
 
 &lt;p&gt;If your screen looks like above the downloded minishift image wil be cached to&lt;br&gt;
 &lt;code&gt;c:\users\youruserid\.minishift\cache\iso\b2d\v1.2.0\&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;In VirtualBox you'll see the VM running:
+&lt;p&gt;Fig 5. In VirtualBox you'll see the VM running:
 &lt;img alt="Minishift running" src="img/2018/2018-04-15-OpenShift2.PNG"&gt;&lt;/p&gt;
-&lt;p&gt;If you have trouble consult &lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html"&gt;Minishift Quickstart&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you have trouble consult &lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html"&gt;Minishift Quickstart&lt;/a&gt; and &lt;a href="https://docs.openshift.org/latest/minishift/troubleshooting/troubleshooting-getting-started.html#minshift-startup-check-failed"&gt;Troubleshooting Minishift&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As you could see from the output you got an url to the &lt;a href="https://192.168.99.100:8443/console/"&gt;Web Console: https://192.168.99.100:8443/&lt;/a&gt; that was shown in Fig 1.&lt;br&gt;
+Fig 6. Log in to Minishift web console with user &lt;code&gt;developer&lt;/code&gt; and &lt;code&gt;&amp;lt;any key&amp;gt;&lt;/code&gt; as psw.
+&lt;img alt="Log in to Minishift Web Console" src="img/2018/2018-04-15-OpenShift3.PNG"&gt;  &lt;/p&gt;
+&lt;p&gt;Fig 7. MiniShift Web Console
+&lt;img alt="MiniShift Web Console" src="img/2018/2018-04-15-OpenShift4.PNG"&gt;&lt;/p&gt;
+&lt;p&gt;OK, we're in. How about turning off?&lt;/p&gt;
+&lt;p&gt;VirtualBox has following options:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Action&lt;/th&gt;
+&lt;th&gt;Keybord shortcut&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Pause&lt;/td&gt;
+&lt;td&gt;Ctrl-P&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Reset&lt;/td&gt;
+&lt;td&gt;Ctrl-T&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Close - save state&lt;/td&gt;
+&lt;td&gt;Ctrl-V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ACPI Shutdown&lt;/td&gt;
+&lt;td&gt;Ctrl-H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Power Off&lt;/td&gt;
+&lt;td&gt;Ctrl-F&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;At this point I don't know what options there are using the minishift CLI cmd, but you can power off the VM and just start from scratch with minishift start ... - as before.&lt;/p&gt;
 &lt;p&gt;Next: Operating Minishift&lt;/p&gt;
 &lt;p&gt;... to be continued&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
+&lt;h2&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.openshift.org/latest/minishift/command-ref/minishift.html"&gt;MiniShift - Command Reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Getting Started&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://blog.openshift.com/"&gt;OpenShift Blog&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://blog.openshift.com/announcing-net-core-2-0-support-openshift/"&gt;Announcing .NET Core 2.0 Support for OpenShift&lt;/a&gt;&lt;/li&gt;
