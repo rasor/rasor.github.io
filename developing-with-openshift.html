@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/developing-with-openshift.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-04-15 15:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-04-17 18:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-04-17 19:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#openshift"/>
@@ -218,7 +218,7 @@ minishift --help
 <div class="highlight"><pre><span></span><span class="c1"># Start hypervisor</span>
 C:<span class="se">\P</span>rogram Files<span class="se">\O</span>racle<span class="se">\V</span>irtualBox<span class="se">\V</span>irtualBox.exe
 <span class="c1"># Start minishift</span>
-<span class="o">[</span>minishift start<span class="o">](</span>https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html<span class="o">)</span> --vm-driver<span class="o">=</span>virtualbox
+minishift start --vm-driver<span class="o">=</span>virtualbox
 </pre></div>
 
 
@@ -323,7 +323,7 @@ Fig 6. Log in to Minishift web console with user <code>developer</code> and <cod
 </table>
 <p>You could accidently power off the VM. No worries - you can just start from scratch with minishift start ... - as before.
 But MiniShift has a corresponding command for stopping:</p>
-<div class="highlight"><pre><span></span><span class="o">[</span>minishift stop<span class="o">](</span>https://docs.openshift.org/latest/minishift/command-ref/minishift_stop.html<span class="o">)</span>
+<div class="highlight"><pre><span></span>minishift stop
 </pre></div>
 
 
@@ -333,7 +333,7 @@ But MiniShift has a corresponding command for stopping:</p>
 I think the Dev and Adm CLI is one and same - just having different roles using it. At least I know that for CLI we have the <code>oc</code> command.<br>
 But where is it?</p>
 <div class="highlight"><pre><span></span><span class="c1"># Start again</span>
-<span class="o">[</span>minishift start<span class="o">](</span>https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html<span class="o">)</span> --vm-driver<span class="o">=</span>virtualbox
+minishift start --vm-driver<span class="o">=</span>virtualbox
 <span class="c1"># What does status print?</span>
 minishift status
 <span class="c1"># Output:</span>
@@ -453,7 +453,7 @@ oc --help
 </pre></div>
 
 
-<p>Next: Deploying to MiniShift
+<p>Next: Deploying to MiniShift<br>
 ... to be continued in Part 2</p>
 <h1>Links</h1>
 <h2>References</h2>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T18:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T18:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T19:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.&lt;/p&gt;
 &lt;h2&gt;So how to get started with OpenShift?&lt;/h2&gt;
@@ -109,7 +109,7 @@ minishift --help
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Start hypervisor&lt;/span&gt;
 C:&lt;span class="se"&gt;\P&lt;/span&gt;rogram Files&lt;span class="se"&gt;\O&lt;/span&gt;racle&lt;span class="se"&gt;\V&lt;/span&gt;irtualBox&lt;span class="se"&gt;\V&lt;/span&gt;irtualBox.exe
 &lt;span class="c1"&gt;# Start minishift&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;minishift start&lt;span class="o"&gt;](&lt;/span&gt;https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html&lt;span class="o"&gt;)&lt;/span&gt; --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
+minishift start --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -214,7 +214,7 @@ Fig 6. Log in to Minishift web console with user &lt;code&gt;developer&lt;/code&
 &lt;/table&gt;
 &lt;p&gt;You could accidently power off the VM. No worries - you can just start from scratch with minishift start ... - as before.
 But MiniShift has a corresponding command for stopping:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;minishift stop&lt;span class="o"&gt;](&lt;/span&gt;https://docs.openshift.org/latest/minishift/command-ref/minishift_stop.html&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;minishift stop
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -224,7 +224,7 @@ But MiniShift has a corresponding command for stopping:&lt;/p&gt;
 I think the Dev and Adm CLI is one and same - just having different roles using it. At least I know that for CLI we have the &lt;code&gt;oc&lt;/code&gt; command.&lt;br&gt;
 But where is it?&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Start again&lt;/span&gt;
-&lt;span class="o"&gt;[&lt;/span&gt;minishift start&lt;span class="o"&gt;](&lt;/span&gt;https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html&lt;span class="o"&gt;)&lt;/span&gt; --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
+minishift start --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
 &lt;span class="c1"&gt;# What does status print?&lt;/span&gt;
 minishift status
 &lt;span class="c1"&gt;# Output:&lt;/span&gt;
@@ -344,7 +344,7 @@ oc --help
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Next: Deploying to MiniShift
+&lt;p&gt;Next: Deploying to MiniShift&lt;br&gt;
 ... to be continued in Part 2&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;h2&gt;References&lt;/h2&gt;
