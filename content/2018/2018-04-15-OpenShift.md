@@ -1,7 +1,7 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-17 16:00
+Modified: 2018-04-17 17:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas
 
@@ -48,13 +48,13 @@ OK, so to play with it locally, then I can either use `MiniShift` or `Container 
 
 ### What is in the box?
 
-When you run the box there will be a REST API enabling you to manage the box  
+Fig 1. When you run the box there will be a REST API enabling you to manage the box  
 [![OpenShift access and control](https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png)](https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift)
 
-Your code (in docker containers) will be deployed to Kubernetes Pods inside the box  
+Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box  
 [![OpenShift project (Namespace)](https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png)](https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift)
 
-RedHats own picture of OpenShift runtime environment looks like this:  
+Fig 3. RedHats own picture of OpenShift runtime environment looks like this:  
 [![OpenShift runtime environment](https://blog.openshift.com/wp-content/uploads/arch-diagram.png)](https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/)
 
 ## Installation
@@ -67,6 +67,7 @@ I have used hypervisors some years ago on my local PC, so I know that I have alr
 Notice: Not all PC's comes with Intel VT.  
 
 When you have [downloaded VirtualBox](https://www.virtualbox.org/wiki/Downloads) and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)  
+Fig 4. Your network will disconnect  
 ![Will disconnect network](img/2018/2018-04-15-OpenShift1.PNG)
 
 After restart I had an extra network adapter
@@ -164,16 +165,43 @@ To login as administrator:
 If your screen looks like above the downloded minishift image wil be cached to  
 `c:\users\youruserid\.minishift\cache\iso\b2d\v1.2.0\`
 
-In VirtualBox you'll see the VM running:
+Fig 5. In VirtualBox you'll see the VM running:
 ![Minishift running](img/2018/2018-04-15-OpenShift2.PNG)
 
-If you have trouble consult [Minishift Quickstart](https://docs.openshift.org/latest/minishift/getting-started/quickstart.html).
+If you have trouble consult [Minishift Quickstart](https://docs.openshift.org/latest/minishift/getting-started/quickstart.html) and [Troubleshooting Minishift](https://docs.openshift.org/latest/minishift/troubleshooting/troubleshooting-getting-started.html#minshift-startup-check-failed).
+
+As you could see from the output you got an url to the [Web Console: https://192.168.99.100:8443/](https://192.168.99.100:8443/console/) that was shown in Fig 1.  
+Fig 6. Log in to Minishift web console with user `developer` and `<any key>` as psw.
+![Log in to Minishift Web Console](img/2018/2018-04-15-OpenShift3.PNG)  
+
+Fig 7. MiniShift Web Console
+![MiniShift Web Console](img/2018/2018-04-15-OpenShift4.PNG)
+
+OK, we're in. How about turning off?
+
+VirtualBox has following options:
+
+|Action|Keybord shortcut|
+|---|---|
+|Pause|Ctrl-P|
+|Reset|Ctrl-T|
+|Close - save state|Ctrl-V|
+|ACPI Shutdown|Ctrl-H|
+|Power Off|Ctrl-F|
+
+At this point I don't know what options there are using the minishift CLI cmd, but you can power off the VM and just start from scratch with minishift start ... - as before.
 
 Next: Operating Minishift
 
 ... to be continued
 
 # Links
+
+## References
+
+* [MiniShift - Command Reference](https://docs.openshift.org/latest/minishift/command-ref/minishift.html)
+
+## Getting Started
 
 * [OpenShift Blog](https://blog.openshift.com/)
     * [Announcing .NET Core 2.0 Support for OpenShift](https://blog.openshift.com/announcing-net-core-2-0-support-openshift/)
