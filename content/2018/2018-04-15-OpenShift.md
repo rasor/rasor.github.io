@@ -1,9 +1,9 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-17 17:00
+Modified: 2018-04-17 18:00
 Category: DevOp
-Tags: #openshift, #docker, #kubernetes, #redhat, #paas
+Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
 
 It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
@@ -26,7 +26,7 @@ On the [OpenShift documentation](https://docs.openshift.com/) homepage, you'll l
 The latter two editions seems to be clouds hosted by RedHat.
 
 OpenShift is a managed PaaS, that must be deployed to some IaaS [explained here](https://developers.redhat.com/products/cdk/overview/) - Quote:
-> The containers you build can be easily deployed on any Red Hat container host or platform, including: Red Hat Enterprise Linux, Red Hat Enterprise Linux Atomic Host, and our platform-as-a-service solution, OpenShift Container Platform 3.
+> The containers you build can be easily deployed on any Red Hat container host or platform, including: `Red Hat Enterprise Linux`, `Red Hat Enterprise Linux Atomic Host`, and our platform-as-a-service solution, `OpenShift Container Platform 3`.
 
 I think this IaaS stack often will be RedHat OpenStack and probably also is it, when you are using RedHat Enterprise Linux as the container host.
 
@@ -48,22 +48,23 @@ OK, so to play with it locally, then I can either use `MiniShift` or `Container 
 
 ### What is in the box?
 
-Fig 1. When you run the box there will be a REST API enabling you to manage the box  
+Fig 1. When you run the box there will be a REST API enabling you to manage the box (Drawing by [James Bucket](https://www.levvel.io/author/james-buckett) hosted by levvel.io)
 [![OpenShift access and control](https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png)](https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift)
 
-Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box  
+Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box (Drawing by [James Bucket](https://www.levvel.io/author/james-buckett) hosted by levvel.io)  
 [![OpenShift project (Namespace)](https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png)](https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift)
 
-Fig 3. RedHats own picture of OpenShift runtime environment looks like this:  
+Fig 3. RedHats own picture of OpenShift runtime environment (Drawing by [Mike Barret](https://blog.openshift.com/author/mikebarrett/) hosted by openshift.com)
 [![OpenShift runtime environment](https://blog.openshift.com/wp-content/uploads/arch-diagram.png)](https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/)
 
 ## Installation
 
 ### VirtualBox
 
-I am installing on Windows 10. Openshift needs a hypervisor. There are two options: Hyper-v or VirtualBox.  
-VirtualBox is the easy one to handle. It is also an option that can be chosen both on Windows, Linux and Mac.  
-I have used hypervisors some years ago on my local PC, so I know that I have already enabled Intel Virtualization Technology (also known as Intel VT) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.  
+I am installing on Windows 10.  
+Openshift needs a hypervisor. There are two options: Hyper-v or VirtualBox.  
+VirtualBox is the easy one to handle is my experince. It is also an option that can be chosen both on Windows, Linux and Mac.  
+I have used hypervisors some years ago on my local PC, so I know that I have already enabled `Intel Virtualization Technology` (also known as `Intel VT`) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.  
 Notice: Not all PC's comes with Intel VT.  
 
 When you have [downloaded VirtualBox](https://www.virtualbox.org/wiki/Downloads) and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)  
@@ -97,11 +98,13 @@ If any issues consult [Installing Minishift](https://docs.openshift.org/latest/m
 
 ## Test driving MiniShift
 
+### Start and stop
+
 ```bash
 # Start hypervisor
 C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
 # Start minishift
-minishift start --vm-driver=virtualbox
+[minishift start](https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html) --vm-driver=virtualbox
 ```
 
 Output
@@ -189,17 +192,154 @@ VirtualBox has following options:
 |ACPI Shutdown|Ctrl-H|
 |Power Off|Ctrl-F|
 
-At this point I don't know what options there are using the minishift CLI cmd, but you can power off the VM and just start from scratch with minishift start ... - as before.
+You could accidently power off the VM. No worries - you can just start from scratch with minishift start ... - as before.
+But MiniShift has a corresponding command for stopping:
 
-Next: Operating Minishift
+```bash
+[minishift stop](https://docs.openshift.org/latest/minishift/command-ref/minishift_stop.html)
+```
 
-... to be continued
+Did you notice during stop - the image is a [boot2docker](https://github.com/boot2docker/boot2docker) - which apparently is what b2d is short for. On their githup page they recommend that on Windows one should rather use [Docker For Windows](https://www.docker.com/docker-windows). I wonder if that will be the default image, if you choose hyper-v as hyperviser...
+
+### The oc CLI
+
+In Fig 1. you saw three clients for MiniShift: Dev CLI, Adm CLI and Web Console.  
+I think the Dev and Adm CLI is one and same - just having different roles using it. At least I know that for CLI we have the `oc` command.  
+But where is it?
+
+```bash
+# Start again
+[minishift start](https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html) --vm-driver=virtualbox
+# What does status print?
+minishift status
+# Output:
+# Minishift:  Running
+# Profile:    minishift
+# OpenShift:  Running (openshift v3.7.2+5eda3fa-5)
+# DiskUsage:  8% of 17.9G
+
+# Print what to exec to add oc to your %path%
+minishift oc-env
+# Output
+# export PATH="C:\Users\youruserid\.minishift\cache\oc\v3.7.2\windows:$PATH"
+# Run this command to configure your shell:
+# eval $(minishift oc-env)
+
+# Nice - then let's do what it tells us to do. This works at least from the Git bash shell:
+eval $(minishift oc-env)
+
+# Did it work?
+oc --help
+```
+
+Output: 
+
+```text
+OpenShift Client
+
+This client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes compatible platform. It also includes the administrative commands for managing a cluster under the 'adm' subcommand.
+
+Basic Commands:
+  types           An introduction to concepts and types
+  login           Log in to a server
+  new-project     Request a new project
+  new-app         Create a new application
+  status          Show an overview of the current project
+  project         Switch to another project
+  projects        Display existing projects
+  explain         Documentation of resources
+  cluster         Start and stop OpenShift cluster
+
+Build and Deploy Commands:
+  rollout         Manage a Kubernetes deployment or OpenShift deployment config
+  rollback        Revert part of an application back to a previous deployment
+  new-build       Create a new build configuration
+  start-build     Start a new build
+  cancel-build    Cancel running, pending, or new builds
+  import-image    Imports images from a Docker registry
+  tag             Tag existing images into image streams
+
+Application Management Commands:
+  get             Display one or many resources
+  describe        Show details of a specific resource or group of resources
+  edit            Edit a resource on the server
+  set             Commands that help set specific features on objects
+  label           Update the labels on a resource
+  annotate        Update the annotations on a resource
+  expose          Expose a replicated application as a service or route
+  delete          Delete one or more resources
+  scale           Change the number of pods in a deployment
+  autoscale       Autoscale a deployment config, deployment, replication controller, or replica set
+  secrets         Manage secrets
+  serviceaccounts Manage service accounts in your project
+
+Troubleshooting and Debugging Commands:
+  logs            Print the logs for a resource
+  rsh             Start a shell session in a pod
+  rsync           Copy files between local filesystem and a pod
+  port-forward    Forward one or more local ports to a pod
+  debug           Launch a new instance of a pod for debugging
+  exec            Execute a command in a container
+  proxy           Run a proxy to the Kubernetes API server
+  attach          Attach to a running container
+  run             Run a particular image on the cluster
+  cp              Copy files and directories to and from containers.
+
+Advanced Commands:
+  adm             Tools for managing a cluster
+  create          Create a resource by filename or stdin
+  replace         Replace a resource by filename or stdin
+  apply           Apply a configuration to a resource by filename or stdin
+  patch           Update field(s) of a resource using strategic merge patch
+  process         Process a template into list of resources
+  export          Export resources so they can be used elsewhere
+  extract         Extract secrets or config maps to disk
+  idle            Idle scalable resources
+  observe         Observe changes to resources and react to them (experimental)
+  policy          Manage authorization policy
+  auth            Inspect authorization
+  convert         Convert config files between different API versions
+  import          Commands that import applications
+  image           Useful commands for managing images
+
+Settings Commands:
+  logout          End the current server session
+  config          Change configuration files for the client
+  whoami          Return information about the current session
+  completion      Output shell completion code for the specified shell (bash or zsh)
+
+Other Commands:
+  help            Help about any command
+  plugin          Runs a command-line plugin
+  version         Display client and server versions
+
+Use "oc <command> --help" for more information about a given command.
+Use "oc options" for a list of global command-line options (applies to all commands).
+```
+
+If you save ([or download](https://gist.github.com/rasor/2060037307731d2c2bb740e503c951bb)) the following to `C:\Program Files\minishift-1.15.1-windows-amd64\shiftcli.sh`, then you can start your minishift from Git Bash with `shiftcli.sh`
+
+```bash
+#!/bin/bash
+#shiftcli.sh
+minishift start --vm-driver=virtualbox
+minishift status
+eval $(minishift oc-env)
+oc --help
+
+echo "minishift stop #when done"
+```
+
+Next: Deploying to MiniShift
+... to be continued in Part 2
 
 # Links
 
 ## References
 
 * [MiniShift - Command Reference](https://docs.openshift.org/latest/minishift/command-ref/minishift.html)
+* [oc CLI Reference](https://docs.openshift.org/latest/cli_reference/index.html)
+* [apb CLI - Ansible Playbook Bundle Development Guide](https://docs.openshift.org/latest/apb_devel/index.html)
 
 ## Getting Started
 
