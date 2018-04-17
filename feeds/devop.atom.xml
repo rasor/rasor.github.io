@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T17:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T18:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T18:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.&lt;/p&gt;
 &lt;h2&gt;So how to get started with OpenShift?&lt;/h2&gt;
@@ -18,7 +18,7 @@ From there you'll learn that there are two editions (called products) of OpenShi
 &lt;p&gt;The latter two editions seems to be clouds hosted by RedHat.&lt;/p&gt;
 &lt;p&gt;OpenShift is a managed PaaS, that must be deployed to some IaaS &lt;a href="https://developers.redhat.com/products/cdk/overview/"&gt;explained here&lt;/a&gt; - Quote:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;The containers you build can be easily deployed on any Red Hat container host or platform, including: Red Hat Enterprise Linux, Red Hat Enterprise Linux Atomic Host, and our platform-as-a-service solution, OpenShift Container Platform 3.&lt;/p&gt;
+&lt;p&gt;The containers you build can be easily deployed on any Red Hat container host or platform, including: &lt;code&gt;Red Hat Enterprise Linux&lt;/code&gt;, &lt;code&gt;Red Hat Enterprise Linux Atomic Host&lt;/code&gt;, and our platform-as-a-service solution, &lt;code&gt;OpenShift Container Platform 3&lt;/code&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;I think this IaaS stack often will be RedHat OpenStack and probably also is it, when you are using RedHat Enterprise Linux as the container host.&lt;/p&gt;
 &lt;h3&gt;How do I start playing with the toy?&lt;/h3&gt;
@@ -67,17 +67,18 @@ From there you'll learn that there are two editions (called products) of OpenShi
 In eBook &lt;code&gt;DevOps with OpenShift&lt;/code&gt; a local all-in-one cluster is started using &lt;code&gt;oc cluster up&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;OK, so to play with it locally, then I can either use &lt;code&gt;MiniShift&lt;/code&gt; or &lt;code&gt;Container Development Kit&lt;/code&gt;.&lt;/p&gt;
 &lt;h3&gt;What is in the box?&lt;/h3&gt;
-&lt;p&gt;Fig 1. When you run the box there will be a REST API enabling you to manage the box&lt;br&gt;
+&lt;p&gt;Fig 1. When you run the box there will be a REST API enabling you to manage the box (Drawing by &lt;a href="https://www.levvel.io/author/james-buckett"&gt;James Bucket&lt;/a&gt; hosted by levvel.io)
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift access and control" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box&lt;br&gt;
+&lt;p&gt;Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box (Drawing by &lt;a href="https://www.levvel.io/author/james-buckett"&gt;James Bucket&lt;/a&gt; hosted by levvel.io)&lt;br&gt;
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift project (Namespace)" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Fig 3. RedHats own picture of OpenShift runtime environment looks like this:&lt;br&gt;
+&lt;p&gt;Fig 3. RedHats own picture of OpenShift runtime environment (Drawing by &lt;a href="https://blog.openshift.com/author/mikebarrett/"&gt;Mike Barret&lt;/a&gt; hosted by openshift.com)
 &lt;a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"&gt;&lt;img alt="OpenShift runtime environment" src="https://blog.openshift.com/wp-content/uploads/arch-diagram.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;h3&gt;VirtualBox&lt;/h3&gt;
-&lt;p&gt;I am installing on Windows 10. Openshift needs a hypervisor. There are two options: Hyper-v or VirtualBox.&lt;br&gt;
-VirtualBox is the easy one to handle. It is also an option that can be chosen both on Windows, Linux and Mac.&lt;br&gt;
-I have used hypervisors some years ago on my local PC, so I know that I have already enabled Intel Virtualization Technology (also known as Intel VT) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.&lt;br&gt;
+&lt;p&gt;I am installing on Windows 10.&lt;br&gt;
+Openshift needs a hypervisor. There are two options: Hyper-v or VirtualBox.&lt;br&gt;
+VirtualBox is the easy one to handle is my experince. It is also an option that can be chosen both on Windows, Linux and Mac.&lt;br&gt;
+I have used hypervisors some years ago on my local PC, so I know that I have already enabled &lt;code&gt;Intel Virtualization Technology&lt;/code&gt; (also known as &lt;code&gt;Intel VT&lt;/code&gt;) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.&lt;br&gt;
 Notice: Not all PC's comes with Intel VT.  &lt;/p&gt;
 &lt;p&gt;When you have &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;downloaded VirtualBox&lt;/a&gt; and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)&lt;br&gt;
 Fig 4. Your network will disconnect&lt;br&gt;
@@ -104,10 +105,11 @@ minishift --help
 
 &lt;p&gt;If any issues consult &lt;a href="https://docs.openshift.org/latest/minishift/getting-started/installing.html"&gt;Installing Minishift&lt;/a&gt; guide.&lt;/p&gt;
 &lt;h2&gt;Test driving MiniShift&lt;/h2&gt;
+&lt;h3&gt;Start and stop&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Start hypervisor&lt;/span&gt;
 C:&lt;span class="se"&gt;\P&lt;/span&gt;rogram Files&lt;span class="se"&gt;\O&lt;/span&gt;racle&lt;span class="se"&gt;\V&lt;/span&gt;irtualBox&lt;span class="se"&gt;\V&lt;/span&gt;irtualBox.exe
 &lt;span class="c1"&gt;# Start minishift&lt;/span&gt;
-minishift start --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
+&lt;span class="o"&gt;[&lt;/span&gt;minishift start&lt;span class="o"&gt;](&lt;/span&gt;https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html&lt;span class="o"&gt;)&lt;/span&gt; --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -210,13 +212,146 @@ Fig 6. Log in to Minishift web console with user &lt;code&gt;developer&lt;/code&
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;At this point I don't know what options there are using the minishift CLI cmd, but you can power off the VM and just start from scratch with minishift start ... - as before.&lt;/p&gt;
-&lt;p&gt;Next: Operating Minishift&lt;/p&gt;
-&lt;p&gt;... to be continued&lt;/p&gt;
+&lt;p&gt;You could accidently power off the VM. No worries - you can just start from scratch with minishift start ... - as before.
+But MiniShift has a corresponding command for stopping:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;minishift stop&lt;span class="o"&gt;](&lt;/span&gt;https://docs.openshift.org/latest/minishift/command-ref/minishift_stop.html&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Did you notice during stop - the image is a &lt;a href="https://github.com/boot2docker/boot2docker"&gt;boot2docker&lt;/a&gt; - which apparently is what b2d is short for. On their githup page they recommend that on Windows one should rather use &lt;a href="https://www.docker.com/docker-windows"&gt;Docker For Windows&lt;/a&gt;. I wonder if that will be the default image, if you choose hyper-v as hyperviser...&lt;/p&gt;
+&lt;h3&gt;The oc CLI&lt;/h3&gt;
+&lt;p&gt;In Fig 1. you saw three clients for MiniShift: Dev CLI, Adm CLI and Web Console.&lt;br&gt;
+I think the Dev and Adm CLI is one and same - just having different roles using it. At least I know that for CLI we have the &lt;code&gt;oc&lt;/code&gt; command.&lt;br&gt;
+But where is it?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Start again&lt;/span&gt;
+&lt;span class="o"&gt;[&lt;/span&gt;minishift start&lt;span class="o"&gt;](&lt;/span&gt;https://docs.openshift.org/latest/minishift/command-ref/minishift_start.html&lt;span class="o"&gt;)&lt;/span&gt; --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
+&lt;span class="c1"&gt;# What does status print?&lt;/span&gt;
+minishift status
+&lt;span class="c1"&gt;# Output:&lt;/span&gt;
+&lt;span class="c1"&gt;# Minishift:  Running&lt;/span&gt;
+&lt;span class="c1"&gt;# Profile:    minishift&lt;/span&gt;
+&lt;span class="c1"&gt;# OpenShift:  Running (openshift v3.7.2+5eda3fa-5)&lt;/span&gt;
+&lt;span class="c1"&gt;# DiskUsage:  8% of 17.9G&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Print what to exec to add oc to your %path%&lt;/span&gt;
+minishift oc-env
+&lt;span class="c1"&gt;# Output&lt;/span&gt;
+&lt;span class="c1"&gt;# export PATH=&amp;quot;C:\Users\youruserid\.minishift\cache\oc\v3.7.2\windows:$PATH&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Run this command to configure your shell:&lt;/span&gt;
+&lt;span class="c1"&gt;# eval $(minishift oc-env)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Nice - then let&amp;#39;s do what it tells us to do. This works at least from the Git bash shell:&lt;/span&gt;
+&lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;minishift oc-env&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Did it work?&lt;/span&gt;
+oc --help
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;OpenShift Client
+
+This client helps you develop, build, deploy, and run your applications on any OpenShift or Kubernetes compatible platform. It also includes the administrative commands for managing a cluster under the &amp;#39;adm&amp;#39; subcommand.
+
+Basic Commands:
+  types           An introduction to concepts and types
+  login           Log in to a server
+  new-project     Request a new project
+  new-app         Create a new application
+  status          Show an overview of the current project
+  project         Switch to another project
+  projects        Display existing projects
+  explain         Documentation of resources
+  cluster         Start and stop OpenShift cluster
+
+Build and Deploy Commands:
+  rollout         Manage a Kubernetes deployment or OpenShift deployment config
+  rollback        Revert part of an application back to a previous deployment
+  new-build       Create a new build configuration
+  start-build     Start a new build
+  cancel-build    Cancel running, pending, or new builds
+  import-image    Imports images from a Docker registry
+  tag             Tag existing images into image streams
+
+Application Management Commands:
+  get             Display one or many resources
+  describe        Show details of a specific resource or group of resources
+  edit            Edit a resource on the server
+  set             Commands that help set specific features on objects
+  label           Update the labels on a resource
+  annotate        Update the annotations on a resource
+  expose          Expose a replicated application as a service or route
+  delete          Delete one or more resources
+  scale           Change the number of pods in a deployment
+  autoscale       Autoscale a deployment config, deployment, replication controller, or replica set
+  secrets         Manage secrets
+  serviceaccounts Manage service accounts in your project
+
+Troubleshooting and Debugging Commands:
+  logs            Print the logs for a resource
+  rsh             Start a shell session in a pod
+  rsync           Copy files between local filesystem and a pod
+  port-forward    Forward one or more local ports to a pod
+  debug           Launch a new instance of a pod for debugging
+  exec            Execute a command in a container
+  proxy           Run a proxy to the Kubernetes API server
+  attach          Attach to a running container
+  run             Run a particular image on the cluster
+  cp              Copy files and directories to and from containers.
+
+Advanced Commands:
+  adm             Tools for managing a cluster
+  create          Create a resource by filename or stdin
+  replace         Replace a resource by filename or stdin
+  apply           Apply a configuration to a resource by filename or stdin
+  patch           Update field(s) of a resource using strategic merge patch
+  process         Process a template into list of resources
+  export          Export resources so they can be used elsewhere
+  extract         Extract secrets or config maps to disk
+  idle            Idle scalable resources
+  observe         Observe changes to resources and react to them (experimental)
+  policy          Manage authorization policy
+  auth            Inspect authorization
+  convert         Convert config files between different API versions
+  import          Commands that import applications
+  image           Useful commands for managing images
+
+Settings Commands:
+  logout          End the current server session
+  config          Change configuration files for the client
+  whoami          Return information about the current session
+  completion      Output shell completion code for the specified shell (bash or zsh)
+
+Other Commands:
+  help            Help about any command
+  plugin          Runs a command-line plugin
+  version         Display client and server versions
+
+Use &amp;quot;oc &amp;lt;command&amp;gt; --help&amp;quot; for more information about a given command.
+Use &amp;quot;oc options&amp;quot; for a list of global command-line options (applies to all commands).
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you save (&lt;a href="https://gist.github.com/rasor/2060037307731d2c2bb740e503c951bb"&gt;or download&lt;/a&gt;) the following to &lt;code&gt;C:\Program Files\minishift-1.15.1-windows-amd64\shiftcli.sh&lt;/code&gt;, then you can start your minishift from Git Bash with &lt;code&gt;shiftcli.sh&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;#shiftcli.sh&lt;/span&gt;
+minishift start --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
+minishift status
+&lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;minishift oc-env&lt;span class="k"&gt;)&lt;/span&gt;
+oc --help
+
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;minishift stop #when done&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next: Deploying to MiniShift
+... to be continued in Part 2&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;h2&gt;References&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://docs.openshift.org/latest/minishift/command-ref/minishift.html"&gt;MiniShift - Command Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.openshift.org/latest/cli_reference/index.html"&gt;oc CLI Reference&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.openshift.org/latest/apb_devel/index.html"&gt;apb CLI - Ansible Playbook Bundle Development Guide&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Getting Started&lt;/h2&gt;
 &lt;ul&gt;
@@ -241,7 +376,7 @@ Fig 6. Log in to Minishift web console with user &lt;code&gt;developer&lt;/code&
 &lt;/li&gt;
 &lt;li&gt;Old &lt;a href="https://rasor.wordpress.com/2013/11/26/cloud-services/"&gt;Cloud&lt;/a&gt; landscape anno 2013 - from my old blog.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
 &lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;
