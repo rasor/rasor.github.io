@@ -1,12 +1,13 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-17 19:00
+Modified: 2018-04-23 17:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
 
 It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
+In this blog I'll run it locally from Windows.
 
 ## So how to get started with OpenShift?
 
@@ -32,6 +33,23 @@ I think this IaaS stack often will be RedHat OpenStack and probably also is it, 
 
 ### How do I start playing with the toy?
 
+You can locally play with either `OpenShift Origin` or `OpenShift Container Platform`.  
+
+With `OpenShift Origin` you have [5 options](https://github.com/sclorg/nodejs-ex#nodejs-sample-app-on-openshift):  
+
+||`OpenShift Origin` Option|Win/Mac/Lin||
+|---|---|---|---|
+|1.|Running a VM with `Vagrant`|W/M/L|*1|
+|2.|Running a VM managed by `MiniShift`|W/M/L|*1|
+|3.|Starting a `Docker` container|L (Fedora, CentOS, RHEL)||
+|4.|Downloading the `binary`|L||
+|5.|Running an `Ansible` playbook|||
+
+*1: `MiniShift` is a newer method for local development than the method used in eBook `OpenShift for Developers` called `Vagrant all-in-one virtual machine`.  
+In eBook `DevOps with OpenShift` a local all-in-one cluster is started using `oc cluster up`.
+
+In the table below there are some links provided by OpenShift:  
+
 ||`Origin`|`Container Platform`|
 |---|---|---|
 |Download and Run Openshift locally|[`MiniShift`](https://www.openshift.org/minishift/) *1|[`Container Development Kit (CDK)`](https://developers.redhat.com/products/cdk/overview/)|
@@ -41,10 +59,7 @@ I think this IaaS stack often will be RedHat OpenStack and probably also is it, 
 |`Web Console` Walkthrough|[Origin 3.9](https://docs.openshift.org/3.9/getting_started/developers_console.html)|[Container Platform 3.9](https://docs.openshift.com/container-platform/3.9/getting_started/developers_console.html)|
 |`CLI` Walkthrough|[Origin 3.9](https://docs.openshift.org/3.9/getting_started/developers_cli.html)|[Container Platform 3.9](https://docs.openshift.com/container-platform/3.9/getting_started/developers_cli.html)|
 
-*1: `MiniShift` is a newer method for local development than the method used in eBook `OpenShift for Developers` called `Vagrant all-in-one virtual machine`.  
-In eBook `DevOps with OpenShift` a local all-in-one cluster is started using `oc cluster up`.
-
-OK, so to play with it locally, then I can either use `MiniShift` or `Container Development Kit`.
+So there are lots of options to play with it locally. I'll use `MiniShift`, which seems to be the simplest option.
 
 ### What is in the box?
 
@@ -98,10 +113,10 @@ If any issues consult [Installing Minishift](https://docs.openshift.org/latest/m
 
 ## Test driving MiniShift
 
-### Start and stop
+### [Start](https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#starting-minishift) and stop
 
 ```bash
-# Start hypervisor
+# Optionally Start hypervisor - if you don't start the GUI, it will be started by MiniShift as headless using VBoxHeadless.exe
 C:\Program Files\Oracle\VirtualBox\VirtualBox.exe
 # Start minishift
 minishift start --vm-driver=virtualbox
@@ -322,10 +337,15 @@ If you save ([or download](https://gist.github.com/rasor/2060037307731d2c2bb740e
 ```bash
 #!/bin/bash
 #shiftcli.sh
+# Start a VM and start an OpenShift Cluster inside the VM
 minishift start --vm-driver=virtualbox
 minishift status
+# Enable oc - the CLI
 eval $(minishift oc-env)
+# print oc cmds, if you prefer CLI to the Web Console
 oc --help
+# optionally start Web Console if you like that better than the CLI
+start chrome https://192.168.99.100:8443/ 
 
 echo "minishift stop #when done"
 ```
@@ -348,10 +368,11 @@ Next: Deploying to MiniShift
     * [ASP.NET on OpenShift: Getting started in ASP.NET](https://blog.openshift.com/asp-net-on-openshift-getting-started-in-asp-net/)
 * [OpenShift Commons](https://commons.openshift.org/) - a community
     * [OpenShift .NET Special Interest Group](https://commons.openshift.org/sig/Openshift.NET.html)
-* Free eBook [OpenShift for Developers](https://www.openshift.com/promotions/for-developers.html) (2016)
-* Free eBook [Deploying to OpenShift](https://www.openshift.com/promotions/deploying-to-openshift.html) (2018)
-* Free eBook [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (2017)
+* [OpenShift Events](https://commons.openshift.org/events.html)
+* Free eBook 1 [OpenShift for Developers](https://www.openshift.com/promotions/for-developers.html) (2016)
+* Free eBook 2 [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (2017)
     * [The Twelve-Factor App ](https://12factor.net/)
+* Free eBook 3 [Deploying to OpenShift](https://www.openshift.com/promotions/deploying-to-openshift.html) (2018)
 * [OpenShift: Interactive Learning Portal](https://learn.openshift.com/)
     * Above is based on [Katacoda - Interactive Learning Platform](https://katacoda.com/)
 * Old [Cloud](https://rasor.wordpress.com/2013/11/26/cloud-services/) landscape anno 2013 - from my old blog.

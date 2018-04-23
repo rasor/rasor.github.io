@@ -6,6 +6,8 @@ Tags: #starter, #components, #ngx, #apollo, #graphcool
 * Component collections: [brillout/awesome-angular-components](https://github.com/brillout/awesome-angular-components#component-collections)
 * Components: [Angular powered Bootstrap](https://ng-bootstrap.github.io/#/home)
 * Components: [PrimeNG](https://www.primefaces.org/primeng/#/)
+  * Book: [Angular UI Development with PrimeNG](https://www.packtpub.com/web-development/angular-ui-development-primeng)
+  * Book code: [Angular-UI-Development-with-PrimeNG](https://github.com/PacktPublishing/Angular-UI-Development-with-PrimeNG)
 * Components: [Angular Material](https://material.angular.io/components/categories)
 * Components: [SyncFusion Essential JS 2](https://www.syncfusion.com/products/essential-js2)
 * Component: [Angular2 Charts](https://valor-software.com/ng2-charts/)
