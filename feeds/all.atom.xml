@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-17T19:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-17T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-23T17:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-23T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
-OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.&lt;/p&gt;
+OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
+In this blog I'll run it locally from Windows.&lt;/p&gt;
 &lt;h2&gt;So how to get started with OpenShift?&lt;/h2&gt;
 &lt;h3&gt;Which editions (products) are awailbale?&lt;/h3&gt;
 &lt;p&gt;Currently (spring 2018) you get a good helicopter view from the free eBook &lt;a href="https://www.openshift.com/promotions/deploying-to-openshift.html"&gt;Deploying to OpenShift&lt;/a&gt; - Preface - Online Resources.&lt;br&gt;
@@ -22,6 +23,53 @@ From there you'll learn that there are two editions (called products) of OpenShi
 &lt;/blockquote&gt;
 &lt;p&gt;I think this IaaS stack often will be RedHat OpenStack and probably also is it, when you are using RedHat Enterprise Linux as the container host.&lt;/p&gt;
 &lt;h3&gt;How do I start playing with the toy?&lt;/h3&gt;
+&lt;p&gt;You can locally play with either &lt;code&gt;OpenShift Origin&lt;/code&gt; or &lt;code&gt;OpenShift Container Platform&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;With &lt;code&gt;OpenShift Origin&lt;/code&gt; you have &lt;a href="https://github.com/sclorg/nodejs-ex#nodejs-sample-app-on-openshift"&gt;5 options&lt;/a&gt;:  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;OpenShift Origin&lt;/code&gt; Option&lt;/th&gt;
+&lt;th&gt;Win/Mac/Lin&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1.&lt;/td&gt;
+&lt;td&gt;Running a VM with &lt;code&gt;Vagrant&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;W/M/L&lt;/td&gt;
+&lt;td&gt;*1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2.&lt;/td&gt;
+&lt;td&gt;Running a VM managed by &lt;code&gt;MiniShift&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;W/M/L&lt;/td&gt;
+&lt;td&gt;*1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3.&lt;/td&gt;
+&lt;td&gt;Starting a &lt;code&gt;Docker&lt;/code&gt; container&lt;/td&gt;
+&lt;td&gt;L (Fedora, CentOS, RHEL)&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4.&lt;/td&gt;
+&lt;td&gt;Downloading the &lt;code&gt;binary&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;L&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5.&lt;/td&gt;
+&lt;td&gt;Running an &lt;code&gt;Ansible&lt;/code&gt; playbook&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;*1: &lt;code&gt;MiniShift&lt;/code&gt; is a newer method for local development than the method used in eBook &lt;code&gt;OpenShift for Developers&lt;/code&gt; called &lt;code&gt;Vagrant all-in-one virtual machine&lt;/code&gt;.&lt;br&gt;
+In eBook &lt;code&gt;DevOps with OpenShift&lt;/code&gt; a local all-in-one cluster is started using &lt;code&gt;oc cluster up&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In the table below there are some links provided by OpenShift:  &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -63,9 +111,7 @@ From there you'll learn that there are two editions (called products) of OpenShi
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;*1: &lt;code&gt;MiniShift&lt;/code&gt; is a newer method for local development than the method used in eBook &lt;code&gt;OpenShift for Developers&lt;/code&gt; called &lt;code&gt;Vagrant all-in-one virtual machine&lt;/code&gt;.&lt;br&gt;
-In eBook &lt;code&gt;DevOps with OpenShift&lt;/code&gt; a local all-in-one cluster is started using &lt;code&gt;oc cluster up&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;OK, so to play with it locally, then I can either use &lt;code&gt;MiniShift&lt;/code&gt; or &lt;code&gt;Container Development Kit&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So there are lots of options to play with it locally. I'll use &lt;code&gt;MiniShift&lt;/code&gt;, which seems to be the simplest option.&lt;/p&gt;
 &lt;h3&gt;What is in the box?&lt;/h3&gt;
 &lt;p&gt;Fig 1. When you run the box there will be a REST API enabling you to manage the box (Drawing by &lt;a href="https://www.levvel.io/author/james-buckett"&gt;James Bucket&lt;/a&gt; hosted by levvel.io)
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift access and control" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png"&gt;&lt;/a&gt;&lt;/p&gt;
@@ -105,8 +151,8 @@ minishift --help
 
 &lt;p&gt;If any issues consult &lt;a href="https://docs.openshift.org/latest/minishift/getting-started/installing.html"&gt;Installing Minishift&lt;/a&gt; guide.&lt;/p&gt;
 &lt;h2&gt;Test driving MiniShift&lt;/h2&gt;
-&lt;h3&gt;Start and stop&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Start hypervisor&lt;/span&gt;
+&lt;h3&gt;&lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#starting-minishift"&gt;Start&lt;/a&gt; and stop&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Optionally Start hypervisor - if you don&amp;#39;t start the GUI, it will be started by MiniShift as headless using VBoxHeadless.exe&lt;/span&gt;
 C:&lt;span class="se"&gt;\P&lt;/span&gt;rogram Files&lt;span class="se"&gt;\O&lt;/span&gt;racle&lt;span class="se"&gt;\V&lt;/span&gt;irtualBox&lt;span class="se"&gt;\V&lt;/span&gt;irtualBox.exe
 &lt;span class="c1"&gt;# Start minishift&lt;/span&gt;
 minishift start --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
@@ -335,10 +381,15 @@ Use &amp;quot;oc options&amp;quot; for a list of global command-line options (ap
 &lt;p&gt;If you save (&lt;a href="https://gist.github.com/rasor/2060037307731d2c2bb740e503c951bb"&gt;or download&lt;/a&gt;) the following to &lt;code&gt;C:\Program Files\minishift-1.15.1-windows-amd64\shiftcli.sh&lt;/code&gt;, then you can start your minishift from Git Bash with &lt;code&gt;shiftcli.sh&lt;/code&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="c1"&gt;#shiftcli.sh&lt;/span&gt;
+&lt;span class="c1"&gt;# Start a VM and start an OpenShift Cluster inside the VM&lt;/span&gt;
 minishift start --vm-driver&lt;span class="o"&gt;=&lt;/span&gt;virtualbox
 minishift status
+&lt;span class="c1"&gt;# Enable oc - the CLI&lt;/span&gt;
 &lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;minishift oc-env&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# print oc cmds, if you prefer CLI to the Web Console&lt;/span&gt;
 oc --help
+&lt;span class="c1"&gt;# optionally start Web Console if you like that better than the CLI&lt;/span&gt;
+start chrome https://192.168.99.100:8443/ 
 
 &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;minishift stop #when done&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -364,12 +415,13 @@ oc --help
 &lt;li&gt;&lt;a href="https://commons.openshift.org/sig/Openshift.NET.html"&gt;OpenShift .NET Special Interest Group&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Free eBook &lt;a href="https://www.openshift.com/promotions/for-developers.html"&gt;OpenShift for Developers&lt;/a&gt; (2016)&lt;/li&gt;
-&lt;li&gt;Free eBook &lt;a href="https://www.openshift.com/promotions/deploying-to-openshift.html"&gt;Deploying to OpenShift&lt;/a&gt; (2018)&lt;/li&gt;
-&lt;li&gt;Free eBook &lt;a href="https://www.openshift.com/promotions/devops-with-openshift.html"&gt;DevOps with OpenShift&lt;/a&gt; (2017)&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://commons.openshift.org/events.html"&gt;OpenShift Events&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Free eBook 1 &lt;a href="https://www.openshift.com/promotions/for-developers.html"&gt;OpenShift for Developers&lt;/a&gt; (2016)&lt;/li&gt;
+&lt;li&gt;Free eBook 2 &lt;a href="https://www.openshift.com/promotions/devops-with-openshift.html"&gt;DevOps with OpenShift&lt;/a&gt; (2017)&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://12factor.net/"&gt;The Twelve-Factor App &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;Free eBook 3 &lt;a href="https://www.openshift.com/promotions/deploying-to-openshift.html"&gt;Deploying to OpenShift&lt;/a&gt; (2018)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://learn.openshift.com/"&gt;OpenShift: Interactive Learning Portal&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;Above is based on &lt;a href="https://katacoda.com/"&gt;Katacoda - Interactive Learning Platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;

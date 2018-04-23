@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/developing-with-openshift.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-04-15 15:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-04-17 19:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-04-23 17:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#openshift"/>
@@ -103,14 +103,15 @@
           Posted on April 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: April 17, 2018
+            Updated: April 23, 2018
     </p>
   </header>
 
 
   <div>
     <p>It has become time (for me) to explore OpenShift.
-OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.</p>
+OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
+In this blog I'll run it locally from Windows.</p>
 <h2>So how to get started with OpenShift?</h2>
 <h3>Which editions (products) are awailbale?</h3>
 <p>Currently (spring 2018) you get a good helicopter view from the free eBook <a href="https://www.openshift.com/promotions/deploying-to-openshift.html">Deploying to OpenShift</a> - Preface - Online Resources.<br>
@@ -131,6 +132,53 @@ From there you'll learn that there are two editions (called products) of OpenShi
 </blockquote>
 <p>I think this IaaS stack often will be RedHat OpenStack and probably also is it, when you are using RedHat Enterprise Linux as the container host.</p>
 <h3>How do I start playing with the toy?</h3>
+<p>You can locally play with either <code>OpenShift Origin</code> or <code>OpenShift Container Platform</code>.  </p>
+<p>With <code>OpenShift Origin</code> you have <a href="https://github.com/sclorg/nodejs-ex#nodejs-sample-app-on-openshift">5 options</a>:  </p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>OpenShift Origin</code> Option</th>
+<th>Win/Mac/Lin</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Running a VM with <code>Vagrant</code></td>
+<td>W/M/L</td>
+<td>*1</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Running a VM managed by <code>MiniShift</code></td>
+<td>W/M/L</td>
+<td>*1</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>Starting a <code>Docker</code> container</td>
+<td>L (Fedora, CentOS, RHEL)</td>
+<td></td>
+</tr>
+<tr>
+<td>4.</td>
+<td>Downloading the <code>binary</code></td>
+<td>L</td>
+<td></td>
+</tr>
+<tr>
+<td>5.</td>
+<td>Running an <code>Ansible</code> playbook</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>*1: <code>MiniShift</code> is a newer method for local development than the method used in eBook <code>OpenShift for Developers</code> called <code>Vagrant all-in-one virtual machine</code>.<br>
+In eBook <code>DevOps with OpenShift</code> a local all-in-one cluster is started using <code>oc cluster up</code>.</p>
+<p>In the table below there are some links provided by OpenShift:  </p>
 <table>
 <thead>
 <tr>
@@ -172,9 +220,7 @@ From there you'll learn that there are two editions (called products) of OpenShi
 </tr>
 </tbody>
 </table>
-<p>*1: <code>MiniShift</code> is a newer method for local development than the method used in eBook <code>OpenShift for Developers</code> called <code>Vagrant all-in-one virtual machine</code>.<br>
-In eBook <code>DevOps with OpenShift</code> a local all-in-one cluster is started using <code>oc cluster up</code>.</p>
-<p>OK, so to play with it locally, then I can either use <code>MiniShift</code> or <code>Container Development Kit</code>.</p>
+<p>So there are lots of options to play with it locally. I'll use <code>MiniShift</code>, which seems to be the simplest option.</p>
 <h3>What is in the box?</h3>
 <p>Fig 1. When you run the box there will be a REST API enabling you to manage the box (Drawing by <a href="https://www.levvel.io/author/james-buckett">James Bucket</a> hosted by levvel.io)
 <a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"><img alt="OpenShift access and control" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png"></a></p>
@@ -214,8 +260,8 @@ minishift --help
 
 <p>If any issues consult <a href="https://docs.openshift.org/latest/minishift/getting-started/installing.html">Installing Minishift</a> guide.</p>
 <h2>Test driving MiniShift</h2>
-<h3>Start and stop</h3>
-<div class="highlight"><pre><span></span><span class="c1"># Start hypervisor</span>
+<h3><a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#starting-minishift">Start</a> and stop</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Optionally Start hypervisor - if you don&#39;t start the GUI, it will be started by MiniShift as headless using VBoxHeadless.exe</span>
 C:<span class="se">\P</span>rogram Files<span class="se">\O</span>racle<span class="se">\V</span>irtualBox<span class="se">\V</span>irtualBox.exe
 <span class="c1"># Start minishift</span>
 minishift start --vm-driver<span class="o">=</span>virtualbox
@@ -444,10 +490,15 @@ Use &quot;oc options&quot; for a list of global command-line options (applies to
 <p>If you save (<a href="https://gist.github.com/rasor/2060037307731d2c2bb740e503c951bb">or download</a>) the following to <code>C:\Program Files\minishift-1.15.1-windows-amd64\shiftcli.sh</code>, then you can start your minishift from Git Bash with <code>shiftcli.sh</code></p>
 <div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#shiftcli.sh</span>
+<span class="c1"># Start a VM and start an OpenShift Cluster inside the VM</span>
 minishift start --vm-driver<span class="o">=</span>virtualbox
 minishift status
+<span class="c1"># Enable oc - the CLI</span>
 <span class="nb">eval</span> <span class="k">$(</span>minishift oc-env<span class="k">)</span>
+<span class="c1"># print oc cmds, if you prefer CLI to the Web Console</span>
 oc --help
+<span class="c1"># optionally start Web Console if you like that better than the CLI</span>
+start chrome https://192.168.99.100:8443/ 
 
 <span class="nb">echo</span> <span class="s2">&quot;minishift stop #when done&quot;</span>
 </pre></div>
@@ -473,12 +524,13 @@ oc --help
 <li><a href="https://commons.openshift.org/sig/Openshift.NET.html">OpenShift .NET Special Interest Group</a></li>
 </ul>
 </li>
-<li>Free eBook <a href="https://www.openshift.com/promotions/for-developers.html">OpenShift for Developers</a> (2016)</li>
-<li>Free eBook <a href="https://www.openshift.com/promotions/deploying-to-openshift.html">Deploying to OpenShift</a> (2018)</li>
-<li>Free eBook <a href="https://www.openshift.com/promotions/devops-with-openshift.html">DevOps with OpenShift</a> (2017)<ul>
+<li><a href="https://commons.openshift.org/events.html">OpenShift Events</a></li>
+<li>Free eBook 1 <a href="https://www.openshift.com/promotions/for-developers.html">OpenShift for Developers</a> (2016)</li>
+<li>Free eBook 2 <a href="https://www.openshift.com/promotions/devops-with-openshift.html">DevOps with OpenShift</a> (2017)<ul>
 <li><a href="https://12factor.net/">The Twelve-Factor App </a></li>
 </ul>
 </li>
+<li>Free eBook 3 <a href="https://www.openshift.com/promotions/deploying-to-openshift.html">Deploying to OpenShift</a> (2018)</li>
 <li><a href="https://learn.openshift.com/">OpenShift: Interactive Learning Portal</a><ul>
 <li>Above is based on <a href="https://katacoda.com/">Katacoda - Interactive Learning Platform</a></li>
 </ul>
