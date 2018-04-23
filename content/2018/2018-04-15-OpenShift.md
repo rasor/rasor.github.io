@@ -1,13 +1,24 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-23 17:00
+Modified: 2018-04-23 19:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
 
 It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
-In this blog I'll run it locally from Windows.
+In this blog I'll run it (my own little cloud) locally on Windows.
+
+## Why OpenShift?
+
+There are four good reasons seen with my dev glasses on: 
+
+* OpenShift is my local cloud. I can build it locally and replicate it to a real cloud, when I see it is working as intended.
+* I don't have to pay cloud resources for a test envir except for when testers needs it - I'll delete it, when it is not in use.
+* Microservices like Redis and MongoDB - I can have it installed inside my OpenShift envir - just by fetching them as containers from DockerHub. Once I know how there'll not be any hassle and I won't be forsed to use SaaS services.
+* When you build your OpenShift environment with Ansible it becomes an environment you can deploy to any cloud provider.
+
+Of course there'll be pros and cons depending on your taste and on other requirement, but OpenShift is a great option.
 
 ## So how to get started with OpenShift?
 
@@ -69,7 +80,12 @@ Fig 1. When you run the box there will be a REST API enabling you to manage the 
 Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box (Drawing by [James Bucket](https://www.levvel.io/author/james-buckett) hosted by levvel.io)  
 [![OpenShift project (Namespace)](https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png)](https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift)
 
-Fig 3. RedHats own picture of OpenShift runtime environment (Drawing by [Mike Barret](https://blog.openshift.com/author/mikebarrett/) hosted by openshift.com)
+If you compare Fig 2. to a deployment in GCP without OpenShift, then you'll notice that OpenShift takes all the pieces and put them into one box.  
+So if you build your OpenShift environment (including DBs and other microservices) with Ansible, then you can deploy it to any cloud provider - you environment is now 100% portable.  
+Fig 3. Continuous Deployment to Kubernetes Engine using Jenkins (Drawing hosted by google.com)  
+[![Continuous Deployment to Kubernetes Engine using Jenkins](https://cloud.google.com/solutions/images/jenkins-cd-container-engine.svg)](https://cloud.google.com/solutions/continuous-delivery-jenkins-kubernetes-engine?hl=en)  
+
+Fig 4. RedHats own picture of OpenShift runtime environment (Drawing by [Mike Barret](https://blog.openshift.com/author/mikebarrett/) hosted by openshift.com)
 [![OpenShift runtime environment](https://blog.openshift.com/wp-content/uploads/arch-diagram.png)](https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/)
 
 ## Installation
@@ -83,7 +99,7 @@ I have used hypervisors some years ago on my local PC, so I know that I have alr
 Notice: Not all PC's comes with Intel VT.  
 
 When you have [downloaded VirtualBox](https://www.virtualbox.org/wiki/Downloads) and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)  
-Fig 4. Your network will disconnect  
+Fig 5. Your network will disconnect  
 ![Will disconnect network](img/2018/2018-04-15-OpenShift1.PNG)
 
 After restart I had an extra network adapter
@@ -183,16 +199,16 @@ To login as administrator:
 If your screen looks like above the downloded minishift image wil be cached to  
 `c:\users\youruserid\.minishift\cache\iso\b2d\v1.2.0\`
 
-Fig 5. In VirtualBox you'll see the VM running:
+Fig 6. In VirtualBox you'll see the VM running:
 ![Minishift running](img/2018/2018-04-15-OpenShift2.PNG)
 
 If you have trouble consult [Minishift Quickstart](https://docs.openshift.org/latest/minishift/getting-started/quickstart.html) and [Troubleshooting Minishift](https://docs.openshift.org/latest/minishift/troubleshooting/troubleshooting-getting-started.html#minshift-startup-check-failed).
 
 As you could see from the output you got an url to the [Web Console: https://192.168.99.100:8443/](https://192.168.99.100:8443/console/) that was shown in Fig 1.  
-Fig 6. Log in to Minishift web console with user `developer` and `<any key>` as psw.
+Fig 7. Log in to Minishift web console with user `developer` and `<any key>` as psw.
 ![Log in to Minishift Web Console](img/2018/2018-04-15-OpenShift3.PNG)  
 
-Fig 7. MiniShift Web Console
+Fig 8. MiniShift Web Console
 ![MiniShift Web Console](img/2018/2018-04-15-OpenShift4.PNG)
 
 OK, we're in. How about turning off?
