@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-23T17:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-23T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-23T19:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-23T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
-In this blog I'll run it locally from Windows.&lt;/p&gt;
+In this blog I'll run it (my own little cloud) locally on Windows.&lt;/p&gt;
+&lt;h2&gt;Why OpenShift?&lt;/h2&gt;
+&lt;p&gt;There are four good reasons seen with my dev glasses on: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenShift is my local cloud. I can build it locally and replicate it to a real cloud, when I see it is working as intended.&lt;/li&gt;
+&lt;li&gt;I don't have to pay cloud resources for a test envir except for when testers needs it - I'll delete it, when it is not in use.&lt;/li&gt;
+&lt;li&gt;Microservices like Redis and MongoDB - I can have it installed inside my OpenShift envir - just by fetching them as containers from DockerHub. Once I know how there'll not be any hassle and I won't be forsed to use SaaS services.&lt;/li&gt;
+&lt;li&gt;When you build your OpenShift environment with Ansible it becomes an environment you can deploy to any cloud provider.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Of course there'll be pros and cons depending on your taste and on other requirement, but OpenShift is a great option.&lt;/p&gt;
 &lt;h2&gt;So how to get started with OpenShift?&lt;/h2&gt;
 &lt;h3&gt;Which editions (products) are awailbale?&lt;/h3&gt;
 &lt;p&gt;Currently (spring 2018) you get a good helicopter view from the free eBook &lt;a href="https://www.openshift.com/promotions/deploying-to-openshift.html"&gt;Deploying to OpenShift&lt;/a&gt; - Preface - Online Resources.&lt;br&gt;
@@ -117,7 +126,11 @@ In eBook &lt;code&gt;DevOps with OpenShift&lt;/code&gt; a local all-in-one clust
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift access and control" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences2.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Fig 2. Your code (in docker containers) will be deployed to Kubernetes Pods inside the box (Drawing by &lt;a href="https://www.levvel.io/author/james-buckett"&gt;James Bucket&lt;/a&gt; hosted by levvel.io)&lt;br&gt;
 &lt;a href="https://www.levvel.io/our-ideas/differences-between-kubernetes-and-openshift"&gt;&lt;img alt="OpenShift project (Namespace)" src="https://cdn.levvel.io/blog_content/James+Buckett+Differences+Article/Differences1.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Fig 3. RedHats own picture of OpenShift runtime environment (Drawing by &lt;a href="https://blog.openshift.com/author/mikebarrett/"&gt;Mike Barret&lt;/a&gt; hosted by openshift.com)
+&lt;p&gt;If you compare Fig 2. to a deployment in GCP without OpenShift, then you'll notice that OpenShift takes all the pieces and put them into one box.&lt;br&gt;
+So if you build your OpenShift environment (including DBs and other microservices) with Ansible, then you can deploy it to any cloud provider - you environment is now 100% portable.&lt;br&gt;
+Fig 3. Continuous Deployment to Kubernetes Engine using Jenkins (Drawing hosted by google.com)&lt;br&gt;
+&lt;a href="https://cloud.google.com/solutions/continuous-delivery-jenkins-kubernetes-engine?hl=en"&gt;&lt;img alt="Continuous Deployment to Kubernetes Engine using Jenkins" src="https://cloud.google.com/solutions/images/jenkins-cd-container-engine.svg"&gt;&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;Fig 4. RedHats own picture of OpenShift runtime environment (Drawing by &lt;a href="https://blog.openshift.com/author/mikebarrett/"&gt;Mike Barret&lt;/a&gt; hosted by openshift.com)
 &lt;a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"&gt;&lt;img alt="OpenShift runtime environment" src="https://blog.openshift.com/wp-content/uploads/arch-diagram.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;h3&gt;VirtualBox&lt;/h3&gt;
@@ -127,7 +140,7 @@ VirtualBox is the easy one to handle is my experince. It is also an option that 
 I have used hypervisors some years ago on my local PC, so I know that I have already enabled &lt;code&gt;Intel Virtualization Technology&lt;/code&gt; (also known as &lt;code&gt;Intel VT&lt;/code&gt;) in the Bios. It was required for Hyper-v, so I assume it is either beneficial or required for VirtualBox, too.&lt;br&gt;
 Notice: Not all PC's comes with Intel VT.  &lt;/p&gt;
 &lt;p&gt;When you have &lt;a href="https://www.virtualbox.org/wiki/Downloads"&gt;downloaded VirtualBox&lt;/a&gt; and start to install it you are told that it will disconnect your network (why did I also just start a long running upload? - I'll abort that for a while)&lt;br&gt;
-Fig 4. Your network will disconnect&lt;br&gt;
+Fig 5. Your network will disconnect&lt;br&gt;
 &lt;img alt="Will disconnect network" src="img/2018/2018-04-15-OpenShift1.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;After restart I had an extra network adapter&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;ipconfig /all
@@ -218,13 +231,13 @@ To login as administrator:
 
 &lt;p&gt;If your screen looks like above the downloded minishift image wil be cached to&lt;br&gt;
 &lt;code&gt;c:\users\youruserid\.minishift\cache\iso\b2d\v1.2.0\&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Fig 5. In VirtualBox you'll see the VM running:
+&lt;p&gt;Fig 6. In VirtualBox you'll see the VM running:
 &lt;img alt="Minishift running" src="img/2018/2018-04-15-OpenShift2.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;If you have trouble consult &lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html"&gt;Minishift Quickstart&lt;/a&gt; and &lt;a href="https://docs.openshift.org/latest/minishift/troubleshooting/troubleshooting-getting-started.html#minshift-startup-check-failed"&gt;Troubleshooting Minishift&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;As you could see from the output you got an url to the &lt;a href="https://192.168.99.100:8443/console/"&gt;Web Console: https://192.168.99.100:8443/&lt;/a&gt; that was shown in Fig 1.&lt;br&gt;
-Fig 6. Log in to Minishift web console with user &lt;code&gt;developer&lt;/code&gt; and &lt;code&gt;&amp;lt;any key&amp;gt;&lt;/code&gt; as psw.
+Fig 7. Log in to Minishift web console with user &lt;code&gt;developer&lt;/code&gt; and &lt;code&gt;&amp;lt;any key&amp;gt;&lt;/code&gt; as psw.
 &lt;img alt="Log in to Minishift Web Console" src="img/2018/2018-04-15-OpenShift3.PNG"&gt;  &lt;/p&gt;
-&lt;p&gt;Fig 7. MiniShift Web Console
+&lt;p&gt;Fig 8. MiniShift Web Console
 &lt;img alt="MiniShift Web Console" src="img/2018/2018-04-15-OpenShift4.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;OK, we're in. How about turning off?&lt;/p&gt;
 &lt;p&gt;VirtualBox has following options:&lt;/p&gt;
