@@ -10,6 +10,8 @@ Tags: #ng
 
 * [Architecture in Angular projects – Cyrille Tuzi – Medium](https://medium.com/@cyrilletuzi/architecture-in-angular-projects-242606567e40)
 * [12 Things to Help Large Organizations Do Angular Right](https://blog.nrwl.io/12-things-to-help-large-organizations-do-angular-right-f261a798ad6b)
+* [Compodoc - documentation tool for your Angular application ](https://compodoc.github.io/compodoc/)
+  * Using Compodoc: [Angular Seed](https://mgechev.github.io/angular-seed/)
 
 ###
 

@@ -13,6 +13,8 @@ In part 2 I'll deploy a nodejs webapp and perhaps a .ASTNET Core MVC webapp.
 
 ## [Deploying](https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#deploy-sample-app) to MiniShift
 
+
+
 ### Deploy via oc CLI
 
 
@@ -58,5 +60,9 @@ The webapp will probably use [xip.io](https://xip.io/) for DNS according to eBoo
 * Free eBook 2 [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (2017)
     * [The Twelve-Factor App ](https://12factor.net/)
 * Free eBook 3 [Deploying to OpenShift](https://www.openshift.com/promotions/deploying-to-openshift.html) (2018)
+
+## Docker
+
+* ng devserver: [Angular Seed](https://mgechev.github.io/angular-seed/)
 
 The End

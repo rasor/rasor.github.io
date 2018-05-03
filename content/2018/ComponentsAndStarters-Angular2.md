@@ -16,6 +16,8 @@ Protractor, Istanbul, Rollup, Docker
 
 ## Starters
 
+* Starter: [Angular 5.0+ calendar](https://mattlewis92.github.io/angular-calendar/#/kitchen-sink)
+* Starter: [Angular Seed](https://mgechev.github.io/angular-seed/)
 * HowTo: [Angular + Apollo + Graphcool](https://github.com/graphcool-examples/angular-graphql/tree/master/quickstart-with-apollo)
   * HowTo: [Apollo Angular](https://www.apollographql.com/docs/angular/)
   * Sample: [GitHunt-Angular](https://github.com/apollographql/GitHunt-Angular)

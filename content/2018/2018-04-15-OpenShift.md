@@ -1,7 +1,7 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-23 19:00
+Modified: 2018-04-24 21:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
 
@@ -376,19 +376,28 @@ Next: Deploying to MiniShift
 * [MiniShift - Command Reference](https://docs.openshift.org/latest/minishift/command-ref/minishift.html)
 * [oc CLI Reference](https://docs.openshift.org/latest/cli_reference/index.html)
 * [apb CLI - Ansible Playbook Bundle Development Guide](https://docs.openshift.org/latest/apb_devel/index.html)
+* [Downloads | Red Hat Developer Program](https://developers.redhat.com/downloads/)
 
 ## Getting Started
 
 * [OpenShift Blog](https://blog.openshift.com/)
     * [Announcing .NET Core 2.0 Support for OpenShift](https://blog.openshift.com/announcing-net-core-2-0-support-openshift/)
     * [ASP.NET on OpenShift: Getting started in ASP.NET](https://blog.openshift.com/asp-net-on-openshift-getting-started-in-asp-net/)
+    * [Running a NuGet server on OpenShift](https://developers.redhat.com/blog/2017/10/11/running-nuget-server-openshift/)
+    * [.NET Core 2.0 Overview](https://developers.redhat.com/products/dotnet/overview/)
+    * [.NET Core 2.0 Topics](https://developers.redhat.com/topics/dotnet/)
 * [OpenShift Commons](https://commons.openshift.org/) - a community
     * [OpenShift .NET Special Interest Group](https://commons.openshift.org/sig/Openshift.NET.html)
 * [OpenShift Events](https://commons.openshift.org/events.html)
-* Free eBook 1 [OpenShift for Developers](https://www.openshift.com/promotions/for-developers.html) (2016)
-* Free eBook 2 [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (2017)
+* Free eBook 1: [OpenShift for Developers](https://www.openshift.com/promotions/for-developers.html) (2016)
+* Free eBook 2: [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (2017)
     * [The Twelve-Factor App ](https://12factor.net/)
-* Free eBook 3 [Deploying to OpenShift](https://www.openshift.com/promotions/deploying-to-openshift.html) (2018)
+* Free eBook 3: [Deploying to OpenShift](https://www.openshift.com/promotions/deploying-to-openshift.html) (2018)
+* Free eBook 4: [Transitioning to .NET Core on Red Hat Enterprise Linux](https://developers.redhat.com/promotions/dot-net-core/) (2016)
+* More eBooks: [Search Results Red Hat Developers](https://developers.redhat.com/search/?f=type~book&s=most-recent)
+* Cheat Sheet: [Red Hat OpenShift Container Platform](https://developers.redhat.com/cheat-sheets/red-hat-openshift-container-platform/)
+* Cheat Sheet: [.NET Core 2.0 on Red Hat Enterprise Linux](https://developers.redhat.com/cheat-sheets/net-core-red-hat-enterprise-linux/)
+* More Cheat Sheets: [Search Results Red Hat Developers](https://developers.redhat.com/search/?f=type~cheatsheet&s=most-recent)
 * [OpenShift: Interactive Learning Portal](https://learn.openshift.com/)
     * Above is based on [Katacoda - Interactive Learning Platform](https://katacoda.com/)
 * Old [Cloud](https://rasor.wordpress.com/2013/11/26/cloud-services/) landscape anno 2013 - from my old blog.
