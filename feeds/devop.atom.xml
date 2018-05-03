@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-23T19:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-23T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-04-24T21:00:00+02:00</updated><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-24T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
 In this blog I'll run it (my own little cloud) locally on Windows.&lt;/p&gt;
@@ -416,12 +416,16 @@ start chrome https://192.168.99.100:8443/
 &lt;li&gt;&lt;a href="https://docs.openshift.org/latest/minishift/command-ref/minishift.html"&gt;MiniShift - Command Reference&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.openshift.org/latest/cli_reference/index.html"&gt;oc CLI Reference&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.openshift.org/latest/apb_devel/index.html"&gt;apb CLI - Ansible Playbook Bundle Development Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developers.redhat.com/downloads/"&gt;Downloads | Red Hat Developer Program&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Getting Started&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://blog.openshift.com/"&gt;OpenShift Blog&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://blog.openshift.com/announcing-net-core-2-0-support-openshift/"&gt;Announcing .NET Core 2.0 Support for OpenShift&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://blog.openshift.com/asp-net-on-openshift-getting-started-in-asp-net/"&gt;ASP.NET on OpenShift: Getting started in ASP.NET&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developers.redhat.com/blog/2017/10/11/running-nuget-server-openshift/"&gt;Running a NuGet server on OpenShift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developers.redhat.com/products/dotnet/overview/"&gt;.NET Core 2.0 Overview&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://developers.redhat.com/topics/dotnet/"&gt;.NET Core 2.0 Topics&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://commons.openshift.org/"&gt;OpenShift Commons&lt;/a&gt; - a community&lt;ul&gt;
@@ -429,12 +433,17 @@ start chrome https://192.168.99.100:8443/
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://commons.openshift.org/events.html"&gt;OpenShift Events&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Free eBook 1 &lt;a href="https://www.openshift.com/promotions/for-developers.html"&gt;OpenShift for Developers&lt;/a&gt; (2016)&lt;/li&gt;
-&lt;li&gt;Free eBook 2 &lt;a href="https://www.openshift.com/promotions/devops-with-openshift.html"&gt;DevOps with OpenShift&lt;/a&gt; (2017)&lt;ul&gt;
+&lt;li&gt;Free eBook 1: &lt;a href="https://www.openshift.com/promotions/for-developers.html"&gt;OpenShift for Developers&lt;/a&gt; (2016)&lt;/li&gt;
+&lt;li&gt;Free eBook 2: &lt;a href="https://www.openshift.com/promotions/devops-with-openshift.html"&gt;DevOps with OpenShift&lt;/a&gt; (2017)&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://12factor.net/"&gt;The Twelve-Factor App &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Free eBook 3 &lt;a href="https://www.openshift.com/promotions/deploying-to-openshift.html"&gt;Deploying to OpenShift&lt;/a&gt; (2018)&lt;/li&gt;
+&lt;li&gt;Free eBook 3: &lt;a href="https://www.openshift.com/promotions/deploying-to-openshift.html"&gt;Deploying to OpenShift&lt;/a&gt; (2018)&lt;/li&gt;
+&lt;li&gt;Free eBook 4: &lt;a href="https://developers.redhat.com/promotions/dot-net-core/"&gt;Transitioning to .NET Core on Red Hat Enterprise Linux&lt;/a&gt; (2016)&lt;/li&gt;
+&lt;li&gt;More eBooks: &lt;a href="https://developers.redhat.com/search/?f=type~book&amp;amp;s=most-recent"&gt;Search Results Red Hat Developers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cheat Sheet: &lt;a href="https://developers.redhat.com/cheat-sheets/red-hat-openshift-container-platform/"&gt;Red Hat OpenShift Container Platform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cheat Sheet: &lt;a href="https://developers.redhat.com/cheat-sheets/net-core-red-hat-enterprise-linux/"&gt;.NET Core 2.0 on Red Hat Enterprise Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More Cheat Sheets: &lt;a href="https://developers.redhat.com/search/?f=type~cheatsheet&amp;amp;s=most-recent"&gt;Search Results Red Hat Developers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://learn.openshift.com/"&gt;OpenShift: Interactive Learning Portal&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;Above is based on &lt;a href="https://katacoda.com/"&gt;Katacoda - Interactive Learning Platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
