@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Vue Storefront will soon be out (june 2018). It is a PWA frontend to the Magento webshop. I think I&#39;ll give it a testdrive. I am attending a online marketing seminar and workshop presented by Thomas Zacchi (@tzacchi) from intoto digital, so it I could use a modern webshop to …" />
+<meta name="keywords" content="#vue, #magento, #webshop, #seo, #pwa, #openshift, #docker">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Vue Storefront"/>
+<meta property="og:description" content="Vue Storefront will soon be out (june 2018). It is a PWA frontend to the Magento webshop. I think I&#39;ll give it a testdrive. I am attending a online marketing seminar and workshop presented by Thomas Zacchi (@tzacchi) from intoto digital, so it I could use a modern webshop to …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/vue-storefront.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="misc"/>
+<meta property="article:tag" content="#vue"/>
+<meta property="article:tag" content="#magento"/>
+<meta property="article:tag" content="#webshop"/>
+<meta property="article:tag" content="#seo"/>
+<meta property="article:tag" content="#pwa"/>
+<meta property="article:tag" content="#openshift"/>
+<meta property="article:tag" content="#docker"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Vue Storefront</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="vue-storefront">Vue Storefront</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p><a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4">Vue Storefront</a> will soon be out (june 2018).
+It is a PWA frontend to the Magento webshop.  </p>
+<p>I think I'll give it a testdrive.<br>
+I am attending a online marketing seminar and workshop presented by <a href="https://twitter.com/tzacchi">Thomas Zacchi (@tzacchi)</a> from <a href="https://www.intoto.dk/">intoto digital</a>, so it I could use a modern webshop to play with.  </p>
+<h2>Initial thoughts about installation</h2>
+<p>I think I'll deploy Magento to a cheap PHP webhotel I have and then at another time roll it out as a Docker container.<br>
+<a href="https://hub.docker.com/r/bitnami/magento/">bitnami/magento/</a> looks good for test - it proposes a data volume with MariaDB.<br>
+Vue Storefront could just as well be served from the same container as Magento.  </p>
+<p>But hey - I won't need it neither front nor back deployed - I only want to play. Then instead I'll serve it in MiniShift from my PC.  </p>
+<h2>Got a little wiser</h2>
+<p>In the article  <a href="https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/">"Magento2 - NoSQL database and PWA support"</a> <a href="https://twitter.com/piotrkarwatka">Piotr Karwatka (@piotrkarwatka)</a> explains there is a little more the setup than a Vue frontend and a Magento backend.<br>
+There seems to be two chains that works something like  </p>
+<ul>
+<li>OLTP chain: <a href="https://github.com/DivanteLtd/vue-storefront">VueFront</a> -&gt; <a href="https://github.com/DivanteLtd/vue-storefront-api">ExpressApiBack</a> -&gt; ElasticSearch or MongoDB  </li>
+<li>Sync with Magento chain: <a href="https://github.com/Automattic/kue">KueWorker</a> -&gt; KueBack(Redis) -&gt;  <a href="https://github.com/DivanteLtd/mage2vuestorefront">Mage2VueFront</a> -&gt; ElasticSearch or MongoDB &lt;-&gt; Magento DB  </li>
+</ul>
+<p>The model of VueFront the data apparently is great for NoSQL storage and querying, which supposedly scales better than the models used in SQL (which the Magento DB uses).<br>
+So I guess we for the dev envir again are down to three containers:  </p>
+<ul>
+<li>Vue apps: VueFront, ExpressApiBack, KueWorker, Mage2VueFront</li>
+<li>Vue storage: Redis, ElasticSearch or MongoDB</li>
+<li>Magento app, Magento DB</li>
+</ul>
+<p>If we for a quick start skip the sync chain, then <a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md#install-the-vue-storefront-api">data can be fetched</a> from <a href="https://github.com/magento/magento2-sample-data">magento2-sample-data</a><br>
+Let's see if that is doable.</p>
+<h2><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md">Installing on Windows</a></h2>
+<p>... InProgress</p>
+<h2>Links</h2>
+<h3>Vue Storefront</h3>
+<ul>
+<li>vue <a href="https://github.com/topics/shopping-cart?l=vue">shopping-carts</a></li>
+<li>vue: PWA front, Magento back <a href="https://github.com/DivanteLtd/vue-storefront">DivanteLtd/vue-storefront</a></li>
+<li>Demo: <a href="https://demo.vuestorefront.io/">Home Page - Vue Storefront</a></li>
+<li><a href="https://twitter.com/VueStorefront">Vue Storefront (@VueStorefront)</a></li>
+<li><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md">Installing on Windows</a></li>
+<li><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md">Installing on Linux and MacOS</a></li>
+<li><a href="https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/">Magento2 - NoSQL database and PWA support</a></li>
+<li><a href="https://github.com/DivanteLtd/vue-storefront/wiki/Config-file-format-for-vue-storefront">Config file format for vue storefront</a></li>
+<li><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/FAQ%20and%20Receipes.md">FAQ and Receipes</a></li>
+<li><a href="https://github.com/DivanteLtd/vue-storefront/tree/master/doc">More docs...</a></li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li>SEO and PWA: <a href="https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70">2018 State of PWA</a></li>
+<li><a href="HeadlessApiFirst.md">Other headless / API first apps</a></li>
+<li><a href="https://github.com/topics/ecommerce">Other ecommerce projects on GitHub</a></li>
+</ul>
+<h3>OpenShift</h3>
+<ul>
+<li><a href="https://rasor.github.io/developing-with-openshift.html">Installing OpenShift</a></li>
+<li><a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#deploy-sample-app">Deploying</a> to MiniShift</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/vue.html">#vue</a>
+      <a href="https://rasor.github.io/tag/magento.html">#magento</a>
+      <a href="https://rasor.github.io/tag/webshop.html">#webshop</a>
+      <a href="https://rasor.github.io/tag/seo.html">#seo</a>
+      <a href="https://rasor.github.io/tag/pwa.html">#pwa</a>
+      <a href="https://rasor.github.io/tag/openshift.html">#openshift</a>
+      <a href="https://rasor.github.io/tag/docker.html">#docker</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
