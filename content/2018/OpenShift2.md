@@ -1,5 +1,5 @@
 Title: Developing with OpenShift
-Date: 2018-04-15 15:00
+Date: 2099-01-01 00:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
 

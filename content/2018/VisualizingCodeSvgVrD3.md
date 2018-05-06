@@ -1,6 +1,6 @@
 Title: Visualizing  with SVG, VR and D3
 Date: 2099-01-01 00:00
-Tags: #svg, #abstractsyntaxtrees, #virtualreality, d3
+Tags: #svg, #abstractsyntaxtrees, #virtualreality, #d3
 
 There are several ways to show how code looks like - or seen from the other side - build some views from code.
 

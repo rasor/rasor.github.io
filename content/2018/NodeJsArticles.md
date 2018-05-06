@@ -4,5 +4,6 @@ Tags: #ng, #nodejs, #basel, #typescript
 
 * [Building Angular and Node with Bazel](http://www.syntaxsuccess.com/viewarticle/building-angular-and-node-with-bazel)
 * [Adding CAPTCHA to Ionic with NodeJS Middleware](https://www.joshmorony.com/adding-captcha-to-ionic-with-nodejs-middleware/)
+* Lib: [Node.js Application Configuration](https://github.com/lorenwest/node-config)
 
 The End

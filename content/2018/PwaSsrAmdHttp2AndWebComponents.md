@@ -14,6 +14,9 @@ Razzle
 * [Razzle enables Universal JavaScript apps decoupled from frameworks and libraries | React, etc. Tech Stack](https://react-etc.net/entry/razzle-enables-universal-javascript-apps-decoupled-from-frameworks-and-libraries)
 * [jaredpalmer/razzle](https://github.com/jaredpalmer/razzle)
 
+SEO and PWA
+* [2018 State of Progressive Web Apps – Progressive Web Apps – Medium](https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70)
+
 Angular SSR 
 
 * Official HowTo [Angular Universal Integration](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
