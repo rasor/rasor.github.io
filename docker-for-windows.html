@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="For a development project I needed Docker for Windows. In this blog I&#39;ll install Docker. Playing with it I&#39;ll do in another post. Install You download Docker CE for Windows here. Docker wants to know if you want to use Windows or Linux containers - Since I&#39;ll deploy to Linux in …" />
+<meta name="keywords" content="#docker, #hyperv, #virtualbox">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Docker for Windows"/>
+<meta property="og:description" content="For a development project I needed Docker for Windows. In this blog I&#39;ll install Docker. Playing with it I&#39;ll do in another post. Install You download Docker CE for Windows here. Docker wants to know if you want to use Windows or Linux containers - Since I&#39;ll deploy to Linux in …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/docker-for-windows.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-05-06 17:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#docker"/>
+<meta property="article:tag" content="#hyperv"/>
+<meta property="article:tag" content="#virtualbox"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Docker for Windows</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="docker-for-windows">Docker for Windows</h1>
+    <p>
+          Posted on May 06, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>For a development project I needed Docker for Windows.<br>
+In this blog I'll install Docker. Playing with it I'll do in another post.  </p>
+<h2>Install</h2>
+<p>You download <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker CE for Windows here</a>.  </p>
+<p>Docker wants to know if you want to use Windows or Linux containers - Since I'll deploy to Linux in production, I also choose Linux here. Linux will ususally be the cheepest choise in cloud.<br>
+The version I installed was 18.03.1-ce-win65.<br>
+Note: The installer will log you out to be able to finish.  </p>
+<h2>1st test drive</h2>
+<p>When starting Docker from the Desktop Icon I was met with:<br>
+<img alt="Docker will disable VirtualBox" src="img/2018/2018-05-06-Docker4Win1.PNG">  </p>
+<p>Docker will disable VirtualBox. Oh-oh - I am using VirtualBox for OpenShift - so I don't want that option.<br>
+When I press cancel I get:<br>
+<img alt="Docker will exit" src="img/2018/2018-05-06-Docker4Win2.PNG">    </p>
+<p>Damned - I don't have other option than to let the bastard disable VirtualBox - I wonder if this disabling is only for Docker4Windows... I'll bite the grasss and do as I'm told.  </p>
+<h2>2nd test drive</h2>
+<p>Ok, so 2nd time I started Docker I chose OK to enable Hyper-V and Container services. That also required a restart.  </p>
+<p>When it was done enabling and restarting it still needed some time to boot the Docker VM. Meanwhile I could take a look and see what the installation had done.<br>
+It had enabled the Windows features Containers and Hyper-V as it told me<br>
+<img alt="Container services enabled" src="img/2018/2018-05-06-Docker4Win3.PNG">    </p>
+<p>It had enabled two Hyper-V Virtual Ethernet Adapters, but my VirtualBox networks remained. I wonder if I easily can switch to VirtualBox then?<br>
+<img alt="Docker VM Network enabled" src="img/2018/2018-05-06-Docker4Win5.PNG">    </p>
+<p>When it was done starting the Docker VM I could see it running in Hyper-V manager<br>
+<img alt="Hyper-V manager" src="img/2018/2018-05-06-Docker4Win6.PNG">   </p>
+<p>It was called MobyLinuxVM<br>
+<img alt="MobyLinuxVM" src="img/2018/2018-05-06-Docker4Win7.PNG">   </p>
+<p>Docker4Win wanted me to login to Docker Cloud. Docker Cloud uses Docker Hub as image registry, so even though I won't use Docker Cloud at this time, I'll need to be logged in to Docker.<br>
+<img alt="Docker for windows GUI" src="img/2018/2018-05-06-Docker4Win4.PNG">   </p>
+<p>Docker4Win GUI disappears, when you log in - but then you go to TaskBar-Notification area to find Docker4Win. Choose Settings<br>
+<img alt="Docker for windows GUI" src="img/2018/2018-05-06-Docker4Win8.PNG">   </p>
+<p>I unchecked <code>Start Docker when you log in</code>. Then I hope I can be using VirtualBox, too. I am unsure if I have to disable Hyper-V and/or Container services before that is possible. I'll come back with an update later. </p>
+<h2>Links</h2>
+<ul>
+<li><a href="https://www.syncfusion.com/ebooks/docker_succinctly">Syncfusion Free Ebooks | Docker Succinctly</a> (2018)</li>
+<li><a href="https://developers.redhat.com/cheat-sheets/containers/">Containers Cheat Sheet</a> (2017)</li>
+<li><a href="https://cloud.docker.com/">Docker Cloud</a></li>
+<li>The Public Docker Image Registry <a href="https://hub.docker.com/">Docker Hub</a></li>
+</ul>
+<p>The End.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/docker.html">#docker</a>
+      <a href="https://rasor.github.io/tag/hyperv.html">#hyperv</a>
+      <a href="https://rasor.github.io/tag/virtualbox.html">#virtualbox</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
