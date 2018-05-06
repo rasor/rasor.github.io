@@ -36,6 +36,9 @@ Let's see if that is doable.
 
 ## [Installing on Windows](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md)
 
+1. Install [Docker CE for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)  
+I installed [Docker4Win here](2018-05-06-Docker4Win.md)  
+
 ... InProgress
 
 ## Links
