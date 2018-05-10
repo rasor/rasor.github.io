@@ -1,7 +1,7 @@
 Title: Deploying Ionic to Azure
 Status: published
 Date: 2017-10-10 21:00
-Modified: 2018-05-10 11:00
+Modified: 2018-05-10 12:00
 Category: DevOp
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa, #azure
 
@@ -255,18 +255,17 @@ If that is true then you site should be live on
 
 If you are just reading along you can also find my site [here](http://dreamhouse-mobile-ionic.azurewebsites.net/)
 
+----------------------------
 
-# Alternatively deployments in Azure
+# Alternative deployments tp Azure
 
-There is also alternative options for hosting SPA's in Azure.  
+There are also alternative options for hosting SPA's in Azure.  
 
 * [Azure Functions](https://code.visualstudio.com/tutorials/functions-extension/getting-started). I assume this is the best pick for SPA's or API's with low load.
 * [Azure Storage](https://code.visualstudio.com/tutorials/static-website/getting-started).  
 I don't think Azure Storage can handle SSR. Instead it is a great place for static websites like this blog.
 * [Docker images](https://code.visualstudio.com/tutorials/docker-extension/getting-started) - good for porting entire environments from dev to prod in Azure or any other cloud.
-* And finally a tutorial like this blog deploying to [App Servicese](https://code.visualstudio.com/tutorials/app-service-extension/getting-started)
-
-----------------------------
+* And finally a tutorial like this blog deploying to [App Services](https://code.visualstudio.com/tutorials/app-service-extension/getting-started)
 
 # Links
 
