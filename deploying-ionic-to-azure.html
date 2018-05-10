@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/deploying-ionic-to-azure.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-10 21:00:00+02:00"/>
-<meta property="article:modified_time" content="2017-10-30 17:00:00+01:00"/>
+<meta property="article:modified_time" content="2018-05-10 11:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#npm"/>
@@ -102,7 +102,7 @@
           Posted on October 10, 2017 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: October 30, 2017
+            Updated: May 10, 2018
     </p>
   </header>
 
@@ -211,46 +211,46 @@ npm run build --prod --aot <span class="c1"># can you build?</span>
 <ul>
 <li>When you have created a VSTS account via <a href="https://www.visualstudio.com/">Visual Studio VSTS</a> browse to <a href="https://yourvstsusername.visualstudio.com/_projects">https://yourvstsusername.visualstudio.com/_projects</a></li>
 <li>Create a project for dreamhouse-mobile-ionic - Press <code>New Project</code> and enter name <code>dreamhouse-mobile-ionic</code>.<br>
-<img alt="New VSTS project" src="img/2017-10-09-VSTS1.PNG" title="New VSTS project"></li>
+<img alt="New VSTS project" src="img/2017/2017-10-09-VSTS1.PNG" title="New VSTS project"></li>
 <li>Since your code is in GitHub, you don't need to have it in VSTS, too. So no need to look in tab <code>Code</code>.</li>
 <li>Instead goto tab <code>Build and Release</code> and press <code>+ New</code> to add a new Build Definition - more or less as you might be used to from TFS.<br>
-<img alt="New Build definition" src="img/2017-10-09-VSTS2.PNG" title="New Build definition"></li>
+<img alt="New Build definition" src="img/2017/2017-10-09-VSTS2.PNG" title="New Build definition"></li>
 <li>Choose an Empty template - meaning there are no build steps to start out with<br>
-<img alt="Select Empty template" src="img/2017-10-09-VSTS3.PNG" title="Select Empty template"></li>
+<img alt="Select Empty template" src="img/2017/2017-10-09-VSTS3.PNG" title="Select Empty template"></li>
 <li>Now you need to connect to GitHub. Select <code>Get sources</code> in left pane and select <code>Remote repo</code> in right pane. You need to authenticate towards GitHub - go through that process. In the image below I have already connected<br>
 Name: <code>yourgithubusername_dreamhouse-mobile-ionic</code>
 Repo: <code>https://github.com/yourgithubusername/dreamhouse-mobile-ionic</code>
 Set Clean to <code>true</code> - Set clean options to <code>Sources</code><br>
 Notice - this is like when you did git clone locally
-<img alt="Connect to GitHub" src="img/2017-10-09-VSTS4.PNG" title="Connect to GitHub"></li>
+<img alt="Connect to GitHub" src="img/2017/2017-10-09-VSTS4.PNG" title="Connect to GitHub"></li>
 <li>Just above <code>Get Sources</code> there is <code>Process</code> - select it.<br>
 Name: dreamhouse-mobile-ionic-Build<br>
 Agent Queue: Hosted VS2017</li>
 <li>So what did you do after git clone? <code>npm install</code>. In Phase 1 press <code>+</code> and select npm task.
-<img alt="Select npm task" src="img/2017-10-09-VSTS5.PNG" title="Select npm task"></li>
+<img alt="Select npm task" src="img/2017/2017-10-09-VSTS5.PNG" title="Select npm task"></li>
 <li>Configure npm task by pressing the dropdown list and select <code>install</code><br>
-<img alt="Configure npm install" src="img/2017-10-09-VSTS6.PNG" title="Configure npm install"></li>
+<img alt="Configure npm install" src="img/2017/2017-10-09-VSTS6.PNG" title="Configure npm install"></li>
 <li>After install you did <code>Ionic serve</code>. But that was a development task - not a build task<br>
 Next build task is <code>npm run build --prod --aot</code>. Go on - add yet a npm task as you did before</li>
 <li>Configure npm task by pressing the dropdown list and select <code>custom</code>, since you can't select run<br>
 Add <code>run build --prod --aot</code> as Command and arguments<br>
 You probably recognize <code>--aot</code> - <a href="https://angular.io/guide/aot-compiler">Ahead-of-Time</a> from Angular 4. It gives faster load time, so it is quite important<br>
-<img alt="Configure npm run" src="img/2017-10-09-VSTS7.PNG" title="Configure npm run"></li>
+<img alt="Configure npm run" src="img/2017/2017-10-09-VSTS7.PNG" title="Configure npm run"></li>
 <li>So we ran out of steps locally, but on the build server we still need to package the build output and send it to Azure<br>
 Next task is a zip-task. Press <code>+</code> and select <code>Archive Files</code><br>
-<img alt="Select zip task" src="img/2017-10-09-VSTS8.PNG" title="Select zip task"></li>
+<img alt="Select zip task" src="img/2017/2017-10-09-VSTS8.PNG" title="Select zip task"></li>
 <li>Root folder is the build code you want to deploy. It is located in the <code>www</code> folder - just as when you work locally<br>
 Unselect "Prefix root folder ..."<br>
 The name of the zipped package should be <code>$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip</code><br>
-<img alt="Configure zip" src="img/2017-10-09-VSTS9.PNG" title="Configure zip"></li>
+<img alt="Configure zip" src="img/2017/2017-10-09-VSTS9.PNG" title="Configure zip"></li>
 <li>Final build step to do is to put the package in a drop folder<br>
 Next task is a publish task. Press <code>+</code> and select <code>Publish Build Artifacts</code><br>
 Notice - you can create PowerShell, Shell Script and Batch Script tasks. So if you npm installed a nice utility, you could then do anything with it in a script which could be in your code e.g. `.\scripts\runkarmaandprotractortests.cmd
-<img alt="Select publish task" src="img/2017-10-09-VSTS10.PNG" title="Select publish task"></li>
+<img alt="Select publish task" src="img/2017/2017-10-09-VSTS10.PNG" title="Select publish task"></li>
 <li>Path to publish is the zip file you created in last step<br>
 Artifact Name is the name of the drop folder. It must be called <code>drop</code><br>
 And Location must be <code>TFS</code> - that used to be called Type: <code>Server</code> (opposed to File Share)<br>
-<img alt="Configure publish" src="img/2017-10-09-VSTS11.PNG" title="Configure publish"></li>
+<img alt="Configure publish" src="img/2017/2017-10-09-VSTS11.PNG" title="Configure publish"></li>
 <li>Press <code>Save &amp; queue</code>. In top of the screen you'll see <code>Build #&lt;some-number&gt; has been queued.</code></li>
 <li>Click on <code>#&lt;some-number&gt;</code>. Now you can see the progress of the build.<br>
 When the build has finished you'll see <code>Build Succeeded</code> and above that <code>dreamhouse-mobile-ionic-Build / Build &lt;some-number&gt; / Phase 1</code>  </li>
@@ -264,19 +264,19 @@ When the build has finished you'll see <code>Build Succeeded</code> and above th
 <li>When you have created a free Azure account via <a href="https://azure.microsoft.com/en-in/free/">Microsoft Azure</a> browse to <a href="https://portal.azure.com/">Azure Portal</a></li>
 <li>The first thing you need is a place for all your stuff at Azure to live. That is called a <code>Resource Group</code><br>
 Click <code>Resource Groups</code> then <code>+ Add</code><br>
-<img alt="Add Resource Group" src="img/2017-10-09-Azure1.PNG" title="Add Resource Group"></li>
+<img alt="Add Resource Group" src="img/2017/2017-10-09-Azure1.PNG" title="Add Resource Group"></li>
 <li>Name - I have called mine <code>ResGroupNorthEurope</code><br>
 Location - I live in area <code>North Europe</code><br>
-<img alt="Configure Resource Group" src="img/2017-10-09-Azure2.PNG" title="Configure Resource Group"></li>
+<img alt="Configure Resource Group" src="img/2017/2017-10-09-Azure2.PNG" title="Configure Resource Group"></li>
 <li>So what do you want there? A webapp. You find that under <code>App Services</code>. Click <code>+ Add</code> then <code>Filter</code><br>
 Then you see a variaty of categories of webapps
-<img alt="Add WebApp" src="img/2017-10-09-Azure3.PNG" title="Add WebApp"></li>
+<img alt="Add WebApp" src="img/2017/2017-10-09-Azure3.PNG" title="Add WebApp"></li>
 <li>Select <code>Web App</code> 
 Since I have already taken subdomain dreamhouse-mobile-ionic you have to choose another one - e.g.  <code>yourvstsusername-dreamhouse-mobile-ionic</code><br>
 Resourse Group: Use the one you created before: <code>`Use Existing</code><br>
 App Service Plan is the Dyno in Heroku or EC2 in AWS - the size of your PaaS. I have chosen the smallest: S1<br>
 Tip: You can reuse the Resource Group and the App Service Plan for several resources e.g. webapps.
-<img alt="Configure WebApp" src="img/2017-10-09-Azure4.PNG" title="Configure WebApp"></li>
+<img alt="Configure WebApp" src="img/2017/2017-10-09-Azure4.PNG" title="Configure WebApp"></li>
 </ul>
 <p>You're done in Azure. Next up is to release to Azure from VSTS.</p>
 <h2>Release to Azure from VSTS</h2>
@@ -285,27 +285,27 @@ Tip: You can reuse the Resource Group and the App Service Plan for several resou
 <li>You can deploy to many environments and services. We just want to deploy to our App Service.<br>
 First step is to select that target environment in a Release<br>
 Click tab <code>Releases</code> then <code>+</code> - <code>Create Release Definition</code> - Select <code>Azure App Service Deployment</code> and click Apply <br>
-<img alt="Add Release Definition" src="img/2017-10-09-VSTSRelease1.PNG" title="Add Release Definition"></li>
+<img alt="Add Release Definition" src="img/2017/2017-10-09-VSTSRelease1.PNG" title="Add Release Definition"></li>
 <li>Notice the ´!´ - something needs attention - click either of them<br>
-<img alt="Tasks needs attention" src="img/2017-10-09-VSTSRelease2.PNG" title="Tasks needs attention"></li>
+<img alt="Tasks needs attention" src="img/2017/2017-10-09-VSTSRelease2.PNG" title="Tasks needs attention"></li>
 <li>Hey - that looks familiar - a list of steps in a task list - just as under tab <code>Build</code><br>
 Yes, but heading is <code>Environment 1</code> - not <code>Phase 1</code>. And for the environmet you have to connect to Azure.
 Click on <code>Manage</code> subscribtion and go through an authentication process<br>
 When connected you can click the dropdown list to select your website<br>
-<img alt="Connect to Azure" src="img/2017-10-09-VSTSRelease3.PNG" title="Connect to Azure"></li>
+<img alt="Connect to Azure" src="img/2017/2017-10-09-VSTSRelease3.PNG" title="Connect to Azure"></li>
 <li>Head back to tab <code>Pipeline</code> - we need to fetch a source to deploy<br>
 Select <code>Add Artifact</code> and select source type: <code>Build</code>, so we can fetch the zip file from drop.<br>
 Notice: Source type can also be: <code>Git, GitHub, Jenkins and Team Foundation Version Control</code>.<br>
 Build Definition: Select the only one from the list.<br>
 Accept default values and press Add.<br>
-<img alt="Add Artifact" src="img/2017-10-09-VSTSRelease4.PNG" title="Add Artifact"></li>
+<img alt="Add Artifact" src="img/2017/2017-10-09-VSTSRelease4.PNG" title="Add Artifact"></li>
 <li>Press the lightning icon on the Artifact. Notice the trigger is whenever a new drop has been made.<br>
-<img alt="Release Trigger" src="img/2017-10-09-VSTSRelease5.PNG" title="Release Trigger"></li>
+<img alt="Release Trigger" src="img/2017/2017-10-09-VSTSRelease5.PNG" title="Release Trigger"></li>
 <li>Now that we have a source we can head back to <code>Tasks</code>, select <code>Deploy Azure App Service</code> and enter the missing zipfile: <code>$(System.DefaultWorkingDirectory)\**\*.zip</code>. You can browse to it by pressing <code>...</code><br>
-<img alt="Pick zip file" src="img/2017-10-09-VSTSRelease6.PNG" title="Pick zip file"></li>
+<img alt="Pick zip file" src="img/2017/2017-10-09-VSTSRelease6.PNG" title="Pick zip file"></li>
 <li>Before we save the Release Definition head to <code>Pipeline</code> - and select the Lightning in the Environment<br>
 Notice you have a possibility to select persons to approve deployment. This can be tester that approves one environment before a build is rolled out for the next environment.<br>
-<img alt="Approvers" src="img/2017-10-09-VSTSRelease7.PNG" title="Approvers">
+<img alt="Approvers" src="img/2017/2017-10-09-VSTSRelease7.PNG" title="Approvers">
 We don't want approvers - so go on and save as <code>dreamhouse-Release</code>.</li>
 </ul>
 <p>Have you noticed that these Release workflow correspond to the features in <a href="https://octopus.com/">Octopus Deploy</a>? </p>
@@ -313,21 +313,30 @@ We don't want approvers - so go on and save as <code>dreamhouse-Release</code>.<
 <p>Now we are ready for the big show - deploy to Azure</p>
 <ul>
 <li>Head back to <code>Builds</code> - tab <code>All Definitions</code> - click on the only one <code>dreamhouse-mobile-ionic-Build</code><br>
-<img alt="Prepare to build" src="img/2017-10-09-VSTSQueue1.PNG" title="Prepare to build"></li>
+<img alt="Prepare to build" src="img/2017/2017-10-09-VSTSQueue1.PNG" title="Prepare to build"></li>
 <li>Click <code>Queue New Build...</code><br>
-<img alt="Queue build" src="img/2017-10-09-VSTSQueue2.PNG" title="Queue build"></li>
+<img alt="Queue build" src="img/2017/2017-10-09-VSTSQueue2.PNG" title="Queue build"></li>
 <li>Click <code>Queue</code>
-<img alt="npm run build" src="img/2017-10-09-VSTSQueue3.PNG" title="npm run build"></li>
+<img alt="npm run build" src="img/2017/2017-10-09-VSTSQueue3.PNG" title="npm run build"></li>
 <li>If the Build succeded head to <code>Releases</code> tab and verify that the build triggered a release<br>
-<img alt="Triggered release" src="img/2017-10-09-VSTSQueue4.PNG" title="Triggered release"></li>
+<img alt="Triggered release" src="img/2017/2017-10-09-VSTSQueue4.PNG" title="Triggered release"></li>
 <li>If the release succeeded, too head to <code>Azure App Services</code> in <a href="https://portal.azure.com">Azure</a><br>
 Select your service and scroll down to <code>Continous Delivery</code><br>
 You should see the Release has been Deployed Successfully<br>
-<img alt="Succeeded release" src="img/2017-10-09-VSTSQueue5.PNG" title="Succeeded release"></li>
+<img alt="Succeeded release" src="img/2017/2017-10-09-VSTSQueue5.PNG" title="Succeeded release"></li>
 </ul>
 <p>If that is true then you site should be live on<br>
 <a href="http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net">http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net</a></p>
 <p>If you are just reading along you can also find my site <a href="http://dreamhouse-mobile-ionic.azurewebsites.net/">here</a></p>
+<h1>Alternatively deployments in Azure</h1>
+<p>There is also alternative options for hosting SPA's in Azure.  </p>
+<ul>
+<li><a href="https://code.visualstudio.com/tutorials/functions-extension/getting-started">Azure Functions</a>. I assume this is the best pick for SPA's or API's with low load.</li>
+<li><a href="https://code.visualstudio.com/tutorials/static-website/getting-started">Azure Storage</a>.<br>
+I don't think Azure Storage can handle SSR. Instead it is a great place for static websites like this blog.</li>
+<li><a href="https://code.visualstudio.com/tutorials/docker-extension/getting-started">Docker images</a> - good for porting entire environments from dev to prod in Azure or any other cloud.</li>
+<li>And finally a tutorial like this blog deploying to <a href="https://code.visualstudio.com/tutorials/app-service-extension/getting-started">App Servicese</a></li>
+</ul>
 <hr>
 <h1>Links</h1>
 <ul>

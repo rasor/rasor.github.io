@@ -433,7 +433,7 @@ curl -X GET &lt;span class="s2"&gt;&amp;quot;http://petstore.swagger.io/v2/pet/1
 &lt;h2&gt;SSL with GIT&lt;/h2&gt;
 &lt;p&gt;Just like cUrl Git-for-windows also checks the SSL path.&lt;br&gt;
 By default ca-bundle.crt file from OpenSSL&lt;br&gt;
-&lt;img alt="GitInstall-SSL" src="img/2017-12-11-GitInstall1.PNG"&gt;&lt;/p&gt;
+&lt;img alt="GitInstall-SSL" src="img/2017/2017-12-11-GitInstall1.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;If you during installation change to use Windows Certificate Store, then Windows will keep the ca-list updated for you, I assume.&lt;/p&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#curl"></category><category term="#windows"></category><category term="#shell"></category><category term="#ssl"></category><category term="#git"></category><category term="#openssl"></category></entry><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-12-16T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
@@ -441,7 +441,7 @@ Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This h
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
 Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning curve for other developers.&lt;/p&gt;
 &lt;p&gt;After this walk-through you have a REST service and swagger.yaml that you can use for creating client code via &lt;a href="https://editor.swagger.io/"&gt;https://editor.swagger.io/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="IBookService.yaml" src="img/2017-11-18-IBookService.yaml.PNG" title="IBookService.yaml"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IBookService.yaml" src="img/2017/2017-11-18-IBookService.yaml.PNG" title="IBookService.yaml"&gt;&lt;/p&gt;
 &lt;p&gt;You can find &lt;a href="https://github.com/rasor/wcf-rest"&gt;code for this guide on github&lt;/a&gt;.&lt;/p&gt;
 &lt;h1&gt;HowTo create a REST service (including Swagger.yaml) from a WCF service&lt;/h1&gt;
 &lt;p&gt;If you have an existing service you create yet an endpoint allowing you to keep the existing service.&lt;/p&gt;
@@ -804,7 +804,7 @@ So In short you need to&lt;/p&gt;
 In more details &lt;a href="https://guides.github.com/introduction/flow/"&gt;here is a visual flow&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Since you are just starting you are probably not member of a team, that has access to a shared repo.&lt;br&gt;
 Thus you need to contribute with the &lt;a href="https://help.github.com/articles/about-collaborative-development-models/"&gt;Fork and Pull model&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Fork and Pull model" src="img/2017-10-14-Fork-and-Pull.png" title="Fork and Pull model"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Fork and Pull model" src="img/2017/2017-10-14-Fork-and-Pull.png" title="Fork and Pull model"&gt;&lt;/p&gt;
 &lt;p&gt;I use two phases&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;A. Prepare&lt;/li&gt;
@@ -839,7 +839,7 @@ git push -u origin mynewfeaturebranch
 
 &lt;p&gt;&lt;a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/"&gt;8a. Pull Request to upstream - from Fork&lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;You are then rewarded with this image for the first PR, if it was GitHub you contributed to&lt;br&gt;
-&lt;img alt="The first Pull Request" src="img/2017-10-14-profile-first-pr.png" title="The first Pull Request"&gt;&lt;/p&gt;
+&lt;img alt="The first Pull Request" src="img/2017/2017-10-14-profile-first-pr.png" title="The first Pull Request"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;8b. Listen for feedback&lt;br&gt;
 You can see your PR's &lt;a href="https://github.com/pulls"&gt;here&lt;/a&gt;. Maintainers will make comments in there.&lt;/li&gt;
@@ -1056,11 +1056,11 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;li&gt;New - Project - Other Languages - TypeScript - Angular CLI Application - Name: &lt;YourNgAppName&gt;
 ** Note: You can also do New - Item into an existing .NET Core project - &lt;a href="https://github.com/damienbod/angular-auth-oidc-client"&gt;details&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="New Angular CLI Project in Visual Studio 2017" src="img/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="New Angular CLI Project in Visual Studio 2017" src="img/2017/2017-09-24-NewAngularCLIProject.PNG" title="New Angular CLI Project in Visual Studio 2017"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In the project options choises select both if you are in doubt&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="Angular CLI Project options" src="img/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Angular CLI Project options" src="img/2017/2017-09-24-AngularCLIProjectOptions.PNG" title="Angular CLI Project options"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Installing the npm packages takes a long time. I prefer to skip that step and do it manually from a command prompt, where I feel I better can see what is going on, if something fails&lt;ul&gt;
 &lt;li&gt;Open a command prompt and CD into the root of your Angular project&lt;/li&gt;
@@ -1076,11 +1076,11 @@ Since we are not yet using GIT at work (but TFS), then TFS don't know what to ch
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="F5 startup 1" src="img/2017-09-24-F5Startup1.PNG" title="F5 startup 1"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="F5 startup 1" src="img/2017/2017-09-24-F5Startup1.PNG" title="F5 startup 1"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;In both cases Angular CLI will serve you app after buiding it with the Angular CLI on &lt;a href="http://localhost:4200/"&gt;http://localhost:4200/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="F5 startup 2" src="img/2017-09-24-F5Startup2.PNG" title="F5 startup 2"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="F5 startup 2" src="img/2017/2017-09-24-F5Startup2.PNG" title="F5 startup 2"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;This is very good news. Why? Because it does not matter what webserver or editor you are using.
 But the best of is that you use standard node.js deployment methods, so you can deploy your app anywhere. You can use standard npm or yarn managers without having to do a lot of strange Visual Studio configuration.&lt;/li&gt;
