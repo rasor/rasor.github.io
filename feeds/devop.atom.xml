@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-10T11:00:00+02:00</updated><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-06T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-10T12:00:00+02:00</updated><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-06T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows.&lt;br&gt;
 In this blog I'll install Docker. Playing with it I'll do in another post.  &lt;/p&gt;
 &lt;h2&gt;Install&lt;/h2&gt;
 &lt;p&gt;You download &lt;a href="https://store.docker.com/editions/community/docker-ce-desktop-windows"&gt;Docker CE for Windows here&lt;/a&gt;.  &lt;/p&gt;
@@ -784,7 +784,7 @@ Instead I could browse in the App Service Console and the files were alse viewab
 &lt;p&gt;So to verify that browse to you service on&lt;br&gt;
 &lt;a href="http://yourvstsusername-dreamhouse-mobile-rest.azurewebsites.net/properties"&gt;http://yourvstsusername-dreamhouse-mobile-rest.azurewebsites.net/properties&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you are just reading along you can also find my site &lt;a href="http://dreamhouse-mobile-rest.azurewebsites.net/properties"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#express"></category><category term="#nodejs"></category><category term="#azure"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2018-05-10T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#express"></category><category term="#nodejs"></category><category term="#azure"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2018-05-10T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;
@@ -1013,16 +1013,16 @@ You should see the Release has been Deployed Successfully&lt;br&gt;
 &lt;p&gt;If that is true then you site should be live on&lt;br&gt;
 &lt;a href="http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net"&gt;http://yourvstsusername-dreamhouse-mobile-ionic.azurewebsites.net&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you are just reading along you can also find my site &lt;a href="http://dreamhouse-mobile-ionic.azurewebsites.net/"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;h1&gt;Alternatively deployments in Azure&lt;/h1&gt;
-&lt;p&gt;There is also alternative options for hosting SPA's in Azure.  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Alternative deployments tp Azure&lt;/h1&gt;
+&lt;p&gt;There are also alternative options for hosting SPA's in Azure.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://code.visualstudio.com/tutorials/functions-extension/getting-started"&gt;Azure Functions&lt;/a&gt;. I assume this is the best pick for SPA's or API's with low load.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://code.visualstudio.com/tutorials/static-website/getting-started"&gt;Azure Storage&lt;/a&gt;.&lt;br&gt;
 I don't think Azure Storage can handle SSR. Instead it is a great place for static websites like this blog.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://code.visualstudio.com/tutorials/docker-extension/getting-started"&gt;Docker images&lt;/a&gt; - good for porting entire environments from dev to prod in Azure or any other cloud.&lt;/li&gt;
-&lt;li&gt;And finally a tutorial like this blog deploying to &lt;a href="https://code.visualstudio.com/tutorials/app-service-extension/getting-started"&gt;App Servicese&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;And finally a tutorial like this blog deploying to &lt;a href="https://code.visualstudio.com/tutorials/app-service-extension/getting-started"&gt;App Services&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/2017/06/29/deploying-ionic1-as-a-webapp-to-heroku/"&gt;Deploying Ionic1 to Heroku&lt;/a&gt;&lt;/li&gt;
