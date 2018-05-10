@@ -36,7 +36,7 @@ In more details [here is a visual flow](https://guides.github.com/introduction/f
 Since you are just starting you are probably not member of a team, that has access to a shared repo.  
 Thus you need to contribute with the [Fork and Pull model](https://help.github.com/articles/about-collaborative-development-models/)
 
-![Fork and Pull model](img/2017-10-14-Fork-and-Pull.png "Fork and Pull model")
+![Fork and Pull model](img/2017/2017-10-14-Fork-and-Pull.png "Fork and Pull model")
 
 I use two phases
 
@@ -75,7 +75,7 @@ git push -u origin mynewfeaturebranch
 [8a. Pull Request to upstream - from Fork](https://help.github.com/articles/creating-a-pull-request-from-a-fork/)  
 
 You are then rewarded with this image for the first PR, if it was GitHub you contributed to  
-![The first Pull Request](img/2017-10-14-profile-first-pr.png "The first Pull Request")
+![The first Pull Request](img/2017/2017-10-14-profile-first-pr.png "The first Pull Request")
 
 * 8b. Listen for feedback  
 You can see your PR's [here](https://github.com/pulls). Maintainers will make comments in there.

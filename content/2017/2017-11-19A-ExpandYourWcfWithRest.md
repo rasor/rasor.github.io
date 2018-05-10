@@ -11,7 +11,7 @@ Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This h
 
 After this walk-through you have a REST service and swagger.yaml that you can use for creating client code via <https://editor.swagger.io/>
 
-![IBookService.yaml](img/2017-11-18-IBookService.yaml.PNG "IBookService.yaml")
+![IBookService.yaml](img/2017/2017-11-18-IBookService.yaml.PNG "IBookService.yaml")
 
 You can find [code for this guide on github](https://github.com/rasor/wcf-rest).
 

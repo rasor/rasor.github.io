@@ -64,7 +64,7 @@ curl -X GET "https://hacker-news.firebaseio.com/v0/item/8863.json?print=pretty"
 
 Just like cUrl Git-for-windows also checks the SSL path.  
 By default ca-bundle.crt file from OpenSSL  
-![GitInstall-SSL](img/2017-12-11-GitInstall1.PNG)
+![GitInstall-SSL](img/2017/2017-12-11-GitInstall1.PNG)
 
 If you during installation change to use Windows Certificate Store, then Windows will keep the ca-list updated for you, I assume.
 

@@ -11,7 +11,7 @@ The first one I found useful was [LinkTo](https://chrome.google.com/webstore/det
 
 With LinkTo installed you can both right-click or double-click in Google Drive on a link to navigate to that URL.
 
-![picture alt](img/2017-09-30-GDriveLinkTo.PNG "A Link in Google Drive")
+![picture alt](img/2017/2017-09-30-GDriveLinkTo.PNG "A Link in Google Drive")
 
 It also has more features, but the double-click feature is the only one I need so far.
 

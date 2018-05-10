@@ -95,7 +95,7 @@ git checkout pelican
 I'm using Visual Studio Code, that has a nice Markdown preview - probably a plugin.
 But you could use NotePad for that matter.
 
-![picture alt](img/2017-09-23-PelicanInVSCode.PNG "Pelican In VS Code")
+![picture alt](img/2017/2017-09-23-PelicanInVSCode.PNG "Pelican In VS Code")
 
 ## Day to day Workflow
 1. Open VS Code
