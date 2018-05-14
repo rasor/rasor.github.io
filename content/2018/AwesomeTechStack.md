@@ -17,6 +17,15 @@ Tags: #wireframe, #figma
 
 * Convert, Edit, Or Compose Bitmap Images: [ImageMagick](https://www.imagemagick.org/script/index.php)
 
+## Backend
+
+## Logfile monitoring
+
+* [Humio](https://www.humio.com/)
+* [ELK Stack: Elasticsearch, Logstash, Kibana](https://www.elastic.co/elk-stack)
+    * [Logstash as a Service](https://logz.io/logstash_nmoilp/)
+* [Splunk](https://www.splunk.com/)
+
 ## Other Services
 
 ### Surveys

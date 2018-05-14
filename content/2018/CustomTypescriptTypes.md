@@ -11,6 +11,7 @@ Where
 
 HowTo write
 
+* Declare lib + plugin and load globally in [angular-cli](https://github.com/angular/angular-cli/wiki/stories-global-scripts)
 * [Contribution guide | DefinitelyTyped](http://definitelytyped.org/guides/contributing.html)
 * D. Still great: [How to write your own TypeScript Definition Files](http://peter.grman.at/how-to-write-typescript-definition-files/)
 * [TypeScript](https://typescript.codeplex.com/wikipage?title=Writing%20Definition%20%28.d.ts%29%20Files)

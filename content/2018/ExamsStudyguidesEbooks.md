@@ -11,6 +11,9 @@ Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 * Google:
   * <https://developers.google.com/training/certification/mobile-web-specialist/#info>{:target="_blank"}
   * <https://developers.google.com/training/certification/mobile-web-specialist/StudyGuide-MobileWebSpecialist.pdf>{:target="_blank"}
+* Microsoft:
+  * [Microsoft Certification Exam List | Microsoft Learning](https://www.microsoft.com/en-us/learning/exam-list.aspx)
+    * [MCSA Machine Learning](https://www.microsoft.com/en-us/learning/mcsa-machine-learning.aspx)
 * AWS:
   * [AWS Certification](https://aws.amazon.com/certification/)
   * [Prepare for Certification](https://aws.amazon.com/certification/certification-prep/)
@@ -37,6 +40,7 @@ Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 ## Ebooks
 * [Ebooks Syncfusion](https://www.syncfusion.com/resources/techportal/ebooks)
 * [Free Programming eBooks | PACKT Books](https://www.packtpub.com/packt/offers/free-learning)
+* [eBooks - Auth0](https://auth0.com/resources/ebooks/)
 * [Whitepapers – Amazon Web Services (AWS)](https://aws.amazon.com/whitepapers/?src=aws_training)
 * [Rxjs 5 ultimate · GitBook](https://www.gitbook.com/book/chrisnoring/rxjs-5-ultimate/details)
 

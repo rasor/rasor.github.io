@@ -1,7 +1,7 @@
 Title: Dependency management in Angular CLI - Lib: A-Frame
 Status: published
 Date: 2018-03-29 22:00
-Modified: 2018-04-14 13:00
+Modified: 2018-05-12 03:00
 Category: Develop
 Tags: #ng, #aframe, #webpack, #vr
 
@@ -362,6 +362,7 @@ To be continued...
 
 ## Links
 
+* Declare lib + plugin and load globally in [angular-cli](https://github.com/angular/angular-cli/wiki/stories-global-scripts)
 * More on zone.js: [What the hell is Zone.js and why is it in my Angular 2?](https://medium.com/@MertzAlertz/what-the-hell-is-zone-js-and-why-is-it-in-my-angular-2-6ff28bcf943e)
 * Lots of other [Angular CLI tricks](https://github.com/angular/angular-cli/wiki/stories)
 * [Angular CLI Config Schema](https://github.com/angular/angular-cli/wiki/angular-cli)

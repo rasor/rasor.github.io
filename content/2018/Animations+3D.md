@@ -1,6 +1,6 @@
-Title: Animations
+Title: Animations & 3D
 Date: 2099-01-01 00:00
-Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
+Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs, #webgl
 
 ## Angular
 
@@ -22,7 +22,7 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 
 * Lib: [React VR Animations](https://facebook.github.io/react-vr/docs/animations.html)
 
-## A-Frame
+# A-Frame
 
 * [A-Frame (@aframevr) | Twitter](https://twitter.com/aframevr?lang=en)
 * [Introduction – A-Frame](https://aframe.io/docs/0.8.0/introduction/)
@@ -84,13 +84,29 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg
 * [How to Write an A-Frame VR Component](http://ngokevin.com/blog/aframe-component/)
 * [aframevr/aframe - writing-a-component](https://github.com/aframevr/aframe/blob/master/docs/introduction/writing-a-component.md)
 
+# CSS3D, Three.js & WebGL
+
+* [What are the differences between WebGL, three.js, CSS 3D and D3.js? - Quora](https://www.quora.com/What-are-the-differences-between-WebGL-three-js-CSS-3D-and-D3-js)
+
 ## Infamous
 
 * [Install - Infamous](https://infamous.io/docs/install.html)
+* [Infamous Mixed Mode](https://codepen.io/trusktr/pen/OzJJJN)
+* [Examples - Infamous](https://infamous.io/docs/examples.html)
 * [trusktr/infamous](https://github.com/trusktr/infamous/releases?after=v18.0.2)
+* Core shapes: [trusktr/infamous](https://github.com/trusktr/infamous/tree/master/src/core)
 
 * [How to deal with Shadow DOM? · Issue #1492 · aframevr/aframe](https://github.com/aframevr/aframe/issues/1492)
 * [How can a custom element detect when it is transcluded into a shadow tree (slotchange)? · Issue #504 · w3c/webcomponents](https://github.com/w3c/webcomponents/issues/504)
+
+## CSS3D
+
+* [Intro to CSS 3D transforms](https://3dtransforms.desandro.com/)
+
+## Three.js
+
+* [three.js / documentation](https://threejs.org/docs/#manual/introduction/Creating-a-scene)
+* [Aerotwist - Getting Started with Three.js](https://aerotwist.com/tutorials/getting-started-with-three-js/)
 
 ## WebGL
 

@@ -6,7 +6,7 @@ Tags: #vue, #magento, #webshop, #seo, #pwa, #openshift, #docker
 It is a PWA frontend to the Magento webshop.  
 
 I think I'll give it a testdrive.  
-I am attending a online marketing seminar and workshop presented by [Thomas Zacchi (@tzacchi)](https://twitter.com/tzacchi) from [intoto digital](https://www.intoto.dk/), so it I could use a modern webshop to play with.  
+I am attending a online marketing seminar and workshop presented by [Thomas Zacchi (@tzacchi)](https://twitter.com/tzacchi) from [intoto digital](https://www.intoto.dk/), so I could use a modern webshop to play with.  
 
 ## Initial thoughts about installation
 
@@ -41,9 +41,34 @@ I installed [Docker4Win here](2018-05-06-Docker4Win.md)
 
 ... InProgress
 
-## Links
+----------------
 
-### Vue Storefront
+# Links
+
+## Vue Storefront
+
+### 4 - Vue Storefront - People
+
+* [vuestorefront.slack.com](https://vuestorefront.slack.com/messages/DAP34PT8U/)
+* [Vue Storefront (@VueStorefront) | Twitter](https://twitter.com/VueStorefront)
+* [Piotr Karwatka (@piotrkarwatka) | Twitter](https://twitter.com/piotrkarwatka)
+* [Filip Rakowski (@filrakowski) | Twitter](https://twitter.com/filrakowski)
+
+### 1 - Vue Storefront - Events
+
+* 2018 May [Vue Storefront Hackathon, 1.0 STABLE, case studies – Piotr Karwatka – Medium](https://medium.com/@piotrkarwatka/vue-storefront-hackathon-1-0-stable-case-studies-29406050727a)
+* 2018 May [Wro Open Source 2018](http://go.divante.co/wro-open-source/#lp-pom-block-1029)
+
+### 2 - Vue Storefront - Github issues
+
+* [vue-storefront issues](https://github.com/DivanteLtd/vue-storefront/issues?q=is%3Aopen+is%3Aissue+label%3Avs-hackathon)
+
+### 3 - Vue Storefront - Learn 
+
+* [Vue Storefront - YouTube](https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg)
+* Blog: -> 2018.01.31 [Vue Storefront — how to install and integrate with Magento2](https://medium.com/@piotrkarwatka/vue-storefront-how-to-install-and-integrate-with-magento2-227767dd65b2)
+* Blog: 2018.01.04 [How to connect 3rd party platform to Vue Storefront?](https://medium.com/@piotrkarwatka/how-to-connect-3rd-party-platform-to-vue-storefront-df9cb30779f6)
+* Slides: 2018.02.26 [Vue Storefront Basics - Why we created Vue Storefront and how it works](https://www.slideshare.net/FilipRakowski/vue-storefront-basics)
 
 * vue [shopping-carts](https://github.com/topics/shopping-cart?l=vue)
 * vue: PWA front, Magento back [DivanteLtd/vue-storefront](https://github.com/DivanteLtd/vue-storefront)
@@ -56,8 +81,20 @@ I installed [Docker4Win here](2018-05-06-Docker4Win.md)
 * [FAQ and Receipes](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/FAQ%20and%20Receipes.md)
 * [More docs...](https://github.com/DivanteLtd/vue-storefront/tree/master/doc)
 
-### Other
+## Vue
 
+### Vue Libs
+
+* [vue-bulma/nprogress](https://github.com/vue-bulma/nprogress)
+* [vue-tags](https://www.npmjs.com/package/vue-tags)
+
+### Vue - Learn
+
+* [Build Async Vue.js Apps with RxJS](https://egghead.io/courses/build-async-vue-js-apps-with-rxjs?utm_source=drip&utm_medium=email&utm_campaign=may2018&utm_term=vue&utm_content=build-async-vue-js-apps-with-rxjs)
+
+## Other
+
+* [front-end-performance-checklist-2018.pdf](https://www.dropbox.com/s/8h9lo8ee65oo9y1/front-end-performance-checklist-2018.pdf?dl=0)
 * SEO and PWA: [2018 State of PWA](https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70)
 * [Other headless / API first apps](HeadlessApiFirst.md)
 * [Other ecommerce projects on GitHub](https://github.com/topics/ecommerce)

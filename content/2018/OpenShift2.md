@@ -1,7 +1,7 @@
 Title: Developing with OpenShift
 Date: 2099-01-01 00:00
 Category: DevOp
-Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
+Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #dockerswarm
 
 This a blog in 2 parts
 
@@ -64,5 +64,10 @@ The webapp will probably use [xip.io](https://xip.io/) for DNS according to eBoo
 ## Docker
 
 * ng devserver: [Angular Seed](https://mgechev.github.io/angular-seed/)
+
+## Kuvernetes and Swarm
+
+* [The key differences between Kubernetes and Docker Swarm](https://medium.com/packt-hub/the-key-differences-between-kubernetes-and-docker-swarm-edb519730757)
+* [Kubernetes: Flannel networking](https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)
 
 The End
