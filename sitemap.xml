@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2018-05-10T12:44:02-00:00</lastmod>
+<lastmod>2018-05-14T18:56:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2018-05-10T12:44:02-00:00</lastmod>
+<lastmod>2018-05-14T18:56:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2018-05-10T12:44:02-00:00</lastmod>
+<lastmod>2018-05-14T18:56:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2018-05-10T12:44:02-00:00</lastmod>
+<lastmod>2018-05-14T18:56:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -47,7 +47,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html</loc>
-<lastmod>2018-04-14T13:00:00+02:00</lastmod>
+<lastmod>2018-05-12T03:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -166,7 +166,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2018-04-14T13:00:00+00:50</lastmod>
+<lastmod>2018-05-12T03:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -243,28 +243,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/ng.html</loc>
-<lastmod>2018-04-14T13:00:00+00:50</lastmod>
+<lastmod>2018-05-12T03:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/aframe.html</loc>
-<lastmod>2018-04-14T13:00:00+00:50</lastmod>
+<lastmod>2018-05-12T03:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/webpack.html</loc>
-<lastmod>2018-04-14T13:00:00+00:50</lastmod>
+<lastmod>2018-05-12T03:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/vr.html</loc>
-<lastmod>2018-04-14T13:00:00+00:50</lastmod>
+<lastmod>2018-05-12T03:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -586,7 +586,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2018-05-10T12:00:00+00:50</lastmod>
+<lastmod>2018-05-12T03:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
