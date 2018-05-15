@@ -36,8 +36,45 @@ Let's see if that is doable.
 
 ## [Installing on Windows](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md)
 
-1. Install [Docker CE for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows)  
+### Prerequisites
+
+1. Install [Git for Windows](https://git-scm.com/downloads) - This will install `Git Bash`
+* Optional Install [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html) - This will ensure that you can call a remote end over SSL
+2. Install [Docker CE for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows).  
+Moore info: [Running Docker containers on Bash on Windows](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)
 I installed [Docker4Win here](2018-05-06-Docker4Win.md)  
+3. Install [NVM for Windows, Node.js and Yarn](https://rasor.github.io/using-nvm-for-windows-and-yarn.html) 
+4. Install [vue-cli](https://www.npmjs.com/package/vue-cli)  
+```bash
+# print installed node versions
+nvm list
+
+# At time of writing vue-cli 3 is still in beta, so I choose an old one
+#nvm install 8.11.1
+nvm use 8.11.1 
+npm install -g vue-cli@2.9.3
+vue --version
+# Test drive
+vue list
+vue init webpack-simple my-29project
+cd my-29project
+code . #if you are using VS Code editor
+npm install
+npm run dev # Opens http://localhost:8080/
+
+# When vue-cli 3 comes out I want to have that cli together with another node version - notice - the cli changed name @npm
+#nvm install 10.1.0
+nvm use 10.1.0
+npm install -g @vue/cli@3.0.0-beta.10
+vue --version
+# Test drive
+vue create my-30project
+```  
+  * v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
+  * v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+5. If you use VS Code install: [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - Vue tooling for VS Code
+
+### Vue Storefront
 
 ... InProgress
 
@@ -98,6 +135,7 @@ I installed [Docker4Win here](2018-05-06-Docker4Win.md)
 * SEO and PWA: [2018 State of PWA](https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70)
 * [Other headless / API first apps](HeadlessApiFirst.md)
 * [Other ecommerce projects on GitHub](https://github.com/topics/ecommerce)
+* My [list of npm installs locally](https://github.com/rasor/awesome-tables/blob/master/awesome-angular-tables.md)
 
 ### OpenShift 
 
