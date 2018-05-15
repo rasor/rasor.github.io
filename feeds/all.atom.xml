@@ -1,5 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-14T19:30:00+02:00</updated><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-14T19:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-15T23:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-15T23:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
+&lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
+I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
+&lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
+I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play with.  &lt;/p&gt;
+&lt;h2&gt;Initial thoughts about installation&lt;/h2&gt;
+&lt;p&gt;I think I'll deploy Magento to a cheap PHP webhotel I have and then at another time roll it out as a Docker container.&lt;br&gt;
+&lt;a href="https://hub.docker.com/r/bitnami/magento/"&gt;bitnami/magento/&lt;/a&gt; looks good for test - it proposes a data volume with MariaDB.&lt;br&gt;
+Vue Storefront could just as well be served from the same container as Magento.  &lt;/p&gt;
+&lt;p&gt;But hey - I won't need it neither front nor back deployed - I only want to play. Then instead I'll serve it in MiniShift from my PC.  &lt;/p&gt;
+&lt;h2&gt;Got a little wiser&lt;/h2&gt;
+&lt;p&gt;In the article  &lt;a href="https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/"&gt;"Magento2 - NoSQL database and PWA support"&lt;/a&gt; &lt;a href="https://twitter.com/piotrkarwatka"&gt;Piotr Karwatka (@piotrkarwatka)&lt;/a&gt; explains there is a little more the setup than a Vue frontend and a Magento backend.&lt;br&gt;
+There seems to be two chains that works something like  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OLTP chain: &lt;a href="https://github.com/DivanteLtd/vue-storefront"&gt;VueFront&lt;/a&gt; -&amp;gt; &lt;a href="https://github.com/DivanteLtd/vue-storefront-api"&gt;ExpressApiBack&lt;/a&gt; -&amp;gt; ElasticSearch or MongoDB container &lt;/li&gt;
+&lt;li&gt;Sync with Magento chain: &lt;a href="https://github.com/Automattic/kue"&gt;KueWorker&lt;/a&gt; -&amp;gt; KueBack(Redis) container -&amp;gt;  &lt;a href="https://github.com/DivanteLtd/mage2vuestorefront"&gt;Mage2VueFront&lt;/a&gt; -&amp;gt; ElasticSearch or MongoDB &amp;lt;-&amp;gt; Magento DB  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The model of VueFront the data apparently is great for NoSQL storage and querying, which supposedly scales better than the models used in SQL (which the Magento DB uses).&lt;br&gt;
+So I guess we for the dev envir again are down to three containers:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Vue apps: VueFront, ExpressApiBack, KueWorker, Mage2VueFront&lt;/li&gt;
+&lt;li&gt;Vue storage: Redis, ElasticSearch or MongoDB&lt;/li&gt;
+&lt;li&gt;Magento app, Magento DB&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If we for a quick start skip the sync chain, then &lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md#install-the-vue-storefront-api"&gt;data can be fetched&lt;/a&gt; from &lt;a href="https://github.com/magento/magento2-sample-data"&gt;magento2-sample-data&lt;/a&gt;&lt;br&gt;
+Let's see if that is doable.&lt;/p&gt;
+&lt;h2&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;Installing on Windows&lt;/a&gt;&lt;/h2&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Install &lt;a href="https://git-scm.com/downloads"&gt;Git for Windows&lt;/a&gt; - This will install &lt;code&gt;Git Bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Optional Install &lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl CLI on Windows&lt;/a&gt; - This will ensure that you can call a remote end over SSL&lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://store.docker.com/editions/community/docker-ce-desktop-windows"&gt;Docker CE for Windows&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;I installed &lt;a href="2018-05-06-Docker4Win.md"&gt;Docker4Win here&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;Moore info: &lt;a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/"&gt;Running Docker containers on Bash on Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;If you use VS Code you could install &lt;a href="https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker"&gt;Docker Support for VSCode&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html"&gt;NVM for Windows, Node.js and Yarn&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://www.npmjs.com/package/vue-cli"&gt;vue-cli&lt;/a&gt;  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# print installed node versions&lt;/span&gt;
+nvm list
+
+&lt;span class="c1"&gt;# At time of writing vue-cli 3 is still in beta, so I choose an old one&lt;/span&gt;
+&lt;span class="c1"&gt;#nvm install 8.11.1&lt;/span&gt;
+nvm use &lt;span class="m"&gt;8&lt;/span&gt;.11.1 
+npm install -g vue-cli@2.9.3
+vue --version
+&lt;span class="c1"&gt;# Test drive&lt;/span&gt;
+vue list
+&lt;span class="nb"&gt;cd&lt;/span&gt; .&lt;span class="se"&gt;\y&lt;/span&gt;our-vue-root&lt;span class="se"&gt;\&lt;/span&gt;
+vue init webpack-simple my-29project
+&lt;span class="nb"&gt;cd&lt;/span&gt; my-29project
+code . &lt;span class="c1"&gt;#if you are using VS Code editor&lt;/span&gt;
+npm install
+npm run dev &lt;span class="c1"&gt;# Opens http://localhost:8080/&lt;/span&gt;
+
+&lt;span class="c1"&gt;# When vue-cli 3 comes out I want to have that cli together with another node version - notice - the cli changed name @npm&lt;/span&gt;
+&lt;span class="c1"&gt;#nvm install 10.1.0&lt;/span&gt;
+nvm use &lt;span class="m"&gt;10&lt;/span&gt;.1.0
+npm install -g @vue/cli@3.0.0-beta.10
+vue --version
+&lt;span class="c1"&gt;# Test drive&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; .&lt;span class="se"&gt;\y&lt;/span&gt;our-vue-root&lt;span class="se"&gt;\&lt;/span&gt;
+vue create my-30project
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;v2.9.3 &lt;a href="https://github.com/vuejs/vue-cli/tree/master"&gt;vue-cli&lt;/a&gt; intro&lt;/li&gt;
+&lt;li&gt;v3.0. &lt;a href="https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction"&gt;@vue/cli&lt;/a&gt; intro&lt;/li&gt;
+&lt;li&gt;If you use VSCode you could install &lt;a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"&gt;Vetur&lt;/a&gt; - Vue tooling for VSCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Install Vue Storefront&lt;/h3&gt;
+&lt;p&gt;There are two parts&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the Express API including a Docker container for the data&lt;/li&gt;
+&lt;li&gt;the Vue frontend&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;VS API&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Start Docker VM by double-click on the desktop icon. This takes a while&lt;/li&gt;
+&lt;li&gt;Install VS API&lt;br&gt;
+From GitBash:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; .&lt;span class="se"&gt;\y&lt;/span&gt;our-vue-root&lt;span class="se"&gt;\&lt;/span&gt;
+git clone https://github.com/DivanteLtd/vue-storefront-api.git vue-storefront-api
+&lt;span class="nb"&gt;cd&lt;/span&gt; vue-storefront-api
+&lt;span class="c1"&gt;# Fetch dependencies&lt;/span&gt;
+yarn
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Load you docker VM with containers from docker-compose.yaml&lt;br&gt;
+From CMD prompt:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# login to docker - this did not work from GitBash, but did from CMD&lt;/span&gt;
+docker login -u yourUseridNotYourEmail -p yourPassword
+&lt;span class="c1"&gt;# Run Docker containers required by vue-storefront-api. This can take a while ...&lt;/span&gt;
+docker-compose up
+&lt;span class="c1"&gt;# this CMD promt won&amp;#39;t return the promt. It is probably a Daemon now, so switch back to GitBash&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Load the Docker data containers with data&lt;br&gt;
+From GitBash:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify that the containers are running&lt;/span&gt;
+docker network ls
+&lt;span class="c1"&gt;# Restore products database (yarn restore) and run latest migrations (yarn migrate)&lt;/span&gt;
+yarn restore
+yarn migrate
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Copy &lt;code&gt;config/default.json&lt;/code&gt; to &lt;code&gt;config/local.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run API using &lt;code&gt;yarn dev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify API is running&lt;br&gt;
+start http://localhost:8080/api/&lt;br&gt;
+Response:  &lt;code&gt;{"version":"0.1.0"}&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;VS Frontend&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;Install VS API&lt;br&gt;
+From GitBash 2:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; .&lt;span class="se"&gt;\y&lt;/span&gt;our-vue-root&lt;span class="se"&gt;\&lt;/span&gt;
+git clone https://github.com/DivanteLtd/vue-storefront.git vue-storefront
+&lt;span class="nb"&gt;cd&lt;/span&gt; vue-storefront
+&lt;span class="c1"&gt;# Fetch dependencies&lt;/span&gt;
+yarn install
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Copy &lt;code&gt;config/default.json&lt;/code&gt; to &lt;code&gt;config/local.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Images: because vue-storefront-api uses &lt;code&gt;imagemagick&lt;/code&gt; and some nodejs cmdline bindings it can be dificult to run the image proxy on localhost/windows machine. Please point out the vue-storefront to image proxy provided by changing &lt;code&gt;config/local.json&lt;/code&gt; images.baseUrl:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kr"&gt;export&lt;/span&gt; &lt;span class="k"&gt;default&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;elasticsearch&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;httpAuth&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="nx"&gt;host&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;localhost:8080/api/catalog&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="nx"&gt;index&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;vue_storefront_catalog&amp;#39;&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="c1"&gt;// we have vue-storefront-api (https://github.com/DivanteLtd/vue-storefront-api) endpoints below:&lt;/span&gt;
+  &lt;span class="nx"&gt;orders&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;endpoint&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;localhost:8080/api/order/create&amp;#39;&lt;/span&gt;
+  &lt;span class="p"&gt;},&lt;/span&gt;
+  &lt;span class="nx"&gt;images&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;baseUrl&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;https://demo.vuestorefront.io/img/&amp;#39;&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Run Vue Storefront Server using &lt;code&gt;yarn dev&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verify Fronteend is running&lt;br&gt;
+start http://localhost:3000/  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;You will see a &lt;a href="https://medium.com/@deepusnath/4-points-to-keep-in-mind-before-introducing-progressive-web-apps-pwa-to-your-team-8dc66bcf6011"&gt;PWA&lt;/a&gt; webshop
+&lt;a href="https://demo.vuestorefront.io/"&gt;&lt;img alt="Vue Storefront" src="img/2018/2018-05-15-VueStore1.PNG"&gt;&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;The shop is reponsive&lt;br&gt;
+&lt;a href="https://demo.vuestorefront.io/"&gt;&lt;img alt="Vue Storefront" src="img/2018/2018-05-15-VueStore2.PNG"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And images resizes to small, when devices are very small&lt;br&gt;
+&lt;a href="https://demo.vuestorefront.io/"&gt;&lt;img alt="Vue Storefront" src="img/2018/2018-05-15-VueStore3.PNG"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Turn off Vue Storefront&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Frontend - in GitBash-2 is just a PWA server - there is nothing to save - just &lt;code&gt;X&lt;/code&gt; it&lt;/li&gt;
+&lt;li&gt;API - in GitBash-1 is just an API server - there is nothing to save - just &lt;code&gt;X&lt;/code&gt; it&lt;/li&gt;
+&lt;li&gt;Now what about the CMD and the VM? You need to tell the containers in the VM to close down and then close down the VM.&lt;/li&gt;
+&lt;li&gt;Start a new GitBash-3  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify containers are there&lt;/span&gt;
+docker container ls
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CONTAINER ID        IMAGE               COMMAND                  CREATED                                                                         STATUS              PORTS                              NAMES
+fcd38fe4910e        kibana:5.5          &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago                                                                     Up 2 hours          0.0.0.0:5601-&amp;gt;5601/tcp             vue-storefront-api_kibana_1
+070f93cc3a08        redis               &amp;quot;docker-entrypoint.s…&amp;quot;   2 hours ago                                                                     Up 2 hours          0.0.0.0:6379-&amp;gt;6379/tcp             vue-storefront-api_redis_1
+a3fec0cc4f2b        elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago                                                                     Up 2 hours          9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
+56caf26862c4        elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago                                                                     Up 2 hours          0.0.0.0:9200-&amp;gt;9200/tcp, 9300/tcp   es1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Hmm - this is part of the &lt;a href="https://www.elastic.co/elk-stack"&gt;ELK Stack: Elasticsearch, Logstash, Kibana&lt;/a&gt; and the Redis needed for sync with Magento is also there, so perhaps it is ready to connect to a real Magento installation.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; .&lt;span class="se"&gt;\y&lt;/span&gt;our-vue-root&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; vue-storefront-api
+&lt;span class="c1"&gt;# Turn off the containers&lt;/span&gt;
+docker-compose stop
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Stopping vue-storefront-api_kibana_1 ... done
+Stopping vue-storefront-api_redis_1  ... done
+Stopping vue-storefront-api_es2_1    ... done
+Stopping es1                         ... done
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The CMD promt will display this, so you can close it.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;redis_1   | 1:signal-handler (1526416098) Received SIGTERM scheduling shutdown...
+redis_1   | 1:M 15 May 20:28:18.957 # User requested shutdown...
+redis_1   | 1:M 15 May 20:28:19.142 * Saving the final RDB snapshot before exiting.
+es2_1     | [2018-05-15T20:28:19,274][INFO ][o.e.n.Node               ] [J8Lto-u] stopping ...
+es1       | [2018-05-15T20:28:19,271][INFO ][o.e.n.Node               ] [sH31WJW] stopping ...
+redis_1   | 1:M 15 May 20:28:19.306 * DB saved on disk
+redis_1   | 1:M 15 May 20:28:19.306 # Redis is now ready to exit, bye bye...
+es1       | [2018-05-15T20:28:19,444][INFO ][o.e.n.Node               ] [sH31WJW] stopped
+es1       | [2018-05-15T20:28:19,444][INFO ][o.e.n.Node               ] [sH31WJW] closing ...
+es2_1     | [2018-05-15T20:28:19,473][INFO ][o.e.n.Node               ] [J8Lto-u] stopped
+es2_1     | [2018-05-15T20:28:19,473][INFO ][o.e.n.Node               ] [J8Lto-u] closing ...
+es1       | [2018-05-15T20:28:19,509][INFO ][o.e.n.Node               ] [sH31WJW] closed
+es2_1     | [2018-05-15T20:28:19,509][INFO ][o.e.n.Node               ] [J8Lto-u] closed
+vue-storefront-api_es2_1 exited with code 143
+vue-storefront-api_redis_1 exited with code 0
+vue-storefront-api_kibana_1 exited with code 143
+es1 exited with code 143
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
+&lt;li&gt;Optionally Close Docker from the taskbar-notification-icon: Select &lt;code&gt;Quit&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Whats next?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;You can customize your frontend theme and change the behavior (code)&lt;/li&gt;
+&lt;li&gt;You can install Magento at some host and configure your shop to go towards it&lt;/li&gt;
+&lt;li&gt;You can deploy your shop&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;h2&gt;Vue Storefront&lt;/h2&gt;
+&lt;h3&gt;4 - Vue Storefront - People&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://vuestorefront.slack.com/messages/DAP34PT8U/"&gt;vuestorefront.slack.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/VueStorefront"&gt;Vue Storefront (@VueStorefront) | Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/piotrkarwatka"&gt;Piotr Karwatka (@piotrkarwatka) | Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://twitter.com/filrakowski"&gt;Filip Rakowski (@filrakowski) | Twitter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;1 - Vue Storefront - Events&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2018 May &lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-hackathon-1-0-stable-case-studies-29406050727a"&gt;Vue Storefront Hackathon, 1.0 STABLE, case studies – Piotr Karwatka – Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;2018 May &lt;a href="http://go.divante.co/wro-open-source/#lp-pom-block-1029"&gt;Wro Open Source 2018&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2 - Vue Storefront - Github issues&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/issues?q=is%3Aopen+is%3Aissue+label%3Avs-hackathon"&gt;vue-storefront issues&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3 - Vue Storefront - Learn&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg"&gt;Vue Storefront - YouTube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: -&amp;gt; 2018.01.31 &lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-how-to-install-and-integrate-with-magento2-227767dd65b2"&gt;Vue Storefront — how to install and integrate with Magento2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Blog: 2018.01.04 &lt;a href="https://medium.com/@piotrkarwatka/how-to-connect-3rd-party-platform-to-vue-storefront-df9cb30779f6"&gt;How to connect 3rd party platform to Vue Storefront?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Slides: 2018.02.26 &lt;a href="https://www.slideshare.net/FilipRakowski/vue-storefront-basics"&gt;Vue Storefront Basics - Why we created Vue Storefront and how it works&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;vue: PWA front, Magento back &lt;a href="https://github.com/DivanteLtd/vue-storefront"&gt;DivanteLtd/vue-storefront&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Demo: &lt;a href="https://demo.vuestorefront.io/"&gt;Home Page - Vue Storefront&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;Installing on Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md"&gt;Installing on Linux and MacOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/"&gt;Magento2 - NoSQL database and PWA support&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/FAQ%20and%20Receipes.md"&gt;FAQ and Receipes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Project%20structure.md"&gt;Project structure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/wiki/Config-file-format-for-vue-storefront"&gt;Config file format for vue storefront&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/tree/master/doc"&gt;More docs...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Vue&lt;/h2&gt;
+&lt;h3&gt;Vue Libs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;vue &lt;a href="https://github.com/topics/shopping-cart?l=vue"&gt;shopping-carts&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/vue-bulma/nprogress"&gt;vue-bulma/nprogress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.npmjs.com/package/vue-tags"&gt;vue-tags&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Vue - Learn&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://vuejs.org/v2/guide/installation.html"&gt;Installation — Vue.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://egghead.io/courses/build-async-vue-js-apps-with-rxjs?utm_source=drip&amp;amp;utm_medium=email&amp;amp;utm_campaign=may2018&amp;amp;utm_term=vue&amp;amp;utm_content=build-async-vue-js-apps-with-rxjs"&gt;Build Async Vue.js Apps with RxJS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.dropbox.com/s/8h9lo8ee65oo9y1/front-end-performance-checklist-2018.pdf?dl=0"&gt;front-end-performance-checklist-2018.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;SEO and PWA: &lt;a href="https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70"&gt;2018 State of PWA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="HeadlessApiFirst.md"&gt;Other headless / API first apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/topics/ecommerce"&gt;Other ecommerce projects on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;My &lt;a href="https://github.com/rasor/awesome-tables/blob/master/awesome-angular-tables.md"&gt;list of npm installs locally&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;OpenShift&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/developing-with-openshift.html"&gt;Installing OpenShift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#deploy-sample-app"&gt;Deploying&lt;/a&gt; to MiniShift&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#vue"></category><category term="#magento"></category><category term="#webshop"></category><category term="#seo"></category><category term="#pwa"></category><category term="#docker"></category><category term="#git"></category><category term="#yarn"></category><category term="#npm"></category><category term="#nvm"></category></entry><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-14T19:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
 In this blog I'll install Docker. Playing with it I'll do in another post.  &lt;/p&gt;
 &lt;h2&gt;Prerequisite&lt;/h2&gt;
 &lt;ul&gt;
