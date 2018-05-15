@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-12T03:00:00+02:00</updated><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-06T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-14T19:30:00+02:00</updated><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-14T19:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
 In this blog I'll install Docker. Playing with it I'll do in another post.  &lt;/p&gt;
-&lt;h2&gt;Install&lt;/h2&gt;
-&lt;p&gt;You download &lt;a href="https://store.docker.com/editions/community/docker-ce-desktop-windows"&gt;Docker CE for Windows here&lt;/a&gt;.  &lt;/p&gt;
-&lt;p&gt;Docker wants to know if you want to use Windows or Linux containers - Since I'll deploy to Linux in …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For a development project I needed Docker for Windows.&lt;br&gt;
+&lt;h2&gt;Prerequisite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://git-scm.com/downloads"&gt;Git for Windows&lt;/a&gt; - This will install &lt;code&gt;Git Bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Optional Install &lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl CLI on Windows&lt;/a&gt; - This will ensure that you can call a remote end …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
 In this blog I'll install Docker. Playing with it I'll do in another post.  &lt;/p&gt;
+&lt;h2&gt;Prerequisite&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://git-scm.com/downloads"&gt;Git for Windows&lt;/a&gt; - This will install &lt;code&gt;Git Bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Optional Install &lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl CLI on Windows&lt;/a&gt; - This will ensure that you can call a remote end over SSL&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Install&lt;/h2&gt;
 &lt;p&gt;You download &lt;a href="https://store.docker.com/editions/community/docker-ce-desktop-windows"&gt;Docker CE for Windows here&lt;/a&gt;.  &lt;/p&gt;
 &lt;p&gt;Docker wants to know if you want to use Windows or Linux containers - Since I'll deploy to Linux in production, I also choose Linux here. Linux will ususally be the cheepest choise in cloud.&lt;br&gt;
@@ -33,12 +39,48 @@ It had enabled the Windows features Containers and Hyper-V as it told me&lt;br&g
 &lt;p&gt;Docker4Win GUI disappears, when you log in - but then you go to TaskBar-Notification area to find Docker4Win. Choose Settings&lt;br&gt;
 &lt;img alt="Docker for windows GUI" src="img/2018/2018-05-06-Docker4Win8.PNG"&gt;   &lt;/p&gt;
 &lt;p&gt;I unchecked &lt;code&gt;Start Docker when you log in&lt;/code&gt;. Then I hope I can be using VirtualBox, too. I am unsure if I have to disable Hyper-V and/or Container services before that is possible. I'll come back with an update later. &lt;/p&gt;
+&lt;p&gt;After boot Docker VM will not be runnin, but you'll have docker client somewhere on the PC:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker -v
+&lt;span class="c1"&gt;# Docker version 18.03.1-ce, build 9ee9f40&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;But while the VM is not running you'll get an error, when calling the VM:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker images
+&lt;span class="c1"&gt;# error during connect: Get http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.37/images/json: open //./pipe/docker_engine: The system cannot find the file specified. In the default daemon configuration on Windows, the docker client must be run elevated to connect. This error may also indicate that the docker daemon is not running.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Workflow&lt;/h2&gt;
+&lt;p&gt;After boot you'll be able to do like this:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Start D4W from the Desktop icon - and wait for the Docker animation in the taskbar-notofication-area to end - then Docker VM has started&lt;/li&gt;
+&lt;li&gt;Call D4W:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker images
+&lt;span class="c1"&gt;# REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Do some more work from bash e.g. read &lt;a href="https://www.syncfusion.com/ebooks/docker_succinctly"&gt;Docker Succinctly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
+&lt;h3&gt;Learn&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.syncfusion.com/ebooks/docker_succinctly"&gt;Syncfusion Free Ebooks | Docker Succinctly&lt;/a&gt; (2018)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://developers.redhat.com/cheat-sheets/containers/"&gt;Containers Cheat Sheet&lt;/a&gt; (2017)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Hosts&lt;/h3&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://cloud.docker.com/"&gt;Docker Cloud&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;The Public Docker Image Registry &lt;a href="https://hub.docker.com/"&gt;Docker Hub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other installation&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl CLI on Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/"&gt;Running Docker containers on Bash on Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;vue-storefront Installing on Windows.md&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End.&lt;/p&gt;</content><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-24T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.

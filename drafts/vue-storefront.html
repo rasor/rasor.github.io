@@ -134,10 +134,48 @@ So I guess we for the dev envir again are down to three containers:  </p>
 <p>If we for a quick start skip the sync chain, then <a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md#install-the-vue-storefront-api">data can be fetched</a> from <a href="https://github.com/magento/magento2-sample-data">magento2-sample-data</a><br>
 Let's see if that is doable.</p>
 <h2><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md">Installing on Windows</a></h2>
+<h3>Prerequisites</h3>
 <ol>
-<li>Install <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker CE for Windows</a><br>
+<li>Install <a href="https://git-scm.com/downloads">Git for Windows</a> - This will install <code>Git Bash</code></li>
+<li>Optional Install <a href="https://rasor.github.io/curl-cli-on-windows.html">cUrl CLI on Windows</a> - This will ensure that you can call a remote end over SSL</li>
+<li>Install <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker CE for Windows</a>.<br>
+Moore info: <a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/">Running Docker containers on Bash on Windows</a>
 I installed <a href="2018-05-06-Docker4Win.md">Docker4Win here</a>  </li>
+<li>Install <a href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html">NVM for Windows, Node.js and Yarn</a> </li>
+<li>Install <a href="https://www.npmjs.com/package/vue-cli">vue-cli</a>  </li>
 </ol>
+<div class="highlight"><pre><span></span><span class="c1"># print installed node versions</span>
+nvm list
+
+<span class="c1"># At time of writing vue-cli 3 is still in beta, so I choose an old one</span>
+<span class="c1">#nvm install 8.11.1</span>
+nvm use <span class="m">8</span>.11.1 
+npm install -g vue-cli@2.9.3
+vue --version
+<span class="c1"># Test drive</span>
+vue list
+vue init webpack-simple my-29project
+<span class="nb">cd</span> my-29project
+code . <span class="c1">#if you are using VS Code editor</span>
+npm install
+npm run dev <span class="c1"># Opens http://localhost:8080/</span>
+
+<span class="c1"># When vue-cli 3 comes out I want to have that cli together with another node version - notice - the cli changed name @npm</span>
+<span class="c1">#nvm install 10.1.0</span>
+nvm use <span class="m">10</span>.1.0
+npm install -g @vue/cli@3.0.0-beta.10
+vue --version
+<span class="c1"># Test drive</span>
+vue create my-30project
+</pre></div>
+
+
+<ul>
+<li>v2.9.3 <a href="https://github.com/vuejs/vue-cli/tree/master">vue-cli</a> intro</li>
+<li>v3.0. <a href="https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction">@vue/cli</a> intro</li>
+<li>If you use VS Code install: <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur</a> - Vue tooling for VS Code</li>
+</ul>
+<h3>Vue Storefront</h3>
 <p>... InProgress</p>
 <hr>
 <h1>Links</h1>
@@ -195,6 +233,7 @@ I installed <a href="2018-05-06-Docker4Win.md">Docker4Win here</a>  </li>
 <li>SEO and PWA: <a href="https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70">2018 State of PWA</a></li>
 <li><a href="HeadlessApiFirst.md">Other headless / API first apps</a></li>
 <li><a href="https://github.com/topics/ecommerce">Other ecommerce projects on GitHub</a></li>
+<li>My <a href="https://github.com/rasor/awesome-tables/blob/master/awesome-angular-tables.md">list of npm installs locally</a></li>
 </ul>
 <h3>OpenShift</h3>
 <ul>
