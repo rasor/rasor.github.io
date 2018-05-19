@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-15T23:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-15T23:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-19T19:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-19T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
 &lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
 I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
@@ -67,11 +67,13 @@ vue create my-30project
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;v2.9.3 &lt;a href="https://github.com/vuejs/vue-cli/tree/master"&gt;vue-cli&lt;/a&gt; intro&lt;/li&gt;
 &lt;li&gt;v3.0. &lt;a href="https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction"&gt;@vue/cli&lt;/a&gt; intro&lt;/li&gt;
-&lt;li&gt;If you use VSCode you could install &lt;a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"&gt;Vetur&lt;/a&gt; - Vue tooling for VSCode&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;If you use VSCode you could install &lt;a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"&gt;Vetur&lt;/a&gt; - Vue tooling for VSCode for syntax highlight and snippets&lt;/li&gt;
+&lt;li&gt;If you use Chrome you need &lt;a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"&gt;Vue.js devtools&lt;/a&gt; for debugging&lt;/li&gt;
+&lt;li&gt;The devtools has &lt;strong&gt;Open in editor&lt;/strong&gt; button to bring you back to the code. check out &lt;a href="https://medium.com/the-vue-point/whats-new-in-vue-devtools-4-0-9361e75e05d0"&gt;What’s new in Vue Devtools 4.0&lt;/a&gt;, which also points you to this &lt;a href="https://github.com/vuejs/vue-devtools/blob/master/docs/open-in-editor.md"&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3&gt;Install Vue Storefront&lt;/h3&gt;
 &lt;p&gt;There are two parts&lt;/p&gt;
 &lt;ul&gt;
@@ -181,11 +183,11 @@ docker container ls
 
 
 &lt;p&gt;Output: &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CONTAINER ID        IMAGE               COMMAND                  CREATED                                                                         STATUS              PORTS                              NAMES
-fcd38fe4910e        kibana:5.5          &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago                                                                     Up 2 hours          0.0.0.0:5601-&amp;gt;5601/tcp             vue-storefront-api_kibana_1
-070f93cc3a08        redis               &amp;quot;docker-entrypoint.s…&amp;quot;   2 hours ago                                                                     Up 2 hours          0.0.0.0:6379-&amp;gt;6379/tcp             vue-storefront-api_redis_1
-a3fec0cc4f2b        elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago                                                                     Up 2 hours          9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
-56caf26862c4        elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago                                                                     Up 2 hours          0.0.0.0:9200-&amp;gt;9200/tcp, 9300/tcp   es1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                              NAMES
+fcd38fe4910e   kibana:5.5          &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:5601-&amp;gt;5601/tcp             vue-storefront-api_kibana_1
+070f93cc3a08   redis               &amp;quot;docker-entrypoint.s…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:6379-&amp;gt;6379/tcp             vue-storefront-api_redis_1
+a3fec0cc4f2b   elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
+56caf26862c4   elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:9200-&amp;gt;9200/tcp, 9300/tcp   es1
 &lt;/pre&gt;&lt;/div&gt;
 
 
