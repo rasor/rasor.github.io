@@ -1,6 +1,7 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
+Modified: 2018-05-19 19:00
 Category: DevOp
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
 
@@ -41,10 +42,10 @@ Let's see if that is doable.
 ### Prerequisites
 
 1. Install [Git for Windows](https://git-scm.com/downloads) - This will install `Git Bash`
-* Optional Install [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html) - This will ensure that you can call a remote end over SSL
+  1. Optional Install [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html) - This will ensure that you can call a remote end over SSL
 2. Install [Docker CE for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows). 
-  * I installed [Docker4Win here](2018-05-06-Docker4Win.md)  
-  * Moore info: [Running Docker containers on Bash on Windows](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)
+  1. I installed [Docker4Win here](2018-05-06-Docker4Win.md)  
+  2. Moore info: [Running Docker containers on Bash on Windows](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)
 3. If you use VS Code you could install [Docker Support for VSCode](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker) 
 4. Install [NVM for Windows, Node.js and Yarn](https://rasor.github.io/using-nvm-for-windows-and-yarn.html) 
 5. Install [vue-cli](https://www.npmjs.com/package/vue-cli)  
@@ -75,9 +76,12 @@ vue --version
 cd .\your-vue-root\
 vue create my-30project
 ```  
-  * v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
-  * v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
-6. If you use VSCode you could install [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - Vue tooling for VSCode
+  1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
+  2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+6. If you use VSCode you could install [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - Vue tooling for VSCode for syntax highlight and snippets
+7. If you use Chrome you need [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en) for debugging
+  1. The devtools has **Open in editor** button to bring you back to the code. check out [What’s new in Vue Devtools 4.0](https://medium.com/the-vue-point/whats-new-in-vue-devtools-4-0-9361e75e05d0), which also points you to this [setup guide](https://github.com/vuejs/vue-devtools/blob/master/docs/open-in-editor.md)
+
 
 ### Install Vue Storefront
 
@@ -178,11 +182,11 @@ docker container ls
 
 Output: 
 ```
-CONTAINER ID        IMAGE               COMMAND                  CREATED                                                                         STATUS              PORTS                              NAMES
-fcd38fe4910e        kibana:5.5          "/docker-entrypoint.…"   2 hours ago                                                                     Up 2 hours          0.0.0.0:5601->5601/tcp             vue-storefront-api_kibana_1
-070f93cc3a08        redis               "docker-entrypoint.s…"   2 hours ago                                                                     Up 2 hours          0.0.0.0:6379->6379/tcp             vue-storefront-api_redis_1
-a3fec0cc4f2b        elasticsearch:5.5   "/docker-entrypoint.…"   2 hours ago                                                                     Up 2 hours          9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
-56caf26862c4        elasticsearch:5.5   "/docker-entrypoint.…"   2 hours ago                                                                     Up 2 hours          0.0.0.0:9200->9200/tcp, 9300/tcp   es1
+CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                              NAMES
+fcd38fe4910e   kibana:5.5          "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:5601->5601/tcp             vue-storefront-api_kibana_1
+070f93cc3a08   redis               "docker-entrypoint.s…"   2 hours ago   Up 2 hours   0.0.0.0:6379->6379/tcp             vue-storefront-api_redis_1
+a3fec0cc4f2b   elasticsearch:5.5   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
+56caf26862c4   elasticsearch:5.5   "/docker-entrypoint.…"   2 hours ago   Up 2 hours   0.0.0.0:9200->9200/tcp, 9300/tcp   es1
 ```
 
 Hmm - this is part of the [ELK Stack: Elasticsearch, Logstash, Kibana](https://www.elastic.co/elk-stack) and the Redis needed for sync with Magento is also there, so perhaps it is ready to connect to a real Magento installation.
