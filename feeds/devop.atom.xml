@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-20T13:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-20T13:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-20T14:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-20T14:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
 &lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
 I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
@@ -247,6 +247,19 @@ es1 exited with code 143
 &lt;ol&gt;
 &lt;li&gt;Optionally Close Docker from the taskbar-notification-icon: Select &lt;code&gt;Quit&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2&gt;Startup scripts&lt;/h2&gt;
+&lt;p&gt;I've created &lt;a href="https://gist.github.com/rasor/a3e6e6d6fd824685956d922a3de55b63"&gt;three scripts&lt;/a&gt; that does the above startup.&lt;br&gt;
+You can put them in &lt;code&gt;\your-vue-root\&lt;/code&gt; and just double-click on them to start up VueStorefront. They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vsapi1.bat&lt;/li&gt;
+&lt;li&gt;vsapi2.sh&lt;/li&gt;
+&lt;li&gt;vs3.sh&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You must set Git Bash to open extension .sh for this to work&lt;/li&gt;
+&lt;li&gt;You must start them in above order and wait patiently for each part to start before you continue with the next script&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Whats next?&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;You can customize your frontend theme and change the behavior (code)&lt;/li&gt;
