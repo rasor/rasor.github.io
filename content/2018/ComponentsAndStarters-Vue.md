@@ -1,6 +1,6 @@
 Title: Components and starters - VueJs
 Date: 2099-01-01 00:00
-Tags: #starter, #components, #vuejs, #apollo, #graphcool, #headlesscms, #serverless
+Tags: #starter, #components, #vuejs, #apollo, #graphcool, #headlesscms, #serverless, #nuxt, #Axios
 
 ## Starters
 
@@ -17,5 +17,6 @@ Tags: #starter, #components, #vuejs, #apollo, #graphcool, #headlesscms, #serverl
 * Build reusable Js components: [Introduction · vue-loader](https://vue-loader.vuejs.org/en/)
 * [vue Archives - CSS-Tricks](https://css-tricks.com/tag/vue/)
 * [Building a Serverless CMS Powered by Vue.js](https://css-tricks.com/building-serverless-cms-powered-vue-js/)
+* [Building server-rendered apps in Vue using Nuxt.js](http://Building server-rendered apps in Vue using Nuxt.js) including http req with Axios
 
 The End

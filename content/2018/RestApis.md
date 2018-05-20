@@ -14,4 +14,9 @@ Tags: #api, #biz, #hackathon
 
 * API: [Microsoft Cortana](https://developer.microsoft.com/en-us/cortana)
 
+## Other
+
+* API: [Dog API](https://dog.ceo/dog-api/)
+  * Blog: [Building server-rendered apps in Vue using Nuxt.js](https://blog.logrocket.com/building-server-rendered-apps-in-vue-using-nuxt-js-c12c6c253274)
+
 The End

@@ -42,6 +42,10 @@ Dontnet new angular
 * [Building Single Page Applications on ASP.NET Core with JavaScriptServices](https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/)
 * [Using JavaScriptServices for Creating Single Page Applications](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
 
+Vue SSR
+* [Building server-rendered apps in Vue using Nuxt.js](http://Building server-rendered apps in Vue using Nuxt.js)
+* [Vue.js Server-Side Rendering Guide](https://ssr.vuejs.org/en/) - If you need more app structure control than in Nuxt
+
 Ionic PWA
 
 * <https://blog.ionic.io/what-is-a-progressive-web-app/>

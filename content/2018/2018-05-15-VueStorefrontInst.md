@@ -1,7 +1,7 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
-Modified: 2018-05-19 19:00
+Modified: 2018-05-20 13:00
 Category: DevOp
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
 
@@ -121,10 +121,22 @@ yarn restore
 yarn migrate
 ```
 5. Copy `config/default.json` to `config/local.json`
-6. Run API using `yarn dev`
-7. Verify API is running  
+6. Add [.\.vscode\launch.json](https://gist.github.com/rasor/6eb9293a025ae919d66a31a8f8bdcb3d) to the project
+7. Edit package.json - change:  
+```yaml
+  "scripts": {
+    "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+```  
+to (add --inspect)  
+```yaml
+  "scripts": {
+    "dev": "nodemon --inspect -w src --exec \"babel-node src --presets es2015,stage-0\"",
+```
+8. Run API using `yarn dev`
+9. Verify API is running  
 start http://localhost:8080/api/  
 Response:  `{"version":"0.1.0"}`
+10. Debug the API from VSCode by setting breakpoints and press `play Attach` on the Debug tab.
 
 #### VS Frontend
 
