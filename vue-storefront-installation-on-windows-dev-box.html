@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-05-15 23:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-05-19 19:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-05-20 13:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#vue"/>
@@ -106,7 +106,7 @@
           Posted on May 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: May 19, 2018
+            Updated: May 20, 2018
     </p>
   </header>
 
@@ -230,10 +230,26 @@ yarn migrate
 
 <ol>
 <li>Copy <code>config/default.json</code> to <code>config/local.json</code></li>
+<li>Add <a href="https://gist.github.com/rasor/6eb9293a025ae919d66a31a8f8bdcb3d">..vscode\launch.json</a> to the project</li>
+<li>Edit package.json - change:  </li>
+</ol>
+<div class="highlight"><pre><span></span>  <span class="s">&quot;scripts&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+    <span class="s">&quot;dev&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;nodemon</span><span class="nv"> </span><span class="s">-w</span><span class="nv"> </span><span class="s">src</span><span class="nv"> </span><span class="s">--exec</span><span class="nv"> </span><span class="s">\&quot;babel-node</span><span class="nv"> </span><span class="s">src</span><span class="nv"> </span><span class="s">--presets</span><span class="nv"> </span><span class="s">es2015,stage-0\&quot;&quot;</span><span class="p p-Indicator">,</span>
+</pre></div>
+
+
+<p>to (add --inspect)  </p>
+<div class="highlight"><pre><span></span>  <span class="s">&quot;scripts&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span>
+    <span class="s">&quot;dev&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;nodemon</span><span class="nv"> </span><span class="s">--inspect</span><span class="nv"> </span><span class="s">-w</span><span class="nv"> </span><span class="s">src</span><span class="nv"> </span><span class="s">--exec</span><span class="nv"> </span><span class="s">\&quot;babel-node</span><span class="nv"> </span><span class="s">src</span><span class="nv"> </span><span class="s">--presets</span><span class="nv"> </span><span class="s">es2015,stage-0\&quot;&quot;</span><span class="p p-Indicator">,</span>
+</pre></div>
+
+
+<ol>
 <li>Run API using <code>yarn dev</code></li>
 <li>Verify API is running<br>
 start http://localhost:8080/api/<br>
 Response:  <code>{"version":"0.1.0"}</code></li>
+<li>Debug the API from VSCode by setting breakpoints and press <code>play Attach</code> on the Debug tab.</li>
 </ol>
 <h4>VS Frontend</h4>
 <ol>

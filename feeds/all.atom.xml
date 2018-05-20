@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-19T19:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-19T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-20T13:00:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-20T13:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
 &lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
 I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
@@ -120,10 +120,26 @@ yarn migrate
 
 &lt;ol&gt;
 &lt;li&gt;Copy &lt;code&gt;config/default.json&lt;/code&gt; to &lt;code&gt;config/local.json&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;a href="https://gist.github.com/rasor/6eb9293a025ae919d66a31a8f8bdcb3d"&gt;..vscode\launch.json&lt;/a&gt; to the project&lt;/li&gt;
+&lt;li&gt;Edit package.json - change:  &lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="s"&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;dev&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;nodemon&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;-w&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;src&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;--exec&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;\&amp;quot;babel-node&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;src&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;--presets&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;es2015,stage-0\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to (add --inspect)  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="s"&gt;&amp;quot;scripts&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;quot;dev&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;nodemon&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;--inspect&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;-w&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;src&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;--exec&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;\&amp;quot;babel-node&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;src&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;--presets&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;es2015,stage-0\&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ol&gt;
 &lt;li&gt;Run API using &lt;code&gt;yarn dev&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Verify API is running&lt;br&gt;
 start http://localhost:8080/api/&lt;br&gt;
 Response:  &lt;code&gt;{"version":"0.1.0"}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Debug the API from VSCode by setting breakpoints and press &lt;code&gt;play Attach&lt;/code&gt; on the Debug tab.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4&gt;VS Frontend&lt;/h4&gt;
 &lt;ol&gt;
