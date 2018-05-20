@@ -1,7 +1,7 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
-Modified: 2018-05-20 13:00
+Modified: 2018-05-20 14:00
 Category: DevOp
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
 
@@ -240,6 +240,20 @@ es1 exited with code 143
 ```
 
 4. Optionally Close Docker from the taskbar-notification-icon: Select `Quit`
+
+## Startup scripts
+
+I've created [three scripts](https://gist.github.com/rasor/a3e6e6d6fd824685956d922a3de55b63) that does the above startup.  
+You can put them in `\your-vue-root\` and just double-click on them to start up VueStorefront. They are:
+
+* vsapi1.bat
+* vsapi2.sh
+* vs3.sh
+
+Note: 
+
+* You must set Git Bash to open extension .sh for this to work
+* You must start them in above order and wait patiently for each part to start before you continue with the next script
 
 ## Whats next?
 
