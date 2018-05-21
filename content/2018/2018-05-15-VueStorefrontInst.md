@@ -1,7 +1,7 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
-Modified: 2018-05-20 14:00
+Modified: 2018-05-21 21:00
 Category: DevOp
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
 
@@ -116,6 +116,8 @@ From GitBash:
 ```bash
 # Verify that the containers are running
 docker network ls
+# Open browser for Elastic Search (es1) container
+start http://localhost:9200/
 # Restore products database (yarn restore) and run latest migrations (yarn migrate)
 yarn restore
 yarn migrate
