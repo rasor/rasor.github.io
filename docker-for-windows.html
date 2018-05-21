@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/docker-for-windows.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-05-06 17:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-05-14 19:30:00+02:00"/>
+<meta property="article:modified_time" content="2018-05-21 09:30:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#docker"/>
@@ -99,7 +99,7 @@
           Posted on May 06, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: May 14, 2018
+            Updated: May 21, 2018
     </p>
   </header>
 
@@ -140,7 +140,7 @@ It had enabled the Windows features Containers and Hyper-V as it told me<br>
 <p>Docker4Win GUI disappears, when you log in - but then you go to TaskBar-Notification area to find Docker4Win. Choose Settings<br>
 <img alt="Docker for windows GUI" src="img/2018/2018-05-06-Docker4Win8.PNG">   </p>
 <p>I unchecked <code>Start Docker when you log in</code>. Then I hope I can be using VirtualBox, too. I am unsure if I have to disable Hyper-V and/or Container services before that is possible. I'll come back with an update later. </p>
-<p>After boot Docker VM will not be runnin, but you'll have docker client somewhere on the PC:</p>
+<p>After boot Docker VM will not be running, but you'll have docker client somewhere on the PC:</p>
 <div class="highlight"><pre><span></span>docker -v
 <span class="c1"># Docker version 18.03.1-ce, build 9ee9f40</span>
 </pre></div>
@@ -166,6 +166,12 @@ It had enabled the Windows features Containers and Hyper-V as it told me<br>
 <ul>
 <li>Do some more work from bash e.g. read <a href="https://www.syncfusion.com/ebooks/docker_succinctly">Docker Succinctly</a></li>
 </ul>
+<h2>AddOns</h2>
+<p>The Docker taksbar menu gives you an option called Kitematic. When you select the menu you'll <a href="https://download.docker.com/kitematic/Kitematic-Windows.zip">start downloading Kitematic</a>.<br>
+Kitematic is a GUI on top of your Docker CLI.<br>
+Here I even have the option to switch back to VirtualBox. I'll do that later.<br>
+<img alt="Kitematic settings" src="img/2018/2018-05-06-Docker4Win9.PNG">   </p>
+<p>I wonder if that switch will work - changing shell from powershell to bash did not work - Kitematic is in time og writing only in Alpha.</p>
 <h2>Links</h2>
 <h3>Learn</h3>
 <ul>
