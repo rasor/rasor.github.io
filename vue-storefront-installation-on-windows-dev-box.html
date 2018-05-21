@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-05-15 23:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-05-20 14:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-05-21 21:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#vue"/>
@@ -106,7 +106,7 @@
           Posted on May 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: May 20, 2018
+            Updated: May 21, 2018
     </p>
   </header>
 
@@ -222,6 +222,8 @@ From GitBash:</li>
 </ol>
 <div class="highlight"><pre><span></span><span class="c1"># Verify that the containers are running</span>
 docker network ls
+<span class="c1"># Open browser for Elastic Search (es1) container</span>
+start http://localhost:9200/
 <span class="c1"># Restore products database (yarn restore) and run latest migrations (yarn migrate)</span>
 yarn restore
 yarn migrate
