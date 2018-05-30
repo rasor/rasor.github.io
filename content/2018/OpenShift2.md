@@ -65,9 +65,10 @@ The webapp will probably use [xip.io](https://xip.io/) for DNS according to eBoo
 
 * ng devserver: [Angular Seed](https://mgechev.github.io/angular-seed/)
 
-## Kuvernetes and Swarm
+## Kubernetes and Swarm
 
 * [The key differences between Kubernetes and Docker Swarm](https://medium.com/packt-hub/the-key-differences-between-kubernetes-and-docker-swarm-edb519730757)
 * [Kubernetes: Flannel networking](https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)
+* GUI: [Kubernetic - The Kubernetes Desktop Client](http://kubernetic.com/)
 
 The End

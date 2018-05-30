@@ -1,7 +1,7 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
-Modified: 2018-05-21 21:00
+Modified: 2018-05-21 21:01
 Category: DevOp
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
 
@@ -321,7 +321,7 @@ Note:
 * SEO and PWA: [2018 State of PWA](https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70)
 * [Other headless / API first apps](HeadlessApiFirst.md)
 * [Other ecommerce projects on GitHub](https://github.com/topics/ecommerce)
-* My [list of npm installs locally](https://github.com/rasor/awesome-tables/blob/master/awesome-angular-tables.md)
+* My [list of npm installs locally](https://github.com/rasor/awesome-tables/blob/master/awesome-cli-js.md#nvm-sets-of-tools---avoiding-version-conficts)
 
 ### OpenShift 
 

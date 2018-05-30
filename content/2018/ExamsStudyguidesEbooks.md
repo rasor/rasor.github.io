@@ -38,10 +38,8 @@ Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 * [Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
 ## Ebooks
-* [Ebooks Syncfusion](https://www.syncfusion.com/resources/techportal/ebooks)
-* [Free Programming eBooks | PACKT Books](https://www.packtpub.com/packt/offers/free-learning)
-* [eBooks - Auth0](https://auth0.com/resources/ebooks/)
-* [Whitepapers – Amazon Web Services (AWS)](https://aws.amazon.com/whitepapers/?src=aws_training)
+
+* [rasor/awesome-ebooks](https://github.com/rasor/awesome-tables/blob/master/awesome-ebooks-training.md)
 * [Rxjs 5 ultimate · GitBook](https://www.gitbook.com/book/chrisnoring/rxjs-5-ultimate/details)
 
 The End

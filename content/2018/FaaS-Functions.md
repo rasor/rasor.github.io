@@ -1,16 +1,41 @@
 Title: FaaS - Functions as a Service - Serverless
 Date: 2099-01-01 00:00
-Category: Study
-Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react
+Category: DevOp
+Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
 
+* Fowler Article: [Serverless Architectures](https://martinfowler.com/articles/serverless.html)
+* Book: [Docker for Serverless Applications | PACKT Books](https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications)
+* Projects: [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/landscape=serverless)
+  * [cncf/wg-serverless](https://github.com/cncf/wg-serverless#landscape) 
 * Blog: [Exploring Data with Serverless and Vue: Automatically Update GitHub Files With Serverless Functions | CSS-Tricks](https://css-tricks.com/exploring-data-with-serverless-and-vue-part-i/)
 * Slides: [Application Lifecycle Management in a Serverless World](https://www.slideshare.net/AmazonWebServices/application-lifecycle-management-in-a-serverless-world)
 * AWS: [Lambda@Edge - AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/lambda-edge.html)
 * Blog: [How to Build a Serverless, SEO-friendly React blog with Netlify](https://buttercms.com/blog/serverless-react-blog-tutorial)
+* Wiki: [Monitoring with Prometheus and Grafana](https://github.com/hashicorp/faas-nomad/wiki/Monitoring-with-Prometheus-and-Grafana)
 
 ## OpenFaaS
 
 * [OpenFaaS](https://www.openfaas.com/)
-* [Databases with OpenFaaS and Mongo](https://blog.alexellis.io/serverless-databases-with-openfaas-and-mongo/)
+* Blog: [Introducing Functions as a Service (FaaS)](https://blog.alexellis.io/introducing-functions-as-a-service/)
+  * Link to 6 other FaaS frameworks: 
+    * Funktion
+    * Iron Functions
+    * OpenWhisk
+    * Kubeless
+    * Fission
+    * FaaS-netes
+* Vid: [OpenFaaS: From Zero to Serverless in 60 Seconds Anywhere with Alex Ellis](https://www.youtube.com/watch?v=C3agSKv2s_w)
+* Blog: [Databases with OpenFaaS and Mongo](https://blog.alexellis.io/serverless-databases-with-openfaas-and-mongo/)
+* [Guide on Asynchronous processing](https://github.com/openfaas/faas/blob/master/guide/asynchronous.md)
+* Image: [API gateway](https://hub.docker.com/r/functions/gateway/)
+* Image: [Prometheus](https://hub.docker.com/r/functions/prometheus/)
+* Solution: [Colourising Video with OpenFaaS &amp; Serverless Functions](https://finnian.io/blog/colourising-video-with-openfaas-serverless-functions/)
+  * Using: [Caffe | Deep Learning Framework](http://caffe.berkeleyvision.org/)
+* Deploy: [Deploying OpenFaaS on Kubernetes — AWS – Eric Stoekl – Medium](https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-aws-259ec9515e3c)
+* Deploy: [Deploying OpenFaaS on Kubernetes — Azure AKS (OpenFaaS on AKS 1/2)](https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-azure-aks-4eea99d0743f)
+* Deploy: [Use OpenFaaS with Azure Kubernetes Service (AKS)](https://docs.microsoft.com/da-dk/azure/aks/openfaas)
+  * Deploy OSBA: [Integrate with Azure-managed services using Open Service Broker for Azure (OSBA)](https://docs.microsoft.com/da-dk/azure/aks/integrate-azure)
+    * [Install and configure service-catalog](https://github.com/manifoldco/service-catalog-tutorial/blob/master/labs/install-and-configure-service-catalog.md)
+  * Deploy k8s: [Deploy containers with Helm in Kubernetes on Azure](https://docs.microsoft.com/da-dk/azure/aks/kubernetes-helm)
 
 The End
