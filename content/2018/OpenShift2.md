@@ -60,6 +60,7 @@ The webapp will probably use [xip.io](https://xip.io/) for DNS according to eBoo
 * Free eBook 2 [DevOps with OpenShift](https://www.openshift.com/promotions/devops-with-openshift.html) (2017)
     * [The Twelve-Factor App ](https://12factor.net/)
 * Free eBook 3 [Deploying to OpenShift](https://www.openshift.com/promotions/deploying-to-openshift.html) (2018)
+* Deploy: [OpenFaaS on OpenShift](https://blog.openshift.com/openfaas-on-openshift/)
 
 ## Docker
 
