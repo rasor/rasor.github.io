@@ -40,5 +40,7 @@ Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
   * Deploy k8s: [Deploy containers with Helm in Kubernetes on Azure](https://docs.microsoft.com/da-dk/azure/aks/kubernetes-helm)
 * Deploy: [OpenFaaS on OpenShift](https://blog.openshift.com/openfaas-on-openshift/)
 * Deploy: [Getting started with OpenFaaS on minikube](https://medium.com/devopslinks/getting-started-with-openfaas-on-minikube-634502c7acdf)
+* Blog: [Announcing the OpenFaaS Function Store](https://blog.alexellis.io/announcing-function-store/)
+* Blog: [Introducing OpenFaaS Cloud](https://blog.alexellis.io/introducing-openfaas-cloud/)
 
 The End
