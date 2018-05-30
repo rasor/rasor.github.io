@@ -25,6 +25,7 @@ Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
     * Fission
     * FaaS-netes
 * Vid: [OpenFaaS: From Zero to Serverless in 60 Seconds Anywhere with Alex Ellis](https://www.youtube.com/watch?v=C3agSKv2s_w)
+* Vid: [OpenFaaS complete walk-through on Kubernetes](https://www.youtube.com/watch?v=0DbrLsUvaso)
 * Blog: [Databases with OpenFaaS and Mongo](https://blog.alexellis.io/serverless-databases-with-openfaas-and-mongo/)
 * [Guide on Asynchronous processing](https://github.com/openfaas/faas/blob/master/guide/asynchronous.md)
 * Image: [API gateway](https://hub.docker.com/r/functions/gateway/)
