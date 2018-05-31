@@ -42,5 +42,6 @@ Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
 * Deploy: [Getting started with OpenFaaS on minikube](https://medium.com/devopslinks/getting-started-with-openfaas-on-minikube-634502c7acdf)
 * Blog: [Announcing the OpenFaaS Function Store](https://blog.alexellis.io/announcing-function-store/)
 * Blog: [Introducing OpenFaaS Cloud](https://blog.alexellis.io/introducing-openfaas-cloud/)
+* Blog: [Turn Any CLI into a Function with OpenFaaS](https://blog.alexellis.io/cli-functions-with-openfaas/)
 
 The End

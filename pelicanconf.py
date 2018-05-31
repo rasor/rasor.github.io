@@ -82,7 +82,8 @@ AUTHOR_FEED_RSS = None
 #GOOGLE_ANALYTICS = ""
 
 # Blogroll
-LINKS = (('StackOverflow', 'https://stackoverflow.com/users/750989/rasor'),
+LINKS = (('dock.io', 'https://dock.io?r=sorenraarup:aaaaCSAu'),
+        ('StackOverflow', 'https://stackoverflow.com/users/750989/rasor'),
 #         ('Pelican', 'http://getpelican.com/'),
 #         ('Python.org', 'http://python.org/'),
 #         ('Jinja2', 'http://jinja.pocoo.org/'),
