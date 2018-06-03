@@ -72,4 +72,9 @@ The webapp will probably use [xip.io](https://xip.io/) for DNS according to eBoo
 * [Kubernetes: Flannel networking](https://blog.laputa.io/kubernetes-flannel-networking-6a1cb1f8ec7c)
 * GUI: [Kubernetic - The Kubernetes Desktop Client](http://kubernetic.com/)
 
+## AWS
+
+* [openshift-on-the-aws-cloud.pdf](https://aws-quickstart.s3.amazonaws.com/quickstart-redhat-openshift/doc/red-hat-openshift-on-the-aws-cloud.pdf)
+* [AWS Service Broker](https://github.com/awslabs/aws-servicebroker/tree/master/docs)
+
 The End
