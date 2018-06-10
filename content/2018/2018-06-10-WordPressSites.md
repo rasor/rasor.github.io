@@ -1,14 +1,14 @@
 Title: Tools for Wordpress sites
 Status: published
-Date: 2018-06-10 21:00
+Date: 2018-06-10 22:00
 Category: DevOp
 Tags: #wordpress, #theme, #seo
 
-Wordpress sites is still going strong with a large community creating beautiful thems.
+Wordpress sites is still going strong with a large community creating beautiful themes.
 
 ## Chrome Plugin: WP Sniffer
 
-PenguinWP has created a  [Chrome plugin] called(https://chrome.google.com/webstore/detail/wpsniffer-wordpress-theme/kihhefcbenhkjgjhchanjfhhflaojldn)  [WPSniffer](https://penguinwp.com/better-way-to-find-most-popular-wordpress-themes/) 
+PenguinWP has created a  [Chrome plugin](https://chrome.google.com/webstore/detail/wpsniffer-wordpress-theme/kihhefcbenhkjgjhchanjfhhflaojldn) called [WPSniffer](https://penguinwp.com/better-way-to-find-most-popular-wordpress-themes/) 
 
 ### Testing
 
@@ -21,7 +21,7 @@ PenguinWP has created a  [Chrome plugin] called(https://chrome.google.com/websto
 
 ## Theme: Jupiter
 
-Jupiter has an [Installation instrction](https://themes.artbees.net/docs/installing-theme-and-child-theme/) telling how to install a child theme to avoid theme customizations to be overwritten by theme updates.
+Jupiter has an [Installation instruction](https://themes.artbees.net/docs/installing-theme-and-child-theme/) telling how to install a child theme to avoid theme customizations to be overwritten by theme updates.
 
 ## Tool: Visual Composer
 
