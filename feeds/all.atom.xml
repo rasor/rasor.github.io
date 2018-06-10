@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-21T21:01:00+02:00</updated><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-21T21:01:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-06-10T21:00:00+02:00</updated><entry><title>Tools for Wordpress sites</title><link href="https://rasor.github.io/tools-for-wordpress-sites.html" rel="alternate"></link><published>2018-06-10T21:00:00+02:00</published><updated>2018-06-10T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-06-10:/tools-for-wordpress-sites.html</id><summary type="html">&lt;p&gt;Wordpress sites is still going strong with a large community creating beautiful thems.&lt;/p&gt;
+&lt;h2&gt;Chrome Plugin: WP Sniffer&lt;/h2&gt;
+&lt;p&gt;PenguinWP has created a  [Chrome plugin] called(https://chrome.google.com/webstore/detail/wpsniffer-wordpress-theme/kihhefcbenhkjgjhchanjfhhflaojldn)  &lt;a href="https://penguinwp.com/better-way-to-find-most-popular-wordpress-themes/"&gt;WPSniffer&lt;/a&gt; &lt;/p&gt;
+&lt;h3&gt;Testing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GoTo a site hosted by WordPress - e.g. &lt;a href="http://www.knowledgecube.net/"&gt;Knowledge Cube&lt;/a&gt;&lt;br&gt;
+=&amp;gt; The plugin will change color to …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Wordpress sites is still going strong with a large community creating beautiful thems.&lt;/p&gt;
+&lt;h2&gt;Chrome Plugin: WP Sniffer&lt;/h2&gt;
+&lt;p&gt;PenguinWP has created a  [Chrome plugin] called(https://chrome.google.com/webstore/detail/wpsniffer-wordpress-theme/kihhefcbenhkjgjhchanjfhhflaojldn)  &lt;a href="https://penguinwp.com/better-way-to-find-most-popular-wordpress-themes/"&gt;WPSniffer&lt;/a&gt; &lt;/p&gt;
+&lt;h3&gt;Testing&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GoTo a site hosted by WordPress - e.g. &lt;a href="http://www.knowledgecube.net/"&gt;Knowledge Cube&lt;/a&gt;&lt;br&gt;
+=&amp;gt; The plugin will change color to orange in the address bar.&lt;/li&gt;
+&lt;li&gt;Press the plugin&lt;br&gt;
+=&amp;gt; DETECTED WORDPRESS THEME: &lt;a href="https://themeforest.net/item/jupiter-multipurpose-responsive-theme/5177775?s_rank=1"&gt;JUPITER&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="WPSniffer" src="https://lh3.googleusercontent.com/-4HDYqRKhxBQWvniHkf7AAMtLKmL9L2jySRvb8cIesOIYAR9PdvxzrtaTEsLkiEHWAxvroM=w640-h400-e365"&gt;&lt;/p&gt;
+&lt;h2&gt;Theme: Jupiter&lt;/h2&gt;
+&lt;p&gt;Jupiter has an &lt;a href="https://themes.artbees.net/docs/installing-theme-and-child-theme/"&gt;Installation instrction&lt;/a&gt; telling how to install a child theme to avoid theme customizations to be overwritten by theme updates.&lt;/p&gt;
+&lt;h2&gt;Tool: Visual Composer&lt;/h2&gt;
+&lt;p&gt;Knowledge Cube web also uses the tool &lt;a href="https://visualcomposer.io/"&gt;Visual Composer&lt;/a&gt; to edit the Website.&lt;/p&gt;
+&lt;h2&gt;WP Plugin: Yoast SEO&lt;/h2&gt;
+&lt;p&gt;Knowledge Cube web does SEO optimisation with &lt;a href="https://yoast.com/wordpress/plugins/seo/"&gt;Yoast SEO&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#wordpress"></category><category term="#theme"></category><category term="#seo"></category></entry><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-21T21:01:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
 &lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
 I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
