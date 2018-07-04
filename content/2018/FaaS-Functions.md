@@ -3,6 +3,14 @@ Date: 2099-01-01 00:00
 Category: DevOp
 Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
 
+# Microservices
+
+* Book: [Microservices Architecture for eCommerce](http://go.divante.co/microservices-architecture-ecommerce/)
+* Book: [Hands-on DevOps | PACKT Books](https://www.packtpub.com/virtualization-and-cloud/hands-devops)
+* Book: [Architectural Patterns | PACKT Books](https://www.packtpub.com/application-development/architectural-patterns)
+
+# Functions
+
 * Fowler Article: [Serverless Architectures](https://martinfowler.com/articles/serverless.html)
 * Book: [Docker for Serverless Applications | PACKT Books](https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications)
 * Projects: [CNCF Cloud Native Interactive Landscape](https://landscape.cncf.io/landscape=serverless)
@@ -44,7 +52,8 @@ Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
 * Deploy: [Deploying serverless functions to Docker Swarm via a CLI](https://dev.to/developius/functions-as-a-service---deploying-functions-to-docker-swarm-via-a-cli)
 * [Deployment guide for Docker Swarm](https://docs.openfaas.com/deployment/docker-swarm/)
 * Blog: [Announcing the OpenFaaS Function Store](https://blog.alexellis.io/announcing-function-store/)
-* Blog: [Introducing OpenFaaS Cloud](https://blog.alexellis.io/introducing-openfaas-cloud/)
+* Blog 2018-04: [Introducing OpenFaaS Cloud](https://blog.alexellis.io/introducing-openfaas-cloud/)
 * Blog: [Turn Any CLI into a Function with OpenFaaS](https://blog.alexellis.io/cli-functions-with-openfaas/)
+* Blog 2018-07: [Introducing the OpenFaaS Operator for Serverless on Kubernetes](https://blog.alexellis.io/introducing-the-openfaas-operator/)
 
 The End
