@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-05-12T03:00:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-06-11T15:30:00+02:00</updated><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
@@ -306,7 +306,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/angular/angular-cli/wiki/angular-cli"&gt;Angular CLI Config Schema&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html"&gt;TypeScript Compiler Options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-02-04T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-06-11T15:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
 &lt;ol&gt;
@@ -362,6 +362,11 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;&lt;a href="http://www.neuronesb.com/#"&gt;Neuron ESB&lt;/a&gt; - C#&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
+&lt;h2&gt;Design Sprint&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@dhruvghulati/google-ventures-5-day-design-sprint-1b3a07c93864"&gt;Google Ventures 5 Day Design Sprint – Dhruv Ghulati – Medium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.gv.com/sprint/"&gt;The Design Sprint — GV&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Microsoft Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=f6ysuQUZ2wQ"&gt;Microsoft Flow: Multi-Step Approvals&lt;/a&gt;&lt;/li&gt;
@@ -375,7 +380,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;Microservices, SOA, and APIs: Friends or enemies?&lt;br&gt;
 &lt;a href="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html"&gt;&lt;img alt="Microservices, SOA, and APIs" src="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/images/figure8.jpg"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="mbaas"></category><category term="ipaas"></category><category term="#esb"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2018-01-05T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="mbaas"></category><category term="ipaas"></category><category term="#esb"></category><category term="#designsprint"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2018-01-05T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
 &lt;p&gt;Here is howto:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Download latest &lt;a href="https://curl.haxx.se/dlwiz/?type=bin&amp;amp;os=Win64&amp;amp;flav=-&amp;amp;ver=*&amp;amp;cpu=x86_64"&gt;windows version of cUrl&lt;/a&gt;. I used &lt;a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip"&gt;curl-7.57.0&lt;/a&gt;, which is SSL and SSH enabled.&lt;/li&gt;
