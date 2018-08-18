@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-06-10T22:00:00+02:00</updated><entry><title>Tools for Wordpress sites</title><link href="https://rasor.github.io/tools-for-wordpress-sites.html" rel="alternate"></link><published>2018-06-10T22:00:00+02:00</published><updated>2018-06-10T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-06-10:/tools-for-wordpress-sites.html</id><summary type="html">&lt;p&gt;Wordpress sites is still going strong with a large community creating beautiful themes.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOp</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-08-18T19:00:00+02:00</updated><entry><title>Tools for Wordpress sites</title><link href="https://rasor.github.io/tools-for-wordpress-sites.html" rel="alternate"></link><published>2018-06-10T22:00:00+02:00</published><updated>2018-06-10T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-06-10:/tools-for-wordpress-sites.html</id><summary type="html">&lt;p&gt;Wordpress sites is still going strong with a large community creating beautiful themes.&lt;/p&gt;
 &lt;h2&gt;Chrome Plugin: WP Sniffer&lt;/h2&gt;
 &lt;p&gt;PenguinWP has created a  &lt;a href="https://chrome.google.com/webstore/detail/wpsniffer-wordpress-theme/kihhefcbenhkjgjhchanjfhhflaojldn"&gt;Chrome plugin&lt;/a&gt; called &lt;a href="https://penguinwp.com/better-way-to-find-most-popular-wordpress-themes/"&gt;WPSniffer&lt;/a&gt; &lt;/p&gt;
 &lt;h3&gt;Testing&lt;/h3&gt;
@@ -23,7 +23,7 @@
 &lt;p&gt;Knowledge Cube web also uses the tool &lt;a href="https://visualcomposer.io/"&gt;Visual Composer&lt;/a&gt; to edit the Website.&lt;/p&gt;
 &lt;h2&gt;WP Plugin: Yoast SEO&lt;/h2&gt;
 &lt;p&gt;Knowledge Cube web does SEO optimisation with &lt;a href="https://yoast.com/wordpress/plugins/seo/"&gt;Yoast SEO&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#wordpress"></category><category term="#theme"></category><category term="#seo"></category></entry><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-05-21T21:01:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#wordpress"></category><category term="#theme"></category><category term="#seo"></category></entry><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-08-18T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
 &lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
 I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
@@ -54,11 +54,15 @@ Let's see if that is doable.&lt;/p&gt;
 &lt;h2&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;Installing on Windows&lt;/a&gt;&lt;/h2&gt;
 &lt;h3&gt;Prerequisites&lt;/h3&gt;
 &lt;ol&gt;
-&lt;li&gt;Install &lt;a href="https://git-scm.com/downloads"&gt;Git for Windows&lt;/a&gt; - This will install &lt;code&gt;Git Bash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://git-scm.com/downloads"&gt;Git for Windows&lt;/a&gt; - This will install &lt;code&gt;Git Bash&lt;/code&gt;&lt;ol&gt;
 &lt;li&gt;Optional Install &lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl CLI on Windows&lt;/a&gt; - This will ensure that you can call a remote end over SSL&lt;/li&gt;
-&lt;li&gt;Install &lt;a href="https://store.docker.com/editions/community/docker-ce-desktop-windows"&gt;Docker CE for Windows&lt;/a&gt;. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Install &lt;a href="https://store.docker.com/editions/community/docker-ce-desktop-windows"&gt;Docker CE for Windows&lt;/a&gt;. &lt;ol&gt;
 &lt;li&gt;I installed &lt;a href="2018-05-06-Docker4Win.md"&gt;Docker4Win here&lt;/a&gt;  &lt;/li&gt;
 &lt;li&gt;Moore info: &lt;a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/"&gt;Running Docker containers on Bash on Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;li&gt;If you use VS Code you could install &lt;a href="https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker"&gt;Docker Support for VSCode&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;Install &lt;a href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html"&gt;NVM for Windows, Node.js and Yarn&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;Install &lt;a href="https://www.npmjs.com/package/vue-cli"&gt;vue-cli&lt;/a&gt;  &lt;/li&gt;
@@ -91,12 +95,17 @@ vue create my-30project
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
+2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;ol&gt;
-&lt;li&gt;v2.9.3 &lt;a href="https://github.com/vuejs/vue-cli/tree/master"&gt;vue-cli&lt;/a&gt; intro&lt;/li&gt;
-&lt;li&gt;v3.0. &lt;a href="https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction"&gt;@vue/cli&lt;/a&gt; intro&lt;/li&gt;
 &lt;li&gt;If you use VSCode you could install &lt;a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"&gt;Vetur&lt;/a&gt; - Vue tooling for VSCode for syntax highlight and snippets&lt;/li&gt;
-&lt;li&gt;If you use Chrome you need &lt;a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"&gt;Vue.js devtools&lt;/a&gt; for debugging&lt;/li&gt;
+&lt;li&gt;If you use Chrome you need &lt;a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en"&gt;Vue.js devtools&lt;/a&gt; for debugging&lt;ol&gt;
 &lt;li&gt;The devtools has &lt;strong&gt;Open in editor&lt;/strong&gt; button to bring you back to the code. check out &lt;a href="https://medium.com/the-vue-point/whats-new-in-vue-devtools-4-0-9361e75e05d0"&gt;What’s new in Vue Devtools 4.0&lt;/a&gt;, which also points you to this &lt;a href="https://github.com/vuejs/vue-devtools/blob/master/docs/open-in-editor.md"&gt;setup guide&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;Install Vue Storefront&lt;/h3&gt;
 &lt;p&gt;There are two parts&lt;/p&gt;
@@ -216,8 +225,10 @@ start http://localhost:3000/  &lt;/li&gt;
 &lt;ol&gt;
 &lt;li&gt;Frontend - in GitBash-2 is just a PWA server - there is nothing to save - just &lt;code&gt;X&lt;/code&gt; it&lt;/li&gt;
 &lt;li&gt;API - in GitBash-1 is just an API server - there is nothing to save - just &lt;code&gt;X&lt;/code&gt; it&lt;/li&gt;
-&lt;li&gt;Now what about the CMD and the VM? You need to tell the containers in the VM to close down and then close down the VM.&lt;/li&gt;
+&lt;li&gt;Now what about the CMD and the VM? You need to tell the containers in the VM to close down and then close down the VM.&lt;ul&gt;
 &lt;li&gt;Start a new GitBash-3  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify containers are there&lt;/span&gt;
 docker container ls
@@ -313,6 +324,7 @@ You can put them in &lt;code&gt;\your-vue-root\&lt;/code&gt; and just double-cli
 &lt;/ul&gt;
 &lt;h3&gt;3 - Vue Storefront - Learn&lt;/h3&gt;
 &lt;ul&gt;
+&lt;li&gt;eBook (2018, 122 pages): &lt;a href="http://go.divante.co/microservices-architecture-ecommerce/"&gt;Microservices Architecture for eCommerce&lt;/a&gt;  &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg"&gt;Vue Storefront - YouTube&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Blog: -&amp;gt; 2018.01.31 &lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-how-to-install-and-integrate-with-magento2-227767dd65b2"&gt;Vue Storefront — how to install and integrate with Magento2&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Blog: 2018.01.04 &lt;a href="https://medium.com/@piotrkarwatka/how-to-connect-3rd-party-platform-to-vue-storefront-df9cb30779f6"&gt;How to connect 3rd party platform to Vue Storefront?&lt;/a&gt;&lt;/li&gt;
@@ -321,8 +333,10 @@ You can put them in &lt;code&gt;\your-vue-root\&lt;/code&gt; and just double-cli
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;vue: PWA front, Magento back &lt;a href="https://github.com/DivanteLtd/vue-storefront"&gt;DivanteLtd/vue-storefront&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
+&lt;ul&gt;
 &lt;li&gt;Demo: &lt;a href="https://demo.vuestorefront.io/"&gt;Home Page - Vue Storefront&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;Installing on Windows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md"&gt;Installing on Linux and MacOS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/"&gt;Magento2 - NoSQL database and PWA support&lt;/a&gt;&lt;/li&gt;

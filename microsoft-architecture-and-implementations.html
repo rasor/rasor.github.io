@@ -26,16 +26,16 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018. Lists of Architectures and Implementations Here are some lists that can be gives you several designs. Azure Reference Architectures Big data, Web applications, N-tier applications, Virtual networks …" />
+<meta name="description" content="This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018. Lists of Architectures and Implementations Here are some lists that can be gives you several designs. .NET Application Architecture Guidance Mobile, Desktop, Web and Azure Azure Reference …" />
 <meta name="keywords" content="#microsoft, #architecture, #ebooks, #azure, #microservices, #faas">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Microsoft Architecture and Implementations"/>
-<meta property="og:description" content="This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018. Lists of Architectures and Implementations Here are some lists that can be gives you several designs. Azure Reference Architectures Big data, Web applications, N-tier applications, Virtual networks …"/>
+<meta property="og:description" content="This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018. Lists of Architectures and Implementations Here are some lists that can be gives you several designs. .NET Application Architecture Guidance Mobile, Desktop, Web and Azure Azure Reference …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/microsoft-architecture-and-implementations.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2018-08-18 18:30:00+02:00"/>
+<meta property="article:published_time" content="2018-08-18 20:00:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
@@ -112,6 +112,8 @@
 <h1>Lists of Architectures and Implementations</h1>
 <p>Here are some lists that can be gives you several designs.  </p>
 <ul>
+<li><a href="https://www.microsoft.com/net/learn/architecture">.NET Application Architecture Guidance</a><br>
+Mobile, Desktop, Web and Azure</li>
 <li><a href="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/">Azure Reference Architectures</a><br>
 Big data, Web applications, N-tier applications, Virtual networks, Active Directory, VM workloads<ul>
 <li>eBook (2017, 333 pages): <a href="https://azure.microsoft.com/en-us/campaigns/cloud-application-architecture-guide/">Cloud Application Architecture Guide</a></li>
@@ -127,7 +129,16 @@ eBooks and Code</li>
 Have a look at <strong>Architecture styles</strong> below to quickly see what you get.<br>
 Read the Fowler Article <a href="https://martinfowler.com/articles/serverless.html">Serverless Architectures</a> to understand when you continue from microservices to serverless functions.<br>
 Follow the <a href="https://docs.microsoft.com/en-us/azure/architecture/guide/design-principles/index">Design principles for Azure applications</a>.<br>
+Follow the <a href="https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns">Azure security best practices and patterns</a>.<br>
 Review your design with <a href="https://docs.microsoft.com/en-us/azure/architecture/checklist/resiliency">Resiliency checklist</a>.  </p>
+<h4>Architecture from real life</h4>
+<ul>
+<li><a href="https://github.com/DivanteLtd/vue-storefront">Vue Storefront</a><ul>
+<li>eBook (2018, 122 pages): <a href="http://go.divante.co/microservices-architecture-ecommerce/">Microservices Architecture for eCommerce</a><br>
+The book is not about Azure nor about C#. It is about architecting for cloud and PWA.</li>
+</ul>
+</li>
+</ul>
 <h4><a href="https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/">Architecture styles</a></h4>
 <p>The drawings below gives you a fast overview of some web patterns you can use.  </p>
 <ul>
@@ -189,22 +200,46 @@ as above, but extend with standby region and replication</li>
 </ul>
 </li>
 </ul>
+<h3>Azure Tutorials</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/app-service/#step-by-step-tutorials">Azure Web Apps - Tutorials</a><br>
+WebApp with Secure access to SQL DB</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-your-first-function-visual-studio">Create your first function in Azure using Visual Studio</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/guides/developer/azure-developer-guide">Get started guide for developers on Azure</a></li>
+<li>eBook (33 pages): <a href="https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook">Azure Quick Start Guide for .NET Developers</a></li>
+</ul>
 <h1>Transistion to cloud</h1>
 <p>If you need help to get started in cloud.</p>
 <ul>
+<li>eBook (2017, 156 pages): <a href="https://azure.microsoft.com/en-us/resources/enterprise-cloud-strategy/">Enterprise Cloud Strategy</a><br>
+Why go to cloud?</li>
+<li>eBook (2018, 120 pages): <a href="https://azure.microsoft.com/en-us/resources/azure-strategy-and-implementation-guide/en-us/">Azure Strategy and Implementation Guide</a><br>
+Governance, Architecture, Operations, Service Management</li>
 <li><a href="https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption-guide/">Cloud Adoption Guide</a></li>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/index">Modernize Existing .NET Applications With Azure Cloud and Windows Containers (2nd edition)</a><ul>
 <li>eBook (2018, 72 pages): <a href="https://www.microsoft.com/net/download/thank-you/modernizing-existing-net-apps-ebook">Modernizing Existing .NET Applications</a></li>
 <li>Code: <a href="https://github.com/dotnet-architecture/eShopModernizing">eShopModernizing</a></li>
 </ul>
 </li>
+<li><a href="https://www.microsoft.com/en-us/azureessentials/Pivot/AzureEssentials/AzureInfrastructure/Watch">Azure Essentials</a> - Intro to Azure</li>
 </ul>
 <h2>Infrastructure</h2>
-<p>Architecture for providing <a href="https://github.com/mspnp/reference-architectures/tree/master/dmz/secure-vnet-dmz">Azure services for on-premise and the Internet</a><br>
-<img alt="Azure services" src="https://camo.githubusercontent.com/f48de024cb1b395a4727b20e18fb14dc33d1bb53/68747470733a2f2f646f63732e6d6963726f736f66742e636f6d2f617a7572652f6172636869746563747572652f7265666572656e63652d617263686974656374757265732f646d7a2f696d616765732f646d7a2d7075626c69632e706e67"></p>
+<ul>
+<li>eBook (10-2017, 346 pages): <a href="https://azure.microsoft.com/en-us/resources/azure-for-architects/en-us/">Azure for Architects</a></li>
+<li>Video course (2017): <a href="https://www.youtube.com/watch?v=xJMbkZvuVO0&amp;list=PL9XzOCngAkqs0Q8ZRdafnSYExKQurZrBY">Architecting Distributed Cloud Applications</a></li>
+<li>Architecture for providing <a href="https://github.com/mspnp/reference-architectures/tree/master/dmz/secure-vnet-dmz">Azure services for on-premise and the Internet</a><br>
+<img alt="Azure services" src="https://camo.githubusercontent.com/f48de024cb1b395a4727b20e18fb14dc33d1bb53/68747470733a2f2f646f63732e6d6963726f736f66742e636f6d2f617a7572652f6172636869746563747572652f7265666572656e63652d617263686974656374757265732f646d7a2f696d616765732f646d7a2d7075626c69632e706e67"></li>
+<li>ARM <a href="https://azure.microsoft.com/en-us/resources/templates/">Quickstart Templates</a><ul>
+<li>Git repo for <a href="https://github.com/Azure/azure-quickstart-templates">quickstart-templates</a></li>
+</ul>
+</li>
+</ul>
 <h3>AzureStack - Cloud on-premise</h3>
 <p>If you want to deploy to Azure-on-premise, then AzureStack is the Microsoft answer to OpenStack</p>
-<p>eBook (2017, 54 pages): <a href="https://azure.microsoft.com/en-us/resources/azure-stack-building-end-to-end-validation-environment/en-us/">Azure Stack: Building an end-to-end validation environment</a></p>
+<ul>
+<li>eBook (2017, 54 pages): <a href="https://azure.microsoft.com/en-us/resources/azure-stack-building-end-to-end-validation-environment/en-us/">Azure Stack: Building an end-to-end validation environment</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-stack/">Azure Stack Operator - Tutorials</a></li>
+</ul>
 <h1>More resources</h1>
 <ul>
 <li><a href="https://mva.microsoft.com/ebooks">Microsoft Virtual Academy eBooks</a></li>

@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-05-15 23:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-05-21 21:01:00+02:00"/>
+<meta property="article:modified_time" content="2018-08-18 19:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#vue"/>
@@ -107,7 +107,7 @@
           Posted on May 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: May 21, 2018
+            Updated: August 18, 2018
     </p>
   </header>
 
@@ -141,11 +141,15 @@ Let's see if that is doable.</p>
 <h2><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md">Installing on Windows</a></h2>
 <h3>Prerequisites</h3>
 <ol>
-<li>Install <a href="https://git-scm.com/downloads">Git for Windows</a> - This will install <code>Git Bash</code></li>
+<li>Install <a href="https://git-scm.com/downloads">Git for Windows</a> - This will install <code>Git Bash</code><ol>
 <li>Optional Install <a href="https://rasor.github.io/curl-cli-on-windows.html">cUrl CLI on Windows</a> - This will ensure that you can call a remote end over SSL</li>
-<li>Install <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker CE for Windows</a>. </li>
+</ol>
+</li>
+<li>Install <a href="https://store.docker.com/editions/community/docker-ce-desktop-windows">Docker CE for Windows</a>. <ol>
 <li>I installed <a href="2018-05-06-Docker4Win.md">Docker4Win here</a>  </li>
 <li>Moore info: <a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/">Running Docker containers on Bash on Windows</a></li>
+</ol>
+</li>
 <li>If you use VS Code you could install <a href="https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker">Docker Support for VSCode</a> </li>
 <li>Install <a href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html">NVM for Windows, Node.js and Yarn</a> </li>
 <li>Install <a href="https://www.npmjs.com/package/vue-cli">vue-cli</a>  </li>
@@ -178,12 +182,17 @@ vue create my-30project
 </pre></div>
 
 
+<div class="highlight"><pre><span></span>1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
+2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+</pre></div>
+
+
 <ol>
-<li>v2.9.3 <a href="https://github.com/vuejs/vue-cli/tree/master">vue-cli</a> intro</li>
-<li>v3.0. <a href="https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction">@vue/cli</a> intro</li>
 <li>If you use VSCode you could install <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur">Vetur</a> - Vue tooling for VSCode for syntax highlight and snippets</li>
-<li>If you use Chrome you need <a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en">Vue.js devtools</a> for debugging</li>
+<li>If you use Chrome you need <a href="https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en">Vue.js devtools</a> for debugging<ol>
 <li>The devtools has <strong>Open in editor</strong> button to bring you back to the code. check out <a href="https://medium.com/the-vue-point/whats-new-in-vue-devtools-4-0-9361e75e05d0">What’s new in Vue Devtools 4.0</a>, which also points you to this <a href="https://github.com/vuejs/vue-devtools/blob/master/docs/open-in-editor.md">setup guide</a></li>
+</ol>
+</li>
 </ol>
 <h3>Install Vue Storefront</h3>
 <p>There are two parts</p>
@@ -303,8 +312,10 @@ start http://localhost:3000/  </li>
 <ol>
 <li>Frontend - in GitBash-2 is just a PWA server - there is nothing to save - just <code>X</code> it</li>
 <li>API - in GitBash-1 is just an API server - there is nothing to save - just <code>X</code> it</li>
-<li>Now what about the CMD and the VM? You need to tell the containers in the VM to close down and then close down the VM.</li>
+<li>Now what about the CMD and the VM? You need to tell the containers in the VM to close down and then close down the VM.<ul>
 <li>Start a new GitBash-3  </li>
+</ul>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><span class="c1"># Verify containers are there</span>
 docker container ls
@@ -400,6 +411,7 @@ You can put them in <code>\your-vue-root\</code> and just double-click on them t
 </ul>
 <h3>3 - Vue Storefront - Learn</h3>
 <ul>
+<li>eBook (2018, 122 pages): <a href="http://go.divante.co/microservices-architecture-ecommerce/">Microservices Architecture for eCommerce</a>  </li>
 <li><a href="https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg">Vue Storefront - YouTube</a></li>
 <li>Blog: -&gt; 2018.01.31 <a href="https://medium.com/@piotrkarwatka/vue-storefront-how-to-install-and-integrate-with-magento2-227767dd65b2">Vue Storefront — how to install and integrate with Magento2</a></li>
 <li>Blog: 2018.01.04 <a href="https://medium.com/@piotrkarwatka/how-to-connect-3rd-party-platform-to-vue-storefront-df9cb30779f6">How to connect 3rd party platform to Vue Storefront?</a></li>
@@ -408,8 +420,10 @@ You can put them in <code>\your-vue-root\</code> and just double-click on them t
 </li>
 <li>
 <p>vue: PWA front, Magento back <a href="https://github.com/DivanteLtd/vue-storefront">DivanteLtd/vue-storefront</a></p>
-</li>
+<ul>
 <li>Demo: <a href="https://demo.vuestorefront.io/">Home Page - Vue Storefront</a></li>
+</ul>
+</li>
 <li><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md">Installing on Windows</a></li>
 <li><a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md">Installing on Linux and MacOS</a></li>
 <li><a href="https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/">Magento2 - NoSQL database and PWA support</a></li>
