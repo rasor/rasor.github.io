@@ -15,4 +15,9 @@ Tags: #ng, #iot, #hue, #kendoui, #bluetooth, #raspberrypi, #arduino, #openfaas
 * [Your serverless Raspberry Pi cluster with Docker](https://blog.alexellis.io/your-serverless-raspberry-pi-cluster/)
   * Copy OS images to disk using [Etcher by resin.io](https://etcher.io/)
 
+# Apps
+
+* [Home Assistant](https://www.home-assistant.io/) #hub, #app
+  * [Tor Onion Service Configuration](https://www.home-assistant.io/docs/ecosystem/tor/)
+
 The End

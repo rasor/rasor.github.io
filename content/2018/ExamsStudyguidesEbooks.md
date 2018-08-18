@@ -35,6 +35,7 @@ Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 * Azure:
   * Training - Free: [Azure Essentials](https://www.microsoft.com/en-us/azureessentials)
     * [Automation options within and across Azure](https://www.microsoft.com/azureessentials/ebooks/Azure%20Automation%20eBook_v5.pdf)
+  * [Azure for AWS pros](https://www.microsoft.com/azureessentials/ebooks/Azure_for_AWS_Professionals_Quick_Start_Linked.pdf)
 * AWS:
   * [AWS Training & Certification](https://www.aws.training/)
   * [Find AWS Training](https://www.aws.training/Training)
