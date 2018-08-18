@@ -334,10 +334,10 @@ Initially I picked options like these:
 * Create an Angular wrapper component.  
 [zefoy/ngx-ace-wrapper](https://github.com/zefoy/ngx-ace-wrapper) is an example of a wrapper.  
 ZEF has a handfull of [other wrappers](https://github.com/zefoy?utf8=%E2%9C%93&q=wrapper&type=&language=)
-  * Publish to npm: [Building an Angular 4 Component Library with the Angular CLI and ng-packagr](https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e)
+    * Publish to npm: [Building an Angular 4 Component Library with the Angular CLI and ng-packagr](https://medium.com/@nikolasleblanc/building-an-angular-4-component-library-with-the-angular-cli-and-ng-packagr-53b2ade0701e)
 * Create a Web Component wrapper component  
 [Publishing a Web Component Using Stencil (And Using It Anywhere)](https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/)
-  * Build and use a Web Component from Angular: [seveves/angular-stencil](https://github.com/seveves/angular-stencil)
+    * Build and use a Web Component from Angular: [seveves/angular-stencil](https://github.com/seveves/angular-stencil)
 
 The first attempt I did was to look at the [seveves/angular-stencil](https://github.com/seveves/angular-stencil) repo and tried to see if I could bind A-Frame in a Stencil web component.
 That attempt failed. Repo is here: [rasor/stencil-aframe](https://github.com/rasor/stencil-aframe).  

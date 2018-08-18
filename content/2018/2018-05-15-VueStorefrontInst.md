@@ -1,7 +1,7 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
-Modified: 2018-05-21 21:01
+Modified: 2018-08-18 19:00
 Category: DevOp
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
 
@@ -42,10 +42,10 @@ Let's see if that is doable.
 ### Prerequisites
 
 1. Install [Git for Windows](https://git-scm.com/downloads) - This will install `Git Bash`
-  1. Optional Install [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html) - This will ensure that you can call a remote end over SSL
+    1. Optional Install [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html) - This will ensure that you can call a remote end over SSL
 2. Install [Docker CE for Windows](https://store.docker.com/editions/community/docker-ce-desktop-windows). 
-  1. I installed [Docker4Win here](2018-05-06-Docker4Win.md)  
-  2. Moore info: [Running Docker containers on Bash on Windows](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)
+    1. I installed [Docker4Win here](2018-05-06-Docker4Win.md)  
+    2. Moore info: [Running Docker containers on Bash on Windows](https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/)
 3. If you use VS Code you could install [Docker Support for VSCode](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker) 
 4. Install [NVM for Windows, Node.js and Yarn](https://rasor.github.io/using-nvm-for-windows-and-yarn.html) 
 5. Install [vue-cli](https://www.npmjs.com/package/vue-cli)  
@@ -76,11 +76,11 @@ vue --version
 cd .\your-vue-root\
 vue create my-30project
 ```  
-  1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
-  2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+    1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
+    2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
 6. If you use VSCode you could install [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - Vue tooling for VSCode for syntax highlight and snippets
 7. If you use Chrome you need [Vue.js devtools](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd?hl=en) for debugging
-  1. The devtools has **Open in editor** button to bring you back to the code. check out [What’s new in Vue Devtools 4.0](https://medium.com/the-vue-point/whats-new-in-vue-devtools-4-0-9361e75e05d0), which also points you to this [setup guide](https://github.com/vuejs/vue-devtools/blob/master/docs/open-in-editor.md)
+    1. The devtools has **Open in editor** button to bring you back to the code. check out [What’s new in Vue Devtools 4.0](https://medium.com/the-vue-point/whats-new-in-vue-devtools-4-0-9361e75e05d0), which also points you to this [setup guide](https://github.com/vuejs/vue-devtools/blob/master/docs/open-in-editor.md)
 
 
 ### Install Vue Storefront
@@ -188,7 +188,7 @@ And images resizes to small, when devices are very small
 1. Frontend - in GitBash-2 is just a PWA server - there is nothing to save - just `X` it
 2. API - in GitBash-1 is just an API server - there is nothing to save - just `X` it
 3. Now what about the CMD and the VM? You need to tell the containers in the VM to close down and then close down the VM.
-  * Start a new GitBash-3  
+    * Start a new GitBash-3  
 ```bash
 # Verify containers are there
 docker container ls
@@ -287,13 +287,14 @@ Note:
 
 ### 3 - Vue Storefront - Learn 
 
+* eBook (2018, 122 pages): [Microservices Architecture for eCommerce](http://go.divante.co/microservices-architecture-ecommerce/)  
 * [Vue Storefront - YouTube](https://www.youtube.com/channel/UCkm1F3Cglty3CE1QwKQUhhg)
 * Blog: -> 2018.01.31 [Vue Storefront — how to install and integrate with Magento2](https://medium.com/@piotrkarwatka/vue-storefront-how-to-install-and-integrate-with-magento2-227767dd65b2)
 * Blog: 2018.01.04 [How to connect 3rd party platform to Vue Storefront?](https://medium.com/@piotrkarwatka/how-to-connect-3rd-party-platform-to-vue-storefront-df9cb30779f6)
 * Slides: 2018.02.26 [Vue Storefront Basics - Why we created Vue Storefront and how it works](https://www.slideshare.net/FilipRakowski/vue-storefront-basics)
 
 * vue: PWA front, Magento back [DivanteLtd/vue-storefront](https://github.com/DivanteLtd/vue-storefront)
-  * Demo: [Home Page - Vue Storefront](https://demo.vuestorefront.io/)
+    * Demo: [Home Page - Vue Storefront](https://demo.vuestorefront.io/)
 * [Installing on Windows](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md)
 * [Installing on Linux and MacOS](https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Linux%20and%20MacOS.md)
 * [Magento2 - NoSQL database and PWA support](https://www.linkedin.com/pulse/magento2-nosql-database-pwa-support-piotr-karwatka/)
