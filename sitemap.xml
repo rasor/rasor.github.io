@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2018-07-04T17:42:07-00:00</lastmod>
+<lastmod>2018-08-18T18:48:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2018-07-04T17:42:07-00:00</lastmod>
+<lastmod>2018-08-18T18:48:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2018-07-04T17:42:07-00:00</lastmod>
+<lastmod>2018-08-18T18:48:22-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2018-07-04T17:42:07-00:00</lastmod>
+<lastmod>2018-08-18T18:48:22-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/microsoft-architecture-and-implementations.html</loc>
+<lastmod>2018-08-18T18:00:00+02:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -180,7 +187,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -195,6 +202,48 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://rasor.github.io/category/study.html</loc>
 <lastmod>2017-09-30T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/microsoft.html</loc>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/architecture.html</loc>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/ebooks.html</loc>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/azure.html</loc>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/microservices.html</loc>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/faas.html</loc>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -543,13 +592,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/azure.html</loc>
-<lastmod>2018-05-10T12:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/ionic.html</loc>
 <lastmod>2018-05-10T12:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -649,7 +691,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2018-08-18T18:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
