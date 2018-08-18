@@ -35,7 +35,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/microsoft-architecture-and-implementations.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2018-08-18 18:00:00+02:00"/>
+<meta property="article:published_time" content="2018-08-18 18:30:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
@@ -113,10 +113,12 @@
 <p>Here are some lists that can be gives you several designs.  </p>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/">Azure Reference Architectures</a><br>
-Big data, Web applications, N-tier applications, Virtual networks, Active Directory, VM workloads</li>
+Big data, Web applications, N-tier applications, Virtual networks, Active Directory, VM workloads<ul>
 <li>eBook (2017, 333 pages): <a href="https://azure.microsoft.com/en-us/campaigns/cloud-application-architecture-guide/">Cloud Application Architecture Guide</a></li>
+</ul>
+</li>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/standard/guidance-architecture">.NET Architecture Guidance</a><br>
-  eBooks and Code</li>
+eBooks and Code</li>
 </ul>
 <h2>WebApps and services</h2>
 <p>This blog only looks at webapps and webservices.  </p>
@@ -148,22 +150,30 @@ Review your design with <a href="https://docs.microsoft.com/en-us/azure/architec
 <p>If you want code to look at here is a list of samples with code.</p>
 <ul>
 <li>N-tier: <a href="https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/">Architect modern web applications with ASP.NET Core and Azure</a><br>
-How to select appropriate frontend and backend</li>
+How to select appropriate frontend and backend<ul>
 <li>eBook (2017, 115 pages): <a href="https://aka.ms/webappebook">Architecting Modern Web Applications with ASP.NET Core and Azure</a></li>
 <li>Code: <a href="https://github.com/dotnet-architecture/eShopOnWeb">eShopOnWeb</a><br>
-  MVC and Razor Pages frontend, EF Code first</li>
-<li>eBook (11-2017, 542 pages): <a href="https://www.packtpub.com/application-development/aspnet-core-2-and-angular-5?utm_source=GitHub&amp;utm_medium=repository&amp;utm_campaign=9781788293600">ASP.NET Core 2 and Angular 5</a></li>
+MVC and Razor Pages frontend, EF Code first</li>
+</ul>
+</li>
+<li>eBook (11-2017, 542 pages): <a href="https://www.packtpub.com/application-development/aspnet-core-2-and-angular-5?utm_source=GitHub&amp;utm_medium=repository&amp;utm_campaign=9781788293600">ASP.NET Core 2 and Angular 5</a><ul>
 <li>Code: <a href="https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5">PacktPublishing/ASP.NET-Core-2-and-Angular-5</a><br>
-  Angular frontend, WebAPI, EF Code first, OIDConnect</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/index">.NET Microservices. Architecture for Containerized .NET Applications</a></li>
+Angular frontend, WebAPI, EF Code first, OIDConnect</li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/index">.NET Microservices. Architecture for Containerized .NET Applications</a><ul>
 <li>eBook(2018, 331 pages): <a href="https://aka.ms/microservicesebook">.NET Microservices Architecture</a><br>
-  Using CQRS</li>
+Using CQRS</li>
 <li>Code: <a href="https://github.com/dotnet-architecture/eShopOnContainers">eShopOnContainers</a></li>
 <li>Code: <a href="https://github.com/dotnet-architecture/eShopOnAzure">eShopOnAzure</a></li>
 <li>Code: <a href="https://github.com/dotnet-architecture/eShopOnContainersAI">eShopOnContainersAI</a><br>
 <img alt="eShopOnContainers" src="https://user-images.githubusercontent.com/1712635/38758862-d4b42498-3f27-11e8-8dad-db60b0fa05d3.png"></li>
-<li><a href="https://docs.microsoft.com/en-us/azure/architecture/microservices/">Designing, building, and operating microservices on Azure with Kubernetes</a></li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/architecture/microservices/">Designing, building, and operating microservices on Azure with Kubernetes</a><ul>
 <li>Code: https://github.com/mspnp/microservices-reference-implementation  </li>
+</ul>
+</li>
 <li><a href="https://github.com/dotnet-architecture/">More Code</a></li>
 </ul>
 <h3>Samples Without implementation</h3>
@@ -174,16 +184,20 @@ How to select appropriate frontend and backend</li>
 using WebApp, ApiApp, Queue, WebJob, Redis, SQL, Cosmos, Search, Blob, CDN</li>
 <li><a href="https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/multi-region">Multi-region web application</a><br>
 as above, but extend with standby region and replication</li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/serverless-architecture/index">Serverless apps: Architecture, patterns, and Azure implementation</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/serverless-architecture/index">Serverless apps: Architecture, patterns, and Azure implementation</a><ul>
 <li>eBook (2018, 54 pages): <a href="https://aka.ms/serverless-ebook">Serverless apps</a> </li>
+</ul>
+</li>
 </ul>
 <h1>Transistion to cloud</h1>
 <p>If you need help to get started in cloud.</p>
 <ul>
 <li><a href="https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption-guide/">Cloud Adoption Guide</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/index">Modernize Existing .NET Applications With Azure Cloud and Windows Containers (2nd edition)</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/index">Modernize Existing .NET Applications With Azure Cloud and Windows Containers (2nd edition)</a><ul>
 <li>eBook (2018, 72 pages): <a href="https://www.microsoft.com/net/download/thank-you/modernizing-existing-net-apps-ebook">Modernizing Existing .NET Applications</a></li>
 <li>Code: <a href="https://github.com/dotnet-architecture/eShopModernizing">eShopModernizing</a></li>
+</ul>
+</li>
 </ul>
 <h2>Infrastructure</h2>
 <p>Architecture for providing <a href="https://github.com/mspnp/reference-architectures/tree/master/dmz/secure-vnet-dmz">Azure services for on-premise and the Internet</a><br>
