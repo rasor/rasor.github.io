@@ -1,6 +1,6 @@
 Title: Microsoft Architecture and Implementations
 Status: published
-Date: 2018-08-18 18:00
+Date: 2018-08-18 18:30
 Category: Develop
 Tags: #microsoft, #architecture, #ebooks, #azure, #microservices, #faas
 
@@ -12,9 +12,9 @@ Here are some lists that can be gives you several designs.
 
 * [Azure Reference Architectures](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/)  
 Big data, Web applications, N-tier applications, Virtual networks, Active Directory, VM workloads
-  * eBook (2017, 333 pages): [Cloud Application Architecture Guide](https://azure.microsoft.com/en-us/campaigns/cloud-application-architecture-guide/)
+    * eBook (2017, 333 pages): [Cloud Application Architecture Guide](https://azure.microsoft.com/en-us/campaigns/cloud-application-architecture-guide/)
 * [.NET Architecture Guidance](https://docs.microsoft.com/en-us/dotnet/standard/guidance-architecture)  
-  eBooks and Code
+eBooks and Code
 
 ## WebApps and services
 
@@ -55,21 +55,21 @@ If you want code to look at here is a list of samples with code.
 
 * N-tier: [Architect modern web applications with ASP.NET Core and Azure](https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/)  
 How to select appropriate frontend and backend
-  * eBook (2017, 115 pages): [Architecting Modern Web Applications with ASP.NET Core and Azure](https://aka.ms/webappebook)
-  * Code: [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)  
-  MVC and Razor Pages frontend, EF Code first
+    * eBook (2017, 115 pages): [Architecting Modern Web Applications with ASP.NET Core and Azure](https://aka.ms/webappebook)
+    * Code: [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)  
+    MVC and Razor Pages frontend, EF Code first
 * eBook (11-2017, 542 pages): [ASP.NET Core 2 and Angular 5](https://www.packtpub.com/application-development/aspnet-core-2-and-angular-5?utm_source=GitHub&utm_medium=repository&utm_campaign=9781788293600)
-  * Code: [PacktPublishing/ASP.NET-Core-2-and-Angular-5](https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5)  
-  Angular frontend, WebAPI, EF Code first, OIDConnect
+    * Code: [PacktPublishing/ASP.NET-Core-2-and-Angular-5](https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5)  
+    Angular frontend, WebAPI, EF Code first, OIDConnect
 * [.NET Microservices. Architecture for Containerized .NET Applications](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/index)
-  * eBook(2018, 331 pages): [.NET Microservices Architecture](https://aka.ms/microservicesebook)  
-  Using CQRS
-  * Code: [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
-  * Code: [eShopOnAzure](https://github.com/dotnet-architecture/eShopOnAzure)
-  * Code: [eShopOnContainersAI](https://github.com/dotnet-architecture/eShopOnContainersAI)  
-  ![eShopOnContainers](https://user-images.githubusercontent.com/1712635/38758862-d4b42498-3f27-11e8-8dad-db60b0fa05d3.png)
+    * eBook(2018, 331 pages): [.NET Microservices Architecture](https://aka.ms/microservicesebook)  
+    Using CQRS
+    * Code: [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+    * Code: [eShopOnAzure](https://github.com/dotnet-architecture/eShopOnAzure)
+    * Code: [eShopOnContainersAI](https://github.com/dotnet-architecture/eShopOnContainersAI)  
+    ![eShopOnContainers](https://user-images.githubusercontent.com/1712635/38758862-d4b42498-3f27-11e8-8dad-db60b0fa05d3.png)
 * [Designing, building, and operating microservices on Azure with Kubernetes](https://docs.microsoft.com/en-us/azure/architecture/microservices/)
-  * Code: https://github.com/mspnp/microservices-reference-implementation  
+    * Code: https://github.com/mspnp/microservices-reference-implementation  
 * [More Code](https://github.com/dotnet-architecture/)
 
 ### Samples Without implementation
@@ -82,7 +82,7 @@ using WebApp, ApiApp, Queue, WebJob, Redis, SQL, Cosmos, Search, Blob, CDN
 * [Multi-region web application](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/app-service-web-app/multi-region)  
 as above, but extend with standby region and replication
 * [Serverless apps: Architecture, patterns, and Azure implementation](https://docs.microsoft.com/en-us/dotnet/standard/serverless-architecture/index)
-  * eBook (2018, 54 pages): [Serverless apps](https://aka.ms/serverless-ebook) 
+    * eBook (2018, 54 pages): [Serverless apps](https://aka.ms/serverless-ebook) 
 
 # Transistion to cloud
 
@@ -90,8 +90,8 @@ If you need help to get started in cloud.
 
 * [Cloud Adoption Guide](https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption-guide/)
 * [Modernize Existing .NET Applications With Azure Cloud and Windows Containers (2nd edition)](https://docs.microsoft.com/en-us/dotnet/standard/modernize-with-azure-and-containers/index)
-  * eBook (2018, 72 pages): [Modernizing Existing .NET Applications](https://www.microsoft.com/net/download/thank-you/modernizing-existing-net-apps-ebook)
-  * Code: [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)
+    * eBook (2018, 72 pages): [Modernizing Existing .NET Applications](https://www.microsoft.com/net/download/thank-you/modernizing-existing-net-apps-ebook)
+    * Code: [eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing)
 
 ## Infrastructure
 
