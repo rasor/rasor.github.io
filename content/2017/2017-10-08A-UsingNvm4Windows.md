@@ -1,7 +1,7 @@
 Title: Using NVM for Windows and Yarn
 Status: published
 Date: 2017-10-08 11:00
-Modified: 2017-10-08 15:00
+Modified: 2018-09-02 11:00
 Category: DevOp
 Tags: #nvm, #nodejs, #npm, #yarn
 
@@ -98,6 +98,7 @@ yarn -v
 ```bash
 yarn init # create the yarn.lock file and a package.json
 yarn add [package] # same as npm -install -save [package]
+yarn add [package] --dev # same as npm -install --save-dev [package]
 ```
 
 #### When starting from a working npm project
@@ -115,6 +116,12 @@ git clone "https://github.com/....."
 yarn install # same as npm install, but using yarn.lock: download modules
 ```
 
+#### When upgrading existing package in package.json
+
+```bash
+yarn upgrade [package]@latest # same as npm update [package]@latest, but using yarn.lock
+```
+
 -------------
 
 ## Links
@@ -122,5 +129,6 @@ yarn install # same as npm install, but using yarn.lock: download modules
 * [Yarn usage](https://yarnpkg.com/en/docs/usage){:target="_blank"}
 * [Npm vs. Yarn](https://yarnpkg.com/en/docs/migrating-from-npm){:target="_blank"}
 * [Yarn commands](https://yarnpkg.com/en/docs/cli/){:target="_blank"}
+* [Npm commands](https://docs.npmjs.com/cli){:target="_blank"}
 
 The End
