@@ -2,10 +2,10 @@ Title: Using TFS from VSCode
 Status: published
 Category: Develop
 Date: 2018-09-02 14:00
-Tags: #vscode, #tfs, #git
+Tags: #vscode, #tfs, #git, #npm, #visualstudio
 
 You might continue a while working with TFS before you jump to GIT.  
-At least we do that at my work. For frontend projects like Ionic, Angular, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).  
+At least we do that at my work. For frontend projects like Ionic, Angular, Vue, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).  
 So howto use TFS from VSCode?
 
 * Make sure you are already connected to TFS from normal Visual Studio
