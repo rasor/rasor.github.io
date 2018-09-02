@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-08-18T20:00:00+02:00</updated><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-09-02T11:00:00+02:00</updated><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
 &lt;h1&gt;Lists of Architectures and Implementations&lt;/h1&gt;
 &lt;p&gt;Here are some lists that can be gives you several designs.  &lt;/p&gt;
 &lt;ul&gt;
@@ -2508,7 +2508,7 @@ I don't think Azure Storage can handle SSR. Instead it is a great place for stat
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest"&gt;Azure CLI 2.0&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-cli-samples"&gt;Azure CLI Samples - App Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2017-10-08T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2018-09-02T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With Nvm For Windows you can stay in the shell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
@@ -2594,6 +2594,7 @@ yarn -v
 &lt;h4&gt;When starting from empty project&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yarn init &lt;span class="c1"&gt;# create the yarn.lock file and a package.json&lt;/span&gt;
 yarn add &lt;span class="o"&gt;[&lt;/span&gt;package&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# same as npm -install -save [package]&lt;/span&gt;
+yarn add &lt;span class="o"&gt;[&lt;/span&gt;package&lt;span class="o"&gt;]&lt;/span&gt; --dev &lt;span class="c1"&gt;# same as npm -install --save-dev [package]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2610,12 +2611,18 @@ yarn install &lt;span class="c1"&gt;# same as npm install, but using yarn.lock: 
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;h4&gt;When upgrading existing package in package.json&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yarn upgrade &lt;span class="o"&gt;[&lt;/span&gt;package&lt;span class="o"&gt;]&lt;/span&gt;@latest &lt;span class="c1"&gt;# same as npm update [package]@latest, but using yarn.lock&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;hr&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/usage" target="_blank"&gt;Yarn usage&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/migrating-from-npm" target="_blank"&gt;Npm vs. Yarn&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://yarnpkg.com/en/docs/cli/" target="_blank"&gt;Yarn commands&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.npmjs.com/cli" target="_blank"&gt;Npm commands&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
 &lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;

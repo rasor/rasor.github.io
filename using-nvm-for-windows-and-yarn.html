@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/using-nvm-for-windows-and-yarn.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-08 11:00:00+02:00"/>
-<meta property="article:modified_time" content="2017-10-08 15:00:00+02:00"/>
+<meta property="article:modified_time" content="2018-09-02 11:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#nvm"/>
@@ -101,7 +101,7 @@
           Posted on October 08, 2017 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: October 08, 2017
+            Updated: September 02, 2018
     </p>
   </header>
 
@@ -191,6 +191,7 @@ yarn -v
 <h4>When starting from empty project</h4>
 <div class="highlight"><pre><span></span>yarn init <span class="c1"># create the yarn.lock file and a package.json</span>
 yarn add <span class="o">[</span>package<span class="o">]</span> <span class="c1"># same as npm -install -save [package]</span>
+yarn add <span class="o">[</span>package<span class="o">]</span> --dev <span class="c1"># same as npm -install --save-dev [package]</span>
 </pre></div>
 
 
@@ -207,12 +208,18 @@ yarn install <span class="c1"># same as npm install, but using yarn.lock: downlo
 </pre></div>
 
 
+<h4>When upgrading existing package in package.json</h4>
+<div class="highlight"><pre><span></span>yarn upgrade <span class="o">[</span>package<span class="o">]</span>@latest <span class="c1"># same as npm update [package]@latest, but using yarn.lock</span>
+</pre></div>
+
+
 <hr>
 <h2>Links</h2>
 <ul>
 <li><a href="https://yarnpkg.com/en/docs/usage" target="_blank">Yarn usage</a></li>
 <li><a href="https://yarnpkg.com/en/docs/migrating-from-npm" target="_blank">Npm vs. Yarn</a></li>
 <li><a href="https://yarnpkg.com/en/docs/cli/" target="_blank">Yarn commands</a></li>
+<li><a href="https://docs.npmjs.com/cli" target="_blank">Npm commands</a></li>
 </ul>
 <p>The End</p>
   </div>

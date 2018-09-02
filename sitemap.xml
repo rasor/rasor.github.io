@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2018-08-18T21:05:56-00:00</lastmod>
+<lastmod>2018-09-02T11:31:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2018-08-18T21:05:56-00:00</lastmod>
+<lastmod>2018-09-02T11:31:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2018-08-18T21:05:56-00:00</lastmod>
+<lastmod>2018-09-02T11:31:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2018-08-18T21:05:56-00:00</lastmod>
+<lastmod>2018-09-02T11:31:02-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -131,7 +131,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/using-nvm-for-windows-and-yarn.html</loc>
-<lastmod>2017-10-08T15:00:00+02:00</lastmod>
+<lastmod>2018-09-02T11:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -194,7 +194,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/devop.html</loc>
-<lastmod>2018-08-18T19:00:00+00:50</lastmod>
+<lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -313,21 +313,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/yarn.html</loc>
-<lastmod>2018-08-18T19:00:00+00:50</lastmod>
+<lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/npm.html</loc>
-<lastmod>2018-08-18T19:00:00+00:50</lastmod>
+<lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/nvm.html</loc>
-<lastmod>2018-08-18T19:00:00+00:50</lastmod>
+<lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -586,7 +586,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/nodejs.html</loc>
-<lastmod>2017-10-30T17:00:00+00:50</lastmod>
+<lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -691,7 +691,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2018-08-18T20:00:00+00:50</lastmod>
+<lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
