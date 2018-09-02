@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-08-18T20:00:00+02:00</updated><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-09-02T14:00:00+02:00</updated><entry><title>Using TFS from VSCode</title><link href="https://rasor.github.io/using-tfs-from-vscode.html" rel="alternate"></link><published>2018-09-02T14:00:00+02:00</published><updated>2018-09-02T14:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-02:/using-tfs-from-vscode.html</id><summary type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
+At least we do that at my work. For frontend projects like Ionic, Angular, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).&lt;br&gt;
+So howto …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
+At least we do that at my work. For frontend projects like Ionic, Angular, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).&lt;br&gt;
+So howto use TFS from VSCode?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make sure you are already connected to TFS from normal Visual Studio&lt;/li&gt;
+&lt;li&gt;From the normal Visual Studio you need to change your workspace from &lt;code&gt;server&lt;/code&gt; to &lt;code&gt;local&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Goto Source Control Explorer and edit workspaces&lt;/li&gt;
+&lt;li&gt;Change Location from &lt;code&gt;server&lt;/code&gt; to &lt;code&gt;local&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Map the root of your npm project (in level with package.json) to where you want it (or where it already is) in TFS &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#what-is-the-difference-between-a-local-and-server-workspace-how-can-i-tell-which-one-im-working-with"&gt;&lt;img alt="edit workspaces" src="https://raw.githubusercontent.com/Microsoft/vsts-vscode/master/assets/tf-workspace-dialog.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Install into VSCode &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vsts.team"&gt;Visual Studio Team Services&lt;/a&gt; plugin&lt;/li&gt;
+&lt;li&gt;In the root of your npm project (in level with package.json) create a &lt;a href="https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2013/jj155786(v=vs.120)#tfignore-file-example"&gt;.tfignore&lt;/a&gt; file.&lt;br&gt;
+Here is a sample:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .tfignore&lt;/span&gt;
+&lt;span class="c1"&gt;# When using VSCode plugin Visual Studio Team Services&lt;/span&gt;
+&lt;span class="c1"&gt;# https://marketplace.visualstudio.com/items?itemName=ms-vsts.team&lt;/span&gt;
+&lt;span class="c1"&gt;# .. then you need this .tfignore file&lt;/span&gt;
+
+&lt;span class="c1"&gt;# https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2013/jj155786(v=vs.120)#tfignore-file-example&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Ignore all files in the sub-folders&lt;/span&gt;
+&lt;span class="se"&gt;\n&lt;/span&gt;ode_modules
+&lt;span class="se"&gt;\.&lt;/span&gt;sourcemaps
+&lt;span class="se"&gt;\w&lt;/span&gt;ww
+&lt;span class="se"&gt;\p&lt;/span&gt;latforms
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;In VSCode you can now login to TFS with command team - signin, where you´ll enter your corporate password&lt;/li&gt;
+&lt;li&gt;So now you can checkin (incl see diffs, undo and exclude) to TFS from the Source Control tab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#the-tfvc-source-control-viewlet"&gt;&lt;img alt="Source Control Tab in VSCode" src="https://raw.githubusercontent.com/Microsoft/vsts-vscode/master/assets/tfvc-viewlet.png"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#vscode"></category><category term="#tfs"></category><category term="#git"></category></entry><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
 &lt;h1&gt;Lists of Architectures and Implementations&lt;/h1&gt;
 &lt;p&gt;Here are some lists that can be gives you several designs.  &lt;/p&gt;
 &lt;ul&gt;
