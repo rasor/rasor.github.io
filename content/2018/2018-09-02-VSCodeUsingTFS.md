@@ -2,6 +2,7 @@ Title: Using TFS from VSCode
 Status: published
 Category: Develop
 Date: 2018-09-02 14:00
+Modified: 2018-09-07 11:30
 Tags: #vscode, #tfs, #git, #npm, #visualstudio
 
 You might continue a while working with TFS before you jump to GIT.  
@@ -35,7 +36,15 @@ Here is a sample:
 \platforms
 ```
 
-* In VSCode you can now login to TFS with command team - signin, where you´ll enter your corporate password
+* In your [VSCode user settings](https://stackoverflow.com/questions/48056972/how-to-connect-tfs-in-visual-studio-code/48070466#48070466) (File - Preferences - Settings) add:
+
+```json
+{
+    "tfvc.location": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\tf.exe",
+    "tfvc.restrictWorkspace": true
+}
+```
+* In VSCode you can now login to TFS with command (Ctrl-Shift-P) team signin, where you´ll enter your corporate username and password
 * So now you can checkin (incl see diffs, undo and exclude) to TFS from the Source Control tab
 
 [![Source Control Tab in VSCode](https://raw.githubusercontent.com/Microsoft/vsts-vscode/master/assets/tfvc-viewlet.png)](https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#the-tfvc-source-control-viewlet)
