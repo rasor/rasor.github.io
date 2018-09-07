@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/using-tfs-from-vscode.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-09-02 14:00:00+02:00"/>
-<meta property="article:modified_time" content=""/>
+<meta property="article:modified_time" content="2018-09-07 11:30:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#vscode"/>
@@ -102,6 +102,7 @@
           Posted on September 02, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
+            Updated: September 07, 2018
     </p>
   </header>
 
@@ -141,7 +142,17 @@ Here is a sample:</li>
 
 
 <ul>
-<li>In VSCode you can now login to TFS with command team - signin, where you´ll enter your corporate password</li>
+<li>In your <a href="https://stackoverflow.com/questions/48056972/how-to-connect-tfs-in-visual-studio-code/48070466#48070466">VSCode user settings</a> (File - Preferences - Settings) add:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tfvc.location&quot;</span><span class="p">:</span> <span class="s2">&quot;C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\tf.exe&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tfvc.restrictWorkspace&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>In VSCode you can now login to TFS with command (Ctrl-Shift-P) team signin, where you´ll enter your corporate username and password</li>
 <li>So now you can checkin (incl see diffs, undo and exclude) to TFS from the Source Control tab</li>
 </ul>
 <p><a href="https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#the-tfvc-source-control-viewlet"><img alt="Source Control Tab in VSCode" src="https://raw.githubusercontent.com/Microsoft/vsts-vscode/master/assets/tfvc-viewlet.png"></a></p>

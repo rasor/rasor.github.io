@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2018-09-07T11:04:39-00:00</lastmod>
+<lastmod>2018-09-07T11:23:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2018-09-07T11:04:39-00:00</lastmod>
+<lastmod>2018-09-07T11:23:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2018-09-07T11:04:39-00:00</lastmod>
+<lastmod>2018-09-07T11:23:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2018-09-07T11:04:39-00:00</lastmod>
+<lastmod>2018-09-07T11:23:57-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/using-tfs-from-vscode.html</loc>
-<lastmod>2018-09-02T14:00:00+02:00</lastmod>
+<lastmod>2018-09-07T11:30:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -194,7 +194,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -215,35 +215,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/vscode.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/tfs.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/git.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/npm.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/visualstudio.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -698,7 +698,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2018-09-02T14:00:00+00:50</lastmod>
+<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
