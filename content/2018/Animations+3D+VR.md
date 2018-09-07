@@ -1,6 +1,6 @@
-Title: Animations & 3D
+Title: Animations, 3D & VR
 Date: 2099-01-01 00:00
-Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs, #webgl
+Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs, #webgl, #vr
 
 ## Angular
 
@@ -29,13 +29,13 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 * [A-Frame School](https://aframe.io/aframe-school/#/)
 * [JavaScript, Events, DOM APIs – A-Frame](https://aframe.io/docs/0.7.0/introduction/javascript-events-dom-apis.html)
 * [I built something with A-Frame in 2 days (and you can too)](https://hacks.mozilla.org/2017/09/i-built-something-with-a-frame-in-2-days-and-you-can-too/)
-  * Code: [slightlyoffbeat/marketing-vr](https://github.com/slightlyoffbeat/marketing-vr)
+    * Code: [slightlyoffbeat/marketing-vr](https://github.com/slightlyoffbeat/marketing-vr)
 * [First Steps in VR](https://24ways.org/2016/first-steps-in-vr/)
 * [Sandbox • VR Examples](https://webvr.donmccurdy.com/)
-  * Plugin: [donmccurdy/aframe-extras](https://github.com/donmccurdy/aframe-extras)
-    * [Controls](https://github.com/donmccurdy/aframe-extras/tree/master/src/controls)
-  * Stream Desktop Keyboard to mobile with [ProxyControls.js](https://proxy-controls.donmccurdy.com/#/)
-    * [ProxyControls • Demo](https://proxy-controls.donmccurdy.com/demo)
+    * Plugin: [donmccurdy/aframe-extras](https://github.com/donmccurdy/aframe-extras)
+        * [Controls](https://github.com/donmccurdy/aframe-extras/tree/master/src/controls)
+    * Stream Desktop Keyboard to mobile with [ProxyControls.js](https://proxy-controls.donmccurdy.com/#/)
+        * [ProxyControls • Demo](https://proxy-controls.donmccurdy.com/demo)
 * [Relative positioning in A-Frame – Immersion FTW – Medium](https://medium.com/immersion-for-the-win/relative-positioning-in-a-frame-d839fc0e3249)
 * [aframe-text-component](https://www.npmjs.com/package/aframe-text-component)
 * [etiennepinchon/aframe-material](https://github.com/etiennepinchon/aframe-material)
@@ -53,18 +53,18 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 ## Angular and AFrame
 
 * [videogular/angular-connect-demo](https://github.com/videogular/angular-connect-demo/blob/master/app/app.component.html)
-  * [360 and VR Vídeo with Angular 2 by Raúl Jiménez](http://slides.com/elecash/360-and-vr-video-with-angular2#/)
-  * [360 & VR Vídeo with Angular 2 | Raul Jimenez](https://www.youtube.com/watch?v=E3P4KMoE3VU)
-  * [YouTube](https://www.youtube.com/watch?v=FyNvWM4WPX0)
+    * [360 and VR Vídeo with Angular 2 by Raúl Jiménez](http://slides.com/elecash/360-and-vr-video-with-angular2#/)
+    * [360 & VR Vídeo with Angular 2 | Raul Jimenez](https://www.youtube.com/watch?v=E3P4KMoE3VU)
+    * [YouTube](https://www.youtube.com/watch?v=FyNvWM4WPX0)
 * [ngworld](https://www.npmjs.com/package/ngworld?activeTab=dependencies)
-  * Code: [mgechev/ngworld](https://github.com/mgechev/ngworld/tree/ng-xmas)
+    * Code: [mgechev/ngworld](https://github.com/mgechev/ngworld/tree/ng-xmas)
 * [WebVR with A-Frame & Angular](http://blog.brakmic.com/webvr-with-a-frame-angular/)
-  * [brakmic/Angular-VR-Starter](https://github.com/brakmic/Angular-VR-Starter)
+    * [brakmic/Angular-VR-Starter](https://github.com/brakmic/Angular-VR-Starter)
 * [Angular CLI databinding for A-frame tags · Issue #2518 · aframevr/aframe](https://github.com/aframevr/aframe/issues/2518#issuecomment-289450266)
 * [src/app/app.component.ts · master · Javier Ros  / angularcli-kframe](https://gitlab.com/jros/angularcli-kframe/blob/master/src/app/app.component.ts)
-  * [Use untyped A-Frame components with Angular 2](https://stackoverflow.com/a/42551061/750989)
+    * [Use untyped A-Frame components with Angular 2](https://stackoverflow.com/a/42551061/750989)
 * [Any chance to port this demo to Ionic 2? · Issue #2 · brakmic/Angular-VR-Starter](https://github.com/brakmic/Angular-VR-Starter/issues/2)
-  * [lobo-tuerto/a-frame-ionic2-hello-world](https://github.com/lobo-tuerto/a-frame-ionic2-hello-world)
+    * [lobo-tuerto/a-frame-ionic2-hello-world](https://github.com/lobo-tuerto/a-frame-ionic2-hello-world)
 
 ## TS and AFrame
 
@@ -75,9 +75,9 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 * [@types/webvr-api](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/webvr-api)
 * [devpaul/derpymon](https://github.com/devpaul/derpymon)
 * [http://michaelkappel.com/WebVr.pdf](http://michaelkappel.com/WebVr.pdf)
-  * [Freesound - Freesound](https://freesound.org/)
-  * [KhronosGroup/glTF-Sample-Models](https://github.com/KhronosGroup/glTF-Sample-Models)
-  * [glTF Model Converter](http://cesiumjs.org/convertmodel.html)
+    * [Freesound - Freesound](https://freesound.org/)
+    * [KhronosGroup/glTF-Sample-Models](https://github.com/KhronosGroup/glTF-Sample-Models)
+    * [glTF Model Converter](http://cesiumjs.org/convertmodel.html)
 
 ## Extend AFrame
 
@@ -111,20 +111,35 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 ## WebGL
 
 * [amcdnl/ngx-webgl](https://github.com/amcdnl/ngx-webgl)
-  * [Getting Title at 35:33](https://youtu.be/L_eQKnl8sao?t=8m1s)
-  * [Getting Title at 39:29](https://youtu.be/L_eQKnl8sao?t=15m1s)
+    * [Getting Title at 35:33](https://youtu.be/L_eQKnl8sao?t=8m1s)
+    * [Getting Title at 39:29](https://youtu.be/L_eQKnl8sao?t=15m1s)
 * [Getting Title at 49:32](https://youtu.be/1eTg6fyc4zA?t=14m43s)
 
-## 
+## VR
 
 * [misslivirose/learnvr](https://github.com/misslivirose/learnvr)
 
 ## 360 photos
 
 * [Making a equirectangular panoramic image &#8211; Joel Gethin Lewis](http://joelgethinlewis.com/2016/10/18/making-a-panorama/)
-  * [360-degree Photography Guide (Ricoh Theta S)](http://ngokevin.com/blog/360-photography/)
-  * [Product | RICOH THETA](https://theta360.com/uk/about/theta/s.html)
+    * [360-degree Photography Guide (Ricoh Theta S)](http://ngokevin.com/blog/360-photography/)
+    * [Product | RICOH THETA](https://theta360.com/uk/about/theta/s.html)
 * [Google Photo Sphere now available for iOS](https://www.dpreview.com/news/9722425702/google-photosphere-now-available-for-ios)
-  * [Google Street View on the App Store](https://itunes.apple.com/app/id904418768?mt=8)
+    * [Google Street View on the App Store](https://itunes.apple.com/app/id904418768?mt=8)
+
+# Events
+
+* TechFestival 2018
+    * [Human Condition: Is Blurred Reality the New Normal?](https://techfestival.co/event/blurred-reality-summit/)
+        * [Tweet](https://twitter.com/techfestivalcph/status/1035063488228601856)
+        * [Simon Lajboschitz (@Lajboschitz) | Twitter](https://twitter.com/Lajboschitz)
+            * [Khora VR (@khora_vr) | Twitter](https://twitter.com/khora_vr)
+        * [Thomas Schörner](http://Thomas Schörner) @SAP
+        * [Johan Pedersen](https://www.linkedin.com/in/johanpdrsn/) @siliconlabs
+        * [Jacob Knobel](https://www.linkedin.com/in/jknobel/)
+            * [Densou Adtech | Crunchbase](https://www.crunchbase.com/organization/denso-adtech)
+            * [Datapult](https://www.linkedin.com/company/datapult/)
+        * [Simon Svankjær Morel](https://www.linkedin.com/in/simon-svankj%C3%A6r-morel-70114b79/)
+            * [BotSupply (@BotSupplyHQ) | Twitter](https://twitter.com/BotSupplyHQ)
 
 The End
