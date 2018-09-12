@@ -7,5 +7,6 @@ Tags: #svelte, #sapper
 * [Svelte](https://svelte.technology/)
 * [Sapper](https://sapper.svelte.technology/)
 * [Learn Sapper](https://sapper.svelte.technology/guide)
+* Ethereum IDE: [Truffle Suite | Boxes | svelte-box](https://truffleframework.com/boxes/svelte-box)
 
 The End

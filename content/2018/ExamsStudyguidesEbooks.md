@@ -8,6 +8,7 @@ Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 ## Certifications
 
 * BlockChain: [CryptoCurrency Certification Consortium (C4)](https://cryptoconsortium.org/certifications)
+  * [B9lab Academy Certified Online Ethereum Developer Course - July](https://academy.b9lab.com/courses/course-v1:B9lab+ETH-14+2017-07/about?afmc=24)
 * Google:
   * <https://developers.google.com/training/certification/mobile-web-specialist/#info>{:target="_blank"}
   * <https://developers.google.com/training/certification/mobile-web-specialist/StudyGuide-MobileWebSpecialist.pdf>{:target="_blank"}

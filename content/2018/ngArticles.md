@@ -31,7 +31,7 @@ ZEF has a handfull of [other wrappers](https://github.com/zefoy?utf8=%E2%9C%93&q
   * Build and use a Web Component from Angular: [seveves/angular-stencil](https://github.com/seveves/angular-stencil)
   * [Create a Stencil Form Input Component for Angular and Vue.js](http://cindyliuyn.me/blog/2017/10/14/Write-And-Use-A-Stencil-Web-Component)
   * [Using Stencil Web Components in Angular and the Angular CLI](https://coryrylan.com/blog/using-stencil-web-components-in-angular-and-the-angular-cli)
-
+* 2018-06: [Getting started with Angular Elements](https://winsmarts.com/getting-started-with-angular-elements-1bbdf2e748a6)
 * [Creating a Custom Expandable Header Component for Ionic 2+](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)
 * [Custom Components in Ionic 2](https://www.joshmorony.com/custom-components-in-ionic-2/)
   * [YouTube Custom Components in Ionic](https://www.youtube.com/watch?v=Tg4FoOf4pBo)

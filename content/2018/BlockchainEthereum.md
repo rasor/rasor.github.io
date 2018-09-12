@@ -10,6 +10,12 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * US Users - [Wyre - Crypto API for payments and KYC cryptocurrency verification](https://www.sendwyre.com/) - Used by MakerDAO
     * [Maker on Twitter](https://twitter.com/MakerDAO/status/1029353655097614337)
 
+### Payment network
+
+* [Stellar (payment network) - Wikipedia](https://en.wikipedia.org/wiki/Stellar_(payment_network)) - for Micropayments - cheap transactions
+    * [Stellar - Develop the world's new financial system](https://www.stellar.org/)
+    * [Blockchain could rescue a media business model in distress - TechSavvy](https://techsavvy.media/blockchain-could-rescue-a-media-business-model-in-distress/)
+
 ## Charts
 
 * [Ethereum (ETH) price, charts, market cap, and other metrics | CoinMarketCap](https://coinmarketcap.com/currencies/ethereum/#charts)
@@ -20,6 +26,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * Chrome plugin: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
     * Ethereum Wallet App - lets you issue your own valuta (token contract) and lets you tranfer tokens
     * [MetaMask HOW IT WORKS](https://metamask.io/#how-it-works)
+* [TREZOR Integration in MetaMask – MetaMask – Medium](https://medium.com/metamask/trezor-integration-in-metamask-a8eaeae7f499)
 
 # Tokens
 
@@ -32,6 +39,10 @@ Tags: #blockchain, #cryptocurrency, #ethereum
     [MakerDAO and Wyre Give Businesses Immediate Access to Dai Stablecoin in Over Thirty Countries…](https://medium.com/makerdao/makerdao-and-wyre-give-businesses-immediate-access-to-dai-stablecoin-in-over-thirty-countries-4fe94957c730)
 * April Fools joke - non-stablecoins [Announcing World Trade Francs: The Official Ethereum Stablecoin](https://blog.ethereum.org/2018/04/01/announcing-world-trade-francs-official-ethereum-stablecoin/)
 * The 2016 DAO hack: [The DAO (organization) - Wikipedia](https://en.wikipedia.org/wiki/The_DAO_(organization))
+* [Qtum (QTUM)](https://en.bitcoinwiki.org/wiki/Qtum) - Singapore
+    * [[ANN] (QTUM) - A Scalable PoS Smart Contract Platform - MainNet Complete!](https://bitcointalk.org/index.php?topic=1720632.0)
+    * [White papers - Qtum](https://qtum.org/en/white-papers)
+    * [Christian Thisted on LinkedIn: attended the Blockchain Summer School at CBS](https://www.linkedin.com/feed/update/urn:li:activity:6436220506533294080/)
 
 ## [Non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token) (NFT)
 
@@ -78,18 +89,33 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * [PoS](https://www.investopedia.com/terms/p/proof-stake-pos.asp) (Proof of Stake) 
     * Beacon Chain
     * Casper FFG - [Ethereum Casper 101](https://medium.com/@jonchoi/ethereum-casper-101-7a851a4f1eb0)
+    * Qtum
 * DPoS (Delegated Proof of Stake) 
 
 ## Interoperability and Concurrency
 
 [Article 2018-02](https://www.forbes.com/sites/shermanlee/2018/02/07/explaining-side-chains-the-next-breakthrough-in-blockchain/#49f853ee52eb)
 
-# Development
+# Development ------------------------------
 
 ## SW
 
+* Ethereum
+    * Ask for Test ethers on twitter
+    * 2018-02: [The Beginners Guide to Using an Ethereum Test Network](https://medium.com/compound-finance/the-beginners-guide-to-using-an-ethereum-test-network-95bbbc85fc1d)
+    * 2018-05: [Ethereum Test network – Coinmonks – Medium](https://medium.com/coinmonks/ethereum-test-network-21baa86072fa)
+* IDE
+    * [trufflesuite/truffle](https://github.com/trufflesuite/truffle)
+    * [Truffle Suite | Tutorials](https://truffleframework.com/tutorials)
+    * [Truffle Suite | Boxes](https://truffleframework.com/boxes)
+    * [Truffle Suite | Boxes | angular-truffle-box](https://truffleframework.com/boxes/angular-truffle-box)
+    * Code: [angular-truffle-starter-dapp](https://github.com/Nikhil22/angular-truffle-starter-dapp)
+    * Book: [Truffle Quick Start Guide](https://www.packtpub.com/web-development/truffle-quick-start-guide)
+
 ### Learn
 
+* BlockChain
+    * [CBS summer school - August - How to Apply](https://blockchainschool.eu/how-to-apply/) - Kr. 2300,- incl. hackathon
 * Ethereum
     * [CryptoZombies - Learn to code games on Ethereum.](https://cryptozombies.io/en/)
 
@@ -97,6 +123,14 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 * Wiki: [Ethereum VM](https://github.com/ethereum/wiki/wiki/Ethereum-Virtual-Machine-(EVM)-Awesome-List) (EVM)  
 ![EVM](https://i.stack.imgur.com/afWDt.jpg)
+* Wiki: [Running in Docker](https://github.com/ethereum/go-ethereum/wiki/Running-in-Docker)
+    * Docker Img: [Go Ethereum](https://hub.docker.com/r/ethereum/client-go/)
+
+
+## Social
+
+* [BitcoinTalk - Skandinavisk](https://bitcointalk.org/index.php?board=45.0)
+* [BitcoinTalk - Beginners & Help](https://bitcointalk.org/index.php?board=39.0)
 
 # Startup
 
@@ -108,6 +142,8 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 ## Events
 
+* [Crypto night](https://www.eventbrite.com/e/crypto-night-tickets-48917901761)
+* [Blockchain now and in the future (with ARYZE and AnyLedger)](https://www.eventbrite.com/e/blockchain-now-and-in-the-future-with-aryze-and-anyledger-tickets-48954568432?aff=erelexpmlt)
 * TechFestival 2018
     * [Hacking Your First Decentralized App](https://techfestival.co/event/hacking-first-decentralized-app/)
         * [Troels Plenge (@tplenge) | Twitter](https://twitter.com/tplenge)

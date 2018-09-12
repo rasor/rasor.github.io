@@ -10,5 +10,6 @@ Tags: #starter, #components, #polymer, #apollo, #graphcool
 ## Blogs
 
 * [Custom Elements v1: Reusable Web Components - Google Developers](https://developers.google.com/web/fundamentals/web-components/customelements)
+* 2018-05: [Polymer 3.0 released at I/O, accelerates PWA development](https://react-etc.net/entry/polymer-3-0-released-io-accelerates-pwa-development)
 
 The End
