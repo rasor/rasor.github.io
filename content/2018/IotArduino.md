@@ -1,5 +1,6 @@
 Title: Iot, Arduino and Raspberri Pi
 Date: 2099-01-01 00:00
+Category: Dev
 Tags: #ng, #iot, #hue, #kendoui, #bluetooth, #raspberrypi, #arduino, #openfaas
 
 * [urish/angular-iot](https://github.com/urish/angular-iot)
@@ -19,5 +20,10 @@ Tags: #ng, #iot, #hue, #kendoui, #bluetooth, #raspberrypi, #arduino, #openfaas
 
 * [Home Assistant](https://www.home-assistant.io/) #hub, #app
   * [Tor Onion Service Configuration](https://www.home-assistant.io/docs/ecosystem/tor/)
+
+# Persons
+
+* [Suz Hinton - noopkat](https://noopkat.com/) - IOT Geek
+
 
 The End
