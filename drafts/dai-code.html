@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="A Medium article Dai and CDP Hackathon Projects listed several Dai projects WyoHackathon 2018 Token Subscription Github: tokensubscription.com Demo: Token Subscription Peregrine Github: peregrine dapphub/ds-group dapphub/ds-token Slides: WyoHackathon - The Bufficorns Presentation WyoFlow Demo: Home Rawhide Github: Rawhide Rawhide - Fractional Livestock Platform Topicless Github: shemnon/wyohackathon Slides: Topicless …" />
+<meta name="keywords" content="#blockchain, #ethereum, #dai">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Dai Code"/>
+<meta property="og:description" content="A Medium article Dai and CDP Hackathon Projects listed several Dai projects WyoHackathon 2018 Token Subscription Github: tokensubscription.com Demo: Token Subscription Peregrine Github: peregrine dapphub/ds-group dapphub/ds-token Slides: WyoHackathon - The Bufficorns Presentation WyoFlow Demo: Home Rawhide Github: Rawhide Rawhide - Fractional Livestock Platform Topicless Github: shemnon/wyohackathon Slides: Topicless …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/dai-code.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Dev"/>
+<meta property="article:tag" content="#blockchain"/>
+<meta property="article:tag" content="#ethereum"/>
+<meta property="article:tag" content="#dai"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Dai Code</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="dai-code">Dai Code</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/dev.html">Dev</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>A Medium article <a href="https://medium.com/makerdao/dai-and-cdp-hackathon-projects-46a73f7133d2">Dai and CDP Hackathon Projects</a> 
+listed several Dai projects</p>
+<ul>
+<li><a href="https://www.wyohackathon.io/">WyoHackathon 2018</a><ul>
+<li><a href="https://devpost.com/software/token-subscription">Token Subscription</a><ul>
+<li>Github: <a href="https://github.com/austintgriffith/tokensubscription.com">tokensubscription.com</a></li>
+<li>Demo: <a href="https://tokensubscription.com/">Token Subscription</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/peregrine-85qdna">Peregrine</a><ul>
+<li>Github: <a href="https://github.com/opolis/peregrine">peregrine</a><ul>
+<li><a href="https://github.com/dapphub/ds-group">dapphub/ds-group</a></li>
+<li><a href="https://github.com/dapphub/ds-token">dapphub/ds-token</a></li>
+</ul>
+</li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/1HLxy8w1b5SaM8Qnaw1-P1hCBI2XZMZxIf0LZ-PJESWg/edit#slide=id.g4179679fd9_1_4">WyoHackathon - The Bufficorns Presentation</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/wyoflow">WyoFlow</a><ul>
+<li>Demo: <a href="http://wyoflow.org/">Home</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/rawhide">Rawhide</a><ul>
+<li>Github: <a href="https://github.com/rawhideio">Rawhide</a></li>
+<li><a href="http://rawhide.io/">Rawhide - Fractional Livestock Platform</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/topicless">Topicless</a><ul>
+<li>Github: <a href="https://github.com/shemnon/wyohackathon">shemnon/wyohackathon</a></li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/1OkUWPSFAPkFS-_2svyt8FKcOF78VtgL2U7_UW12RZ2g/edit#slide=id.g417b0eb1ef_0_577">Topicless</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/electronic-corporate-formation-portal">Electronic Corporate Formation Portal</a><ul>
+<li>Github: <a href="https://github.com/DigitalCurrencyCompliance">DigitalCurrencyCompliance</a></li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/1vgTG7cBc9RacRNXxDje_ny8jw5Cq62RNT39942zmP4o/edit#slide=id.g4178e62811_0_24">WyoHackathon 2018.09.09.v1</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/trustin-me">Trustin.Me</a><ul>
+<li>Github: <a href="https://github.com/dewpey/Trusting.Me-Repo">dewpey/Trusting.Me-Repo</a></li>
+<li>Demo: <a href="https://trustingme.surge.sh/">https://trustingme.surge.sh/</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/shenanigans">Undertaker &amp; Petrix</a></li>
+</ul>
+</li>
+<li><a href="https://ethberlin.com/">ETHBerlin Hackathon &amp; Workshops - ETHBerlin</a><ul>
+<li><a href="https://devpost.com/software/cdp-liquidator">CDP Liquidator</a><ul>
+<li>Github: <a href="https://github.com/xwvvvvwx/liquidator-contracts">xwvvvvwx/liquidator-contracts</a></li>
+<li>Github: <a href="https://github.com/xwvvvvwx/liquidator-frontend">xwvvvvwx/liquidator-frontend</a></li>
+<li>Demo: <a href="http://cdp-liquidator.surge.sh/">CDP Liquidator</a></li>
+<li>Other from the team: <a href="https://oasis.direct/">Oasis.direct</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/makerdao-superdashboard">MakerDAO SuperDashboard</a><ul>
+<li>Github: <a href="https://github.com/frostiq/makerdao-superdashboard">frostiq/makerdao-superdashboard</a></li>
+<li><a href="https://ipfs.io/">IPFS is the Distributed Web</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/spliteth">SplitETH</a><ul>
+<li>Github: <a href="https://github.com/SplitETH/SplitETH">SplitETH/SplitETH</a></li>
+<li>Etherscan: <a href="https://kovan.etherscan.io/address/0xf478bf1ac8c337474c21f713e874d753c28c4c48#code">Kovan Accounts, Address And Contracts</a></li>
+<li>Demo: <a href="http://spliteth.s3-website-us-east-1.amazonaws.com/#/">React App</a></li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/19Elr5nVLWM9SJH3j_RB69a8eT45zsNH1L-JpOu38uTI/edit#slide=id.g40e6f26bf5_0_77">ETHBerlin - SplitETH</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/sendsomedai">SendSomeDai</a><ul>
+<li>Github: <a href="https://github.com/amhed/send-some-dai-dapp">amhed/send-some-dai-dapp</a></li>
+<li>Demo: <a href="http://www.sendsomedai.com/">React App</a></li>
+<li>Demo: <a href="https://send-some-dai.herokuapp.com/">React App</a></li>
+</ul>
+</li>
+<li><a href="https://devpost.com/software/meme-lordz">Meme Lordz</a><ul>
+<li>Github: <a href="https://github.com/relevant-community/memelordz-frontend">relevant-community/memelordz-frontend</a></li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/1D3drCDtPYKpPAJGv25BisYeXApSyHIoFpMDc9viWjk8/edit#slide=id.g3f1fc4cf36_0_152">Meme Lordz</a></li>
+<li>Demo: <a href="https://www.memelordz.com/#/">Meme Lordz: The First Decentralized Meme Market!</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www.whackedblocks.com/">Whacked Blocks Hackathon</a><ul>
+<li>Github: <a href="https://github.com/akwodkiewicz/dai-bite-keeper/">akwodkiewicz/dai-bite-keeper</a></li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/blockchain.html">#blockchain</a>
+      <a href="https://rasor.github.io/tag/ethereum.html">#ethereum</a>
+      <a href="https://rasor.github.io/tag/dai.html">#dai</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
