@@ -26,12 +26,12 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="At EMS Heart Hackathon I connected a D1 mini [WEMOS] to AWS together with Allan Yde ] ] ] ] The End" />
+<meta name="description" content="At EMS Heart Hackathon I connected a D1 mini [WEMOS] to AWS together with Allan Yde. The WeMos D1 Mini board has a WiFi module build in through which it can communicate with AWS. You can connect sensors to WeMos, so it can send its sensor data to AWS …" />
 <meta name="keywords" content="#iot, #arduino, #wemos, #es8266, #aws">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Connexting a WeMos ES8266 Arduino borad to AWS"/>
-<meta property="og:description" content="At EMS Heart Hackathon I connected a D1 mini [WEMOS] to AWS together with Allan Yde ] ] ] ] The End"/>
+<meta property="og:description" content="At EMS Heart Hackathon I connected a D1 mini [WEMOS] to AWS together with Allan Yde. The WeMos D1 Mini board has a WiFi module build in through which it can communicate with AWS. You can connect sensors to WeMos, so it can send its sensor data to AWS …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/connexting-a-wemos-es8266-arduino-borad-to-aws.html"/>
 <meta property="og:type" content="article"/>
@@ -107,11 +107,87 @@
 
 
   <div>
-    <p>At <a href="https://ideation-emshearthack.bemyapp.com/#/event">EMS Heart Hack</a>athon I connected a <a href="https://wiki.wemos.cc/products:d1:d1_mini">D1 mini [WEMOS]</a> to AWS together with <a href="http://www.inyourmind.world/">Allan Yde</a></p>
-<p><img alt="Arduino IDE - File - Preferences" src="img/2018/2018-09-16-hack-arduino1.PNG">]
-<img alt="Arduino IDE - Tools - Board - Board Manager - Download" src="img/2018/2018-09-16-hack-arduino2.PNG">]
-<img alt="Arduino IDE - Upload program" src="img/2018/2018-09-16-hack-arduino4.PNG">]
-<img alt="AWS IoT - thing installed" src="img/2018/2018-09-16-hack-arduino5.PNG">]</p>
+    <p>At <a href="https://ideation-emshearthack.bemyapp.com/#/event">EMS Heart Hack</a>athon I connected a <a href="https://wiki.wemos.cc/products:d1:d1_mini">D1 mini [WEMOS]</a> to AWS together with <a href="http://www.inyourmind.world/">Allan Yde</a>.  </p>
+<p>The WeMos D1 Mini board has a WiFi module build in through which it can communicate with AWS.<br>
+You can connect sensors to WeMos, so it can send its sensor data to AWS.  </p>
+<h1>Installation</h1>
+<p>You need to use Arduino IDE to manage the WeMos board.<br>
+First you need to install a WeMos driver and then you need to upload a program to the WeMos board.<br>
+After that the board is started, when it is powered on and it connects to the world through WiFi.</p>
+<h2>WeMos board</h2>
+<ul>
+<li>Install Arduino IDE</li>
+<li>Install <a href="https://wiki.wemos.cc/tutorials:get_started:get_started_in_arduino#using_boards_manager">WEMOS D1 driver</a><ul>
+<li>Set Arduino IDE - File - Preferences to point to WeMos json file<br>
+<img alt="Arduino IDE - File - Preferences" src="img/2018/2018-09-16-hack-arduino1.PNG">]</li>
+<li>Download ES8266 board (Arduino IDE - Tools - Board - Board Manager - Download):<br>
+<img alt="Arduino IDE - Tools - Board - Board Manager - Download" src="img/2018/2018-09-16-hack-arduino2.PNG">]</li>
+<li>Upload default program to board (Arduino IDE - Upload program):<br>
+<img alt="Arduino IDE - Upload program" src="img/2018/2018-09-16-hack-arduino4.PNG">]</li>
+</ul>
+</li>
+</ul>
+<h2>AWS</h2>
+<p><img alt="AWS IoT - thing installed" src="img/2018/2018-09-16-hack-arduino5.PNG">]</p>
+<h1>Buy</h1>
+<ul>
+<li>WeMos<ul>
+<li><a href="https://www.banggood.com/search/wemos.html">wemos - Buy Cheap wemos - From Banggood</a></li>
+</ul>
+</li>
+<li>WeMos D1 Mini<ul>
+<li>USD 3.5 + ship <a href="https://www.aliexpress.com/store/product/D1-mini-Mini-NodeMcu-4M-bytes-Lua-WIFI-Internet-of-Things-development-board-based-ESP8266/1331105_32529101036.html">Aliexpress.com</a></li>
+<li>DKR 27 incl ship <a href="https://www.banggood.com/Wemos-D1-Mini-V3_0_0-WIFI-Internet-Of-Things-Development-Board-Based-ESP8266-4MB-p-1264245.html?rmmds=category">banggood</a></li>
+</ul>
+</li>
+<li>WeMos D1 Mini Pro + WiFi Wireless Antenna<ul>
+<li>DKR 49 incl ship <a href="https://www.banggood.com/WeMos-D1-Mini-Pro-16-Module-ESP8266-Series-WiFi-Wireless-Antenna-p-1144951.html?rmmds=category">banggood</a></li>
+</ul>
+</li>
+<li>NodeMCU ESP-12E<ul>
+<li>DKR 39 <a href="https://www.banggood.com/Geekcreit-Doit-NodeMcu-Lua-ESP8266-ESP-12E-WIFI-Development-Board-p-985891.html?rmmds=detail-top-buytogether-auto">Geekcreit® NodeMcu Lua ESP8266 ESP-12E WIFI Development Board</a></li>
+</ul>
+</li>
+<li>Sensors - Input modules<ul>
+<li>DHT22: <a href="https://www.banggood.com/AM2302-DHT22-Temperature-And-Humidity-Sensor-Module-For-Arduino-SCM-p-937403.html?rmmds=category">AM2302 DHT22 Temperature And Humidity Sensor Module For Arduino SCM</a></li>
+<li>GPS: <a href="https://www.banggood.com/GYNEO6MV2-GPS-Module-NEO-6M-GY-NEO6MV2-Board-With-Antenna-For-Arduino-p-1196661.html?rmmds=search">GYNEO6MV2 GPS Module NEO-6M GY-NEO6MV2 Board With Antenna For Arduino</a></li>
+<li>GPS: <a href="https://www.banggood.com/APM2_6-2_8-GPS-Module-High-Precision-Ublox-NEO-M8N-GPS-With-Electronic-Compass-PIXHAWK-p-1240362.html?rmmds=category">APM2.6 2.8 GPS Module High Precision Ublox NEO-M8N GPS With Electronic Compass PIXHAWK</a></li>
+<li>GPS Tracker: <a href="https://www.banggood.com/KROAK-Mini-GPS-Tracker-Positioner-Module-GPSAGPSLBS-Multiple-Locator-SOS-Alarm-Web-APP-Tracking-p-1245615.html?rmmds=search">KROAK Mini GPS Tracker Positioner Module GPS+AGPS+LBS Multiple Locator SOS Alarm Web APP Tracking High Integration PCBA For Kids Children Pets Car</a></li>
+<li>Air Pressure: <a href="https://www.banggood.com/CJMCU-280E-BME280-High-Precision-Atmospheric-Pressure-Sensor-For-Arduino-p-1103115.html?rmmds=category">CJMCU-280E BME280 High Precision Atmospheric Pressure Sensor For Arduino</a></li>
+<li>Air Pressure: <a href="https://www.banggood.com/GY-BMP280-3_3-High-Precision-Atmospheric-Pressure-Sensor-Module-For-Arduino-p-1111135.html?rmmds=detail-top-buytogether-auto">GY-BMP280-3.3 High Precision Atmospheric Pressure Sensor Module For Arduino</a></li>
+<li>Gyro, 3 axis: <a href="https://www.banggood.com/6DOF-MPU-6050-3-Axis-Gyro-With-Accelerometer-Sensor-Module-For-Arduino-p-80862.html?rmmds=category">6DOF MPU-6050 3 Axis Gyro With Accelerometer Sensor Module For Arduino</a></li>
+<li>Gyro, 9 axis: <a href="https://www.banggood.com/MPU9250-Integrated-9DOF-9-Axis-Attitude-Accelerometer-Gyro-Compass-Magnetic-Field-Sensor-For-Arduino-p-1101005.html?rmmds=detail-top-buytogether-auto">MPU9250 Integrated 9DOF 9-Axis Attitude Accelerometer Gyro Compass Magnetic Field Sensor For Arduino</a></li>
+<li>16 bit AD converter <a href="https://www.banggood.com/CJMCU-ADS1115-16Bit-ADC-Development-Board-Module-p-986645.html?rmmds=detail-top-buytogether-auto">CJMCU-ADS1115 16Bit ADC Development Board Module</a></li>
+<li>Microphone: <a href="https://www.banggood.com/3pcs-CJMCU-9812-MAX9812L-Electret-Microphone-Amplifier-Development-Board-Sensor-Module-For-Arduino-p-1105009.html?rmmds=detail-left-hotproducts__8">3pcs CJMCU-9812 MAX9812L Electret Microphone Amplifier Development Board Sensor Module For Arduino</a></li>
+<li>Smoke: <a href="https://www.banggood.com/MQ2-Smoke-Gas-LPG-Butane-Gas-Sensor-Tester-For-Arduino-p-1144079.html?rmmds=detail-left-hotproducts__3">MQ-2 Smoke Gas LPG Butane Gas Sensor Tester For Arduino</a></li>
+<li>Distance: <a href="https://www.banggood.com/Wholesale-Geekcreit-Ultrasonic-Module-HC-SR04-Distance-Measuring-Ranging-Transducer-Sensor-DC-5V-2-450cm-p-40313.html?rmmds=detail-top-buytogether-auto">Geekcreit&reg; Ultrasonic Module HC-SR04 Distance Measuring Ranging Transducer Sensor DC 5V 2-450cm</a></li>
+<li>Stepmotor: <a href="https://www.banggood.com/Wholesale-Dual-H-Bridge-DC-Stepper-Motor-Drive-Controller-Board-Module-Arduino-L298N-p-42826.html?rmmds=detail-top-buytogether-auto">Geekcreit&reg; L298N Dual H Bridge Stepper Motor Driver Board For Arduino</a></li>
+<li>Water sensors: <a href="https://www.banggood.com/search/water-sensor/0-0-0-1-3-44-0-price-0-0_p-1.html?sortType=asc">water sensor - Buy Cheap water sensor - From Banggood</a></li>
+<li>Water level: <a href="https://www.banggood.com/10W-Black-Side-Mount-Water-Level-Sensor-Controller-Liquid-Float-Switch-p-961256.html?rmmds=detail-left-hotproducts__4">10W Black SidE-mount Water Level Sensor Controller Liquid Float Switch</a></li>
+<li>Water level: <a href="https://www.banggood.com/109mm-Stainless-Steel-Water-Level-Sensor-Liquid-Vertical-Float-Switch-for-Hydroponics-Gardening-p-1171139.html?rmmds=search">109mm Stainless Steel Water Level Sensor Liquid Vertical Float Switch for Hydroponics Gardening</a></li>
+</ul>
+</li>
+<li>Transmitters - Output modules:<ul>
+<li>OLED: <a href="https://www.banggood.com/0_91-Inch-128x32-IIC-I2C-Blue-OLED-LCD-Display-DIY-Oled-Module-SSD1306-Driver-IC-DC-3_3V-5V-p-1140506.html?rmmds=category">Geekcreit® 0.91 Inch 128x32 IIC I2C Blue OLED LCD Display DIY Oled Module SSD1306 Driver IC DC 3.3V 5V For Arduino PIC</a></li>
+<li>OLED: <a href="https://www.banggood.com/Wemos-OLED-Shield-V2_0_0-For-Wemos-D1-Mini-0_66-Inch-64X48-IIC-I2C-Two-Button-p-1267299.html?rmmds=detail-bottom-alsobought__4">Wemos® OLED Shield V2.0.0 For Wemos D1 Mini 0.66</a></li>
+<li>LED ring: <a href="https://www.banggood.com/Wemos-X-Ring-RGB-WS2812b-LED-Module-For-RGB-Built-in-LED-12-Colorful-LED-Module-For-WAVGAT-ESP8266-p-1176172.html?rmmds=detail-top-buytogether-auto">Wemos® X-Ring RGB WS2812b LED Module For RGB Built-in LED 12 Colorful LED Module For WAVGAT ESP8266 RGB</a></li>
+<li>Laser: <a href="https://www.banggood.com/3Pcs-KY-008-Laser-Transmitter-Module-For-Arduino-AVR-PIC-p-943280.html?rmmds=detail-top-buytogether-auto">3Pcs KY-008 Laser Transmitter Module For Arduino AVR PIC</a></li>
+</ul>
+</li>
+<li>Kits: <a href="https://www.banggood.com/Wholesale-Arduino-Compatible-SCM-and-DIY-Kits-c-2153.html">Arduino Compatible SCM &amp; DIY Kits</a></li>
+</ul>
+<h1>Projects</h1>
+<ul>
+<li>List of <a href="https://wiki.wemos.cc/products:d1_mini_shields">D1 mini Shields [WEMOS Electronics]</a></li>
+<li>Heart-rate: <a href="https://www.recantha.co.uk/blog/?p=18671">Heart-rate monitor uses a Wemos, a small OLED display and MicroPython</a></li>
+<li>PIR: <a href="https://hackaday.com/2018/07/19/a-super-simple-esp8266-iot-motion-sensor/">A Super Simple ESP8266 IOT Motion (PIR) Sensor</a></li>
+<li>Temperature with LM35: <a href="https://medium.com/@angelinmaryjohn/monitoring-data-from-sensors-using-esp-8266-and-arduino-bb9132d88488">Monitoring data from sensors using ESP 8266 and arduino</a></li>
+<li>Temperature and humidity with DHT22: <a href="https://www.losant.com/blog/getting-started-with-the-esp8266-and-dht22-sensor">Getting Started With the ESP8266 and DHT22 Sensor</a></li>
+</ul>
+<h1>Other</h1>
+<ul>
+<li>Tmp proj dir: p4Projs\2018-EmsHackathon\IotBooks\AWS</li>
+</ul>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
