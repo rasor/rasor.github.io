@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="MicroPython Basics: What is MicroPython? MicroPython Basics: How to Load MicroPython on a Board MicroPython Basics: How to Load MicroPython on a Board - ESP8266 MicroPython Basics: How to Load MicroPython on a Board - Serial REPL Overview - MicroPython 1.9.4 documentation WeMos D1 Mini Welcome to Micropython on ESP8266 Workshop …" />
+<meta name="keywords" content="#ng, #iot, #es8266, #python">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="MicroPython on ES8266"/>
+<meta property="og:description" content="MicroPython Basics: What is MicroPython? MicroPython Basics: How to Load MicroPython on a Board MicroPython Basics: How to Load MicroPython on a Board - ESP8266 MicroPython Basics: How to Load MicroPython on a Board - Serial REPL Overview - MicroPython 1.9.4 documentation WeMos D1 Mini Welcome to Micropython on ESP8266 Workshop …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/micropython-on-es8266.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Dev"/>
+<meta property="article:tag" content="#ng"/>
+<meta property="article:tag" content="#iot"/>
+<meta property="article:tag" content="#es8266"/>
+<meta property="article:tag" content="#python"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; MicroPython on ES8266</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="micropython-on-es8266">MicroPython on ES8266</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/dev.html">Dev</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li><a href="https://learn.adafruit.com/micropython-basics-what-is-micropython/overview">MicroPython Basics: What is MicroPython?</a></li>
+<li><a href="https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board/overview">MicroPython Basics: How to Load MicroPython on a Board</a></li>
+<li><a href="https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board/esp8266">MicroPython Basics: How to Load MicroPython on a Board - ESP8266</a></li>
+<li><a href="https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board/serial-terminal">MicroPython Basics: How to Load MicroPython on a Board - Serial REPL</a></li>
+<li><a href="http://micropython.org/resources/docs/en/latest/esp8266/">Overview - MicroPython 1.9.4 documentation</a></li>
+</ul>
+<h1>WeMos D1 Mini</h1>
+<ul>
+<li><a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/">Welcome to Micropython on ESP8266 Workshop’s documentation! &mdash; Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Pins: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html#development-board">Setup - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Code: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html">Basics - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Code for Shields 1: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/shields.html">Shields - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Code for Shields 2: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/advanced.html#analog-to-digital-converter">Advanced - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Deploy (upload files) <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html#uploading-files">Basics - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Execute .py: <a href="https://stackoverflow.com/questions/7974849/how-can-i-make-one-python-file-run-another/20457045#20457045">How can I make one python file run another?</a></li>
+<li>You could Execute the .py remotely with WebREPL: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html#webrepl">Basics - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>or you can put your startup command in main.py <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html#filesystem">Basics - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>Code: Http calls: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/basics.html#http-requests">Basics &mdash; Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>2016-07 <a href="http://garybake.com/getting-started-with-the-wemos-d1-and-micropython.html">Getting started with the wemos d1 and micropython</a></li>
+<li>Blogs: <a href="http://garybake.com/category/esp8266.html">This and That - esp8266</a></li>
+<li><a href="https://bikealive.nl/esp8266-wemos.html">MicroPython on ESP8266</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/ng.html">#ng</a>
+      <a href="https://rasor.github.io/tag/iot.html">#iot</a>
+      <a href="https://rasor.github.io/tag/es8266.html">#es8266</a>
+      <a href="https://rasor.github.io/tag/python.html">#python</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
