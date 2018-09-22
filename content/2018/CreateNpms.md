@@ -2,6 +2,10 @@ Title: Create npm packages
 Date: 2099-01-01 00:00
 Tags: #npm, #ng, #components
 
+## Stencil packages
+
+* 2018-03: [Publishing a Web Component Using Stencil (And Using It Anywhere)](https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/)
+
 ## Angular packages
 
 * 2018-08: [The Angular Library Series — Publishing](https://blog.angularindepth.com/the-angular-library-series-publishing-ce24bb673275)

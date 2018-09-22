@@ -44,5 +44,6 @@ Related
 * [How do you explicitly set a new property on `window` in TypeScript?](https://stackoverflow.com/questions/12709074/how-do-you-explicitly-set-a-new-property-on-window-in-typescript?rq=1)
 * [extend external Javascript library](https://stackoverflow.com/questions/37297241/typescript-extend-external-javascript-library)
 * [What's new in TypeScript: Anders Heljsberg at Build 2018](https://react-etc.net/entry/whats-new-in-typescript-anders-heljsberg-build-2018)
+* ES6 compatibility: [Getting Title at 10:29](http://kangax.github.io/compat-table/es6/)
 
 The End
