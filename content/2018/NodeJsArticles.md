@@ -8,5 +8,6 @@ Tags: #ng, #nodejs, #basel, #typescript
             * [ng-conf 18: Full-stack Dev w Nx/Bazel](https://docs.google.com/presentation/d/1fSZwcpO9hUBFd_k9hUS45ZyVJcZLEyz0VxISSOnIZ1I/preview?slide=id.g31e8944cb0_0_87)
 * [Adding CAPTCHA to Ionic with NodeJS Middleware](https://www.joshmorony.com/adding-captcha-to-ionic-with-nodejs-middleware/)
 * Lib: [Node.js Application Configuration](https://github.com/lorenwest/node-config)
+* 2018-06: [How to create a real-world Node CLI app with Node](https://medium.freecodecamp.org/how-to-create-a-real-world-node-cli-app-with-node-391b727bbed3)
 
 The End
