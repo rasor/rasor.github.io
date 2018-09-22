@@ -24,6 +24,7 @@ After that the board is started, when it is powered on and it connects to the wo
     ![Arduino IDE - Tools - Board - Board Manager - Download](img/2018/2018-09-16-hack-arduino2.PNG)]
     * Upload default program to board (Arduino IDE - Upload program):  
     ![Arduino IDE - Upload program](img/2018/2018-09-16-hack-arduino4.PNG)]
+* Pins: [Setup - Micropython on ESP8266 Workshop 1.0 documentation](https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html#development-board)
 
 ## AWS
 
