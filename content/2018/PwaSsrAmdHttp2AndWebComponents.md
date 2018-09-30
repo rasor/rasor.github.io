@@ -1,23 +1,31 @@
 Title: PWA, SSR, AMD and HTTP/2 with Polymer, Ionic Stencils, Angular and Google
 Date: 2099-01-01 00:00
 
-HTTP/2
+## HTTP/2
+
 * [What is HTTP/2 and how to deploy it?](https://www.symfony.fi/entry/what-is-http-2-and-how-to-deploy)
 
-Prerender.io (only prerendercache) / Netlify (host with prerendercache)
+## Prerender.io (only prerendercache) / Netlify (host with prerendercache)
+
 * SaaS: [Prerender - AngularJS SEO / ASP.NET](https://prerender.io/documentation/install-middleware#asp-net)
 * SaaS: [Prerender - AngularJS SEO / Express](https://prerender.io/documentation/install-middleware#prerender-node)
 * Host: [Netlify](https://www.netlify.com/)
 * Blog: [How to Build a Serverless, SEO-friendly React blog with Netlify](https://buttercms.com/blog/serverless-react-blog-tutorial)
 
-Razzle
+## Lit-Html
+
+* [A new, lean way of creating web apps – Kenneth Christiansen – Medium](https://medium.com/@kennethrohde/a-new-lean-way-of-creating-web-apps-88a49c5b87ec)
+
+## Razzle
+
 * [Razzle enables Universal JavaScript apps decoupled from frameworks and libraries | React, etc. Tech Stack](https://react-etc.net/entry/razzle-enables-universal-javascript-apps-decoupled-from-frameworks-and-libraries)
 * [jaredpalmer/razzle](https://github.com/jaredpalmer/razzle)
 
-SEO and PWA
+## SEO and PWA
+
 * [2018 State of Progressive Web Apps – Progressive Web Apps – Medium](https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70)
 
-Angular SSR 
+## Angular SSR 
 
 * Official HowTo [Angular Universal Integration](https://github.com/angular/angular-cli/wiki/stories-universal-rendering)
 * [Angular Universal and Firebase Hosting (Server-side Rendering with JavaScript Frameworks)](https://www.youtube.com/watch?v=gxCu5TEmxXE)
@@ -34,7 +42,8 @@ Angular SSR
 * [stenciljs server-side-rendering](https://stenciljs.com/docs/server-side-rendering)
 * [Angular Tour of Heroes](https://angular.io/tutorial)
 
-Dontnet new angular
+## Dontnet new angular
+
 * [SSR with .NET Core](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
 * <https://www.hanselman.com/blog/dotnetNewAngularAndDotnetNewReact.aspx>
 * <https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/>
@@ -42,11 +51,12 @@ Dontnet new angular
 * [Building Single Page Applications on ASP.NET Core with JavaScriptServices](https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/)
 * [Using JavaScriptServices for Creating Single Page Applications](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services)
 
-Vue SSR
+## Vue SSR
+
 * [Building server-rendered apps in Vue using Nuxt.js](http://Building server-rendered apps in Vue using Nuxt.js)
 * [Vue.js Server-Side Rendering Guide](https://ssr.vuejs.org/en/) - If you need more app structure control than in Nuxt
 
-Ionic PWA
+## Ionic PWA
 
 * <https://blog.ionic.io/what-is-a-progressive-web-app/>
 * <http://blog.ionic.io/what-progressive-web-apps-can-do-for-you/>
@@ -67,7 +77,7 @@ Ionic PWA
 * [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
 * Book: [Beginning Progressive Web App Development](https://www.apress.com/gp/book/9781484230893)
 
-Ionic Stencils
+## Ionic Stencils
 
 * Vids
   * [Using Web Components in Ionic (Polymer Summit 2017)](https://www.youtube.com/watch?v=UfD-k7aHkQE)
@@ -84,7 +94,7 @@ Ionic Stencils
   * <http://thewebplatformpodcast.com/133-ionic-web-components>
   * [stenciljs demos](https://stenciljs.com/demos)
 
-Polymer PWA
+## Polymer PWA
 
 * [GDG DevFest Ukraine - @kennethrohde](https://docs.google.com/presentation/d/1QNcQwDwq5pwwdjpN9t4hCgvBXWWgLvehiLQdzonsqZA/edit#slide=id.g24e228bf8a_4_37)
 * [Progressive Web Apps - Google Developers](https://developers.google.com/web/progressive-web-apps/)
@@ -94,10 +104,12 @@ Polymer PWA
 * [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
 * [Polymer 3.0 moves to NPM and ES6 Modules with templates in JavaScript | React, etc. Tech Stack](https://react-etc.net/entry/polymer-3-0-moves-to-npm-and-es6-modules-with-templates-in-javascript)
 
-Next (React)
+## Next (React)
+
 * [Next.js is the Universal React Framework you&#039;ve been looking for | React, etc. Tech Stack](https://react-etc.net/entry/next-js-is-the-universal-react-framework-you-ve-been-looking-for)
 
-Google AMD
+## Google AMD
+
 * [Accelerated Mobile Pages Project – AMP](https://www.ampproject.org/)
 
 The End

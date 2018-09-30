@@ -9,6 +9,7 @@ Tags: #ng, #iot, #hue, #kendoui, #bluetooth, #raspberrypi, #arduino, #openfaas
 * [U Go Hue Go: Controlling Philips Hue Lights with Angular and Kendo UI](https://developer.telerik.com/products/kendo-ui/u-go-hue-go-controlling-philips-hue-lights-with-angular-and-kendo-ui/)
 
 * [GDG DevFest Ukraine - @kennethrohde](https://docs.google.com/presentation/d/1QNcQwDwq5pwwdjpN9t4hCgvBXWWgLvehiLQdzonsqZA/edit#slide=id.g24e228bf8a_4_37)
+* [Program a smart device directly, no install needed – Kenneth Christiansen – Medium](https://medium.com/@kennethrohde/program-a-smart-device-directly-no-install-needed-cd8b29320d76)
 
 # Raspberry Pi
 
