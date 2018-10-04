@@ -2,6 +2,13 @@ Title: Animations, 3D & VR
 Date: 2099-01-01 00:00
 Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs, #webgl, #vr
 
+## AWS Sumerian
+
+* Home: [Amazon Sumerian - Build VR &amp; AR applications](https://aws.amazon.com/sumerian/)
+* Vid: [Amazon Sumerian | Deep Dive into Real World Applications](https://www.twitch.tv/videos/305954414)
+* Vids: [Live Streaming on Twitch | AWS Developer Center](https://aws.amazon.com/developer/community/twitch/#Developing_AR_and_VR_Experiences)
+* 2018-Q4 Hackathon: [Amazon Sumerian AR/VR Challenge](https://amazonsumerian.devpost.com/)
+
 ## Angular
 
 * [Angular Docs: Animations](https://angular.io/guide/animations)
