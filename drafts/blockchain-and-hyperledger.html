@@ -26,12 +26,12 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="Installing Hyperledger Composer on Windows 10 PreRequisites Install NodeJs v8.9 or higher (note version 9 is not supported) - v10 does not work either - perhaps a node-gyp issue. Install Git Install Docker including DockerCompose Version 17.03 or higher. Compose: Version 1.8 or higher Install cUrl Install Python 2 …" />
-<meta name="keywords" content="#blockchain, #cryptocurrency, #hyperledger, #curl, #python, #node_gyp">
+<meta name="description" content="Installing Hyperledger Composer on Windows 10 PreRequisites Before you install prerequisites on you machine you should check out what you already have, since some sw don&#39;t install in side-by-side mode. Here is what is on my machine. Notice - Node v10 does not work, when building Hyperledger Composer, so I have …" />
+<meta name="keywords" content="#blockchain, #cryptocurrency, #hyperledger, #docker, #curl, #python, #go, #c++, #node_gyp">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Blockchain and Hyperledger"/>
-<meta property="og:description" content="Installing Hyperledger Composer on Windows 10 PreRequisites Install NodeJs v8.9 or higher (note version 9 is not supported) - v10 does not work either - perhaps a node-gyp issue. Install Git Install Docker including DockerCompose Version 17.03 or higher. Compose: Version 1.8 or higher Install cUrl Install Python 2 …"/>
+<meta property="og:description" content="Installing Hyperledger Composer on Windows 10 PreRequisites Before you install prerequisites on you machine you should check out what you already have, since some sw don&#39;t install in side-by-side mode. Here is what is on my machine. Notice - Node v10 does not work, when building Hyperledger Composer, so I have …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/blockchain-and-hyperledger.html"/>
 <meta property="og:type" content="article"/>
@@ -42,8 +42,11 @@
 <meta property="article:tag" content="#blockchain"/>
 <meta property="article:tag" content="#cryptocurrency"/>
 <meta property="article:tag" content="#hyperledger"/>
+<meta property="article:tag" content="#docker"/>
 <meta property="article:tag" content="#curl"/>
 <meta property="article:tag" content="#python"/>
+<meta property="article:tag" content="#go"/>
+<meta property="article:tag" content="#c++"/>
 <meta property="article:tag" content="#node_gyp"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
@@ -110,31 +113,19 @@
   <div>
     <h1>Installing Hyperledger Composer on Windows 10</h1>
 <h2>PreRequisites</h2>
-<ul>
-<li>Install NodeJs<br>
-v8.9 or higher (note version 9 is not supported) - <a href="https://stackoverflow.com/questions/21658832/npm-install-error-msb3428-could-not-load-the-visual-c-component-vcbuild-ex/50714612#50714612">v10</a>
- does not work either - perhaps a node-gyp issue.</li>
-<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a></li>
-<li><a href="https://rasor.github.io/docker-for-windows.html">Install Docker including DockerCompose</a><br>
-Version 17.03 or higher. Compose: Version 1.8 or higher</li>
-<li><a href="https://rasor.github.io/curl-cli-on-windows.html">Install cUrl</a></li>
-<li>Install <a href="https://www.python.org/downloads/">Python 2.7</a></li>
-<li>Install <a href="https://stackoverflow.com/questions/21658832/npm-install-error-msb3428-could-not-load-the-visual-c-component-vcbuild-ex/39235952#39235952">VCBuild.exe</a> - now MSBuild<ul>
-<li><code>npm install -g --production windows-build-tools</code> as Admin. This will both install Python 2.7 and C++.</li>
-</ul>
-</li>
-</ul>
-<p>Here is what is on my machine</p>
-<p>CMD:  </p>
+<p>Before you install prerequisites on you machine you should check out what you already have, since some sw don't install in side-by-side mode.<br>
+Here is what is on my machine.<br>
+Notice - Node v10 does not work, when building Hyperledger Composer, so I have <a href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html">changed to and older version with <code>nvm use 8.11.1</code></a>  </p>
+<p>From CMD:  </p>
 <div class="highlight"><pre><span></span>ver
 <span class="c1"># Microsoft Windows [Version 10.0.17134.345]</span>
+git --version
+<span class="c1"># git version 2.17.1.windows.2</span>
 </pre></div>
 
 
-<p>Git Bash:  </p>
-<div class="highlight"><pre><span></span>git --version
-<span class="c1"># git version 2.17.1.windows.2</span>
-sh --version
+<p>From Git Bash:  </p>
+<div class="highlight"><pre><span></span>sh --version
 <span class="c1"># GNU bash, version 4.4.19(2)-release (x86_64-pc-msys)</span>
 tar --version
 <span class="c1"># tar (GNU tar) 1.30</span>
@@ -146,6 +137,10 @@ py --version
 <span class="c1"># Python 3.6.4</span>
 py -2 --version
 <span class="c1"># Python 2.7.15</span>
+go version
+<span class="c1"># go1.11.1 windows/amd64</span>
+<span class="nb">echo</span> <span class="nv">$GOPATH</span>
+<span class="c1"># C:\Users\myself\projs-go</span>
 docker -v
 <span class="c1"># Docker version 18.06.1-ce, build e68fc7a</span>
 docker-compose -v
@@ -159,7 +154,27 @@ C:<span class="se">\P</span>rogram Files <span class="o">(</span>x86<span class=
 </pre></div>
 
 
-<h2>Try Hyperledger in playground</h2>
+<p>Depending on what you are missing install the following  </p>
+<ul>
+<li>Install NodeJs<br>
+v8.9 or higher (note version 9 is not supported) - <a href="https://stackoverflow.com/questions/21658832/npm-install-error-msb3428-could-not-load-the-visual-c-component-vcbuild-ex/50714612#50714612">v10</a>
+ does not work either - perhaps a node-gyp issue.</li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a></li>
+<li><a href="https://rasor.github.io/docker-for-windows.html">Install Docker including DockerCompose</a><br>
+Version 17.03 or higher. Compose: Version 1.8 or higher</li>
+<li><a href="https://rasor.github.io/curl-cli-on-windows.html">Install cUrl</a></li>
+<li>Install <a href="https://www.python.org/downloads/">Python 2.7</a></li>
+<li>Install <a href="https://stackoverflow.com/questions/21658832/npm-install-error-msb3428-could-not-load-the-visual-c-component-vcbuild-ex/39235952#39235952">VCBuild.exe</a> - now MSBuild<ul>
+<li><code>npm install -g --production windows-build-tools</code> as Admin. This will both install Python 2.7 and C++.</li>
+</ul>
+</li>
+<li>Install <a href="https://golang.org/doc/install?download=go1.11.1.windows-amd64.msi">Go Programming Language</a><ul>
+<li>Set <a href="https://github.com/golang/go/wiki/SettingGOPATH#windows">GOPATH</a><br>
+<code>setx GOPATH %USERPROFILE%\go</code></li>
+</ul>
+</li>
+</ul>
+<h2>Try Hyperledger in online playground</h2>
 <ul>
 <li><a href="https://composer-playground.mybluemix.net/login">Hyperledger Composer</a></li>
 </ul>
@@ -178,37 +193,64 @@ Image by [Methus Kaewsaikao](https://medium.com/@methuz)
     * Goto Shared Drives
     * Select c and Apply  
 ![Share drive C](https://cdn-images-1.medium.com/max/1000/1*0VI5ra3uYZ1WGD3I19CPxQ.png)
-Image by [Methus Kaewsaikao](https://medium.com/@methuz)</code>bash</p>
-<h1>From CMD:</h1>
+Image by [Methus Kaewsaikao](https://medium.com/@methuz)
+* From CMD:</code>bash</p>
 <h1>Verify your host drive is shared</h1>
 <p>docker run --rm -v c:/:/data alpine ls /data</p>
 <h1>Files should be shown</h1>
 <p>```</p>
 </li>
 <li>
-<p>HowTo: <a href="https://hyperledger.github.io/composer/latest/installing/development-tools">Installing the development environment | Hyperledger Composer</a>
-    <code>bash
-    # From CMD As Admin install
-    npm install -g composer-cli@0.20
-    composer -v
-    # v0.20.2
-    npm install -g composer-rest-server@0.20
-    # install a hyperledger-composer generator for yoman
-    npm install -g generator-hyperledger-composer@0.20
-    npm install -g yo
-    yo --version
-    # 2.0.5
-    npm install -g composer-playground@0.20
-    composer-playground --version
-    # 0.20.2
-    # composer-playground opens http://localhost:8080/login
-    # Read more on https://hyperledger.github.io/composer/latest/tutorials/playground-tutorial.html</code></p>
+<p>HowTo: <a href="https://hyperledger.github.io/composer/latest/installing/development-tools">Installing the development environment | Hyperledger Composer</a></p>
+<ul>
+<li>From CMD As Admin:<br>
+```bash</li>
+</ul>
+<h1>Install hyperledger-composer</h1>
+<p>npm install -g composer-cli@0.20
+composer -v</p>
+<h1>v0.20.2</h1>
+<p>npm install -g composer-rest-server@0.20</p>
+<h1>Install a hyperledger-composer generator for yoman</h1>
+<p>npm install -g generator-hyperledger-composer@0.20
+npm install -g yo
+yo --version</p>
+<h1>2.0.5</h1>
+<p>npm install -g composer-playground@0.20
+composer-playground --version</p>
+<h1>0.20.2</h1>
+<h1>Composer-playground opens http://localhost:8080/login</h1>
+<h1>Read more on https://hyperledger.github.io/composer/latest/tutorials/playground-tutorial.html</h1>
+<p><code>* In VS Code - Install extension [Hyperledger Composer](https://marketplace.visualstudio.com/items?itemName=HyperledgerComposer.composer-support-client)
+* Install Fabric
+From Git Bash:</code>bash
+mkdir ~/fabric-dev-servers &amp;&amp; cd ~/fabric-dev-servers</p>
+<h1>Download fabric, fabric-CA docker images, binaries and sample using an install script - currently v1.3.0 is latest</h1>
+<p>curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s 1.3.0</p>
+<h1>Verify samples has been cloned from https://github.com/hyperledger/fabric-samples.git</h1>
+<p>ls ./fabric-samples</p>
+<h1>Verify downloaded images</h1>
+<p>docker images | grep hyperledger*</p>
+<h1>Verify downloaded binaries</h1>
+<p>ls ./</p>
+<h1>fabric-samples/</h1>
+<h1>Nothing (except samples) was found - then try something else:</h1>
+<h1>Try once more, but bypass docker images and samples</h1>
+<p>curl -sSL https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh | bash -s 1.3.0 -d -s</p>
+<h1>Verify downloaded binaries</h1>
+<p>ls ./</p>
+<h1>bin/  config/  fabric-samples/</h1>
+<h1>Now we have binaries</h1>
+<p>```</p>
 </li>
 <li>
 <p><a href="https://developer.ibm.com/opentech/2017/11/29/running-hyperledger-fabric-windows-revised/">Running Hyperledger Fabric on Windows - Revised - IBM OpenTech</a></p>
 </li>
 <li>
 <p><a href="https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh">https://raw.githubusercontent.com/hyperledger/fabric/master/scripts/bootstrap.sh</a></p>
+</li>
+<li>
+<p><a href="https://hyperledger-fabric.readthedocs.io/en/latest/build_network.html">Building Your First Network</a></p>
 </li>
 </ul>
 <h2>Installing Hyperledger on Ubunto or Mac</h2>
@@ -231,8 +273,11 @@ Image by [Methus Kaewsaikao](https://medium.com/@methuz)</code>bash</p>
       <a href="https://rasor.github.io/tag/blockchain.html">#blockchain</a>
       <a href="https://rasor.github.io/tag/cryptocurrency.html">#cryptocurrency</a>
       <a href="https://rasor.github.io/tag/hyperledger.html">#hyperledger</a>
+      <a href="https://rasor.github.io/tag/docker.html">#docker</a>
       <a href="https://rasor.github.io/tag/curl.html">#curl</a>
       <a href="https://rasor.github.io/tag/python.html">#python</a>
+      <a href="https://rasor.github.io/tag/go.html">#go</a>
+      <a href="https://rasor.github.io/tag/c.html">#c++</a>
       <a href="https://rasor.github.io/tag/node_gyp.html">#node_gyp</a>
     </p>
   </div>
