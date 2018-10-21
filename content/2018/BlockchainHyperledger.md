@@ -110,7 +110,11 @@ Version 17.03 or higher. Compose: Version 1.8 or higher
     # Composer-playground opens http://localhost:8080/login
     # Read more on https://hyperledger.github.io/composer/latest/tutorials/playground-tutorial.html
     ```  
-    * In VS Code - Install extension [Hyperledger Composer](https://marketplace.visualstudio.com/items?itemName=HyperledgerComposer.composer-support-client)
+    * In VS Code
+        * Install extension [Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
+        * Install extension [Hyperledger Composer](https://marketplace.visualstudio.com/items?itemName=HyperledgerComposer.composer-support-client)
+        * Install extension [IBM Blockchain Platform](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform)
+        * Install extension [Go](https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go)
     * Install Fabric
     From Git Bash:  
     ```bash

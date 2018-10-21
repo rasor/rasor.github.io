@@ -26,6 +26,12 @@ After that the board is started, when it is powered on and it connects to the wo
     ![Arduino IDE - Upload program](img/2018/2018-09-16-hack-arduino4.PNG)]
 * Pins: [Setup - Micropython on ESP8266 Workshop 1.0 documentation](https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html#development-board)
 
+## Blynk
+
+* [Wemos D1 Mini + 0.96 Inch SSD1306 OLED Display Using SPI](https://www.instructables.com/id/Wemos-D1-Mini-096-SSD1306-OLED-Display-Using-SPI/)
+* [Blynk](https://docs.blynk.cc/)
+* [blynkkk/blynkkk.github.io](https://github.com/blynkkk/blynkkk.github.io)
+
 ## AWS
 
 ![AWS IoT - thing installed](img/2018/2018-09-16-hack-arduino5.PNG)]
@@ -73,6 +79,24 @@ After that the board is started, when it is powered on and it connects to the wo
 * PIR: [A Super Simple ESP8266 IOT Motion (PIR) Sensor](https://hackaday.com/2018/07/19/a-super-simple-esp8266-iot-motion-sensor/)
 * Temperature with LM35: [Monitoring data from sensors using ESP 8266 and arduino](https://medium.com/@angelinmaryjohn/monitoring-data-from-sensors-using-esp-8266-and-arduino-bb9132d88488)
 * Temperature and humidity with DHT22: [Getting Started With the ESP8266 and DHT22 Sensor](https://www.losant.com/blog/getting-started-with-the-esp8266-and-dht22-sensor)
+* Barometer and temperature: [Wemos mini bmp180 sensor example - esp8266 learning](http://www.esp8266learning.com/wemos-mini-bmp180-sensor-example.php)
+* D1 as webserver: [Wemos webserver example - esp8266 learning](http://www.esp8266learning.com/wemos-webserver-example.php)
+* [WiFi scanner with Wemos D1 mini](https://blog.robberg.net/wifi-channel-scanner-with-wemos-d1-mini/)
+
+## QR Codes on OLED
+
+* [Wemos D1 Mini + 0.96 Inch SSD1306 OLED Display Using SPI](https://www.instructables.com/id/Wemos-D1-Mini-096-SSD1306-OLED-Display-Using-SPI/)
+* [QR Code Minimum Size: Find the ideal size for your use case](https://scanova.io/blog/blog/2015/02/20/qr-code-minimum-size/)
+* [Adafruit_SSD1306_Wemos_OLED](https://github.com/stblassitude/Adafruit_SSD1306_Wemos_OLED)
+* [OLED Shield [WEMOS Electronics]](https://wiki.wemos.cc/products:d1_mini_shields:oled_shield) - 64*48 pixels - QR needs 31*31 pixels for showing SN - serial number.
+* [Wemos OLED shield example - esp8266 learning](http://www.esp8266learning.com/wemos-oled-shield-example.php)
+* [Wemos OLED Shield](http://garybake.com/wemos-oled-shield.html)
+* [ESP32 With Integrated OLED (WEMOS/Lolin) - Getting Started](https://www.hackster.io/johnnyfrx/esp32-with-integrated-oled-wemos-lolin-getting-started-07ac5d)
+* [ESP32 Arduino SSD1306 OLED: Drawing a QR Code](https://techtutorialsx.com/2017/12/16/esp32-arduino-ssd1306-oled-drawing-a-qr-code/)
+* [OnionIoT/oledQrCodeGenerator](https://github.com/OnionIoT/oledQrCodeGenerator)
+* [QR Codes Using Onion Omega](https://www.hackster.io/22769/qr-codes-using-onion-omega-b326bd)
+* [QR](https://www.adafruit.com/qr)
+* [QR Code Stencil Generator and QR Hobo Codes | F.A.T.](http://fffff.at/qr-stenciler-and-qr-hobo-codes/)
 
 # Other
 
