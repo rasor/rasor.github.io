@@ -26,6 +26,23 @@ After that the board is started, when it is powered on and it connects to the wo
     ![Arduino IDE - Upload program](img/2018/2018-09-16-hack-arduino4.PNG)]
 * Pins: [Setup - Micropython on ESP8266 Workshop 1.0 documentation](https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html#development-board)
 
+## NodeMCU
+
+* [NodeMcu -- An open-source firmware based on ESP8266 wifi-soc.](http://www.nodemcu.com/index_en.html#fr_54745c8bd775ef4b99000011)
+* [nodemcu/nodemcu-firmware](https://github.com/nodemcu/nodemcu-firmware)
+* [Overview - NodeMCU Documentation](https://nodemcu.readthedocs.io/en/master/)
+* [Uploading code - NodeMCU Documentation](https://nodemcu.readthedocs.io/en/master/en/upload/)
+* [NodeMCU MQTT Client with Arduino IDE | NodeMCU ](https://www.electronicwings.com/nodemcu/nodemcu-mqtt-client-with-arduino-ide)
+* [MQTT Version 3.1.1](https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_Toc398718027)
+
+### Lua
+
+* [The Programming Language Lua](https://www.lua.org/)
+
+## Adafruit Dashboard
+
+* [Adafruit IO Basics: Dashboards](https://learn.adafruit.com/adafruit-io-basics-dashboards/creating-a-dashboard)
+
 ## Blynk
 
 * [Wemos D1 Mini + 0.96 Inch SSD1306 OLED Display Using SPI](https://www.instructables.com/id/Wemos-D1-Mini-096-SSD1306-OLED-Display-Using-SPI/)
