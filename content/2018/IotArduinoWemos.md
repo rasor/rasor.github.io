@@ -118,5 +118,6 @@ After that the board is started, when it is powered on and it connects to the wo
 # Other
 
 * Tmp proj dir: p4Projs\2018-EmsHackathon\IotBooks\AWS
+* [Intel® System Studio](https://software.intel.com/en-us/system-studio)
 
 The End
