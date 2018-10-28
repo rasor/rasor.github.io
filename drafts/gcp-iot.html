@@ -163,10 +163,65 @@ gcloud projects list
 </pre></div>
 
 
+<ul>
+<li>More help with gcloud: <a href="https://cloud.google.com/sdk/docs/scripting-gcloud">Scripting gcloud commands</a></li>
+</ul>
+<h1>Functions</h1>
+<ul>
+<li><a href="https://cloud.google.com/functions/docs/quickstart#functions-prepare-environment-nodejs">Quickstart:  Cloud Functions</a></li>
+</ul>
+<h2>PreReq</h2>
+<div class="highlight"><pre><span></span>gcloud components update
+gcloud components install beta <span class="c1"># Node v8 and Python code</span>
+</pre></div>
+
+
+<ul>
+<li>Npm devDependencies for Express apps: <a href="https://www.npmjs.com/package/google-cloud">google-cloud</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># You need `Google Cloud Functions` enabled.  </span>
+gcloud services <span class="nb">enable</span> cloudfunctions.googleapis.com
+<span class="c1"># Default region</span>
+gcloud config <span class="nb">set</span> functions/region europe-west1
+gcloud config get-value functions/region
+<span class="c1"># europe-west1</span>
+
+<span class="c1"># Sample code:</span>
+git clone https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git
+<span class="c1"># git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git</span>
+<span class="nb">cd</span> nodejs-docs-samples/functions/helloworld/
+
+<span class="c1"># gcloud SDK: https://cloud.google.com/sdk/gcloud/reference/beta/functions/</span>
+
+<span class="c1"># Deploy:</span>
+gcloud functions deploy helloGET --runtime nodejs8 --trigger-http <span class="c1">#--region=europe-west1</span>
+<span class="c1"># Print:</span>
+gcloud functions describe helloGET
+<span class="c1"># httpsTrigger:</span>
+<span class="c1">#  url: https://us-central1-central-run-220517.cloudfunctions.net/helloGET</span>
+
+start https://us-central1-central-run-220517.cloudfunctions.net/helloGET
+<span class="c1"># Hello World</span>
+
+<span class="c1"># O&amp;M:</span>
+gcloud functions -h
+<span class="c1"># Usage: gcloud functions [optional flags] &lt;group | command&gt;</span>
+<span class="c1">#   group may be           event-types | logs | regions</span>
+<span class="c1">#   command may be         call | delete | deploy | describe | list</span>
+
+gcloud functions list
+<span class="c1"># NAME      STATUS  TRIGGER       REGION</span>
+<span class="c1"># helloGET  ACTIVE  HTTP Trigger  us-central1</span>
+
+<span class="c1"># Delete:</span>
+gcloud functions delete helloGET <span class="c1"># takes minutes...</span>
+</pre></div>
+
+
 <h1>IoT</h1>
 <p>I want to connect some IoT devices to GCP. Here is an overview of the GCP services<br>
 <a href="https://cloud.google.com/solutions/iot/"><img alt="iot.svg" src="https://cloud.google.com/images/solutions/iot/iot.svg"></a></p>
-<p>You need <code>Cloud IoT API</code> enabld.  </p>
+<p>You need <code>Cloud IoT API</code> enabled.  </p>
 <div class="highlight"><pre><span></span>gcloud services <span class="nb">enable</span> cloudiot.googleapis.com
 <span class="c1"># Operation &quot;operations/acf.f93e2f75-fe30-4b85-8253-4458ba5fffff&quot; finished successfully.</span>
 
@@ -193,7 +248,8 @@ gcloud services list
 <a href="https://developers.google.com/apis-explorer/#p/cloudiot/v1/">Google APIs Explorer - Cloud IoT API v1</a></p>
 <p>Here are IoT tutorials: 
 <a href="https://cloud.google.com/solutions/iot/">Google Cloud IoT - Solutions</a></p>
-<p>From an ESP32 device here is how you connect it to  <a href="https://mongoose-os.com/docs/mos/cloud/google.md#setup-google-iot-core">Mongoose OS - Reporting state to Google IoT Core</a></p>
+<p>From an ESP32 (and ESP8266?) device here is how you connect it to  <a href="https://mongoose-os.com/docs/mos/cloud/google.md#setup-google-iot-core">Mongoose OS - Reporting state to Google IoT Core</a>  </p>
+<p>And here are Mongoose supported HW + firmware <a href="https://mongoose-os.com/docs/mos/userguide/devboards.md">Mongoose OS Documentation</a>  </p>
 <h1>Links</h1>
 <ul>
 <li>Pricing<ul>
