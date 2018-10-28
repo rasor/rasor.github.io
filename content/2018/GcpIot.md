@@ -67,12 +67,67 @@ gcloud projects list
 # central-run-123456  My First Project  1091175999999
 ```
 
+* More help with gcloud: [Scripting gcloud commands](https://cloud.google.com/sdk/docs/scripting-gcloud)
+
+# Functions
+
+* [Quickstart:  Cloud Functions](https://cloud.google.com/functions/docs/quickstart#functions-prepare-environment-nodejs)
+
+## PreReq
+
+```bash
+gcloud components update
+gcloud components install beta # Node v8 and Python code
+```
+
+* Npm devDependencies for Express apps: [google-cloud](https://www.npmjs.com/package/google-cloud)
+
+```bash
+# You need `Google Cloud Functions` enabled.  
+gcloud services enable cloudfunctions.googleapis.com
+# Default region
+gcloud config set functions/region europe-west1
+gcloud config get-value functions/region
+# europe-west1
+
+# Sample code:
+git clone https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git
+# git clone https://github.com/GoogleCloudPlatform/python-docs-samples.git
+cd nodejs-docs-samples/functions/helloworld/
+
+# gcloud SDK: https://cloud.google.com/sdk/gcloud/reference/beta/functions/
+
+# Deploy:
+gcloud functions deploy helloGET --runtime nodejs8 --trigger-http #--region=europe-west1
+# Print:
+gcloud functions describe helloGET
+# httpsTrigger:
+#  url: https://us-central1-central-run-220517.cloudfunctions.net/helloGET
+
+start https://us-central1-central-run-220517.cloudfunctions.net/helloGET
+# Hello World
+
+# O&M:
+gcloud functions -h
+# Usage: gcloud functions [optional flags] <group | command>
+#   group may be           event-types | logs | regions
+#   command may be         call | delete | deploy | describe | list
+
+gcloud functions list
+# NAME      STATUS  TRIGGER       REGION
+# helloGET  ACTIVE  HTTP Trigger  us-central1
+
+# Delete:
+gcloud functions delete helloGET # takes minutes...
+
+```
+
 # IoT
 
 I want to connect some IoT devices to GCP. Here is an overview of the GCP services  
 [![iot.svg](https://cloud.google.com/images/solutions/iot/iot.svg)](https://cloud.google.com/solutions/iot/)
 
-You need `Cloud IoT API` enabld.  
+You need `Cloud IoT API` enabled.  
 ```bash
 gcloud services enable cloudiot.googleapis.com
 # Operation "operations/acf.f93e2f75-fe30-4b85-8253-4458ba5fffff" finished successfully.
@@ -101,7 +156,9 @@ Here are commands for the IoT API:
 Here are IoT tutorials: 
 [Google Cloud IoT - Solutions](https://cloud.google.com/solutions/iot/)
 
-From an ESP32 device here is how you connect it to  [Mongoose OS - Reporting state to Google IoT Core](https://mongoose-os.com/docs/mos/cloud/google.md#setup-google-iot-core)
+From an ESP32 (and ESP8266?) device here is how you connect it to  [Mongoose OS - Reporting state to Google IoT Core](https://mongoose-os.com/docs/mos/cloud/google.md#setup-google-iot-core)  
+
+And here are Mongoose supported HW + firmware [Mongoose OS Documentation](https://mongoose-os.com/docs/mos/userguide/devboards.md)  
 
 # Links
 
