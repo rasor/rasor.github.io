@@ -6,6 +6,8 @@ Tags: #shadowdom, #webcomponents, #customelements
 
 * [Building Components](https://developers.google.com/web/fundamentals/web-components/)
 * Build Component: [Web Components from Scratch — Bringing Back the Blink Tag](https://hackernoon.com/web-components-from-scratch-bringing-back-the-blink-tag-783743a0589e)
+* Frameworks using WebComponents: [Custom Elements Everywhere](https://custom-elements-everywhere.com/)
+* [Web Components Should Work Everywhere!](https://koukia.ca/web-components-should-work-everywhere-545f52acd0fb)
 
 ## Shadow DOM V1
 

@@ -2,6 +2,7 @@ Title: Miscelaneous NodeJS articles
 Date: 2099-01-01 00:00
 Tags: #ng, #nodejs, #basel, #typescript
 
+* 2018-07 - Express: [Http Error Handling with .NET and Node JS – Rogério de Oliveira – Medium](https://medium.com/@rogerio_oliveira1992/http-error-handling-with-net-and-node-js-3f0d3c80cb8a)
 * 2018-03: [Building Angular and Node with Bazel](http://www.syntaxsuccess.com/viewarticle/building-angular-and-node-with-bazel)
     * Github: [thelgevold/angular-bazel-example](https://github.com/thelgevold/angular-bazel-example/tree/express-api)
         * [ABC: Angular Buildtools Convergence](https://docs.google.com/document/d/1OlyiUnoTirUj4gecGxJeZBcjHcFr36RvLsvpBl2mxA8/preview)

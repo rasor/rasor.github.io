@@ -91,6 +91,11 @@ Tags: #azure, #webapi, #mbaas, #authentication, #ionic, #swagger, #swashbuckle, 
 * [Configure Private API (internal virtual networks)](https://docs.microsoft.com/en-us/azure/api-management/api-management-using-with-internal-vnet)
 * [Certificate authentication to backend](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-mutual-certificates)
 
+## MS WebApi
+
+* 2018-07: [Http Error Handling with .NET and Node JS – Rogério de Oliveira – Medium](https://medium.com/@rogerio_oliveira1992/http-error-handling-with-net-and-node-js-3f0d3c80cb8a)
+    * 2015-05: [Custom Exception in ASP.NET Web API 2 with Custom HttpResponse Message](https://www.dotnetcurry.com/aspnet/1133/aspnet-web-api-throw-custom-exception-message)
+
 ## Connect MBaaS REST to WCF .NET FW
 
 * [Guide - WCF to Swagger with Swagger4WCF](https://www.codeproject.com/Tips/1190441/How-to-Generate-Basic-Swagger-yaml-Description-for)
