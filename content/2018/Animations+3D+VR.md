@@ -5,9 +5,58 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 ## AWS Sumerian
 
 * Home: [Amazon Sumerian - Build VR &amp; AR applications](https://aws.amazon.com/sumerian/)
+* [Sumerian #Slack](https://bit.ly/amznsum)
+* Meetup: [Amazon Sumerian User Group](https://www.meetup.com/Amazon-Sumerian-User-Group/)
 * Vid: [Amazon Sumerian | Deep Dive into Real World Applications](https://www.twitch.tv/videos/305954414)
-* Vids: [Live Streaming on Twitch | AWS Developer Center](https://aws.amazon.com/developer/community/twitch/#Developing_AR_and_VR_Experiences)
+* Vids: [Live Streaming on Twitch | AWS Developer Center](https://www.youtube.com/playlist?list=PLhr1KZpdzukfBlfGVV966wxxQJOpAFnS-)
+    * [Live Streaming on Twitch | AWS Developer Center](https://aws.amazon.com/developer/community/twitch/recordings/)
 * 2018-Q4 Hackathon: [Amazon Sumerian AR/VR Challenge](https://amazonsumerian.devpost.com/)
+* 2018-11-26-30 Live: [AWS re:Invent 2018 Livestreams](https://pages.awscloud.com/event_GLOBAL_AWS-re-Invent-2018-Live-Stream-registration.html)
+* Tutorials: [Learn Amazon Sumerian | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/)
+* Tutorial: [Augmented Reality Using Sumerian and ARKit | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/augmented-reality-using-sumerian-arkit/)
+* Tutorial: [Augmented Reality Using Sumerian and ARCore | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/augmented-reality-using-sumerian-arcore/index.html)
+* Starter: [aws-samples/amazon-sumerian-arkit-starter-app](https://github.com/aws-samples/amazon-sumerian-arkit-starter-app)
+* Starter: [aws-samples/amazon-sumerian-arcore-starter-app](https://github.com/aws-samples/amazon-sumerian-arcore-starter-app)
+* Tutorial: [Iframe Communication | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/iframe-communication/index.html)
+* Tutorial: [IoT Thing, Shadow, and Script Actions | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/iot-thing-shadow-script/)
+* Tutorial: [Image Recognition Using Amazon Sumerian and ARKit | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/image-recognition-arkit/)
+* Tutorial: [Image Recognition Using Amazon Sumerian and ARCore | Learn Amazon Sumerian](https://docs.sumerian.amazonaws.com/tutorials/create/intermediate/image-recognition-arcore/)
+
+* speech -> Amazon Lex -> text -> Amazon Poly -> speech  
+* img/vid -> Amazon Recognition ->  
+* Sumerian Hosts (chatbots) <- SSML (Speech ML) gives tracking (where is host looking), emotions, speech  
+
+
+### Mozilla WevXR (from WebVR)
+
+## Resources
+
+* Sounds: [Jukedeck - Create unique, royalty-free AI music for your videos](https://www.jukedeck.com/)
+
+## ARKit (IOS)
+
+* Xamarin: [Getting started building Augmented Reality apps in Xamarin](https://medium.com/the-reading-room/getting-started-building-augmented-reality-apps-in-xamarin-46ee19b86ec8)
+
+## ARCore (Android)
+
+* Vid: [What's new in AR (Google I/O '18)](https://www.youtube.com/watch?v=MeZcQguH124)
+
+## Google Earth Engine
+
+* [Google Maps and Google Earth: What&#039;s the difference?](https://www.androidcentral.com/google-maps-google-earth-whats-difference)
+* [Introduction Google Earth Engine API](https://developers.google.com/earth-engine/)
+* [Google Earth and Earth Engine – Medium](https://medium.com/google-earth)
+* [google/earthengine-api](https://github.com/google/earthengine-api)
+
+## Google APIs
+
+* [Getting Started API Client Library for JavaScript](https://developers.google.com/api-client-library/javascript/start/start-js)
+  * [google/google-api-javascript-client](https://github.com/google/google-api-javascript-client)
+* [Welcome to the new API Library](https://console.developers.google.com/apis/library?pli=1)
+  * [Maps APIs](https://console.developers.google.com/apis/library?filter=category:maps)
+    * [Maps JavaScript API](https://console.developers.google.com/apis/library/maps-backend.googleapis.com?filter=category:maps&id=fd73ab50-9916-4cde-a0f6-dc8be0a0d425)
+    * [Places API](https://console.developers.google.com/apis/library/places-backend.googleapis.com?filter=category:maps&id=ecefdd63-ee2b-4751-b6c3-8e9113791baf)
+    * [Street View API](https://console.developers.google.com/apis/library/street-view-image-backend.googleapis.com?filter=category:maps&id=4fa9c2c7-b53f-45b5-8dbe-7bbb75b3a8af)
 
 ## Angular
 
