@@ -41,22 +41,32 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 
 * Vid: [What's new in AR (Google I/O '18)](https://www.youtube.com/watch?v=MeZcQguH124)
 
-## Google Earth Engine
+## WikiTude
 
-* [Google Maps and Google Earth: What&#039;s the difference?](https://www.androidcentral.com/google-maps-google-earth-whats-difference)
-* [Introduction Google Earth Engine API](https://developers.google.com/earth-engine/)
-* [Google Earth and Earth Engine – Medium](https://medium.com/google-earth)
-* [google/earthengine-api](https://github.com/google/earthengine-api)
+* [Wikitude Cross Platform Augmented Reality SDK](https://www.wikitude.com/products/wikitude-sdk/)
+  * Blog: [ARKit and ARCore - beyond the hype and what’s next for Wikitude - Wikitude](https://www.wikitude.com/blog-arkit-and-arcore-beyond-the-hype-and-whats-next-for-wikitude/)
+  * [World Leading Augmented Reality Engine - Download Overview](https://www.wikitude.com/download/)
+    * Cordova, Unity, Ionic3, React Native, Xamarin, etc
+      * Ionic: [Wikitude-ionic-3-starter-app](https://market.ionicframework.com/starters/wikitude-ionic-3-starter-app)
+        * [pbreuss/wikitude-ionic-3-starter-app](https://github.com/pbreuss/wikitude-ionic-3-starter-app)
+      * Cordova: [Download Wikitude AR SDK for Cordova and get a Free Trial!](https://www.wikitude.com/download-wikitude-sdk-for-cordova/)
+      * JS/Android: [Download Wikitude AR SDK for Android and get a Free Trial!](https://www.wikitude.com/download-wikitude-sdk-for-android/)
+      * Unity: [Download Wikitude AR SDK for Unity and get a Free Trial!](https://www.wikitude.com/download-wikitude-sdk-for-unity/)
+      * React: [Download Wikitude AR SDK for React Native and get a Free Trial!](https://www.wikitude.com/download-wikitude-sdk-for-react-native/)
+  * [https://studio.wikitude.com/projects](https://studio.wikitude.com/projects)
 
-## Google APIs
+## AR.js
 
-* [Getting Started API Client Library for JavaScript](https://developers.google.com/api-client-library/javascript/start/start-js)
-  * [google/google-api-javascript-client](https://github.com/google/google-api-javascript-client)
-* [Welcome to the new API Library](https://console.developers.google.com/apis/library?pli=1)
-  * [Maps APIs](https://console.developers.google.com/apis/library?filter=category:maps)
-    * [Maps JavaScript API](https://console.developers.google.com/apis/library/maps-backend.googleapis.com?filter=category:maps&id=fd73ab50-9916-4cde-a0f6-dc8be0a0d425)
-    * [Places API](https://console.developers.google.com/apis/library/places-backend.googleapis.com?filter=category:maps&id=ecefdd63-ee2b-4751-b6c3-8e9113791baf)
-    * [Street View API](https://console.developers.google.com/apis/library/street-view-image-backend.googleapis.com?filter=category:maps&id=4fa9c2c7-b53f-45b5-8dbe-7bbb75b3a8af)
+* [jeromeetienne/AR.js](https://github.com/jeromeetienne/AR.js/blob/master/README.md)
+* [Creating Augmented Reality with AR.js and A-Frame – A-Frame](https://aframe.io/blog/arjs/)
+* [WebAR Playground: AR in a Few Clicks – ARjs – Medium](https://medium.com/arjs/webar-playground-ar-in-a-few-clicks-67a08cfb1534)
+* [Augmented Website](https://webxr.io/augmented-website/)
+* [Three.js Examples](https://jeromeetienne.github.io/AR.js-docs/misc/EXAMPLES.html)
+
+## Awe.js
+
+* [Augmented Reality in the Browser with Awe.js SitePoint](https://www.sitepoint.com/augmented-reality-in-the-browser-with-awe-js/)
+* [awe-media/awe.js](https://github.com/awe-media/awe.js)
 
 ## Angular
 
