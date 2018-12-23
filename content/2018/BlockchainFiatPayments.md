@@ -6,15 +6,14 @@ Tags: #blockchain, #fiat, #sepa
 # Fiat Payment systems
 
 * Credit Card: Visa, Mastercard
+* EU: [SEPA (SCT Inst)](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area)
+* NL: [iDEAL - Becoming an iDEAL Partner](https://www.ideal.nl/en/partners/becoming-an-ideal-partner/)
+* DE: GiroPay
+* Austria: EPS
 * NetTeller
 * Skrill
 * Sofort-transfer
-* GiroPay
 * Amazon
-* EPS
-* EU: [SEPA (SCT Inst)](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area)
-* NL: [iDEAL - Becoming an iDEAL Partner](https://www.ideal.nl/en/partners/becoming-an-ideal-partner/)
-* BitPanda
 
 # Other
 

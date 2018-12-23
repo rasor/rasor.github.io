@@ -14,10 +14,10 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 ## Fiat 2 Crypto
 
 * List of apps: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
-    * [CoinBase](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Home: UK
+    * [Bitpanda](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Home: Austria. Fee: 1½%
+    * [CoinBase](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Home: UK. Fee: 4%
     * [Luno](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst. Home: Estonia
     * [Coinmama](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
-    * [Bitpanda](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Home: Austria
     * Cex.io
     * BitStamp
     * LocalBitcoins
