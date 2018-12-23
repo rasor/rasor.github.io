@@ -5,10 +5,29 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 # Trade
 
+## Fiat Instant payments
+
+* 2017-10 Interview: [The Danish payment landscape: When instant becomes the new normal](https://www.europeanpaymentscouncil.eu/news-insights/insight/danish-payment-landscape-when-instant-becomes-new-normal)
+* SEPA Instant Credit Transfer (SCT Inst)
+    * [SEPA](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area)
+
 ## Fiat 2 Crypto
 
+* List of apps: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
+    * [CoinBase](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Home: UK
+    * [Luno](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst. Home: Estonia
+    * [Coinmama](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
+    * [Bitpanda](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Home: Austria
+    * Cex.io
+    * BitStamp
+    * LocalBitcoins
 * US Users - [Wyre - Crypto API for payments and KYC cryptocurrency verification](https://www.sendwyre.com/) - Used by MakerDAO
     * [Maker on Twitter](https://twitter.com/MakerDAO/status/1029353655097614337)
+
+## Identity verifiers (KYC)
+
+* [IDnow](https://www.idnow.io/). Home: DE
+* [identity Trust Management AG](https://www.identity.tm/). Home: DE
 
 ### Payment network
 
@@ -115,6 +134,10 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 ### Learn
 
+* DK Vid 2013-10: [YouTube - So ein Ding - Bitcoin - 22. oktober 2013](https://www.youtube.com/watch?v=Rhn4--Phsuo)
+* DK Vid 201x: [YouTube - So ein Ding: Bitcoin & Blockchain](https://www.youtube.com/watch?v=nYi1itXLKsM&t=345s)
+    * DK Opstart (se kommentaren): [YouTube](https://www.youtube.com/watch?v=nYi1itXLKsM&lc=Ugx2nPzeobLkayyL4qF4AaABAg)
+* [Blockchain Summer School @CBS 2018 - Required Reading](https://blockchainschool.eu/wp-content/uploads/2018/06/Required-Reading-20180620.pdf)
 * BlockChain
     * [CBS summer school - August - How to Apply](https://blockchainschool.eu/how-to-apply/) - Kr. 2300,- incl. hackathon
 * Ethereum
@@ -134,6 +157,10 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * [BitcoinTalk - Beginners & Help](https://bitcointalk.org/index.php?board=39.0)
 
 # Startup
+
+## Apps
+
+* Blog 2017: [We already know blockchain’s killer apps](https://hackernoon.com/we-already-know-blockchains-killer-apps-f2d443eba35)
 
 ## Biz model evaluation
 

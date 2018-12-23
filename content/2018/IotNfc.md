@@ -56,4 +56,8 @@ Tags: #nfc, #iot, #arduino, #cordova,
 
 * [NFC World](https://www.nfcworld.com/)
 
+## Experiments
+
+* [rasor/mhc18-cordova-nfc](https://github.com/rasor/mhc18-cordova-nfc)
+
 The End
