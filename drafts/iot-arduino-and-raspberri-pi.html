@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="urish/angular-iot U Go Hue Go - Slides by Tara Z. Manicsic U Go Hue Go: Controlling Philips Hue Lights with Angular and Kendo UI GDG DevFest Ukraine - @kennethrohde Program a smart device directly, no install needed – Kenneth Christiansen – Medium Raspberry Pi Serverless at the Edge: Up and Running w/ OpenFaaS …" />
+<meta name="keywords" content="#ng, #iot, #hue, #kendoui, #bluetooth, #raspberrypi, #arduino, #openfaas">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Iot, Arduino and Raspberri Pi"/>
+<meta property="og:description" content="urish/angular-iot U Go Hue Go - Slides by Tara Z. Manicsic U Go Hue Go: Controlling Philips Hue Lights with Angular and Kendo UI GDG DevFest Ukraine - @kennethrohde Program a smart device directly, no install needed – Kenneth Christiansen – Medium Raspberry Pi Serverless at the Edge: Up and Running w/ OpenFaaS …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/iot-arduino-and-raspberri-pi.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Dev"/>
+<meta property="article:tag" content="#ng"/>
+<meta property="article:tag" content="#iot"/>
+<meta property="article:tag" content="#hue"/>
+<meta property="article:tag" content="#kendoui"/>
+<meta property="article:tag" content="#bluetooth"/>
+<meta property="article:tag" content="#raspberrypi"/>
+<meta property="article:tag" content="#arduino"/>
+<meta property="article:tag" content="#openfaas"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Iot, Arduino and Raspberri Pi</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="iot-arduino-and-raspberri-pi">Iot, Arduino and Raspberri Pi</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/dev.html">Dev</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>
+<p><a href="https://github.com/urish/angular-iot">urish/angular-iot</a></p>
+</li>
+<li>
+<p><a href="http://slides.com/tzmanics/deck-4-6-8#/">U Go Hue Go - Slides by Tara Z. Manicsic</a></p>
+</li>
+<li>
+<p><a href="https://developer.telerik.com/products/kendo-ui/u-go-hue-go-controlling-philips-hue-lights-with-angular-and-kendo-ui/">U Go Hue Go: Controlling Philips Hue Lights with Angular and Kendo UI</a></p>
+</li>
+<li>
+<p><a href="https://docs.google.com/presentation/d/1QNcQwDwq5pwwdjpN9t4hCgvBXWWgLvehiLQdzonsqZA/edit#slide=id.g24e228bf8a_4_37">GDG DevFest Ukraine - @kennethrohde</a></p>
+</li>
+<li><a href="https://medium.com/@kennethrohde/program-a-smart-device-directly-no-install-needed-cd8b29320d76">Program a smart device directly, no install needed – Kenneth Christiansen – Medium</a></li>
+</ul>
+<h1>Raspberry Pi</h1>
+<ul>
+<li><a href="https://medium.com/@JockDaRock/serverless-at-the-edge-up-and-running-w-openfaas-docker-on-a-raspberry-pi-multi-node-cluster-e0957f4d8a49">Serverless at the Edge: Up and Running w/ OpenFaaS &amp; Docker on a Raspberry Pi Multi-Node Cluster…</a></li>
+<li><a href="https://blog.alexellis.io/your-serverless-raspberry-pi-cluster/">Your serverless Raspberry Pi cluster with Docker</a></li>
+<li>Copy OS images to disk using <a href="https://etcher.io/">Etcher by resin.io</a></li>
+</ul>
+<h1>Apps</h1>
+<ul>
+<li><a href="https://www.home-assistant.io/">Home Assistant</a> #hub, #app</li>
+<li><a href="https://www.home-assistant.io/docs/ecosystem/tor/">Tor Onion Service Configuration</a></li>
+</ul>
+<h1>Persons</h1>
+<ul>
+<li><a href="https://noopkat.com/">Suz Hinton - noopkat</a> - IOT Geek</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/ng.html">#ng</a>
+      <a href="https://rasor.github.io/tag/iot.html">#iot</a>
+      <a href="https://rasor.github.io/tag/hue.html">#hue</a>
+      <a href="https://rasor.github.io/tag/kendoui.html">#kendoui</a>
+      <a href="https://rasor.github.io/tag/bluetooth.html">#bluetooth</a>
+      <a href="https://rasor.github.io/tag/raspberrypi.html">#raspberrypi</a>
+      <a href="https://rasor.github.io/tag/arduino.html">#arduino</a>
+      <a href="https://rasor.github.io/tag/openfaas.html">#openfaas</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Update.Ionic.Zone From v3.4.2 To v3.7.1 Create newest template and test ionic start newesttemplate blank --type=ionic-angular cd newesttemplate ionic serve Diff the template with your old version Git updates In .gitignore add lines .sourcemaps/ www/ If you have committed files in www\ you need …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Ionic upgrade check-list"/>
+<meta property="og:description" content="Update.Ionic.Zone From v3.4.2 To v3.7.1 Create newest template and test ionic start newesttemplate blank --type=ionic-angular cd newesttemplate ionic serve Diff the template with your old version Git updates In .gitignore add lines .sourcemaps/ www/ If you have committed files in www\ you need …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/ionic-upgrade-check-list.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="misc"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Ionic upgrade check-list</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ionic-upgrade-check-list">Ionic upgrade check-list</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>
+<p><a href="https://update.ionic.zone/">Update.Ionic.Zone</a></p>
+</li>
+<li>
+<p>From v3.4.2</p>
+</li>
+<li>
+<p>To v3.7.1</p>
+</li>
+<li>
+<p>Create newest template and test</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="n">ionic</span> <span class="n">start</span> <span class="n">newesttemplate</span> <span class="n">blank</span> <span class="p">-</span><span class="n">-type</span><span class="p">=</span><span class="n">ionic-angular</span>
+<span class="n">cd</span> <span class="n">newesttemplate</span>
+<span class="n">ionic</span> <span class="n">serve</span>
+</pre></div>
+
+
+<ol>
+<li>
+<p>Diff the template with your old version</p>
+</li>
+<li>
+<p>Git updates</p>
+</li>
+<li>
+<p>In <code>.gitignore</code> add lines</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="p">.</span><span class="n">sourcemaps</span><span class="p">/</span>
+<span class="n">www</span><span class="p">/</span>
+</pre></div>
+
+
+<p>If you have committed files in <code>www\</code> you need to remove tracked files
+<code>git rm -r --cached</code></p>
+<ol>
+<li>
+<p>Dependencies - <code>package.json</code></p>
+</li>
+<li>
+<p>Replace <code>dependencies</code> and <code>devDependencies</code></p>
+</li>
+<li>
+<p>Extra added (project specific) dependencies you need to move and upgrade version manually</p>
+</li>
+<li>
+<p><code>src/service-worker.js</code></p>
+</li>
+<li>
+<p>After main.js add</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span>    &#39;./build/vendor.js&#39;,
+</pre></div>
+
+
+<p>... or just replace the whole file.</p>
+<ol>
+<li>
+<p><code>src/index.html</code></p>
+</li>
+<li>
+<p>Before cordova.js add</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span>  &lt;!-- add to homescreen for ios --&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-capable&quot; content=&quot;yes&quot;&gt;
+  &lt;meta name=&quot;apple-mobile-web-app-status-bar-style&quot; content=&quot;black&quot;&gt;
+</pre></div>
+
+
+<ul>
+<li>Before main.js add</li>
+</ul>
+<div class="highlight"><pre><span></span>  <span class="c">&lt;!-- The vendor js is generated during the build process</span>
+<span class="c">       It contains all of the dependencies in node_modules --&gt;</span>
+  <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;build/vendor.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+
+<hr>
+<h1>Links</h1>
+<ul>
+<li><a href="https://github.com/rasor/ionDogMap/commit/0a292fa2b5cd73594c233cad382abcaef08c213c">Compare</a></li>
+<li><a href="https://rasor.wordpress.com/2017/06/29/update-ionic1-poject-to-new-ioniccli-plugin-ionic1-2-0-0/">https://rasor.wordpress.com/2017/06/29/update-ionic1-poject-to-new-ioniccli-plugin-ionic1-2-0-0/</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

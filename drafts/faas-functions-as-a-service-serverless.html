@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Microservices Book: Microservices Architecture for eCommerce Book: Hands-on DevOps | PACKT Books Book: Architectural Patterns | PACKT Books Functions Fowler Article: Serverless Architectures Book: Docker for Serverless Applications | PACKT Books Projects: CNCF Cloud Native Interactive Landscape cncf/wg-serverless Blog: Exploring Data with Serverless and Vue: Automatically Update GitHub Files With Serverless Functions …" />
+<meta name="keywords" content="#google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="FaaS - Functions as a Service - Serverless"/>
+<meta property="og:description" content="Microservices Book: Microservices Architecture for eCommerce Book: Hands-on DevOps | PACKT Books Book: Architectural Patterns | PACKT Books Functions Fowler Article: Serverless Architectures Book: Docker for Serverless Applications | PACKT Books Projects: CNCF Cloud Native Interactive Landscape cncf/wg-serverless Blog: Exploring Data with Serverless and Vue: Automatically Update GitHub Files With Serverless Functions …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/faas-functions-as-a-service-serverless.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#google"/>
+<meta property="article:tag" content="#mobile"/>
+<meta property="article:tag" content="#web"/>
+<meta property="article:tag" content="#pwa"/>
+<meta property="article:tag" content="#serverless"/>
+<meta property="article:tag" content="#vuejs"/>
+<meta property="article:tag" content="#react"/>
+<meta property="article:tag" content="#faas"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; FaaS - Functions as a Service - Serverless</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="faas-functions-as-a-service-serverless">FaaS - Functions as a Service - Serverless</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Microservices</h1>
+<ul>
+<li>Book: <a href="http://go.divante.co/microservices-architecture-ecommerce/">Microservices Architecture for eCommerce</a></li>
+<li>Book: <a href="https://www.packtpub.com/virtualization-and-cloud/hands-devops">Hands-on DevOps | PACKT Books</a></li>
+<li>Book: <a href="https://www.packtpub.com/application-development/architectural-patterns">Architectural Patterns | PACKT Books</a></li>
+</ul>
+<h1>Functions</h1>
+<ul>
+<li>Fowler Article: <a href="https://martinfowler.com/articles/serverless.html">Serverless Architectures</a></li>
+<li>Book: <a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications">Docker for Serverless Applications | PACKT Books</a></li>
+<li>Projects: <a href="https://landscape.cncf.io/landscape=serverless">CNCF Cloud Native Interactive Landscape</a><ul>
+<li><a href="https://github.com/cncf/wg-serverless#landscape">cncf/wg-serverless</a> </li>
+</ul>
+</li>
+<li>Blog: <a href="https://css-tricks.com/exploring-data-with-serverless-and-vue-part-i/">Exploring Data with Serverless and Vue: Automatically Update GitHub Files With Serverless Functions | CSS-Tricks</a></li>
+<li>Slides: <a href="https://www.slideshare.net/AmazonWebServices/application-lifecycle-management-in-a-serverless-world">Application Lifecycle Management in a Serverless World</a></li>
+<li>AWS: <a href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-edge.html">Lambda@Edge - AWS Lambda</a></li>
+<li>Blog: <a href="https://buttercms.com/blog/serverless-react-blog-tutorial">How to Build a Serverless, SEO-friendly React blog with Netlify</a></li>
+<li>Wiki: <a href="https://github.com/hashicorp/faas-nomad/wiki/Monitoring-with-Prometheus-and-Grafana">Monitoring with Prometheus and Grafana</a></li>
+</ul>
+<h2>OpenFaaS</h2>
+<ul>
+<li><a href="https://www.openfaas.com/">OpenFaaS</a></li>
+<li>Blog: <a href="https://blog.alexellis.io/introducing-functions-as-a-service/">Introducing Functions as a Service (FaaS)</a><ul>
+<li>Link to 6 other FaaS frameworks: <ul>
+<li>Funktion</li>
+<li>Iron Functions</li>
+<li>OpenWhisk</li>
+<li>Kubeless</li>
+<li>Fission</li>
+<li>FaaS-netes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Vid: <a href="https://www.youtube.com/watch?v=C3agSKv2s_w">OpenFaaS: From Zero to Serverless in 60 Seconds Anywhere with Alex Ellis</a></li>
+<li>Vid: <a href="https://www.youtube.com/watch?v=0DbrLsUvaso">OpenFaaS complete walk-through on Kubernetes</a></li>
+<li>Blog: <a href="https://blog.alexellis.io/serverless-databases-with-openfaas-and-mongo/">Databases with OpenFaaS and Mongo</a></li>
+<li><a href="https://github.com/openfaas/faas/blob/master/guide/asynchronous.md">Guide on Asynchronous processing</a></li>
+<li>Image: <a href="https://hub.docker.com/r/functions/gateway/">API gateway</a></li>
+<li>Image: <a href="https://hub.docker.com/r/functions/prometheus/">Prometheus</a></li>
+<li>Solution: <a href="https://finnian.io/blog/colourising-video-with-openfaas-serverless-functions/">Colourising Video with OpenFaaS &amp; Serverless Functions</a><ul>
+<li>Using: <a href="http://caffe.berkeleyvision.org/">Caffe | Deep Learning Framework</a></li>
+</ul>
+</li>
+<li>Solution: <a href="https://medium.com/iconscout/how-openfaas-came-to-rescue-us-ec129518cd46">How OpenFaaS came to rescue us! – Iconscout</a></li>
+<li>Deploy: <a href="https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-aws-259ec9515e3c">Deploying OpenFaaS on Kubernetes — AWS – Eric Stoekl – Medium</a></li>
+<li>Deploy: <a href="https://medium.com/@ericstoekl/deploying-openfaas-on-kubernetes-azure-aks-4eea99d0743f">Deploying OpenFaaS on Kubernetes — Azure AKS (OpenFaaS on AKS 1/2)</a></li>
+<li>Deploy: <a href="https://docs.microsoft.com/da-dk/azure/aks/openfaas">Use OpenFaaS with Azure Kubernetes Service (AKS)</a><ul>
+<li>Deploy OSBA: <a href="https://docs.microsoft.com/da-dk/azure/aks/integrate-azure">Integrate with Azure-managed services using Open Service Broker for Azure (OSBA)</a><ul>
+<li><a href="https://github.com/manifoldco/service-catalog-tutorial/blob/master/labs/install-and-configure-service-catalog.md">Install and configure service-catalog</a></li>
+</ul>
+</li>
+<li>Deploy k8s: <a href="https://docs.microsoft.com/da-dk/azure/aks/kubernetes-helm">Deploy containers with Helm in Kubernetes on Azure</a></li>
+</ul>
+</li>
+<li>Deploy: <a href="https://blog.openshift.com/openfaas-on-openshift/">OpenFaaS on OpenShift</a></li>
+<li>Deploy: <a href="https://medium.com/devopslinks/getting-started-with-openfaas-on-minikube-634502c7acdf">Getting started with OpenFaaS on minikube</a></li>
+<li>Deploy: <a href="https://dev.to/developius/functions-as-a-service---deploying-functions-to-docker-swarm-via-a-cli">Deploying serverless functions to Docker Swarm via a CLI</a></li>
+<li><a href="https://docs.openfaas.com/deployment/docker-swarm/">Deployment guide for Docker Swarm</a></li>
+<li>Blog: <a href="https://blog.alexellis.io/announcing-function-store/">Announcing the OpenFaaS Function Store</a></li>
+<li>Blog 2018-04: <a href="https://blog.alexellis.io/introducing-openfaas-cloud/">Introducing OpenFaaS Cloud</a></li>
+<li>Blog: <a href="https://blog.alexellis.io/cli-functions-with-openfaas/">Turn Any CLI into a Function with OpenFaaS</a></li>
+<li>Blog 2018-07: <a href="https://blog.alexellis.io/introducing-the-openfaas-operator/">Introducing the OpenFaaS Operator for Serverless on Kubernetes</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/google.html">#google</a>
+      <a href="https://rasor.github.io/tag/mobile.html">#mobile</a>
+      <a href="https://rasor.github.io/tag/web.html">#web</a>
+      <a href="https://rasor.github.io/tag/pwa.html">#pwa</a>
+      <a href="https://rasor.github.io/tag/serverless.html">#serverless</a>
+      <a href="https://rasor.github.io/tag/vuejs.html">#vuejs</a>
+      <a href="https://rasor.github.io/tag/react.html">#react</a>
+      <a href="https://rasor.github.io/tag/faas.html">#faas</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Articles When To Use Which (OAuth2) Grants and (OIDC) Flows Which OpenID Connect/OAuth 2.0 Flow is the right One? Code SPA ng CLI sample SPA built on MSAL.js with Azure AD B2C SPA CLI &amp; ASP.NET Core WebAPI REST WebApp/WebAPI with Microsoft.Owin.Security.OpenIdConnect Identity …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="OIdC Authentication"/>
+<meta property="og:description" content="Articles When To Use Which (OAuth2) Grants and (OIDC) Flows Which OpenID Connect/OAuth 2.0 Flow is the right One? Code SPA ng CLI sample SPA built on MSAL.js with Azure AD B2C SPA CLI &amp; ASP.NET Core WebAPI REST WebApp/WebAPI with Microsoft.Owin.Security.OpenIdConnect Identity …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/oidc-authentication.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="misc"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; OIdC Authentication</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="oidc-authentication">OIdC Authentication</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p><img alt="SPA host" src="https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-reference-spa" title="SPA host"></p>
+<p><img alt="WebApp host" src="https://docs.microsoft.com/en-us/azure/media/active-directory-v2-flows/convergence_scenarios_webapp.png" title="WebApp host"></p>
+<h2>Articles</h2>
+<ul>
+<li><a href="https://medium.com/@robert.broeckelmann/when-to-use-which-oauth2-grants-and-oidc-flows-ec6a5c00d864">When To Use Which (OAuth2) Grants and (OIDC) Flows</a></li>
+<li><a href="https://leastprivilege.com/2016/01/17/which-openid-connectoauth-2-o-flow-is-the-right-one/">Which OpenID Connect/OAuth 2.0 Flow is the right One?</a></li>
+</ul>
+<h2>Code</h2>
+<h3>SPA</h3>
+<ul>
+<li><a href="https://github.com/rasor/angular-cli-auth-oidc-sample-google-openid">ng CLI sample</a></li>
+<li><a href="https://github.com/Azure-Samples/active-directory-b2c-javascript-msal-singlepageapp">SPA built on MSAL.js with Azure AD B2C</a></li>
+<li><a href="https://github.com/robisim74/AngularCliAspNetCore">SPA CLI &amp; ASP.NET Core WebAPI</a></li>
+</ul>
+<h3>REST</h3>
+<ul>
+<li><a href="https://auth0.com/docs/protocols/oidc/openid-connect-discovery">WebApp/WebAPI with Microsoft.Owin.Security.OpenIdConnect</a></li>
+</ul>
+<h1>Identity Providers</h1>
+<ul>
+<li><a href="https://accounts.google.com/.well-known/openid-configuration">https://accounts.google.com/.well-known/openid-configuration</a></li>
+<li><a href="https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration">https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration</a></li>
+<li><a href="https://login.microsoftonline.com/common/.well-known/openid-configuration">https://login.microsoftonline.com/common/.well-known/openid-configuration</a></li>
+<li><a href="https://auth.login.yahoo.co.jp/yconnect/v2/.well-known/openid-configuration">https://auth.login.yahoo.co.jp/yconnect/v2/.well-known/openid-configuration</a></li>
+<li><a href="https://www.paypalobjects.com/.well-known/openid-configuration">https://www.paypalobjects.com/.well-known/openid-configuration</a></li>
+</ul>
+<hr>
+<p>https://github.com/rasor/rasor.github.io/blob/pelican/content/2017/AzureMBaaSforIonic.md </p>
+<p>https://connect2id.com/learn/openid-connect<br>
+http://kevinchalet.com/2016/07/13/creating-your-own-openid-connect-server-with-asos-choosing-the-right-flows/ </p>
+<p>http://openid.net/add-openid/add-getting-started/<br>
+http://openid.net/developers/certified/<br>
+http://openid.net/specs/openid-connect-core-1_0.html#rfc.section.3  </p>
+<p>"response_type" value
+Flow
+code 
+Authorization Code Flow
+id_token 
+Implicit Flow
+id_token token 
+Implicit Flow
+code id_token 
+Hybrid Flow
+code token 
+Hybrid Flow
+code id_token token 
+Hybrid Flow</p>
+<p>https://leastprivilege.com/2016/01/17/which-openid-connectoauth-2-o-flow-is-the-right-one/<br>
+https://nordicapis.com/api-security-oauth-openid-connect-depth/  </p>
+<h2>Code flow</h2>
+<h3>Sandbox</h3>
+<p>https://openidconnect.net/  </p>
+<h2>Implicit flow</h2>
+<p>http://openid.net/specs/openid-connect-core-1_0.html#rfc.section.3.2<br>
+https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant#is-the-implicit-grant-suitable-for-my-app </p>
+<p>2016 Oidc implicit - cUrl<br>
+http://nzpcmad.blogspot.dk/2016/08/postman-using-curl-to-send-openid.html  </p>
+<p>Problem with Oidc - AAD: Cannot use “id_token token” (Implicit flow) to return bearer token to SPA CLI. Code flow is possible to use to get bearer token.<br>
+* <a href="https://medium.com/@robert.broeckelmann/differences-between-azure-active-directory-and-red-hat-sso-v7-1-239dd77a5e9a">Differences Between Azure Active Directory and Red Hat SSO v7.1</a></p>
+<p>2016 AAD - only asking for (bearer) token<br>
+http://nzpcmad.blogspot.dk/2016/08/postman-azure-ad-and-implicit-flow.html </p>
+<p>2016 OAuth implicit for Swashbuckle to AAD<br>
+http://nzpcmad.blogspot.dk/2016/12/swagger-using-swagger-for-implicit_21.html<br>
+Client<br>
+https://damienbod.com/2017/09/26/auto-redirect-to-an-sts-server-in-an-angular-app-using-oidc-implicit-flow/  </p>
+<h2>Social Providers on Core, OWIN or Express</h2>
+<h3>Social Providers on Core</h3>
+<p>https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers  </p>
+<h3>Social Providers on OWIN</h3>
+<p>https://github.com/TerribleDev/OwinOAuthProviders  </p>
+<h2>REST on Core, OWIN or Express</h2>
+<h3>WebAPI on Core</h3>
+<p>2017 Oidc implicit - Ngx CLI - Asos+SQLids - Webapi Core2 - EF - Good separated WebAPI sample<br>
+https://damienbod.com/2017/04/11/implementing-openid-implicit-flow-using-openiddict-and-angular/  </p>
+<p>2017 WebAPI Core2 bearer tokens - HowTo test<br>
+https://jonhilton.net/security/apis/secure-your-asp.net-core-2.0-api-part-2---jwt-bearer-authentication/  </p>
+<p>2017 Oidc implicit - ngx - keycloak - webapi core2 (dotnet new angular)<br>
+https://medium.com/@xavier.hahn/asp-net-core-angular-openid-connect-using-keycloak-6437948c008<br>
+https://medium.com/@xavier.hahn/adding-authorization-to-asp-net-core-app-using-keycloak-c6c96ee0e655  </p>
+<p>2017 Oidc implicit - ngx - identityserver - webapi core2<br>
+https://github.com/damienbod/AspNet5IdentityServerAngularImplicitFlow  </p>
+<h3>WebAPI on OWIN</h3>
+<p>About OWIN<br>
+https://github.com/aspnet/AspNetKatana/wiki/Roadmap<br>
+http://johnatten.com/2015/01/04/asp-net-understanding-owin-katana-and-the-middleware-pipeline/<br>
+https://brockallen.com/2013/08/07/owin-authentication-middleware-architecture/<br>
+https://brockallen.com/2013/10/27/host-authentication-and-web-api-with-owin-and-active-vs-passive-authentication-middleware/<br>
+https://brockallen.com/2014/01/09/a-primer-on-external-login-providers-social-logins-with-owinkatana-authentication-middleware/<br>
+https://gkulshrestha.wordpress.com/2014/01/19/oauth-implicit-grant-flow-with-owinkatana/  </p>
+<p>OWIN packages<br>
+https://github.com/aspnet/AspNetKatana/wiki/Packages<br>
+https://www.nuget.org/packages/Microsoft.Owin.Security.OpenIdConnect/4.0.0-preview1<br>
+https://www.nuget.org/packages/Microsoft.AspNet.WebApi.Owin/<br>
+https://docs.microsoft.com/en-us/aspnet/aspnet/overview/owin-and-katana/an-overview-of-project-katana  </p>
+<p>Tweak message in OWIN middleware<br>
+http://www.cloudidentity.com/blog/2017/03/20/tweak-sign-in-messages-with-the-asp-net-owin-middleware/  </p>
+<p>2017 Oidc - OWIN - AAD - WebAPI<br>
+https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-devquickstarts-webapi-dotnet  </p>
+<p>2016 5 pages<br>
+Oidc - OWIN - install<br>
+https://www.microsoftpressstore.com/articles/article.aspx?p=2473126  </p>
+<p>2014 Oidc - OWIN<br>
+http://appetere.com/post/getting-started-with-openid-connect  </p>
+<p>2014 Oidc - OWIN - Console CLI - AAD - WebAPI<br>
+http://www.cloudidentity.com/blog/2014/04/28/use-owin-azure-ad-to-secure-both-mvc-ux-and-web-api-in-the-same-project/<br>
+2014 Oidc - OWIN - WebAPI - Ext ID<br>
+https://blogs.msdn.microsoft.com/webdev/2014/03/28/owin-security-components-in-asp-net-openid-connect/  </p>
+<p>2015 OWIN - WebAPI<br>
+http://johnatten.com/2015/01/19/asp-net-web-api-understanding-owinkatana-authenticationauthorization-part-i-concepts/  </p>
+<p>2017 Oidc implicit - OWIN - WebAPI as client<br>
+https://docs.sitefinity.com/request-access-token-for-calling-web-services  </p>
+<p>2014 OAuth Implicit - OWIN<br>
+https://gkulshrestha.wordpress.com/2014/01/19/oauth-implicit-grant-flow-with-owinkatana/  </p>
+<h3>REST on Express</h3>
+<p>2017 Oidc - keycloak - express<br>
+https://codeburst.io/keycloak-and-express-7c71693d507a  </p>
+<h2>ID Server (OpenidDict/ASOS)</h2>
+<p>Oidc - IDServer -  Core2 or OWIN<br>
+https://github.com/openiddict/openiddict-samples<br>
+2016 Oidc implicit/code - Core - ASOS<br>
+http://kevinchalet.com/2016/07/13/creating-your-own-openid-connect-server-with-asos-implementing-the-authorization-code-and-implicit-flows/<br>
+http://kevinchalet.com/2017/01/30/implementing-simple-token-authentication-in-aspnet-core-with-openiddict/<br>
+-&gt; http://kevinchalet.com/2017/10/20/the-new-asos-and-openiddict-packages-are-now-on-nuget-org/  </p>
+<p>Oidc implicit - OWIN - ASOS - WinAuth<br>
+https://www.howtucode.com/angularjs-webapi-jwt-with-integrated-windows-authentication-221727.html  </p>
+<h2>Authorization</h2>
+<p>https://leastprivilege.com/2017/07/10/authorization-is-hard-slides-and-video-from-ndc-oslo-2017/<br>
+https://speakerdeck.com/leastprivilege/implementing-authorization-for-applications-and-apis?slide=5 </p>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
