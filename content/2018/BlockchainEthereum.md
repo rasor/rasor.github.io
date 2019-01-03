@@ -5,29 +5,9 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 # Trade
 
-## Fiat Instant payments
+## Charts
 
-* 2017-10 Interview: [The Danish payment landscape: When instant becomes the new normal](https://www.europeanpaymentscouncil.eu/news-insights/insight/danish-payment-landscape-when-instant-becomes-new-normal)
-* SEPA Instant Credit Transfer (SCT Inst)
-    * [SEPA](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area)
-
-## Fiat 2 Crypto
-
-* List of apps: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
-    * [Bitpanda](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Home: Austria. Fee: 1½%
-    * [CoinBase](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Home: UK. Fee: 4%
-    * [Luno](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst. Home: Estonia
-    * [Coinmama](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
-    * Cex.io
-    * BitStamp
-    * LocalBitcoins
-* US Users - [Wyre - Crypto API for payments and KYC cryptocurrency verification](https://www.sendwyre.com/) - Used by MakerDAO
-    * [Maker on Twitter](https://twitter.com/MakerDAO/status/1029353655097614337)
-
-## Identity verifiers (KYC)
-
-* [IDnow](https://www.idnow.io/). Home: DE
-* [identity Trust Management AG](https://www.identity.tm/). Home: DE
+* [Ethereum (ETH) price, charts, market cap, and other metrics | CoinMarketCap](https://coinmarketcap.com/currencies/ethereum/#charts)
 
 ### Payment network
 
@@ -35,33 +15,33 @@ Tags: #blockchain, #cryptocurrency, #ethereum
     * [Stellar - Develop the world's new financial system](https://www.stellar.org/)
     * [Blockchain could rescue a media business model in distress - TechSavvy](https://techsavvy.media/blockchain-could-rescue-a-media-business-model-in-distress/)
 
-## Charts
-
-* [Ethereum (ETH) price, charts, market cap, and other metrics | CoinMarketCap](https://coinmarketcap.com/currencies/ethereum/#charts)
-
-# Crypto Wallets
-
-* [Ethereum](https://ethereum.org/)
-* Chrome plugin: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
-    * Ethereum Wallet App - lets you issue your own valuta (token contract) and lets you tranfer tokens
-    * [MetaMask HOW IT WORKS](https://metamask.io/#how-it-works)
-* [TREZOR Integration in MetaMask – MetaMask – Medium](https://medium.com/metamask/trezor-integration-in-metamask-a8eaeae7f499)
-
 # Tokens
 
 ## Currencies - Fungible (interchangeable) tokens
 
+* List: [Cryptocurrency Rankings | CryptoSlate](https://cryptoslate.com/coins/)
+
 * [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin)
+    * [What is SegWit?](https://www.cryptocompare.com/coins/guides/what-is-segwit/)
 * [Ethereum](https://ethereum.org/)
     * Programming: [Create a cryptocurrency contract in Ethereum](https://ethereum.org/token)
+    * Gas Prize: [ETH Gas Station](https://ethgasstation.info/)
+    * Constantinople Upgrade: [Ethereum Developers Agree on Launch Date for Major Constantinople Upgrade | The Daily Hodl](https://dailyhodl.com/2018/12/08/ethereum-developers-agree-on-launch-date-for-major-constantinople-upgrade/)
 * Dai on Ethereum 
     [MakerDAO and Wyre Give Businesses Immediate Access to Dai Stablecoin in Over Thirty Countries…](https://medium.com/makerdao/makerdao-and-wyre-give-businesses-immediate-access-to-dai-stablecoin-in-over-thirty-countries-4fe94957c730)
 * April Fools joke - non-stablecoins [Announcing World Trade Francs: The Official Ethereum Stablecoin](https://blog.ethereum.org/2018/04/01/announcing-world-trade-francs-official-ethereum-stablecoin/)
 * The 2016 DAO hack: [The DAO (organization) - Wikipedia](https://en.wikipedia.org/wiki/The_DAO_(organization))
 * [Qtum (QTUM)](https://en.bitcoinwiki.org/wiki/Qtum) - Singapore
+    * [Qtum (QTUM) | CryptoSlate](https://cryptoslate.com/coins/qtum/)
+    * [Why You Should Keep QTUM on Your Radar in 2018](https://cryptoslate.com/keep-qtum-radar-2018/)
     * [[ANN] (QTUM) - A Scalable PoS Smart Contract Platform - MainNet Complete!](https://bitcointalk.org/index.php?topic=1720632.0)
     * [White papers - Qtum](https://qtum.org/en/white-papers)
     * [Christian Thisted on LinkedIn: attended the Blockchain Summer School at CBS](https://www.linkedin.com/feed/update/urn:li:activity:6436220506533294080/)
+    * [How to: Build a DApp based on Qtum and IPFS](https://blog.qtum.org/how-to-build-a-dapp-based-on-qtum-and-ipfs-692bc3ab607a)
+        * [qtumproject/qtum-ipfs](https://github.com/qtumproject/qtum-ipfs)
+    * [Qtum](https://everipedia.org/wiki/lang_en/qtum/#roadmap)
+    * [Qtum Trade](https://qtumeco.io/market)
+    * [Qtum Dapps](https://qtumeco.io/dapps)
 
 ## [Non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token) (NFT)
 
