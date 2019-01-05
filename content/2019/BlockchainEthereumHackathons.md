@@ -1,7 +1,15 @@
-Title: Dai Code
+Title: Blockchain hackathons
 Date: 2099-01-01 00:00
 Category: Dev
-Tags: #blockchain, #ethereum, #dai
+Tags: #blockchain, #ethereum, #dai, #0x
+
+# 0x hackaton 2019-01
+
+* [0x + CoinList Hackathon](https://blog.0xproject.com/0x-coinlist-hackathon-3b48ddbfd21c)
+* [0x Hackathon on CoinList Build - CoinList](https://coinlist.co/build/0x)
+* Chat: [Discord](https://discordapp.com/channels/435912040142602260/524673671311130643)
+
+# Dai hackathons 2018
 
 A Medium article [Dai and CDP Hackathon Projects](https://medium.com/makerdao/dai-and-cdp-hackathon-projects-46a73f7133d2) 
 listed several Dai projects
@@ -54,5 +62,15 @@ listed several Dai projects
         * Demo: [Meme Lordz: The First Decentralized Meme Market!](https://www.memelordz.com/#/)
 * [Whacked Blocks Hackathon](https://www.whackedblocks.com/)
     * Github: [akwodkiewicz/dai-bite-keeper](https://github.com/akwodkiewicz/dai-bite-keeper/)
+
+# Other projects
+
+* Projs: [Blockchain Technology Solutions | Ethereum Solutions | ConsenSys](https://consensys.net/)
+* Apps: [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7)
+* Projs: [Coinbase | Ventures](https://ventures.coinbase.com/)
+
+# Jobs
+
+* [CTO at Weswap.io - Weswap Jobs on AngelList](https://angel.co/weswap-1/jobs/478609-cto-at-weswap-io)
 
 The End

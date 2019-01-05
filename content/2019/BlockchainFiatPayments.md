@@ -50,6 +50,7 @@ In this definition of Crypto banks the banks
 
 * List of apps: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
     * [CoinBase (2012, UK + SF)](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Fee: 4%
+        * [Why did my wallet address change?](https://support.coinbase.com/customer/en/portal/articles/2276500-why-did-my-wallet-address-change-)
     * [Coinmama (Slovakia)](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
     * [Bitpanda (Austria)](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Cons: Call verification before transfer. Fee: 1.5%. Because of call verification you don't get immediate transfer and can just as well use SEPA.
     * [Luno (Estonia)](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst.
@@ -100,6 +101,12 @@ In this definition of Crypto banks the banks
     * Faq: [How much does it cost to trade on Bisq?](https://bisq.network/faq/#How_much_does_it_cost_to_trade_on_Bisq)
     * [Bisq Trading Volume](https://docs.google.com/spreadsheets/d/1M8y2cIlHv5Hx5UAt4WZ961Ac8xaNSLiiavjxabNf0qc/edit#gid=1737643634)
 
+## B2C 
+
+* [Coinbase Commerce — the Easiest Way for Merchants to Accept Digital Currency](https://medium.com/@coinbasecommerce/coinbase-commerce-the-easiest-way-for-merchants-to-accept-digital-currency-54ba64966f8d)
+    * [coinbase/coinbase-commerce-magento](https://github.com/coinbase/coinbase-commerce-magento)
+    * [coinbase/coinbase-commerce-node](https://github.com/coinbase/coinbase-commerce-node)
+
 ## Coins
 
 ### Stable coins
@@ -114,7 +121,7 @@ In this definition of Crypto banks the banks
     * Wallet: [Kowala Wallet Tools: Your Key to Kowala](https://wallet-tools.kowala.tech/)
     * Blog: [Kowala Development Update | Oct 16, 2018 – Kowala – Medium](https://medium.com/@kowala/kowala-development-update-oct-16-2018-98fd7df9a283)
 
-#### Asses backed
+#### Assets backed
 
 * Coin: Tether
     * Lack of transparency: [Asset-backed stablecoins probably aren’t stable – Kowala – Medium](https://medium.com/@kowala/asset-backed-stablecoins-probably-arent-stable-8ff1cb49842f)
@@ -149,6 +156,11 @@ In this definition of Crypto wallets the wallet
 
 * [TREZOR Integration in MetaMask – MetaMask – Medium](https://medium.com/metamask/trezor-integration-in-metamask-a8eaeae7f499)
 
+#### HW wallet manager
+
+* [Balance Manager](https://manager.balance.io/)
+    * Trusted by 0x: [Introducing 0x Instant](https://blog.0xproject.com/introducing-0x-instant-7314c786d743)
+
 ### Mobile wallets
 
 * Coinomi (2014, Bologna) [Company Coinomi, Bologna](https://www.vbprofiles.com/companies/coinomi-5804825538f3369b81000039)
@@ -157,12 +169,28 @@ In this definition of Crypto wallets the wallet
     * [Is it possible to export private key to another wallet on another app ?](https://github.com/voisine/breadwallet-ios/issues/463)
 * Jaxx
 
+#### Mobile 2 Web DApp protocol
+
+* [WalletConnect](https://walletconnect.org/)
+    * Used by [Balance Manager](https://manager.balance.io/)
+
+#### Mobile DApp (Web3) wallets
+
+* imToken
+* [Coinbase Wallet](https://wallet.coinbase.com/) - Pay friends
+    * [Goodbye Toshi, hello Coinbase Wallet](https://blog.coinbase.com/goodbye-toshi-hello-coinbase-wallet-the-easiest-and-most-secure-crypto-wallet-and-browser-4ba6e52e4913)
+* Trust Wallet (Binanace)
+
 ### Web wallets
 
 * [Mist Ethereum](https://ethereum.org/)
 * Chrome plugin: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
     * Ethereum Wallet App - lets you issue your own valuta (token contract) and lets you tranfer tokens
     * [MetaMask HOW IT WORKS](https://metamask.io/#how-it-works)
+
+#### Web DApps (Web3) browser
+
+* [MetaMask Ethereum Browser Extension](https://metamask.io/)
 
 ## Pass Phrase
 
@@ -176,5 +204,13 @@ In this definition of Crypto wallets the wallet
     * BIP32 Hierarchical Deterministic Wallets
     * BIP44 Multi-Account Hierarchy for Deterministic Wallets
     * BIP49 Derivation scheme for P2WPKH-nested-in-P2SH based accounts
-    
+
+## DApps
+
+* List: [DappRadar - Ranked list of blockchain dapps](https://dappradar.com/)
+
+### DApps for Enterprises
+
+* [Blockchain Technology Solutions | Ethereum Solutions | ConsenSys](https://consensys.net/)
+
 The End
