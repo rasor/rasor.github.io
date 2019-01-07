@@ -3,11 +3,22 @@ Date: 2099-01-01 00:00
 Category: Dev
 Tags: #blockchain, #ethereum, #dai, #0x
 
-# 0x hackaton 2019-01
+# 0x
+
+* Home: [0x](https://0x.org/) - 0x is an open protocol that enables the P2P exchange of assets on the Ethereum
+    * Twitter: [0x (@0xProject)](https://twitter.com/0xProject)
+    * Medium: [0x](https://blog.0xproject.com/)
+    * Dev: [0x](https://0x.org/docs)
+    * [What is 0x? (ZRX) Beginners Guide, Information & Review](https://blockonomi.com/0x-guide/)
+    * [What is 0x? A Beginner’s Guide](https://coincentral.com/0x-beginner-guide/)
+
+## 0x hackaton 2019-01
 
 * [0x + CoinList Hackathon](https://blog.0xproject.com/0x-coinlist-hackathon-3b48ddbfd21c)
-* [0x Hackathon on CoinList Build - CoinList](https://coinlist.co/build/0x)
-* Chat: [Discord](https://discordapp.com/channels/435912040142602260/524673671311130643)
+    * [0x Hackathon on CoinList Build - CoinList](https://coinlist.co/build/0x)
+    * Chat: [Discord](https://discordapp.com/channels/435912040142602260/524673671311130643)
+    * Ideas: [22 Ideas to Explore with 0x](https://blog.0xproject.com/22-ideas-to-explore-with-0x-4d551c10dd4e)
+    * Cases: [0x Use Cases](https://0x.org/why#cases)
 
 # Dai hackathons 2018
 

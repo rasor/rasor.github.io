@@ -49,22 +49,48 @@ In this definition of Crypto banks the banks
 * contacts the exchange for exchanging valuta to/from fiat to crypto
 
 * List of apps: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
-    * [CoinBase (2012, UK + SF)](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Fee: 4%
+    * [CoinBase (2012, US + UK)](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Fee: 4%
+        * [Company Coinbase](https://www.vbprofiles.com/companies/coinbase-52aef8391dedae53f900396c)
         * [Why did my wallet address change?](https://support.coinbase.com/customer/en/portal/articles/2276500-why-did-my-wallet-address-change-)
-    * [Coinmama (Slovakia)](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
+    * 1) [Coinmama (Slovakia)](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
     * [Bitpanda (Austria)](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Cons: Call verification before transfer. Fee: 1.5%. Because of call verification you don't get immediate transfer and can just as well use SEPA.
-    * [Luno (Estonia)](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst.
+        * [Company Bitpanda](https://www.vbprofiles.com/companies/bitpanda-5bb45a3f1dedae766c059cad)
+    * 1) [Luno - formerly BitX (Singapore)](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst.
+        * [Company Luno](https://www.vbprofiles.com/companies/luno-564d9231b6e9f4db560002bc)
+        * [Verification levels and limits](https://www.luno.com/en/countries#levels)
+    * 1) [PayBis (UK?)](https://paybis.com/): Pay with Card, Mistertango SEPA Inst
+        * [Paybis is rated with 9.3 / 10 on Trustpilot](https://www.trustpilot.com/review/paybis.com)
+        * [Paybis Exchangers: Reviews and Features | DFID](https://www.dfid.org/exchangers/paybis)
+        * [Rates - PayBis](https://paybis.com/rates/)
+        * [Verification - PayBis](https://paybis.com/verification/)
+        * [Mistertango (Lithuania)](https://www.mistertango.com/en/)
     * Cex.io
     * BitStamp
     * LocalBitcoins
-    * [Coinify.com I Buy, Sell and Accept Virtual Currencies](https://coinify.com/)
-    * [Simplex (Israel)](https://www.simplex.com/)
+    * 1) [KyberSwap (Singapore)](https://kyber.network/swap/eth_knc)
+        * [Company Kyber](https://www.vbprofiles.com/companies/kyber-network-5b2a34e91dedae784bfcadee)
+    * 1) [Thor Swap](https://www.thorswap.com/)
+    * 1) [Simplex (Israel)](https://www.simplex.com/)
+        * [Company Simplex](https://www.vbprofiles.com/companies/simplex-56ecf15438138860d7000075)
         * [Become a Simplex Partner](https://www.simplex.com/simplex-partners/)
         * Article: [Thieves Have it Easy with Bitcoin, Says Anti-Fraud Entrepreneur](https://www.calcalistech.com/ctech/articles/0,7340,L-3730244,00.html)
+    * 1) [ShapeShift (CH)](https://shapeshift.io/#/coins)
+        * [Company ShapeShift.io](https://www.vbprofiles.com/companies/shapeshift-io-5655ef312433d2497f000001)
+    * 1) [Changelly (Malta)](https://changelly.com/)
+        * [Company Changelly](https://www.vbprofiles.com/companies/changelly-5bed3905105eb56b5856dd35)
+    * 1) [Coinhouse (France)](https://www.coinhouse.com/)
+    * 1) [Genesis](https://genesistrading.com/ledger-live/)
+    * 1) [ChangeNOW (RU)](https://changenow.io/)
+        * [Company ChangeNOW](https://www.vbprofiles.com/companies/changenow-5afc02001dedae4691579b0c)
     * US Users - [Wyre (US) - Crypto API for payments and KYC cryptocurrency verification](https://www.sendwyre.com/) - Used by MakerDAO
+        * [Company Wyre](https://www.vbprofiles.com/companies/wyre-58581b6624b33cc6c2000005)
         * [Become a Wyre Partner](https://www.sendwyre.com/partner/)
         * [Maker on Twitter](https://twitter.com/MakerDAO/status/1029353655097614337)
+    * [Coinify.com (DK)](https://coinify.com/)
+        * [Company Coinify](https://www.vbprofiles.com/companies/coinify-57c727a32833cb9ce800001a)
     * [Bisq - The decentralized Bitcoin exchange](https://bisq.network/faq/#How_is_Bisq_different)
+
+1) Selected by Ledger Live
 
 ## Crypto Exchanges
 
