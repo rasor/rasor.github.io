@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="HTTP/2 What is HTTP/2 and how to deploy it? Prerender.io (only prerendercache) / Netlify (host with prerendercache) SaaS: Prerender - AngularJS SEO / ASP.NET SaaS: Prerender - AngularJS SEO / Express Host: Netlify Blog: How to Build a Serverless, SEO-friendly React blog with Netlify Lit-Html A new, lean way of creating …" />
+<meta name="keywords" content="">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="PWA, SSR, AMD and HTTP/2 with Polymer, Ionic Stencils, Angular and Google"/>
+<meta property="og:description" content="HTTP/2 What is HTTP/2 and how to deploy it? Prerender.io (only prerendercache) / Netlify (host with prerendercache) SaaS: Prerender - AngularJS SEO / ASP.NET SaaS: Prerender - AngularJS SEO / Express Host: Netlify Blog: How to Build a Serverless, SEO-friendly React blog with Netlify Lit-Html A new, lean way of creating …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/pwa-ssr-amd-and-http2-with-polymer-ionic-stencils-angular-and-google.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="misc"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; PWA, SSR, AMD and HTTP/2 with Polymer, Ionic Stencils, Angular and Google</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="pwa-ssr-amd-and-http2-with-polymer-ionic-stencils-angular-and-google">PWA, SSR, AMD and HTTP/2 with Polymer, Ionic Stencils, Angular and Google</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/misc.html">misc</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h2>HTTP/2</h2>
+<ul>
+<li><a href="https://www.symfony.fi/entry/what-is-http-2-and-how-to-deploy">What is HTTP/2 and how to deploy it?</a></li>
+</ul>
+<h2>Prerender.io (only prerendercache) / Netlify (host with prerendercache)</h2>
+<ul>
+<li>SaaS: <a href="https://prerender.io/documentation/install-middleware#asp-net">Prerender - AngularJS SEO / ASP.NET</a></li>
+<li>SaaS: <a href="https://prerender.io/documentation/install-middleware#prerender-node">Prerender - AngularJS SEO / Express</a></li>
+<li>Host: <a href="https://www.netlify.com/">Netlify</a></li>
+<li>Blog: <a href="https://buttercms.com/blog/serverless-react-blog-tutorial">How to Build a Serverless, SEO-friendly React blog with Netlify</a></li>
+</ul>
+<h2>Lit-Html</h2>
+<ul>
+<li><a href="https://medium.com/@kennethrohde/a-new-lean-way-of-creating-web-apps-88a49c5b87ec">A new, lean way of creating web apps – Kenneth Christiansen – Medium</a></li>
+</ul>
+<h2>Razzle</h2>
+<ul>
+<li><a href="https://react-etc.net/entry/razzle-enables-universal-javascript-apps-decoupled-from-frameworks-and-libraries">Razzle enables Universal JavaScript apps decoupled from frameworks and libraries | React, etc. Tech Stack</a></li>
+<li><a href="https://github.com/jaredpalmer/razzle">jaredpalmer/razzle</a></li>
+</ul>
+<h2>SEO and PWA</h2>
+<ul>
+<li><a href="https://medium.com/progressive-web-apps/2018-state-of-progressive-web-apps-f7517d43ba70">2018 State of Progressive Web Apps – Progressive Web Apps – Medium</a></li>
+</ul>
+<h2>Angular SSR</h2>
+<ul>
+<li>Official HowTo <a href="https://github.com/angular/angular-cli/wiki/stories-universal-rendering">Angular Universal Integration</a></li>
+<li><a href="https://www.youtube.com/watch?v=gxCu5TEmxXE">Angular Universal and Firebase Hosting (Server-side Rendering with JavaScript Frameworks)</a></li>
+<li><a href="https://www.youtube.com/watch?v=H8mtIqrvvnM">Angular 2 Universal - Server Side Rendering Part 1</a></li>
+<li><a href="https://www.youtube.com/watch?v=2WSYMUIbKhA">Angular 2 Universal - Server Side Rendering Part 2</a></li>
+<li><a href="https://www.youtube.com/watch?v=UAgljIYAar8">Angular 2 Server Side Rendering by Wassim Chegham</a></li>
+<li><a href="https://github.com/kriasoft/aspnet-starter-kit">kriasoft/aspnet-starter-kit - React w. SSR</a></li>
+<li><a href="https://github.com/MarkPieszak/aspnetcore-angular2-universal">MarkPieszak/aspnetcore-angular2 - w. SSR</a></li>
+<li><a href="https://github.com/angular/angular-cli/wiki/stories-universal-rendering">angular/angular-cli - SSR</a></li>
+<li><a href="https://scotch.io/tutorials/server-side-rendering-in-angular-2-with-angular-universal">SSR in Angular 2 with Angular Universal</a></li>
+<li><a href="https://github.com/angular/universal-starter">angular/universal-starter</a></li>
+<li><a href="https://github.com/rangle/angular-ssr">rangle/angular-ssr</a></li>
+<li><a href="https://github.com/ionic-team/stencil-app-starter">ionic-team/stencil-app-starter</a></li>
+<li><a href="https://stenciljs.com/docs/server-side-rendering">stenciljs server-side-rendering</a></li>
+<li><a href="https://angular.io/tutorial">Angular Tour of Heroes</a></li>
+</ul>
+<h2>Dontnet new angular</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services">SSR with .NET Core</a></li>
+<li><a href="https://www.hanselman.com/blog/dotnetNewAngularAndDotnetNewReact.aspx">https://www.hanselman.com/blog/dotnetNewAngularAndDotnetNewReact.aspx</a></li>
+<li><a href="https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/">https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/</a></li>
+<li><a href="https://medium.com/@xavier.hahn/asp-net-core-angular-openid-connect-using-keycloak-6437948c008">ASP.Net Core Angular OpenID Connect using Keycloak</a></li>
+<li><a href="https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/">Building Single Page Applications on ASP.NET Core with JavaScriptServices</a></li>
+<li><a href="https://docs.microsoft.com/en-us/aspnet/core/client-side/spa-services">Using JavaScriptServices for Creating Single Page Applications</a></li>
+</ul>
+<h2>Vue SSR</h2>
+<ul>
+<li><a href="http://Building server-rendered apps in Vue using Nuxt.js">Building server-rendered apps in Vue using Nuxt.js</a></li>
+<li><a href="https://ssr.vuejs.org/en/">Vue.js Server-Side Rendering Guide</a> - If you need more app structure control than in Nuxt</li>
+</ul>
+<h2>Ionic PWA</h2>
+<ul>
+<li><a href="https://blog.ionic.io/what-is-a-progressive-web-app/">https://blog.ionic.io/what-is-a-progressive-web-app/</a></li>
+<li><a href="http://blog.ionic.io/what-progressive-web-apps-can-do-for-you/">http://blog.ionic.io/what-progressive-web-apps-can-do-for-you/</a></li>
+<li><a href="http://blog.ionic.io/built-with-ionic-million-eyez-mobile-and-progressive-web-app/">http://blog.ionic.io/built-with-ionic-million-eyez-mobile-and-progressive-web-app/</a></li>
+<li><a href="http://ionicframework.com/case-studies/MillionEyez.pdf">http://ionicframework.com/case-studies/MillionEyez.pdf</a></li>
+<li>
+<p><a href="https://www.millioneyez.com/photos">https://www.millioneyez.com/photos</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=1QILz1lAzWY">Why Build Progressive Web Apps?</a></p>
+</li>
+<li><a href="https://blog.manifold.co/build-a-fast-offline-first-pwa-with-stenciljs-596727624e5c">Build A Fast Offline-First PWA with StencilJs</a></li>
+<li><a href="https://github.com/christiannwamba/stencil-pwa">christiannwamba/stencil-pwa</a></li>
+<li>
+<p>Starter: <a href="https://github.com/ionic-team/stencil-app-starter">ionic-team/stencil-app-starter</a></p>
+</li>
+<li>
+<p>Starter: <a href="https://github.com/mhartington/lazyLoad2-components">Ionic lazyLoad2-components</a></p>
+</li>
+<li>
+<p>Blog: <a href="https://css-tricks.com/production-progressive-web-apps-javascript-frameworks/#more-255094">Production Progressive Web Apps with JavaScript Frameworks | CSS-Tricks</a></p>
+</li>
+<li>
+<p>Code Demo: <a href="https://hnpwa.com/">HNPWA</a></p>
+</li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">Google PRPL Pattern</a></li>
+<li>Book: <a href="https://www.apress.com/gp/book/9781484230893">Beginning Progressive Web App Development</a></li>
+</ul>
+<h2>Ionic Stencils</h2>
+<ul>
+<li>Vids</li>
+<li><a href="https://www.youtube.com/watch?v=UfD-k7aHkQE">Using Web Components in Ionic (Polymer Summit 2017)</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZmIMtgwyj90">Intro to Web Components with StencilJS</a></li>
+<li><a href="https://www.youtube.com/watch?v=mnsjL-WYzKQ">Faster Web Apps Using Stencil</a></li>
+<li><a href="https://www.youtube.com/watch?v=cUU08Rc0ZQY">A Tutorial on How I Use Stencil</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ucq9F-7Xp8I">Using Web Components with Angular (Google I/O '17)</a></li>
+<li><a href="https://github.com/ionic-team/stencil-app-starter">ionic-team/stencil-app-starter</a></li>
+<li>HowTo use?</li>
+<li><a href="http://kensodemann.github.io/ionic/stencil/2017/08/20/stencil-toh.html">http://kensodemann.github.io/ionic/stencil/2017/08/20/stencil-toh.html</a></li>
+<li><a href="http://kensodemann.github.io/ionic/stencil/2017/08/26/stencil-toh.html">http://kensodemann.github.io/ionic/stencil/2017/08/26/stencil-toh.html</a></li>
+<li><a href="https://github.com/kensodemann/stencil-toh">https://github.com/kensodemann/stencil-toh</a></li>
+<li><a href="https://github.com/ionic-team/stencil-app-starter">https://github.com/ionic-team/stencil-app-starter</a></li>
+<li><a href="http://thewebplatformpodcast.com/133-ionic-web-components">http://thewebplatformpodcast.com/133-ionic-web-components</a></li>
+<li><a href="https://stenciljs.com/demos">stenciljs demos</a></li>
+</ul>
+<h2>Polymer PWA</h2>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1QNcQwDwq5pwwdjpN9t4hCgvBXWWgLvehiLQdzonsqZA/edit#slide=id.g24e228bf8a_4_37">GDG DevFest Ukraine - @kennethrohde</a></li>
+<li><a href="https://developers.google.com/web/progressive-web-apps/">Progressive Web Apps - Google Developers</a></li>
+<li><a href="https://www.polymer-project.org/blog/2017-02-13-news-pwa">News Progressive Web App - Polymer Project</a></li>
+<li><a href="https://www.youtube.com/watch?v=Dsv5NT4PYG0">Polymer NEWS demo</a></li>
+<li><a href="https://books.google.dk/books/about/Building_Progressive_Web_Apps.html?id=H8o0DwAAQBAJ&amp;printsec=frontcover&amp;source=kp_read_button&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">Building Progressive Web Apps</a></li>
+<li><a href="https://developers.google.com/web/fundamentals/performance/prpl-pattern/">Google PRPL Pattern</a></li>
+<li><a href="https://react-etc.net/entry/polymer-3-0-moves-to-npm-and-es6-modules-with-templates-in-javascript">Polymer 3.0 moves to NPM and ES6 Modules with templates in JavaScript | React, etc. Tech Stack</a></li>
+</ul>
+<h2>Next (React)</h2>
+<ul>
+<li><a href="https://react-etc.net/entry/next-js-is-the-universal-react-framework-you-ve-been-looking-for">Next.js is the Universal React Framework you&#039;ve been looking for | React, etc. Tech Stack</a></li>
+</ul>
+<h2>Google AMD</h2>
+<ul>
+<li><a href="https://www.ampproject.org/">Accelerated Mobile Pages Project – AMP</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
