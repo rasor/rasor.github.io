@@ -1,4 +1,4 @@
-Title: Mobirise website builder
+Title:  Startup
 Date: 2099-01-01 00:00
 Category: Biz
 Tags: #startup

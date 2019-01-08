@@ -11,6 +11,12 @@ Tags: #blockchain, #ethereum, #dai, #0x
     * Dev: [0x](https://0x.org/docs)
     * [What is 0x? (ZRX) Beginners Guide, Information & Review](https://blockonomi.com/0x-guide/)
     * [What is 0x? A Beginner’s Guide](https://coincentral.com/0x-beginner-guide/)
+    * Client: [The Complete Beginner’s Guide to Radar Relay Review 2019 - Is it Safe?](https://blockonomi.com/radar-relay-review/)
+
+## Shorts
+
+    * Short trading: [shorttokens](https://shorttokens.io/)
+    * [expo](https://expotrading.com/)
 
 ## 0x hackaton 2019-01
 
@@ -19,6 +25,11 @@ Tags: #blockchain, #ethereum, #dai, #0x
     * Chat: [Discord](https://discordapp.com/channels/435912040142602260/524673671311130643)
     * Ideas: [22 Ideas to Explore with 0x](https://blog.0xproject.com/22-ideas-to-explore-with-0x-4d551c10dd4e)
     * Cases: [0x Use Cases](https://0x.org/why#cases)
+
+# Kyber
+
+* Home: [Kyber Network | The On-Chain Liquidity Protocol](https://kyber.network/)
+    * [Guide to Kyber Network (KNC) Information, Review & How to Buy KNC](https://blockonomi.com/kybernetwork-guide/)
 
 # Dai hackathons 2018
 

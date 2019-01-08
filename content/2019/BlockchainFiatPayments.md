@@ -48,25 +48,40 @@ In this definition of Crypto banks the banks
 * keeps your private key
 * contacts the exchange for exchanging valuta to/from fiat to crypto
 
-* List of apps: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
+* List: [9 Best Cryptocurrency Exchange Platforms: Buy Crypto (2019 Update)](https://www.buybitcoinworldwide.com/cryptocurrency/exchanges/)
+* List: [13 Top Best Bitcoin/Cryptocurrency Exchanges (2019 Reviews)](https://www.bitpremier.com/best-exchanges)
+* List: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
+* List: [Top Cryptocurrency Exchanges in 2018 - CoinCentral](https://coincentral.com/top-cryptocurrency-exchanges-in-2018/)
     * [CoinBase (2012, US + UK)](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Fee: 4%
         * [Company Coinbase](https://www.vbprofiles.com/companies/coinbase-52aef8391dedae53f900396c)
         * [Why did my wallet address change?](https://support.coinbase.com/customer/en/portal/articles/2276500-why-did-my-wallet-address-change-)
-    * 1) [Coinmama (Slovakia)](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
+        * [Complete Coinbase Review - Everything You Need to Know](https://cryptonews.com/reviews/coinbase/)
+    * Coinbase Pro (GDAX) [Coinbase Pro | Digital Asset Exchange](https://pro.coinbase.com/)
+        * [The Ultimate Coinbase Pro Exchange Review](https://cryptonews.com/reviews/coinbase-pro/)
+    * 1) [Coinmama (2013, Israel/Slovakia)](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
     * [Bitpanda (Austria)](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Cons: Call verification before transfer. Fee: 1.5%. Because of call verification you don't get immediate transfer and can just as well use SEPA.
         * [Company Bitpanda](https://www.vbprofiles.com/companies/bitpanda-5bb45a3f1dedae766c059cad)
     * 1) [Luno - formerly BitX (Singapore)](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst.
         * [Company Luno](https://www.vbprofiles.com/companies/luno-564d9231b6e9f4db560002bc)
         * [Verification levels and limits](https://www.luno.com/en/countries#levels)
+    * [BitStamp (2011, Luxembourg)](https://www.bitstamp.net/). Pro: High liquidity, low fees
+        * [Bitstamp Exchange Review - Everything You Must Know](https://cryptonews.com/reviews/bitstamp/)
+    * [Kraken (2011, US)](https://www.kraken.com/)
+        * [Kraken Exchange Review - CoinCentral](https://coincentral.com/kraken-exchange-review/)
+        * [Kraken Exchange Review - Everything You Should Know](https://cryptonews.com/reviews/kraken/) - BTC withdraw too expensive
     * 1) [PayBis (UK?)](https://paybis.com/): Pay with Card, Mistertango SEPA Inst
         * [Paybis is rated with 9.3 / 10 on Trustpilot](https://www.trustpilot.com/review/paybis.com)
         * [Paybis Exchangers: Reviews and Features | DFID](https://www.dfid.org/exchangers/paybis)
         * [Rates - PayBis](https://paybis.com/rates/)
         * [Verification - PayBis](https://paybis.com/verification/)
         * [Mistertango (Lithuania)](https://www.mistertango.com/en/)
-    * Cex.io
-    * BitStamp
-    * LocalBitcoins
+        * [PayBis E-currency And Bitcoin Exchange Planning Expansion](https://cointelegraph.com/news/paybis-e-currency-and-bitcoin-exchange-planning-expansion)
+    * eToro (UK) 
+        * [The Complete eToro Cryptocurrency Exchange Review](https://cryptonews.com/reviews/etoro/)
+    * Gemini (2015, US)
+        * [Gemini Review: Is Gemini Safe? - CoinCentral.com](https://coincentral.com/gemini-review/)
+    * Cex.io (2013 UK)
+    * LocalBitcoins P2P
     * 1) [KyberSwap (Singapore)](https://kyber.network/swap/eth_knc)
         * [Company Kyber](https://www.vbprofiles.com/companies/kyber-network-5b2a34e91dedae784bfcadee)
     * 1) [Thor Swap](https://www.thorswap.com/)
@@ -74,9 +89,9 @@ In this definition of Crypto banks the banks
         * [Company Simplex](https://www.vbprofiles.com/companies/simplex-56ecf15438138860d7000075)
         * [Become a Simplex Partner](https://www.simplex.com/simplex-partners/)
         * Article: [Thieves Have it Easy with Bitcoin, Says Anti-Fraud Entrepreneur](https://www.calcalistech.com/ctech/articles/0,7340,L-3730244,00.html)
-    * 1) [ShapeShift (CH)](https://shapeshift.io/#/coins)
+    * 1) DEX - [ShapeShift (CH)](https://shapeshift.io/#/coins)
         * [Company ShapeShift.io](https://www.vbprofiles.com/companies/shapeshift-io-5655ef312433d2497f000001)
-    * 1) [Changelly (Malta)](https://changelly.com/)
+    * 1) DEX - [Changelly (Malta)](https://changelly.com/)
         * [Company Changelly](https://www.vbprofiles.com/companies/changelly-5bed3905105eb56b5856dd35)
     * 1) [Coinhouse (France)](https://www.coinhouse.com/)
     * 1) [Genesis](https://genesistrading.com/ledger-live/)
@@ -88,7 +103,7 @@ In this definition of Crypto banks the banks
         * [Maker on Twitter](https://twitter.com/MakerDAO/status/1029353655097614337)
     * [Coinify.com (DK)](https://coinify.com/)
         * [Company Coinify](https://www.vbprofiles.com/companies/coinify-57c727a32833cb9ce800001a)
-    * [Bisq - The decentralized Bitcoin exchange](https://bisq.network/faq/#How_is_Bisq_different)
+    * DEX P2P - [Bisq - The decentralized Bitcoin exchange](https://bisq.network/faq/#How_is_Bisq_different)
 
 1) Selected by Ledger Live
 
@@ -96,8 +111,11 @@ In this definition of Crypto banks the banks
 
 * List: [cryptocurrency exchanges | 45+ compared | finder.com](https://www.finder.com/cryptocurrency/exchanges#a-z)
 * List: [cryptonator](https://www.cryptonator.com/rates/ETH-USD)
+* List: [9 Best Cryptocurrency Exchange Platforms: Buy Crypto (2019 Update)](https://www.buybitcoinworldwide.com/cryptocurrency/exchanges/)
 * [Binance crypto exchange review 2018](https://www.finder.com/binance-exchange-review)
-* Bittrex
+    * [Binance Exchange Review - Should You Use It?](https://cryptonews.com/reviews/binance/)
+* [BitTrex (US)](https://international.bittrex.com/). Pro: Good support
+    * [The Beginners Guide to Bittrex: Complete Review](https://cryptonews.com/reviews/bittrex/)
 * Kucoin
 * Article: [One Person Drove Bitcoin from $150 to $1,000, Study Finds](https://www.calcalistech.com/ctech/articles/0,7340,L-3729964,00.html)
 
@@ -106,10 +124,11 @@ In this definition of Crypto banks the banks
 * Blog: [The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster](https://www.wired.com/2014/03/bitcoin-exchange/)
 * Wiki: [Bitfinex hack - Wikipedia](https://en.wikipedia.org/wiki/Bitfinex_hack)
 
-### Decentral Exchanges
+### Decentral Exchanges (DEX)
 
 * Wiki: [What is a Decentralized Exchange](https://www.cryptocompare.com/exchanges/guides/what-is-a-decentralized-exchange/)
 * Blog: [How do decentralized exchanges work?](https://blog.zerion.io/how-do-decentralized-exchanges-work-5229abeb445d)
+* Blog: [The Best Decentralized Exchanges for Trading Cryptocurrency in 2019](https://blockonomi.com/decentralized-exchanges/)
 * Blog: [Understanding a Decentralized Exchange – The Blocknet Protocol](https://medium.com/@theblocknetchannel/understanding-a-decentralized-exchange-eee9e1043f45)
 * [Blocknet](https://blocknet.co/)
     * [Block DX - Blocknet](https://blocknet.co/block-dx/)
