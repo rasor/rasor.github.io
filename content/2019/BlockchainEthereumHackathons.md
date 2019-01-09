@@ -18,7 +18,7 @@ Tags: #blockchain, #ethereum, #dai, #0x
     * Short trading: [shorttokens](https://shorttokens.io/)
     * [expo](https://expotrading.com/)
 
-## 0x hackaton 2019-01
+## 0x hackathon 2019-01
 
 * [0x + CoinList Hackathon](https://blog.0xproject.com/0x-coinlist-hackathon-3b48ddbfd21c)
     * [0x Hackathon on CoinList Build - CoinList](https://coinlist.co/build/0x)

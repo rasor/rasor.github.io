@@ -3,7 +3,7 @@ Date: 2099-01-01 00:00
 Category: Develop
 Tags: #blockchain, #cryptocurrency, #ethereum
 
-# Trade
+# Trade ---------------------------
 
 ## Charts
 
@@ -15,7 +15,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
     * [Stellar - Develop the world's new financial system](https://www.stellar.org/)
     * [Blockchain could rescue a media business model in distress - TechSavvy](https://techsavvy.media/blockchain-could-rescue-a-media-business-model-in-distress/)
 
-# Tokens
+# Tokens ---------------------------
 
 ## Currencies - Fungible (interchangeable) tokens
 
@@ -48,7 +48,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * ERC-721
     * [CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties) on Ethereum
 
-# Storage
+# Storage ---------------------------
 
 * Bitcoin - Blockchain 1.0
 * Ethereum - Blockchain 2.
@@ -71,7 +71,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
     * Article (2018-01): [Explaining Directed Acylic Graph (DAG)](https://www.forbes.com/sites/shermanlee/2018/01/22/explaining-directed-acylic-graph-dag-the-real-blockchain-3-0/#756afa9a180b)
 * [IoT Chain](https://iotchain.io/) (Blockchain 3.0?)
 
-## Sharding
+## Sharding 
 
 * Wiki 2018-08: [Ethereum Sharding FAQs](https://github.com/ethereum/wiki/wiki/Sharding-FAQs)
 * Paper 2018-05: [Ethereum Sharding, Phase 1](https://github.com/ethereum/sharding/blob/develop/docs/doc.md)
@@ -136,7 +136,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * [BitcoinTalk - Skandinavisk](https://bitcointalk.org/index.php?board=45.0)
 * [BitcoinTalk - Beginners & Help](https://bitcointalk.org/index.php?board=39.0)
 
-# Startup
+# Startup ---------------------------
 
 ## Apps
 
@@ -146,7 +146,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 * [Investor Daniel Gutenberg predicts blockchain will peak in 2025](https://venturebeat.com/2018/09/07/investor-daniel-gutenberg-predicts-blockchain-will-peak-in-2025/)
 
-# Events and people
+# Events and people ---------------------------
 
 ## Events
 

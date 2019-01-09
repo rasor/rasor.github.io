@@ -3,15 +3,15 @@ Date: 2099-01-01 00:00
 Category: Biz
 Tags: #blockchain, #fiat, #sepa
 
-## Crypto Shops
+## Crypto Shops ---------------------------
 
 * [coinmap](https://coinmap.org/welcome/)
 
-## Fiat account numbering
+## Fiat account numbering ---------------------------
 
 * DK: [IBAN - hvilke lande har IBAN eller særlige krav ved overførsler?](https://www.jyskebank.dk/erhverv/betalinger/udland/iban)
 
-## Fiat Payment systems
+## Fiat Payment systems ---------------------------
 
 * List: [qvolta](https://qvolta.com/)
 * List: [Bisq - Which payment methods are supported?](https://bisq.network/faq/#Which_payment_methods_are_supported)
@@ -35,13 +35,20 @@ Tags: #blockchain, #fiat, #sepa
 * CN: AliPay
 * CN: WeChat
 
-## Fiat Instant payments
+## Fiat Instant payments ---------------------------
 
 * 2017-10 Interview: [The Danish payment landscape: When instant becomes the new normal](https://www.europeanpaymentscouncil.eu/news-insights/insight/danish-payment-landscape-when-instant-becomes-new-normal)
 * SEPA Instant Credit Transfer (SCT Inst)
     * [SEPA](https://en.wikipedia.org/wiki/Single_Euro_Payments_Area)
 
-## Fiat 2 Crypto (Crypto Banks, Gateways)
+## Identity verifiers (KYC) ---------------------------
+
+BitPanda has partners to manage identity verification
+
+* [IDnow](https://www.idnow.io/). Home: DE
+* [identity Trust Management AG](https://www.identity.tm/). Home: DE
+
+## Fiat 2 Crypto (Crypto Banks, Gateways, P2P) ---------------------------
 
 In this definition of Crypto banks the banks
 
@@ -52,16 +59,24 @@ In this definition of Crypto banks the banks
 * List: [13 Top Best Bitcoin/Cryptocurrency Exchanges (2019 Reviews)](https://www.bitpremier.com/best-exchanges)
 * List: [11 Sites to Buy Bitcoins with Credit/Debit Card Instantly No Verification](https://www.bitpremier.com/buy-bitcoins)
 * List: [Top Cryptocurrency Exchanges in 2018 - CoinCentral](https://coincentral.com/top-cryptocurrency-exchanges-in-2018/)
-    * [CoinBase (2012, US + UK)](https://www.coinbase.com/dashboard). Pay with credit card. Ios. Pro: 2FA, Wallet addr. Can validate immed. Fee: 4%
+* List: [Exchanges | Reviews](https://cryptonews.com/reviews/exchanges/)
+    * [CoinBase (2012, US + UK)](https://www.coinbase.com/dashboard). Pay with credit card. Ios.  
+        * Pro: 2FA, Wallet addr. Can validate immed. Fee with card: 4%
         * [Company Coinbase](https://www.vbprofiles.com/companies/coinbase-52aef8391dedae53f900396c)
         * [Why did my wallet address change?](https://support.coinbase.com/customer/en/portal/articles/2276500-why-did-my-wallet-address-change-)
         * [Complete Coinbase Review - Everything You Need to Know](https://cryptonews.com/reviews/coinbase/)
-    * Coinbase Pro (GDAX) [Coinbase Pro | Digital Asset Exchange](https://pro.coinbase.com/)
+    * [Coinbase Pro - formerly GDAX  (2015, US)](https://pro.coinbase.com/)
+        * Cons: Needs two ID cards.
         * [The Ultimate Coinbase Pro Exchange Review](https://cryptonews.com/reviews/coinbase-pro/)
-    * 1) [Coinmama (2013, Israel/Slovakia)](https://www.coinmama.com/). Pay with credit card. Pro: Use own wallet (No deposit). Cons: Min 100$. Await email after Id upload. 
-    * [Bitpanda (Austria)](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. Pro: 2FA, Wallet addr. Cons: Call verification before transfer. Fee: 1.5%. Because of call verification you don't get immediate transfer and can just as well use SEPA.
+    * 1) [Coinmama (2013, Israel/Slovakia)](https://www.coinmama.com/). Pay with credit card.  
+        * Pro: Use own wallet (No deposit). 
+        * Cons: Min 100$. Await email after Id upload. 
+    * [Bitpanda (Austria)](https://www.bitpanda.com/en). Pay with credit card. Buy a lot. Android. 
+        * Pro: 2FA, Wallet addr. 
+        * Cons: Call verification before transfer. Fee: 1.5%. Because of call verification you don't get immediate transfer and can just as well use SEPA.
         * [Company Bitpanda](https://www.vbprofiles.com/companies/bitpanda-5bb45a3f1dedae766c059cad)
-    * 1) [Luno - formerly BitX (Singapore)](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. Cons: Probably not SEPA Inst.
+    * 1) [Luno - formerly BitX (Singapore)](https://www.luno.com/): Pay with SEPA, iDEAL. Buy Ether. Europe, Africa, Asia. Ios, Android. Low fees. 
+        * Cons: Probably not SEPA Inst.
         * [Company Luno](https://www.vbprofiles.com/companies/luno-564d9231b6e9f4db560002bc)
         * [Verification levels and limits](https://www.luno.com/en/countries#levels)
     * [BitStamp (2011, Luxembourg)](https://www.bitstamp.net/). Pro: High liquidity, low fees
@@ -69,6 +84,24 @@ In this definition of Crypto banks the banks
     * [Kraken (2011, US)](https://www.kraken.com/)
         * [Kraken Exchange Review - CoinCentral](https://coincentral.com/kraken-exchange-review/)
         * [Kraken Exchange Review - Everything You Should Know](https://cryptonews.com/reviews/kraken/) - BTC withdraw too expensive
+    * eToro (UK) 
+        * [The Complete eToro Cryptocurrency Exchange Review](https://cryptonews.com/reviews/etoro/)
+    * Gemini (2015, US)
+        * Pro: Low fees
+        * Cons: Only deposit USD, so no SEPA transfer.
+        * [Gemini Review: Is Gemini Safe? - CoinCentral.com](https://coincentral.com/gemini-review/)
+        * [The Complete Beginner’s Guide to Gemini Review 2019 - Is it Safe?](https://blockonomi.com/gemini-review/)
+    * Cex.io (2013 UK)
+    * LocalBitcoins P2P
+    * 1) [KyberSwap (Singapore)](https://kyber.network/swap/eth_knc)
+        * [Company Kyber](https://www.vbprofiles.com/companies/kyber-network-5b2a34e91dedae784bfcadee)
+    * 1) [Thor Swap](https://www.thorswap.com/)
+    * 1) [Simplex (2014, Israel)](https://www.simplex.com/)
+        * [Simplex is rated Great with 7.2 / 10 on Trustpilot](https://www.trustpilot.com/review/simplex.com)
+        * ! [Working at Simplex (Israel)](https://www.glassdoor.com/Overview/Working-at-Simplex-Israel-EI_IE1366394.11,25.htm)
+        * [Company Simplex](https://www.vbprofiles.com/companies/simplex-56ecf15438138860d7000075)
+        * [Become a Simplex Partner](https://www.simplex.com/simplex-partners/)
+        * Article: [Thieves Have it Easy with Bitcoin, Says Anti-Fraud Entrepreneur](https://www.calcalistech.com/ctech/articles/0,7340,L-3730244,00.html)
     * 1) [PayBis (UK?)](https://paybis.com/): Pay with Card, Mistertango SEPA Inst
         * [Paybis is rated with 9.3 / 10 on Trustpilot](https://www.trustpilot.com/review/paybis.com)
         * [Paybis Exchangers: Reviews and Features | DFID](https://www.dfid.org/exchangers/paybis)
@@ -76,23 +109,14 @@ In this definition of Crypto banks the banks
         * [Verification - PayBis](https://paybis.com/verification/)
         * [Mistertango (Lithuania)](https://www.mistertango.com/en/)
         * [PayBis E-currency And Bitcoin Exchange Planning Expansion](https://cointelegraph.com/news/paybis-e-currency-and-bitcoin-exchange-planning-expansion)
-    * eToro (UK) 
-        * [The Complete eToro Cryptocurrency Exchange Review](https://cryptonews.com/reviews/etoro/)
-    * Gemini (2015, US)
-        * [Gemini Review: Is Gemini Safe? - CoinCentral.com](https://coincentral.com/gemini-review/)
-    * Cex.io (2013 UK)
-    * LocalBitcoins P2P
-    * 1) [KyberSwap (Singapore)](https://kyber.network/swap/eth_knc)
-        * [Company Kyber](https://www.vbprofiles.com/companies/kyber-network-5b2a34e91dedae784bfcadee)
-    * 1) [Thor Swap](https://www.thorswap.com/)
-    * 1) [Simplex (Israel)](https://www.simplex.com/)
-        * [Company Simplex](https://www.vbprofiles.com/companies/simplex-56ecf15438138860d7000075)
-        * [Become a Simplex Partner](https://www.simplex.com/simplex-partners/)
-        * Article: [Thieves Have it Easy with Bitcoin, Says Anti-Fraud Entrepreneur](https://www.calcalistech.com/ctech/articles/0,7340,L-3730244,00.html)
-    * 1) DEX - [ShapeShift (CH)](https://shapeshift.io/#/coins)
+        * Simplex partner
+    * 1) DEX - [ShapeShift (2014, CH)](https://shapeshift.io/#/coins)
+        * Cons: Credit card only - via Simplex
         * [Company ShapeShift.io](https://www.vbprofiles.com/companies/shapeshift-io-5655ef312433d2497f000001)
-    * 1) DEX - [Changelly (Malta)](https://changelly.com/)
+    * 1) DEX - [Changelly (2015, Malta)](https://changelly.com/)
+        * Cons: Fiat2Crypto fee - via Simplex
         * [Company Changelly](https://www.vbprofiles.com/companies/changelly-5bed3905105eb56b5856dd35)
+        * [Changelly vs Shapeshift Review: Which is the Best Instant Exchange?](https://blockonomi.com/changelly-vs-shapeshift/)
     * 1) [Coinhouse (France)](https://www.coinhouse.com/)
     * 1) [Genesis](https://genesistrading.com/ledger-live/)
     * 1) [ChangeNOW (RU)](https://changenow.io/)
@@ -105,9 +129,9 @@ In this definition of Crypto banks the banks
         * [Company Coinify](https://www.vbprofiles.com/companies/coinify-57c727a32833cb9ce800001a)
     * DEX P2P - [Bisq - The decentralized Bitcoin exchange](https://bisq.network/faq/#How_is_Bisq_different)
 
-1) Selected by Ledger Live
+1) Selected payment partners of Ledger Live
 
-## Crypto Exchanges
+## Crypto Exchanges (brokers) ---------------------------
 
 * List: [cryptocurrency exchanges | 45+ compared | finder.com](https://www.finder.com/cryptocurrency/exchanges#a-z)
 * List: [cryptonator](https://www.cryptonator.com/rates/ETH-USD)
@@ -119,7 +143,7 @@ In this definition of Crypto banks the banks
 * Kucoin
 * Article: [One Person Drove Bitcoin from $150 to $1,000, Study Finds](https://www.calcalistech.com/ctech/articles/0,7340,L-3729964,00.html)
 
-### Hacked Dex
+### Hacked
 
 * Blog: [The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster](https://www.wired.com/2014/03/bitcoin-exchange/)
 * Wiki: [Bitfinex hack - Wikipedia](https://en.wikipedia.org/wiki/Bitfinex_hack)
@@ -146,13 +170,17 @@ In this definition of Crypto banks the banks
     * Faq: [How much does it cost to trade on Bisq?](https://bisq.network/faq/#How_much_does_it_cost_to_trade_on_Bisq)
     * [Bisq Trading Volume](https://docs.google.com/spreadsheets/d/1M8y2cIlHv5Hx5UAt4WZ961Ac8xaNSLiiavjxabNf0qc/edit#gid=1737643634)
 
-## B2C 
+#### Cross-Chain
+
+* [Atomic Cross-Chain Swaps on Qtum](https://blog.qtum.org/atomic-cross-chain-swap-on-qtum-7e756a890ed7)
+
+## B2C ---------------------------
 
 * [Coinbase Commerce — the Easiest Way for Merchants to Accept Digital Currency](https://medium.com/@coinbasecommerce/coinbase-commerce-the-easiest-way-for-merchants-to-accept-digital-currency-54ba64966f8d)
     * [coinbase/coinbase-commerce-magento](https://github.com/coinbase/coinbase-commerce-magento)
     * [coinbase/coinbase-commerce-node](https://github.com/coinbase/coinbase-commerce-node)
 
-## Coins
+## Coins ---------------------------
 
 ### Stable coins
 
@@ -177,12 +205,7 @@ In this definition of Crypto banks the banks
 
 * [What Is Coin Burn In Cryptocurrency: A Beginner's Guide For Investors](https://coinsutra.com/proof-of-burn/)
 
-## Identity verifiers (KYC)
-
-* [IDnow](https://www.idnow.io/). Home: DE
-* [identity Trust Management AG](https://www.identity.tm/). Home: DE
-
-## Crypto Wallets
+## Crypto Wallets ---------------------------
 
 In this definition of Crypto wallets the wallet
 
@@ -237,7 +260,7 @@ In this definition of Crypto wallets the wallet
 
 * [MetaMask Ethereum Browser Extension](https://metamask.io/)
 
-## Pass Phrase
+## Pass Phrase ---------------------------
 
 * Also called Mnemonic Code
 * Last word is checksum
@@ -250,7 +273,7 @@ In this definition of Crypto wallets the wallet
     * BIP44 Multi-Account Hierarchy for Deterministic Wallets
     * BIP49 Derivation scheme for P2WPKH-nested-in-P2SH based accounts
 
-## DApps
+## DApps ---------------------------
 
 * List: [DappRadar - Ranked list of blockchain dapps](https://dappradar.com/)
 
