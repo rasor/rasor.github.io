@@ -19,6 +19,8 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 ## Currencies - Fungible (interchangeable) tokens
 
+Ethereum: ERC-20 Identical Tokens  
+
 * List: [Cryptocurrency Rankings | CryptoSlate](https://cryptoslate.com/coins/)
 
 * [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin)
@@ -42,11 +44,19 @@ Tags: #blockchain, #cryptocurrency, #ethereum
     * [Qtum](https://everipedia.org/wiki/lang_en/qtum/#roadmap)
     * [Qtum Trade](https://qtumeco.io/market)
     * [Qtum Dapps](https://qtumeco.io/dapps)
+* IOTA
+    * [Lessons learned from evaluating IOTA on Internet of Things devices](https://hackernoon.com/lessons-learned-from-evaluating-iota-on-internet-of-things-devices-a44575e606de)
 
 ## [Non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token) (NFT)
 
-* ERC-721
-    * [CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties) on Ethereum
+## STO
+
+* [What is A Security Token Offering (STO)?](https://www.chainbits.com/cryptocurrencies/what-is-a-security-token-offering/)
+
+Ethereum: ERC-721 Unique Tokens  
+
+* [ERC-721](http://erc721.org/)
+* [CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties) on Ethereum
 
 # Storage ---------------------------
 
@@ -99,20 +109,36 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 
 ## SW
 
-* Ethereum
-    * Ask for Test ethers on twitter
-    * 2018-02: [The Beginners Guide to Using an Ethereum Test Network](https://medium.com/compound-finance/the-beginners-guide-to-using-an-ethereum-test-network-95bbbc85fc1d)
-    * 2018-05: [Ethereum Test network – Coinmonks – Medium](https://medium.com/coinmonks/ethereum-test-network-21baa86072fa)
-* IBM Cloud [Home - IBM Call for Code - Supply Networks](https://developer.ibm.com/callforcode/resources/financial-networks/)
-* IDE
-    * [trufflesuite/truffle](https://github.com/trufflesuite/truffle)
-    * [Truffle Suite | Tutorials](https://truffleframework.com/tutorials)
-    * [Truffle Suite | Boxes](https://truffleframework.com/boxes)
-    * [Truffle Suite | Boxes | angular-truffle-box](https://truffleframework.com/boxes/angular-truffle-box)
-    * Code: [angular-truffle-starter-dapp](https://github.com/Nikhil22/angular-truffle-starter-dapp)
-    * Book: [Truffle Quick Start Guide](https://www.packtpub.com/web-development/truffle-quick-start-guide)
+### Ethereum
 
-### Learn
+* Ask for Test ethers on twitter
+* 2018-02: [The Beginners Guide to Using an Ethereum Test Network](https://medium.com/compound-finance/the-beginners-guide-to-using-an-ethereum-test-network-95bbbc85fc1d)
+* 2018-05: [Ethereum Test network – Coinmonks – Medium](https://medium.com/coinmonks/ethereum-test-network-21baa86072fa)
+
+#### IDE
+
+* [trufflesuite/truffle](https://github.com/trufflesuite/truffle)
+* [Truffle Suite | Tutorials](https://truffleframework.com/tutorials)
+* [Truffle Suite | Boxes](https://truffleframework.com/boxes)
+* [Truffle Suite | Boxes | angular-truffle-box](https://truffleframework.com/boxes/angular-truffle-box)
+* Code: [angular-truffle-starter-dapp](https://github.com/Nikhil22/angular-truffle-starter-dapp)
+* Book: [Truffle Quick Start Guide](https://www.packtpub.com/web-development/truffle-quick-start-guide)
+
+### IBM Cloud 
+
+* [Home - IBM Call for Code - Supply Networks](https://developer.ibm.com/callforcode/resources/financial-networks/)
+
+### Bitcoin
+
+* [Developer Guide - Bitcoin](https://bitcoin.org/en/developer-guide)
+
+#### Lightning Network
+
+* [LND Overview and Developer Guide](https://dev.lightning.community/overview/)
+* Code: [Learn-by-doing/lightning-extension](https://github.com/Learn-by-doing/lightning-extension)
+
+
+## Learn
 
 * DK Vid 2013-10: [YouTube - So ein Ding - Bitcoin - 22. oktober 2013](https://www.youtube.com/watch?v=Rhn4--Phsuo)
 * DK Vid 201x: [YouTube - So ein Ding: Bitcoin & Blockchain](https://www.youtube.com/watch?v=nYi1itXLKsM&t=345s)
@@ -154,6 +180,7 @@ Tags: #blockchain, #cryptocurrency, #ethereum
 * [Blockchain now and in the future (with ARYZE and AnyLedger)](https://www.eventbrite.com/e/blockchain-now-and-in-the-future-with-aryze-and-anyledger-tickets-48954568432?aff=erelexpmlt)
 * TechFestival 2018
     * [Hacking Your First Decentralized App](https://techfestival.co/event/hacking-first-decentralized-app/)
+    * [Hacking Your First Decentralized App](https://www.meetup.com/Copenhagen-Ethereum-Meetup/events/253810079/)
         * [Troels Plenge (@tplenge) | Twitter](https://twitter.com/tplenge)
             * [Troels Plenge](https://angel.co/troels-plenge)
             * [wasoko (@wasokocom) | Twitter](https://twitter.com/wasokocom)

@@ -103,13 +103,14 @@ In this definition of Crypto banks the banks
         * [Become a Simplex Partner](https://www.simplex.com/simplex-partners/)
         * Article: [Thieves Have it Easy with Bitcoin, Says Anti-Fraud Entrepreneur](https://www.calcalistech.com/ctech/articles/0,7340,L-3730244,00.html)
     * 1) [PayBis (UK?)](https://paybis.com/): Pay with Card, Mistertango SEPA Inst
+        * Simplex partner
         * [Paybis is rated with 9.3 / 10 on Trustpilot](https://www.trustpilot.com/review/paybis.com)
         * [Paybis Exchangers: Reviews and Features | DFID](https://www.dfid.org/exchangers/paybis)
         * [Rates - PayBis](https://paybis.com/rates/)
         * [Verification - PayBis](https://paybis.com/verification/)
-        * [Mistertango (Lithuania)](https://www.mistertango.com/en/)
         * [PayBis E-currency And Bitcoin Exchange Planning Expansion](https://cointelegraph.com/news/paybis-e-currency-and-bitcoin-exchange-planning-expansion)
-        * Simplex partner
+        * [Mistertango (Lithuania)](https://www.mistertango.com/en/)
+            * [MisterTango is rated &quot;Poor&quot; with 4.8 / 10 on Trustpilot](https://www.trustpilot.com/review/mistertango.com)
     * 1) DEX - [ShapeShift (2014, CH)](https://shapeshift.io/#/coins)
         * Cons: Credit card only - via Simplex
         * [Company ShapeShift.io](https://www.vbprofiles.com/companies/shapeshift-io-5655ef312433d2497f000001)
@@ -204,6 +205,10 @@ In this definition of Crypto banks the banks
 #### Proof of Burn
 
 * [What Is Coin Burn In Cryptocurrency: A Beginner's Guide For Investors](https://coinsutra.com/proof-of-burn/)
+
+#### Hacked
+
+* ETC: [Deep Chain Reorganization Detected on Ethereum Classic (ETC)](https://blog.coinbase.com/ethereum-classic-etc-is-currently-being-51-attacked-33be13ce32de)
 
 ## Crypto Wallets ---------------------------
 

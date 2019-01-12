@@ -3,28 +3,49 @@ Date: 2099-01-01 00:00
 Category: Dev
 Tags: #blockchain, #ethereum, #dai, #0x
 
+# Ethereum
+
+* Truffle Quick Start Guide
+    * Book: [Truffle Quick Start Guide | PACKT Books](https://www.packtpub.com/web-development/truffle-quick-start-guide)
+    * Code: [PacktPublishing/Truffle-Quick-Start-Guide](https://github.com/PacktPublishing/Truffle-Quick-Start-Guide)
+* Code: Create tokens. [ConsenSys/Tokens](https://github.com/ConsenSys/Tokens)
+
 # 0x
 
 * Home: [0x](https://0x.org/) - 0x is an open protocol that enables the P2P exchange of assets on the Ethereum
     * Twitter: [0x (@0xProject)](https://twitter.com/0xProject)
     * Medium: [0x](https://blog.0xproject.com/)
     * Dev: [0x](https://0x.org/docs)
+* Intro
+    * [Learn 0x. Earn 0x.](https://www.coinbase.com/earn/0x)
+    * [A beginner’s guide to 0x](https://blog.0xproject.com/a-beginners-guide-to-0x-81d30298a5e0)
     * [What is 0x? (ZRX) Beginners Guide, Information & Review](https://blockonomi.com/0x-guide/)
     * [What is 0x? A Beginner’s Guide](https://coincentral.com/0x-beginner-guide/)
-    * Client: [The Complete Beginner’s Guide to Radar Relay Review 2019 - Is it Safe?](https://blockonomi.com/radar-relay-review/)
+    * [Building self-sustaining ecosystems through governance by Will Warren & Peter Zeitz (Devcon4)](https://www.youtube.com/watch?v=-Fnwi5Tvtl0&feature=youtu.be)
+* Marketplaces - called (order) Relayers
+    * A Relayer: [The Complete Beginner’s Guide to Radar Relay Review 2019 - Is it Safe?](https://blockonomi.com/radar-relay-review/)
+    * [Radar Relay](https://radarrelay.com/)
+        * API
+            * [Wallet Manager](https://developers.radarrelay.com/wallet-manager#lightwallet-usage)
+    * 0x's own Trade portal (Shop): [0x](https://0x.org/portal) - integrates with MetaMAsk
+    * Buid your own shop with [AssetBuyer js](https://0x.org/docs/asset-buyer#usage) - using own or existing relayer
+    * Build a relayer: [Introducing the 0x Launch Kit](https://blog.0xproject.com/introducing-the-0x-launch-kit-4acdc3453585)
 
 ## Shorts
 
-    * Short trading: [shorttokens](https://shorttokens.io/)
-    * [expo](https://expotrading.com/)
+* Short trading: [shorttokens](https://shorttokens.io/)
+* [expo](https://expotrading.com/)
 
 ## 0x hackathon 2019-01
 
 * [0x + CoinList Hackathon](https://blog.0xproject.com/0x-coinlist-hackathon-3b48ddbfd21c)
     * [0x Hackathon on CoinList Build - CoinList](https://coinlist.co/build/0x)
+    * [Your application](https://coinlist.co/build/0x/application)
+    * Links: [0x Hackathon, Truffle Framework &amp; the new  Solidity ^0.5.0](https://www.meetup.com/Programmable-Money/events/257888677/)
     * Chat: [Discord](https://discordapp.com/channels/435912040142602260/524673671311130643)
     * Ideas: [22 Ideas to Explore with 0x](https://blog.0xproject.com/22-ideas-to-explore-with-0x-4d551c10dd4e)
     * Cases: [0x Use Cases](https://0x.org/why#cases)
+    * Ideas: [ETHSingapore Wishlist and Bounty – bZxNetwork – Medium](https://medium.com/bzxnetwork/ethsingapore-wishlist-and-bounty-6d0b1b1d3ad2)
 
 # Kyber
 
