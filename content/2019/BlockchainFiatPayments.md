@@ -183,10 +183,18 @@ In this definition of Crypto banks the banks
 
 ## Coins ---------------------------
 
+* [A 5-star system to evaluate crypto tokens – Muneeb Ali – Medium](https://medium.com/@muneeb/5-star-system-6c27a0eb4a1c)
+* Coin: ETH
+    * Blog: [Ethereum’s Constantinople Upgrade: Which Exchanges Are Going to Support The ETH Hard Fork?](https://cryptopotato.com/ethereums-constantinople-upgrade-which-exchanges-are-going-to-support-the-eth-hard-fork/)
+
 ### Stable coins
 
 * Blog: [2018 — The Year of the Stablecoin](https://hackernoon.com/2018-the-year-of-the-stablecoin-6a6ca5d3637b). Buy wall, Sell wall
 * Blog: [Stablecoins: Cryptocurrencies That Could Replace Money | Crypto Briefing](https://cryptobriefing.com/stablecoins-cryptocurrencies-money/)
+* Coin: TUSD [TrustToken: Tokenization you can Trust](https://www.trusttoken.com/trueusd/)
+    * Blog: [TrueUSD AutoSweep](https://blog.trusttoken.com/autosweep-64b222138183)
+    * [TrustToken (@TrustToken) | Twitter](https://twitter.com/TrustToken)
+    * Contract: [Etherscan Token Tracker](https://etherscan.io/tokens?l=TrustToken)
 
 #### Autonomous coin burning and minting
 

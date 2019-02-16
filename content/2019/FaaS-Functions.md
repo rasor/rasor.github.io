@@ -21,6 +21,11 @@ Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
 * Blog: [How to Build a Serverless, SEO-friendly React blog with Netlify](https://buttercms.com/blog/serverless-react-blog-tutorial)
 * Wiki: [Monitoring with Prometheus and Grafana](https://github.com/hashicorp/faas-nomad/wiki/Monitoring-with-Prometheus-and-Grafana)
 
+## OpenFaaS Cloud
+
+* [How to build a Serverless Single Page App](https://www.openfaas.com/blog/serverless-single-page-app/)
+* [openfaas/openfaas-cloud](https://github.com/openfaas/openfaas-cloud#get-started)
+
 ## OpenFaaS
 
 * [OpenFaaS](https://www.openfaas.com/)
