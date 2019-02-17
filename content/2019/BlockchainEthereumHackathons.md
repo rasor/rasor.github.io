@@ -19,6 +19,8 @@ Tags: #blockchain, #ethereum, #dai, #0x
     * Dev: [0x](https://0x.org/docs)
 * Intro
     * [Learn 0x. Earn 0x.](https://www.coinbase.com/earn/0x)
+    * [0x Acceleration Program](https://0x.org/eap)
+        * [Announcing the 0x Ecosystem Acceleration Program](https://blog.0xproject.com/announcing-the-0x-ecosystem-acceleration-program-89d1cb89d565)
     * [0x Price Chart (ZRX) | Coinbase](https://www.coinbase.com/price/0x)
     * [A beginner’s guide to 0x](https://blog.0xproject.com/a-beginners-guide-to-0x-81d30298a5e0)
     * [What is 0x? (ZRX) Beginners Guide, Information & Review](https://blockonomi.com/0x-guide/)
@@ -63,7 +65,48 @@ Tags: #blockchain, #ethereum, #dai, #0x
     * Cases: [0x Use Cases](https://0x.org/why#cases)
     * Ideas: [ETHSingapore Wishlist and Bounty – bZxNetwork – Medium](https://medium.com/bzxnetwork/ethsingapore-wishlist-and-bounty-6d0b1b1d3ad2)
 
+### 0x Winners
 
+[0x + CoinList Hackathon Recap](https://blog.0xproject.com/0x-coinlist-hackathon-recap-e453b1195533)
+
+* Workshop vids: [CoinList](https://www.youtube.com/channel/UCLSUauF82CnpumnbfwWpKww/videos)
+* [Tokenary P2P Exchange - CoinList](https://coinlist.co/build/0x/projects/2e9e7ecb-4c1d-4f2d-a08b-6ff977435f75)
+    * Github: [Tokenary/Tokenary-P2P-Exchange](https://github.com/Tokenary/Tokenary-P2P-Exchange)
+    * Vid: [YouTube](https://www.youtube.com/watch?v=fS9pqt4jIwM&feature=youtu.be)
+* [CashflowRelay - CoinList](https://coinlist.co/build/0x/projects/c84ee1bb-0db6-40b5-a811-29a32d96d8b6)
+    * Web: https://www.cashflowrelay.com/
+    * Github: [akropolisio/cashflowrelay-testnet](https://github.com/akropolisio/cashflowrelay-testnet)
+    * Vid: [VimeUhOh](https://vimeo.com/316377730)
+* [Alice - CoinList](https://coinlist.co/build/0x/projects/595631c5-411b-42a0-8083-0df91dfabef2)
+    * Github: [markspereira/alice](https://github.com/markspereira/alice)
+    * Vid: [Alice - 0x hackathon submission](https://vimeo.com/316001373)
+* [Disclose - CoinList](https://coinlist.co/build/0x/projects/1080535c-0e62-4ea8-a2f8-a80e05ecf2b0)
+    * Web: [Disclose](https://disclose-authority-client.herokuapp.com/)
+    * Github: [stanislasdrg/disclose](https://github.com/stanislasdrg/disclose)
+    * Vid1: [YouTube](https://www.youtube.com/watch?v=_pMUf6ox3vY&feature=youtu.be)
+    * Vid2: [YouTube](https://www.youtube.com/watch?v=vghPIw6t_JU)
+* [Cold Crypto - CoinList](https://coinlist.co/build/0x/projects/1ad38c3e-5b9a-4c75-aef8-d576635e49c4)
+    * Web: [Cold Crypto · Secure Crypto Wallet for ETH and EOS](https://duxi.io/cold/0xinstant)
+    * Github: [zlumer/qr-packets-demo](https://github.com/zlumer/qr-packets-demo)
+    * Vid: [YouTube](https://www.youtube.com/watch?v=dOb4ahfesLU)
+* [Mars Nation Land Selector - CoinList](https://coinlist.co/build/0x/projects/4052ca4c-8f54-4d9f-a1e6-b6d985f93547)
+    * Web: [Mars Nation Harberger Marketplace](http://harberger-marketplace.s3-website-eu-west-1.amazonaws.com/)
+    * Github: [marsnation/area-picker](https://github.com/marsnation/area-picker)
+    * Vid: [YouTube](https://www.youtube.com/watch?v=hgOTm_N1B6k&feature=youtu.be)
+* [VegaRelay - CoinList](https://coinlist.co/build/0x/projects/9d596d96-c914-4b2c-b2ec-10d269467e8c)
+    * Web: [React App](https://serene-brushlands-11501.herokuapp.com/)
+    * Github: [michaelhly/vegarelay](https://github.com/michaelhly/vegarelay)
+    * Wiki: [michaelhly/vegarelay](https://github.com/michaelhly/vegarelay/wiki)
+* [Obvy - CoinList](https://coinlist.co/build/0x/projects/b89130ff-cbe4-4ce8-8818-df3eee027e03)
+    * Web: [Obvy](https://www.obvy.io/requests/new)
+    * Github: [tqd2ax/obvy](https://github.com/tqd2ax/obvy)
+    * Slides: [demo.pdf](https://drive.google.com/file/d/1mKY1F9jFRxXsp7H6T8tCReZ-tNOK_BHv/view)
+* [ETHOptions  - CoinList](https://coinlist.co/build/0x/projects/54758bd0-4f06-4e1f-82a3-8cd302d2695c)
+    * Github: [parinaA/0x-hack](https://github.com/parinaA/0x-hack)
+* [DEFTY - CoinList](https://coinlist.co/build/0x/projects/9d11938a-5c5b-4243-9a34-e3506472d7ca) - Web wallet using Metamask, Ledger and Trezor - Trade loans 
+    * Web: [React App](https://defty.netlify.com/)
+    * Github: [Defty](https://github.com/DeftyHQ)
+    * Vid: [YouTube](https://www.youtube.com/watch?v=SkCBC9eLg4Q&feature=youtu.be)
 
 # Kyber
 
