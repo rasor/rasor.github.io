@@ -123,6 +123,11 @@ listed several Dai projects
         * Demo: [Meme Lordz: The First Decentralized Meme Market!](https://www.memelordz.com/#/)
 * [Whacked Blocks Hackathon](https://www.whackedblocks.com/)
     * Github: [akwodkiewicz/dai-bite-keeper](https://github.com/akwodkiewicz/dai-bite-keeper/)
+* December 7 – 9, 2018 [ETHSingapore](https://ethsingapore.devpost.com/)
+    * [ZkDAI](https://devpost.com/software/ethsingapore-zk-dai)
+        * Medium: [ZkDai — Private DAI transactions on Ethereum using Zk-SNARKs](https://medium.com/@atvanguard/zkdai-private-dai-transactions-on-ethereum-using-zk-snarks-9e3ef4676e22)
+        * Github: [atvanguard/ethsingapore-zk-dai](https://github.com/atvanguard/ethsingapore-zk-dai)
+    * A lot more projects - [ETHSingapore](https://ethsingapore.devpost.com/submissions)
 
 # Other projects
 
