@@ -13,16 +13,116 @@ Tags: #aws
 * [User Groups](https://awscommunitynordics.org/usergroups/)
 * [Copenhagen AWS User Group (Copenhagen, Denmark)](https://www.meetup.com/Copenhagen-AWS-User-Group/)
 
+
+## 15:15 Continuous Delivery to AWS using Azure DevOps
+
+* [Morten Brix Pedersen](https://www.linkedin.com/in/mbrix/) - Queue-it
+* [Morten Brix Pedersen (@mbrix) | Twitter](https://twitter.com/mbrix)
+* [mbp - Overview](https://github.com/mbp)
+
+Azure DevOps - Collection of tools from Kanban to 
+
+* PreReq: Creted VPC in AWS
+    * Installed AWS tools for VSTS [aws/aws-vsts-tools](https://github.com/aws/aws-vsts-tools)
+* Publish to AWS EC Registry
+* Deploy to AWS Fargate
+
+```bash
+# test we are running
+dotnet run
+```
+build.yaml:
+* Build 
+* add docker file w igm
+* push img to AWS ECR
+* add cloudformation script - VSTS Task: AWS CloudFormation Update Stack
+
+GiraffeApp.yaml
+* Fetch Secrets and add as parms to yaml
+* Deploy to AWS Fargate
+
+
+## 16:00 Alexa Skill Development
+
+* [Goran Vuksic (@gvuksic) | Twitter](https://twitter.com/gvuksic)
+* [https://www.linkedin.com/in/goranvuksic/](https://www.linkedin.com/in/goranvuksic/)
+
+Amazon Echo - wifi connected loudspeaker
+
+* interacts with 
+    * Echo button - enables play games
+    * Echo Connect - to home phone
+    * AWS Alexa in cloud - "Alexa - turn on kitchen light" - connects back to your IoT at home.
+
+## 14:30 Bring ML awareness with DeepLens to the business by accessing the office with the face
+
+* [Lezgin Bakircioglu](https://www.linkedin.com/in/lezgin-bakircioglu-2239b93/)
+
+* DeepLens is a CP with cam. Only for Dev
+    * [AWS DeepLens – Deep learning enabled video camera for developers - AWS](https://aws.amazon.com/deeplens/)
+    * Problems:
+        * Slow CPU
+        * Only runs one model
+        * State
+        * Overheates in 2 days
+        * Wifi disconnect
+* Build
+    * Hard way: SageMaker + Jupyter
+    * Easy way: DeepLens as first filter - AWS for rest.
+        * Use DoorMan [Doorman - Community Project](https://aws.amazon.com/deeplens/community-projects/Doorman/)
+            * [YouTube](https://www.youtube.com/watch?v=UXVD22jDbu8)
+        * Arduino
+* Sln: [dwtechnologies/concierge](https://github.com/dwtechnologies/concierge)
+
+## 13:45 Making Machine Learning social with SageMaker, Meeshkan and Slack
+
+* [Mike Solomon](https://www.linkedin.com/in/michael-thomas-solomon/)
+* CEO at [Meeshkan](https://www.meeshkan.com/)
+    * [Meeshkan (@MeeshkanML) | Twitter](https://twitter.com/meeshkanml)
+    * [Meeshkan | Slack](https://meeshkan-community.slack.com/join/shared_invite/enQtNTMyOTA5MTgwOTc5LTk5ZWYxMTE3MzgxZDNiNTFmOWMzOGE2MTNiMDhkODJmNDFjZTU3ODI1MDczMTYzOWRhZTdkNDBkY2E3YWYyM2E)
+
+What:
+
+* SagMakerML graphs are parsed into Slack
+
+Tools:
+
+* [Machine Learning Models & Algorithms | Amazon SageMaker on AWS](https://aws.amazon.com/sagemaker/)
+    * Lots of getting startet...
+    * Missing
+        * No chat
+        * No easy alerts
+        * No serendipity - find by accident
+        * No lurking - lust read - not do
+        * No audit log of teams thaoughts process - the why
+
+Dev:
+
+* [Meeshkan/meeshkan-client](https://github.com/Meeshkan/meeshkan-client)
+* [Meeshkan/udemy-tmnt-koopa](https://github.com/Meeshkan/udemy-tmnt-koopa)
+* [Meeshkan/meeshkan-client](https://github.com/Meeshkan/meeshkan-client/blob/dev/examples/sagemaker/pytorch_rnn_meeshkan.ipynb)
+* Dev Jupyter notebooks locally
+* [Training with PyTorch on Amazon SageMaker – Julien Simon – Medium](https://medium.com/@julsimon/training-with-pytorch-on-amazon-sagemaker-58fca8c69987)
+* [PyTorch](https://pytorch.org/)
+    * Gradients easily exposed and tweakable
+
+When training the model in SageMaker, then a notification is sent to Slack and same, when done a graph is sent to Slack, so it can be discussed.
+Deeplearning often runs for days, so you have slack users for monitoring :-)
+
 ## 13:00 Running Devops at the Tradeshift rocketship
 
 * [Jesper Terkelsen/](https://www.linkedin.com/in/jesperterkelsen/)
+    * jnt(at)tradeshift.com
 
+Tips:
 
-
+* Run test envirs on spot
+* Managed svc slow to spin up - not good for test, so can they run in containers, then do
+* Photo of transaction problem solving graph
 
 ## 11:15 Let's build a serverless data stream on AWS
 
-* Martin Larsen [https://www.linkedin.com/in/realvaluetalks/](https://www.linkedin.com/in/realvaluetalks/)
+* Martin Larsen [https://www.linkedin.com/in/realvaluetalks/](https://www.linkedin.com/in/realvaluetalks/) - Queue-it
 * [Martin Larsen: Technology talks with real value](http://realvaluetalks.com/)
 
 Building:
