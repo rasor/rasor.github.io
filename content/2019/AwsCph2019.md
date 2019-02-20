@@ -255,4 +255,8 @@ Suggestions:
 * Aggreagate all
 * Heatmaps
 
+# Sponsor offers
+
+* [A Gift from N2WS](http://get.n2ws.com/aws-summit-2019/)
+
 The End
