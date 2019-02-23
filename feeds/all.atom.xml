@@ -35,10 +35,12 @@
 &lt;p&gt;During the course you will only be working in &lt;a href="https://portal.azure.com/"&gt;Azure Portal&lt;/a&gt;.&lt;br&gt;
 You will not be working in VSTS - now called &lt;a href="https://visualstudio.com"&gt;Azure Devops&lt;/a&gt;.  &lt;/p&gt;
 &lt;p&gt;On the course you will get $100 to spend (so you don't need a credit card). You will get it via &lt;a href="https://www.microsoftazurepass.com/"&gt;Microsoft Azure Pass&lt;/a&gt;. It is a trial lasting 30 days.&lt;br&gt;
-The course book is only at &lt;a href="https://skillpipe.com/?lang=en-GB#/account/login"&gt;Skillpipe&lt;/a&gt;. Since it is not a PDF is is more or less useless. Also you can find much better online for free. E.g. 
-&lt;em&gt; Videos on &lt;a href="https://channel9.msdn.com/"&gt;Channel 9&lt;/a&gt;
-&lt;/em&gt; eBooks: &lt;a href="https://mva.microsoft.com/ebooks"&gt;Microsoft Virtual Academy&lt;/a&gt; - will retire during 2019!
-* Blog: &lt;a href="https://rasor.github.io/microsoft-architecture-and-implementations.html#microsoft-architecture-and-implementations"&gt;Microsoft Architecture and Implementations&lt;/a&gt;&lt;/p&gt;
+The course book is only at &lt;a href="https://skillpipe.com/?lang=en-GB#/account/login"&gt;Skillpipe&lt;/a&gt;. Since it is not a PDF is is more or less useless. Also you can find much better online for free. E.g.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Videos on &lt;a href="https://channel9.msdn.com/"&gt;Channel 9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;eBooks: &lt;a href="https://mva.microsoft.com/ebooks"&gt;Microsoft Virtual Academy&lt;/a&gt; - will retire during 2019!&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a href="https://rasor.github.io/microsoft-architecture-and-implementations.html#microsoft-architecture-and-implementations"&gt;Microsoft Architecture and Implementations&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;Building&lt;/h3&gt;
 &lt;p&gt;When you are building stuff for Azure there are several ways to get the infrastructure in place.&lt;/p&gt;
 &lt;ul&gt;
