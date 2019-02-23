@@ -1,5 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2018-09-07T17:00:00+02:00</updated><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-02-23T10:00:00+01:00</updated><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Labs: &lt;ul&gt;
+&lt;li&gt;Version F-: &lt;a href="https://github.com/MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals"&gt;MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Version A-E (depricated): &lt;a href="https://github.com/MicrosoftLearning/10979-MicrosoftAzureFundamentals"&gt;MicrosoftLearning/10979-MicrosoftAzureFundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before the course you can &lt;a href="#pre-installing"&gt;pre install&lt;/a&gt; what you need during the course. This includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#Visual-Studio"&gt;Visual Studio&lt;/a&gt; Installer package&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Azure-CLI"&gt;Azure CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Azure-PowerShell"&gt;Azure PowerShell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Azure-Storage-Explorer"&gt;Azure Storage Explorer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Visual-Studio-Code"&gt;Visual Studio Code&lt;/a&gt; extensions …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Labs: &lt;ul&gt;
+&lt;li&gt;Version F-: &lt;a href="https://github.com/MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals"&gt;MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Version A-E (depricated): &lt;a href="https://github.com/MicrosoftLearning/10979-MicrosoftAzureFundamentals"&gt;MicrosoftLearning/10979-MicrosoftAzureFundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Before the course you can &lt;a href="#pre-installing"&gt;pre install&lt;/a&gt; what you need during the course. This includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#Visual-Studio"&gt;Visual Studio&lt;/a&gt; Installer package&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Azure-CLI"&gt;Azure CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Azure-PowerShell"&gt;Azure PowerShell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Azure-Storage-Explorer"&gt;Azure Storage Explorer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#Visual-Studio-Code"&gt;Visual Studio Code&lt;/a&gt; extensions (optional)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With these tools in place you can use you MSDN subscription (if you have one) and just follow the the labs (on github) and save the course money.  &lt;/p&gt;
+&lt;p&gt;During the course you will only be working in &lt;a href="https://portal.azure.com/"&gt;Azure Portal&lt;/a&gt;.&lt;br&gt;
+You will not be working in VSTS - now called &lt;a href="https://visualstudio.com"&gt;Azure Devops&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;On the course you will get $100 to spend (so you don't need a credit card). You will get it via &lt;a href="https://www.microsoftazurepass.com/"&gt;Microsoft Azure Pass&lt;/a&gt;. It is a trial lasting 30 days.&lt;br&gt;
+The course book is only at &lt;a href="https://skillpipe.com/?lang=en-GB#/account/login"&gt;Skillpipe&lt;/a&gt;. Since it is not a PDF is is more or less useless. Also you can find much better online for free. E.g. videos on &lt;a href="https://channel9.msdn.com/"&gt;Channel 9&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;The course leads towards the exams:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-900.aspx"&gt;Exam AZ-900: Microsoft Azure Fundamentals&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-100.aspx"&gt;Exam AZ-100: Microsoft Azure Infrastructure and Deployment&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment"&gt;MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-101.aspx"&gt;Exam AZ-101: Microsoft Azure Integration and Security&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity"&gt;MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-200.aspx"&gt;Exam AZ-200: Microsoft Azure Developer Core Solutions (beta)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-201.aspx"&gt;Exam AZ-201: Microsoft Azure Developer Advanced Solutions (beta)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-300.aspx"&gt;Exam AZ-300: Microsoft Azure Architect Technologies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies"&gt;MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-301.aspx"&gt;Exam AZ-301: Microsoft Azure Architect Design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign"&gt;MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Pre installing.&lt;/h3&gt;
+&lt;p&gt;Before the course update to latest&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Visual Studio&lt;/li&gt;
+&lt;li&gt;VsCode&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(assuming you already have them installed)&lt;/p&gt;
+&lt;h4&gt;Visual Studio Code&lt;/h4&gt;
+&lt;p&gt;You could need the extensions&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools"&gt;Azure Resource Manager Tools&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Visual Studio&lt;/h4&gt;
+&lt;p&gt;In VSInstaller select the Azure package to get Azure SDK installed. This enables &lt;a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy"&gt;Visual Studio Azure resource group projects&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Azure CLI&lt;/h4&gt;
+&lt;p&gt;Azure CLI gives you convenient &lt;code&gt;az&lt;/code&gt; commands to run from bash - very nice together with VSCode.&lt;br&gt;
+HowTo: &lt;a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest"&gt;Install the Azure CLI for Windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After install of MSI package:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open PowerShell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify installation&lt;/span&gt;
+az -v
+&lt;span class="c1"&gt;# azure-cli                         2.0.58&lt;/span&gt;
+&lt;span class="c1"&gt;# .. and a lot of other rows&lt;/span&gt;
+&lt;span class="c1"&gt;# Python location &amp;#39;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\python.exe&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;# Extensions directory &amp;#39;C:\Users\&amp;lt;user&amp;gt;\.azure\cliextensions&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Notice the CLI is running on Python which it installed for itself. &lt;br&gt;
+&lt;em&gt;You need to add some path to ENV to be able to run from Git Bash, too.&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Try login&lt;/span&gt;
+az login
+&lt;span class="c1"&gt;# Note, we have launched a browser for you to login. For old experience with device code, use &amp;quot;az login --use-device-code&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# You have logged in. Now let us find all the subscriptions to which you have access...&lt;/span&gt;
+&lt;span class="c1"&gt;# [&lt;/span&gt;
+&lt;span class="c1"&gt;#   {&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;cloudName&amp;quot;: &amp;quot;AzureCloud&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;id&amp;quot;: &amp;quot;119643ba-5138-4a85-876c-aaaaaaaaaaaa&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;isDefault&amp;quot;: true,&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;name&amp;quot;: &amp;quot;Visual Studio Enterprise&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;state&amp;quot;: &amp;quot;Enabled&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;tenantId&amp;quot;: &amp;quot;eef828d6-45f3-457f-a6e0-aaaaaaaaaaaa&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#     &amp;quot;user&amp;quot;: {&lt;/span&gt;
+&lt;span class="c1"&gt;#       &amp;quot;name&amp;quot;: &amp;quot;someone@testing.az&amp;quot;,&lt;/span&gt;
+&lt;span class="c1"&gt;#       &amp;quot;type&amp;quot;: &amp;quot;user&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#     }&lt;/span&gt;
+&lt;span class="c1"&gt;#   }&lt;/span&gt;
+&lt;span class="c1"&gt;# ]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Azure PowerShell&lt;/h4&gt;
+&lt;p&gt;Azure PowerShell will be used for automation scripts together with container yaml files and json ARM templates.&lt;br&gt;
+It replaces AzureRM, which you should uninstall first.  &lt;/p&gt;
+&lt;p&gt;Installation of &lt;a href="https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.3.0"&gt;Azure PowerShell with PowerShellGet&lt;/a&gt;:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Open PowerShell&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# While running as admin:&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Allow to download &lt;/span&gt;
+Set-ExecutionPolicy RemoteSigned
+&lt;span class="c1"&gt;# Enable remote install&lt;/span&gt;
+Import-Module PowerShellGet
+&lt;span class="c1"&gt;# Install Azure PowerShell&lt;/span&gt;
+Install-Module -Name Az -AllowClobber
+&lt;span class="c1"&gt;# Test by connecting to Az&lt;/span&gt;
+Connect-AzAccount
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The new tool runs also on Linux (via .NET Standard), so that is why MS made a new one. Read More: &lt;a href="https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-1.3.0"&gt;Introducing the Azure PowerShell Az module&lt;/a&gt;.&lt;br&gt;
+&lt;a href="https://docs.microsoft.com/en-us/powershell/azure/queries-azureps?view=azps-1.3.0"&gt;Here are some Querys&lt;/a&gt; to get you started&lt;/p&gt;
+&lt;h4&gt;Azure Storage Explorer&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Download and install &lt;a href="https://azure.microsoft.com/en-us/features/storage-explorer/"&gt;Azure Storage Explorer&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;People&lt;/h3&gt;
+&lt;p&gt;Perhaps you know or will meet some of my co-students out in the community.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instructor &lt;a href="https://www.linkedin.com/in/nis-gabriel-3400296/"&gt;Nis Gabriel&lt;/a&gt; - pro at Windows infrastructure&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/in/bruno-westergaard-b179151a/"&gt;Bruno Westergaard&lt;/a&gt; - pro at managing VMs in Azure&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/in/dennismoeller/"&gt;Dennis Møller Jensen&lt;/a&gt; - pro at managing on-prem hosting&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/in/martin-serup-0979a4/"&gt;Martin Serup&lt;/a&gt; - pro at compliance, infrastructure architechture, mobile phone management for enterprises&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/in/andersbustedjanum/"&gt;Anders Busted-Janum&lt;/a&gt; - developer&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/in/nielslunn/"&gt;Niels Lunn&lt;/a&gt; - developer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#azure"></category><category term="#microsoft"></category><category term="#docker"></category><category term="#paas"></category><category term="#iaas"></category><category term="#vm"></category><category term="#powershell"></category><category term="#visualstudio"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
 &lt;a href="https://blog.github.com/2013-09-27-viewing-yaml-metadata-in-your-documents/"&gt;&lt;img alt="Nested tables with yaml" src="https://f.cloud.github.com/assets/64050/1228267/e049d0c6-27a0-11e3-9dd8-a1cd22599344.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is opposed to using &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables"&gt;normal markdown tables&lt;/a&gt; as here:  &lt;/p&gt;
 &lt;table&gt;
@@ -1515,12 +1663,14 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/angular/angular-cli/wiki/angular-cli"&gt;Angular CLI Config Schema&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html"&gt;TypeScript Compiler Options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2018-06-11T15:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2019-02-20T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;h1&gt;Low-Code&lt;/h1&gt;
+&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Automated Business UI Process development - &lt;a href="https://en.wikipedia.org/wiki/Robotic_process_automation"&gt;RPA&lt;/a&gt;. Automated frontend using existing UI as data transfer channel are created in this category. &lt;/li&gt;
-&lt;li&gt;Application development - &lt;a href="https://en.wikipedia.org/wiki/Platform_as_a_service"&gt;hpaPaaS …&lt;/a&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
+&lt;li&gt;Application development …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1&gt;Low-Code&lt;/h1&gt;
+&lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
 &lt;ol&gt;
@@ -1570,6 +1720,9 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=hFwiZYxQboQ"&gt;Microsoft Flow + Azure Logic Apps + Azure Service Bus&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.neuronesb.com/#"&gt;Neuron ESB&lt;/a&gt; - C#&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h1&gt;No-Code&lt;/h1&gt;
+&lt;p&gt;Some tools offers &lt;a href="https://en.wikipedia.org/wiki/No-code_development_platform"&gt;No-code&lt;/a&gt; development at all.  &lt;/p&gt;
+&lt;p&gt;Product Hunt highlights a few of them &lt;a href="https://www.producthunt.com/newsletter/2538"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;h2&gt;Design Sprint&lt;/h2&gt;
 &lt;ul&gt;
@@ -1589,7 +1742,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;Microservices, SOA, and APIs: Friends or enemies?&lt;br&gt;
 &lt;a href="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html"&gt;&lt;img alt="Microservices, SOA, and APIs" src="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/images/figure8.jpg"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="#mbaas"></category><category term="#ipaas"></category><category term="#esb"></category><category term="#designsprint"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="#mbaas"></category><category term="#ipaas"></category><category term="#esb"></category><category term="#designsprint"></category><category term="#nocode"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
 &lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;

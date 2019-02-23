@@ -5,29 +5,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2019-01-12T14:39:52-00:00</lastmod>
+<lastmod>2019-02-23T10:52:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2019-01-12T14:39:52-00:00</lastmod>
+<lastmod>2019-02-23T10:52:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2019-01-12T14:39:52-00:00</lastmod>
+<lastmod>2019-02-23T10:52:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2019-01-12T14:39:52-00:00</lastmod>
+<lastmod>2019-02-23T10:52:10-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/azure-fundamentals-course-107979f.html</loc>
+<lastmod>2019-02-23T10:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -89,7 +96,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</loc>
-<lastmod>2018-06-11T15:30:00+02:00</lastmod>
+<lastmod>2019-02-20T15:30:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -201,7 +208,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2018-09-07T17:00:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -215,7 +222,63 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/study.html</loc>
-<lastmod>2017-09-30T10:00:00+00:50</lastmod>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/azure.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/microsoft.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/docker.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/paas.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/iaas.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/vm.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/powershell.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/visualstudio.html</loc>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -270,20 +333,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/visualstudio.html</loc>
-<lastmod>2018-09-07T11:30:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/microsoft.html</loc>
-<lastmod>2018-08-18T20:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/architecture.html</loc>
 <lastmod>2018-08-18T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -292,13 +341,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/ebooks.html</loc>
-<lastmod>2018-08-18T20:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/azure.html</loc>
 <lastmod>2018-08-18T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -368,13 +410,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/docker.html</loc>
-<lastmod>2018-08-18T19:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/yarn.html</loc>
 <lastmod>2018-09-02T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -424,13 +459,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/paas.html</loc>
-<lastmod>2018-04-24T21:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/ansible.html</loc>
 <lastmod>2018-04-24T21:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -467,42 +495,49 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/hpapaas.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/rpa.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/mbaas.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/ipaas.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/esb.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/designsprint.html</loc>
-<lastmod>2018-06-11T15:30:00+00:50</lastmod>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/nocode.html</loc>
+<lastmod>2019-02-20T15:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -726,7 +761,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2018-09-07T17:00:00+00:50</lastmod>
+<lastmod>2019-02-23T10:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

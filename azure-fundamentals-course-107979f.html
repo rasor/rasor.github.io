@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Notes from Azure Fundamentals Course 107979F Course: 107979F | Microsoft Learning Labs: Version F-: MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals Version A-E (depricated): MicrosoftLearning/10979-MicrosoftAzureFundamentals Before the course you can pre install what you need during the course. This includes: Visual Studio Installer package Azure CLI Azure PowerShell Azure Storage Explorer Visual Studio Code extensions …" />
+<meta name="keywords" content="#azure, #microsoft, #docker, #paas, #iaas, #vm, #powershell, #visualstudio">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Azure Fundamentals Course 107979F"/>
+<meta property="og:description" content="Notes from Azure Fundamentals Course 107979F Course: 107979F | Microsoft Learning Labs: Version F-: MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals Version A-E (depricated): MicrosoftLearning/10979-MicrosoftAzureFundamentals Before the course you can pre install what you need during the course. This includes: Visual Studio Installer package Azure CLI Azure PowerShell Azure Storage Explorer Visual Studio Code extensions …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/azure-fundamentals-course-107979f.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-02-23 10:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Study"/>
+<meta property="article:tag" content="#azure"/>
+<meta property="article:tag" content="#microsoft"/>
+<meta property="article:tag" content="#docker"/>
+<meta property="article:tag" content="#paas"/>
+<meta property="article:tag" content="#iaas"/>
+<meta property="article:tag" content="#vm"/>
+<meta property="article:tag" content="#powershell"/>
+<meta property="article:tag" content="#visualstudio"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Azure Fundamentals Course 107979F</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="azure-fundamentals-course-107979f">Azure Fundamentals Course 107979F</h1>
+    <p>
+          Posted on February 23, 2019 in <a href="https://rasor.github.io/category/study.html">Study</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h2>Notes from Azure Fundamentals Course 107979F</h2>
+<ul>
+<li>Course: <a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979">107979F | Microsoft Learning</a></li>
+<li>Labs: <ul>
+<li>Version F-: <a href="https://github.com/MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals">MicrosoftLearning/10979-Introduction-to-Azure-for-IT-Professionals</a></li>
+<li>Version A-E (depricated): <a href="https://github.com/MicrosoftLearning/10979-MicrosoftAzureFundamentals">MicrosoftLearning/10979-MicrosoftAzureFundamentals</a></li>
+</ul>
+</li>
+</ul>
+<p>Before the course you can <a href="#pre-installing">pre install</a> what you need during the course. This includes:</p>
+<ul>
+<li><a href="#Visual-Studio">Visual Studio</a> Installer package</li>
+<li><a href="#Azure-CLI">Azure CLI</a></li>
+<li><a href="#Azure-PowerShell">Azure PowerShell</a></li>
+<li><a href="#Azure-Storage-Explorer">Azure Storage Explorer</a></li>
+<li><a href="#Visual-Studio-Code">Visual Studio Code</a> extensions (optional)</li>
+</ul>
+<p>With these tools in place you can use you MSDN subscription (if you have one) and just follow the the labs (on github) and save the course money.  </p>
+<p>During the course you will only be working in <a href="https://portal.azure.com/">Azure Portal</a>.<br>
+You will not be working in VSTS - now called <a href="https://visualstudio.com">Azure Devops</a>.  </p>
+<p>On the course you will get $100 to spend (so you don't need a credit card). You will get it via <a href="https://www.microsoftazurepass.com/">Microsoft Azure Pass</a>. It is a trial lasting 30 days.<br>
+The course book is only at <a href="https://skillpipe.com/?lang=en-GB#/account/login">Skillpipe</a>. Since it is not a PDF is is more or less useless. Also you can find much better online for free. E.g. videos on <a href="https://channel9.msdn.com/">Channel 9</a>.  </p>
+<p>The course leads towards the exams:</p>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-az-900.aspx">Exam AZ-900: Microsoft Azure Fundamentals</a></li>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-AZ-100.aspx">Exam AZ-100: Microsoft Azure Infrastructure and Deployment</a><ul>
+<li><a href="https://github.com/MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment">MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment</a></li>
+</ul>
+</li>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-AZ-101.aspx">Exam AZ-101: Microsoft Azure Integration and Security</a><ul>
+<li><a href="https://github.com/MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity">MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity</a></li>
+</ul>
+</li>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-AZ-200.aspx">Exam AZ-200: Microsoft Azure Developer Core Solutions (beta)</a></li>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-AZ-201.aspx">Exam AZ-201: Microsoft Azure Developer Advanced Solutions (beta)</a></li>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-AZ-300.aspx">Exam AZ-300: Microsoft Azure Architect Technologies</a><ul>
+<li><a href="https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies">MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies</a></li>
+</ul>
+</li>
+<li><a href="https://www.microsoft.com/en-us/learning/exam-AZ-301.aspx">Exam AZ-301: Microsoft Azure Architect Design</a><ul>
+<li><a href="https://github.com/MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign">MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign</a></li>
+</ul>
+</li>
+</ul>
+<h3>Pre installing.</h3>
+<p>Before the course update to latest</p>
+<ul>
+<li>Visual Studio</li>
+<li>VsCode</li>
+</ul>
+<p>(assuming you already have them installed)</p>
+<h4>Visual Studio Code</h4>
+<p>You could need the extensions</p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools">Azure Resource Manager Tools</a></li>
+</ul>
+<h4>Visual Studio</h4>
+<p>In VSInstaller select the Azure package to get Azure SDK installed. This enables <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/vs-azure-tools-resource-groups-deployment-projects-create-deploy">Visual Studio Azure resource group projects</a></p>
+<h4>Azure CLI</h4>
+<p>Azure CLI gives you convenient <code>az</code> commands to run from bash - very nice together with VSCode.<br>
+HowTo: <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest">Install the Azure CLI for Windows</a></p>
+<p>After install of MSI package:</p>
+<ul>
+<li>Open PowerShell</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Verify installation</span>
+az -v
+<span class="c1"># azure-cli                         2.0.58</span>
+<span class="c1"># .. and a lot of other rows</span>
+<span class="c1"># Python location &#39;C:\Program Files (x86)\Microsoft SDKs\Azure\CLI2\python.exe&#39;</span>
+<span class="c1"># Extensions directory &#39;C:\Users\&lt;user&gt;\.azure\cliextensions&#39;</span>
+</pre></div>
+
+
+<p>Notice the CLI is running on Python which it installed for itself. <br>
+<em>You need to add some path to ENV to be able to run from Git Bash, too.</em></p>
+<div class="highlight"><pre><span></span><span class="c1"># Try login</span>
+az login
+<span class="c1"># Note, we have launched a browser for you to login. For old experience with device code, use &quot;az login --use-device-code&quot;</span>
+<span class="c1"># You have logged in. Now let us find all the subscriptions to which you have access...</span>
+<span class="c1"># [</span>
+<span class="c1">#   {</span>
+<span class="c1">#     &quot;cloudName&quot;: &quot;AzureCloud&quot;,</span>
+<span class="c1">#     &quot;id&quot;: &quot;119643ba-5138-4a85-876c-aaaaaaaaaaaa&quot;,</span>
+<span class="c1">#     &quot;isDefault&quot;: true,</span>
+<span class="c1">#     &quot;name&quot;: &quot;Visual Studio Enterprise&quot;,</span>
+<span class="c1">#     &quot;state&quot;: &quot;Enabled&quot;,</span>
+<span class="c1">#     &quot;tenantId&quot;: &quot;eef828d6-45f3-457f-a6e0-aaaaaaaaaaaa&quot;,</span>
+<span class="c1">#     &quot;user&quot;: {</span>
+<span class="c1">#       &quot;name&quot;: &quot;someone@testing.az&quot;,</span>
+<span class="c1">#       &quot;type&quot;: &quot;user&quot;</span>
+<span class="c1">#     }</span>
+<span class="c1">#   }</span>
+<span class="c1"># ]</span>
+</pre></div>
+
+
+<h4>Azure PowerShell</h4>
+<p>Azure PowerShell will be used for automation scripts together with container yaml files and json ARM templates.<br>
+It replaces AzureRM, which you should uninstall first.  </p>
+<p>Installation of <a href="https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.3.0">Azure PowerShell with PowerShellGet</a>:  </p>
+<ul>
+<li>Open PowerShell</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># While running as admin:</span>
+
+<span class="c1"># Allow to download </span>
+Set-ExecutionPolicy RemoteSigned
+<span class="c1"># Enable remote install</span>
+Import-Module PowerShellGet
+<span class="c1"># Install Azure PowerShell</span>
+Install-Module -Name Az -AllowClobber
+<span class="c1"># Test by connecting to Az</span>
+Connect-AzAccount
+</pre></div>
+
+
+<p>The new tool runs also on Linux (via .NET Standard), so that is why MS made a new one. Read More: <a href="https://docs.microsoft.com/en-us/powershell/azure/new-azureps-module-az?view=azps-1.3.0">Introducing the Azure PowerShell Az module</a>.<br>
+<a href="https://docs.microsoft.com/en-us/powershell/azure/queries-azureps?view=azps-1.3.0">Here are some Querys</a> to get you started</p>
+<h4>Azure Storage Explorer</h4>
+<ul>
+<li>Download and install <a href="https://azure.microsoft.com/en-us/features/storage-explorer/">Azure Storage Explorer</a></li>
+</ul>
+<h3>People</h3>
+<p>Perhaps you know or will meet some of my co-students out in the community.  </p>
+<ul>
+<li>Instructor <a href="https://www.linkedin.com/in/nis-gabriel-3400296/">Nis Gabriel</a> - pro at Windows infrastructure</li>
+<li><a href="https://www.linkedin.com/in/bruno-westergaard-b179151a/">Bruno Westergaard</a> - pro at managing VMs in Azure</li>
+<li><a href="https://www.linkedin.com/in/dennismoeller/">Dennis Møller Jensen</a> - pro at managing on-prem hosting</li>
+<li><a href="https://www.linkedin.com/in/martin-serup-0979a4/">Martin Serup</a> - pro at compliance, infrastructure architechture, mobile phone management for enterprises</li>
+<li><a href="https://www.linkedin.com/in/andersbustedjanum/">Anders Busted-Janum</a> - developer</li>
+<li><a href="https://www.linkedin.com/in/nielslunn/">Niels Lunn</a> - developer</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/azure.html">#azure</a>
+      <a href="https://rasor.github.io/tag/microsoft.html">#microsoft</a>
+      <a href="https://rasor.github.io/tag/docker.html">#docker</a>
+      <a href="https://rasor.github.io/tag/paas.html">#paas</a>
+      <a href="https://rasor.github.io/tag/iaas.html">#iaas</a>
+      <a href="https://rasor.github.io/tag/vm.html">#vm</a>
+      <a href="https://rasor.github.io/tag/powershell.html">#powershell</a>
+      <a href="https://rasor.github.io/tag/visualstudio.html">#visualstudio</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
