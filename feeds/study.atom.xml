@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Study</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/study.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-02-23T10:00:00+01:00</updated><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Study</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/study.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-02-23T11:00:00+01:00</updated><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T11:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Labs: &lt;ul&gt;
@@ -35,7 +35,10 @@
 &lt;p&gt;During the course you will only be working in &lt;a href="https://portal.azure.com/"&gt;Azure Portal&lt;/a&gt;.&lt;br&gt;
 You will not be working in VSTS - now called &lt;a href="https://visualstudio.com"&gt;Azure Devops&lt;/a&gt;.  &lt;/p&gt;
 &lt;p&gt;On the course you will get $100 to spend (so you don't need a credit card). You will get it via &lt;a href="https://www.microsoftazurepass.com/"&gt;Microsoft Azure Pass&lt;/a&gt;. It is a trial lasting 30 days.&lt;br&gt;
-The course book is only at &lt;a href="https://skillpipe.com/?lang=en-GB#/account/login"&gt;Skillpipe&lt;/a&gt;. Since it is not a PDF is is more or less useless. Also you can find much better online for free. E.g. videos on &lt;a href="https://channel9.msdn.com/"&gt;Channel 9&lt;/a&gt;.  &lt;/p&gt;
+The course book is only at &lt;a href="https://skillpipe.com/?lang=en-GB#/account/login"&gt;Skillpipe&lt;/a&gt;. Since it is not a PDF is is more or less useless. Also you can find much better online for free. E.g. 
+&lt;em&gt; Videos on &lt;a href="https://channel9.msdn.com/"&gt;Channel 9&lt;/a&gt;
+&lt;/em&gt; eBooks: &lt;a href="https://mva.microsoft.com/ebooks"&gt;Microsoft Virtual Academy&lt;/a&gt; - will retire during 2019!
+* Blog: &lt;a href="https://rasor.github.io/microsoft-architecture-and-implementations.html#microsoft-architecture-and-implementations"&gt;Microsoft Architecture and Implementations&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The course leads towards the exams:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-900.aspx"&gt;Exam AZ-900: Microsoft Azure Fundamentals&lt;/a&gt;&lt;/li&gt;
@@ -57,6 +60,36 @@ The course book is only at &lt;a href="https://skillpipe.com/?lang=en-GB#/accoun
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign"&gt;MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Building&lt;/h3&gt;
+&lt;p&gt;When you are building stuff for Azure there are several ways to get the infrastructure in place.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Create the resource via &lt;a href="https://portal.azure.com/"&gt;Azure Portal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Create the resource via powershell. You get a lot of help from Powershell ISE&lt;/li&gt;
+&lt;li&gt;Create the resource via Azure CLI. You get some help via Clould Shell (in bash mode)&lt;/li&gt;
+&lt;li&gt;Use ARM templates from github as a starting point: &lt;a href="https://github.com/Azure/azure-quickstart-templates"&gt;Azure/azure-quickstart-templates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;From Visual Studio you can get some pre-made ARM templates by selecting&lt;br&gt;
+new project - cloud - resourse group. When you deploy the resources will be created&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When the resource group is created you can save it as a ARM template and re-use it e.g. for&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;test and prod &lt;/li&gt;
+&lt;li&gt;app1 and app2&lt;/li&gt;
+&lt;li&gt;customer1 and customer2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tips:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When you save the resource to Azure Templates, then only the ARM json template is saved. But also Powershell and CLI commands are generated. You need to store the Powershell or CLI commands somewhere else - e.g. in AzureDevOps or Ansible or other CD tool.&lt;/li&gt;
+&lt;li&gt;Shared resources should have its own reource group e.g. a network should be separated from the apps sharing that subnet.&lt;/li&gt;
+&lt;li&gt;The resource group should follow the life cycle of what it contains, so when the resources should die you just delete the resource group.&lt;/li&gt;
+&lt;li&gt;Charging can be seen on a resource group level&lt;/li&gt;
+&lt;li&gt;Charging can be filtered by tags, so add tags to all resources&lt;/li&gt;
+&lt;li&gt;Apply policies, so roles&lt;ul&gt;
+&lt;li&gt;cannot create expensive resources&lt;/li&gt;
+&lt;li&gt;cannot delete stuff in prod&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Create jobs to auto-delete resource groups in test at 18:00&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Pre installing.&lt;/h3&gt;
 &lt;p&gt;Before the course update to latest&lt;/p&gt;
