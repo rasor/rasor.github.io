@@ -95,6 +95,7 @@ SOCIAL = (('twitter', 'https://twitter.com/rasor'),
           ('wordpress', 'https://rasor.wordpress.com'),
           ('github', 'https://github.com/rasor'),
           ('bitbucket', 'https://bitbucket.org/rasor'),
+          ('npm', 'https://www.npmjs.com/~rasor'),
           ('rss', '/feeds/all.atom.xml'),)
 
 DEFAULT_PAGINATION = 30
