@@ -11,6 +11,10 @@ Tags: #blockchain, #ethereum, #dai, #0x
 * Code: Create tokens. [ConsenSys/Tokens](https://github.com/ConsenSys/Tokens)
 * kEth for test: [kovan-testnet/faucet](https://github.com/kovan-testnet/faucet#kovan-faucet)
 
+## NuCypher  + CoinList hackathon 2019-03
+
+* [nucypher/hackathon](https://github.com/nucypher/hackathon)
+
 # 0x
 
 * Home: [0x](https://0x.org/) - 0x is an open protocol that enables the P2P exchange of assets on the Ethereum

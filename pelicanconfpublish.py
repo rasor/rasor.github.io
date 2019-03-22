@@ -82,8 +82,12 @@ AUTHOR_FEED_RSS = None
 #GOOGLE_ANALYTICS = ""
 
 # Blogroll
-LINKS = (('dock.io', 'https://dock.io?r=sorenraarup:aaaaCSAu'),
+LINKS = (
         ('StackOverflow', 'https://stackoverflow.com/users/750989/rasor'),
+        ('npm', 'https://www.npmjs.com/~rasor'),
+        ('dock.io', 'https://dock.io?r=sorenraarup:aaaaCSAu'),
+        ('-- CV --', 'https://stackoverflow.com/cv/rasor'),
+        ('AngelList', 'https://angel.co/rasor'),
 #         ('Pelican', 'http://getpelican.com/'),
 #         ('Python.org', 'http://python.org/'),
 #         ('Jinja2', 'http://jinja.pocoo.org/'),
@@ -95,7 +99,6 @@ SOCIAL = (('twitter', 'https://twitter.com/rasor'),
           ('wordpress', 'https://rasor.wordpress.com'),
           ('github', 'https://github.com/rasor'),
           ('bitbucket', 'https://bitbucket.org/rasor'),
-          ('npm', 'https://www.npmjs.com/~rasor'),
           ('rss', '/feeds/all.atom.xml'),)
 
 DEFAULT_PAGINATION = 30

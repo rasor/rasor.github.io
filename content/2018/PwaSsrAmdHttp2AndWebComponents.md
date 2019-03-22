@@ -77,7 +77,7 @@ Date: 2099-01-01 00:00
 * [Google PRPL Pattern](https://developers.google.com/web/fundamentals/performance/prpl-pattern/)
 * Book: [Beginning Progressive Web App Development](https://www.apress.com/gp/book/9781484230893)
 
-## Ionic Stencils
+## Ionic Stencil
 
 * Vids
   * [Using Web Components in Ionic (Polymer Summit 2017)](https://www.youtube.com/watch?v=UfD-k7aHkQE)
@@ -93,6 +93,8 @@ Date: 2099-01-01 00:00
   * <https://github.com/ionic-team/stencil-app-starter>
   * <http://thewebplatformpodcast.com/133-ionic-web-components>
   * [stenciljs demos](https://stenciljs.com/demos)
+* Code
+  * Using Rust Wasm in Stencil WebComponent: [DrSensor/example-stencil-rust](https://github.com/DrSensor/example-stencil-rust/tree/master/src/components/my-component)
 
 ## Polymer PWA
 
