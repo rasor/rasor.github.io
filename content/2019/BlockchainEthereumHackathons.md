@@ -11,9 +11,42 @@ Tags: #blockchain, #ethereum, #dai, #0x
 * Code: Create tokens. [ConsenSys/Tokens](https://github.com/ConsenSys/Tokens)
 * kEth for test: [kovan-testnet/faucet](https://github.com/kovan-testnet/faucet#kovan-faucet)
 
+#### Other tech
+
+* [Contracts, Swarm, Whisper](https://ethereum.stackexchange.com/a/388/50076)
+    * [building the decentralized web 3.0](https://blog.ethereum.org/2014/08/18/building-decentralized-web/)
+    * Ethereum Contracts - Decentralized Logic
+    * Swarm - Distributed p2p storage and msg routing: [1. Introduction Swarm 0.3 documentation](https://swarm-guide.readthedocs.io/en/latest/introduction.html)
+    * Whisper - Decentralized messaging
+* StateMachine Replication: [Blockchain Consensus - Tendermint](https://tendermint.com/)
+* IPFS
+    * [Portia Burton, Community Engineer, Protocol Labs / IPFS «Getting started with IPFS»](https://www.youtube.com/watch?v=N76-HcQDuhQ&t=2250s)
+* [Fluence network — decentralized data processing that works.](https://fluence.network/)
+    * [Dmitry Kurinskiy, Co-founder & CTO, Fluence Labs «Building scalable decentralized backend for your Dapp»](https://www.youtube.com/watch?v=N76-HcQDuhQ&t=183s)
+
 ## NuCypher  + CoinList hackathon 2019-03
 
-* [nucypher/hackathon](https://github.com/nucypher/hackathon)
+* [NuCypher Hackathon on CoinList Build - CoinList](https://coinlist.co/build/nucypher?utm_campaign=newsletter_mailer-newsletter&utm_medium=email&utm_source=newsletter_mailer-newsletter&utm_term=nucypher_2-png)
+* Intro: [nucypher/hackathon](https://github.com/nucypher/hackathon)
+* Slides: [nucypher/slides](https://github.com/nucypher/slides/blob/ETHSingapore/slides.pdf)
+* Chat: [Join the NuCypher Discord Server!](https://discordapp.com/invite/7rmXa3S)
+* Submit Project: [https://coinlist.co/build/nucypher/projects/new](https://coinlist.co/build/nucypher/projects/new)
+* Why NuCypher? 
+    * NuCypher: Decentralized Key Management System (KMS)
+    * It enables the private sharing of data across public consensus networks, without revealing data keys to intermediary entities.
+    * [NuCypher on Twitter](https://twitter.com/NuCypher/status/1088545974614519808)
+        * [img](https://pbs.twimg.com/media/DxtJcfFXcAArpdz.jpg:large)
+    * Sample: [Finnegan’s Wake Demo](https://nucypher.readthedocs.io/en/latest/demos/finnegans_wake_demo.html)
+    * - Run demo: [nucypher/nucypher](https://github.com/nucypher/nucypher/tree/master/examples/finnegans_wake_demo)
+    * - Postman demo: [nucypher/nucypher](https://github.com/nucypher/nucypher/tree/master/examples/postman)
+    * Seetup Ursula network: [Ursula Configuration Guide](https://docs.nucypher.com/en/latest/guides/ursula_configuration_guide.html)
+* [Hackathon Workshops](https://www.youtube.com/playlist?list=PLZYHxOo6wufiK_mK71CaudyWpJHCJW1Yk)
+    * [(@NuCypher) | Twitter](https://twitter.com/NuCypher/media)
+    * [MacLane Wilkison, CEO & Co-Founder, NuCypher «Building end-to-end encrypted, decentralized application»](https://www.youtube.com/watch?v=N76-HcQDuhQ&t=3714s)
+    * [Justin Myles Holmes hosts a workshop with NuCypher during ETHDenver 2019](https://www.youtube.com/watch?v=om0tew-Z4gE)
+    * [NuCypher + CoinList Hackathon: NuCypher Workshop](https://www.youtube.com/watch?v=NeqeyDVse_E)
+    * [NuCypher + CoinList Hackathon: Arweave Workshop](https://www.youtube.com/watch?v=YKADcG7xJy4)
+    * [NuCypher + CoinList Hackathon: Origin Workshop](https://www.youtube.com/watch?v=p5E5xMo8Lg4)
 
 # 0x
 
@@ -23,6 +56,7 @@ Tags: #blockchain, #ethereum, #dai, #0x
     * Dev: [0x](https://0x.org/docs)
 * Intro
     * [Learn 0x. Earn 0x.](https://www.coinbase.com/earn/0x)
+    * [Hackathon Workshops](https://www.youtube.com/playlist?list=PLZYHxOo6wufiK_mK71CaudyWpJHCJW1Yk)
     * [0x Acceleration Program](https://0x.org/eap)
         * [Announcing the 0x Ecosystem Acceleration Program](https://blog.0xproject.com/announcing-the-0x-ecosystem-acceleration-program-89d1cb89d565)
     * [0x Price Chart (ZRX) | Coinbase](https://www.coinbase.com/price/0x)
