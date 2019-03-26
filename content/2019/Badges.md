@@ -15,6 +15,9 @@ Examples
     * [BrowserStack](https://www.browserstack.com/)
 * [svgram/svgram-wc-core](https://github.com/svgram/svgram-wc-core/)
     * [Shields.io: Quality metadata badges for open source projects](https://shields.io/)
+* [mrdoob/three.js](https://github.com/mrdoob/three.js)
+    * [bundlephobia - Zip size](https://bundlephobia.com)
+    * [LGTM - Making code better. Together.](https://lgtm.com/)
 
 Others
 
