@@ -52,6 +52,11 @@ Tags: #blockchain, #ethereum, #dai, #0x, #nucypher, #phyton
     * pyUmbral wrapper
         * Python REST lib [encode/apistar](https://github.com/encode/apistar) around pyUmbral? or
         * OpenFaas for wrapping pyUmbral?
+            * Pros: 
+                * REST lib not needed
+                * OpenFaas can be used in Dev, too: [OpenFaaS Cloud app](./OpenFaaSApp.md)
+            * Cons:
+                * Difficult to setup at cloud providers
     * In Local OpenShift host containers with
         * OpenFaas container for running pyUmbral
         * Frontend container (running phyton and pyUmbral ?) for 

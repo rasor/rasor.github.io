@@ -1,9 +1,9 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2018-04-24 21:00
+Modified: 2019-03-28 08:00
 Category: DevOp
-Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible
+Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #kubernetic
 
 It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
@@ -365,6 +365,8 @@ start chrome https://192.168.99.100:8443/
 
 echo "minishift stop #when done"
 ```
+
+Tip: There is a desktop k8s clustermanager called [Kubernetic](https://kubernetic.com/) - Details: [docs.kubernetic](https://docs.kubernetic.com/) 
 
 Next: Deploying to MiniShift  
 ... to be continued in Part 2

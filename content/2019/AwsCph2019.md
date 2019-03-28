@@ -154,13 +154,18 @@ Tools:
 * [Rasheed Amir (@rasheedwaraich) | Twitter](https://twitter.com/rasheedwaraich)
 * Com: Stakater. k8s + OpenShift automation
     * Blog: [Stakater – Medium](https://medium.com/stakater)
+        * [Efficiently expose services on Kubernetes (part 1)](https://medium.com/stakater/efficiently-expose-services-on-kubernetes-494a80f88aad)
+        * [Efficiently Expose Services on Kubernetes (part 2)](https://medium.com/stakater/efficiently-expose-services-on-kubernetes-part-2-c302f135f719)
+        * [GitOps for Kubernetes with Jenkins](https://medium.com/stakater/gitops-for-kubernetes-with-jenkins-7db6304216e0)
+        * [Security in Kubernetes and the cloud](https://medium.com/stakater/security-in-kubernetes-and-the-cloud-81e94c6eed5a)
+        * [Docker Secrets in action: Github integration](https://blog.alexellis.io/swarm-secrets-in-action/)
 * [stakater/Xposer](https://github.com/stakater/Xposer)
     * [Stakater](https://www.stakater.com/projects-overview.html)
 
 Problem:  
-Pod are not accessible outside cluster.  
+Pods are not accessible outside cluster.  
 
-For k8s You need to know: Servicees, Ports, Ingress.
+For k8s You need to know: Services, Ports, Ingress.
 
 * k8s service - has a stable IP, LB acrods pods. 
     * Svc types
@@ -210,7 +215,7 @@ Where to host clusters?
 
 * AWS spot instances
     * 8 Nodes cluster 11$/day
-* DigitalOcean - Mgd k8s - $20/ month / 1 node. 2 node - just dougble. You don't pay for the manangement node.
+* DigitalOcean - Mgd k8s - $20/ month / 1 node. 2 node - just double. You don't pay for the manangement node.
 
 ## 9:15 Monitoring Serverless architectures on AWS Lambda
 

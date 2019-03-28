@@ -28,6 +28,8 @@ Tags: #javascript
 |es6/es2015||type="module" - can use import in js - build into modern browsers|
 |esnext||Comming features|
 
+## Links
+
 * [ECMAScript 6 modules: the final syntax](http://2ality.com/2014/09/es6-modules-final.html)
 * [ES6 In Depth: Modules – Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 * Ref: [Compiler Options - TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
@@ -43,5 +45,11 @@ Inline modules in <script>
 * [ECMAScript modules in browsers](https://jakearchibald.com/2017/es-modules-in-browsers/)
 * [The Script element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)
 * [Inlining ECMAScript Modules in HTML](https://stackoverflow.com/questions/43817297/inlining-ecmascript-modules-in-html)
+
+## Books
+
+* 2017-02: [Mastering TypeScript - Second Edition | PACKT Books](https://www.packtpub.com/application-development/mastering-typescript-second-edition)
+* 2015-08: [Learning ECMAScript 6 | PACKT Books](https://www.packtpub.com/web-development/learning-ecmascript-6)
+* 2014-07 - Seen from .NET: [Syncfusion Free Ebooks | TypeScript Succinctly](https://www.syncfusion.com/ebooks/typescript)
 
 The End
