@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-29T00:00:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-29T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Under Construction&lt;/em&gt;&lt;/p&gt;
-&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-29T23:00:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-29T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
-Next I bought the book …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Under Construction&lt;/em&gt;&lt;/p&gt;
-&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications&lt;/a&gt; (D4S) by &lt;a href="https://github.com/chanwit"&gt;Chanwit Kaewkasi&lt;/a&gt;, but only skimmed it. I highly recommed it!&lt;br&gt;
@@ -52,12 +50,13 @@ On a Windows laptop you can run D4W on VirtualBox or Hyper-V hypervisor. I'll ch
 If you want to use VirtualBox you get it included with Kitematic in &lt;a href="https://docs.docker.com/toolbox/overview/"&gt;Docker Toolbox&lt;/a&gt;.&lt;br&gt;
 My reason for choosing Swarm is that I think it is easier to getting started with. In D4W kubernetes settings you can &lt;em&gt;change from k8s to Swarm&lt;/em&gt; &lt;code&gt;docker stack&lt;/code&gt; commands - this is configured in &lt;code&gt;~\.docker\config.json&lt;/code&gt;.  &lt;/p&gt;
 &lt;p&gt;For a start I'll follow guide &lt;a href="https://docs.openfaas.com/deployment/docker-swarm/"&gt;Docker Swarm - OpenFaaS&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;h3&gt;Pre-requisites&lt;/h3&gt;
 &lt;p&gt;Here is what you need&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://gitforwindows.org/"&gt;Git Bash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-for-windows.html"&gt;Docker for Windows (D4W) - including Hyper-V&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://www.python.org/downloads/"&gt;Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;Examine Docker&lt;/h4&gt;
 &lt;p&gt;As mentioned above - you need Docker for Windows either on top of Virtual Box or Hyper-V. I upgraded to latest - 2..0.0.3.
@@ -222,7 +221,7 @@ docker stack services func --format &lt;span class="s2"&gt;&amp;quot;table {{.Na
 &lt;li&gt;&lt;a href="http://127.0.0.1:9090/graph"&gt;Prometheus&lt;/a&gt; on http://127.0.0.1:9090
 &lt;img alt="Prometheus" src="img/2019/2019-03-28-OpenFaaS04.PNG" title="Prometheus"&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Lets test OpenFaaS.  &lt;/p&gt;
+&lt;p&gt;Let's test OpenFaaS.  &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Press Deploy New Function.&lt;/li&gt;
 &lt;li&gt;Select Figlet and press Deploy.  &lt;/li&gt;
@@ -232,7 +231,7 @@ docker stack services func --format &lt;span class="s2"&gt;&amp;quot;table {{.Na
 &lt;li&gt;Output is displayed in Response body. Notice the invocation count telling it has been invoked once. And it only took 43ms to create its container, execute it and kill it again!&lt;br&gt;
 &lt;img alt="OpenFaaS Invoke" src="img/2019/2019-03-28-OpenFaaS06.PNG" title="OpenFaaS Invoke"&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Lets test Prometheus. &lt;/p&gt;
+&lt;p&gt;Let's test Prometheus. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;On the Graph page there is a dropdown list with a lot of counters. The first one is gateway_function_invocation_total. Select it and press Execute.&lt;/li&gt;
 &lt;li&gt;Yes, also here we are told there has been one invocation, but we are even told name of function, where it was running and the http result status code.  &lt;/li&gt;
@@ -301,11 +300,163 @@ faas-cli
 &lt;span class="c1"&gt;#   -h, --help            help for faas-cli&lt;/span&gt;
 &lt;span class="c1"&gt;#       --regex string    Regex to match with function names in YAML file&lt;/span&gt;
 &lt;span class="c1"&gt;#   -f, --yaml string     Path to YAML file describing function(s)&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Let&amp;#39;s see what we have of functions&lt;/span&gt;
+faas-cli list
+&lt;span class="c1"&gt;# Function                        Invocations     Replicas&lt;/span&gt;
+&lt;span class="c1"&gt;# figlet                          8               1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Let&amp;#39;s try to invoke it once more&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;FaaS CLI&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; faas-cli invoke figlet
+&lt;span class="c1"&gt;#  _____           ____     ____ _     ___&lt;/span&gt;
+&lt;span class="c1"&gt;# |  ___|_ _  __ _/ ___|   / ___| |   |_ _|&lt;/span&gt;
+&lt;span class="c1"&gt;# | |_ / _` |/ _` \___ \  | |   | |    | |&lt;/span&gt;
+&lt;span class="c1"&gt;# |  _| (_| | (_| |___) | | |___| |___ | |&lt;/span&gt;
+&lt;span class="c1"&gt;# |_|  \__,_|\__,_|____/   \____|_____|___|&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;h6&gt;OpenFaaS CLI Build&lt;/h6&gt;
 &lt;p&gt;Now we can build our own functions.  &lt;/p&gt;
-&lt;p&gt;&lt;em&gt;More to be added&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I need to run some Python functions, so I'll develop with python.&lt;br&gt;
+Here is a guide: &lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt; (Step 3 - Write your function)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What Python version do I have on this devbox? &lt;/span&gt;
+python -V
+&lt;span class="c1"&gt;# Python 2.7.15 &lt;/span&gt;
+&lt;span class="c1"&gt;# (yes I know it is old)&lt;/span&gt;
+pip -V
+&lt;span class="c1"&gt;# pip 9.0.3 from c:\program files (x86)\python27\lib\site-packages (python 2.7)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# OK, let&amp;#39;s create a python project&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; C:&lt;span class="se"&gt;\U&lt;/span&gt;sers&lt;span class="se"&gt;\y&lt;/span&gt;ourname&lt;span class="se"&gt;\p&lt;/span&gt;rojs-openfaas &lt;span class="c1"&gt;#or where ever you want your code&lt;/span&gt;
+faas-cli new faas-py-test1 --lang python
+&lt;span class="c1"&gt;# 2019/03/29 21:22:17 No templates found in current directory.&lt;/span&gt;
+&lt;span class="c1"&gt;# 2019/03/29 21:22:17 Attempting to expand templates from https://github.com/openfaas/templates.git&lt;/span&gt;
+&lt;span class="c1"&gt;# 2019/03/29 21:22:23 Fetched 15 template(s) : [csharp csharp-armhf dockerfile go go-armhf java8 node node-arm64 node-armhf php7 python python-armhf python3 python3-armhf ruby] from https://github.com/openfaas/templates.git&lt;/span&gt;
+&lt;span class="c1"&gt;# Folder: faas-py-test1 created.&lt;/span&gt;
+&lt;span class="c1"&gt;# Function created in folder: faas-py-test1&lt;/span&gt;
+&lt;span class="c1"&gt;# Stack file written: faas-py-test1.yml&lt;/span&gt;
+
+&lt;span class="c1"&gt;# So the files we have are&lt;/span&gt;
+&lt;span class="c1"&gt;# |- faas-py-test1.yml    # Docker Stack file&lt;/span&gt;
+&lt;span class="c1"&gt;# |- faas-py-test1&lt;/span&gt;
+&lt;span class="c1"&gt;#     |- handler.py       # Py program&lt;/span&gt;
+&lt;span class="c1"&gt;#     |- requirements.txt # Py dependencies&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Tips about templates: 
+&lt;em&gt; &lt;a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md"&gt;faas-cli/guide/TEMPLATE&lt;/a&gt;
+&lt;/em&gt; &lt;a href="https://github.com/openfaas/faas-cli"&gt;faas-cli&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Edit faas-py-test1.yml:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;provider&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;name&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;openfaas&lt;/span&gt;
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;gateway&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;http://127.0.0.1:8080&lt;/span&gt;
+&lt;span class="l l-Scalar l-Scalar-Plain"&gt;functions&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;faas-py-test1&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;lang&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;handler&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./faas-py-test1&lt;/span&gt;
+    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;image&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rasor/faas-py-test1:v1&lt;/span&gt; &lt;span class="c1"&gt;# edited! Added dockerhub userid/. Changed :latest to v1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Edit handler.py:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;handle&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;handle a request to the function&lt;/span&gt;
+&lt;span class="sd"&gt;    Args:&lt;/span&gt;
+&lt;span class="sd"&gt;        req (str): request body&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello! You said: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Added this line&lt;/span&gt;
+    &lt;span class="c1"&gt;# return req # Removed this line&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# So let&amp;#39;s build!&lt;/span&gt;
+faas-cli build -f ./faas-py-test1.yml
+&lt;span class="c1"&gt;# [0] &amp;gt; Building faas-py-test1.&lt;/span&gt;
+&lt;span class="c1"&gt;# Clearing temporary build folder: ./build/faas-py-test1/&lt;/span&gt;
+&lt;span class="c1"&gt;# Preparing ./faas-py-test1/ ./build/faas-py-test1//function&lt;/span&gt;
+&lt;span class="c1"&gt;# Building: rasor/faas-py-test1:v1 with python template. Please wait..&lt;/span&gt;
+&lt;span class="c1"&gt;# Sending build context to Docker daemon  8.192kB&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 1/25 : FROM python:2.7-alpine&lt;/span&gt;
+&lt;span class="c1"&gt;# ..............&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 22/25 : ENV fprocess=&amp;quot;python index.py&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 597f759e3ecb&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 597f759e3ecb&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; d5d5ec9ac47b&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 23/25 : EXPOSE 8080&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 855b6cb3e7f2&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 855b6cb3e7f2&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; fad6d57e56ab&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 24/25 : HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 0016df8d9c04&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 0016df8d9c04&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; f39663c66ae2&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 25/25 : CMD [&amp;quot;fwatchdog&amp;quot;]&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in f301a88e4ebb&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container f301a88e4ebb&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 4cf93e981b89&lt;/span&gt;
+&lt;span class="c1"&gt;# Successfully built 4cf93e981b89&lt;/span&gt;
+&lt;span class="c1"&gt;# Successfully tagged rasor/faas-py-test1:v1&lt;/span&gt;
+&lt;span class="c1"&gt;# SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have &amp;#39;-rwxr-xr-x&amp;#39; permissions. It is recommended to double check and reset permissions for sensitive files and directories.&lt;/span&gt;
+&lt;span class="c1"&gt;# Image: rasor/faas-py-test1:v1 built.&lt;/span&gt;
+&lt;span class="c1"&gt;# [0] &amp;lt; Building faas-py-test1 done.&lt;/span&gt;
+&lt;span class="c1"&gt;# [0] worker done.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The build created file Dockerfile.&lt;br&gt;
+Dockerfile contains the 25 build steps you see in the output. It builds the docker image.&lt;br&gt;
+Note: It also tells OpenFaaS how and where to start the function.&lt;/p&gt;
+&lt;p&gt;.\build\faas-py-test1\Dockerfile:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# ... Lines omitted&lt;/span&gt;
+&lt;span class="c"&gt;# Here OpenFaaS knows howto starts the program&lt;/span&gt;
+&lt;span class="k"&gt;ENV&lt;/span&gt;&lt;span class="s"&gt; fprocess=&amp;quot;python index.py&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;# ... Lines omitted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify img has been built&lt;/span&gt;
+docker images
+&lt;span class="c1"&gt;# REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE&lt;/span&gt;
+&lt;span class="c1"&gt;# rasor/faas-py-test1            v1                  4cf93e981b89        14 minutes ago      65.8MB&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Push the img to docker hub for fast access&lt;/span&gt;
+faas-cli push -f faas-py-test1.yml
+&lt;span class="c1"&gt;# [0] &amp;gt; Pushing faas-py-test1 [rasor/faas-py-test1:v1].&lt;/span&gt;
+&lt;span class="c1"&gt;# The push refers to repository [docker.io/rasor/faas-py-test1]&lt;/span&gt;
+&lt;span class="c1"&gt;# 617c2e92f234: Pushed&lt;/span&gt;
+&lt;span class="c1"&gt;# .......&lt;/span&gt;
+&lt;span class="c1"&gt;# bcf2f368fe23: Mounted from library/python&lt;/span&gt;
+&lt;span class="c1"&gt;# v1: digest: sha256:84991bc8eae01a7893b869e50758b7849482017f81334b3057289a283932a95a size: 3655&lt;/span&gt;
+&lt;span class="c1"&gt;# [0] &amp;lt; Pushing faas-py-test1 [rasor/faas-py-test1:v1] done.&lt;/span&gt;
+&lt;span class="c1"&gt;# [0] worker done.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Verify that the img has been uploaded: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://cloud.docker.com/repository/docker/rasor/faas-py-test1"&gt;https://cloud.docker.com/repository/docker/rasor/faas-py-test1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Time to Deploy&lt;/span&gt;
+faas-cli deploy -f ./faas-py-test1.yml
+&lt;span class="c1"&gt;# Deploying: faas-py-test1.&lt;/span&gt;
+&lt;span class="c1"&gt;# WARNING! Communication is not secure, please consider using HTTPS. Letsencrypt.org offers free SSL/TLS certificates.&lt;/span&gt;
+&lt;span class="c1"&gt;# Deployed. 202 Accepted.&lt;/span&gt;
+&lt;span class="c1"&gt;# URL: http://127.0.0.1:8080/function/faas-py-test1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Let&amp;#39;s try to invoke it once more&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;HiHoh&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; faas-cli invoke faas-py-test1
+&lt;span class="c1"&gt;# Hello! You said: &amp;quot;HiHoh&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h6&gt;OpenFaaS CLI Build with JSON input/output&lt;/h6&gt;
+&lt;p&gt;See &lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt; (Step 4 - Import 3rd party dependencies).  &lt;/p&gt;
+&lt;h5&gt;OpenFaaS Dashboard&lt;/h5&gt;
+&lt;p&gt;HowTo setup Grafana as dashboard service in your cluster.  &lt;/p&gt;
+&lt;p&gt;See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/p&gt;
 &lt;hr&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;h2&gt;OpenFaaS Cloud app&lt;/h2&gt;
@@ -329,12 +480,17 @@ faas-cli
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://blog.openshift.com/openfaas-on-openshift/"&gt;OpenFaaS on OpenShift - Red Hat OpenShift Blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Uses &lt;a href="https://github.com/moby/buildkit"&gt;moby/buildkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Private image registry: &lt;a href="https://docs.docker.com/registry/"&gt;Docker Registry&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;docker-machine&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/docker/machine"&gt;docker/machine&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/"&gt;Create a swarm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407"&gt;Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Build&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/openfaas/workshop"&gt;openfaas/workshop&lt;/a&gt;&lt;/li&gt;
@@ -361,7 +517,7 @@ faas-cli
 &lt;ul&gt;
 &lt;li&gt;2018-04: &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications | PACKT Books&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
 &lt;a href="https://blog.github.com/2013-09-27-viewing-yaml-metadata-in-your-documents/"&gt;&lt;img alt="Nested tables with yaml" src="https://f.cloud.github.com/assets/64050/1228267/e049d0c6-27a0-11e3-9dd8-a1cd22599344.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is opposed to using &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables"&gt;normal markdown tables&lt;/a&gt; as here:  &lt;/p&gt;
 &lt;table&gt;
