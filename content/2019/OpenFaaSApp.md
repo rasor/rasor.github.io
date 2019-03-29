@@ -1,7 +1,9 @@
 Title:  OpenFaaS Cloud app
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #openfaas
+Tags: #openfaas, #curl, #docker, #kubernetes, #hyper-v, #virtualbox, #kitematic, #dockerswarm
+
+_Under Construction_
 
 # Running OpenFaas in Dev
 
@@ -61,7 +63,13 @@ For a start I'll follow guide [Docker Swarm - OpenFaaS](https://docs.openfaas.co
 
 ### Prerequisites
 
-#### Docker
+Here is what you need
+
+* [Git Bash](https://gitforwindows.org/)
+* [cUrl](https://rasor.github.io/curl-cli-on-windows.html)
+* [Docker for Windows (D4W) - including Hyper-V](https://rasor.github.io/docker-for-windows.html)
+
+#### Examine Docker
 
 As mentioned above - you need Docker for Windows either on top of Virtual Box or Hyper-V. I upgraded to latest - 2..0.0.3.
 And my D4W settings is already set to Swarm.  
@@ -239,6 +247,42 @@ So you've got (as the print above shows you)
 * [Prometheus](http://127.0.0.1:9090/graph) on http://127.0.0.1:9090
 ![Prometheus](img/2019/2019-03-28-OpenFaaS04.PNG "Prometheus")
 
+Lets test OpenFaaS.  
+
+* Press Deploy New Function.
+* Select Figlet and press Deploy.  
+* Notice there is a link to the code deployed: [faas-and-furious/figlet](https://github.com/faas-and-furious/figlet)  
+![OpenFaaS Deploy](img/2019/2019-03-28-OpenFaaS05.PNG "OpenFaaS Deploy")
+* Now test the function. Select it, enter an input string in Request body and invoke it.
+* Output is displayed in Response body. Notice the invocation count telling it has been invoked once. And it only took 43ms to create its container, execute it and kill it again!  
+![OpenFaaS Invoke](img/2019/2019-03-28-OpenFaaS06.PNG "OpenFaaS Invoke")
+
+Lets test Prometheus. 
+
+* On the Graph page there is a dropdown list with a lot of counters. The first one is gateway_function_invocation_total. Select it and press Execute.
+* Yes, also here we are told there has been one invocation, but we are even told name of function, where it was running and the http result status code.  
+* Notice you can get a graph view instead of this list view.  
+![Prometheus counter](img/2019/2019-03-28-OpenFaaS07.PNG "Prometheus counter")
+* There are lots of counters. Here is a screenshot of the top ones.  
+![Prometheus counters](img/2019/2019-03-28-OpenFaaS08.PNG "Prometheus counters")
+
+So how about invoking figlet from curl?
+
+```bash
+curl localhost:8080/function/figlet -d "OpenFaaS"
+#   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+#                                  Dload  Upload   Total   Spent    Left  Speed
+# 100   290  100   282  100     8   5035    142 --:--:-- --:--:-- --:--:--  5272  
+#   ___                   _____           ____
+#  / _ \ _ __   ___ _ __ |  ___|_ _  __ _/ ___|
+# | | | | '_ \ / _ \ '_ \| |_ / _` |/ _` \___ \
+# | |_| | |_) |  __/ | | |  _| (_| | (_| |___) |
+#  \___/| .__/ \___|_| |_|_|  \__,_|\__,_|____/
+#       |_|
+```
+
+Nice - we have a webservice then :-)  
+
 ##### OpenFaaS CLI
 
 For Windows you need to download [OpenFaaS CLI - faas-cli.exe](https://github.com/openfaas/faas-cli) from [openfaas/faas-cli/releases](https://github.com/openfaas/faas-cli/releases) to e.g. `C:\Program Files\Docker\Docker\Resources\bin\`. In this way it will already be in the system path.  
@@ -291,6 +335,12 @@ faas-cli
 #   -f, --yaml string     Path to YAML file describing function(s)
 ```
 
+Now we can build our own functions.  
+
+_More to be added_
+
+---
+
 # Links
 
 ## OpenFaaS Cloud app
@@ -328,7 +378,7 @@ faas-cli
 ## More Links
 
 * [Docker Secrets in action: Github integration](https://blog.alexellis.io/swarm-secrets-in-action/)
-* [ngrok - secure introspectable tunnels to localhost](https://ngrok.com/)
+* [ngrok - secure introspectable tunnels to localhost](https://ngrok.com/) - use it to expose you localhost to the internet, when testing.
 
 ## Books
 
