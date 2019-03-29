@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/openfaas-on-windows-devbox.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-03-29 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2019-03-29 23:00:00+01:00"/>
+<meta property="article:modified_time" content="2019-03-29 23:30:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#openfaas"/>
@@ -171,7 +171,7 @@ My reason for choosing Swarm is that I think it is easier to getting started wit
 <li><a href="https://rasor.github.io/docker-for-windows.html">Docker for Windows (D4W) - including Hyper-V</a></li>
 <li>Optional: <a href="https://www.python.org/downloads/">Python</a></li>
 </ul>
-<h4>Examine Docker</h4>
+<h3>Examine Docker</h3>
 <p>As mentioned above - you need Docker for Windows either on top of Virtual Box or Hyper-V. I upgraded to latest - 2..0.0.3.
 And my D4W settings is already set to Swarm.<br>
 <img alt="D4W set to Swarm" src="img/2019/2019-03-28-OpenFaaS01.PNG" title="D4W set to Swarm"></p>
@@ -201,7 +201,7 @@ docker info
 </pre></div>
 
 
-<h4>Docker Swarm</h4>
+<h3>Docker Swarm</h3>
 <p>You also need to log in to <a href="https://hub.docker.com/">Docker Hub</a>, so you can upload some docker images. <br>
 <img alt="Login to Docker hub" src="img/2019/2019-03-28-OpenFaaS02.PNG" title="Login to Docker hub"></p>
 <p>With docker running next we need a Swarm cluster - from <code>docker init</code> we know that Swarm is inactive.</p>
@@ -430,7 +430,7 @@ faas-cli list
 </pre></div>
 
 
-<h6>OpenFaaS CLI Build</h6>
+<h4>OpenFaaS CLI Build</h4>
 <p>Now we can build our own functions.  </p>
 <p>I need to run some Python functions, so I'll develop with python.<br>
 Here is a guide: <a href="https://blog.alexellis.io/first-faas-python-function/">Your first serverless Python function with OpenFaaS</a> (Step 3 - Write your function)</p>
@@ -565,14 +565,28 @@ faas-cli deploy -f ./faas-py-test1.yml
 </pre></div>
 
 
-<h6>OpenFaaS CLI Build with JSON input/output</h6>
-<p>See <a href="https://blog.alexellis.io/first-faas-python-function/">Your first serverless Python function with OpenFaaS</a> (Step 4 - Import 3rd party dependencies).  </p>
-<h5>OpenFaaS Dashboard</h5>
-<p>HowTo setup Grafana as dashboard service in your cluster.  </p>
-<p>See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </p>
+<h2>Next steps</h2>
+<h3>Next steps - Development</h3>
+<ul>
+<li>OpenFaaS CLI Build with JSON input/output<ul>
+<li>See <a href="https://blog.alexellis.io/first-faas-python-function/">Your first serverless Python function with OpenFaaS</a> (Step 4 - Import 3rd party dependencies).  </li>
+</ul>
+</li>
+<li><a href="https://docs.openfaas.com/deployment/troubleshooting/">Troubleshooting - OpenFaaS</a></li>
+<li><a href="https://docs.openfaas.com/reference/async/">Async - OpenFaaS</a></li>
+</ul>
+<h3>Next steps - New tools</h3>
+<ul>
+<li>OpenFaaS Dashboard<ul>
+<li>HowTo setup <strong>Grafana</strong> as dashboard service in your cluster:<br>
+See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
+</ul>
+</li>
+<li><a href="https://blog.alexellis.io/cli-functions-with-openfaas/">Turn Any CLI into a Function with OpenFaaS</a></li>
+</ul>
 <hr>
 <h1>Links</h1>
-<h2>OpenFaaS Cloud app</h2>
+<h2>OpenFaaS</h2>
 <ul>
 <li><a href="https://www.openfaas.com/blog/serverless-single-page-app/">How to build a Serverless Single Page App</a><ul>
 <li><a href="https://github.com/alexellis/leaderboard-app">alexellis/leaderboard-app</a></li>
@@ -600,10 +614,6 @@ faas-cli deploy -f ./faas-py-test1.yml
 <li><a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407">Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li>Build<ul>
-<li><a href="https://blog.alexellis.io/first-faas-python-function/">Your first serverless Python function with OpenFaaS</a></li>
 </ul>
 </li>
 <li><a href="https://github.com/openfaas/workshop">openfaas/workshop</a></li>

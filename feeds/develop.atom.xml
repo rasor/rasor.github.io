@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-29T23:00:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-29T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-29T23:30:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-29T23:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
@@ -58,7 +58,7 @@ My reason for choosing Swarm is that I think it is easier to getting started wit
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-for-windows.html"&gt;Docker for Windows (D4W) - including Hyper-V&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Optional: &lt;a href="https://www.python.org/downloads/"&gt;Python&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;Examine Docker&lt;/h4&gt;
+&lt;h3&gt;Examine Docker&lt;/h3&gt;
 &lt;p&gt;As mentioned above - you need Docker for Windows either on top of Virtual Box or Hyper-V. I upgraded to latest - 2..0.0.3.
 And my D4W settings is already set to Swarm.&lt;br&gt;
 &lt;img alt="D4W set to Swarm" src="img/2019/2019-03-28-OpenFaaS01.PNG" title="D4W set to Swarm"&gt;&lt;/p&gt;
@@ -88,7 +88,7 @@ docker info
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h4&gt;Docker Swarm&lt;/h4&gt;
+&lt;h3&gt;Docker Swarm&lt;/h3&gt;
 &lt;p&gt;You also need to log in to &lt;a href="https://hub.docker.com/"&gt;Docker Hub&lt;/a&gt;, so you can upload some docker images. &lt;br&gt;
 &lt;img alt="Login to Docker hub" src="img/2019/2019-03-28-OpenFaaS02.PNG" title="Login to Docker hub"&gt;&lt;/p&gt;
 &lt;p&gt;With docker running next we need a Swarm cluster - from &lt;code&gt;docker init&lt;/code&gt; we know that Swarm is inactive.&lt;/p&gt;
@@ -317,7 +317,7 @@ faas-cli list
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h6&gt;OpenFaaS CLI Build&lt;/h6&gt;
+&lt;h4&gt;OpenFaaS CLI Build&lt;/h4&gt;
 &lt;p&gt;Now we can build our own functions.  &lt;/p&gt;
 &lt;p&gt;I need to run some Python functions, so I'll develop with python.&lt;br&gt;
 Here is a guide: &lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt; (Step 3 - Write your function)&lt;/p&gt;
@@ -452,14 +452,28 @@ faas-cli deploy -f ./faas-py-test1.yml
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;h6&gt;OpenFaaS CLI Build with JSON input/output&lt;/h6&gt;
-&lt;p&gt;See &lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt; (Step 4 - Import 3rd party dependencies).  &lt;/p&gt;
-&lt;h5&gt;OpenFaaS Dashboard&lt;/h5&gt;
-&lt;p&gt;HowTo setup Grafana as dashboard service in your cluster.  &lt;/p&gt;
-&lt;p&gt;See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/p&gt;
+&lt;h2&gt;Next steps&lt;/h2&gt;
+&lt;h3&gt;Next steps - Development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenFaaS CLI Build with JSON input/output&lt;ul&gt;
+&lt;li&gt;See &lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt; (Step 4 - Import 3rd party dependencies).  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.openfaas.com/deployment/troubleshooting/"&gt;Troubleshooting - OpenFaaS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.openfaas.com/reference/async/"&gt;Async - OpenFaaS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Next steps - New tools&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenFaaS Dashboard&lt;ul&gt;
+&lt;li&gt;HowTo setup &lt;strong&gt;Grafana&lt;/strong&gt; as dashboard service in your cluster:&lt;br&gt;
+See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/cli-functions-with-openfaas/"&gt;Turn Any CLI into a Function with OpenFaaS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
-&lt;h2&gt;OpenFaaS Cloud app&lt;/h2&gt;
+&lt;h2&gt;OpenFaaS&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.openfaas.com/blog/serverless-single-page-app/"&gt;How to build a Serverless Single Page App&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/alexellis/leaderboard-app"&gt;alexellis/leaderboard-app&lt;/a&gt;&lt;/li&gt;
@@ -487,10 +501,6 @@ faas-cli deploy -f ./faas-py-test1.yml
 &lt;li&gt;&lt;a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407"&gt;Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Build&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/openfaas/workshop"&gt;openfaas/workshop&lt;/a&gt;&lt;/li&gt;
