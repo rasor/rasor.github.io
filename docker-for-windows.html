@@ -27,7 +27,7 @@
 
 <meta name="author" content="rasor" />
 <meta name="description" content="For a development project I needed Docker for Windows (D4W). In this blog I&#39;ll install Docker. Playing with it I&#39;ll do in another post. Prerequisite Install Git for Windows - This will install Git Bash Optional Install cUrl CLI on Windows - This will ensure that you can call a remote end …" />
-<meta name="keywords" content="#docker, #hyperv, #virtualbox">
+<meta name="keywords" content="#docker, #hyperv, #virtualbox, #openfaas, #kitematic">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Docker for Windows"/>
@@ -36,12 +36,14 @@
 <meta property="og:url" content="https://rasor.github.io/docker-for-windows.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-05-06 17:00:00+02:00"/>
-<meta property="article:modified_time" content="2018-05-21 09:30:00+02:00"/>
+<meta property="article:modified_time" content="2019-03-28 09:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOp"/>
 <meta property="article:tag" content="#docker"/>
 <meta property="article:tag" content="#hyperv"/>
 <meta property="article:tag" content="#virtualbox"/>
+<meta property="article:tag" content="#openfaas"/>
+<meta property="article:tag" content="#kitematic"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; Docker for Windows</title>
@@ -103,7 +105,7 @@
           Posted on May 06, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
           </br>
-            Updated: May 21, 2018
+            Updated: March 28, 2019
     </p>
   </header>
 
@@ -171,11 +173,15 @@ It had enabled the Windows features Containers and Hyper-V as it told me<br>
 <li>Do some more work from bash e.g. read <a href="https://www.syncfusion.com/ebooks/docker_succinctly">Docker Succinctly</a></li>
 </ul>
 <h2>AddOns</h2>
-<p>The Docker taksbar menu gives you an option called Kitematic. When you select the menu you'll <a href="https://download.docker.com/kitematic/Kitematic-Windows.zip">start downloading Kitematic</a>.<br>
+<p>The Docker taksbar menu gives you an option called <a href="https://kitematic.com/">Kitematic</a>. When you select the menu you'll <a href="https://download.docker.com/kitematic/Kitematic-Windows.zip">start downloading Kitematic</a>.<br>
 Kitematic is a GUI on top of your Docker CLI.<br>
 Here I even have the option to switch back to VirtualBox. I'll do that later.<br>
 <img alt="Kitematic settings" src="img/2018/2018-05-06-Docker4Win9.PNG">   </p>
 <p>I wonder if that switch will work - changing shell from powershell to bash did not work - Kitematic is in time og writing only in Alpha.</p>
+<h2>D4W CLI - docker-machine</h2>
+<p>Behind the scenes it seemes like the D4W uses <a href="https://github.com/docker/machine">docker-machine</a> for setting up a docker host.<br>
+You can use docker-machine for setting up a docker swarm cluster.<br>
+Here is a Gist for setting up Swarm for host for OpenFaas: <a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407">Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V</a></p>
 <h2>Links</h2>
 <h3>Learn</h3>
 <ul>
@@ -200,6 +206,8 @@ Here I even have the option to switch back to VirtualBox. I'll do that later.<br
       <a href="https://rasor.github.io/tag/docker.html">#docker</a>
       <a href="https://rasor.github.io/tag/hyperv.html">#hyperv</a>
       <a href="https://rasor.github.io/tag/virtualbox.html">#virtualbox</a>
+      <a href="https://rasor.github.io/tag/openfaas.html">#openfaas</a>
+      <a href="https://rasor.github.io/tag/kitematic.html">#kitematic</a>
     </p>
   </div>
 

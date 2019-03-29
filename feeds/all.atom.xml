@@ -1,5 +1,367 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-02-23T13:00:00+01:00</updated><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-29T00:00:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-29T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;p&gt;&lt;em&gt;Under Construction&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+&lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
+I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
+Next I bought the book …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;Under Construction&lt;/em&gt;&lt;/p&gt;
+&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+&lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
+I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
+Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications&lt;/a&gt; (D4S) by &lt;a href="https://github.com/chanwit"&gt;Chanwit Kaewkasi&lt;/a&gt;, but only skimmed it. I highly recommed it!&lt;br&gt;
+Now it is time to practice.&lt;/p&gt;
+&lt;h2&gt;Why? - OpenFaaS vs Cloud Native Serverless&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/rasor/status/1111244201738620928"&gt;But how about&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why not just use cloud native serverless?&lt;ul&gt;
+&lt;li&gt;When you don't want the auto-kill feature.&lt;/li&gt;
+&lt;li&gt;When you want serverless in you dev box&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You don't get pay-per-invocation?&lt;ul&gt;
+&lt;li&gt;No you have to deploy a #k8s or #docker_swarm cluster. This can be as cheap by using #spot_instance s. @chanwits teach you how to do that.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;You don't get seemless integration with cloud native services?&lt;ul&gt;
+&lt;li&gt;No - but aren't you used to that when you integrate to the services from your dev box?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;How?&lt;/h2&gt;
+&lt;p&gt;You can run OpenFaaS either on top of &lt;strong&gt;Kubernetes (k8s)&lt;/strong&gt; or &lt;strong&gt;Docker Swarm&lt;/strong&gt;.&lt;br&gt;
+Info: k8s or swarm gives you a cluster of machines, and deployed an application to it, with containers running in concert on multiple machines.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="OpenFaaS" src="https://pbs.twimg.com/media/DFrkF4NXoAAJwN2.jpg"&gt; (from OpenFaaS website).&lt;br&gt;
+It comes with autoscaling features, logging and prometheus.&lt;/p&gt;
+&lt;h3&gt;Production&lt;/h3&gt;
+&lt;p&gt;For deploying to OpenFaaS to a &lt;strong&gt;cloud container cluster&lt;/strong&gt; there are some good guides on &lt;strong&gt;k8s&lt;/strong&gt; like &lt;a href="https://github.com/openfaas-incubator/ofc-bootstrap"&gt;ofc-bootstrap&lt;/a&gt;. I guess you are managing the cluster here.  &lt;/p&gt;
+&lt;p&gt;But there is a great guide in the D4S book chapter 7, where Chanwit uses &lt;strong&gt;AWS spot instances&lt;/strong&gt; for running &lt;strong&gt;Swarm&lt;/strong&gt; worker nodes. This solution can keep the price as low as Native Serverles, Chanwit claims. The challenge with spot instances is that you have to restart nodes, when they are marked for termination.&lt;br&gt;
+In this guide you are managing the cluster.&lt;br&gt;
+Chanwits &lt;a href="https://github.com/PacktPublishing/Docker-for-Serverless-Applications/tree/master/ch_operating"&gt;code is here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But OpenFaaS has build-in scaling and monitoring, so the managing part is limited.  &lt;/p&gt;
+&lt;h3&gt;Development&lt;/h3&gt;
+&lt;p&gt;For local deployment there are guides, too.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Swarm: &lt;a href="https://docs.openfaas.com/deployment/docker-swarm/"&gt;Docker Swarm - OpenFaaS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;k8s: &lt;a href="https://docs.openfaas.com/deployment/kubernetes/"&gt;Kubernetes - OpenFaaS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;D4W + k8s: &lt;a href="https://secanablog.wordpress.com/2018/06/10/run-your-own-faas-with-openfaas-and-net-core/"&gt;Run your own FaaS with OpenFaas and .Net Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;In the D4S book chapter 4 teaches you to deploy OpenFaaS on Swarm.&lt;br&gt;
+Chanwits &lt;a href="https://github.com/PacktPublishing/Docker-for-Serverless-Applications/tree/master/ch_openfaas"&gt;code is here&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Practice&lt;/h2&gt;
+&lt;p&gt;I'll select &lt;strong&gt;Windows + Docker for Windows (D4W) + Hyper-V + Swarm&lt;/strong&gt;.&lt;br&gt;
+On a Windows laptop you can run D4W on VirtualBox or Hyper-V hypervisor. I'll choose Hyper-V, since that was what I &lt;a href="https://rasor.github.io/docker-for-windows.html"&gt;used previously&lt;/a&gt;. Using &lt;a href="https://kitematic.com/"&gt;Kitematic&lt;/a&gt; you should be able to &lt;em&gt;swap from Hyper-V to VirtualBox&lt;/em&gt;.&lt;br&gt;
+If you want to use VirtualBox you get it included with Kitematic in &lt;a href="https://docs.docker.com/toolbox/overview/"&gt;Docker Toolbox&lt;/a&gt;.&lt;br&gt;
+My reason for choosing Swarm is that I think it is easier to getting started with. In D4W kubernetes settings you can &lt;em&gt;change from k8s to Swarm&lt;/em&gt; &lt;code&gt;docker stack&lt;/code&gt; commands - this is configured in &lt;code&gt;~\.docker\config.json&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;For a start I'll follow guide &lt;a href="https://docs.openfaas.com/deployment/docker-swarm/"&gt;Docker Swarm - OpenFaaS&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;p&gt;Here is what you need&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://gitforwindows.org/"&gt;Git Bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/curl-cli-on-windows.html"&gt;cUrl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-for-windows.html"&gt;Docker for Windows (D4W) - including Hyper-V&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Examine Docker&lt;/h4&gt;
+&lt;p&gt;As mentioned above - you need Docker for Windows either on top of Virtual Box or Hyper-V. I upgraded to latest - 2..0.0.3.
+And my D4W settings is already set to Swarm.&lt;br&gt;
+&lt;img alt="D4W set to Swarm" src="img/2019/2019-03-28-OpenFaaS01.PNG" title="D4W set to Swarm"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify Docker is running&lt;/span&gt;
+docker info
+&lt;span class="c1"&gt;# Containers: 4&lt;/span&gt;
+&lt;span class="c1"&gt;#  Running: 0&lt;/span&gt;
+&lt;span class="c1"&gt;#  Paused: 0&lt;/span&gt;
+&lt;span class="c1"&gt;#  Stopped: 4&lt;/span&gt;
+&lt;span class="c1"&gt;# Images: 15&lt;/span&gt;
+&lt;span class="c1"&gt;# Server Version: 18.09.2&lt;/span&gt;
+&lt;span class="c1"&gt;# Storage Driver: overlay2&lt;/span&gt;
+&lt;span class="c1"&gt;#  Backing Filesystem: extfs&lt;/span&gt;
+&lt;span class="c1"&gt;#  Supports d_type: true&lt;/span&gt;
+&lt;span class="c1"&gt;#  Native Overlay Diff: true&lt;/span&gt;
+&lt;span class="c1"&gt;# Logging Driver: json-file&lt;/span&gt;
+&lt;span class="c1"&gt;# Cgroup Driver: cgroupfs&lt;/span&gt;
+&lt;span class="c1"&gt;# Plugins:&lt;/span&gt;
+&lt;span class="c1"&gt;#  Volume: local&lt;/span&gt;
+&lt;span class="c1"&gt;#  Network: bridge host macvlan null overlay&lt;/span&gt;
+&lt;span class="c1"&gt;#  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog&lt;/span&gt;
+&lt;span class="c1"&gt;# Swarm: inactive &amp;lt;-----------&lt;/span&gt;
+&lt;span class="c1"&gt;# Runtimes: runc&lt;/span&gt;
+&lt;span class="c1"&gt;# Default Runtime: runc&lt;/span&gt;
+&lt;span class="c1"&gt;# Init Binary: docker-init&lt;/span&gt;
+&lt;span class="c1"&gt;# ....&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Docker Swarm&lt;/h4&gt;
+&lt;p&gt;You also need to log in to &lt;a href="https://hub.docker.com/"&gt;Docker Hub&lt;/a&gt;, so you can upload some docker images. &lt;br&gt;
+&lt;img alt="Login to Docker hub" src="img/2019/2019-03-28-OpenFaaS02.PNG" title="Login to Docker hub"&gt;&lt;/p&gt;
+&lt;p&gt;With docker running next we need a Swarm cluster - from &lt;code&gt;docker init&lt;/code&gt; we know that Swarm is inactive.&lt;/p&gt;
+&lt;p&gt;How can you operate Swarm?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker swarm
+&lt;span class="c1"&gt;# Commands:&lt;/span&gt;
+&lt;span class="c1"&gt;#   ca          Display and rotate the root CA&lt;/span&gt;
+&lt;span class="c1"&gt;#   init        Initialize a swarm&lt;/span&gt;
+&lt;span class="c1"&gt;#   join        Join a swarm as a node and/or manager&lt;/span&gt;
+&lt;span class="c1"&gt;#   join-token  Manage join tokens&lt;/span&gt;
+&lt;span class="c1"&gt;#   leave       Leave the swarm&lt;/span&gt;
+&lt;span class="c1"&gt;#   unlock      Unlock swarm&lt;/span&gt;
+&lt;span class="c1"&gt;#   unlock-key  Manage the unlock key&lt;/span&gt;
+&lt;span class="c1"&gt;#   update      Update the swarm&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Swarm has manager- and worker nodes. We only need the manager.&lt;br&gt;
+On a devbox we'll just create a single-node swarm. When creating multi-node swarms you should &lt;a href="https://docs.docker.com/engine/swarm/swarm-tutorial/"&gt;use command docker-machine&lt;/a&gt;.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Create a single-node swarm.&lt;/span&gt;
+&lt;span class="c1"&gt;# Create 1st manager node - you need to add --advertise-addr, if the host has a public IP addr.&lt;/span&gt;
+docker swarm init
+&lt;span class="c1"&gt;# Swarm initialized: current node (ornhp66bt5rk928ekryv4xks4) is now a manager.&lt;/span&gt;
+&lt;span class="c1"&gt;# To add a worker to this swarm, run the following command:&lt;/span&gt;
+&lt;span class="c1"&gt;#     docker swarm join --token SWMTKN-1-0rzaxpyyubb419j6qf9wubskxnypznknbaw5wiqcx05kt6ew1i-cje86tlt1s4fc69yy7cuwww0l 192.168.65.3:2377&lt;/span&gt;
+&lt;span class="c1"&gt;# To add a manager to this swarm, run &amp;#39;docker swarm join-token manager&amp;#39; and follow the instructions.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# If you don&amp;#39;t note above worker-join info you can re-print it&lt;/span&gt;
+docker swarm join-token worker
+&lt;span class="c1"&gt;# To add a worker to this swarm, run the following command:&lt;/span&gt;
+&lt;span class="c1"&gt;#     docker swarm join --token SWMTKN-1-0rzaxpyyubb419j6qf9wubskxnypznknbaw5wiqcx05kt6ew1i-cje86tlt1s4fc69yy7cuwww0l 192.168.65.3:2377&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now swarm is active with this windows shell being the manager node - meaning - the manager is not running in a container&lt;/span&gt;
+docker info
+&lt;span class="c1"&gt;# ....&lt;/span&gt;
+&lt;span class="c1"&gt;#  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog&lt;/span&gt;
+&lt;span class="c1"&gt;# Swarm: active&lt;/span&gt;
+&lt;span class="c1"&gt;#  NodeID: ornhp66bt5rk928ekryv4xks4&lt;/span&gt;
+&lt;span class="c1"&gt;#  Is Manager: true&lt;/span&gt;
+&lt;span class="c1"&gt;#  ClusterID: 9pvxm96yzehiadacxf7k0e87e&lt;/span&gt;
+&lt;span class="c1"&gt;#  Managers: 1&lt;/span&gt;
+&lt;span class="c1"&gt;#  Nodes: 1&lt;/span&gt;
+&lt;span class="c1"&gt;#  Default Address Pool: 10.0.0.0/8&lt;/span&gt;
+&lt;span class="c1"&gt;#  SubnetSize: 24&lt;/span&gt;
+&lt;span class="c1"&gt;#  Orchestration:&lt;/span&gt;
+&lt;span class="c1"&gt;#   Task History Retention Limit: 5&lt;/span&gt;
+&lt;span class="c1"&gt;#  Raft:&lt;/span&gt;
+&lt;span class="c1"&gt;#   Snapshot Interval: 10000&lt;/span&gt;
+&lt;span class="c1"&gt;#   Number of Old Snapshots to Retain: 0&lt;/span&gt;
+&lt;span class="c1"&gt;#   Heartbeat Tick: 1&lt;/span&gt;
+&lt;span class="c1"&gt;#   Election Tick: 10&lt;/span&gt;
+&lt;span class="c1"&gt;#  Dispatcher:&lt;/span&gt;
+&lt;span class="c1"&gt;#   Heartbeat Period: 5 seconds&lt;/span&gt;
+&lt;span class="c1"&gt;#  CA Configuration:&lt;/span&gt;
+&lt;span class="c1"&gt;#   Expiry Duration: 3 months&lt;/span&gt;
+&lt;span class="c1"&gt;#   Force Rotate: 0&lt;/span&gt;
+&lt;span class="c1"&gt;#  Autolock Managers: false&lt;/span&gt;
+&lt;span class="c1"&gt;#  Root Rotation In Progress: false&lt;/span&gt;
+&lt;span class="c1"&gt;#  Node Address: 192.168.65.3&lt;/span&gt;
+&lt;span class="c1"&gt;#  Manager Addresses:&lt;/span&gt;
+&lt;span class="c1"&gt;#   192.168.65.3:2377&lt;/span&gt;
+&lt;span class="c1"&gt;# Runtimes: runc&lt;/span&gt;
+&lt;span class="c1"&gt;# ....&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print more info about the swarm node(s)&lt;/span&gt;
+docker node ls
+&lt;span class="c1"&gt;# ID                            HOSTNAME                STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION&lt;/span&gt;
+&lt;span class="c1"&gt;# ornhp66bt5rk928ekryv4xks4 *   linuxkit-00155d102102   Ready               Active              Leader              18.09.2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Learn more about the &lt;a href="https://docs.docker.com/get-started/part4/#understanding-swarm-clusters"&gt;Swarm clusters&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;OpenFaaS&lt;/h3&gt;
+&lt;h4&gt;OpenFaaS Install&lt;/h4&gt;
+&lt;p&gt;With a cluster running we can start OpenFaaS installation. This is done from a script that we fetch from github.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Download docker-compose.yml file and deploy deploy_stack.ps1&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; C:&lt;span class="se"&gt;\U&lt;/span&gt;sers&lt;span class="se"&gt;\y&lt;/span&gt;ourname
+&lt;span class="c1"&gt;# At time of writing the latest OpenFaaS release is https://github.com/openfaas/faas/tree/0.12.0&lt;/span&gt;
+git clone https://github.com/openfaas/faas
+&lt;span class="nb"&gt;cd&lt;/span&gt; faas
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From Powershell prompt - run as admin - it will use a .NET dll for creating a password.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Install OpenFaaS via ps1 - notice - it will create a user and password for logging in to the CLI&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; C:&lt;span class="se"&gt;\U&lt;/span&gt;sers&lt;span class="se"&gt;\y&lt;/span&gt;ourname&lt;span class="se"&gt;\f&lt;/span&gt;aas
+Set-ExecutionPolicy RemoteSigned
+./deploy_stack.ps1 &lt;span class="c1"&gt;# ./deploy_stack.sh for Linux or Mac&lt;/span&gt;
+&lt;span class="c1"&gt;# Attempting to create credentials for gateway..&lt;/span&gt;
+&lt;span class="c1"&gt;# [Credentials]&lt;/span&gt;
+&lt;span class="c1"&gt;#  username: admin&lt;/span&gt;
+&lt;span class="c1"&gt;#  password: b391be3c12d7dc8412a26eb13625f0d28bab2e578acb7473ea6c9e209e501f37&lt;/span&gt;
+&lt;span class="c1"&gt;#  Write-Output &amp;quot;b391be3c12d7dc8412a26eb13625f0d28bab2e578acb7473ea6c9e209e501f37&amp;quot; | faas-cli login --username=admin --password-stdin&lt;/span&gt;
+&lt;span class="c1"&gt;# Enabling basic authentication for gateway..&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Deploying OpenFaaS core services&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating network func_functions&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating config func_prometheus_rules&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating config func_alertmanager_config&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating config func_prometheus_config&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating service func_faas-swarm&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating service func_nats&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating service func_queue-worker&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating service func_prometheus&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating service func_alertmanager&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating service func_gateway&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Prints:&lt;/span&gt;
+docker stack ls
+&lt;span class="c1"&gt;# NAME                SERVICES            ORCHESTRATOR&lt;/span&gt;
+&lt;span class="c1"&gt;# func                6                   Swarm&lt;/span&gt;
+
+docker stack services func --format &lt;span class="s2"&gt;&amp;quot;table {{.Name}}\t{{.Ports}}&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# NAME                PORTS&lt;/span&gt;
+&lt;span class="c1"&gt;# func_gateway        *:8080-&amp;gt;8080/tcp&lt;/span&gt;
+&lt;span class="c1"&gt;# func_faas-swarm&lt;/span&gt;
+&lt;span class="c1"&gt;# func_queue-worker&lt;/span&gt;
+&lt;span class="c1"&gt;# func_prometheus     *:9090-&amp;gt;9090/tcp&lt;/span&gt;
+&lt;span class="c1"&gt;# func_nats&lt;/span&gt;
+&lt;span class="c1"&gt;# func_alertmanager&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;OpenFaaS Usage&lt;/h4&gt;
+&lt;h5&gt;OpenFaaS Portal&lt;/h5&gt;
+&lt;p&gt;So you've got (as the print above shows you)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://127.0.0.1:8080/ui/"&gt;OpenFaaS Portal&lt;/a&gt; on http://127.0.0.1:8080&lt;br&gt;
+&lt;img alt="OpenFaaS Portal" src="img/2019/2019-03-28-OpenFaaS03.PNG" title="OpenFaaS Portal"&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://127.0.0.1:9090/graph"&gt;Prometheus&lt;/a&gt; on http://127.0.0.1:9090
+&lt;img alt="Prometheus" src="img/2019/2019-03-28-OpenFaaS04.PNG" title="Prometheus"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lets test OpenFaaS.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Press Deploy New Function.&lt;/li&gt;
+&lt;li&gt;Select Figlet and press Deploy.  &lt;/li&gt;
+&lt;li&gt;Notice there is a link to the code deployed: &lt;a href="https://github.com/faas-and-furious/figlet"&gt;faas-and-furious/figlet&lt;/a&gt;&lt;br&gt;
+&lt;img alt="OpenFaaS Deploy" src="img/2019/2019-03-28-OpenFaaS05.PNG" title="OpenFaaS Deploy"&gt;&lt;/li&gt;
+&lt;li&gt;Now test the function. Select it, enter an input string in Request body and invoke it.&lt;/li&gt;
+&lt;li&gt;Output is displayed in Response body. Notice the invocation count telling it has been invoked once. And it only took 43ms to create its container, execute it and kill it again!&lt;br&gt;
+&lt;img alt="OpenFaaS Invoke" src="img/2019/2019-03-28-OpenFaaS06.PNG" title="OpenFaaS Invoke"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lets test Prometheus. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On the Graph page there is a dropdown list with a lot of counters. The first one is gateway_function_invocation_total. Select it and press Execute.&lt;/li&gt;
+&lt;li&gt;Yes, also here we are told there has been one invocation, but we are even told name of function, where it was running and the http result status code.  &lt;/li&gt;
+&lt;li&gt;Notice you can get a graph view instead of this list view.&lt;br&gt;
+&lt;img alt="Prometheus counter" src="img/2019/2019-03-28-OpenFaaS07.PNG" title="Prometheus counter"&gt;&lt;/li&gt;
+&lt;li&gt;There are lots of counters. Here is a screenshot of the top ones.&lt;br&gt;
+&lt;img alt="Prometheus counters" src="img/2019/2019-03-28-OpenFaaS08.PNG" title="Prometheus counters"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So how about invoking figlet from curl?&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;curl localhost:8080/function/figlet -d &lt;span class="s2"&gt;&amp;quot;OpenFaaS&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current&lt;/span&gt;
+&lt;span class="c1"&gt;#                                  Dload  Upload   Total   Spent    Left  Speed&lt;/span&gt;
+&lt;span class="c1"&gt;# 100   290  100   282  100     8   5035    142 --:--:-- --:--:-- --:--:--  5272  &lt;/span&gt;
+&lt;span class="c1"&gt;#   ___                   _____           ____&lt;/span&gt;
+&lt;span class="c1"&gt;#  / _ \ _ __   ___ _ __ |  ___|_ _  __ _/ ___|&lt;/span&gt;
+&lt;span class="c1"&gt;# | | | | &amp;#39;_ \ / _ \ &amp;#39;_ \| |_ / _` |/ _` \___ \&lt;/span&gt;
+&lt;span class="c1"&gt;# | |_| | |_) |  __/ | | |  _| (_| | (_| |___) |&lt;/span&gt;
+&lt;span class="c1"&gt;#  \___/| .__/ \___|_| |_|_|  \__,_|\__,_|____/&lt;/span&gt;
+&lt;span class="c1"&gt;#       |_|&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nice - we have a webservice then :-)  &lt;/p&gt;
+&lt;h5&gt;OpenFaaS CLI&lt;/h5&gt;
+&lt;p&gt;For Windows you need to download &lt;a href="https://github.com/openfaas/faas-cli"&gt;OpenFaaS CLI - faas-cli.exe&lt;/a&gt; from &lt;a href="https://github.com/openfaas/faas-cli/releases"&gt;openfaas/faas-cli/releases&lt;/a&gt; to e.g. &lt;code&gt;C:\Program Files\Docker\Docker\Resources\bin\&lt;/code&gt;. In this way it will already be in the system path.  &lt;/p&gt;
+&lt;p&gt;From GIT Bash - CLI Login does not work from CMD!&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify Faas CLI is responding&lt;/span&gt;
+faas-cli version
+&lt;span class="c1"&gt;# version: 0.8.6&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Login to OpenFaaS gateway&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; -n b391be3c12d7dc8412a26eb13625f0d28bab2e578acb7473ea6c9e209e501f37 &lt;span class="p"&gt;|&lt;/span&gt; faas-cli login --username&lt;span class="o"&gt;=&lt;/span&gt;admin --password-stdin
+&lt;span class="c1"&gt;# Calling the OpenFaaS server to validate the credentials...&lt;/span&gt;
+&lt;span class="c1"&gt;# WARNING! Communication is not secure, please consider using HTTPS. Letsencrypt.org offers free SSL/TLS certificates.&lt;/span&gt;
+&lt;span class="c1"&gt;# credentials saved for admin http://127.0.0.1:8080&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Info: faas-cli login will store your password as a hash at ~/.openfaas/config.yaml.&lt;br&gt;
+But when you open the OpenFaaS Portal at http://127.0.0.1:8080 you will also need the psw.&lt;br&gt;
+127.0.0.1 is the localhost IP. You can replace it with the internal (nat'ed) IP of your PC.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What does the CLI give you?&lt;/span&gt;
+faas-cli
+&lt;span class="c1"&gt;# Available Commands:&lt;/span&gt;
+&lt;span class="c1"&gt;#   build          Builds OpenFaaS function containers&lt;/span&gt;
+&lt;span class="c1"&gt;#   cloud          OpenFaaS Cloud commands&lt;/span&gt;
+&lt;span class="c1"&gt;#   deploy         Deploy OpenFaaS functions&lt;/span&gt;
+&lt;span class="c1"&gt;#   describe       Describe an OpenFaaS function&lt;/span&gt;
+&lt;span class="c1"&gt;#   generate       Generate Kubernetes CRD YAML file&lt;/span&gt;
+&lt;span class="c1"&gt;#   help           Help about any command&lt;/span&gt;
+&lt;span class="c1"&gt;#   invoke         Invoke an OpenFaaS function&lt;/span&gt;
+&lt;span class="c1"&gt;#   list           List OpenFaaS functions&lt;/span&gt;
+&lt;span class="c1"&gt;#   login          Log in to OpenFaaS gateway&lt;/span&gt;
+&lt;span class="c1"&gt;#   logout         Log out from OpenFaaS gateway&lt;/span&gt;
+&lt;span class="c1"&gt;#   new            Create a new template in the current folder with the name given as name&lt;/span&gt;
+&lt;span class="c1"&gt;#   push           Push OpenFaaS functions to remote registry (Docker Hub)&lt;/span&gt;
+&lt;span class="c1"&gt;#   remove         Remove deployed OpenFaaS functions&lt;/span&gt;
+&lt;span class="c1"&gt;#   secret         OpenFaaS secret commands&lt;/span&gt;
+&lt;span class="c1"&gt;#   store          OpenFaaS store commands&lt;/span&gt;
+&lt;span class="c1"&gt;#   template       OpenFaaS template store and pull commands&lt;/span&gt;
+&lt;span class="c1"&gt;#   up             Builds, pushes and deploys OpenFaaS function containers&lt;/span&gt;
+&lt;span class="c1"&gt;#   version        Display the clients version information&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Flags:&lt;/span&gt;
+&lt;span class="c1"&gt;#       --filter string   Wildcard to match with function names in YAML file&lt;/span&gt;
+&lt;span class="c1"&gt;#   -h, --help            help for faas-cli&lt;/span&gt;
+&lt;span class="c1"&gt;#       --regex string    Regex to match with function names in YAML file&lt;/span&gt;
+&lt;span class="c1"&gt;#   -f, --yaml string     Path to YAML file describing function(s)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we can build our own functions.  &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;More to be added&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;h2&gt;OpenFaaS Cloud app&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.openfaas.com/blog/serverless-single-page-app/"&gt;How to build a Serverless Single Page App&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/alexellis/leaderboard-app"&gt;alexellis/leaderboard-app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/openfaas-incubator/openfaas-sinatra-guestbook"&gt;openfaas-incubator/openfaas-sinatra-guestbook&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deploy: &lt;a href="https://github.com/openfaas/openfaas-cloud#get-started"&gt;openfaas/openfaas-cloud&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;One-Click install on k8s cluster: &lt;a href="https://github.com/openfaas-incubator/ofc-bootstrap"&gt;openfaas-incubator/ofc-bootstrap&lt;/a&gt; - watch vid!&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=Sa1VBSfVpK0"&gt;OpenFaaS Cloud in 100 seconds&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=J9xoNf9yZ60"&gt;Get your own OpenFaaS Cloud in 1 minute&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=6xJwQgDnMFE"&gt;Create a 2-node Kubernetes cluster in 10 minutes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Manual install: &lt;a href="https://github.com/openfaas/openfaas-cloud/blob/master/docs/README.md"&gt;openfaas/openfaas-cloud&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Deploy docs: &lt;a href="https://docs.openfaas.com/deployment/"&gt;Deployment - OpenFaaS&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://secanablog.wordpress.com/2018/06/10/run-your-own-faas-with-openfaas-and-net-core/"&gt;Run your own FaaS with OpenFaas and .Net Core&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.openshift.com/openfaas-on-openshift/"&gt;OpenFaaS on OpenShift - Red Hat OpenShift Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Uses &lt;a href="https://github.com/moby/buildkit"&gt;moby/buildkit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;docker-machine&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/docker/machine"&gt;docker/machine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/"&gt;Create a swarm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407"&gt;Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/openfaas/workshop"&gt;openfaas/workshop&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;My own blogs&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/tag/docker.html"&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/tag/kubernetes.html"&gt;Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Cloud IaaS container cluster hosts&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.digitalocean.com/"&gt;DigitalOcean&lt;/a&gt; - k8s manager node for free - you pay for cluster nodes only. Min $30/Month.&lt;/li&gt;
+&lt;li&gt;AWS&lt;/li&gt;
+&lt;li&gt;Azure&lt;/li&gt;
+&lt;li&gt;GCP&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://devcenter.heroku.com/categories/deploying-with-docker"&gt;Deploying with Docker | Heroku Dev Center&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;More Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/swarm-secrets-in-action/"&gt;Docker Secrets in action: Github integration&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://ngrok.com/"&gt;ngrok - secure introspectable tunnels to localhost&lt;/a&gt; - use it to expose you localhost to the internet, when testing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Books&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2018-04: &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications | PACKT Books&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category></entry><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Labs: &lt;ul&gt;
@@ -858,7 +1220,7 @@ You can put them in &lt;code&gt;\your-vue-root\&lt;/code&gt; and just double-cli
 &lt;li&gt;&lt;a href="https://rasor.github.io/developing-with-openshift.html"&gt;Installing OpenShift&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#deploy-sample-app"&gt;Deploying&lt;/a&gt; to MiniShift&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#vue"></category><category term="#magento"></category><category term="#webshop"></category><category term="#seo"></category><category term="#pwa"></category><category term="#docker"></category><category term="#git"></category><category term="#yarn"></category><category term="#npm"></category><category term="#nvm"></category></entry><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2018-05-21T09:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#vue"></category><category term="#magento"></category><category term="#webshop"></category><category term="#seo"></category><category term="#pwa"></category><category term="#docker"></category><category term="#git"></category><category term="#yarn"></category><category term="#npm"></category><category term="#nvm"></category></entry><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2019-03-28T09:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
 In this blog I'll install Docker. Playing with it I'll do in another post.  &lt;/p&gt;
 &lt;h2&gt;Prerequisite&lt;/h2&gt;
 &lt;ul&gt;
@@ -925,11 +1287,15 @@ It had enabled the Windows features Containers and Hyper-V as it told me&lt;br&g
 &lt;li&gt;Do some more work from bash e.g. read &lt;a href="https://www.syncfusion.com/ebooks/docker_succinctly"&gt;Docker Succinctly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;AddOns&lt;/h2&gt;
-&lt;p&gt;The Docker taksbar menu gives you an option called Kitematic. When you select the menu you'll &lt;a href="https://download.docker.com/kitematic/Kitematic-Windows.zip"&gt;start downloading Kitematic&lt;/a&gt;.&lt;br&gt;
+&lt;p&gt;The Docker taksbar menu gives you an option called &lt;a href="https://kitematic.com/"&gt;Kitematic&lt;/a&gt;. When you select the menu you'll &lt;a href="https://download.docker.com/kitematic/Kitematic-Windows.zip"&gt;start downloading Kitematic&lt;/a&gt;.&lt;br&gt;
 Kitematic is a GUI on top of your Docker CLI.&lt;br&gt;
 Here I even have the option to switch back to VirtualBox. I'll do that later.&lt;br&gt;
 &lt;img alt="Kitematic settings" src="img/2018/2018-05-06-Docker4Win9.PNG"&gt;   &lt;/p&gt;
 &lt;p&gt;I wonder if that switch will work - changing shell from powershell to bash did not work - Kitematic is in time og writing only in Alpha.&lt;/p&gt;
+&lt;h2&gt;D4W CLI - docker-machine&lt;/h2&gt;
+&lt;p&gt;Behind the scenes it seemes like the D4W uses &lt;a href="https://github.com/docker/machine"&gt;docker-machine&lt;/a&gt; for setting up a docker host.&lt;br&gt;
+You can use docker-machine for setting up a docker swarm cluster.&lt;br&gt;
+Here is a Gist for setting up Swarm for host for OpenFaas: &lt;a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407"&gt;Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;h3&gt;Learn&lt;/h3&gt;
 &lt;ul&gt;
@@ -947,7 +1313,7 @@ Here I even have the option to switch back to VirtualBox. I'll do that later.&lt
 &lt;li&gt;&lt;a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/"&gt;Running Docker containers on Bash on Windows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;vue-storefront Installing on Windows.md&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2018-04-24T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#openfaas"></category><category term="#kitematic"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2019-03-28T08:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
 In this blog I'll run it (my own little cloud) locally on Windows.&lt;/p&gt;
@@ -1356,6 +1722,7 @@ start chrome https://192.168.99.100:8443/
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;Tip: There is a desktop k8s clustermanager called &lt;a href="https://kubernetic.com/"&gt;Kubernetic&lt;/a&gt; - Details: &lt;a href="https://docs.kubernetic.com/"&gt;docs.kubernetic&lt;/a&gt; &lt;/p&gt;
 &lt;p&gt;Next: Deploying to MiniShift&lt;br&gt;
 ... to be continued in Part 2&lt;/p&gt;
 &lt;h1&gt;Links&lt;/h1&gt;
@@ -1398,7 +1765,7 @@ start chrome https://192.168.99.100:8443/
 &lt;/li&gt;
 &lt;li&gt;Old &lt;a href="https://rasor.wordpress.com/2013/11/26/cloud-services/"&gt;Cloud&lt;/a&gt; landscape anno 2013 - from my old blog.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category><category term="#kubernetic"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
