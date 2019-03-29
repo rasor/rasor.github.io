@@ -1,7 +1,7 @@
 Title:  OpenFaaS on Windows Devbox
 Status: published
 Date: 2019-03-29 00:00
-Modified: 2019-03-29 23:00
+Modified: 2019-03-29 23:30
 Category: Develop
 Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python
 
@@ -70,7 +70,7 @@ Here is what you need
 * [Docker for Windows (D4W) - including Hyper-V](https://rasor.github.io/docker-for-windows.html)
 * Optional: [Python](https://www.python.org/downloads/)
 
-#### Examine Docker
+### Examine Docker
 
 As mentioned above - you need Docker for Windows either on top of Virtual Box or Hyper-V. I upgraded to latest - 2..0.0.3.
 And my D4W settings is already set to Swarm.  
@@ -102,7 +102,7 @@ docker info
 # ....
 ```
 
-#### Docker Swarm
+### Docker Swarm
 
 You also need to log in to [Docker Hub](https://hub.docker.com/), so you can upload some docker images.   
 ![Login to Docker hub](img/2019/2019-03-28-OpenFaaS02.PNG "Login to Docker hub")
@@ -350,7 +350,7 @@ echo "FaaS CLI" | faas-cli invoke figlet
 # |_|  \__,_|\__,_|____/   \____|_____|___|
 ```
 
-###### OpenFaaS CLI Build
+#### OpenFaaS CLI Build
 
 Now we can build our own functions.  
 
@@ -494,21 +494,27 @@ echo "HiHoh" | faas-cli invoke faas-py-test1
 # Hello! You said: "HiHoh"
 ```
 
-###### OpenFaaS CLI Build with JSON input/output
+## Next steps
 
-See [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/) (Step 4 - Import 3rd party dependencies).  
+### Next steps - Development
 
-##### OpenFaaS Dashboard
+* OpenFaaS CLI Build with JSON input/output
+    * See [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/) (Step 4 - Import 3rd party dependencies).  
+* [Troubleshooting - OpenFaaS](https://docs.openfaas.com/deployment/troubleshooting/)
+* [Async - OpenFaaS](https://docs.openfaas.com/reference/async/)
 
-HowTo setup Grafana as dashboard service in your cluster.  
+### Next steps - New tools
 
-See book D4S chapter 4 (The OpenFaaS dashboard page 80).  
+* OpenFaaS Dashboard
+    * HowTo setup **Grafana** as dashboard service in your cluster:  
+    See book D4S chapter 4 (The OpenFaaS dashboard page 80).  
+* [Turn Any CLI into a Function with OpenFaaS](https://blog.alexellis.io/cli-functions-with-openfaas/)
 
 ---
 
 # Links
 
-## OpenFaaS Cloud app
+## OpenFaaS
 
 * [How to build a Serverless Single Page App](https://www.openfaas.com/blog/serverless-single-page-app/)
     * [alexellis/leaderboard-app](https://github.com/alexellis/leaderboard-app)
@@ -528,8 +534,6 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).
         * [docker/machine](https://github.com/docker/machine)
         * [Create a swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/)
         * [Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V](https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407)
-* Build
-    * [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/)
 * [openfaas/workshop](https://github.com/openfaas/workshop)
 * My own blogs
     * [Docker](https://rasor.github.io/tag/docker.html)
