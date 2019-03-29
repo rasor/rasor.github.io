@@ -1,10 +1,9 @@
 Title:  OpenFaaS on Windows Devbox
 Status: published
 Date: 2019-03-29 00:00
+Modified: 2019-03-29 23:00
 Category: Develop
-Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm
-
-_Under Construction_
+Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python
 
 # Running OpenFaas in Dev on Windows
 
@@ -62,13 +61,14 @@ My reason for choosing Swarm is that I think it is easier to getting started wit
 
 For a start I'll follow guide [Docker Swarm - OpenFaaS](https://docs.openfaas.com/deployment/docker-swarm/)
 
-### Prerequisites
+### Pre-requisites
 
 Here is what you need
 
 * [Git Bash](https://gitforwindows.org/)
-* [cUrl](https://rasor.github.io/curl-cli-on-windows.html)
+* Optional: [cUrl](https://rasor.github.io/curl-cli-on-windows.html)
 * [Docker for Windows (D4W) - including Hyper-V](https://rasor.github.io/docker-for-windows.html)
+* Optional: [Python](https://www.python.org/downloads/)
 
 #### Examine Docker
 
@@ -248,7 +248,7 @@ So you've got (as the print above shows you)
 * [Prometheus](http://127.0.0.1:9090/graph) on http://127.0.0.1:9090
 ![Prometheus](img/2019/2019-03-28-OpenFaaS04.PNG "Prometheus")
 
-Lets test OpenFaaS.  
+Let's test OpenFaaS.  
 
 * Press Deploy New Function.
 * Select Figlet and press Deploy.  
@@ -258,7 +258,7 @@ Lets test OpenFaaS.
 * Output is displayed in Response body. Notice the invocation count telling it has been invoked once. And it only took 43ms to create its container, execute it and kill it again!  
 ![OpenFaaS Invoke](img/2019/2019-03-28-OpenFaaS06.PNG "OpenFaaS Invoke")
 
-Lets test Prometheus. 
+Let's test Prometheus. 
 
 * On the Graph page there is a dropdown list with a lot of counters. The first one is gateway_function_invocation_total. Select it and press Execute.
 * Yes, also here we are told there has been one invocation, but we are even told name of function, where it was running and the http result status code.  
@@ -334,11 +334,175 @@ faas-cli
 #   -h, --help            help for faas-cli
 #       --regex string    Regex to match with function names in YAML file
 #   -f, --yaml string     Path to YAML file describing function(s)
+
+
+# Let's see what we have of functions
+faas-cli list
+# Function                        Invocations     Replicas
+# figlet                          8               1
+
+# Let's try to invoke it once more
+echo "FaaS CLI" | faas-cli invoke figlet
+#  _____           ____     ____ _     ___
+# |  ___|_ _  __ _/ ___|   / ___| |   |_ _|
+# | |_ / _` |/ _` \___ \  | |   | |    | |
+# |  _| (_| | (_| |___) | | |___| |___ | |
+# |_|  \__,_|\__,_|____/   \____|_____|___|
 ```
+
+###### OpenFaaS CLI Build
 
 Now we can build our own functions.  
 
-_More to be added_
+I need to run some Python functions, so I'll develop with python.  
+Here is a guide: [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/) (Step 3 - Write your function)
+
+```bash
+# What Python version do I have on this devbox? 
+python -V
+# Python 2.7.15 
+# (yes I know it is old)
+pip -V
+# pip 9.0.3 from c:\program files (x86)\python27\lib\site-packages (python 2.7)
+
+# OK, let's create a python project
+cd C:\Users\yourname\projs-openfaas #or where ever you want your code
+faas-cli new faas-py-test1 --lang python
+# 2019/03/29 21:22:17 No templates found in current directory.
+# 2019/03/29 21:22:17 Attempting to expand templates from https://github.com/openfaas/templates.git
+# 2019/03/29 21:22:23 Fetched 15 template(s) : [csharp csharp-armhf dockerfile go go-armhf java8 node node-arm64 node-armhf php7 python python-armhf python3 python3-armhf ruby] from https://github.com/openfaas/templates.git
+# Folder: faas-py-test1 created.
+# Function created in folder: faas-py-test1
+# Stack file written: faas-py-test1.yml
+
+# So the files we have are
+# |- faas-py-test1.yml    # Docker Stack file
+# |- faas-py-test1
+#     |- handler.py       # Py program
+#     |- requirements.txt # Py dependencies
+```
+
+Tips about templates: 
+* [faas-cli/guide/TEMPLATE](https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md)
+* [faas-cli](https://github.com/openfaas/faas-cli)
+
+Edit faas-py-test1.yml:
+
+```yaml
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  faas-py-test1:
+    lang: python
+    handler: ./faas-py-test1
+    image: rasor/faas-py-test1:v1 # edited! Added dockerhub userid/. Changed :latest to v1
+```
+
+Edit handler.py:
+
+```python
+def handle(req):
+    """handle a request to the function
+    Args:
+        req (str): request body
+    """
+    print("Hello! You said: " + req) # Added this line
+    # return req # Removed this line
+```
+
+```bash
+# So let's build!
+faas-cli build -f ./faas-py-test1.yml
+# [0] > Building faas-py-test1.
+# Clearing temporary build folder: ./build/faas-py-test1/
+# Preparing ./faas-py-test1/ ./build/faas-py-test1//function
+# Building: rasor/faas-py-test1:v1 with python template. Please wait..
+# Sending build context to Docker daemon  8.192kB
+# Step 1/25 : FROM python:2.7-alpine
+# ..............
+# Step 22/25 : ENV fprocess="python index.py"
+#  ---> Running in 597f759e3ecb
+# Removing intermediate container 597f759e3ecb
+#  ---> d5d5ec9ac47b
+# Step 23/25 : EXPOSE 8080
+#  ---> Running in 855b6cb3e7f2
+# Removing intermediate container 855b6cb3e7f2
+#  ---> fad6d57e56ab
+# Step 24/25 : HEALTHCHECK --interval=3s CMD [ -e /tmp/.lock ] || exit 1
+#  ---> Running in 0016df8d9c04
+# Removing intermediate container 0016df8d9c04
+#  ---> f39663c66ae2
+# Step 25/25 : CMD ["fwatchdog"]
+#  ---> Running in f301a88e4ebb
+# Removing intermediate container f301a88e4ebb
+#  ---> 4cf93e981b89
+# Successfully built 4cf93e981b89
+# Successfully tagged rasor/faas-py-test1:v1
+# SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+# Image: rasor/faas-py-test1:v1 built.
+# [0] < Building faas-py-test1 done.
+# [0] worker done.
+```
+
+The build created file Dockerfile.  
+Dockerfile contains the 25 build steps you see in the output. It builds the docker image.  
+Note: It also tells OpenFaaS how and where to start the function.
+
+.\build\faas-py-test1\Dockerfile:
+
+```dockerfile
+# ... Lines omitted
+# Here OpenFaaS knows howto starts the program
+ENV fprocess="python index.py"
+# ... Lines omitted
+```
+
+```bash
+# Verify img has been built
+docker images
+# REPOSITORY                     TAG                 IMAGE ID            CREATED             SIZE
+# rasor/faas-py-test1            v1                  4cf93e981b89        14 minutes ago      65.8MB
+
+# Push the img to docker hub for fast access
+faas-cli push -f faas-py-test1.yml
+# [0] > Pushing faas-py-test1 [rasor/faas-py-test1:v1].
+# The push refers to repository [docker.io/rasor/faas-py-test1]
+# 617c2e92f234: Pushed
+# .......
+# bcf2f368fe23: Mounted from library/python
+# v1: digest: sha256:84991bc8eae01a7893b869e50758b7849482017f81334b3057289a283932a95a size: 3655
+# [0] < Pushing faas-py-test1 [rasor/faas-py-test1:v1] done.
+# [0] worker done.
+
+```
+
+Verify that the img has been uploaded: 
+
+* [https://cloud.docker.com/repository/docker/rasor/faas-py-test1](https://cloud.docker.com/repository/docker/rasor/faas-py-test1)
+
+```bash
+# Time to Deploy
+faas-cli deploy -f ./faas-py-test1.yml
+# Deploying: faas-py-test1.
+# WARNING! Communication is not secure, please consider using HTTPS. Letsencrypt.org offers free SSL/TLS certificates.
+# Deployed. 202 Accepted.
+# URL: http://127.0.0.1:8080/function/faas-py-test1
+
+# Let's try to invoke it once more
+echo "HiHoh" | faas-cli invoke faas-py-test1
+# Hello! You said: "HiHoh"
+```
+
+###### OpenFaaS CLI Build with JSON input/output
+
+See [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/) (Step 4 - Import 3rd party dependencies).  
+
+##### OpenFaaS Dashboard
+
+HowTo setup Grafana as dashboard service in your cluster.  
+
+See book D4S chapter 4 (The OpenFaaS dashboard page 80).  
 
 ---
 
@@ -359,10 +523,13 @@ _More to be added_
         * [Run your own FaaS with OpenFaas and .Net Core](https://secanablog.wordpress.com/2018/06/10/run-your-own-faas-with-openfaas-and-net-core/)
     * [OpenFaaS on OpenShift - Red Hat OpenShift Blog](https://blog.openshift.com/openfaas-on-openshift/)
     * Uses [moby/buildkit](https://github.com/moby/buildkit)
+    * Private image registry: [Docker Registry](https://docs.docker.com/registry/)
     * docker-machine
         * [docker/machine](https://github.com/docker/machine)
         * [Create a swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/)
         * [Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V](https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407)
+* Build
+    * [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/)
 * [openfaas/workshop](https://github.com/openfaas/workshop)
 * My own blogs
     * [Docker](https://rasor.github.io/tag/docker.html)
