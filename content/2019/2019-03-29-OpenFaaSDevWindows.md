@@ -1,11 +1,12 @@
-Title:  OpenFaaS Cloud app
-Date: 2099-01-01 00:00
+Title:  OpenFaaS on Windows Devbox
+Status: published
+Date: 2019-03-29 00:00
 Category: Develop
-Tags: #openfaas, #curl, #docker, #kubernetes, #hyper-v, #virtualbox, #kitematic, #dockerswarm
+Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm
 
 _Under Construction_
 
-# Running OpenFaas in Dev
+# Running OpenFaas in Dev on Windows
 
 Finally the time has arrived, when I'll start using [OpenFaas](https://www.openfaas.com/).  
 I first heard about OpenFaaS at a meetup in May 2018, [6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!](https://www.meetup.com/GOTO-Nights-CPH/events/249895973/) by OpenFaaS creator, [Alex Ellis](https://github.com/alexellis).  
