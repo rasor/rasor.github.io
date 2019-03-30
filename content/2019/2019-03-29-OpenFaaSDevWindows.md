@@ -1,7 +1,7 @@
 Title:  OpenFaaS on Windows Devbox
 Status: published
 Date: 2019-03-29 00:00
-Modified: 2019-03-29 23:30
+Modified: 2019-03-30 15:30
 Category: Develop
 Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python
 
@@ -358,12 +358,19 @@ I need to run some Python functions, so I'll develop with python.
 Here is a guide: [Your first serverless Python function with OpenFaaS](https://blog.alexellis.io/first-faas-python-function/) (Step 3 - Write your function)
 
 ```bash
-# What Python version do I have on this devbox? 
+# What Python versions do I have on this devbox? 
+# 2.x:
 python -V
 # Python 2.7.15 
 # (yes I know it is old)
 pip -V
 # pip 9.0.3 from c:\program files (x86)\python27\lib\site-packages (python 2.7)
+
+# 3.x:
+py -V
+# Python 3.6.4
+pip3 -V
+# pip 9.0.1 from c:\program files (x86)\python36-32\lib\site-packages (python 3.6)
 
 # OK, let's create a python project
 cd C:\Users\yourname\projs-openfaas #or where ever you want your code
@@ -479,7 +486,7 @@ faas-cli push -f faas-py-test1.yml
 
 Verify that the img has been uploaded: 
 
-* [https://cloud.docker.com/repository/docker/rasor/faas-py-test1](https://cloud.docker.com/repository/docker/rasor/faas-py-test1)
+* [repository/docker/rasor/faas-py-test1](https://hub.docker.com/r/rasor/faas-py-test1)
 
 ```bash
 # Time to Deploy

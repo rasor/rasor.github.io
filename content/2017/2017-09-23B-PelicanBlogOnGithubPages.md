@@ -3,7 +3,7 @@ Status: published
 Date: 2017-09-23 20:20
 Modified: 2017-11-26 21:00
 Category: DevOp
-Tags: #blog, #pelican, #githubpages, #cms, #git, #install
+Tags: #blog, #pelican, #githubpages, #cms, #git, #install, #python
 
 This blog is part of a serie 
 
