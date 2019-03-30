@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/openfaas-on-windows-devbox.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-03-29 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2019-03-29 23:30:00+01:00"/>
+<meta property="article:modified_time" content="2019-03-30 15:30:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#openfaas"/>
@@ -109,7 +109,7 @@
           Posted on March 29, 2019 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
-            Updated: March 29, 2019
+            Updated: March 30, 2019
     </p>
   </header>
 
@@ -434,12 +434,19 @@ faas-cli list
 <p>Now we can build our own functions.  </p>
 <p>I need to run some Python functions, so I'll develop with python.<br>
 Here is a guide: <a href="https://blog.alexellis.io/first-faas-python-function/">Your first serverless Python function with OpenFaaS</a> (Step 3 - Write your function)</p>
-<div class="highlight"><pre><span></span><span class="c1"># What Python version do I have on this devbox? </span>
+<div class="highlight"><pre><span></span><span class="c1"># What Python versions do I have on this devbox? </span>
+<span class="c1"># 2.x:</span>
 python -V
 <span class="c1"># Python 2.7.15 </span>
 <span class="c1"># (yes I know it is old)</span>
 pip -V
 <span class="c1"># pip 9.0.3 from c:\program files (x86)\python27\lib\site-packages (python 2.7)</span>
+
+<span class="c1"># 3.x:</span>
+py -V
+<span class="c1"># Python 3.6.4</span>
+pip3 -V
+<span class="c1"># pip 9.0.1 from c:\program files (x86)\python36-32\lib\site-packages (python 3.6)</span>
 
 <span class="c1"># OK, let&#39;s create a python project</span>
 <span class="nb">cd</span> C:<span class="se">\U</span>sers<span class="se">\y</span>ourname<span class="se">\p</span>rojs-openfaas <span class="c1">#or where ever you want your code</span>
@@ -550,7 +557,7 @@ faas-cli push -f faas-py-test1.yml
 
 <p>Verify that the img has been uploaded: </p>
 <ul>
-<li><a href="https://cloud.docker.com/repository/docker/rasor/faas-py-test1">https://cloud.docker.com/repository/docker/rasor/faas-py-test1</a></li>
+<li><a href="https://hub.docker.com/r/rasor/faas-py-test1">repository/docker/rasor/faas-py-test1</a></li>
 </ul>
 <div class="highlight"><pre><span></span><span class="c1"># Time to Deploy</span>
 faas-cli deploy -f ./faas-py-test1.yml

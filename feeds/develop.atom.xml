@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-29T23:30:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-29T23:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-03-30T15:30:00+01:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-03-30T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
@@ -321,12 +321,19 @@ faas-cli list
 &lt;p&gt;Now we can build our own functions.  &lt;/p&gt;
 &lt;p&gt;I need to run some Python functions, so I'll develop with python.&lt;br&gt;
 Here is a guide: &lt;a href="https://blog.alexellis.io/first-faas-python-function/"&gt;Your first serverless Python function with OpenFaaS&lt;/a&gt; (Step 3 - Write your function)&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What Python version do I have on this devbox? &lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# What Python versions do I have on this devbox? &lt;/span&gt;
+&lt;span class="c1"&gt;# 2.x:&lt;/span&gt;
 python -V
 &lt;span class="c1"&gt;# Python 2.7.15 &lt;/span&gt;
 &lt;span class="c1"&gt;# (yes I know it is old)&lt;/span&gt;
 pip -V
 &lt;span class="c1"&gt;# pip 9.0.3 from c:\program files (x86)\python27\lib\site-packages (python 2.7)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 3.x:&lt;/span&gt;
+py -V
+&lt;span class="c1"&gt;# Python 3.6.4&lt;/span&gt;
+pip3 -V
+&lt;span class="c1"&gt;# pip 9.0.1 from c:\program files (x86)\python36-32\lib\site-packages (python 3.6)&lt;/span&gt;
 
 &lt;span class="c1"&gt;# OK, let&amp;#39;s create a python project&lt;/span&gt;
 &lt;span class="nb"&gt;cd&lt;/span&gt; C:&lt;span class="se"&gt;\U&lt;/span&gt;sers&lt;span class="se"&gt;\y&lt;/span&gt;ourname&lt;span class="se"&gt;\p&lt;/span&gt;rojs-openfaas &lt;span class="c1"&gt;#or where ever you want your code&lt;/span&gt;
@@ -437,7 +444,7 @@ faas-cli push -f faas-py-test1.yml
 
 &lt;p&gt;Verify that the img has been uploaded: &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://cloud.docker.com/repository/docker/rasor/faas-py-test1"&gt;https://cloud.docker.com/repository/docker/rasor/faas-py-test1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hub.docker.com/r/rasor/faas-py-test1"&gt;repository/docker/rasor/faas-py-test1&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Time to Deploy&lt;/span&gt;
 faas-cli deploy -f ./faas-py-test1.yml
