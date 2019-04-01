@@ -21,13 +21,6 @@ pip3 -V
 # py -3 -m pip -V # alternative
 # pip 9.0.1 from c:\program files (x86)\python36-32\lib\site-packages (python 3.6)
 
-# You are using pip version 9.0.1, however version 19.0.3 is available.
-# You should consider upgrading via the 'python -m pip install --upgrade pip' command.
-# Run as admin:
-py -m pip install --upgrade pip
-pip3 -V
-# pip 19.0.3 from c:\program files (x86)\python36-32\lib\site-packages\pip (python 3.6)
-
 # Windows installer
 # https://stackoverflow.com/a/55069640/750989
 choco
@@ -37,6 +30,46 @@ choco
 
 * [How do I upgrade the Python installation in Windows 10?](https://stackoverflow.com/questions/45137395/how-do-i-upgrade-the-python-installation-in-windows-10)
 
+## Find more pip modules
+
+Like npm in javascript
+
+Visit [PyPI – the Python Package Index](https://pypi.org/)
+
+## Update Pip
+
+When getting message like:  
+_You are using pip version 9.0.1, however version 19.0.3 is available._  
+_You should consider upgrading via the 'python -m pip install --upgrade pip' command._
+
+Run as Admin
+
+```bash
+# Upgrade pip (-3 for 3.x or -2 for 2.x)
+py -3 -m pip install --upgrade pip # or
+# pipenv run py -3 -m pip install -U pip==19.0.3
+pip3 -V
+# pip 19.0.3 from c:\program files (x86)\python36-32\lib\site-packages\pip (python 3.6)
+```
+
+## Lost Pip?
+
+Run as Admin
+
+```bash
+pip3 -V # or
+py -3 -m pip -V
+# bash: /c/Program Files (x86)/Python36-32/Scripts/pip3: No such file or directory
+
+# ... your pip is missing! Reinstall:
+# Download pip from https://bootstrap.pypa.io/get-pip.py then:
+py -3 get-pip.py
+py -3 -m pip -V
+# pip 19.0.3 from C:\Program Files (x86)\Python36-32\lib\site-packages\pip (python 3.6)
+
+# More info: https://stackoverflow.com/a/12476379/750989
+```
+
 ## pipenv
 
 pipenv is yarn for python - it generates a .lock file.  
@@ -44,6 +77,7 @@ pipenv is yarn for python - it generates a .lock file.
 * Using pipenv virtualenv: [rasor/nuc-openfaas](https://github.com/rasor/nuc-openfaas/blob/master/Journal.md)
 * [Pipenv: A Guide to the New Python Packaging Tool – Real Python](https://realpython.com/pipenv-guide/)
 * [Advanced Usage of Pipenv](https://pipenv.readthedocs.io/en/latest/advanced/#configuration-with-environment-variables)
+* [Using pip or pipenv](https://nucypher.readthedocs.io/en/latest/guides/installation_guide.html#standard-pipenv-installation)
 
 ```bash
 # Have pipenv?
@@ -111,6 +145,44 @@ pipenv
 #   sync       Installs all packages specified in Pipfile.lock.
 #   uninstall  Un-installs a provided package and removes it from Pipfile.
 #   update     Runs lock, then sync.
+
+# Fix: https://stackoverflow.com/questions/51540404/how-to-resolve-python-package-depencencies-with-pipenv
+# Clear cache and Fix dependencies
+pipenv lock --pre --clear
+# Locking [dev-packages] dependencies…
+# Locking [packages] dependencies…
+# Success!
+# Updated Pipfile.lock (125640)!
 ```
+
+## pylint
+
+Also used by VSCode.
+
+```bash
+# install py linter
+py -3 -m pip install -U pylint --user
+# Installing collected packages: mccabe, colorama, wrapt, typed-ast, lazy-object-proxy, astroid, isort, pylint
+#   Running setup.py install for wrapt ... done
+
+#   The scripts epylint.exe, pylint.exe, pyreverse.exe and symilar.exe are installed in 'C:\Users\yourname\AppData\Roaming\Python\Python36\Scripts' 
+#   which is not on PATH.
+#   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+```
+
+## VSCode extensions
+
+* [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+* [Visual Studio IntelliCode - Preview](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
+
+## VSCode editing
+
+* [Python in Visual Studio Code](https://code.visualstudio.com/docs/languages/python)
+* [Editing Python Code in Visual Studio Code](https://code.visualstudio.com/docs/python/editing)
+* [Get Started Tutorial for Python in Visual Studio Code](https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites)
+
+## The language
+
+* [6. Modules](https://docs.python.org/3/tutorial/modules.html)
 
 The End
