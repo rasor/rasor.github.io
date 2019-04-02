@@ -4,6 +4,7 @@ Tags: #npm, #ng, #components
 
 ## Stencil packages
 
+* [svgram/svgram-wc-core - Npm publish guides](https://github.com/svgram/svgram-wc-core#npm-publish-guides)
 * 2018-03: [Publishing a Web Component Using Stencil (And Using It Anywhere)](https://www.joshmorony.com/publishing-a-web-component-using-stencil-and-using-it-anywhere/)
 
 ## Angular packages

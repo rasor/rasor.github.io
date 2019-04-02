@@ -173,6 +173,7 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 
 * [three.js / documentation](https://threejs.org/docs/#manual/introduction/Creating-a-scene)
 * [Aerotwist - Getting Started with Three.js](https://aerotwist.com/tutorials/getting-started-with-three-js/)
+* [Animated Boxes (three.js + anime.js)](https://codepen.io/Staak/full/XowdeE)
 
 ## WebGL
 
@@ -180,6 +181,17 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
     * [Getting Title at 35:33](https://youtu.be/L_eQKnl8sao?t=8m1s)
     * [Getting Title at 39:29](https://youtu.be/L_eQKnl8sao?t=15m1s)
 * [Getting Title at 49:32](https://youtu.be/1eTg6fyc4zA?t=14m43s)
+
+## anime.js - Svg, Css, Dom
+
+* [anime.js](https://animejs.com/)
+* [Animated Boxes (three.js + anime.js)](https://codepen.io/Staak/full/XowdeE)
+* [#animejs-hashtag på Twitter](https://twitter.com/hashtag/animejs?src=hash)
+    * [#SVG morphing paths for page transitions](https://twitter.com/crnacura/status/894881194403389442)
+    * [@vuejs transitions with js hooks make it super easy to use 3rd party animation libraries](https://twitter.com/gasparrobi/status/1062423786614595584)
+    * [Particle effects for buttons (or other elements)](https://twitter.com/crnacura/status/989070657567772679)
+    * [Outdoors layout](https://twitter.com/crnacura/status/958720800479117313)
+* [9 of the Best Animation Libraries for UI Designers](https://www.sitepoint.com/our-top-9-animation-libraries/)
 
 ## VR
 
