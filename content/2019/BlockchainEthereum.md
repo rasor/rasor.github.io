@@ -124,6 +124,13 @@ Ethereum: ERC-721 Unique Tokens
 * Code: [angular-truffle-starter-dapp](https://github.com/Nikhil22/angular-truffle-starter-dapp)
 * Book: [Truffle Quick Start Guide](https://www.packtpub.com/web-development/truffle-quick-start-guide)
 
+### Steem
+
+* [Build social media platform with the Steem Blockchain #1 — Vue.js, Storybook.js and Steem.js](https://medium.com/@lachlanmiller_52885/build-social-media-platform-with-the-steem-blockchain-1-vue-js-storybook-js-and-steem-js-a25bd7629a14)
+    * [Build social media platform with the Steem Blockchain #2 — Posting a comment to the Blockchain](https://medium.com/@lachlanmiller_52885/build-social-media-platform-with-the-steem-blockchain-2-posting-a-comment-to-the-blockchain-43521bda8463)
+    * [lmiller1990/steem-blog-series](https://github.com/lmiller1990/steem-blog-series/tree/part-2-post)
+* [steemit/steem-js](https://github.com/steemit/steem-js)
+
 ### IBM Cloud 
 
 * [Home - IBM Call for Code - Supply Networks](https://developer.ibm.com/callforcode/resources/financial-networks/)
