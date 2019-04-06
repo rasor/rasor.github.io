@@ -10,6 +10,12 @@ Tags: #starter, #components, #ionic, #capacitor, #stencils, #webcomponents
 * [What has the Ionic team been up to?](https://forum.ionicframework.com/t/what-has-the-ionic-team-been-up-to/123928)
 * [What's the issue with issues?](https://blog.ionicframework.com/whats-the-issue-with-issues/#comment-3810680389)
 
+### Ionic Webinars
+
+* [Ionic Resources: Webinars for developers and architects](https://ionicframework.com/resources/webinars)
+    * [Ionic Webinar: Tackling Continuous Delivery with Appflow](https://ionicframework.com/resources/webinars/tackling-continuous-delivery-with-appflow)
+    * [Ionic Webinar: Top Cordova Challenges and How to Tackle Them](https://ionicframework.com/resources/webinars/top-cordova-challenges-and-how-to-tackle-them)
+
 ### Capacitor / Cordova
 
 * [Capacitor](https://capacitor.ionicframework.com/docs/)

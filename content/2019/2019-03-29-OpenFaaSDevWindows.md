@@ -1,9 +1,9 @@
 Title:  OpenFaaS on Windows Devbox
 Status: published
 Date: 2019-03-29 00:00
-Modified: 2019-04-06 15:30
+Modified: 2019-04-06 20:30
 Category: Develop
-Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python, #git, #gitlab
+Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python, #git, #gitlab, #openshift, #footloose
 
 # Running OpenFaas in Dev on Windows
 
@@ -537,12 +537,15 @@ echo "HiHoh" | faas-cli invoke faas-py-test1
     * Deploy docs: [Deployment - OpenFaaS](https://docs.openfaas.com/deployment/)
         * [Run your own FaaS with OpenFaas and .Net Core](https://secanablog.wordpress.com/2018/06/10/run-your-own-faas-with-openfaas-and-net-core/)
     * [OpenFaaS on OpenShift - Red Hat OpenShift Blog](https://blog.openshift.com/openfaas-on-openshift/)
+        * [Install OpenShift in a container with Weave Footloose](https://blog.alexellis.io/openshift-in-a-footloose-container/)
+            * [weaveworks/footloose](https://github.com/weaveworks/footloose)
     * Uses [moby/buildkit](https://github.com/moby/buildkit)
     * Private image registry: [Docker Registry](https://docs.docker.com/registry/)
     * docker-machine
         * [docker/machine](https://github.com/docker/machine)
         * [Create a swarm](https://docs.docker.com/engine/swarm/swarm-tutorial/create-swarm/)
         * [Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V](https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407)
+    * OpenFaaS 
 * [openfaas/workshop](https://github.com/openfaas/workshop)
 * My own blogs
     * [Docker](https://rasor.github.io/tag/docker.html)

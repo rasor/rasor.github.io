@@ -54,4 +54,8 @@ Tags: #google, #microsoft, #mobile, #web, #pwa, #ebooks, #bitcoin, #ethereum
 * [rasor/awesome-ebooks](https://github.com/rasor/awesome-tables/blob/master/awesome-ebooks-training.md)
 * [Rxjs 5 ultimate · GitBook](https://www.gitbook.com/book/chrisnoring/rxjs-5-ultimate/details)
 
+## Books
+
+* [Steal Like An Artist, a book by Austin Kleon](https://austinkleon.com/steal/)
+
 The End

@@ -1,9 +1,9 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2019-03-28 08:00
+Modified: 2019-04-06 20:00
 Category: DevOp
-Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #kubernetic
+Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #kubernetic, #openfaas, #footloose
 
 It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
@@ -402,6 +402,9 @@ Next: Deploying to MiniShift
 * More Cheat Sheets: [Search Results Red Hat Developers](https://developers.redhat.com/search/?f=type~cheatsheet&s=most-recent)
 * [OpenShift: Interactive Learning Portal](https://learn.openshift.com/)
     * Above is based on [Katacoda - Interactive Learning Platform](https://katacoda.com/)
+* [Install OpenShift in a container with Weave Footloose](https://blog.alexellis.io/openshift-in-a-footloose-container/)
+    * [weaveworks/footloose](https://github.com/weaveworks/footloose)
+    * [OpenFaaS on OpenShift - Red Hat OpenShift Blog](https://blog.openshift.com/openfaas-on-openshift/)
 * Old [Cloud](https://rasor.wordpress.com/2013/11/26/cloud-services/) landscape anno 2013 - from my old blog.
 
 The End
