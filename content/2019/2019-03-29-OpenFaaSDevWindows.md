@@ -1,9 +1,9 @@
 Title:  OpenFaaS on Windows Devbox
 Status: published
 Date: 2019-03-29 00:00
-Modified: 2019-03-30 15:30
+Modified: 2019-04-06 15:30
 Category: Develop
-Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python
+Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python, #git, #gitlab
 
 # Running OpenFaas in Dev on Windows
 
@@ -35,8 +35,9 @@ It comes with autoscaling features, logging and prometheus.
 ### Production
 
 For deploying to OpenFaaS to a **cloud container cluster** there are some good guides on **k8s** like [ofc-bootstrap](https://github.com/openfaas-incubator/ofc-bootstrap). I guess you are managing the cluster here.  
+You can include the ofc-bootstrap in a [GitLab DevOps workflow](https://www.openfaas.com/blog/openfaas-cloud-gitlab/). This will use DigitalOcean (60 day trial in previous link), Google Cloud or AWS as cloud container cluster provider.
 
-But there is a great guide in the D4S book chapter 7, where Chanwit uses **AWS spot instances** for running **Swarm** worker nodes. This solution can keep the price as low as Native Serverles, Chanwit claims. The challenge with spot instances is that you have to restart nodes, when they are marked for termination.  
+There is also a great guide in the D4S book chapter 7, where Chanwit uses **AWS spot instances** for running **Swarm** worker nodes. This solution can **keep the price as low as Native Serverless**, Chanwit claims. The challenge with spot instances is that you have to **restart nodes**, when they are **marked for termination**.  
 In this guide you are managing the cluster.  
 Chanwits [code is here](https://github.com/PacktPublishing/Docker-for-Serverless-Applications/tree/master/ch_operating).
 
@@ -528,6 +529,7 @@ echo "HiHoh" | faas-cli invoke faas-py-test1
     * [openfaas-incubator/openfaas-sinatra-guestbook](https://github.com/openfaas-incubator/openfaas-sinatra-guestbook)
 * Deploy: [openfaas/openfaas-cloud](https://github.com/openfaas/openfaas-cloud#get-started)
     * One-Click install on k8s cluster: [openfaas-incubator/ofc-bootstrap](https://github.com/openfaas-incubator/ofc-bootstrap) - watch vid!
+        * [Introducing OpenFaaS Cloud with GitLab](https://www.openfaas.com/blog/openfaas-cloud-gitlab/)
         * [OpenFaaS Cloud in 100 seconds](https://www.youtube.com/watch?v=Sa1VBSfVpK0)
         * [Get your own OpenFaaS Cloud in 1 minute](https://www.youtube.com/watch?v=J9xoNf9yZ60)
         * [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
