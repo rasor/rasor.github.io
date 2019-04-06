@@ -27,7 +27,7 @@
 
 <meta name="author" content="rasor" />
 <meta name="description" content="Running OpenFaas in Dev on Windows Finally the time has arrived, when I&#39;ll start using OpenFaas. I first heard about OpenFaaS at a meetup in May 2018, 6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup! by OpenFaaS creator, Alex Ellis. Next I bought the book Docker for …" />
-<meta name="keywords" content="#openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python">
+<meta name="keywords" content="#openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python, #git, #gitlab">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="OpenFaaS on Windows Devbox"/>
@@ -36,7 +36,7 @@
 <meta property="og:url" content="https://rasor.github.io/openfaas-on-windows-devbox.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-03-29 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2019-03-30 15:30:00+01:00"/>
+<meta property="article:modified_time" content="2019-04-06 15:30:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#openfaas"/>
@@ -48,6 +48,8 @@
 <meta property="article:tag" content="#kitematic"/>
 <meta property="article:tag" content="#dockerswarm"/>
 <meta property="article:tag" content="#python"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#gitlab"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; OpenFaaS on Windows Devbox</title>
@@ -109,7 +111,7 @@
           Posted on March 29, 2019 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
           </br>
-            Updated: March 30, 2019
+            Updated: April 06, 2019
     </p>
   </header>
 
@@ -143,8 +145,9 @@ Info: k8s or swarm gives you a cluster of machines, and deployed an application 
 <p><img alt="OpenFaaS" src="https://pbs.twimg.com/media/DFrkF4NXoAAJwN2.jpg"> (from OpenFaaS website).<br>
 It comes with autoscaling features, logging and prometheus.</p>
 <h3>Production</h3>
-<p>For deploying to OpenFaaS to a <strong>cloud container cluster</strong> there are some good guides on <strong>k8s</strong> like <a href="https://github.com/openfaas-incubator/ofc-bootstrap">ofc-bootstrap</a>. I guess you are managing the cluster here.  </p>
-<p>But there is a great guide in the D4S book chapter 7, where Chanwit uses <strong>AWS spot instances</strong> for running <strong>Swarm</strong> worker nodes. This solution can keep the price as low as Native Serverles, Chanwit claims. The challenge with spot instances is that you have to restart nodes, when they are marked for termination.<br>
+<p>For deploying to OpenFaaS to a <strong>cloud container cluster</strong> there are some good guides on <strong>k8s</strong> like <a href="https://github.com/openfaas-incubator/ofc-bootstrap">ofc-bootstrap</a>. I guess you are managing the cluster here.<br>
+You can include the ofc-bootstrap in a <a href="https://www.openfaas.com/blog/openfaas-cloud-gitlab/">GitLab DevOps workflow</a>. This will use DigitalOcean (60 day trial in previous link), Google Cloud or AWS as cloud container cluster provider.</p>
+<p>There is also a great guide in the D4S book chapter 7, where Chanwit uses <strong>AWS spot instances</strong> for running <strong>Swarm</strong> worker nodes. This solution can <strong>keep the price as low as Native Serverless</strong>, Chanwit claims. The challenge with spot instances is that you have to <strong>restart nodes</strong>, when they are <strong>marked for termination</strong>.<br>
 In this guide you are managing the cluster.<br>
 Chanwits <a href="https://github.com/PacktPublishing/Docker-for-Serverless-Applications/tree/master/ch_operating">code is here</a>.</p>
 <p>But OpenFaaS has build-in scaling and monitoring, so the managing part is limited.  </p>
@@ -602,6 +605,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
 </li>
 <li>Deploy: <a href="https://github.com/openfaas/openfaas-cloud#get-started">openfaas/openfaas-cloud</a><ul>
 <li>One-Click install on k8s cluster: <a href="https://github.com/openfaas-incubator/ofc-bootstrap">openfaas-incubator/ofc-bootstrap</a> - watch vid!<ul>
+<li><a href="https://www.openfaas.com/blog/openfaas-cloud-gitlab/">Introducing OpenFaaS Cloud with GitLab</a></li>
 <li><a href="https://www.youtube.com/watch?v=Sa1VBSfVpK0">OpenFaaS Cloud in 100 seconds</a></li>
 <li><a href="https://www.youtube.com/watch?v=J9xoNf9yZ60">Get your own OpenFaaS Cloud in 1 minute</a></li>
 <li><a href="https://www.youtube.com/watch?v=6xJwQgDnMFE">Create a 2-node Kubernetes cluster in 10 minutes</a></li>
@@ -660,6 +664,8 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
       <a href="https://rasor.github.io/tag/kitematic.html">#kitematic</a>
       <a href="https://rasor.github.io/tag/dockerswarm.html">#dockerswarm</a>
       <a href="https://rasor.github.io/tag/python.html">#python</a>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+      <a href="https://rasor.github.io/tag/gitlab.html">#gitlab</a>
     </p>
   </div>
 

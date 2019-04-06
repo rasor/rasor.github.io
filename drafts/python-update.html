@@ -122,13 +122,6 @@ pip3 -V
 <span class="c1"># py -3 -m pip -V # alternative</span>
 <span class="c1"># pip 9.0.1 from c:\program files (x86)\python36-32\lib\site-packages (python 3.6)</span>
 
-<span class="c1"># You are using pip version 9.0.1, however version 19.0.3 is available.</span>
-<span class="c1"># You should consider upgrading via the &#39;python -m pip install --upgrade pip&#39; command.</span>
-<span class="c1"># Run as admin:</span>
-py -m pip install --upgrade pip
-pip3 -V
-<span class="c1"># pip 19.0.3 from c:\program files (x86)\python36-32\lib\site-packages\pip (python 3.6)</span>
-
 <span class="c1"># Windows installer</span>
 <span class="c1"># https://stackoverflow.com/a/55069640/750989</span>
 choco
@@ -139,12 +132,45 @@ choco
 <ul>
 <li><a href="https://stackoverflow.com/questions/45137395/how-do-i-upgrade-the-python-installation-in-windows-10">How do I upgrade the Python installation in Windows 10?</a></li>
 </ul>
+<h2>Find more pip modules</h2>
+<p>Like npm in javascript</p>
+<p>Visit <a href="https://pypi.org/">PyPI – the Python Package Index</a></p>
+<h2>Update Pip</h2>
+<p>When getting message like:<br>
+<em>You are using pip version 9.0.1, however version 19.0.3 is available.</em><br>
+<em>You should consider upgrading via the 'python -m pip install --upgrade pip' command.</em></p>
+<p>Run as Admin</p>
+<div class="highlight"><pre><span></span><span class="c1"># Upgrade pip (-3 for 3.x or -2 for 2.x)</span>
+py -3 -m pip install --upgrade pip <span class="c1"># or</span>
+<span class="c1"># pipenv run py -3 -m pip install -U pip==19.0.3</span>
+pip3 -V
+<span class="c1"># pip 19.0.3 from c:\program files (x86)\python36-32\lib\site-packages\pip (python 3.6)</span>
+</pre></div>
+
+
+<h2>Lost Pip?</h2>
+<p>Run as Admin</p>
+<div class="highlight"><pre><span></span>pip3 -V <span class="c1"># or</span>
+py -3 -m pip -V
+<span class="c1"># bash: /c/Program Files (x86)/Python36-32/Scripts/pip3: No such file or directory</span>
+
+<span class="c1"># ... your pip is missing! Reinstall:</span>
+<span class="c1"># Download pip from https://bootstrap.pypa.io/get-pip.py then:</span>
+py -3 get-pip.py
+py -3 -m pip -V
+<span class="c1"># pip 19.0.3 from C:\Program Files (x86)\Python36-32\lib\site-packages\pip (python 3.6)</span>
+
+<span class="c1"># More info: https://stackoverflow.com/a/12476379/750989</span>
+</pre></div>
+
+
 <h2>pipenv</h2>
 <p>pipenv is yarn for python - it generates a .lock file.  </p>
 <ul>
 <li>Using pipenv virtualenv: <a href="https://github.com/rasor/nuc-openfaas/blob/master/Journal.md">rasor/nuc-openfaas</a></li>
 <li><a href="https://realpython.com/pipenv-guide/">Pipenv: A Guide to the New Python Packaging Tool – Real Python</a></li>
 <li><a href="https://pipenv.readthedocs.io/en/latest/advanced/#configuration-with-environment-variables">Advanced Usage of Pipenv</a></li>
+<li><a href="https://nucypher.readthedocs.io/en/latest/guides/installation_guide.html#standard-pipenv-installation">Using pip or pipenv</a></li>
 </ul>
 <div class="highlight"><pre><span></span><span class="c1"># Have pipenv?</span>
 py -3 -m pipenv -V
@@ -211,9 +237,45 @@ pipenv
 <span class="c1">#   sync       Installs all packages specified in Pipfile.lock.</span>
 <span class="c1">#   uninstall  Un-installs a provided package and removes it from Pipfile.</span>
 <span class="c1">#   update     Runs lock, then sync.</span>
+
+<span class="c1"># Fix: https://stackoverflow.com/questions/51540404/how-to-resolve-python-package-depencencies-with-pipenv</span>
+<span class="c1"># Clear cache and Fix dependencies</span>
+pipenv lock --pre --clear
+<span class="c1"># Locking [dev-packages] dependencies…</span>
+<span class="c1"># Locking [packages] dependencies…</span>
+<span class="c1"># Success!</span>
+<span class="c1"># Updated Pipfile.lock (125640)!</span>
 </pre></div>
 
 
+<h2>pylint</h2>
+<p>Also used by VSCode.</p>
+<div class="highlight"><pre><span></span><span class="c1"># install py linter</span>
+py -3 -m pip install -U pylint --user
+<span class="c1"># Installing collected packages: mccabe, colorama, wrapt, typed-ast, lazy-object-proxy, astroid, isort, pylint</span>
+<span class="c1">#   Running setup.py install for wrapt ... done</span>
+
+<span class="c1">#   The scripts epylint.exe, pylint.exe, pyreverse.exe and symilar.exe are installed in &#39;C:\Users\yourname\AppData\Roaming\Python\Python36\Scripts&#39; </span>
+<span class="c1">#   which is not on PATH.</span>
+<span class="c1">#   Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span>
+</pre></div>
+
+
+<h2>VSCode extensions</h2>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode">Visual Studio IntelliCode - Preview</a></li>
+</ul>
+<h2>VSCode editing</h2>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/languages/python">Python in Visual Studio Code</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/editing">Editing Python Code in Visual Studio Code</a></li>
+<li><a href="https://code.visualstudio.com/docs/python/python-tutorial#_prerequisites">Get Started Tutorial for Python in Visual Studio Code</a></li>
+</ul>
+<h2>The language</h2>
+<ul>
+<li><a href="https://docs.python.org/3/tutorial/modules.html">6. Modules</a></li>
+</ul>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
