@@ -86,6 +86,7 @@ LINKS = (
         ('StackOverflow', 'https://stackoverflow.com/users/750989/rasor'),
         ('npm', 'https://www.npmjs.com/~rasor'),
         ('dock.io', 'https://dock.io?r=sorenraarup:aaaaCSAu'),
+        ('Keybase', 'https://keybase.io/rasor'),
         ('-- CV --', 'https://stackoverflow.com/cv/rasor'),
         ('AngelList', 'https://angel.co/rasor'),
 #         ('Pelican', 'http://getpelican.com/'),

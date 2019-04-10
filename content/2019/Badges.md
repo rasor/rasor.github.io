@@ -23,4 +23,12 @@ Others
 
 * [Adding Status Badges - CircleCI](https://circleci.com/docs/2.0/status-badges/)
 
+## Blogs
+
+* [How to make a beautiful, tiny npm package and publish it](https://medium.freecodecamp.org/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78)
+    * [Package Phobia](https://packagephobia.now.sh/result?p=%40bamblehorse%2Ftiny)
+    * [UNPKG - @bamblehorse/tiny](https://unpkg.com/@bamblehorse/tiny@2.0.0/)
+    * [@bamblehorse/tiny CDN by jsDelivr - A free, fast, and reliable Open Source CDN](https://cdn.jsdelivr.net/npm/@bamblehorse/tiny/)
+    * [Visualization of npm dependencies](https://npm.anvaka.com/#/view/2d/%2540bamblehorse%252Ftiny)
+
 The End

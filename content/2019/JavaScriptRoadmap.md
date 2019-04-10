@@ -32,7 +32,10 @@ Tags: #javascript
 
 * [ECMAScript 6 modules: the final syntax](http://2ality.com/2014/09/es6-modules-final.html)
 * [ES6 In Depth: Modules – Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
+* Ref: [Microsoft/TypeScript - Import Declarations](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#1132-import-declarations)
+* Ref: [Microsoft/TypeScript - Export Declarations](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#11342-export-default-declarations)
 * Ref: [Compiler Options - TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
+* Ref: [tsconfig.json - @types, typeRoots and types](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types)
 * Ref - TS Libs: [Microsoft/TypeScript](https://github.com/Microsoft/TypeScript/tree/master/lib)
 * Blog - 2015 [ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?](https://benmccormick.org/2015/09/14/es5-es6-es2016-es-next-whats-going-on-with-javascript-versioning)
 * [Learn ES2015 · Babel](https://babeljs.io/docs/en/learn)
