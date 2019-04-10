@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="CI meetup 2019 Meetup: Next-gen CI night 17:30 Gitlab CI intro by Markus Suonto Working @Eficode ROOT - currently @Tryg Markus Suonto (@marextw) | Twitter suonto - Overview PuTTY to get VNCViewer VNCViewer to enter workstation .gitlab-ci.yaml stages: - build - test build: services: - docker:dind # docker in docker script: - docker build ... - docker …" />
+<meta name="keywords" content="#ci">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="CI meetup-2019"/>
+<meta property="og:description" content="CI meetup 2019 Meetup: Next-gen CI night 17:30 Gitlab CI intro by Markus Suonto Working @Eficode ROOT - currently @Tryg Markus Suonto (@marextw) | Twitter suonto - Overview PuTTY to get VNCViewer VNCViewer to enter workstation .gitlab-ci.yaml stages: - build - test build: services: - docker:dind # docker in docker script: - docker build ... - docker …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/ci-meetup-2019.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#ci"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; CI meetup-2019</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
+          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
+          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ci-meetup-2019">CI meetup-2019</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h2>CI meetup 2019</h2>
+<ul>
+<li>Meetup: <a href="https://www.meetup.com/Cloud-Native-Copenhagen/events/258922126/">Next-gen CI night</a></li>
+</ul>
+<h2>17:30 Gitlab CI intro by Markus Suonto</h2>
+<p>Working @Eficode ROOT - currently @Tryg</p>
+<ul>
+<li><a href="https://twitter.com/marextw">Markus Suonto (@marextw) | Twitter</a></li>
+<li><a href="https://github.com/suonto">suonto - Overview</a></li>
+<li>PuTTY to get VNCViewer</li>
+<li>VNCViewer to enter workstation</li>
+</ul>
+<h3>.gitlab-ci.yaml</h3>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">stages</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker:dind</span> <span class="c1"># docker in docker </span>
+    <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker build ...</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker login ...</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker push ...</span>
+    <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">changes</span><span class="p p-Indicator">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">src/*</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">html/*</span>
+<span class="l l-Scalar l-Scalar-Plain">test</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">docker:stable</span>
+    <span class="l l-Scalar l-Scalar-Plain">stage</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+    <span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker:dind</span> <span class="c1"># docker in docker </span>
+    <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker login</span>
+        <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+    <span class="l l-Scalar l-Scalar-Plain">coverage</span><span class="p p-Indicator">:</span> <span class="s">&#39;xxxx&#39;</span>
+</pre></div>
+
+
+<ul>
+<li>Stages can be set to run in parallel!</li>
+</ul>
+<div class="highlight"><pre><span></span>workon demo
+</pre></div>
+
+
+<ul>
+<li>Gitlab pipelines don't break like in Jenkins</li>
+</ul>
+<p>Tips:</p>
+<ul>
+<li><a href="https://docs.gitlab.com/ee/ci/yaml/#onlychangesexceptchanges">GitLab CI/CD Pipeline Configuration Reference | GitLab</a></li>
+<li>Marcus Blog: <a href="https://www.eficode.com/blog/gitlab-ci">The Fab 5 for GitLab CI</a></li>
+</ul>
+<h2>17:50 Spinakker.io intro by Hans Duedal</h2>
+<p>Works @Visma</p>
+<ul>
+<li><a href="https://twitter.com/hansduedal">Hans Duedal (@hansduedal) | Twitter</a></li>
+<li>Get slides: <a href="https://docs.google.com/presentation/d/165NTYXDW2cfdw8E5HGz_Y2jkRy9zPogSlE3Srb7M9cM/edit">Spinnaker Intro</a></li>
+<li>Is not a CI tool..</li>
+<li>Blue/green deployments (called red/black)</li>
+<li>eBook: <a href="https://www.spinnaker.io/publications/ebook/">Continuous Delivery With Spinnaker</a></li>
+</ul>
+<h3>Pipelines Stages</h3>
+<p>36 different pipeline stages...</p>
+<ul>
+<li>Stage: Bake</li>
+<li>Stage: Deployment</li>
+<li>Stage: Jenkins</li>
+<li>Stage: Webhook</li>
+<li>Stage: Canary - Analyse - roll back</li>
+</ul>
+<h3>Infrastructure</h3>
+<ul>
+<li>Can see multi cloud</li>
+<li>Load Balancers / k8s: services, ingresses</li>
+</ul>
+<h3>Architecture</h3>
+<ul>
+<li>Runs on microservices</li>
+</ul>
+<h3>Caveats</h3>
+<ul>
+<li>CPU hungry - timeouts happens</li>
+<li>Consider use armory.io</li>
+</ul>
+<h2>18:10 Drone CI intro by Laszlo Fogas</h2>
+<ul>
+<li><a href="https://twitter.com/laszlocph">Laszlo Fogas (@laszlocph) | Twitter</a></li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/12cZ0B9axdQ-EWs4SJMC28-MB2bOHhRV0rErx863sLiE/edit#slide=id.p">Drone CI intro</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">pipeline</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">npm-install</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+        <span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span> <span class="err">-</span> <span class="l l-Scalar l-Scalar-Plain">npm install</span>
+    <span class="l l-Scalar l-Scalar-Plain">test</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+    <span class="l l-Scalar l-Scalar-Plain">buld</span><span class="p p-Indicator">:</span>
+        <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+        <span class="l l-Scalar l-Scalar-Plain">secrets</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span> <span class="nv">docler_username</span><span class="p p-Indicator">,</span> <span class="nv">docker_psw</span><span class="p p-Indicator">]</span>
+        <span class="l l-Scalar l-Scalar-Plain">when</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span> <span class="c1">#condition</span>
+        <span class="l l-Scalar l-Scalar-Plain">event</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">push</span>
+</pre></div>
+
+
+<ul>
+<li>Each step run in a container</li>
+<li>Plugin support - they are only bash scripts you copy into..</li>
+<li>Used by falcon.io</li>
+<li>Drone 1.0 just released<ul>
+<li>Multi machine pipeline</li>
+<li>Jsonnet based yaml generation</li>
+<li>No native k8s backen</li>
+</ul>
+</li>
+<li>Licensing<ul>
+<li>Enterprise</li>
+<li>OSS - too little features....</li>
+</ul>
+</li>
+<li>cloud.drone.io SaaS</li>
+</ul>
+<p>Laszlo forked 0.8 !!! So you don't have the License problems :-)</p>
+<ul>
+<li><a href="https://github.com/laszlocph/tsdbinfo">laszlocph/tsdbinfo</a><ul>
+<li><a href="https://github.com/laszlocph/tsdbinfo/blob/master/.drone.yml">laszlocph/tsdbinfo</a></li>
+</ul>
+</li>
+</ul>
+<h2>18:30 Circle CI intro by Christian Palmhøj Nielsen</h2>
+<ul>
+<li><a href="https://twitter.com/cpnielsen">Christian Palmhøj Nielsen (@cpnielsen) | Twitter</a></li>
+<li>Slides: <a href="https://drive.google.com/file/d/1yK08uE7o9pW6B6MMnOnLpxve1RJv9-SZ/view">CircleCI-intro.pdf</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/ci.html">#ci</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

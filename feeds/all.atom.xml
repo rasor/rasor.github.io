@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-04-06T15:30:00+02:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-04-06T15:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-04-06T20:30:00+02:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-04-06T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
@@ -501,7 +501,13 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://secanablog.wordpress.com/2018/06/10/run-your-own-faas-with-openfaas-and-net-core/"&gt;Run your own FaaS with OpenFaas and .Net Core&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://blog.openshift.com/openfaas-on-openshift/"&gt;OpenFaaS on OpenShift - Red Hat OpenShift Blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.openshift.com/openfaas-on-openshift/"&gt;OpenFaaS on OpenShift - Red Hat OpenShift Blog&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/openshift-in-a-footloose-container/"&gt;Install OpenShift in a container with Weave Footloose&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/weaveworks/footloose"&gt;weaveworks/footloose&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Uses &lt;a href="https://github.com/moby/buildkit"&gt;moby/buildkit&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Private image registry: &lt;a href="https://docs.docker.com/registry/"&gt;Docker Registry&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;docker-machine&lt;ul&gt;
@@ -510,6 +516,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://gist.github.com/johnmccabe/55baab605c0fb82df9c1cbf8c3dde407"&gt;Running OpenFaaS on Windows 10 - using Docker Swarm on Hyper-V&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;OpenFaaS &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/openfaas/workshop"&gt;openfaas/workshop&lt;/a&gt;&lt;/li&gt;
@@ -536,7 +543,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;2018-04: &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications | PACKT Books&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category><category term="#git"></category><category term="#gitlab"></category></entry><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category><category term="#git"></category><category term="#gitlab"></category><category term="#openshift"></category><category term="#footloose"></category></entry><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Labs: &lt;ul&gt;
@@ -1488,7 +1495,7 @@ Here is a Gist for setting up Swarm for host for OpenFaas: &lt;a href="https://g
 &lt;li&gt;&lt;a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/"&gt;Running Docker containers on Bash on Windows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;vue-storefront Installing on Windows.md&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#openfaas"></category><category term="#kitematic"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2019-03-28T08:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#openfaas"></category><category term="#kitematic"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2019-04-06T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
 In this blog I'll run it (my own little cloud) locally on Windows.&lt;/p&gt;
@@ -1938,9 +1945,14 @@ start chrome https://192.168.99.100:8443/
 &lt;li&gt;Above is based on &lt;a href="https://katacoda.com/"&gt;Katacoda - Interactive Learning Platform&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/openshift-in-a-footloose-container/"&gt;Install OpenShift in a container with Weave Footloose&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/weaveworks/footloose"&gt;weaveworks/footloose&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.openshift.com/openfaas-on-openshift/"&gt;OpenFaaS on OpenShift - Red Hat OpenShift Blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Old &lt;a href="https://rasor.wordpress.com/2013/11/26/cloud-services/"&gt;Cloud&lt;/a&gt; landscape anno 2013 - from my old blog.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category><category term="#kubernetic"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category><category term="#kubernetic"></category><category term="#openfaas"></category><category term="#footloose"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;

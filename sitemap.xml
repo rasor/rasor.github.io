@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2019-04-06T19:35:51-00:00</lastmod>
+<lastmod>2019-04-10T16:20:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2019-04-06T19:35:51-00:00</lastmod>
+<lastmod>2019-04-10T16:20:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2019-04-06T19:35:51-00:00</lastmod>
+<lastmod>2019-04-10T16:20:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2019-04-06T19:35:51-00:00</lastmod>
+<lastmod>2019-04-10T16:20:15-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/openfaas-on-windows-devbox.html</loc>
-<lastmod>2019-04-06T15:30:00+02:00</lastmod>
+<lastmod>2019-04-06T20:30:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -89,7 +89,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/developing-with-openshift.html</loc>
-<lastmod>2019-03-28T08:00:00+01:00</lastmod>
+<lastmod>2019-04-06T20:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -215,14 +215,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/category/devop.html</loc>
-<lastmod>2019-03-28T09:00:00+00:50</lastmod>
+<lastmod>2019-04-06T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -236,77 +236,91 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/openfaas.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/curl.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/docker.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/kubernetes.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/hyperv.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/virtualbox.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/kitematic.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/dockerswarm.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/python.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/git.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/gitlab.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/openshift.html</loc>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/footloose.html</loc>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -327,7 +341,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/paas.html</loc>
-<lastmod>2019-03-28T08:00:00+00:50</lastmod>
+<lastmod>2019-04-06T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -515,29 +529,22 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/openshift.html</loc>
-<lastmod>2019-03-28T08:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/redhat.html</loc>
-<lastmod>2019-03-28T08:00:00+00:50</lastmod>
+<lastmod>2019-04-06T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/ansible.html</loc>
-<lastmod>2019-03-28T08:00:00+00:50</lastmod>
+<lastmod>2019-04-06T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/kubernetic.html</loc>
-<lastmod>2019-03-28T08:00:00+00:50</lastmod>
+<lastmod>2019-04-06T20:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -831,7 +838,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2019-04-06T15:30:00+00:50</lastmod>
+<lastmod>2019-04-06T20:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
