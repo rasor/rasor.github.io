@@ -1,9 +1,9 @@
 Title: Using NVM for Windows and Yarn
 Status: published
 Date: 2017-10-08 11:00
-Modified: 2018-09-02 11:00
+Modified: 2019-04-19 11:00
 Category: DevOp
-Tags: #nvm, #nodejs, #npm, #yarn
+Tags: #nvm, #nodejs, #npm, #yarn, #chocolatay
 
 Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it [here](https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/){:target="_blank"}
@@ -81,7 +81,7 @@ We need the lock file to keep track of all exact versions of dependencies in a p
 ### Install Yarn
 
 * [Download Yarn](https://yarnpkg.com/en/docs/install){:target="_blank"}
-* Install [Chokolatey](https://chocolatey.org/install){:target="_blank"}
+* Install [Chocolatey](https://chocolatey.org/install){:target="_blank"}
 * Install Yarn 
 
 ```bash
@@ -130,5 +130,6 @@ yarn upgrade [package]@latest # same as npm update [package]@latest, but using y
 * [Npm vs. Yarn](https://yarnpkg.com/en/docs/migrating-from-npm){:target="_blank"}
 * [Yarn commands](https://yarnpkg.com/en/docs/cli/){:target="_blank"}
 * [Npm commands](https://docs.npmjs.com/cli){:target="_blank"}
+* [Awesome CLI - on Windows - Chocolatey](https://github.com/rasor/awesome-tables/blob/master/awesome-cli-on-windows.md#chocolatey){:target="_blank"}
 
 The End
