@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Graph DBs Language: Gremlin (programming language) - Wikipedia Framework: Apache TinkerPop Community: Google Grupper DB-Engines Ranking Neo4j Neo4j Graph Platform – The Leader in Graph Databases eBook: Neo4j Graph Platform – The Leader in Graph Databases eBook: Graph Databases for Beginners - Neo4j Graph Database Platform Azure Cosmos DB Introduction to Azure Cosmos DB …" />
+<meta name="keywords" content="#graphdb, #gremlin, #neo4j, #tinkerpop">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Graph DBs"/>
+<meta property="og:description" content="Graph DBs Language: Gremlin (programming language) - Wikipedia Framework: Apache TinkerPop Community: Google Grupper DB-Engines Ranking Neo4j Neo4j Graph Platform – The Leader in Graph Databases eBook: Neo4j Graph Platform – The Leader in Graph Databases eBook: Graph Databases for Beginners - Neo4j Graph Database Platform Azure Cosmos DB Introduction to Azure Cosmos DB …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/graph-dbs.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#graphdb"/>
+<meta property="article:tag" content="#gremlin"/>
+<meta property="article:tag" content="#neo4j"/>
+<meta property="article:tag" content="#tinkerpop"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Graph DBs</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
+          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
+          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="graph-dbs">Graph DBs</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h2>Graph DBs</h2>
+<ul>
+<li>Language: <a href="https://en.wikipedia.org/wiki/Gremlin_(programming_language)">Gremlin (programming language) - Wikipedia</a></li>
+<li>Framework: <a href="http://tinkerpop.apache.org/">Apache TinkerPop</a><ul>
+<li>Community: <a href="https://groups.google.com/forum/#!forum/gremlin-users">Google Grupper</a></li>
+</ul>
+</li>
+<li><a href="https://db-engines.com/en/ranking/graph+dbms">DB-Engines Ranking</a></li>
+</ul>
+<h3>Neo4j</h3>
+<ul>
+<li><a href="https://neo4j.com/">Neo4j Graph Platform – The Leader in Graph Databases</a><ul>
+<li>eBook: <a href="https://neo4j.com/">Neo4j Graph Platform – The Leader in Graph Databases</a></li>
+<li>eBook: <a href="https://neo4j.com/whitepapers/graph-databases-beginners-ebook/?ref=home">Graph Databases for Beginners - Neo4j Graph Database Platform</a></li>
+</ul>
+</li>
+</ul>
+<h3>Azure Cosmos DB</h3>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/graph-introduction">Introduction to Azure Cosmos DB Gremlin API</a><ul>
+<li>Gremlin.NET on GitHub <a href="https://github.com/apache/tinkerpop/tree/master/gremlin-dotnet">apache/tinkerpop</a><ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-dotnet">Build an Azure Cosmos DB .NET Framework or Core application using the Gremlin API</a></li>
+</ul>
+</li>
+<li>Gremlin-JavaScript on GitHub <a href="https://github.com/jbmusso/gremlin-javascript">jbmusso/gremlin-javascript</a><ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-nodejs">Build an Azure Cosmos DB Node.js application by using Gremlin API</a></li>
+</ul>
+</li>
+<li>Gremlin-Python on GitHub <a href="https://github.com/apache/tinkerpop/tree/master/gremlin-python">apache/tinkerpop</a><ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-python">Quickstart: Gremlin API with Python - Azure Cosmos DB</a></li>
+</ul>
+</li>
+<li>Gremlin console <a href="https://tinkerpop.apache.org/docs/current/reference/#gremlin-console">TinkerPop Documentation</a></li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/cosmos-db/create-graph-gremlin-console">Azure Cosmos DB tutorial: Create, query, and traverse in Apache TinkerPops Gremlin Console</a></li>
+</ul>
+<h3>Local</h3>
+<ul>
+<li><a href="https://github.com/bricaud/gremlin-server">bricaud/gremlin-server</a></li>
+</ul>
+<div class="highlight"><pre><span></span>git clone https://github.com/bricaud/gremlin-server
+<span class="nb">cd</span> gremlin-server
+
+<span class="c1"># Build gremlin container</span>
+<span class="c1"># docker build -t gremlin-container .</span>
+<span class="c1"># or pull it from https://hub.docker.com/r/bricaud/gremlin-server/</span>
+docker pull bricaud/gremlin-server
+
+<span class="c1"># Start container -  graphson file will be saved in the home directory ~/</span>
+<span class="c1"># If you build then run</span>
+docker run -p <span class="m">8182</span>:8182 -v ~/:/graph_file -it --name gremlin gremlin-container
+<span class="c1"># If you pulled then run</span>
+docker images <span class="p">|</span> grep gremlin
+<span class="c1"># bricaud/gremlin-server         latest              50bf58cf4261        2 months ago        431MB</span>
+docker run -p <span class="m">8182</span>:8182 -v ~/:/graph_file -it --name gremlin bricaud/gremlin-server
+<span class="c1"># the input device is not a TTY.  If you are using mintty, try prefixing the command with &#39;winpty&#39;</span>
+</pre></div>
+
+
+<p>To avoid above error use instead docker powershell cli, which you can start from inside Kitematic</p>
+<div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">-p</span> <span class="n">8182</span><span class="err">:</span><span class="n">8182</span> <span class="n">-v</span> <span class="p">~/</span><span class="err">:</span><span class="p">/</span><span class="n">graph_file</span> <span class="n">-it</span> <span class="p">-</span><span class="n">-name</span> <span class="n">gremlin</span> <span class="n">bricaud</span><span class="p">/</span><span class="n">gremlin-server</span>
+<span class="c"># LANG=C.UTF-8</span>
+<span class="c"># HOSTNAME=4a20ddaeb14a</span>
+<span class="c"># JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk</span>
+<span class="c"># JAVA_VERSION=8u191</span>
+<span class="c"># PWD=/gremlin/apache-tinkerpop-gremlin-server-3.4.0</span>
+<span class="c"># HOME=/root</span>
+<span class="c"># TERM=xterm</span>
+<span class="c"># SHLVL=1</span>
+<span class="c"># PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin</span>
+<span class="c"># JAVA_ALPINE_VERSION=8.191.12-r0</span>
+<span class="c"># _=/usr/bin/env</span>
+<span class="c"># starting gremlin-server</span>
+<span class="c"># [INFO] GremlinServer - 3.4.0</span>
+<span class="c">#          \,,,/</span>
+<span class="c">#          (o o)</span>
+<span class="c"># -----oOOo-(3)-oOOo-----</span>
+
+<span class="c"># [INFO] GremlinServer - Configuring Gremlin Server from gremlin-conf.yaml</span>
+<span class="c"># [INFO] MetricManager - Configured Metrics Slf4jReporter configured with interval=180000ms and loggerName=org.apache.tinkerpop.gremlin.server.Settings$Slf4jReporterMetrics</span>
+<span class="c"># [INFO] DefaultGraphManager - Graph [graph1] was successfully configured via [gremlin-graph-main.properties].</span>
+<span class="c"># [INFO] ServerGremlinExecutor - Initialized Gremlin thread pool.  Threads in pool named with pattern gremlin-*</span>
+<span class="c"># [INFO] ServerGremlinExecutor - Initialized GremlinExecutor and preparing GremlinScriptEngines instances.</span>
+<span class="c"># [INFO] ServerGremlinExecutor - Initialized gremlin-groovy GremlinScriptEngine and registered metrics</span>
+<span class="c"># [INFO] ServerGremlinExecutor - A GraphTraversalSource is now bound to [g] with graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]</span>
+<span class="c"># [INFO] ServerGremlinExecutor - A GraphTraversalSource is now bound to [g1] with graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]</span>
+<span class="c"># [INFO] OpLoader - Adding the standard OpProcessor.</span>
+<span class="c"># [INFO] OpLoader - Adding the session OpProcessor.</span>
+<span class="c"># [INFO] OpLoader - Adding the traversal OpProcessor.</span>
+<span class="c"># [INFO] TraversalOpProcessor - Initialized cache for TraversalOpProcessor with size 1000 and expiration time of 600000 ms</span>
+<span class="c"># [INFO] GremlinServer - idleConnectionTimeout was set to 0 which resolves to 0 seconds when configuring this value - this feature will be disabled</span>
+<span class="c"># [INFO] GremlinServer - keepAliveInterval was set to 0 which resolves to 0 seconds when configuring this value - this feature will be disabled</span>
+<span class="c"># [INFO] AbstractChannelizer - Configured application/vnd.gremlin-v3.0+gryo with org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>
+<span class="c"># [INFO] AbstractChannelizer - Configured application/vnd.gremlin-v3.0+gryo-stringd with org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>
+<span class="c"># [INFO] AbstractChannelizer - Configured application/vnd.gremlin-v3.0+json with org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>
+<span class="c"># [INFO] AbstractChannelizer - Configured application/json with org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>
+<span class="c"># [INFO] GremlinServer$1 - Gremlin Server configured with worker thread pool of 1, gremlin pool of 8 and boss thread pool of 1.</span>
+<span class="c"># [INFO] GremlinServer$1 - Channel started at port 8182.</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.average-load-penalty, value=1.1320263E9</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.estimated-size, value=2</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.eviction-count, value=0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.eviction-weight, value=0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.hit-count, value=0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.hit-rate, value=0.0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-count, value=2</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-failure-count, value=0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-failure-rate, value=0.0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-success-count, value=2</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.long-run-compilation-count, value=0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.miss-count, value=2</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.miss-rate, value=1.0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.request-count, value=2</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.total-load-time, value=2264052600</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.sessions, value=0</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=METER, name=org.apache.tinkerpop.gremlin.server.GremlinServer.errors, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/second</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=TIMER, name=org.apache.tinkerpop.gremlin.server.GremlinServer.op.eval, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/second, duration_unit=milliseconds</span>
+<span class="c"># [INFO] MarkerIgnoringBase - type=TIMER, name=org.apache.tinkerpop.gremlin.server.GremlinServer.op.traversal, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/second, duration_unit=milliseconds</span>
+</pre></div>
+
+
+<p>OK, the server is now running in the ps1 shell.  </p>
+<p>Now you need a shell <strong>running as admin</strong> to install a python module</p>
+<div class="highlight"><pre><span></span><span class="c1"># Install python gremlin module</span>
+pip3 install <span class="nv">gremlinpython</span><span class="o">==</span><span class="m">3</span>.4.0
+<span class="c1"># ...</span>
+<span class="c1"># Installing collected packages: aenum, tornado, gremlinpython</span>
+<span class="c1"># Successfully installed aenum-2.1.2 gremlinpython-3.4.0 tornado-4.5.3</span>
+</pre></div>
+
+
+<p>You can kill above shell again.  </p>
+<p>So go back to the first bash shell and run a test</p>
+<div class="highlight"><pre><span></span><span class="c1"># Test</span>
+py -3 test_graph.py
+<span class="c1"># Number of nodes 0, number of edges 0.</span>
+<span class="c1"># Writing nodes...</span>
+<span class="c1"># writing edge...</span>
+<span class="c1"># Number of nodes 2, number of edges 1.</span>
+<span class="c1"># Nodes and the data associated:</span>
+<span class="c1"># [{&#39;name&#39;: [&#39;Node1&#39;], &#39;description&#39;: [&#39;First node&#39;], &#39;Node number&#39;: [1]}, {&#39;name&#39;: [&#39;Node2&#39;], &#39;description&#39;: [&#39;Second node&#39;], &#39;Node number&#39;: [2]}]</span>
+<span class="c1"># Property associated to &quot;name&quot; on Node1:</span>
+<span class="c1"># {&#39;Created&#39;: &#39;Today&#39;}</span>
+<span class="c1"># Edge and the data associated:</span>
+<span class="c1"># [{}]</span>
+<span class="c1"># Removing the nodes...</span>
+</pre></div>
+
+
+<p>Nice - we can see that the script added nodes and edges, printed them and then removed them :-)</p>
+<p>You can Ctrl-C in Powershell to stop the server</p>
+<div class="highlight"><pre><span></span><span class="c1"># ^C[INFO] GremlinServer - Shutting down OpProcessor[]</span>
+<span class="c1"># [INFO] GremlinServer - Shutting down OpProcessor[session]</span>
+<span class="c1"># [INFO] GremlinServer - Shutting down OpProcessor[traversal]</span>
+<span class="c1"># [INFO] GremlinServer - Shutting down thread pools.</span>
+<span class="c1"># [INFO] GremlinServer - Closed Graph instance [graph2]</span>
+<span class="c1"># [INFO] GremlinServer - Closed Graph instance [graph1]</span>
+<span class="c1"># [INFO] GremlinServer - Gremlin Server - shutdown complete</span>
+
+<span class="c1"># Now we got the prompt back - you could reprint the log from the container</span>
+docker logs -f 4a20ddaeb14af841d16763a762a31b7e1adec7c90392bb691370d422ae255501
+</pre></div>
+
+
+<h3>Meetup 2019-04-15</h3>
+<ul>
+<li>pedro@dataverz.net<ul>
+<li>@parraguezr</li>
+<li><a href="https://www.parraguezr.net/">Pedro Parraguez Ruiz</a></li>
+</ul>
+</li>
+<li><a href="https://www.meetup.com/Copenhagen-Graph-Databases-Meetup/events/259549580/">Global Graph Celebration Day - Copenhagen</a><ul>
+<li><a href="https://globalgraphcelebrationday.com/">Global Graph Celebration Day</a></li>
+<li><a href="https://88f0bc82.databases.neo4j.io/browser/">Neo4j Browser</a></li>
+</ul>
+</li>
+<li>eBooks: <a href="https://neo4j.com/books/">Neo4j Books: Free Graph Database Ebooks &amp; Other Resources</a><ul>
+<li><a href="https://neo4j.com/graph-algorithms-book/">O&#039;Reilly Graph Algorithms Book - Neo4j Graph Database Platform</a></li>
+</ul>
+</li>
+<li>Cool sites<ul>
+<li><a href="http://wiki.polyfra.me/">WikiGalaxy: Explore Wikipedia in 3D</a></li>
+<li>Use for navigation API between docs</li>
+</ul>
+</li>
+<li><a href="https://neo4j.com/use-cases/">Graph Database Use Cases and Solutions</a></li>
+<li><a href="http://www.netsights.dk/">netsights</a></li>
+<li>Tools<ul>
+<li>gephi - Metrics about how important are nodes. What position in the network do I have?<ul>
+<li>load with node.csv and edges.csv</li>
+<li>Layout can organize network</li>
+<li>you can color by properties - e.g. male/female</li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/graphdb.html">#graphdb</a>
+      <a href="https://rasor.github.io/tag/gremlin.html">#gremlin</a>
+      <a href="https://rasor.github.io/tag/neo4j.html">#neo4j</a>
+      <a href="https://rasor.github.io/tag/tinkerpop.html">#tinkerpop</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
