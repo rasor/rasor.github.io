@@ -122,6 +122,18 @@ pip3 install gremlinpython==3.4.0
 # ...
 # Installing collected packages: aenum, tornado, gremlinpython
 # Successfully installed aenum-2.1.2 gremlinpython-3.4.0 tornado-4.5.3
+
+# Verify install
+pip3 show gremlinpython
+# Name: gremlinpython
+# Version: 3.4.0
+# Summary: Gremlin-Python for Apache TinkerPop
+# Home-page: http://tinkerpop.apache.org
+# Author: UNKNOWN
+# Author-email: UNKNOWN
+# License: Apache 2
+# Location: c:\program files (x86)\python36-32\lib\site-packages
+# Requires: six, tornado, aenum
 ```
 
 You can kill above shell again.  
@@ -144,21 +156,26 @@ py -3 test_graph.py
 # Removing the nodes...
 ```
 
-Nice - we can see that the script added nodes and edges, printed them and then removed them :-)
+Nice - we can see that the script added nodes and edges, printed them and then removed them :-)  
 
-You can Ctrl-C in Powershell to stop the server
+Now lets stop the server  
 
 ```bash
-# ^C[INFO] GremlinServer - Shutting down OpProcessor[]
-# [INFO] GremlinServer - Shutting down OpProcessor[session]
-# [INFO] GremlinServer - Shutting down OpProcessor[traversal]
-# [INFO] GremlinServer - Shutting down thread pools.
-# [INFO] GremlinServer - Closed Graph instance [graph2]
-# [INFO] GremlinServer - Closed Graph instance [graph1]
-# [INFO] GremlinServer - Gremlin Server - shutdown complete
+# Stop gremlin server
+docker container stop gremlin
 
-# Now we got the prompt back - you could reprint the log from the container
-docker logs -f 4a20ddaeb14af841d16763a762a31b7e1adec7c90392bb691370d422ae255501
+# Check it is status Exited
+docker ps -a
+# CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                     PORTS                NAMES
+# 2d81aa9510d7        bricaud/gremlin-server        "/usr/bin/dumb-init …"   39 minutes ago      Exited (0) 3 minutes ago                        gremlin
+
+# Try re-start it
+docker container start 
+# Check its logs
+docker logs -f 2d81aa9510d7
+# ....
+# [INFO] GremlinServer$1 - Channel started at port 8182
+# Ctrl-C to exit logs
 ```
 
 ### Meetup 2019-04-15
