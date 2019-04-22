@@ -61,11 +61,32 @@ docker container ls --format " {{json .}}" | jq '{ID, Image, Status}'
 #   "Image": "openfaas/gateway:0.11.1",
 #   "Status": "Up 3 hours"
 # }
+
+# where status=exited and Networks=func_functions
+# select ID, Image, Status
+docker container ls --filter "status=exited" --format " {{json .}}" | jq '.' --slurp | jq '.[] | select(.Networks == "func_functions")' | jq '{ID, Image, Status}'
+
+# Convert to JSON array
+# where status=exited and Networks contains func_functions
+# select json objs containing Networks
+# pick valus of Networks
+docker container ls --filter "status=exited" --format " {{json .}}" | jq '.' --slurp | jq '.[] | select(.Networks | contains("func_functions"))' | jq '{Networks}'  | jq '.Networks'
+
+# foreach object execute
+# execute echo --someswitch <network> 
+docker container ls --filter "status=exited" --format " {{json .}}" | jq '.' --slurp | jq '.[] | select(.Networks | contains("func_functions"))' | jq '.Networks' | xargs -L1 echo '--someswitch'
+
 ```
 
 # Links
 
+* [How I filter and grep Docker](https://medium.freecodecamp.org/how-i-filter-and-grep-docker-containers-images-and-volumes-and-how-you-can-too-a60e52bf7784)
+* [docker ps - Filtering](https://docs.docker.com/engine/reference/commandline/ps/#filtering)
+* [Examples using grep](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_02.html)
 * [Awesome CLI - on Windows - Tools](https://github.com/rasor/awesome-tables/blob/master/awesome-cli-on-windows.md#tools)
 * [jq Manual](https://stedolan.github.io/jq/manual/#TypesandValues)
+* [Using jq with bash to run command for each object in array](https://stackoverflow.com/questions/43192556/using-jq-with-bash-to-run-command-for-each-object-in-array)
+* [How to transform JSON to CSV using jq](https://medium.freecodecamp.org/how-to-transform-json-to-csv-using-jq-in-the-command-line-4fa7939558bf)
+* [kislyuk/yq - jq wrapper for YAML and XML documents](https://github.com/kislyuk/yq)
 
 The End
