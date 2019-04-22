@@ -76,10 +76,26 @@ docker container ls --filter "status=exited" --format " {{json .}}" | jq '.' --s
 # execute echo --someswitch <network> 
 docker container ls --filter "status=exited" --format " {{json .}}" | jq '.' --slurp | jq '.[] | select(.Networks | contains("func_functions"))' | jq '.Networks' | xargs -L1 echo '--someswitch'
 
+# remove exited containers - not working - why??
+docker container ls --filter "status=exited" --format " {{json .}}" | jq '.' --slurp | jq '.[] | select(.Networks | contains("func_functions"))' | jq -r '.ID' | xargs -L1 docker container rm
+# Error: No such container: e4e419c18314
+
+# without jq
+docker ps --filter "status=exited" | grep 'weeks ago' | awk '{print $1}' | xargs --no-run-if-empty docker rm
+
+# Remove all stopped containers
+docker container prune
+
+# Remove orphaned volumes and stopped containers, images and networks
+docker system prune
+
+# what is left?
+docker ps -a
 ```
 
 # Links
 
+* [How to remove old Docker containers](https://stackoverflow.com/a/17237701/750989)
 * [How I filter and grep Docker](https://medium.freecodecamp.org/how-i-filter-and-grep-docker-containers-images-and-volumes-and-how-you-can-too-a60e52bf7784)
 * [docker ps - Filtering](https://docs.docker.com/engine/reference/commandline/ps/#filtering)
 * [Examples using grep](http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_02.html)
