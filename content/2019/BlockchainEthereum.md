@@ -3,60 +3,9 @@ Date: 2099-01-01 00:00
 Category: Develop
 Tags: #blockchain, #cryptocurrency, #ethereum
 
-# Trade ---------------------------
-
-## Charts
-
-* [Ethereum (ETH) price, charts, market cap, and other metrics | CoinMarketCap](https://coinmarketcap.com/currencies/ethereum/#charts)
-
-### Payment network
-
-* [Stellar (payment network) - Wikipedia](https://en.wikipedia.org/wiki/Stellar_(payment_network)) - for Micropayments - cheap transactions
-    * [Stellar - Develop the world's new financial system](https://www.stellar.org/)
-    * [Blockchain could rescue a media business model in distress - TechSavvy](https://techsavvy.media/blockchain-could-rescue-a-media-business-model-in-distress/)
-
 # Tokens ---------------------------
 
-## Currencies - Fungible (interchangeable) tokens
-
-Ethereum: ERC-20 Identical Tokens  
-
-* List: [Cryptocurrency Rankings | CryptoSlate](https://cryptoslate.com/coins/)
-
-* [Bitcoin](https://en.wikipedia.org/wiki/Bitcoin)
-    * [What is SegWit?](https://www.cryptocompare.com/coins/guides/what-is-segwit/)
-* [Ethereum](https://ethereum.org/)
-    * Programming: [Create a cryptocurrency contract in Ethereum](https://ethereum.org/token)
-    * Gas Prize: [ETH Gas Station](https://ethgasstation.info/)
-    * Constantinople Upgrade: [Ethereum Developers Agree on Launch Date for Major Constantinople Upgrade | The Daily Hodl](https://dailyhodl.com/2018/12/08/ethereum-developers-agree-on-launch-date-for-major-constantinople-upgrade/)
-* Dai on Ethereum 
-    [MakerDAO and Wyre Give Businesses Immediate Access to Dai Stablecoin in Over Thirty Countries…](https://medium.com/makerdao/makerdao-and-wyre-give-businesses-immediate-access-to-dai-stablecoin-in-over-thirty-countries-4fe94957c730)
-* April Fools joke - non-stablecoins [Announcing World Trade Francs: The Official Ethereum Stablecoin](https://blog.ethereum.org/2018/04/01/announcing-world-trade-francs-official-ethereum-stablecoin/)
-* The 2016 DAO hack: [The DAO (organization) - Wikipedia](https://en.wikipedia.org/wiki/The_DAO_(organization))
-* [Qtum (QTUM)](https://en.bitcoinwiki.org/wiki/Qtum) - Singapore
-    * [Qtum (QTUM) | CryptoSlate](https://cryptoslate.com/coins/qtum/)
-    * [Why You Should Keep QTUM on Your Radar in 2018](https://cryptoslate.com/keep-qtum-radar-2018/)
-    * [[ANN] (QTUM) - A Scalable PoS Smart Contract Platform - MainNet Complete!](https://bitcointalk.org/index.php?topic=1720632.0)
-    * [White papers - Qtum](https://qtum.org/en/white-papers)
-    * [Christian Thisted on LinkedIn: attended the Blockchain Summer School at CBS](https://www.linkedin.com/feed/update/urn:li:activity:6436220506533294080/)
-    * [How to: Build a DApp based on Qtum and IPFS](https://blog.qtum.org/how-to-build-a-dapp-based-on-qtum-and-ipfs-692bc3ab607a)
-        * [qtumproject/qtum-ipfs](https://github.com/qtumproject/qtum-ipfs)
-    * [Qtum](https://everipedia.org/wiki/lang_en/qtum/#roadmap)
-    * [Qtum Trade](https://qtumeco.io/market)
-    * [Qtum Dapps](https://qtumeco.io/dapps)
-* IOTA
-    * [Lessons learned from evaluating IOTA on Internet of Things devices](https://hackernoon.com/lessons-learned-from-evaluating-iota-on-internet-of-things-devices-a44575e606de)
-
-## [Non-fungible token](https://en.wikipedia.org/wiki/Non-fungible_token) (NFT)
-
-## STO
-
-* [What is A Security Token Offering (STO)?](https://www.chainbits.com/cryptocurrencies/what-is-a-security-token-offering/)
-
-Ethereum: ERC-721 Unique Tokens  
-
-* [ERC-721](http://erc721.org/)
-* [CryptoKitties](https://en.wikipedia.org/wiki/CryptoKitties) on Ethereum
+Moved to (BlockchainTokens)[BlockchainTokens.md]
 
 # Storage ---------------------------
 

@@ -24,6 +24,7 @@ Tags: #blockchain, #fiat, #sepa
 * NetTeller
 * Skrill
 * Sofort-transfer
+* SE: [Trustly](https://trustly.com/se/)
 * Amazon
 * PayPal
 * MoneyGram
@@ -144,6 +145,22 @@ In this definition of Crypto banks the banks
 * Kucoin
 * Article: [One Person Drove Bitcoin from $150 to $1,000, Study Finds](https://www.calcalistech.com/ctech/articles/0,7340,L-3729964,00.html)
 
+### HowTo Buy, Trade and calculate tax
+
+* Buy:
+    * [How to Buy Bitcoin](https://hackernoon.com/a-beginners-guide-to-buying-bitcoin-8cf715421a9c)
+* Trade:
+    * [Beginners guide to GDAX](https://hackernoon.com/beginners-guide-to-gdax-an-exchange-of-coinbase-to-trade-btc-eth-and-ltc-e418fd1acd1b)
+    * [Overview of Order Types and Settings (Stop, Limit, Market)](https://support.pro.coinbase.com/customer/en/portal/articles/2945313-overview-of-order-types-and-settings-stop-limit-market-?b_id=17474)
+    * Maker/Limit Order: [How to trade Cryptocurrency without fees?](https://hackernoon.com/trading-on-coinbase-and-gdax-with-zero-transaction-fees-94e26e5dcdde)
+    * Taker/Market Order - with stops: [End of CoinBase Pro? Introduces Maker Fees and No Market Order Stops](https://ethereumworldnews.com/end-of-coinbase-pro-introduces-maker-fees-and-no-market-order-stops/)
+    * [Binance Chain Mainnet Now Available, Ledger Nano S Compatible - Ledger](https://www.ledger.com/2019/04/23/binance-chain-mainnet-now-available-ledger-nano-s-compatible/)
+* Tax:
+    * [How to Calculate and File your Cryptocurrency Taxes using TurboTax](https://hackernoon.com/how-to-calculate-and-file-your-cryptocurrency-taxes-using-turbotax-a613a6dd25da)
+    * App: [BearTax - Cryptocurrency Tax Software for Traders & Accounting Firms](https://bear.tax/)
+    * App: [Calculate Bitcoin and Crypto Taxes for Capital Gains and Income](https://bitcoin.tax/)
+    * Tweet: [Confused Coin on Twitter](https://twitter.com/confusedcoin/status/972928943392198658)
+
 ### Hacked
 
 * Blog: [The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster](https://www.wired.com/2014/03/bitcoin-exchange/)
@@ -151,6 +168,7 @@ In this definition of Crypto banks the banks
 
 ### Decentral Exchanges (DEX)
 
+* [Things to know while granting API access for your crypto exchange account](https://hackernoon.com/cryptocurrency-exchange-api-access-third-party-applications-ae3f4a6fcbaf)
 * Wiki: [What is a Decentralized Exchange](https://www.cryptocompare.com/exchanges/guides/what-is-a-decentralized-exchange/)
 * Blog: [How do decentralized exchanges work?](https://blog.zerion.io/how-do-decentralized-exchanges-work-5229abeb445d)
 * Blog: [The Best Decentralized Exchanges for Trading Cryptocurrency in 2019](https://blockonomi.com/decentralized-exchanges/)
@@ -162,6 +180,7 @@ In this definition of Crypto banks the banks
     * [Bittrex.com - Blocknet (BTC-BLOCK)](https://international.bittrex.com/Market/Index?MarketName=BTC-BLOCK)
     * [Cryptopia - Exchange](https://www.cryptopia.co.nz/Exchange/?market=BLOCK_BTC)
     * [CryptoBridge decentralized exchange](https://wallet.crypto-bridge.org/market/BRIDGE.BLOCK_BRIDGE.BTC)
+* List: [Ranked list of blockchain exchanges | DappRadar](https://dappradar.com/rankings/category/exchanges)
 * EOSFINEX
 * EtherDelta
 * idex

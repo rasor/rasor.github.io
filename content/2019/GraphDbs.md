@@ -1,14 +1,23 @@
 Title:  Graph DBs
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #graphdb, #gremlin, #neo4j, #tinkerpop
+Tags: #graphdb, #gremlin, #neo4j, #tinkerpop, #python
 
 ## Graph DBs
+
+* [DB-Engines Ranking](https://db-engines.com/en/ranking/graph+dbms)
+
+### Language: Gremlin
 
 * Language: [Gremlin (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Gremlin_(programming_language))
 * Framework: [Apache TinkerPop](http://tinkerpop.apache.org/)
     * Community: [Google Grupper](https://groups.google.com/forum/#!forum/gremlin-users)
-* [DB-Engines Ranking](https://db-engines.com/en/ranking/graph+dbms)
+    * Serialization: [Graphson](http://tinkerpop.apache.org/docs/3.4.1/dev/io/#graphson)
+
+### Language: Cypher
+
+* [Graph Query Language: An Introduction to Cypher](https://neo4j.com/developer/cypher-query-language/)
+* [opencypher/cypher-for-gremlin](https://github.com/opencypher/cypher-for-gremlin)
 
 ### Neo4j
 
@@ -31,6 +40,8 @@ Tags: #graphdb, #gremlin, #neo4j, #tinkerpop
 ### Local
 
 * [bricaud/gremlin-server](https://github.com/bricaud/gremlin-server)
+* [TinkerPop gremlin-server](https://tinkerpop.apache.org/docs/current/reference/#gremlin-server)
+    * [TinkerPop Documentation](https://tinkerpop.apache.org/docs/current/reference/#connecting-gremlin-server)
 
 ```bash
 git clone https://github.com/bricaud/gremlin-server
