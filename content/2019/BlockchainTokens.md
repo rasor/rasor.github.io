@@ -34,9 +34,11 @@ Ethereum: ERC-20 Identical Tokens
     * Gas Prize: [ETH Gas Station](https://ethgasstation.info/)
     * Constantinople Upgrade: [Ethereum Developers Agree on Launch Date for Major Constantinople Upgrade | The Daily Hodl](https://dailyhodl.com/2018/12/08/ethereum-developers-agree-on-launch-date-for-major-constantinople-upgrade/)
 * EOS
-    * DApps via C++
+    * DApps via C++ or Web Assemblies
     * 1000+ tps
-    * [EOSIO Software Release: Ricardian Contract Specifications and the Ricardian Template Toolkit](https://medium.com/eosio/eosio-software-release-ricardian-contract-specifications-and-the-ricardian-template-toolkit-a0db787429d1)
+    * Blog: [EOS vs Ethereum: is EOS a good alternative blockchain?](https://espeoblockchain.com/blog/eos-vs-ethereum/)
+    * Blog: [EOS vs Ethereum vs TRON - Which Is Best? In-Depth Review](https://blokt.com/guides/eos-vs-ethereum-vs-tron-review)
+    * DApps: [EOSIO Software Release: Ricardian Contract Specifications and the Ricardian Template Toolkit](https://medium.com/eosio/eosio-software-release-ricardian-contract-specifications-and-the-ricardian-template-toolkit-a0db787429d1)
     * Blog: EOS vs ETH: [Why we built our blockchain business on EOS instead of Ethereum](https://venturebeat.com/2019/04/13/why-we-built-our-blockchain-business-on-eos-instead-of-ethereum/)
 * TRON
 * Dai on Ethereum 
