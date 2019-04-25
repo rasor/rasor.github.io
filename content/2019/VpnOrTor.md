@@ -16,13 +16,29 @@ Link:
 
 Cons: 
 
-* My Wifi VPN is not exactly easy to configure. 
+* My Wifi VPN + client PC and Mobile is not exactly easy to configure. 
 
 Pros:
 
 * Does not give the cons from Tor.
 
 ### Installing OpenVPN
+
+#### Wifi router
+
+#### IPhone
+
+* Install: [‎OpenVPN Connect](https://itunes.apple.com/us/app/openvpn-connect/id590379981)
+* Guide for iVPN service: [VPN Setup guide for OpenVPN Connect on iPhone devices](https://www.ivpn.net/setup/iphone-openvpn-connect.html)
+* Guide for Linux VPN service: [Setup a VPN on your iPhone with OpenVPN and Linux](https://louwrentius.com/setup-a-vpn-on-your-iphone-with-openvpn-and-linux.html)
+
+#### PC
+
+* [Quick Start Guide | OpenVPN](https://openvpn.net/quick-start-guide/)
+* Download: [Community Downloads | OpenVPN](https://openvpn.net/community-downloads/)
+    * PGP signature - Win10: [https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.7-I607-Win10.exe.asc](https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.7-I607-Win10.exe.asc)
+    * HowTo verify signature [GnuPG Public Key | OpenVPN](https://openvpn.net/community-resources/sig/)
+* Guide: [Linux Connectiion Guide For OpenVPN Access Server | OpenVPN](https://openvpn.net/vpn-server-resources/connecting-to-access-server-with-linux/)
 
 .....
 
