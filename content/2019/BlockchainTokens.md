@@ -38,8 +38,16 @@ Ethereum: ERC-20 Identical Tokens
     * 1000+ tps
     * Blog: [EOS vs Ethereum: is EOS a good alternative blockchain?](https://espeoblockchain.com/blog/eos-vs-ethereum/)
     * Blog: [EOS vs Ethereum vs TRON - Which Is Best? In-Depth Review](https://blokt.com/guides/eos-vs-ethereum-vs-tron-review)
-    * DApps: [EOSIO Software Release: Ricardian Contract Specifications and the Ricardian Template Toolkit](https://medium.com/eosio/eosio-software-release-ricardian-contract-specifications-and-the-ricardian-template-toolkit-a0db787429d1)
     * Blog: EOS vs ETH: [Why we built our blockchain business on EOS instead of Ethereum](https://venturebeat.com/2019/04/13/why-we-built-our-blockchain-business-on-eos-instead-of-ethereum/)
+    * [EOS Accounts: How They Work and How To Get One](https://medium.com/@blockgenic/eos-accounts-how-they-work-and-how-to-get-one-87019c0f7bc7)
+    * [Simplifying your EOS Account Setup](https://medium.com/imtoken/new-features-simplifying-your-eos-account-setup-39f4445759fd)
+    * DApps: [EOSIO Software Release: Ricardian Contract Specifications and the Ricardian Template Toolkit](https://medium.com/eosio/eosio-software-release-ricardian-contract-specifications-and-the-ricardian-template-toolkit-a0db787429d1)
+    * [eosio FAQ](https://eos.io/faq)
+    * [EOSIO Developer Portal - EOSIO Development Documentation](https://developers.eos.io/)
+    * [The Ultimate EOS Guide](https://medium.com/coinmonks/the-ultimate-eos-guide-143d5e59e68d)
+        * [How to Stake and Unstake your Tokens on the EOS Blockchain](https://helpdesk.eostoolkit.io/hc/en-us/articles/360013090031-How-to-Stake-and-Unstake-your-Tokens-on-the-EOS-Blockchain)
+        * [How to Reset your EOS Keys](https://helpdesk.eostoolkit.io/hc/en-us/articles/360012853592-How-to-Reset-your-EOS-Keys)
+        * [What is CPU? What is RAM? And How Does the EOS blockchain Utilize These Resources?](https://medium.com/@eosasia/what-is-cpu-what-is-ram-and-how-does-the-eos-blockchain-utilize-these-resources-a7a52e158652)
 * TRON
 * Dai on Ethereum 
     [MakerDAO and Wyre Give Businesses Immediate Access to Dai Stablecoin in Over Thirty Countries…](https://medium.com/makerdao/makerdao-and-wyre-give-businesses-immediate-access-to-dai-stablecoin-in-over-thirty-countries-4fe94957c730)
