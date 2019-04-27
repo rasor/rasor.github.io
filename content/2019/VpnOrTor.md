@@ -241,11 +241,14 @@ Apparently IOS10 barred more then that.
     * VPN still worked - but now I realized it took a long time to respond from external web sites. Some website wrote that the all those build-in home VPN's are slow. A better option is to set up a PC with a VPN server installed - and have the Wifi router do port forwarding to the PC.
 * Step 9: Enable Dynamic DNS and download new client profile. Currently, when the ISP gives my WiFi router a new IP, then VPN will stop working.  
 Netgear provides one free DDNS account, when you have the HW. Here is a guide: [How to Setup a NETGEAR Dynamic DNS account?](https://kb.netgear.com/23860/How-to-Setup-a-NETGEAR-Dynamic-DNS-account)
-* Goto [New Product Registration](https://www.netgear.com/mynetgear/register/register.aspx) and register you router. There are password limitations. Reuse the password for your DDNS registration later.
+* Goto [New Product Registration](https://www.netgear.com/mynetgear/register/register.aspx) and register you router. There are **password limitations**. Reuse the password for your DDNS registration later.
 * Goto [Dynamic DNS service](http://192.168.1.1/DNS_ddns.htm)
     * Enter `NETGEAR` as service Provider. They give you one registration for free (through No IP).
     * Enter a subdoamin name
     * Enter email and password and register
+![Dynamic DNS](https://www.downloads.netgear.com/files/answer_media/images/23860/1.jpg)  
+_Image on Netgears web_
+
 Reply:
 The NETGEAR DDNS on this router is currently configured to:  
 Host Name: aaaaaaa.mynetgear.com  
@@ -253,6 +256,10 @@ Email: bbbbb@ccccc.dd
 
 Pressing **Show Status** pops up [DDNS status page](http://www.routerlogin.net/DNS_ddns_st.htm).  
 _Tip from [Registering a Netgear DDNS](https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Registering-a-Netgear-DDNS/td-p/451771)_
+
+You will receive a mail from https://www.noip.com/, where you will have confirm your new account.
+
+You can edit the IP address on [Manage DNS Records](https://www.noip.com/members/dns/). Change it to 100.xxx.xxx.xxx. You find it as `IP Address` on [Internet Setup](http://192.168.1.1/BAS_ether.htm)
 
 Now you can lookup the IP address:  
 
@@ -263,7 +270,7 @@ nslookup aaaaaaa.mynetgear.com
 
 # Non-authoritative answer:
 # Name:    aaaaaaa.mynetgear.com
-# Address:  5.186.yyy.yyy
+# Address:  100.xxx.xxx.xxx
 ```
 
 You can now replace you IP in the `C:\Program files\OpenVPN\config\client1.ovpn` file  
@@ -274,10 +281,15 @@ remote 100.xxx.xxx.xxx 12974
 remote aaaaaaa.mynetgear.com 12974
 ```
 
-First after some hours the IP address 5.186.yyy.yyy will be translated to your public IP 100.xxx.xxx.xxx, so it won't work immediately.
+You can now test your VPN again.
+
+Now somehow Netgear should notify NOIP, when its IP is changed by the ISP.  
+
+You also have the option to install a client on your, that can be notified by NOIP, when it gets a signal from Netgear.    
+[Dynamic Update Client (DUC)](https://my.noip.com/#!/dynamic-dns/duc).  
+But that should not be needed, when we reach the VPN by DNS `aaaaaaa.mynetgear.com`.
 
 * Next steps:
-    * Enable Dynamic DNS and download new client profile.
     * Change from UDP port 12974 to TCP 443 - which will be open everywhere.
     * Create client profiles for several IPhones.
 
