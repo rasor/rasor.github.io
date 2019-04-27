@@ -239,7 +239,42 @@ Apparently IOS10 barred more then that.
 * Step 7: For help connecting using OpenVPN clients, please refer to [2x HOW TO | OpenVPN](https://openvpn.net/community-resources/how-to/#quick)
 * Step 8: Deactivate/Remove outgoing FW rule to see if it is needed.
     * VPN still worked - but now I realized it took a long time to respond from external web sites. Some website wrote that the all those build-in home VPN's are slow. A better option is to set up a PC with a VPN server installed - and have the Wifi router do port forwarding to the PC.
-* Step 9: Enable Dynamic DNS and download new client profile. Currently, when the ISP gives my WiFi router a new IP, then VPN will stop working.
+* Step 9: Enable Dynamic DNS and download new client profile. Currently, when the ISP gives my WiFi router a new IP, then VPN will stop working.  
+Netgear provides one free DDNS account, when you have the HW. Here is a guide: [How to Setup a NETGEAR Dynamic DNS account?](https://kb.netgear.com/23860/How-to-Setup-a-NETGEAR-Dynamic-DNS-account)
+* Goto [New Product Registration](https://www.netgear.com/mynetgear/register/register.aspx) and register you router. There are password limitations. Reuse the password for your DDNS registration later.
+* Goto [Dynamic DNS service](http://192.168.1.1/DNS_ddns.htm)
+    * Enter `NETGEAR` as service Provider. They give you one registration for free (through No IP).
+    * Enter a subdoamin name
+    * Enter email and password and register
+Reply:
+The NETGEAR DDNS on this router is currently configured to:  
+Host Name: aaaaaaa.mynetgear.com  
+Email: bbbbb@ccccc.dd  
+
+Pressing **Show Status** pops up [DDNS status page](http://www.routerlogin.net/DNS_ddns_st.htm).  
+_Tip from [Registering a Netgear DDNS](https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Registering-a-Netgear-DDNS/td-p/451771)_
+
+Now you can lookup the IP address:  
+
+```bash
+nslookup aaaaaaa.mynetgear.com
+# Server:  UnKnown
+# Address:  192.168.1.1
+
+# Non-authoritative answer:
+# Name:    aaaaaaa.mynetgear.com
+# Address:  5.186.yyy.yyy
+```
+
+You can now replace you IP in the `C:\Program files\OpenVPN\config\client1.ovpn` file  
+```bash
+# from
+remote 100.xxx.xxx.xxx 12974
+# to
+remote aaaaaaa.mynetgear.com 12974
+```
+
+First after some hours the IP address 5.186.yyy.yyy will be translated to your public IP 100.xxx.xxx.xxx, so it won't work immediately.
 
 * Next steps:
     * Enable Dynamic DNS and download new client profile.
