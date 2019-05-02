@@ -102,6 +102,15 @@ cd C:\Program Files\OpenVPN\config
 # Yak - can I configure my OpenVPN client to weaken on the requirement on the certificate?
 # Or can I configure my Wifi VPN server to generate a stronger certificate?
 # Fix: https://forums.openvpn.net/viewtopic.php?t=23979
+
+# You can check that the certificate is using MD5:
+ ../bin/openssl x509 -in ca.crt -noout -text | grep "Signature Algorithm"
+#    Signature Algorithm: md5WithRSAEncryption
+
+# By the way - the certificate will expire in 2014:
+../bin/openssl x509 -in ca.crt -noout -text | grep "After"
+#            Not After : Nov 23 02:40:28 2024 GMT
+
 ```
 * Step 6b: Above did not work. The best solution would have been to upload a stronger certificate to the VPN server (Wifi router) and use corresponding client config.  
 Here is a guide for doing that: [Changing the VPN keys on R7000 v1.0.1.pdf](https://community.netgear.com/ejquo23388/attachments/ejquo23388/home-wifi-routers-nighthawk/89120/1/Changing%20the%20VPN%20keys%20on%20R7000%20v1.0.1.pdf).  
@@ -300,6 +309,7 @@ Notes:
 Links
 
 * [How do I enable the VPN feature on my NETGEAR router using a Windows computer?](https://kb.netgear.com/23854/How-do-I-use-the-VPN-service-on-my-Nighthawk-router-with-my-Windows-client)
+* [OpenVPN Support Forum](https://forums.openvpn.net/)
 * Guide for building new certs for R7000: [Re: Netgear R7000 and OpenVPN for Android App](https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Netgear-R7000-and-OpenVPN-for-Android-App/m-p/1515771/highlight/true#M89120)
     * [Changing the VPN keys on R7000 v1.0.1.pdf](https://community.netgear.com/ejquo23388/attachments/ejquo23388/home-wifi-routers-nighthawk/89120/1/Changing%20the%20VPN%20keys%20on%20R7000%20v1.0.1.pdf)
 * Building Certificates and Keys: [Easy_Windows_Guide – OpenVPN Community](https://community.openvpn.net/openvpn/wiki/Easy_Windows_Guide)
@@ -316,6 +326,65 @@ Links
 
 #### IPhone
 
+To make your IPhone a VPN client you need to  
+
+* Prepare client config files for IPhone
+* Upload the client config files to your IPhone
+* Import the client config files to app and phone
+
+##### Prepare client config files for IPhone
+
+EarthVPN provides a sample [configuration .ovpm file for ios7+](http://www.earthvpn.com/images/configurationios7.txt). You can download it and modify it.  
+Save it as e.g. `client1-ios.ovpn`.  
+You can remove all the xml tags like <ca>, since you have the content of these files in separate files in the `C:\Program files\OpenVPN\config\` folder. Instead you replace them by ca, cert and key.  
+
+```bash
+client
+dev tun
+proto udp
+remote aaaaaaa.mynetgear.com 12974
+float
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+cert client.crt
+key client.key
+# auth-user-pass
+# reneg-sec 0
+# auth SHA1
+cipher AES-128-CBC
+comp-lzo
+verb 5
+```
+
+Links:
+
+* [How to Configure OpenVPN on Iphone Ipad IOS - VPN PPTP, SSTP, L2TP and OpenVPN Anonymous VPN Access to 32 Countries](http://www.earthvpn.com/how-to-configure-openvpn-on-iphone-ipad-ios/)
+
+##### Upload the client config files to your IPhone
+
+You can use iTunes for transferring files to OpenVPN on your phone
+
+* In IPhone Install [‎OpenVPN Connect](https://itunes.apple.com/us/app/openvpn-connect/id590379981) app
+* On PC Start iTunes
+* Connect your phone via USB cable to your PC and login
+* In iTunes a **phone icon** appears. Press it an select your phone 
+![Connect to iPhone](img/2019/2019-04-27-OpenVpn05.PNG)
+* Select **File Sharing** in left menu and scroll down to **OpenVPN** in the list of apps
+![Connect iPhone to PC](img/2019/2019-04-27-OpenVpn04.PNG)
+* Drag and drop the config files into the folder in iTunes
+![Upload file to iPhone](img/2019/2019-04-27-OpenVpn05.PNG)
+* Done - the files are now uploaded
+
+##### Import the client config files to app and phone
+
+* In IPhone start OpenVPN
+
+Links:
+
+* [FAQ regarding OpenVPN Connect iOS | OpenVPN](https://openvpn.net/vpn-server-resources/faq-regarding-openvpn-connect-ios/)
 * Install: [‎OpenVPN Connect](https://itunes.apple.com/us/app/openvpn-connect/id590379981)
 * Guide for iVPN service: [VPN Setup guide for OpenVPN Connect on iPhone devices](https://www.ivpn.net/setup/iphone-openvpn-connect.html)
 * Guide for Linux VPN service: [Setup a VPN on your iPhone with OpenVPN and Linux](https://louwrentius.com/setup-a-vpn-on-your-iphone-with-openvpn-and-linux.html)

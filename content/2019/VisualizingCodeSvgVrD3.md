@@ -22,7 +22,8 @@ There are several ways to show how code looks like - or seen from the other side
   * Lib: [Chart.js | Open source HTML5 Charts for your website](http://www.chartjs.org/)
 * SaaS
   * Cloudinary img filters: [Make Awesome Visual Hacks](https://www.reactriot.com/blog/cloudinary-blog-post)
+  * Address from IP: [IP2Location](https://ip2location.com/)
 * Examples
- * Inspiration: [Structure and Representation](http://structure-and-representation.com/)
+  * Inspiration: [Structure and Representation](http://structure-and-representation.com/)
 
 The End

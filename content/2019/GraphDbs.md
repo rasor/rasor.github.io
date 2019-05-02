@@ -42,6 +42,7 @@ Tags: #graphdb, #gremlin, #neo4j, #tinkerpop, #python
 * [bricaud/gremlin-server](https://github.com/bricaud/gremlin-server)
 * [TinkerPop gremlin-server](https://tinkerpop.apache.org/docs/current/reference/#gremlin-server)
     * [TinkerPop Documentation](https://tinkerpop.apache.org/docs/current/reference/#connecting-gremlin-server)
+* [Docker Hub](https://hub.docker.com/_/neo4j)
 
 ```bash
 git clone https://github.com/bricaud/gremlin-server
@@ -52,9 +53,9 @@ cd gremlin-server
 # or pull it from https://hub.docker.com/r/bricaud/gremlin-server/
 docker pull bricaud/gremlin-server
 
-# Start container -  graphson file will be saved in the home directory ~/
+# Start container - graphson file will be saved in the home directory ~/
 # If you build then run
-docker run -p 8182:8182 -v ~/:/graph_file -it --name gremlin gremlin-container
+# docker run -p 8182:8182 -v ~/:/graph_file -it --name gremlin gremlin-container
 # If you pulled then run
 docker images | grep gremlin
 # bricaud/gremlin-server         latest              50bf58cf4261        2 months ago        431MB
@@ -181,13 +182,30 @@ docker ps -a
 # 2d81aa9510d7        bricaud/gremlin-server        "/usr/bin/dumb-init …"   39 minutes ago      Exited (0) 3 minutes ago                        gremlin
 
 # Try re-start it
-docker container start 
+docker container start gremlin # -i
 # Check its logs
-docker logs -f 2d81aa9510d7
+docker logs -f gremlin
 # ....
 # [INFO] GremlinServer$1 - Channel started at port 8182
 # Ctrl-C to exit logs
 ```
+
+So from now can use this workflow on a dev PC
+
+* Quit Docker Desktop. This will stop your gremlin server with you changes inside.
+* Boot PC
+* Start Docker Desktop
+* Start the gremlin container `docker start gremlin`
+* Re-connect to gremlin and do some work on it.
+
+### Browsing
+
+#### Shells
+
+* Neo4j-shell [Access to the neo4j-shell in NEO4J CE 3.x - Neo4j Graph Database Platform](https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/)
+* Web shell [LazyWebCypher](http://www.lyonwj.com/LazyWebCypher/)
+* Python shell - CyCli [A Command Line Interface for Neo4j's Cypher](https://github.com/nicolewhite/cycli) - Client for local Neo4j.
+* [neo4j-client](https://neo4j-client.net/) - works on Linux and Mac
 
 ### Meetup 2019-04-15
 
@@ -198,7 +216,7 @@ docker logs -f 2d81aa9510d7
     * [Global Graph Celebration Day](https://globalgraphcelebrationday.com/)
     * [Neo4j Browser](https://88f0bc82.databases.neo4j.io/browser/)
 * eBooks: [Neo4j Books: Free Graph Database Ebooks &amp; Other Resources](https://neo4j.com/books/)
-    * [O&#039;Reilly Graph Algorithms Book - Neo4j Graph Database Platform](https://neo4j.com/graph-algorithms-book/)
+    * [O'Reilly Graph Algorithms Book - Neo4j Graph Database Platform](https://neo4j.com/graph-algorithms-book/)
 * Cool sites
     * [WikiGalaxy: Explore Wikipedia in 3D](http://wiki.polyfra.me/)
     * Use for navigation API between docs
