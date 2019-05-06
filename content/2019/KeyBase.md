@@ -15,6 +15,8 @@ Tags: #keybase
         * No - missing 2FA for web/desktop - missing fingerprint login on mobile.
     * Should I use the Stellar wallet to be able to send money to other keybasers?
         * Only if that wallet is for pocket money - and does not transact to your larger accounts. 
+    * Can you use it in China?
+        * No - you have to go through VPN
 * Tips:
     * You can encrypt public github repos
     * You should only put proves on accounts you have 2fA control over e.g. Twitter. Thus nobody can change the proof you put there.
