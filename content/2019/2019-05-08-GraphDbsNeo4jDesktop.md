@@ -1,5 +1,7 @@
 Title: Neo4j on Windows
-Date: 2099-01-01 00:00
+Status: published
+Date: 2019-05-08 00:00
+Modified: 2019-05-08 00:00
 Category: DevOp
 Tags: #graphdb, #cypher, #neo4j, #docker
 
@@ -79,13 +81,13 @@ printenv | grep NEO
 
 # Create folder for the container and for CYPHER CSV imports
 cd $NEO_DATA
-mkdir docker-container1 && cd docker-container1 && mkdir import
+mkdir docker-container1 && cd docker-container1 && mkdir import && mkdir data
 
 # Start Docker
 
 # Map a DB data folder and an CSV import folder on your PC for a Neo4j container and start it
 # https://neo4j.com/docs/operations-manual/current/docker/introduction/#docker-volumes
-CONTAINER=$(docker run -d --name neo4j -p 7474:7474 -v $NEO_DATA/docker-container1:/data -v $NEO_DATA/docker-container1/import:/var/lib/neo4j/import neo4j)
+CONTAINER=$(docker run -d --name neo4j -p 7474:7474 -v $NEO_DATA/docker-container1/data:/data -v $NEO_DATA/docker-container1/import:/var/lib/neo4j/import neo4j)
 echo "Running Neo4j as $CONTAINER, waiting for startup"
 sleep 10
 
@@ -208,7 +210,7 @@ To create a new local graph DB
 ![Add local DB](img/2019/2019-05-07-Neo4j01.PNG)
 * This will create the DB in a folder below what you chose during installation
     * In my case the DB is in `\neodata\neo4jDatabases\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2\data\databases\graph.db`
-    * So that is why I put the container into `\neodata\neo4jDatabases\container1`. This keeps it separated in the same level
+    * So that is why I put the container data folder into `\neodata\neo4jDatabases\container1\data`. This keeps it separated in the same level except that I have left out the installation version. If I needed that I would instead have called the folder `\container1-3.5.5\`. 
     * The level `\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2` gives you the content of `NeoGraphTest1`
         * It has all the files as the container has including `\bin\` folder - but these are the Windows files opposed to the Linux files in the container
 ![DB folder](img/2019/2019-05-07-Neo4j02.PNG)
@@ -226,6 +228,9 @@ Since the docker uses same port as `NeoGraphTest1` you should stop `NeoGraphTest
 ```bash
 docker start neo4j
 ```
+
+#### Just browse docker
+
 To browse the docker Graph with Cypher
 * From Neo4j Desktop Click on `Neo4j Browser`
 ![Browse remote DB](img/2019/2019-05-07-Neo4j06.PNG)  
@@ -237,7 +242,9 @@ The response is displayed in a box below. If you are connected, then just press 
 ![Connect response](img/2019/2019-05-07-Neo4j08.PNG)  
 * When you are done you can `:server disconnect`
 
-But you could also manage the docker Graph just as `NeoGraphTest1`
+#### Save the docker browser
+
+You could also save the link to the docker Graph just as `NeoGraphTest1`
 * From Neo4j Desktop Click on `Add Graph`
 * Click on `Connect to Remote`
 * Name: `NeoContainer1`
@@ -247,9 +254,13 @@ But you could also manage the docker Graph just as `NeoGraphTest1`
 * User: `neo4j`
 * Password: `neo4j`
 * Press `Connect`
+* Press `Start`
+![Connected remote DB](img/2019/2019-05-07-Neo4j09.PNG)
+* Press `Open Browser`
 
-
-
+Notes: 
+* After restarting the container at one point I hade to add the port 7687 in Kitematic to be able to connect
+* When you connect to the container remotely you also have to change the default password from `neo4j` after opening it in the browser
 
 ### Installation Guides
 
@@ -260,6 +271,7 @@ But you could also manage the docker Graph just as `NeoGraphTest1`
 
 * Play with Cypher to add and read some data
 * Create some code to interact with the data
+* Change ports on local DB, so it doesn't collide with the docker DB.
 
 ## Learn and Communities
 
