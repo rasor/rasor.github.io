@@ -1,9 +1,17 @@
-Title: Neo4j Desktop Graph DB
+Title: Neo4j on Windows
 Date: 2099-01-01 00:00
-Category: Develop
-Tags: #graphdb, #cypher, #neo4j, #tinkerpop, #python
+Category: DevOp
+Tags: #graphdb, #cypher, #neo4j, #docker
 
-# Neo4j - editions
+# Neo4j on Windows
+
+Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.  
+First I'll install a docker version. It might come handy in deployment case.  
+Next I'll install a Desktop version to get a GUI both for management, but mostly for a data editing interface.  
+
+## Neo4j - editions
+
+So what is out there to install?
 
 On the [Neo4j Download](https://neo4j.com/download-center/) page you have options to download 
 * two server versions, 
@@ -14,42 +22,70 @@ On the [Neo4j Download](https://neo4j.com/download-center/) page you have option
 
 [Neo4j KB article](https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/) talks about **CLIs**. There you find a handy script for a Neo4j **docker container**. 
 
-I rather want to run Neo4j as container and have a GUI. I think I'll get that option by running the container in interactive mode. Also I want a desktop CLI.  
-I also want a SDK for JavaScript and possibly some plugins. You also find the SDK's (called drivers) on the Download page.
+From the the download page I'll grap
 
-# Docker Container edition
+* Neo4j Desktop
+* SDK for JavaScript and possibly some plugins
 
-* [Docker hub](https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/) script
+From the KB article I'll grap the Neo4j Docker script and modify it a bit.
+
+## Install Docker Container edition
+
+From [Neo4j KB article](https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/) you'll find this script:
+
+```bash
+# Script from https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/
+docker pull neo4j
+CONTAINER=$(docker run -d --name neo4j -p 7474:7474 -v /path/to/data:/data -v /path/to/csv-files:/var/lib/neo4j/import neo4j)
+echo "Running Neo4j as $CONTAINER, waiting for startup"
+sleep 10
+# to import a file from `/path/to/csv-files/import.cypher`
+docker exec $CONTAINER /var/lib/neo4j/bin/neo4j-shell -f /var/lib/neo4j/import/import.cypher
+# or for interactive mode
+docker exec -ti $CONTAINER /var/lib/neo4j/bin/neo4j-shell
+```
+
+Here is what I modified it to on Windows:  
 
 From CMD: (Run as admin)
 
 ```bash
-# set envir for Neo4j database files - notice folder format is not Linux, though it will be used from GIT BASH
-setx NEO_DATA "C:\Users\user\ItData\neodata" /M
+# Set envir for Neo4j database files - notice folder format is not Linux, though it will be used from GIT BASH
+setx NEO_DATA "C:\Users\user\ItData\neodata\neo4jDatabases" /M
 # SUCCESS: Specified value was saved.
 ```
 
 From Git Bash:
 
 ```bash
+# Optionally do some cleanup:
+docker system prune
+# WARNING! This will remove:
+#         - all stopped containers
+#         - all networks not used by at least one container
+#         - all dangling images
+#         - all dangling build cache
+# Are you sure you want to continue? [y/N] y
+
 # Download image from docker hub
-docker pull neo4j
+# 3.5.5 is currently latest neo4j image
+docker pull neo4j:3.5.5
 # ...
-# Status: Downloaded newer image for neo4j:latest
+# Status: Downloaded newer image for neo4j:3.5.5
 
 # Verify envir
 printenv | grep NEO
 # NEO_DATA_BASH=C:\Users\user\ItData\neodata
 
-# Create folder for CYPHER CSV imports
+# Create folder for the container and for CYPHER CSV imports
 cd $NEO_DATA
-mkdir import
+mkdir docker-container1 && cd docker-container1 && mkdir import
 
 # Start Docker
 
 # Map a DB data folder and an CSV import folder on your PC for a Neo4j container and start it
 # https://neo4j.com/docs/operations-manual/current/docker/introduction/#docker-volumes
-CONTAINER=$(docker run -d --name neo4j -p 7474:7474 -v $NEO_DATA:/data -v $NEO_DATA/import:/var/lib/neo4j/import neo4j)
+CONTAINER=$(docker run -d --name neo4j -p 7474:7474 -v $NEO_DATA/docker-container1:/data -v $NEO_DATA/docker-container1/import:/var/lib/neo4j/import neo4j)
 echo "Running Neo4j as $CONTAINER, waiting for startup"
 sleep 10
 
@@ -101,9 +137,29 @@ pwd
 
 # now run the shell from here - neo4j-shell is now cypher-shell
 ./bin/cypher-shell
-# enter username+password
+# username: neo4j
+# password: neo4j
+# Connected to Neo4j 3.5.5 at bolt://localhost:7687 as user neo4j.
+# Type :help for a list of available commands or :exit to exit the shell.
+# Note that Cypher queries must end with a semicolon.
+# neo4j>
+:help
+# Available commands:
+#   :begin    Open a transaction
+#   :commit   Commit the currently open transaction
+#   :exit     Exit the logger
+#   :help     Show this help message
+#   :history  Print a list of the last commands executed
+#   :param    Set the value of a query parameter
+#   :params   Prints all currently set query parameters and their values
+#   :rollback Rollback the currently open transaction
+# For help on a specific command type:
+#     :help command
+# For help on cypher please visit:
+#     https://neo4j.com/docs/developer-manual/current/cypher/
+:exit
 ```
-
+When you are done using the shell you can just close it with Alt+F5.  
 When you are done with using the DB, you can stop it from GIT BASH
 
 ```bash
@@ -114,19 +170,11 @@ docker stop neo4j
 * Even more on [Docker - The Neo4j Operations Manual v3.5](https://neo4j.com/docs/operations-manual/current/docker/)
 * Tutorial: [Neo4j Data Import: Moving Data from RDBMS to Graph](https://neo4j.com/developer/guide-importing-data-and-etl/)
 
-### Links
-
-* [Neo4j Graph Platform – The Leader in Graph Databases](https://neo4j.com/)
-
-eBooks:
-
-* [Neo4j Books: Free Graph Database Ebooks](https://neo4j.com/books/)
-    * [Graph Databases for Beginners - Neo4j Graph Database Platform](https://neo4j.com/whitepapers/graph-databases-beginners-ebook/?ref=home)
-    * [O'Reilly Graph Algorithms Book - Neo4j Graph Database Platform](https://neo4j.com/graph-algorithms-book/)
-
-# Windows Desktop edition
+## Windows Desktop edition
 
 It is still nice to have the Desktop edition. You get the browser and you can connect to the docker DB.
+
+### Install Neo4j Desktop
 
 You can install Neo4j for personal use into  
 `C:\Users\user\AppData\Local\Programs\Neo4j Desktop`  
@@ -144,12 +192,84 @@ Warnings:
     * Solution A: Use VPN to get access from another country.
     * Solution B: Work offline (if that is enough). For development it probably is. You can also get an activation key via email. You'll get this supportive message: `Your friendly neighborhood Neo4j representative can get an activation key for you. If you're not sure who to call send an inquiry to info@neo4j.com`
 
-![D4W set to Swarm](img/2019/2019-03-28-OpenFaaS01.PNG)
+### Create a local graph DB
 
-## Guides
+You can connect towards an exiting local or remote graph DB - or you can create a new local one.  
+Since the docker uses same port you should stop it first
+```bash
+docker stop neo4j
+```
+To create a new local graph DB 
+* Click on `Add Graph`
+    * You can now create a local graph or connect to a remote one. You could have started the container and have connected towards that one
+    * Instead - Create the local one (I am just exploring anyway) 
+* Give it a name, a password and click `Create`
+    * I called this one `NeoGraphTest1`
+![Add local DB](img/2019/2019-05-07-Neo4j01.PNG)
+* This will create the DB in a folder below what you chose during installation
+    * In my case the DB is in `\neodata\neo4jDatabases\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2\data\databases\graph.db`
+    * So that is why I put the container into `\neodata\neo4jDatabases\container1`. This keeps it separated in the same level
+    * The level `\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2` gives you the content of `NeoGraphTest1`
+        * It has all the files as the container has including `\bin\` folder - but these are the Windows files opposed to the Linux files in the container
+![DB folder](img/2019/2019-05-07-Neo4j02.PNG)
+* The new DB is stopped. You can start it from the **project page** or you can press `Manage` to enter the **DB page** for `NeoGraphTest1`
+    * On DB page you have a dashboard to a lot - most importantly to **start** the DB and to connect to it with the **Cypher Browser**
+    * Press `Start`
+![Stopped DB](img/2019/2019-05-07-Neo4j03.PNG)
+* With the DB started you get to know the ports it 
+![Running DB](img/2019/2019-05-07-Neo4j04.PNG)
+
+### Connect to your docker container graph DB
+
+The docker neo4j DB is easy to intall into cloud, so lets get aquainted with connecting to that as well.
+Since the docker uses same port as `NeoGraphTest1` you should stop `NeoGraphTest1` first and start docker.  
+```bash
+docker start neo4j
+```
+To browse the docker Graph with Cypher
+* From Neo4j Desktop Click on `Neo4j Browser`
+![Browse remote DB](img/2019/2019-05-07-Neo4j06.PNG)  
+A new window opens and complains that it can't connect to `bolt://localhost:7687`. 
+* You need to help it with username/password.
+* In the cypher prompt enter command `:server connect neo4j neo4j`
+![Connect to remote DB](img/2019/2019-05-07-Neo4j07.PNG)  
+The response is displayed in a box below. If you are connected, then just press `X` to cleanup.
+![Connect response](img/2019/2019-05-07-Neo4j08.PNG)  
+* When you are done you can `:server disconnect`
+
+But you could also manage the docker Graph just as `NeoGraphTest1`
+* From Neo4j Desktop Click on `Add Graph`
+* Click on `Connect to Remote`
+* Name: `NeoContainer1`
+* Url: `bolt://localhost:7687`
+![Add remote DB](img/2019/2019-05-07-Neo4j05.PNG)
+* Press `Username/Password`
+* User: `neo4j`
+* Password: `neo4j`
+* Press `Connect`
+
+
+
+
+### Installation Guides
 
 * [2.5. Windows installation](https://neo4j.com/docs/operations-manual/current/installation/windows/)
 * [Neo4j Desktop](https://neo4j.com/download-thanks-desktop/?edition=desktop&flavour=windows&release=1.1.21&offline=true)
 
+## What's next?
+
+* Play with Cypher to add and read some data
+* Create some code to interact with the data
+
+## Learn and Communities
+
+* [Neo4j Community](https://community.neo4j.com/)
+* Cypher:
+    * [Neo4j's Graph Query Language: An Introduction to Cypher](https://neo4j.com/developer/cypher-query-language/)
+    * [Neo4j - Create a Node using Cypher](https://www.quackit.com/neo4j/tutorial/neo4j_create_a_node_using_cypher.cfm)
+* eBooks:
+    * [Neo4j Books: Free Graph Database Ebooks](https://neo4j.com/books/)
+        * [Graph Databases for Beginners - Neo4j Graph Database Platform](https://neo4j.com/whitepapers/graph-databases-beginners-ebook/?ref=home)
+        * [O'Reilly Graph Algorithms Book - Neo4j Graph Database Platform](https://neo4j.com/graph-algorithms-book/)
 
 The End
