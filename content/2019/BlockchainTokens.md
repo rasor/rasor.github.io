@@ -33,9 +33,17 @@ Ethereum: ERC-20 Identical Tokens
     * Programming: [Create a cryptocurrency contract in Ethereum](https://ethereum.org/token)
     * Gas Prize: [ETH Gas Station](https://ethgasstation.info/)
     * Constantinople Upgrade: [Ethereum Developers Agree on Launch Date for Major Constantinople Upgrade | The Daily Hodl](https://dailyhodl.com/2018/12/08/ethereum-developers-agree-on-launch-date-for-major-constantinople-upgrade/)
+* BNT
+    * [Why BNT Is Crucial to the Bancor Network](https://blog.bancor.network/why-bnt-is-crucial-to-the-bancor-network-e102c964bcbf)
+        * Quotes
+            * _automate fast, fair and affordable conversions of a token; and_
+            * _enable instant conversions of a token across different blockchains._
+    * [Bancor Exchange Hacked, $12M in Ether Stolen](https://cryptoslate.com/bancor-exchange-hacked-12m-in-ether-stolen/)
+    * Using Bancor DEX: [Infinito Wallet + Bancor](https://twitter.com/InfinitoWallet/status/1123935443677061121)
 * EOS
     * DApps via C++ or Web Assemblies
     * 1000+ tps
+    * Blog 2019-05 [REX has arrived and will bring benefits to all EOS users | EOSwriter](https://www.eoswriter.io/2099_rex-has-arrived-and-will-bring-benefits-to-all-eos-users.eos)
     * Blog: [EOS vs Ethereum: is EOS a good alternative blockchain?](https://espeoblockchain.com/blog/eos-vs-ethereum/)
     * Blog: [EOS vs Ethereum vs TRON - Which Is Best? In-Depth Review](https://blokt.com/guides/eos-vs-ethereum-vs-tron-review)
     * Blog: EOS vs ETH: [Why we built our blockchain business on EOS instead of Ethereum](https://venturebeat.com/2019/04/13/why-we-built-our-blockchain-business-on-eos-instead-of-ethereum/)

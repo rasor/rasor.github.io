@@ -1,7 +1,7 @@
 Title: Fiat transfers
 Date: 2099-01-01 00:00
 Category: Biz
-Tags: #blockchain, #fiat, #sepa
+Tags: #blockchain, #fiat, #sepa, #mnemoniccode, #u2f
 
 ## Crypto Shops ---------------------------
 
@@ -165,6 +165,7 @@ In this definition of Crypto banks the banks
 
 * Blog: [The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster](https://www.wired.com/2014/03/bitcoin-exchange/)
 * Wiki: [Bitfinex hack - Wikipedia](https://en.wikipedia.org/wiki/Bitfinex_hack)
+* 2018-07 - $24M [Bancor Exchange Hacked, $12M in Ether Stolen](https://cryptoslate.com/bancor-exchange-hacked-12m-in-ether-stolen/) 
 
 ### Decentral Exchanges (DEX)
 
@@ -181,6 +182,7 @@ In this definition of Crypto banks the banks
     * [Cryptopia - Exchange](https://www.cryptopia.co.nz/Exchange/?market=BLOCK_BTC)
     * [CryptoBridge decentralized exchange](https://wallet.crypto-bridge.org/market/BRIDGE.BLOCK_BRIDGE.BTC)
 * List: [Ranked list of blockchain exchanges | DappRadar](https://dappradar.com/rankings/category/exchanges)
+* [Bancor](https://www.bancor.network/)
 * EOSFINEX
 * EtherDelta
 * idex
@@ -193,6 +195,7 @@ In this definition of Crypto banks the banks
 #### Cross-Chain
 
 * [Atomic Cross-Chain Swaps on Qtum](https://blog.qtum.org/atomic-cross-chain-swap-on-qtum-7e756a890ed7)
+* [Why BNT Is Crucial to the Bancor Network](https://blog.bancor.network/why-bnt-is-crucial-to-the-bancor-network-e102c964bcbf)
 
 ## B2C ---------------------------
 
@@ -249,15 +252,18 @@ In this definition of Crypto wallets the wallet
 * List: [10 Best Bitcoin Wallet for iPhone 2018](https://www.cryptomartez.com/2018/05/10-best-bitcoin-wallet-for-iphone-2018.html)
 * List: [Top 10 Best Cryptocurrency Wallets for 2018 (Updated)](https://www.disruptordaily.com/top-10-best-cryptocurrency-wallets-for-2017/)
 * List: [2018’s best cryptocurrency wallets | finder.com](https://www.finder.com/cryptocurrency/wallets#compare)
-* List: [The Best Ethereum Wallets (ETH) [December 2018]](https://beincrypto.com/the-best-ethereum-wallets-eth-december-2018/)
+* List: [The Best Ethereum Wallets (ETH) December 2018](https://beincrypto.com/the-best-ethereum-wallets-eth-december-2018/)
 * List: [Top 6 Multi-Currency Digital Wallets](https://cryptopotato.com/top-6-multi-currency-digital-wallets/)
 
 ### HW wallets
 
-* [TREZOR Integration in MetaMask – MetaMask – Medium](https://medium.com/metamask/trezor-integration-in-metamask-a8eaeae7f499)
+* [Trezor Hardware Wallet](https://shop.trezor.io/?offer_id=10&aff_id=1735)
+    * [TREZOR Integration in MetaMask – MetaMask – Medium](https://medium.com/metamask/trezor-integration-in-metamask-a8eaeae7f499)
+* [Ledger](https://shop.ledger.com/?r=1985&path=/products/)
 
 #### HW wallet manager
 
+* [MyCrypto for Desktop](https://mycrypto.com/account) - Desktop manager
 * [Balance Manager](https://manager.balance.io/)
     * Trusted by 0x: [Introducing 0x Instant](https://blog.0xproject.com/introducing-0x-instant-7314c786d743)
 
@@ -268,6 +274,7 @@ In this definition of Crypto wallets the wallet
     * Need approx $20 ETH to be able to exchange to DAI tokens. 
     * [Is it possible to export private key to another wallet on another app ?](https://github.com/voisine/breadwallet-ios/issues/463)
 * Jaxx
+* ETH: [‎Parity Signer](https://www.parity.io/signer/) - Good as cold mobile wallet - uses QR codes for data transfer - Use MyCrypto as manager.
 
 #### Mobile 2 Web DApp protocol
 
@@ -280,23 +287,40 @@ In this definition of Crypto wallets the wallet
 * [Coinbase Wallet](https://wallet.coinbase.com/) - Pay friends
     * [Goodbye Toshi, hello Coinbase Wallet](https://blog.coinbase.com/goodbye-toshi-hello-coinbase-wallet-the-easiest-and-most-secure-crypto-wallet-and-browser-4ba6e52e4913)
 * Trust Wallet (Binanace)
+* [Infinito Wallet](https://www.infinitowallet.io/)
+    * [Infinito Wallet (@InfinitoWallet) | Twitter](https://twitter.com/InfinitoWallet)
+    * Using Bancor DEX: [Infinito Wallet + Bancor](https://twitter.com/InfinitoWallet/status/1123935443677061121)
+    * Digital ID using [Blockpass](https://www.blockpass.org/)
 
-### Web wallets
+### Desktop wallets
 
-* [Mist Ethereum](https://ethereum.org/)
-* Chrome plugin: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
-    * Ethereum Wallet App - lets you issue your own valuta (token contract) and lets you tranfer tokens
-    * [MetaMask HOW IT WORKS](https://metamask.io/#how-it-works)
+* [MyCrypto for Desktop](https://mycrypto.com/account)
 
-#### Web DApps (Web3) browser
+### Web Wallets (Web3) Browser
 
-* [MetaMask Ethereum Browser Extension](https://metamask.io/)
+* Browsers:
+    * [Mist Ethereum](https://ethereum.org/)
+    * [Brave](https://brave.com/)
+* Extensions:
+    * [MetaMask Ethereum Browser Extension](https://metamask.io/)
+        * Chrome plugin: [MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
+        * Ethereum Wallet App - lets you issue your own valuta (token contract) and lets you tranfer tokens
+        * [MetaMask HOW IT WORKS](https://metamask.io/#how-it-works)
+
+### Dev
+
+Gas price oracles:
+* [Blockscale: Planet-Scale Blockchain Services](https://blockscale.net/)
+    * [The Future of Ethereum Doesn’t Have Wallets](https://medium.com/mycrypto/the-future-of-ethereum-doesnt-have-wallets-232fcee708bf)
 
 ## Pass Phrase ---------------------------
 
-* Also called Mnemonic Code
-* Last word is checksum
-* Wallets can be HD (Hierarchical Deterministic) or Non-HD
+* [Private Keys + Websites = 💀](https://medium.com/mycrypto/private-keys-websites-aa85b42113a0)
+    * [MyCrypto’s Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e)
+        * [Discover YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico](https://www.yubico.com/products/yubikey-hardware/) - supports U2F and NFC
+* Also called **Mnemonic Code**
+* Last word is **checksum**
+* Wallets can be **HD (Hierarchical Deterministic)** or **Non-HD**
 * BIP44 compliant wallets [ Migrating from other wallets into Coinomi](https://coinomi.freshdesk.com/support/solutions/articles/29000009716-migrating-from-other-wallets-into-coinomi)
 * Export private keys [ What is the Recovery Tool and how do I export my private keys?](https://coinomi.freshdesk.com/support/solutions/articles/29000009717-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys-)
 * [BIP39 - Mnemonic Code](https://iancoleman.io/bip39/)
@@ -304,13 +328,5 @@ In this definition of Crypto wallets the wallet
     * BIP32 Hierarchical Deterministic Wallets
     * BIP44 Multi-Account Hierarchy for Deterministic Wallets
     * BIP49 Derivation scheme for P2WPKH-nested-in-P2SH based accounts
-
-## DApps ---------------------------
-
-* List: [DappRadar - Ranked list of blockchain dapps](https://dappradar.com/)
-
-### DApps for Enterprises
-
-* [Blockchain Technology Solutions | Ethereum Solutions | ConsenSys](https://consensys.net/)
 
 The End

@@ -15,9 +15,15 @@ Tags: #authentication, #fido, #2fa, #nfc, #bluetooth
 Who supports U2F?
 
 * Github
+* [Discover YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico](https://www.yubico.com/products/yubikey-hardware/) - supports U2F and NFC
 
 ## Other FIDO protocols
 
 * FIDO UAF - Universal Authentication Framework - see specs above
 
+## Other Links
+
+* [MyCrypto’s Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e)
+* [r/ethtrader - What happens if you lose your phone with Google Authenticator](https://www.reddit.com/r/ethtrader/comments/6vwk7p/what_happens_if_you_lose_your_phone_with_google/)
+        
 The End

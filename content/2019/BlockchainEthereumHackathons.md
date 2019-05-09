@@ -20,6 +20,23 @@ Tags: #blockchain, #ethereum, #dai, #0x, #nucypher, #python
 * Code: Create tokens. [ConsenSys/Tokens](https://github.com/ConsenSys/Tokens)
 * kEth for test: [kovan-testnet/faucet](https://github.com/kovan-testnet/faucet#kovan-faucet)
 
+### The Graph 
+
+* [Mohamed ElSeidy on Twitter](https://twitter.com/Drmelseidy/status/1124363757344436224)
+    * [On The Value of Decentralized Querying - Token Daily](https://www.tokendaily.co/blog/on-the-value-of-decentralized-querying-)
+
+#### Alternatives
+
+* [Chromapolis | Where Dapps Thrive (@chromapolis) | Twitter](https://twitter.com/chromapolis)
+* VulcanizeDB by [Rick Dudley (@AFDudley0) | Twitter](https://twitter.com/AFDudley0/status/1093804937098788865)
+* [Introducing Faster Ethereum Logs and Events](https://blog.infura.io/faster-logs-and-events-e43e2fa13773)
+    * [QuickBlocks.io (@quickblocks) | Twitter](https://twitter.com/quickblocks/status/1119040622181199872) - Run your own node (for your DApps) so queries becomes fast.
+* [POA Network (@poanetwork) | Twitter](https://twitter.com/poanetwork)
+
+#### Other articles
+
+* [Private Keys + Websites = 💀](https://medium.com/mycrypto/private-keys-websites-aa85b42113a0)
+
 ### NuCypher  + CoinList hackathon 2019-03
 
 * [rasor/nuc-openfaas](https://github.com/rasor/nuc-openfaas)
