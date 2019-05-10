@@ -65,9 +65,9 @@ Tags: #blockchain,
     * ID/KYC: [Blockpass](https://www.blockpass.org/)
     * Chain: [Ethereum (ETH) - Price, Chart, Info | CryptoSlate](https://cryptoslate.com/coins/ethereum/)
     * Chain: [EOS](https://cryptoslate.com/coins/eos/)
-    * Chain: [Binance Coin (BNB) | CryptoSlate](https://cryptoslate.com/coins/binance-coin/)
+    * Chain: [Binance Coin (BNB) | CryptoSlate](https://cryptoslate.com/coins/binance-coin/) - by Binance
     * Chain: [Waves (WAVES) | CryptoSlate](https://cryptoslate.com/coins/waves/)
-    * Chain: [Cardano (ADA) | CryptoSlate](https://cryptoslate.com/coins/cardano/)
+    * Chain: [Cardano (ADA) | CryptoSlate](https://cryptoslate.com/coins/cardano/) - by IOHK
     * Token (on NEO): [Ontology (ONT) | CryptoSlate](https://cryptoslate.com/coins/ontology/)
     * Dex: (ETH, EOS) [Bancor](https://www.bancor.network/)
     * IOT: ??

@@ -16,6 +16,12 @@ Tags: #blockchain, #cryptocurrency
     * [Stellar - Develop the world's new financial system](https://www.stellar.org/)
     * [Blockchain could rescue a media business model in distress - TechSavvy](https://techsavvy.media/blockchain-could-rescue-a-media-business-model-in-distress/)
 
+# Scanners ---------------------------
+
+* [Coinfirm](https://www.coinfirm.com/) - Bitcoin, ETH, Dash or NEO address
+* [Diane Dai on Twitter](https://twitter.com/Diane_0320/status/1124942773872775168)
+    * [Defiscan](https://defiscan.io/) - 0x address or ENS name
+
 # Tokens and Coins ---------------------------
 
 ## Currencies - Fungible (interchangeable) tokens
