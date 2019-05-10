@@ -40,7 +40,9 @@ Tags: #blockchain,
     * [The Self-sovereign Identity Stack](https://medium.com/decentralized-identity/the-self-sovereign-identity-stack-8a2cc95f2d45)
     * [The Sidetree Protocol: Scalable DPKI for Decentralized Identity](https://medium.com/decentralized-identity/the-sidetree-scalable-dpki-for-decentralized-identity-1a9105dfbb58)
 * ID & IoT [Blockpass](https://www.blockpass.org/)
+    * [Important Information About the Blockpass Token Distribution Event](https://medium.com/@blockpass/important-information-about-the-blockpass-token-distribution-event-e7d9e3aaac42)
     * [Blockpass (@BlockpassOrg) | Twitter](https://twitter.com/BlockpassOrg)
+    * [Blockpass](https://github.com/blockpass-org)
     * Used by [Infinito Wallet](https://www.infinitowallet.io/)
 * [uPort.me](https://www.uport.me/)
     * [https://developer.uport.me/](https://developer.uport.me/)
@@ -59,13 +61,18 @@ Tags: #blockchain,
 
 # Stacks
 
-* Wallet: [Infinito Wallet](https://www.infinitowallet.io/)
-    * ID: [Blockpass](https://www.blockpass.org/)
+* Wallet: [Infinito Wallet](https://www.infinitowallet.io/partners/)
+    * ID/KYC: [Blockpass](https://www.blockpass.org/)
     * Chain: [Ethereum (ETH) - Price, Chart, Info | CryptoSlate](https://cryptoslate.com/coins/ethereum/)
     * Chain: [EOS](https://cryptoslate.com/coins/eos/)
+    * Chain: [Binance Coin (BNB) | CryptoSlate](https://cryptoslate.com/coins/binance-coin/)
     * Chain: [Waves (WAVES) | CryptoSlate](https://cryptoslate.com/coins/waves/)
     * Chain: [Cardano (ADA) | CryptoSlate](https://cryptoslate.com/coins/cardano/)
+    * Token (on NEO): [Ontology (ONT) | CryptoSlate](https://cryptoslate.com/coins/ontology/)
     * Dex: (ETH, EOS) [Bancor](https://www.bancor.network/)
     * IOT: ??
+    * Compliance/KYC: [Coinfirm](https://www.coinfirm.com/)
+    * Compliance: [QRC](https://www.qrc.group/)
+    * Funding: [Holdex](https://holdex.io/)
 
 The End

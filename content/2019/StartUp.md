@@ -3,6 +3,21 @@ Date: 2099-01-01 00:00
 Category: Biz
 Tags: #startup, #tools
 
+## Country to start in?
+
+* [Entrepreneurs Are Flocking to Europe to Open Cryptocurrency Businesses](https://www.entrepreneur.com/article/318398)
+
+## Capital
+
+* [Forside | Innovationsfonden](https://innovationsfonden.dk/da) = InnoBooster
+* [InnoBooster | Innovationsfonden](https://innovationsfonden.dk/da/programmer/innobooster)
+    * [InnoBooster](https://www.facebook.com/innobooster/)
+* [Holdex](https://holdex.io/) - used by infinitowallet
+
+## Set of Partners
+
+* [See InfinitoWallet](BlockchainDApps.md)
+
 ## Org
 
 * Blog: [5 keys to successful organizational design](https://www.pluralsight.com/resource-center/guides/organizational-design/5-keys-to-success)

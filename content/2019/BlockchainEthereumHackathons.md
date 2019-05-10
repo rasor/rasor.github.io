@@ -3,15 +3,6 @@ Date: 2099-01-01 00:00
 Category: Dev
 Tags: #blockchain, #ethereum, #dai, #0x, #nucypher, #python
 
-# OpenBanking
-
-## API
-
-* [Coinbase Pro API Reference](https://docs.pro.coinbase.com/)
-* [binance-exchange/binance-official-api-docs](https://github.com/binance-exchange/binance-official-api-docs)
-* [Things to know while granting API access for your crypto exchange account](https://hackernoon.com/cryptocurrency-exchange-api-access-third-party-applications-ae3f4a6fcbaf)
-* App: [BearTax - Cryptocurrency Tax Software for Traders & Accounting Firms](https://bear.tax/)
-
 # Ethereum
 
 * Truffle Quick Start Guide

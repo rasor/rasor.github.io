@@ -44,10 +44,15 @@ Tags: #blockchain, #fiat, #sepa, #mnemoniccode, #u2f
 
 ## Identity verifiers (KYC) ---------------------------
 
-BitPanda has partners to manage identity verification
+* BitPanda has partners to manage identity verification
+    * [IDnow](https://www.idnow.io/). Home: DE
+    * [identity Trust Management AG](https://www.identity.tm/). Home: DE
+* Infinito Wallet uses
+    * [Coinfirm](https://www.coinfirm.com/) - You can search for a Bitcoin, ETH, Dash or NEO address
 
-* [IDnow](https://www.idnow.io/). Home: DE
-* [identity Trust Management AG](https://www.identity.tm/). Home: DE
+## Data verifiers
+
+* [Trudatum - Documents verification platform](https://www.trudatum.com/) - also behind Coinfirm
 
 ## Fiat 2 Crypto (Crypto Banks, Gateways, P2P) ---------------------------
 
@@ -160,12 +165,14 @@ In this definition of Crypto banks the banks
     * App: [BearTax - Cryptocurrency Tax Software for Traders & Accounting Firms](https://bear.tax/)
     * App: [Calculate Bitcoin and Crypto Taxes for Capital Gains and Income](https://bitcoin.tax/)
     * Tweet: [Confused Coin on Twitter](https://twitter.com/confusedcoin/status/972928943392198658)
+    * 2018-03: [Investors in Bitcoin and other cryptocurrencies face hefty tax bills](https://www.theguardian.com/technology/2018/mar/18/cryptocurrency-bitcoin-irs-tax)
 
 ### Hacked
 
 * Blog: [The Inside Story of Mt. Gox, Bitcoin's $460 Million Disaster](https://www.wired.com/2014/03/bitcoin-exchange/)
 * Wiki: [Bitfinex hack - Wikipedia](https://en.wikipedia.org/wiki/Bitfinex_hack)
 * 2018-07 - $24M [Bancor Exchange Hacked, $12M in Ether Stolen](https://cryptoslate.com/bancor-exchange-hacked-12m-in-ether-stolen/) 
+* 2019-05 - $40M [CZ Binance on Twitter](https://twitter.com/cz_binance/status/1125907214256836608)
 
 ### Decentral Exchanges (DEX)
 
