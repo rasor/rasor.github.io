@@ -13,16 +13,31 @@ Tags: #blockchain, #ethereum, #dai, #0x, #nucypher, #python
 
 ### The Graph 
 
+Using [GraphQL](GraphQlApollo.md) for querying Blockchains.  
+Tool - GraphiQL: [Filling in the GraphQL pipeline: Ready-to-use code generation ·](https://www.onegraph.com/blog/2019/05/03_Filling_in_the_GraphQL_Pipeline_Ready_to_use_code_generation.html)
+
+
+The Graph:  
+
+* Invite: [The Graph Hackathon on CoinList Build - CoinList](https://coinlist.co/build/the-graph)
+* Services: [Graph Explorer - Find all the data being indexed on The Graph](https://thegraph.com/explorer/)
+* [The Graph (@graphprotocol) | Twitter](https://twitter.com/graphprotocol)
+* Code: [graphprotocol](https://github.com/graphprotocol)
+
+Blogs:  
 * [Mohamed ElSeidy on Twitter](https://twitter.com/Drmelseidy/status/1124363757344436224)
     * [On The Value of Decentralized Querying - Token Daily](https://www.tokendaily.co/blog/on-the-value-of-decentralized-querying-)
 
-#### Alternatives
+
+
+#### Alternative querying techs
 
 * [Chromapolis | Where Dapps Thrive (@chromapolis) | Twitter](https://twitter.com/chromapolis)
 * VulcanizeDB by [Rick Dudley (@AFDudley0) | Twitter](https://twitter.com/AFDudley0/status/1093804937098788865)
 * [Introducing Faster Ethereum Logs and Events](https://blog.infura.io/faster-logs-and-events-e43e2fa13773)
     * [QuickBlocks.io (@quickblocks) | Twitter](https://twitter.com/quickblocks/status/1119040622181199872) - Run your own node (for your DApps) so queries becomes fast.
 * [POA Network (@poanetwork) | Twitter](https://twitter.com/poanetwork)
+* [Scanners](BlockchainTokens.md)
 
 #### Other articles
 

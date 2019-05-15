@@ -8,6 +8,13 @@ Tags: #graphql, #react, #cms, #apollo, #graphcool, #typescript, #docker
 * [GraphQL for Dummies](https://symfony-cms.net/graphql-for-dummies)
 * [GraphQL colocation in React a growing trend | React, etc. Tech Stack](https://react-etc.net/entry/graphql-colocation-in-react-a-growing-trend)
 * [GraphQL CMS alternatives in 2018 | React, etc. Tech Stack](https://react-etc.net/entry/graphql-cms-alternatives-in-2018)
+* Tool - GraphiQL: [Filling in the GraphQL pipeline: Ready-to-use code generation ·](https://www.onegraph.com/blog/2019/05/03_Filling_in_the_GraphQL_Pipeline_Ready_to_use_code_generation.html)
+
+## Services
+
+* SaaS data from [OneGraph](https://www.onegraph.com/)
+* Blockchain DApp data from [The Graph](https://thegraph.com/explorer/)
+    * See more on [BlockchainEthereumHackathons - The Graph](BlockchainEthereumHackathons.md)
 
 ## Frontend
 
