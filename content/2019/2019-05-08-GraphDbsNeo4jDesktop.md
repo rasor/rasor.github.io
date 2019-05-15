@@ -5,8 +5,6 @@ Modified: 2019-05-08 00:00
 Category: DevOp
 Tags: #graphdb, #cypher, #neo4j, #docker
 
-# Neo4j on Windows
-
 Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.  
 First I'll install a docker version. It might come handy in deployment case.  
 Next I'll install a Desktop version to get a GUI both for management, but mostly for a data editing interface.  
@@ -16,6 +14,7 @@ Next I'll install a Desktop version to get a GUI both for management, but mostly
 So what is out there to install?
 
 On the [Neo4j Download](https://neo4j.com/download-center/) page you have options to download 
+
 * two server versions, 
     * **Enterprise** or 
     * **Community**. You also have option of downloading 
@@ -202,22 +201,26 @@ Since the docker uses same port you should stop it first
 docker stop neo4j
 ```
 To create a new local graph DB 
+
 * Click on `Add Graph`
     * You can now create a local graph or connect to a remote one. You could have started the container and have connected towards that one
     * Instead - Create the local one (I am just exploring anyway) 
 * Give it a name, a password and click `Create`
     * I called this one `NeoGraphTest1`
-![Add local DB](img/2019/2019-05-07-Neo4j01.PNG)
+![Add local DB](img/2019/2019-05-07-Neo4j01.PNG)  
+
 * This will create the DB in a folder below what you chose during installation
     * In my case the DB is in `\neodata\neo4jDatabases\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2\data\databases\graph.db`
     * So that is why I put the container data folder into `\neodata\neo4jDatabases\container1\data`. This keeps it separated in the same level except that I have left out the installation version. If I needed that I would instead have called the folder `\container1-3.5.5\`. 
     * The level `\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2` gives you the content of `NeoGraphTest1`
         * It has all the files as the container has including `\bin\` folder - but these are the Windows files opposed to the Linux files in the container
-![DB folder](img/2019/2019-05-07-Neo4j02.PNG)
+![DB folder](img/2019/2019-05-07-Neo4j02.PNG)  
+
 * The new DB is stopped. You can start it from the **project page** or you can press `Manage` to enter the **DB page** for `NeoGraphTest1`
     * On DB page you have a dashboard to a lot - most importantly to **start** the DB and to connect to it with the **Cypher Browser**
     * Press `Start`
-![Stopped DB](img/2019/2019-05-07-Neo4j03.PNG)
+![Stopped DB](img/2019/2019-05-07-Neo4j03.PNG)  
+
 * With the DB started you get to know the ports it 
 ![Running DB](img/2019/2019-05-07-Neo4j04.PNG)
 
@@ -232,33 +235,41 @@ docker start neo4j
 #### Just browse docker
 
 To browse the docker Graph with Cypher
+
 * From Neo4j Desktop Click on `Neo4j Browser`
 ![Browse remote DB](img/2019/2019-05-07-Neo4j06.PNG)  
-A new window opens and complains that it can't connect to `bolt://localhost:7687`. 
+A new window opens and complains that it can't connect to `bolt://localhost:7687`.  
+
 * You need to help it with username/password.
 * In the cypher prompt enter command `:server connect neo4j neo4j`
 ![Connect to remote DB](img/2019/2019-05-07-Neo4j07.PNG)  
+
 The response is displayed in a box below. If you are connected, then just press `X` to cleanup.
 ![Connect response](img/2019/2019-05-07-Neo4j08.PNG)  
+
 * When you are done you can `:server disconnect`
 
 #### Save the docker browser
 
-You could also save the link to the docker Graph just as `NeoGraphTest1`
+You could also save the link to the docker Graph just as `NeoGraphTest1`  
+
 * From Neo4j Desktop Click on `Add Graph`
 * Click on `Connect to Remote`
 * Name: `NeoContainer1`
 * Url: `bolt://localhost:7687`
-![Add remote DB](img/2019/2019-05-07-Neo4j05.PNG)
+![Add remote DB](img/2019/2019-05-07-Neo4j05.PNG)  
+
 * Press `Username/Password`
 * User: `neo4j`
 * Password: `neo4j`
 * Press `Connect`
 * Press `Start`
-![Connected remote DB](img/2019/2019-05-07-Neo4j09.PNG)
+![Connected remote DB](img/2019/2019-05-07-Neo4j09.PNG)  
+
 * Press `Open Browser`
 
-Notes: 
+Notes:   
+
 * After restarting the container at one point I hade to add the port 7687 in Kitematic to be able to connect
 * When you connect to the container remotely you also have to change the default password from `neo4j` after opening it in the browser
 
