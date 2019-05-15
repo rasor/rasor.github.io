@@ -163,13 +163,50 @@ docker container ls --format <span class="s2">&quot; {{json .}}&quot;</span> <sp
 <span class="c1">#   &quot;Image&quot;: &quot;openfaas/gateway:0.11.1&quot;,</span>
 <span class="c1">#   &quot;Status&quot;: &quot;Up 3 hours&quot;</span>
 <span class="c1"># }</span>
+
+<span class="c1"># where status=exited and Networks=func_functions</span>
+<span class="c1"># select ID, Image, Status</span>
+docker container ls --filter <span class="s2">&quot;status=exited&quot;</span> --format <span class="s2">&quot; {{json .}}&quot;</span> <span class="p">|</span> jq <span class="s1">&#39;.&#39;</span> --slurp <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.Networks == &quot;func_functions&quot;)&#39;</span> <span class="p">|</span> jq <span class="s1">&#39;{ID, Image, Status}&#39;</span>
+
+<span class="c1"># Convert to JSON array</span>
+<span class="c1"># where status=exited and Networks contains func_functions</span>
+<span class="c1"># select json objs containing Networks</span>
+<span class="c1"># pick valus of Networks</span>
+docker container ls --filter <span class="s2">&quot;status=exited&quot;</span> --format <span class="s2">&quot; {{json .}}&quot;</span> <span class="p">|</span> jq <span class="s1">&#39;.&#39;</span> --slurp <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.Networks | contains(&quot;func_functions&quot;))&#39;</span> <span class="p">|</span> jq <span class="s1">&#39;{Networks}&#39;</span>  <span class="p">|</span> jq <span class="s1">&#39;.Networks&#39;</span>
+
+<span class="c1"># foreach object execute</span>
+<span class="c1"># execute echo --someswitch &lt;network&gt; </span>
+docker container ls --filter <span class="s2">&quot;status=exited&quot;</span> --format <span class="s2">&quot; {{json .}}&quot;</span> <span class="p">|</span> jq <span class="s1">&#39;.&#39;</span> --slurp <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.Networks | contains(&quot;func_functions&quot;))&#39;</span> <span class="p">|</span> jq <span class="s1">&#39;.Networks&#39;</span> <span class="p">|</span> xargs -L1 <span class="nb">echo</span> <span class="s1">&#39;--someswitch&#39;</span>
+
+<span class="c1"># remove exited containers - not working - why??</span>
+docker container ls --filter <span class="s2">&quot;status=exited&quot;</span> --format <span class="s2">&quot; {{json .}}&quot;</span> <span class="p">|</span> jq <span class="s1">&#39;.&#39;</span> --slurp <span class="p">|</span> jq <span class="s1">&#39;.[] | select(.Networks | contains(&quot;func_functions&quot;))&#39;</span> <span class="p">|</span> jq -r <span class="s1">&#39;.ID&#39;</span> <span class="p">|</span> xargs -L1 docker container rm
+<span class="c1"># Error: No such container: e4e419c18314</span>
+
+<span class="c1"># without jq</span>
+docker ps --filter <span class="s2">&quot;status=exited&quot;</span> <span class="p">|</span> grep <span class="s1">&#39;weeks ago&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print $1}&#39;</span> <span class="p">|</span> xargs --no-run-if-empty docker rm
+
+<span class="c1"># Remove all stopped containers</span>
+docker container prune
+
+<span class="c1"># Remove orphaned volumes and stopped containers, images and networks</span>
+docker system prune
+
+<span class="c1"># what is left?</span>
+docker ps -a
 </pre></div>
 
 
 <h1>Links</h1>
 <ul>
+<li><a href="https://stackoverflow.com/a/17237701/750989">How to remove old Docker containers</a></li>
+<li><a href="https://medium.freecodecamp.org/how-i-filter-and-grep-docker-containers-images-and-volumes-and-how-you-can-too-a60e52bf7784">How I filter and grep Docker</a></li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/ps/#filtering">docker ps - Filtering</a></li>
+<li><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_02.html">Examples using grep</a></li>
 <li><a href="https://github.com/rasor/awesome-tables/blob/master/awesome-cli-on-windows.md#tools">Awesome CLI - on Windows - Tools</a></li>
 <li><a href="https://stedolan.github.io/jq/manual/#TypesandValues">jq Manual</a></li>
+<li><a href="https://stackoverflow.com/questions/43192556/using-jq-with-bash-to-run-command-for-each-object-in-array">Using jq with bash to run command for each object in array</a></li>
+<li><a href="https://medium.freecodecamp.org/how-to-transform-json-to-csv-using-jq-in-the-command-line-4fa7939558bf">How to transform JSON to CSV using jq</a></li>
+<li><a href="https://github.com/kislyuk/yq">kislyuk/yq - jq wrapper for YAML and XML documents</a></li>
 </ul>
 <p>The End</p>
   </div>

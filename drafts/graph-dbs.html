@@ -26,12 +26,12 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="Graph DBs Language: Gremlin (programming language) - Wikipedia Framework: Apache TinkerPop Community: Google Grupper DB-Engines Ranking Neo4j Neo4j Graph Platform – The Leader in Graph Databases eBook: Neo4j Graph Platform – The Leader in Graph Databases eBook: Graph Databases for Beginners - Neo4j Graph Database Platform Azure Cosmos DB Introduction to Azure Cosmos DB …" />
-<meta name="keywords" content="#graphdb, #gremlin, #neo4j, #tinkerpop">
+<meta name="description" content="Graph DBs DB-Engines Ranking Language: Gremlin Language: Gremlin (programming language) - Wikipedia Framework: Apache TinkerPop Community: Google Grupper Serialization: Graphson Language: Cypher Graph Query Language: An Introduction to Cypher opencypher/cypher-for-gremlin Neo4j Neo4j Graph Platform – The Leader in Graph Databases eBook: Neo4j Graph Platform – The Leader in Graph Databases eBook: Graph …" />
+<meta name="keywords" content="#graphdb, #gremlin, #neo4j, #tinkerpop, #python">
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Graph DBs"/>
-<meta property="og:description" content="Graph DBs Language: Gremlin (programming language) - Wikipedia Framework: Apache TinkerPop Community: Google Grupper DB-Engines Ranking Neo4j Neo4j Graph Platform – The Leader in Graph Databases eBook: Neo4j Graph Platform – The Leader in Graph Databases eBook: Graph Databases for Beginners - Neo4j Graph Database Platform Azure Cosmos DB Introduction to Azure Cosmos DB …"/>
+<meta property="og:description" content="Graph DBs DB-Engines Ranking Language: Gremlin Language: Gremlin (programming language) - Wikipedia Framework: Apache TinkerPop Community: Google Grupper Serialization: Graphson Language: Cypher Graph Query Language: An Introduction to Cypher opencypher/cypher-for-gremlin Neo4j Neo4j Graph Platform – The Leader in Graph Databases eBook: Neo4j Graph Platform – The Leader in Graph Databases eBook: Graph …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/graph-dbs.html"/>
 <meta property="og:type" content="article"/>
@@ -43,6 +43,7 @@
 <meta property="article:tag" content="#gremlin"/>
 <meta property="article:tag" content="#neo4j"/>
 <meta property="article:tag" content="#tinkerpop"/>
+<meta property="article:tag" content="#python"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; Graph DBs</title>
@@ -112,12 +113,21 @@
   <div>
     <h2>Graph DBs</h2>
 <ul>
+<li><a href="https://db-engines.com/en/ranking/graph+dbms">DB-Engines Ranking</a></li>
+</ul>
+<h3>Language: Gremlin</h3>
+<ul>
 <li>Language: <a href="https://en.wikipedia.org/wiki/Gremlin_(programming_language)">Gremlin (programming language) - Wikipedia</a></li>
 <li>Framework: <a href="http://tinkerpop.apache.org/">Apache TinkerPop</a><ul>
 <li>Community: <a href="https://groups.google.com/forum/#!forum/gremlin-users">Google Grupper</a></li>
+<li>Serialization: <a href="http://tinkerpop.apache.org/docs/3.4.1/dev/io/#graphson">Graphson</a></li>
 </ul>
 </li>
-<li><a href="https://db-engines.com/en/ranking/graph+dbms">DB-Engines Ranking</a></li>
+</ul>
+<h3>Language: Cypher</h3>
+<ul>
+<li><a href="https://neo4j.com/developer/cypher-query-language/">Graph Query Language: An Introduction to Cypher</a></li>
+<li><a href="https://github.com/opencypher/cypher-for-gremlin">opencypher/cypher-for-gremlin</a></li>
 </ul>
 <h3>Neo4j</h3>
 <ul>
@@ -150,130 +160,20 @@
 <h3>Local</h3>
 <ul>
 <li><a href="https://github.com/bricaud/gremlin-server">bricaud/gremlin-server</a></li>
+<li><a href="https://tinkerpop.apache.org/docs/current/reference/#gremlin-server">TinkerPop gremlin-server</a><ul>
+<li><a href="https://tinkerpop.apache.org/docs/current/reference/#connecting-gremlin-server">TinkerPop Documentation</a></li>
 </ul>
-<div class="highlight"><pre><span></span>git clone https://github.com/bricaud/gremlin-server
-<span class="nb">cd</span> gremlin-server
-
-<span class="c1"># Build gremlin container</span>
-<span class="c1"># docker build -t gremlin-container .</span>
-<span class="c1"># or pull it from https://hub.docker.com/r/bricaud/gremlin-server/</span>
-docker pull bricaud/gremlin-server
-
-<span class="c1"># Start container -  graphson file will be saved in the home directory ~/</span>
-<span class="c1"># If you build then run</span>
-docker run -p <span class="m">8182</span>:8182 -v ~/:/graph_file -it --name gremlin gremlin-container
-<span class="c1"># If you pulled then run</span>
-docker images <span class="p">|</span> grep gremlin
-<span class="c1"># bricaud/gremlin-server         latest              50bf58cf4261        2 months ago        431MB</span>
-docker run -p <span class="m">8182</span>:8182 -v ~/:/graph_file -it --name gremlin bricaud/gremlin-server
-<span class="c1"># the input device is not a TTY.  If you are using mintty, try prefixing the command with &#39;winpty&#39;</span>
-</pre></div>
-
-
-<p>To avoid above error use instead docker powershell cli, which you can start from inside Kitematic</p>
-<div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="n">-p</span> <span class="n">8182</span><span class="err">:</span><span class="n">8182</span> <span class="n">-v</span> <span class="p">~/</span><span class="err">:</span><span class="p">/</span><span class="n">graph_file</span> <span class="n">-it</span> <span class="p">-</span><span class="n">-name</span> <span class="n">gremlin</span> <span class="n">bricaud</span><span class="p">/</span><span class="n">gremlin-server</span>
-<span class="c"># LANG=C.UTF-8</span>
-<span class="c"># HOSTNAME=4a20ddaeb14a</span>
-<span class="c"># JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk</span>
-<span class="c"># JAVA_VERSION=8u191</span>
-<span class="c"># PWD=/gremlin/apache-tinkerpop-gremlin-server-3.4.0</span>
-<span class="c"># HOME=/root</span>
-<span class="c"># TERM=xterm</span>
-<span class="c"># SHLVL=1</span>
-<span class="c"># PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin</span>
-<span class="c"># JAVA_ALPINE_VERSION=8.191.12-r0</span>
-<span class="c"># _=/usr/bin/env</span>
-<span class="c"># starting gremlin-server</span>
-<span class="c"># [INFO] GremlinServer - 3.4.0</span>
-<span class="c">#          \,,,/</span>
-<span class="c">#          (o o)</span>
-<span class="c"># -----oOOo-(3)-oOOo-----</span>
-
-<span class="c"># [INFO] GremlinServer - Configuring Gremlin Server from gremlin-conf.yaml</span>
-<span class="c"># [INFO] MetricManager - Configured Metrics Slf4jReporter configured with interval=180000ms and loggerName=org.apache.tinkerpop.gremlin.server.Settings$Slf4jReporterMetrics</span>
-<span class="c"># [INFO] DefaultGraphManager - Graph [graph1] was successfully configured via [gremlin-graph-main.properties].</span>
-<span class="c"># [INFO] ServerGremlinExecutor - Initialized Gremlin thread pool.  Threads in pool named with pattern gremlin-*</span>
-<span class="c"># [INFO] ServerGremlinExecutor - Initialized GremlinExecutor and preparing GremlinScriptEngines instances.</span>
-<span class="c"># [INFO] ServerGremlinExecutor - Initialized gremlin-groovy GremlinScriptEngine and registered metrics</span>
-<span class="c"># [INFO] ServerGremlinExecutor - A GraphTraversalSource is now bound to [g] with graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]</span>
-<span class="c"># [INFO] ServerGremlinExecutor - A GraphTraversalSource is now bound to [g1] with graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]</span>
-<span class="c"># [INFO] OpLoader - Adding the standard OpProcessor.</span>
-<span class="c"># [INFO] OpLoader - Adding the session OpProcessor.</span>
-<span class="c"># [INFO] OpLoader - Adding the traversal OpProcessor.</span>
-<span class="c"># [INFO] TraversalOpProcessor - Initialized cache for TraversalOpProcessor with size 1000 and expiration time of 600000 ms</span>
-<span class="c"># [INFO] GremlinServer - idleConnectionTimeout was set to 0 which resolves to 0 seconds when configuring this value - this feature will be disabled</span>
-<span class="c"># [INFO] GremlinServer - keepAliveInterval was set to 0 which resolves to 0 seconds when configuring this value - this feature will be disabled</span>
-<span class="c"># [INFO] AbstractChannelizer - Configured application/vnd.gremlin-v3.0+gryo with org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>
-<span class="c"># [INFO] AbstractChannelizer - Configured application/vnd.gremlin-v3.0+gryo-stringd with org.apache.tinkerpop.gremlin.driver.ser.GryoMessageSerializerV3d0</span>
-<span class="c"># [INFO] AbstractChannelizer - Configured application/vnd.gremlin-v3.0+json with org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>
-<span class="c"># [INFO] AbstractChannelizer - Configured application/json with org.apache.tinkerpop.gremlin.driver.ser.GraphSONMessageSerializerV3d0</span>
-<span class="c"># [INFO] GremlinServer$1 - Gremlin Server configured with worker thread pool of 1, gremlin pool of 8 and boss thread pool of 1.</span>
-<span class="c"># [INFO] GremlinServer$1 - Channel started at port 8182.</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.average-load-penalty, value=1.1320263E9</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.estimated-size, value=2</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.eviction-count, value=0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.eviction-weight, value=0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.hit-count, value=0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.hit-rate, value=0.0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-count, value=2</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-failure-count, value=0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-failure-rate, value=0.0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.load-success-count, value=2</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.long-run-compilation-count, value=0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.miss-count, value=2</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.miss-rate, value=1.0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.request-count, value=2</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.gremlin-groovy.sessionless.class-cache.total-load-time, value=2264052600</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=GAUGE, name=org.apache.tinkerpop.gremlin.server.GremlinServer.sessions, value=0</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=METER, name=org.apache.tinkerpop.gremlin.server.GremlinServer.errors, count=0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/second</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=TIMER, name=org.apache.tinkerpop.gremlin.server.GremlinServer.op.eval, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/second, duration_unit=milliseconds</span>
-<span class="c"># [INFO] MarkerIgnoringBase - type=TIMER, name=org.apache.tinkerpop.gremlin.server.GremlinServer.op.traversal, count=0, min=0.0, max=0.0, mean=0.0, stddev=0.0, median=0.0, p75=0.0, p95=0.0, p98=0.0, p99=0.0, p999=0.0, mean_rate=0.0, m1=0.0, m5=0.0, m15=0.0, rate_unit=events/second, duration_unit=milliseconds</span>
-</pre></div>
-
-
-<p>OK, the server is now running in the ps1 shell.  </p>
-<p>Now you need a shell <strong>running as admin</strong> to install a python module</p>
-<div class="highlight"><pre><span></span><span class="c1"># Install python gremlin module</span>
-pip3 install <span class="nv">gremlinpython</span><span class="o">==</span><span class="m">3</span>.4.0
-<span class="c1"># ...</span>
-<span class="c1"># Installing collected packages: aenum, tornado, gremlinpython</span>
-<span class="c1"># Successfully installed aenum-2.1.2 gremlinpython-3.4.0 tornado-4.5.3</span>
-</pre></div>
-
-
-<p>You can kill above shell again.  </p>
-<p>So go back to the first bash shell and run a test</p>
-<div class="highlight"><pre><span></span><span class="c1"># Test</span>
-py -3 test_graph.py
-<span class="c1"># Number of nodes 0, number of edges 0.</span>
-<span class="c1"># Writing nodes...</span>
-<span class="c1"># writing edge...</span>
-<span class="c1"># Number of nodes 2, number of edges 1.</span>
-<span class="c1"># Nodes and the data associated:</span>
-<span class="c1"># [{&#39;name&#39;: [&#39;Node1&#39;], &#39;description&#39;: [&#39;First node&#39;], &#39;Node number&#39;: [1]}, {&#39;name&#39;: [&#39;Node2&#39;], &#39;description&#39;: [&#39;Second node&#39;], &#39;Node number&#39;: [2]}]</span>
-<span class="c1"># Property associated to &quot;name&quot; on Node1:</span>
-<span class="c1"># {&#39;Created&#39;: &#39;Today&#39;}</span>
-<span class="c1"># Edge and the data associated:</span>
-<span class="c1"># [{}]</span>
-<span class="c1"># Removing the nodes...</span>
-</pre></div>
-
-
-<p>Nice - we can see that the script added nodes and edges, printed them and then removed them :-)</p>
-<p>You can Ctrl-C in Powershell to stop the server</p>
-<div class="highlight"><pre><span></span><span class="c1"># ^C[INFO] GremlinServer - Shutting down OpProcessor[]</span>
-<span class="c1"># [INFO] GremlinServer - Shutting down OpProcessor[session]</span>
-<span class="c1"># [INFO] GremlinServer - Shutting down OpProcessor[traversal]</span>
-<span class="c1"># [INFO] GremlinServer - Shutting down thread pools.</span>
-<span class="c1"># [INFO] GremlinServer - Closed Graph instance [graph2]</span>
-<span class="c1"># [INFO] GremlinServer - Closed Graph instance [graph1]</span>
-<span class="c1"># [INFO] GremlinServer - Gremlin Server - shutdown complete</span>
-
-<span class="c1"># Now we got the prompt back - you could reprint the log from the container</span>
-docker logs -f 4a20ddaeb14af841d16763a762a31b7e1adec7c90392bb691370d422ae255501
-</pre></div>
-
-
+</li>
+<li><a href="https://hub.docker.com/_/neo4j">Docker Hub</a></li>
+</ul>
+<h3>Browsing</h3>
+<h4>Shells</h4>
+<ul>
+<li>Neo4j-shell <a href="https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/">Access to the neo4j-shell in NEO4J CE 3.x - Neo4j Graph Database Platform</a></li>
+<li>Web shell <a href="http://www.lyonwj.com/LazyWebCypher/">LazyWebCypher</a></li>
+<li>Python shell - CyCli <a href="https://github.com/nicolewhite/cycli">A Command Line Interface for Neo4j's Cypher</a> - Client for local Neo4j.</li>
+<li><a href="https://neo4j-client.net/">neo4j-client</a> - works on Linux and Mac</li>
+</ul>
 <h3>Meetup 2019-04-15</h3>
 <ul>
 <li>pedro@dataverz.net<ul>
@@ -286,8 +186,8 @@ docker logs -f 4a20ddaeb14af841d16763a762a31b7e1adec7c90392bb691370d422ae255501
 <li><a href="https://88f0bc82.databases.neo4j.io/browser/">Neo4j Browser</a></li>
 </ul>
 </li>
-<li>eBooks: <a href="https://neo4j.com/books/">Neo4j Books: Free Graph Database Ebooks &amp; Other Resources</a><ul>
-<li><a href="https://neo4j.com/graph-algorithms-book/">O&#039;Reilly Graph Algorithms Book - Neo4j Graph Database Platform</a></li>
+<li>eBooks: <a href="https://neo4j.com/books/">Neo4j Books: Free Graph Database Ebooks</a><ul>
+<li><a href="https://neo4j.com/graph-algorithms-book/">O'Reilly Graph Algorithms Book - Neo4j Graph Database Platform</a></li>
 </ul>
 </li>
 <li>Cool sites<ul>
@@ -316,6 +216,7 @@ docker logs -f 4a20ddaeb14af841d16763a762a31b7e1adec7c90392bb691370d422ae255501
       <a href="https://rasor.github.io/tag/gremlin.html">#gremlin</a>
       <a href="https://rasor.github.io/tag/neo4j.html">#neo4j</a>
       <a href="https://rasor.github.io/tag/tinkerpop.html">#tinkerpop</a>
+      <a href="https://rasor.github.io/tag/python.html">#python</a>
     </p>
   </div>
 

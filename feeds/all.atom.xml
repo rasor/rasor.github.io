@@ -1,5 +1,355 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-04-19T11:00:00+02:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-04-06T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-05-08T00:00:00+02:00</updated><entry><title>Neo4j on Windows</title><link href="https://rasor.github.io/neo4j-on-windows.html" rel="alternate"></link><published>2019-05-08T00:00:00+02:00</published><updated>2019-05-08T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-08:/neo4j-on-windows.html</id><summary type="html">&lt;h1&gt;Neo4j on Windows&lt;/h1&gt;
+&lt;p&gt;Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.&lt;br&gt;
+First I'll install a docker version. It might come handy in deployment case.&lt;br&gt;
+Next I'll install a Desktop version to get …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Neo4j on Windows&lt;/h1&gt;
+&lt;p&gt;Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.&lt;br&gt;
+First I'll install a docker version. It might come handy in deployment case.&lt;br&gt;
+Next I'll install a Desktop version to get a GUI both for management, but mostly for a data editing interface.  &lt;/p&gt;
+&lt;h2&gt;Neo4j - editions&lt;/h2&gt;
+&lt;p&gt;So what is out there to install?&lt;/p&gt;
+&lt;p&gt;On the &lt;a href="https://neo4j.com/download-center/"&gt;Neo4j Download&lt;/a&gt; page you have options to download 
+&lt;em&gt; two server versions, 
+    * &lt;strong&gt;Enterprise&lt;/strong&gt; or 
+    * &lt;strong&gt;Community&lt;/strong&gt;. You also have option of downloading 
+&lt;/em&gt; a &lt;strong&gt;Desktop&lt;/strong&gt; version with a &lt;strong&gt;GUI&lt;/strong&gt; included.
+* A Cypher &lt;strong&gt;CLI&lt;/strong&gt; is a separate install.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/"&gt;Neo4j KB article&lt;/a&gt; talks about &lt;strong&gt;CLIs&lt;/strong&gt;. There you find a handy script for a Neo4j &lt;strong&gt;docker container&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;From the the download page I'll grap&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neo4j Desktop&lt;/li&gt;
+&lt;li&gt;SDK for JavaScript and possibly some plugins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From the KB article I'll grap the Neo4j Docker script and modify it a bit.&lt;/p&gt;
+&lt;h2&gt;Install Docker Container edition&lt;/h2&gt;
+&lt;p&gt;From &lt;a href="https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/"&gt;Neo4j KB article&lt;/a&gt; you'll find this script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Script from https://neo4j.com/developer/kb/using-neo4j-shell-neo4j-ce-3x/&lt;/span&gt;
+docker pull neo4j
+&lt;span class="nv"&gt;CONTAINER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;docker run -d --name neo4j -p &lt;span class="m"&gt;7474&lt;/span&gt;:7474 -v /path/to/data:/data -v /path/to/csv-files:/var/lib/neo4j/import neo4j&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Running Neo4j as &lt;/span&gt;&lt;span class="nv"&gt;$CONTAINER&lt;/span&gt;&lt;span class="s2"&gt;, waiting for startup&amp;quot;&lt;/span&gt;
+sleep &lt;span class="m"&gt;10&lt;/span&gt;
+&lt;span class="c1"&gt;# to import a file from `/path/to/csv-files/import.cypher`&lt;/span&gt;
+docker &lt;span class="nb"&gt;exec&lt;/span&gt; &lt;span class="nv"&gt;$CONTAINER&lt;/span&gt; /var/lib/neo4j/bin/neo4j-shell -f /var/lib/neo4j/import/import.cypher
+&lt;span class="c1"&gt;# or for interactive mode&lt;/span&gt;
+docker &lt;span class="nb"&gt;exec&lt;/span&gt; -ti &lt;span class="nv"&gt;$CONTAINER&lt;/span&gt; /var/lib/neo4j/bin/neo4j-shell
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is what I modified it to on Windows:  &lt;/p&gt;
+&lt;p&gt;From CMD: (Run as admin)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Set envir for Neo4j database files - notice folder format is not Linux, though it will be used from GIT BASH&lt;/span&gt;
+setx NEO_DATA &lt;span class="s2"&gt;&amp;quot;C:\Users\user\ItData\neodata\neo4jDatabases&amp;quot;&lt;/span&gt; /M
+&lt;span class="c1"&gt;# SUCCESS: Specified value was saved.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From Git Bash:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Optionally do some cleanup:&lt;/span&gt;
+docker system prune
+&lt;span class="c1"&gt;# WARNING! This will remove:&lt;/span&gt;
+&lt;span class="c1"&gt;#         - all stopped containers&lt;/span&gt;
+&lt;span class="c1"&gt;#         - all networks not used by at least one container&lt;/span&gt;
+&lt;span class="c1"&gt;#         - all dangling images&lt;/span&gt;
+&lt;span class="c1"&gt;#         - all dangling build cache&lt;/span&gt;
+&lt;span class="c1"&gt;# Are you sure you want to continue? [y/N] y&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Download image from docker hub&lt;/span&gt;
+&lt;span class="c1"&gt;# 3.5.5 is currently latest neo4j image&lt;/span&gt;
+docker pull neo4j:3.5.5
+&lt;span class="c1"&gt;# ...&lt;/span&gt;
+&lt;span class="c1"&gt;# Status: Downloaded newer image for neo4j:3.5.5&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Verify envir&lt;/span&gt;
+printenv &lt;span class="p"&gt;|&lt;/span&gt; grep NEO
+&lt;span class="c1"&gt;# NEO_DATA_BASH=C:\Users\user\ItData\neodata&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Create folder for the container and for CYPHER CSV imports&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$NEO_DATA&lt;/span&gt;
+mkdir docker-container1 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; docker-container1 &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; mkdir import &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; mkdir data
+
+&lt;span class="c1"&gt;# Start Docker&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Map a DB data folder and an CSV import folder on your PC for a Neo4j container and start it&lt;/span&gt;
+&lt;span class="c1"&gt;# https://neo4j.com/docs/operations-manual/current/docker/introduction/#docker-volumes&lt;/span&gt;
+&lt;span class="nv"&gt;CONTAINER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;docker run -d --name neo4j -p &lt;span class="m"&gt;7474&lt;/span&gt;:7474 -v &lt;span class="nv"&gt;$NEO_DATA&lt;/span&gt;/docker-container1/data:/data -v &lt;span class="nv"&gt;$NEO_DATA&lt;/span&gt;/docker-container1/import:/var/lib/neo4j/import neo4j&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Running Neo4j as &lt;/span&gt;&lt;span class="nv"&gt;$CONTAINER&lt;/span&gt;&lt;span class="s2"&gt;, waiting for startup&amp;quot;&lt;/span&gt;
+sleep &lt;span class="m"&gt;10&lt;/span&gt;
+
+&lt;span class="c1"&gt;# iIs it running?&lt;/span&gt;
+docker ps
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE                         COMMAND                  CREATED              STATUS              PORTS                                        NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# 95f89a2b0956        neo4j                         &amp;quot;/sbin/tini -g -- /d…&amp;quot;   About a minute ago   Up About a minute   7473/tcp, 7687/tcp, 0.0.0.0:7474-&amp;gt;7474/tcp   neo4j&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Whats in its log? &lt;/span&gt;
+docker logs neo4j
+&lt;span class="c1"&gt;# Active database: graph.db&lt;/span&gt;
+&lt;span class="c1"&gt;# Directories in use:&lt;/span&gt;
+&lt;span class="c1"&gt;#   home:         /var/lib/neo4j&lt;/span&gt;
+&lt;span class="c1"&gt;#   config:       /var/lib/neo4j/conf&lt;/span&gt;
+&lt;span class="c1"&gt;#   logs:         /logs&lt;/span&gt;
+&lt;span class="c1"&gt;#   plugins:      /var/lib/neo4j/plugins&lt;/span&gt;
+&lt;span class="c1"&gt;#   import:       /var/lib/neo4j/import&lt;/span&gt;
+&lt;span class="c1"&gt;#   data:         /var/lib/neo4j/data&lt;/span&gt;
+&lt;span class="c1"&gt;#   certificates: /var/lib/neo4j/certificates&lt;/span&gt;
+&lt;span class="c1"&gt;#   run:          /var/lib/neo4j/run&lt;/span&gt;
+&lt;span class="c1"&gt;# Starting Neo4j.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# So when container was started it created a DB with&lt;/span&gt;
+
+&lt;span class="c1"&gt;# to import a file from `$NEO_DATA_BASH/import/import.cypher`&lt;/span&gt;
+&lt;span class="c1"&gt;# docker exec $CONTAINER /var/lib/neo4j/bin/neo4j-shell -f /var/lib/neo4j/import/import.cypher&lt;/span&gt;
+
+&lt;span class="c1"&gt;# or for interactive mode&lt;/span&gt;
+docker &lt;span class="nb"&gt;exec&lt;/span&gt; -ti &lt;span class="nv"&gt;$CONTAINER&lt;/span&gt; /var/lib/neo4j/bin/neo4j-shell
+&lt;span class="c1"&gt;# the input device is not a TTY.  If you are using mintty, try prefixing the command with &amp;#39;winpty&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Annoying could not connect - the one fix I know is to repeat the command from the PS1 Docker CLI, which you can start from Kitematic or directly from Kitematic&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From Kitematic:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Select the &lt;strong&gt;neo4j&lt;/strong&gt; container&lt;/li&gt;
+&lt;li&gt;Press &lt;strong&gt;EXEC&lt;/strong&gt; icon&lt;ul&gt;
+&lt;li&gt;This will open a PS1 prompt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# where are we?&lt;/span&gt;
+&lt;span class="n"&gt;pwd&lt;/span&gt;
+&lt;span class="c"&gt;# /var/lib/neo4j&lt;/span&gt;
+
+&lt;span class="c"&gt;# What is the version?&lt;/span&gt;
+&lt;span class="p"&gt;./&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;neo4j&lt;/span&gt; &lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;-version&lt;/span&gt;
+&lt;span class="c"&gt;# neo4j 3.5.5&lt;/span&gt;
+
+&lt;span class="c"&gt;# now run the shell from here - neo4j-shell is now cypher-shell&lt;/span&gt;
+&lt;span class="p"&gt;./&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="p"&gt;/&lt;/span&gt;&lt;span class="n"&gt;cypher-shell&lt;/span&gt;
+&lt;span class="c"&gt;# username: neo4j&lt;/span&gt;
+&lt;span class="c"&gt;# password: neo4j&lt;/span&gt;
+&lt;span class="c"&gt;# Connected to Neo4j 3.5.5 at bolt://localhost:7687 as user neo4j.&lt;/span&gt;
+&lt;span class="c"&gt;# Type :help for a list of available commands or :exit to exit the shell.&lt;/span&gt;
+&lt;span class="c"&gt;# Note that Cypher queries must end with a semicolon.&lt;/span&gt;
+&lt;span class="c"&gt;# neo4j&amp;gt;&lt;/span&gt;
+&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;help&lt;/span&gt;
+&lt;span class="c"&gt;# Available commands:&lt;/span&gt;
+&lt;span class="c"&gt;#   :begin    Open a transaction&lt;/span&gt;
+&lt;span class="c"&gt;#   :commit   Commit the currently open transaction&lt;/span&gt;
+&lt;span class="c"&gt;#   :exit     Exit the logger&lt;/span&gt;
+&lt;span class="c"&gt;#   :help     Show this help message&lt;/span&gt;
+&lt;span class="c"&gt;#   :history  Print a list of the last commands executed&lt;/span&gt;
+&lt;span class="c"&gt;#   :param    Set the value of a query parameter&lt;/span&gt;
+&lt;span class="c"&gt;#   :params   Prints all currently set query parameters and their values&lt;/span&gt;
+&lt;span class="c"&gt;#   :rollback Rollback the currently open transaction&lt;/span&gt;
+&lt;span class="c"&gt;# For help on a specific command type:&lt;/span&gt;
+&lt;span class="c"&gt;#     :help command&lt;/span&gt;
+&lt;span class="c"&gt;# For help on cypher please visit:&lt;/span&gt;
+&lt;span class="c"&gt;#     https://neo4j.com/docs/developer-manual/current/cypher/&lt;/span&gt;
+&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;When you are done using the shell you can just close it with Alt+F5.&lt;br&gt;
+When you are done with using the DB, you can stop it from GIT BASH&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker stop neo4j
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;More info on &lt;a href="https://hub.docker.com/_/neo4j?tab=description"&gt;Docker Hub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Even more on &lt;a href="https://neo4j.com/docs/operations-manual/current/docker/"&gt;Docker - The Neo4j Operations Manual v3.5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tutorial: &lt;a href="https://neo4j.com/developer/guide-importing-data-and-etl/"&gt;Neo4j Data Import: Moving Data from RDBMS to Graph&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Windows Desktop edition&lt;/h2&gt;
+&lt;p&gt;It is still nice to have the Desktop edition. You get the browser and you can connect to the docker DB.&lt;/p&gt;
+&lt;h3&gt;Install Neo4j Desktop&lt;/h3&gt;
+&lt;p&gt;You can install Neo4j for personal use into&lt;br&gt;
+&lt;code&gt;C:\Users\user\AppData\Local\Programs\Neo4j Desktop&lt;/code&gt;&lt;br&gt;
+or for all users into&lt;br&gt;
+&lt;code&gt;C:\Program Files\Neo4j Desktop&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;The default place it wants to place your data is 
+&lt;code&gt;C:\Users\user\.Neo4jDesktop&lt;/code&gt;&lt;br&gt;
+I want it shared with my docker install into&lt;br&gt;
+&lt;code&gt;C:\Users\user\ItData\neodata&lt;/code&gt;&lt;br&gt;
+Warnings: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When you uninstall neo4j it will delete the whole folder, but you can choose option to backup, so you still have the data for e.g. your docker container&lt;/li&gt;
+&lt;li&gt;In some countries you will get message &lt;code&gt;You are not online so you can not 'Register via Social Login'&lt;/code&gt;, when starting Neo4j. &lt;ul&gt;
+&lt;li&gt;Solution A: Use VPN to get access from another country.&lt;/li&gt;
+&lt;li&gt;Solution B: Work offline (if that is enough). For development it probably is. You can also get an activation key via email. You'll get this supportive message: &lt;code&gt;Your friendly neighborhood Neo4j representative can get an activation key for you. If you're not sure who to call send an inquiry to info@neo4j.com&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Create a local graph DB&lt;/h3&gt;
+&lt;p&gt;You can connect towards an exiting local or remote graph DB - or you can create a new local one.&lt;br&gt;
+Since the docker uses same port you should stop it first&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker stop neo4j
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To create a new local graph DB 
+&lt;em&gt; Click on &lt;code&gt;Add Graph&lt;/code&gt;
+    * You can now create a local graph or connect to a remote one. You could have started the container and have connected towards that one
+    * Instead - Create the local one (I am just exploring anyway) 
+&lt;/em&gt; Give it a name, a password and click &lt;code&gt;Create&lt;/code&gt;
+    * I called this one &lt;code&gt;NeoGraphTest1&lt;/code&gt;
+&lt;img alt="Add local DB" src="img/2019/2019-05-07-Neo4j01.PNG"&gt;
+&lt;em&gt; This will create the DB in a folder below what you chose during installation
+    * In my case the DB is in &lt;code&gt;\neodata\neo4jDatabases\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2\data\databases\graph.db&lt;/code&gt;
+    * So that is why I put the container data folder into &lt;code&gt;\neodata\neo4jDatabases\container1\data&lt;/code&gt;. This keeps it separated in the same level except that I have left out the installation version. If I needed that I would instead have called the folder &lt;code&gt;\container1-3.5.5\&lt;/code&gt;. 
+    * The level &lt;code&gt;\database-876bd4d5-067b-4558-8793-8cebca8e06e1\installation-3.5.2&lt;/code&gt; gives you the content of &lt;code&gt;NeoGraphTest1&lt;/code&gt;
+        * It has all the files as the container has including &lt;code&gt;\bin\&lt;/code&gt; folder - but these are the Windows files opposed to the Linux files in the container
+&lt;img alt="DB folder" src="img/2019/2019-05-07-Neo4j02.PNG"&gt;
+&lt;/em&gt; The new DB is stopped. You can start it from the &lt;strong&gt;project page&lt;/strong&gt; or you can press &lt;code&gt;Manage&lt;/code&gt; to enter the &lt;strong&gt;DB page&lt;/strong&gt; for &lt;code&gt;NeoGraphTest1&lt;/code&gt;
+    * On DB page you have a dashboard to a lot - most importantly to &lt;strong&gt;start&lt;/strong&gt; the DB and to connect to it with the &lt;strong&gt;Cypher Browser&lt;/strong&gt;
+    * Press &lt;code&gt;Start&lt;/code&gt;
+&lt;img alt="Stopped DB" src="img/2019/2019-05-07-Neo4j03.PNG"&gt;
+* With the DB started you get to know the ports it 
+&lt;img alt="Running DB" src="img/2019/2019-05-07-Neo4j04.PNG"&gt;&lt;/p&gt;
+&lt;h3&gt;Connect to your docker container graph DB&lt;/h3&gt;
+&lt;p&gt;The docker neo4j DB is easy to intall into cloud, so lets get aquainted with connecting to that as well.
+Since the docker uses same port as &lt;code&gt;NeoGraphTest1&lt;/code&gt; you should stop &lt;code&gt;NeoGraphTest1&lt;/code&gt; first and start docker.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker start neo4j
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Just browse docker&lt;/h4&gt;
+&lt;p&gt;To browse the docker Graph with Cypher
+&lt;em&gt; From Neo4j Desktop Click on &lt;code&gt;Neo4j Browser&lt;/code&gt;
+&lt;img alt="Browse remote DB" src="img/2019/2019-05-07-Neo4j06.PNG"&gt;&lt;br&gt;
+A new window opens and complains that it can't connect to &lt;code&gt;bolt://localhost:7687&lt;/code&gt;. 
+&lt;/em&gt; You need to help it with username/password.
+&lt;em&gt; In the cypher prompt enter command &lt;code&gt;:server connect neo4j neo4j&lt;/code&gt;
+&lt;img alt="Connect to remote DB" src="img/2019/2019-05-07-Neo4j07.PNG"&gt;&lt;br&gt;
+The response is displayed in a box below. If you are connected, then just press &lt;code&gt;X&lt;/code&gt; to cleanup.
+&lt;img alt="Connect response" src="img/2019/2019-05-07-Neo4j08.PNG"&gt;&lt;br&gt;
+&lt;/em&gt; When you are done you can &lt;code&gt;:server disconnect&lt;/code&gt;&lt;/p&gt;
+&lt;h4&gt;Save the docker browser&lt;/h4&gt;
+&lt;p&gt;You could also save the link to the docker Graph just as &lt;code&gt;NeoGraphTest1&lt;/code&gt;
+&lt;em&gt; From Neo4j Desktop Click on &lt;code&gt;Add Graph&lt;/code&gt;
+&lt;/em&gt; Click on &lt;code&gt;Connect to Remote&lt;/code&gt;
+&lt;em&gt; Name: &lt;code&gt;NeoContainer1&lt;/code&gt;
+&lt;/em&gt; Url: &lt;code&gt;bolt://localhost:7687&lt;/code&gt;
+&lt;img alt="Add remote DB" src="img/2019/2019-05-07-Neo4j05.PNG"&gt;
+&lt;em&gt; Press &lt;code&gt;Username/Password&lt;/code&gt;
+&lt;/em&gt; User: &lt;code&gt;neo4j&lt;/code&gt;
+&lt;em&gt; Password: &lt;code&gt;neo4j&lt;/code&gt;
+&lt;/em&gt; Press &lt;code&gt;Connect&lt;/code&gt;
+&lt;em&gt; Press &lt;code&gt;Start&lt;/code&gt;
+&lt;img alt="Connected remote DB" src="img/2019/2019-05-07-Neo4j09.PNG"&gt;
+&lt;/em&gt; Press &lt;code&gt;Open Browser&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Notes: 
+&lt;em&gt; After restarting the container at one point I hade to add the port 7687 in Kitematic to be able to connect
+&lt;/em&gt; When you connect to the container remotely you also have to change the default password from &lt;code&gt;neo4j&lt;/code&gt; after opening it in the browser&lt;/p&gt;
+&lt;h3&gt;Installation Guides&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://neo4j.com/docs/operations-manual/current/installation/windows/"&gt;2.5. Windows installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://neo4j.com/download-thanks-desktop/?edition=desktop&amp;amp;flavour=windows&amp;amp;release=1.1.21&amp;amp;offline=true"&gt;Neo4j Desktop&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;What's next?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Play with Cypher to add and read some data&lt;/li&gt;
+&lt;li&gt;Create some code to interact with the data&lt;/li&gt;
+&lt;li&gt;Change ports on local DB, so it doesn't collide with the docker DB.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Learn and Communities&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://community.neo4j.com/"&gt;Neo4j Community&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Cypher:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://neo4j.com/developer/cypher-query-language/"&gt;Neo4j's Graph Query Language: An Introduction to Cypher&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.quackit.com/neo4j/tutorial/neo4j_create_a_node_using_cypher.cfm"&gt;Neo4j - Create a Node using Cypher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;eBooks:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://neo4j.com/books/"&gt;Neo4j Books: Free Graph Database Ebooks&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://neo4j.com/whitepapers/graph-databases-beginners-ebook/?ref=home"&gt;Graph Databases for Beginners - Neo4j Graph Database Platform&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://neo4j.com/graph-algorithms-book/"&gt;O'Reilly Graph Algorithms Book - Neo4j Graph Database Platform&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#graphdb"></category><category term="#cypher"></category><category term="#neo4j"></category><category term="#docker"></category></entry><entry><title>VPN client - Download on IPhone - Copy to PC</title><link href="https://rasor.github.io/vpn-client-download-on-iphone-copy-to-pc.html" rel="alternate"></link><published>2019-05-06T00:00:00+02:00</published><updated>2019-05-08T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-06:/vpn-client-download-on-iphone-copy-to-pc.html</id><summary type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the webasites, which are barred in China.
+I can install VPN clients on IPhone from AppStore, but I can't install VPN client on PC, since I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the webasites, which are barred in China.
+I can install VPN clients on IPhone from AppStore, but I can't install VPN client on PC, since I can't reach the sites from China. So here is a fix.&lt;/p&gt;
+&lt;h1&gt;VPN client - Download on IPhone - Copy to PC&lt;/h1&gt;
+&lt;p&gt;If you can't download a VPN client to PC (due to restrictions in the country), then you can fetch the setup-file via IPhone:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;From AppStore install a &lt;strong&gt;VPN client&lt;/strong&gt; - e.g. Le VPN, Astrill, IPVanish&lt;/li&gt;
+&lt;li&gt;Subscribe, start VPN, login and activate VPN&lt;ul&gt;
+&lt;li&gt;Note: You will need to supply an email as userid - but also to receive VPN login details in.&lt;br&gt;
+So you'll need an email provider that can be accessed from you country - so case of China you can use &lt;a href="https://outlook.live.com/owa/"&gt;Outlook.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;From AppStore install &lt;strong&gt;Firefox&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;From Firefox browse to the &lt;a href="https://www.le-vpn.com/vpn-windows/"&gt;VPN Download page&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Upload to &lt;strong&gt;cloud drive&lt;/strong&gt; e.g. ICloud, Onedrive, pCloud - you can do that with the app for the specific iCloud or with IPhone &lt;strong&gt;Files&lt;/strong&gt; app&lt;ul&gt;
+&lt;li&gt;Download from Windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Or connect IPhone to PC with usb&lt;ul&gt;
+&lt;li&gt;Use iTunes on PC to transfer file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Choose VPN&lt;/h1&gt;
+&lt;p&gt;I have not tested much of VPNs, so it is limited knowledge I can come with. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.astrill.com/"&gt;Astrill VPN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;Stays connected on the VPN even though you loose wifi or snoose your IPhone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;Yearly charge - I need monthly - or less&lt;/li&gt;
+&lt;li&gt;Low score on Trustpilot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Info:&lt;ul&gt;
+&lt;li&gt;I have not tested IPVanish from PC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.le-vpn.com/"&gt;Le VPN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;One week trial account - with no payment&lt;/li&gt;
+&lt;li&gt;Monthly charge - currently $10&lt;/li&gt;
+&lt;li&gt;Subscription is not default. By default you only pay for one period.&lt;/li&gt;
+&lt;li&gt;Can pay with Bitcoin (You don't have to supply your id through payment card)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;Disconnects the VPN when you loose wifi or snoose your IPhone&lt;/li&gt;
+&lt;li&gt;On PC I have trouble finding VPN servers, that lets me connect (from China). It does not seem to be a problem from IPhone. I wonder what it is on the PC, that gives those differnces?&lt;/li&gt;
+&lt;li&gt;Low score on Trustpilot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ipvanish.com"&gt;IPVanish VPN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;Top score on Trustpilot&lt;/li&gt;
+&lt;li&gt;Monthly charge&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;Subscription is default and mandatory. You will keep paying untill your card expires or you unsubscibe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Info:&lt;ul&gt;
+&lt;li&gt;I have not tested IPVanish&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have not not been choosing VPN for speed, privacy or security reasons, so there you have to do your own research.  &lt;/p&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.trustpilot.com/categories/vpn_providers"&gt;Trustpilot VPN Providers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="#vpn"></category><category term="#icloud"></category></entry><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-04-06T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;

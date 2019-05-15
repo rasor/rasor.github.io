@@ -1,0 +1,611 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="VPN or Tor? I wonder if Tor can be used for browsing sites that are normally barred within China? Or can I get a the VPN in my Wifi router working as a gateway - It is using OpenVPN. Link: Tor or VPN - Which is Best for Security, Privacy &amp; Anonymity? [2019 …" />
+<meta name="keywords" content="#vpn, #tor, #duckduckgo, #tracker, #gpg">
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="VPN or Tor?"/>
+<meta property="og:description" content="VPN or Tor? I wonder if Tor can be used for browsing sites that are normally barred within China? Or can I get a the VPN in my Wifi router working as a gateway - It is using OpenVPN. Link: Tor or VPN - Which is Best for Security, Privacy &amp; Anonymity? [2019 …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/vpn-or-tor.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#vpn"/>
+<meta property="article:tag" content="#tor"/>
+<meta property="article:tag" content="#duckduckgo"/>
+<meta property="article:tag" content="#tracker"/>
+<meta property="article:tag" content="#gpg"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; VPN or Tor?</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
+          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
+          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
+          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
+          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
+          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
+        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="vpn-or-tor">VPN or Tor?</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+          </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h1>VPN or Tor?</h1>
+<p>I wonder if Tor can be used for browsing sites that are normally barred within China?
+Or can I get a the VPN in my Wifi router working as a gateway - It is using OpenVPN.</p>
+<p>Link:</p>
+<ul>
+<li><a href="https://blokt.com/guides/tor-vs-vpn">Tor or VPN - Which is Best for Security, Privacy &amp; Anonymity? [2019]</a></li>
+</ul>
+<h2>OpenVPN</h2>
+<p>Cons: </p>
+<ul>
+<li>My Wifi VPN + client PC and Mobile is not exactly easy to configure. </li>
+</ul>
+<p>Pros:</p>
+<ul>
+<li>Does not give the cons from Tor.</li>
+</ul>
+<h3>Installing OpenVPN</h3>
+<h4>Wifi router</h4>
+<p>Router is Netgear Router R7000, which  <a href="http://www.routerlogin.net/">routerlogin.net</a><br>
+Internally you reach it on http://192.168.1.1/OPENVPN.htm, where you will get this instruction (including my added comments and prints)</p>
+<p>To install VPN client on your client devices:<br>
+<em> Step 1: Select the <strong>Enable VPN Service</strong> check box and click the <strong>Apply</strong> button.
+</em> Step 2: Download the <strong>client utility</strong> from <a href="https://openvpn.net/community-downloads/">Community Downloads | OpenVPN</a> and install it on the devices where you want to run the <strong>VPN client</strong>. <em>Currently iOS and Android clients are not supported.</em><br>
+    * <a href="https://openvpn.net/community-resources/sig/">Verify setup-program signature</a>
+        * Copy signing key from <a href="https://swupdate.openvpn.net/community/keys/security-key-2019.asc">security-key-2019.asc</a>
+        * Copy signature from <a href="https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.7-I607-Win10.exe.asc">openvpn-install-2.4.7-I607-Win10.exe.asc</a> to your download folder</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;download folder&gt;
+
+<span class="c1"># Import signing key into your keyring</span>
+gpg --import security-key-2019.asc
+<span class="c1"># gpg: keybox &#39;/c/Users/user/.gnupg/pubring.kbx&#39; created</span>
+<span class="c1"># gpg: /c/Users/user/.gnupg/trustdb.gpg: trustdb created</span>
+<span class="c1"># gpg: key 12F5F7B42F2B01E7: public key &quot;OpenVPN - Security Mailing List &lt;security@openvpn.net&gt;&quot; imported</span>
+<span class="c1"># gpg: Total number processed: 1</span>
+<span class="c1"># gpg:               imported: 1</span>
+
+<span class="c1"># Verify that the downloaded program match the signature </span>
+gpg -v --verify openvpn-install-2.4.7-I607-Win10.exe.asc openvpn-install-2.4.7-I607-Win10.exe
+<span class="c1"># gpg: Signature made 25 Apr 2019 09:20:09 RST</span>
+<span class="c1"># gpg:                using RSA key 82175D35AA8D0E8BDE5F4F9E5DC351805ACFEAC6</span>
+<span class="c1"># gpg: using subkey 5DC351805ACFEAC6 instead of primary key 12F5F7B42F2B01E7</span>
+<span class="c1"># gpg: using subkey 5DC351805ACFEAC6 instead of primary key 12F5F7B42F2B01E7</span>
+<span class="c1"># gpg: using pgp trust model</span>
+<span class="c1"># gpg: Good signature from &quot;OpenVPN - Security Mailing List &lt;security@openvpn.net&gt;&quot; [unknown]</span>
+<span class="c1"># gpg: using subkey 5DC351805ACFEAC6 instead of primary key 12F5F7B42F2B01E7</span>
+<span class="c1"># gpg: WARNING: This key is not certified with a trusted signature!</span>
+<span class="c1"># gpg:          There is no indication that the signature belongs to the owner.</span>
+<span class="c1"># Primary key fingerprint: F554 A368 7412 CFFE BDEF  E0A3 12F5 F7B4 2F2B 01E7</span>
+<span class="c1">#      Subkey fingerprint: 8217 5D35 AA8D 0E8B DE5F  4F9E 5DC3 5180 5ACF EAC6</span>
+<span class="c1"># gpg: binary signature, digest algorithm SHA256, key algorithm rsa4096</span>
+
+<span class="c1"># All good: &quot;Good signature&quot;</span>
+
+$ gpg --list-keys
+<span class="c1"># /c/Users/user/.gnupg/pubring.kbx</span>
+<span class="c1"># ---------------------------------</span>
+<span class="c1"># pub   rsa4096 2017-02-09 [SC] [expires: 2027-02-07]</span>
+<span class="c1">#       F554A3687412CFFEBDEFE0A312F5F7B42F2B01E7</span>
+<span class="c1"># uid           [ unknown] OpenVPN - Security Mailing List &lt;security@openvpn.net&gt;</span>
+<span class="c1"># sub   rsa4096 2019-02-04 [S] [expires: 2020-03-09]</span>
+<span class="c1"># sub   rsa4096 2019-02-04 [E] [expires: 2020-03-09]</span>
+</pre></div>
+
+
+<ul>
+<li>Step 2b: Run setup. Here is what is does:<ul>
+<li>Creates <code>C:\Program Files\OpenVPN</code> containing<ul>
+<li>OpenVpn CLI and GUI</li>
+<li>A guide: <code>C:\Program Files\OpenVPN\doc\INSTALL-win32.txt</code></li>
+<li>A config folder where you will put the downloaded VPN server files from Step 3</li>
+</ul>
+</li>
+<li>Creates <code>C:\Program Files\TAP-Windows\</code>. This gives you virtual network funtionality needed by VPN. <br>
+<a href="https://www.thewindowsclub.com/tap-windows-adapters-vpn-driver">What are TAP-Windows adapters? Where do I download this Driver?</a></li>
+</ul>
+</li>
+<li>Step 3: Click the proper button below to download the <strong>configuration files</strong> for your VPN clients.<br>
+<em>For Windows          For non-Windows</em>  (the config files are downloaded from your wifi router)  </li>
+<li>Step 4:Unzip the <strong>configuration files</strong> you have just downloaded and copy them to the folder where the VPN client is installed on your device. For a client device with Windows64-bit system, the VPN client is installed at <code>C:\Program files\OpenVPN\config\</code> by default.</li>
+<li>Step 5: For a client device with Windows, you need to <strong>modify the VPN interface name</strong> to <code>NETGEAR-VPN</code>. The VPN interface usually has a Device Name as <code>TAP-Windows Adapter</code>. You can rename the interface via <code>Control Panel\Network and Internet\Network Connections</code>. <br>
+<img alt="NETGEAR-VPN" src="img/2019/2019-04-27-OpenVpn01.jpg"></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># After rename:</span>
+ipconfig /all
+<span class="c1"># Ethernet adapter NETGEAR-VPN:</span>
+<span class="c1">#    Description . . . . . . . . . . . : TAP-Windows Adapter V9</span>
+</pre></div>
+
+
+<ul>
+<li>Step 6: <strong>Client utility</strong> must be installed and run by a user who has <strong>administrative privileges</strong>.  </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> C:<span class="se">\P</span>rogram Files<span class="se">\O</span>penVPN<span class="se">\c</span>onfig
+..<span class="se">\b</span>in<span class="se">\o</span>penvpn client1.ovpn
+<span class="c1"># Fri Apr 26 23:40:08 2019 us=731074 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.</span>
+<span class="c1"># Fri Apr 26 23:40:08 2019 us=731074 OpenSSL: error:140AB18E:SSL routines:SSL_CTX_use_certificate:ca md too weak</span>
+<span class="c1"># Fri Apr 26 23:40:08 2019 us=731074 Cannot load certificate file client.crt</span>
+<span class="c1"># Fri Apr 26 23:40:08 2019 us=731074 Exiting due to fatal error</span>
+
+<span class="c1"># Yak - can I configure my OpenVPN client to weaken on the requirement on the certificate?</span>
+<span class="c1"># Or can I configure my Wifi VPN server to generate a stronger certificate?</span>
+<span class="c1"># Fix: https://forums.openvpn.net/viewtopic.php?t=23979</span>
+
+<span class="c1"># You can check that the certificate is using MD5:</span>
+ ../bin/openssl x509 -in ca.crt -noout -text <span class="p">|</span> grep <span class="s2">&quot;Signature Algorithm&quot;</span>
+<span class="c1">#    Signature Algorithm: md5WithRSAEncryption</span>
+
+<span class="c1"># By the way - the certificate will expire in 2014:</span>
+../bin/openssl x509 -in ca.crt -noout -text <span class="p">|</span> grep <span class="s2">&quot;After&quot;</span>
+<span class="c1">#            Not After : Nov 23 02:40:28 2024 GMT</span>
+</pre></div>
+
+
+<ul>
+<li>Step 6b: Above did not work. The best solution would have been to upload a stronger certificate to the VPN server (Wifi router) and use corresponding client config.<br>
+Here is a guide for doing that: <a href="https://community.netgear.com/ejquo23388/attachments/ejquo23388/home-wifi-routers-nighthawk/89120/1/Changing%20the%20VPN%20keys%20on%20R7000%20v1.0.1.pdf">Changing the VPN keys on R7000 v1.0.1.pdf</a>.<br>
+This seems to be too experimental and risky (for doing something wrong on the server), so instead I'll try another option</li>
+<li>Step 6c: Install an older OpenVPN.<ul>
+<li>I assume I can reuse the TAP adapter, so I'll just uninstall <code>openvpn-install-2.4.7-I607-Win10</code> (via <code>Control Panel\Programs\Programs and Features</code>).</li>
+<li>No such luck - Uninstall OpenVPN also uninstalled the TAP adapter (which is also the one you renamed in <code>Network Connections</code>).</li>
+<li>Older releases available at <a href="https://build.openvpn.net/downloads/releases/">/downloads/releases/</a>.</li>
+<li>Testing <ul>
+<li>openvpn-install-2.4.7-I604-Win10</li>
+<li>openvpn-install-2.4.7-I602</li>
+<li>openvpn-install-2.4.6-I602</li>
+<li>Same problem: <code>ca md too weak</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Step 6d: Install an older OpenVPN - Testing openvpn-install-2.4.3-I602<br>
+Log: (stored in <code>C:\Users\user\OpenVPN\log</code>)  </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Sat Apr 27 12:44:02 2019 OpenVPN 2.4.3 x86_64-w64-mingw32 [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] built on Jul 14 2017</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 Windows version 6.2 (Windows 8 or greater) 64bit</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 library versions: OpenSSL 1.0.2l  25 May 2017, LZO 2.10</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 MANAGEMENT: TCP Socket listening on [AF_INET]127.0.0.1:25340</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 Need hold release from management interface, waiting...</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 MANAGEMENT: Client connected from [AF_INET]127.0.0.1:25340</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 MANAGEMENT: CMD &#39;state on&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:02 2019 MANAGEMENT: CMD &#39;log all on&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 MANAGEMENT: CMD &#39;echo all on&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 MANAGEMENT: CMD &#39;hold off&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 MANAGEMENT: CMD &#39;hold release&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 LZO compression initializing</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 Control Channel MTU parms [ L:1654 D:1212 EF:38 EB:0 ET:0 EL:3 ]</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 Data Channel MTU parms [ L:1654 D:1450 EF:122 EB:411 ET:32 EL:3 ]</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 Local Options String (VER=V4): &#39;V4,dev-type tap,link-mtu 1590,tun-mtu 1532,proto UDPv4,comp-lzo,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-client&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 Expected Remote Options String (VER=V4): &#39;V4,dev-type tap,link-mtu 1590,tun-mtu 1532,proto UDPv4,comp-lzo,cipher AES-128-CBC,auth SHA1,keysize 128,key-method 2,tls-server&#39;</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 TCP/UDP: Preserving recently used remote address: [AF_INET]100.xxx.xxx.xxx:12974</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 Socket Buffers: R=[65536-&gt;65536] S=[65536-&gt;65536]</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 UDP link local: (not bound)</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 UDP link remote: [AF_INET]100.xxx.xxx.xxx:12974</span>
+<span class="c1"># Sat Apr 27 12:44:03 2019 MANAGEMENT: &gt;STATE:1556361843,WAIT,,,,,,</span>
+
+<span class="c1"># Sat Apr 27 12:45:03 2019 TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)</span>
+<span class="c1"># Sat Apr 27 12:45:03 2019 TLS Error: TLS handshake failed</span>
+<span class="c1"># Sat Apr 27 12:45:03 2019 TCP/UDP: Closing socket</span>
+<span class="c1"># Sat Apr 27 12:45:03 2019 SIGUSR1[soft,tls-error] received, process restarting</span>
+<span class="c1"># Sat Apr 27 12:45:03 2019 MANAGEMENT: &gt;STATE:1556361903,RECONNECTING,tls-error,,,,,</span>
+<span class="c1"># Sat Apr 27 12:45:03 2019 Restart pause, 5 second(s)</span>
+<span class="c1"># Sat Apr 27 12:45:08 2019 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.</span>
+<span class="c1"># Sat Apr 27 12:45:08 2019 Re-using SSL/TLS context</span>
+<span class="c1"># Sat Apr 27 12:45:08 2019 LZO compression initializing</span>
+<span class="c1"># .... repeat from 44:03</span>
+</pre></div>
+
+
+<ul>
+<li>Now we are further. Error <code>TLS Error: TLS key negotiation failed to occur</code><ul>
+<li><a href="https://serverfault.com/questions/765521/openvpn-issue-tls-key-negotiation-failed-to-occur-within-60-seconds#765562">OpenVPN issue - TLS key negotiation failed to occur within 60 seconds</a></li>
+<li>It seems like there is hole missing for port TCP/UDP 1194.
+But the Router (VPN serer) has no firewall. Meaning the port cannot be blocked - unless it is the client PC that has to open up in its internal firewall for outgoing VPN tunnel setup.</li>
+<li>OK in Windows Firewall open up for openvpn-gui.exe and openvpn.exe on private and public networks
+<img alt="Firewall - public + private networks" src="img/2019/2019-04-27-OpenVpn02.PNG">
+<img alt="Firewall - select apps" src="img/2019/2019-04-27-OpenVpn03.PNG"></li>
+</ul>
+</li>
+<li>Testing after opening in firewall in Windows. Testing from the inside network:<br>
+Log:  </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Sat Apr 27 16:35:45 2019 TCP/UDP: Incoming packet rejected from [AF_INET]192.168.1.1:12974[2], expected peer address: [AF_INET]100.xxx.xxx.xxx:12974 (allow this incoming source address/port by removing --remote or adding --float)</span>
+</pre></div>
+
+
+<ul>
+<li>Now the VPN client complains that the VPN server demands the client to come from outside. So next step is to disconnect PC from home Wifi and connect it to mobile wifi (personal hotspot).<br>
+Log:  </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Sat Apr 27 16:45:41 2019 MANAGEMENT: &gt;STATE:1556376341,WAIT,,,,,,</span>
+<span class="c1"># Sat Apr 27 16:46:41 2019 TLS Error: TLS key negotiation failed to occur within 60 seconds (check your network connectivity)</span>
+<span class="c1"># Sat Apr 27 16:46:41 2019 TLS Error: TLS handshake failed</span>
+<span class="c1"># Sat Apr 27 16:46:41 2019 TCP/UDP: Closing socket</span>
+</pre></div>
+
+
+<ul>
+<li>Back to Firewall problem - Seems like incoming port 12974 was allowed while being inside network. 
+Next I added OpenVpn-Gui.exe as an outgoing FW rule. Still no connection!<br>
+Perhaps the IPhone has a firewall, too that needs to be opened? Nope - No FW in the phone.<br>
+So next I'll try adding <code>--float</code> to the config file (as propoesed above) internally - to see if I can get hole through internally.<br>
+client1float.ovpn:  </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># ...</span>
+dev-node NETGEAR-VPN
+remote <span class="m">100</span>.xxx.xxx.xxx <span class="m">12974</span>
+float 
+resolv-retry infinite
+<span class="c1"># ...</span>
+</pre></div>
+
+
+<p>Log:  </p>
+<div class="highlight"><pre><span></span><span class="c1"># Sat Apr 27 18:16:47 2019 us=215884 MANAGEMENT: &gt;STATE:1556381807,WAIT,,,,,,</span>
+<span class="c1"># Sat Apr 27 18:16:47 2019 us=218876 MANAGEMENT: &gt;STATE:1556381807,AUTH,,,,,,</span>
+<span class="c1"># Sat Apr 27 18:16:47 2019 us=219876 TLS: Initial packet from [AF_INET]192.168.1.1:12974, sid=6ece84e3 ac73ca4a</span>
+<span class="c1"># Sat Apr 27 18:16:47 2019 us=595553 VERIFY OK: depth=1, C=TW, ST=TW, L=Taipei, O=netgear, OU=netgear, CN=netgear, emailAddress=mail@netgear.com</span>
+<span class="c1"># Sat Apr 27 18:16:47 2019 us=595553 VERIFY OK: depth=0, C=TW, ST=TW, O=netgear, OU=netgear, CN=netgear, emailAddress=mail@netgear.com</span>
+<span class="c1"># Sat Apr 27 18:16:47 2019 us=731459 Control Channel: TLSv1, cipher TLSv1/SSLv3 DHE-RSA-AES256-SHA, 1024 bit RSA</span>
+<span class="c1"># Sat Apr 27 18:16:47 2019 us=731459 [netgear] Peer Connection Initiated with [AF_INET]192.168.1.1:12974</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=881304 MANAGEMENT: &gt;STATE:1556381808,GET_CONFIG,,,,,,</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=881304 SENT CONTROL [netgear]: &#39;PUSH_REQUEST&#39; (status=1)</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=884223 PUSH: Received control message: &#39;PUSH_REPLY,route 192.168.1.1 255.255.255.0,redirect-gateway,route-gateway dhcp,ping 10,ping-restart 120&#39;</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=884223 Flag &#39;def1&#39; added to --redirect-gateway (iservice is in use)</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 OPTIONS IMPORT: timers and/or timeouts modified</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 OPTIONS IMPORT: route options modified</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 OPTIONS IMPORT: route-related options modified</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 Data Channel MTU parms [ L:1590 D:1450 EF:58 EB:411 ET:32 EL:3 ]</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 Data Channel Encrypt: Cipher &#39;AES-128-CBC&#39; initialized with 128 bit key</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 Data Channel Encrypt: Using 160 bit message hash &#39;SHA1&#39; for HMAC authentication</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 Data Channel Decrypt: Cipher &#39;AES-128-CBC&#39; initialized with 128 bit key</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 Data Channel Decrypt: Using 160 bit message hash &#39;SHA1&#39; for HMAC authentication</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=885223 interactive service msg_channel=596</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=904231 ROUTE_GATEWAY 192.168.1.1/255.255.255.0 I=23 HWADDR=60:6c:66:a8:53:5e</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=951225 OpenVPN ROUTE: OpenVPN needs a gateway parameter for a --route option and no default was specified by either --route-gateway or --ifconfig options</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=951225 OpenVPN ROUTE: failed to parse/resolve route for host/network: 192.168.1.1</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=951225 open_tun</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=955226 TAP-WIN32 device [NETGEAR-VPN] opened: \\.\Global\{8226EE13-989D-495D-8290-ABEE9BD555EB}.tap</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=956226 TAP-Windows Driver Version 9.21 </span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=956226 TAP-Windows MTU=1500</span>
+<span class="c1"># Sat Apr 27 18:16:48 2019 us=957204 Successful ARP Flush on interface [63] {8226EE13-989D-495D-8290-ABEE9BD555EB}</span>
+<span class="c1"># Sat Apr 27 18:16:49 2019 us=363748 Extracted DHCP router address: 192.168.1.1</span>
+<span class="c1"># Sat Apr 27 18:16:52 2019 us=451714 Recursive routing detected, drop tun packet to [AF_INET]192.168.1.1:12974</span>
+<span class="c1"># ...</span>
+<span class="c1"># Sat Apr 27 18:16:52 2019 us=991617 Recursive routing detected, drop tun packet to [AF_INET]192.168.1.1:12974</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=14633 TEST ROUTES: 1/1 succeeded len=0 ret=1 a=1 u/d=up</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=15597 C:\WINDOWS\system32\route.exe ADD 192.168.1.1 MASK 255.255.255.255 192.168.1.1 IF 23</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=29609 Route addition via service succeeded</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=29609 C:\WINDOWS\system32\route.exe ADD 0.0.0.0 MASK 128.0.0.0 192.168.1.1</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=42003 Route addition via service succeeded</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=42003 C:\WINDOWS\system32\route.exe ADD 128.0.0.0 MASK 128.0.0.0 192.168.1.1</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=49074 Route addition via service succeeded</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=49074 WARNING: this configuration may cache passwords in memory -- use the auth-nocache option to prevent this</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=49074 Initialization Sequence Completed</span>
+<span class="c1"># Sat Apr 27 18:16:53 2019 us=49074 MANAGEMENT: &gt;STATE:1556381813,CONNECTED,SUCCESS,,192.168.1.1,12974,,</span>
+</pre></div>
+
+
+<ul>
+<li>
+<p>Success - internally :-).<br>
+Does it also work via phone wifi? Nope!<br>
+PPTP passthrough Removed from IOS10: <a href="https://discussions.apple.com/thread/7673183">VPN using hotspot with ios 10 not working - Apple Community</a>.
+But OpenVPN does not use PPTP - it uses OpenSSL (<a href="https://www.howtogeek.com/211329/which-is-the-best-vpn-protocol-pptp-vs.-openvpn-vs.-l2tpipsec-vs.-sstp/">Which is the Best VPN Protocol? PPTP vs. OpenVPN vs. L2TP/IPsec vs. SSTP</a>).<br>
+Apparently IOS10 barred more then that.   </p>
+</li>
+<li>
+<p>Step 7: For help connecting using OpenVPN clients, please refer to <a href="https://openvpn.net/community-resources/how-to/#quick">2x HOW TO | OpenVPN</a></p>
+</li>
+<li>Step 8: Deactivate/Remove outgoing FW rule to see if it is needed.<ul>
+<li>VPN still worked - but now I realized it took a long time to respond from external web sites. Some website wrote that the all those build-in home VPN's are slow. A better option is to set up a PC with a VPN server installed - and have the Wifi router do port forwarding to the PC.</li>
+</ul>
+</li>
+<li>Step 9: Enable Dynamic DNS and download new client profile. Currently, when the ISP gives my WiFi router a new IP, then VPN will stop working.<br>
+Netgear provides one free DDNS account, when you have the HW. Here is a guide: <a href="https://kb.netgear.com/23860/How-to-Setup-a-NETGEAR-Dynamic-DNS-account">How to Setup a NETGEAR Dynamic DNS account?</a></li>
+<li>Goto <a href="https://www.netgear.com/mynetgear/register/register.aspx">New Product Registration</a> and register you router. There are <strong>password limitations</strong>. Reuse the password for your DDNS registration later.</li>
+<li>Goto <a href="http://192.168.1.1/DNS_ddns.htm">Dynamic DNS service</a><ul>
+<li>Enter <code>NETGEAR</code> as service Provider. They give you one registration for free (through No IP).</li>
+<li>Enter a subdoamin name</li>
+<li>Enter email and password and register
+<img alt="Dynamic DNS" src="https://www.downloads.netgear.com/files/answer_media/images/23860/1.jpg"><br>
+<em>Image on Netgears web</em></li>
+</ul>
+</li>
+</ul>
+<p>Reply:
+The NETGEAR DDNS on this router is currently configured to:<br>
+Host Name: aaaaaaa.mynetgear.com<br>
+Email: bbbbb@ccccc.dd  </p>
+<p>Pressing <strong>Show Status</strong> pops up <a href="http://www.routerlogin.net/DNS_ddns_st.htm">DDNS status page</a>.<br>
+<em>Tip from <a href="https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Registering-a-Netgear-DDNS/td-p/451771">Registering a Netgear DDNS</a></em></p>
+<p>You will receive a mail from https://www.noip.com/, where you will have confirm your new account.</p>
+<p>You can edit the IP address on <a href="https://www.noip.com/members/dns/">Manage DNS Records</a>. Change it to 100.xxx.xxx.xxx. You find it as <code>IP Address</code> on <a href="http://192.168.1.1/BAS_ether.htm">Internet Setup</a></p>
+<p>Now you can lookup the IP address:  </p>
+<div class="highlight"><pre><span></span>nslookup aaaaaaa.mynetgear.com
+<span class="c1"># Server:  UnKnown</span>
+<span class="c1"># Address:  192.168.1.1</span>
+
+<span class="c1"># Non-authoritative answer:</span>
+<span class="c1"># Name:    aaaaaaa.mynetgear.com</span>
+<span class="c1"># Address:  100.xxx.xxx.xxx</span>
+</pre></div>
+
+
+<p>You can now replace you IP in the <code>C:\Program files\OpenVPN\config\client1.ovpn</code> file  </p>
+<div class="highlight"><pre><span></span><span class="c1"># from</span>
+remote <span class="m">100</span>.xxx.xxx.xxx <span class="m">12974</span>
+<span class="c1"># to</span>
+remote aaaaaaa.mynetgear.com <span class="m">12974</span>
+</pre></div>
+
+
+<p>You can now test your VPN again.</p>
+<p>Now somehow Netgear should notify NOIP, when its IP is changed by the ISP.  </p>
+<p>You also have the option to install a client on your, that can be notified by NOIP, when it gets a signal from Netgear.  <br>
+<a href="https://my.noip.com/#!/dynamic-dns/duc">Dynamic Update Client (DUC)</a>.<br>
+But that should not be needed, when we reach the VPN by DNS <code>aaaaaaa.mynetgear.com</code>.</p>
+<ul>
+<li>Next steps:<ul>
+<li>Change from UDP port 12974 to TCP 443 - which will be open everywhere.</li>
+<li>Create client profiles for several IPhones.</li>
+</ul>
+</li>
+</ul>
+<p>Notes: 
+<em> If you want to make any change in Advanced Configurations section, please make the changes before you download the configuration files in Step 3.
+</em> Step 3 migth popup with this message: <em>"Currently your Dynamic DNS service is not enabled, and the IP address for your Internet connection will be used for client configurations. When the IP address for your Internet connection is changed, you will have to download and install the configuration files again."</em></p>
+<p>Links</p>
+<ul>
+<li><a href="https://kb.netgear.com/23854/How-do-I-use-the-VPN-service-on-my-Nighthawk-router-with-my-Windows-client">How do I enable the VPN feature on my NETGEAR router using a Windows computer?</a></li>
+<li><a href="https://forums.openvpn.net/">OpenVPN Support Forum</a></li>
+<li>Guide for building new certs for R7000: <a href="https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Netgear-R7000-and-OpenVPN-for-Android-App/m-p/1515771/highlight/true#M89120">Re: Netgear R7000 and OpenVPN for Android App</a><ul>
+<li><a href="https://community.netgear.com/ejquo23388/attachments/ejquo23388/home-wifi-routers-nighthawk/89120/1/Changing%20the%20VPN%20keys%20on%20R7000%20v1.0.1.pdf">Changing the VPN keys on R7000 v1.0.1.pdf</a></li>
+</ul>
+</li>
+<li>Building Certificates and Keys: <a href="https://community.openvpn.net/openvpn/wiki/Easy_Windows_Guide">Easy_Windows_Guide – OpenVPN Community</a></li>
+<li>Building Certificates and Keys: <a href="https://openvpn.net/community-resources/how-to/#quick">2x HOW TO | OpenVPN</a></li>
+<li><a href="https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Netgear-R7000-and-OpenVPN-for-Android-App/td-p/1310857">Netgear R7000 and OpenVPN for Android App</a></li>
+<li><a href="https://www.howtogeek.com/211329/which-is-the-best-vpn-protocol-pptp-vs.-openvpn-vs.-l2tpipsec-vs.-sstp/">Which is the Best VPN Protocol? PPTP vs. OpenVPN vs. L2TP/IPsec vs. SSTP</a></li>
+<li>No Firewall on R7000: <a href="https://community.netgear.com/t5/Nighthawk-WiFi-Routers/Firewall-settings/td-p/510090">Firewall settings</a></li>
+<li><a href="https://serverfault.com/questions/765521/openvpn-issue-tls-key-negotiation-failed-to-occur-within-60-seconds#765562">OpenVPN issue - TLS key negotiation failed to occur within 60 seconds</a></li>
+<li>Sample client and server configs: <a href="https://forums.openvpn.net/viewtopic.php?t=20115">Windows Firewall issue with OpenVPN - OpenVPN Support Forum</a></li>
+<li><a href="https://kb.netgear.com/8219/How-to-setup-Inbound-Outbound-firewall-rules-on-NETGEAR-Modem-router-gateways">How to setup Inbound/Outbound firewall rules on NETGEAR Modem router/gateways | Answer | NETGEAR Support</a></li>
+<li><a href="https://community.netgear.com/t5/Nighthawk-WiFi-Routers/R7000-does-this-router-have-a-firewall/m-p/1491643/highlight/true#M80416">Re: R7000 - does this router have a firewall?</a><ul>
+<li><a href="https://www.howtogeek.com/122487/htg-explains-is-upnp-a-security-risk/">Is UPnP a Security Risk?</a></li>
+</ul>
+</li>
+<li><a href="https://www.debuntu.org/how-to-importexport-gpg-key-pair/">How-To: Import/Export GPG key pair</a></li>
+</ul>
+<h4>IPhone</h4>
+<p>To make your IPhone a VPN client you need to  </p>
+<ul>
+<li>Prepare client config files for IPhone</li>
+<li>Upload the client config files to your IPhone</li>
+<li>Import the client config files to app and phone</li>
+</ul>
+<h5>Prepare client config files for IPhone</h5>
+<p>EarthVPN provides a sample <a href="http://www.earthvpn.com/images/configurationios7.txt">configuration .ovpm file for ios7+</a>. You can download it and modify it.<br>
+Save it as e.g. <code>client1-ios.ovpn</code>.<br>
+You can remove all the xml tags like <ca>, since you have the content of these files in separate files in the <code>C:\Program files\OpenVPN\config\</code> folder. Instead you replace them by ca, cert and key.  </p>
+<div class="highlight"><pre><span></span>client
+dev tun
+proto udp
+remote aaaaaaa.mynetgear.com <span class="m">12974</span>
+float
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+cert client.crt
+key client.key
+<span class="c1"># auth-user-pass</span>
+<span class="c1"># reneg-sec 0</span>
+<span class="c1"># auth SHA1</span>
+cipher AES-128-CBC
+comp-lzo
+verb <span class="m">5</span>
+</pre></div>
+
+
+<p>Links:</p>
+<ul>
+<li><a href="http://www.earthvpn.com/how-to-configure-openvpn-on-iphone-ipad-ios/">How to Configure OpenVPN on Iphone Ipad IOS - VPN PPTP, SSTP, L2TP and OpenVPN Anonymous VPN Access to 32 Countries</a></li>
+</ul>
+<h5>Upload the client config files to your IPhone</h5>
+<p>You can use iTunes for transferring files to OpenVPN on your phone</p>
+<ul>
+<li>In IPhone Install <a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981">‎OpenVPN Connect</a> app</li>
+<li>On PC Start iTunes</li>
+<li>Connect your phone via USB cable to your PC and login</li>
+<li>In iTunes a <strong>phone icon</strong> appears. Press it an select your phone 
+<img alt="Connect to iPhone" src="img/2019/2019-04-27-OpenVpn05.PNG"></li>
+<li>Select <strong>File Sharing</strong> in left menu and scroll down to <strong>OpenVPN</strong> in the list of apps
+<img alt="Connect iPhone to PC" src="img/2019/2019-04-27-OpenVpn04.PNG"></li>
+<li>Drag and drop the config files into the folder in iTunes
+<img alt="Upload file to iPhone" src="img/2019/2019-04-27-OpenVpn05.PNG"></li>
+<li>Done - the files are now uploaded</li>
+</ul>
+<h5>Import the client config files to app and phone</h5>
+<ul>
+<li>In IPhone start OpenVPN</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="https://openvpn.net/vpn-server-resources/faq-regarding-openvpn-connect-ios/">FAQ regarding OpenVPN Connect iOS | OpenVPN</a></li>
+<li>Install: <a href="https://itunes.apple.com/us/app/openvpn-connect/id590379981">‎OpenVPN Connect</a></li>
+<li>Guide for iVPN service: <a href="https://www.ivpn.net/setup/iphone-openvpn-connect.html">VPN Setup guide for OpenVPN Connect on iPhone devices</a></li>
+<li>Guide for Linux VPN service: <a href="https://louwrentius.com/setup-a-vpn-on-your-iphone-with-openvpn-and-linux.html">Setup a VPN on your iPhone with OpenVPN and Linux</a></li>
+</ul>
+<h4>PC</h4>
+<ul>
+<li><a href="https://openvpn.net/quick-start-guide/">Quick Start Guide | OpenVPN</a></li>
+<li>Download: <a href="https://openvpn.net/community-downloads/">Community Downloads | OpenVPN</a><ul>
+<li>PGP signature - Win10: <a href="https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.7-I607-Win10.exe.asc">https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.7-I607-Win10.exe.asc</a></li>
+<li>HowTo verify signature <a href="https://openvpn.net/community-resources/sig/">GnuPG Public Key | OpenVPN</a></li>
+</ul>
+</li>
+<li>Guide: <a href="https://openvpn.net/vpn-server-resources/connecting-to-access-server-with-linux/">Linux Connectiion Guide For OpenVPN Access Server | OpenVPN</a></li>
+</ul>
+<p>.....</p>
+<h2>Tor</h2>
+<p>Questions:</p>
+<ul>
+<li>Can you browse normal websites at all from Tor? Yes - this is called the Surface web.</li>
+<li>Does China block the Tor Relays? I guess they block as many as they know of, which probably means all.</li>
+</ul>
+<p>Cons: </p>
+<ul>
+<li>Even though the aim of using Tor would just be to reach normal websites like Google, then it will probably attract unwanted attention from e.g. agencies.</li>
+<li>I assume you can't download Tor browser, If you are inside China.</li>
+</ul>
+<p>Links:</p>
+<ul>
+<li><a href="https://blokt.com/guides/how-to-use-the-tor-browser">How to Use the Tor Browser for Privacy Online [Guide + Review]</a></li>
+</ul>
+<h3>DuckDuckGo</h3>
+<p>DuckDuckGo is good for removing trackers.</p>
+<ul>
+<li>Chrome plugin: <a href="https://chrome.google.com/webstore/detail/duckduckgo-privacy-essent/bkdgflcldnnnapblkhphbgpggdiikppg">DuckDuckGo Privacy Essentials</a></li>
+<li><a href="https://duckduckgo.com/app?natb=v166-2__&amp;cp=atbaoct">Mobile App</a></li>
+</ul>
+<p>But DuckDuckGo also provides an Onion service, which is Google Search for the Tor browser.</p>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/vpn.html">#vpn</a>
+      <a href="https://rasor.github.io/tag/tor.html">#tor</a>
+      <a href="https://rasor.github.io/tag/duckduckgo.html">#duckduckgo</a>
+      <a href="https://rasor.github.io/tag/tracker.html">#tracker</a>
+      <a href="https://rasor.github.io/tag/gpg.html">#gpg</a>
+    </p>
+  </div>
+
+
+
+    <div class="addthis_relatedposts_inline">
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
