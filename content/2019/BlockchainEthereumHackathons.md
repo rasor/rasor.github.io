@@ -23,6 +23,7 @@ The Graph:
 * Services: [Graph Explorer - Find all the data being indexed on The Graph](https://thegraph.com/explorer/)
 * [The Graph (@graphprotocol) | Twitter](https://twitter.com/graphprotocol)
 * Code: [graphprotocol](https://github.com/graphprotocol)
+* Service: [A New Ticker for the Stellar Community](https://medium.com/stellar-developers-blog/a-new-ticker-for-the-stellar-community-4ba7961e0759)
 
 Blogs:  
 * [Mohamed ElSeidy on Twitter](https://twitter.com/Drmelseidy/status/1124363757344436224)

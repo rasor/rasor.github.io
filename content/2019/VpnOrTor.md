@@ -414,6 +414,7 @@ Cons:
 Links:
 
 * [How to Use the Tor Browser for Privacy Online [Guide + Review]](https://blokt.com/guides/how-to-use-the-tor-browser)
+* [It's Time to Encrypt Your Email: Using Keybase](https://code.tutsplus.com/tutorials/its-time-to-encrypt-your-email-using-keybase--cms-23724)
 
 ### DuckDuckGo
 

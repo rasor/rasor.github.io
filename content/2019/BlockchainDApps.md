@@ -75,4 +75,11 @@ Tags: #blockchain,
     * Compliance: [QRC](https://www.qrc.group/)
     * Funding: [Holdex](https://holdex.io/)
 
+# Chains
+
+## XLM
+
+* [A new Go SDK for the Stellar Network](https://medium.com/stellar-developers-blog/a-new-go-sdk-for-the-stellar-network-7e6c590ebd3b)
+* [A New Ticker for the Stellar Community](https://medium.com/stellar-developers-blog/a-new-ticker-for-the-stellar-community-4ba7961e0759)
+
 The End

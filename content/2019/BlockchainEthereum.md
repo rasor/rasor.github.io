@@ -161,4 +161,11 @@ Moved to (BlockchainTokens)[BlockchainTokens.md]
     * [I kryptovalutaens vold](https://www.prosa.dk/artikel/i-kryptovalutaens-vold/)
     * [Der digitale Lenin hinter der Blockchain - Capital.de](https://www.capital.de/wirtschaft-politik/der-digitale-lenin-hinter-der-blockchain)
 
+# Other stuff ----------------------
+
+## ETH news
+
+* 2019-05 [Vitalik Buterin: “Microsoft has embraced the open community of blockchain developers” on Ethereum](https://cryptoslate.com/vitalik-buterin-microsoft-has-embraced-the-open-community-of-blockchain-developers-on-ethereum/)
+
+
 The End.
