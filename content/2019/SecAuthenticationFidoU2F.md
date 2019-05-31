@@ -1,9 +1,9 @@
-Title:  Authnetication with FIDO
+Title:  Authentication with FIDO
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #authentication, #fido, #2fa, #nfc, #bluetooth
+Tags: #authentication, #fido, #2fa, #nfc, #bluetooth, #yubikey
 
-## Authnetication with FIDO U2F - Universal 2nd Factor
+## Authentication with FIDO U2F - Universal 2nd Factor
 
 * [Download Specifications - FIDO Alliance](https://fidoalliance.org/specifications/download/)
     * [Universal 2nd Factor (U2F) Overview](https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-overview-v1.2-ps-20170411.html)
@@ -14,8 +14,11 @@ Tags: #authentication, #fido, #2fa, #nfc, #bluetooth
 
 Who supports U2F?
 
-* Github
-* [Discover YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico](https://www.yubico.com/products/yubikey-hardware/) - supports U2F and NFC
+* Github, Twitter, Google, AWS, Microsoft, Facebook ...
+* [Keeper](SecPasswordMgrs.md)
+* [YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico](https://www.yubico.com/products/yubikey-hardware/) - supports U2F and NFC (for mobile) and USB (for PC)
+    * Features: [Compare Products | Yubico](https://www.yubico.com/products/yubikey-hardware/compare-products-series/)
+* [YubiKey Apps list](https://www.yubico.com/setup/#yubikey-5-series)
 
 ## Other FIDO protocols
 
