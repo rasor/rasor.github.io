@@ -11,6 +11,9 @@ Or can I get a the VPN in my Wifi router working as a gateway - It is using Open
 Link:
 
 * [Tor or VPN - Which is Best for Security, Privacy & Anonymity? [2019]](https://blokt.com/guides/tor-vs-vpn)
+* [VPN: Everything You Need to Know (Ultimate Guide) | Restore Privacy](https://restoreprivacy.com/vpn/)
+* [Tor Browser - What You Really Need to Know (Read This First)](https://restoreprivacy.com/tor/)
+* [5 Best VPN Services for 2019 (Plus 14 VPNs to Avoid) | Restore Privacy](https://restoreprivacy.com/best-vpn/)
 
 ## OpenVPN
 
@@ -424,5 +427,10 @@ DuckDuckGo is good for removing trackers.
 * [Mobile App](https://duckduckgo.com/app?natb=v166-2__&cp=atbaoct)
 
 But DuckDuckGo also provides an Onion service, which is Google Search for the Tor browser.
+
+### Other tips
+
+* [How to leave Google behind: Quick guide to take back your privacy online](https://tutanota.com/blog/posts/how-to-leave-google-gmail)
+* [Whats My IP Address | Private Internet Access VPN Service](https://www.privateinternetaccess.com/pages/whats-my-ip/tutanota)
 
 The End

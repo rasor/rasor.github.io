@@ -7,6 +7,7 @@ Tags: #keeper, #yubikey, #2fa, #nfc
 
 * List $: [The Best Password Managers for 2019](https://www.pcmag.com/roundup/300318/the-best-password-managers#)
 * List free: [The Best Free Password Managers for 2019](https://www.pcmag.com/roundup/331555/the-best-free-password-managers)
+* List: [Privacy Tools - How to Restore Your Online Privacy in 2019](https://restoreprivacy.com/privacy-tools/) - see "Password manager"
 
 Password Managers are browser plugins that capture form data. The data is stored on encrypted cloud drive (vault). The key is your master password.
 
@@ -17,6 +18,12 @@ Some Extra features:
     * Share in vault
 * Pwned check
 * Inherit - who take over your data
+
+### LessPass
+
+LessPass calculates passwords
+
+* [LessPass How Does It Works?](https://blog.lesspass.com/lesspass-how-it-works-dde742dd18a4)
 
 ### Keeper
 
