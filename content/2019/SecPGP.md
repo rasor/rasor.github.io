@@ -38,6 +38,7 @@ So how would you have a great usage of a PGP key stored on a NFC HW device?
 * Mailclient tester: [Email Privacy Tester](https://www.emailprivacytester.com/)
     * Mikes public keys: [Mike Cardwell - Grepular](https://www.grepular.com/)
 * Free [TutaNota](https://tutanota.com/security)
+    * App: [‎Tutanota](https://apps.apple.com/us/app/tutanota/id922429609)
     * [Encrypt it all: How Tutanota secures your private key and your data with state-of-the-art encryption.](https://tutanota.com/blog/posts/innovative-encryption/)
     * DNSSEC and DANE: [DANE: How to install the DANE browser add-ons - updated](https://tutanota.com/blog/posts/dane-how-to-browser-plugins/) 
     * Validates from-mail via DMARC [How to Explain DMARC in Plain English | Return Path](https://blog.returnpath.com/how-to-explain-dmarc-in-plain-english/)
@@ -45,11 +46,20 @@ So how would you have a great usage of a PGP key stored on a NFC HW device?
     * [The Mailfence Threat Model | Secure and private email](https://mailfence.com/en/threat-model.jsp)
 * [ProtonMail - Security Features](https://protonmail.com/security-details)
 
+### Dev
+
+* [What encryption is being used? | Bitwarden Help &amp; Support](https://help.bitwarden.com/article/what-encryption-is-used/)
+* [Where is my data stored on my computer/device? | Bitwarden Help &amp; Support](https://help.bitwarden.com/article/where-is-data-stored-computer/)
+
 ## Hosting
 
 * WebHosting: [Top Rated Web hosting Companies on Trustpilot](https://www.trustpilot.com/categories/web_hosting#)
     * Node.Js - $3/month: [FastComet](https://www.fastcomet.com/pricing)
     * VPS - uk - e5/month: [Deploys.io - Classic Virtual Servers](https://deploys.io/store/virtual-servers/classic)
 * MailHosting: [Top Rated Email Service Provider Companies on Trustpilot](https://www.trustpilot.com/categories/email-service-provider)
+
+## Backup
+
+* Email: [Download DriveHQ EmailManager - Outlook Email Backup Software](https://www.drivehq.com/downloads/DownloadEmailManager.aspx)
 
 The End

@@ -9,6 +9,7 @@ Tags: #blockchain, #cryptocurrency
 
 * [CryptoSlate - Coins](https://cryptoslate.com/coins/)
 * Charts: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
+* Wallets: [Supported Coins - Hardware wallet](https://shop.ledger.com/pages/supported-crypto-assets/)
 
 ### Payment network
 

@@ -20,17 +20,21 @@ Tags: #authentication, #fido, #2fa, #nfc, #bluetooth, #yubikey
 * [YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico](https://www.yubico.com/products/yubikey-hardware/) - supports U2F and NFC (for mobile) and USB (for PC)
 * Features: [Compare Products | Yubico](https://www.yubico.com/products/yubikey-hardware/compare-products-series/)
 * Review 2018-09: [Yubico YubiKey 5 NFC](https://www.pcmag.com/review/363889/yubico-yubikey-5-nfc)
-* [Yubico Authenticator - Apps on Google Play](https://play.google.com/store/apps/details?id=com.yubico.yubioath&hl=en)
+* [Yubico Authenticator - Apps on Google Play](https://play.google.com/store/apps/details?id=com.yubico.yubioath&hl=en) - Uses OTP - not U2F
+* Manage: [Downloads | Yubico](https://www.yubico.com/products/services-software/download/)
 
 Guides:
 
+* [Using Your YubiKey with Authenticator Codes : Yubico Support](https://support.yubico.com/support/solutions/articles/15000006419-using-your-yubikey-with-authenticator-codes)
 * [YubiKey 5 Series Technical Manual : Yubico Support](https://support.yubico.com/support/solutions/articles/15000014219-yubikey-5-series-technical-manual)
 * [YubiKey - ArchWiki](https://wiki.archlinux.org/index.php/YubiKey)
+* [Using GnuPG for Custom Configuration Secrets : Yubico Support](https://support.yubico.com/support/solutions/articles/15000006454-using-gnupg-for-custom-configuration-secrets)
 * [YubiKey for SSH, Login, 2FA, GPG and Git Signing](https://ocramius.github.io/blog/yubikey-for-ssh-gpg-git-and-local-login/)
 * 2019-02: [Use A YubiKey For PGP Signing, Encryption, And Authentication](https://www.thepolyglotdeveloper.com/2019/02/use-yubikey-pgp-signing-encryption-authentication/)
 * [OpenPGP - Export Secret Keys to a Yubikey](https://blog.eleven-labs.com/en/openpgp-secret-keys-yubikey-part-2/)
 * 2017-09: [Configuring an offline GnuPG master key and subkeys on YubiKey](https://www.andreagrandi.it/2017/09/30/configuring-offline-gnupg-masterkey-subkeys-on-yubikey/)
 * Keyboard bot: [How to Weaponize the Yubikey - Black Hills Information Security](https://www.blackhillsinfosec.com/how-to-weaponize-the-yubikey/)
+* [Yubico Get API Key](https://upgrade.yubico.com/getapikey/)
 
 News:
 
@@ -38,12 +42,14 @@ News:
 
 ### Other HW keys
 
+* [USB Dongle Authentication](https://www.dongleauth.info/dongles/)
 * [FIDO ®-NFC | FEITIAN](https://www.ftsafe.com/Products/FIDO/NFC)
 * Review 2018-09: [Google Titan Security Key Bundle](https://www.pcmag.com/review/363644/google-titan-security-key-bundle)
 * Mobile as HW key: [Google Offers Built-In Security Key Feature for Android Phones](https://www.pcmag.com/news/367713/google-offers-built-in-security-key-feature-for-android-phon)
 
 ### Who else supports U2F?
 
+* List: [USB Dongle Authentication](https://www.dongleauth.info/)
 * List: [YubiKey Catalog](https://www.yubico.com/works-with-yubikey/catalog/)
 * List: [Comparison of webmail providers - Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_webmail_providers)
 * Github, Twitter, Google, AWS, Microsoft, Facebook ...
@@ -63,6 +69,19 @@ News:
 * PswMgr: [Keeper](SecPasswordMgrs.md)
 * PswMgr - OSS: [Home](https://psono.com/)
 * [Get YubiKey for Windows Hello - Microsoft Store](https://www.microsoft.com/en-us/p/yubikey-for-windows-hello/9nblggh511m5?SilentAuth=1&wa=wsignin1.0&activetab=pivot:overviewtab)
+
+## 2FA
+
+* [Authenticator - Wikipedia](https://en.wikipedia.org/wiki/Authenticator)
+* [Two-Factor Authentication (2FA) – John Gallias](https://johngallias.com/two-factor-auth/)
+
+## SW 2FA
+
+* [Krypton U2F Authenticator](https://krypt.co/)
+    * [krypt.co](https://github.com/kryptco)
+    * Good for Google since Google don't support Yubikey NFC login via IPhone
+* [Yubico Authenticator | Yubico](https://www.yubico.com/products/services-software/download/yubico-authenticator/) - Not for IPhone
+* [Duo Trusted Access](https://duo.com/)
 
 ## Other FIDO protocols
 

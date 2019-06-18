@@ -8,6 +8,7 @@ Tags: #keeper, #yubikey, #2fa, #nfc
 * List $: [The Best Password Managers for 2019](https://www.pcmag.com/roundup/300318/the-best-password-managers#)
 * List free: [The Best Free Password Managers for 2019](https://www.pcmag.com/roundup/331555/the-best-free-password-managers)
 * List: [Privacy Tools - How to Restore Your Online Privacy in 2019](https://restoreprivacy.com/privacy-tools/) - see "Password manager"
+* List: [Works With YubiKey Catalog | Yubico](https://www.yubico.com/works-with-yubikey/catalog/#protocol=all&usecase=password-management&key=all)
 
 Password Managers are browser plugins that capture form data. The data is stored on encrypted cloud drive (vault). The key is your master password.
 
@@ -25,6 +26,15 @@ LessPass calculates passwords
 
 * [LessPass How Does It Works?](https://blog.lesspass.com/lesspass-how-it-works-dde742dd18a4)
 
+### Bitwarden
+
+* [Open Source Password Management Solutions | Bitwarden](https://bitwarden.com/)
+    * [Bitwarden](https://github.com/bitwarden)
+* [Security | Bitwarden Help](https://help.bitwarden.com/security/)
+* Pros:
+    * Supports [YubiKey](https://help.bitwarden.com/article/setup-two-step-login-yubikey/) with NFC on IOS.
+    * Is OSS: [Installing and deploying | Bitwarden Help](https://help.bitwarden.com/article/install-on-premise/)
+
 ### Keeper
 
 * Keeper: [Keeper Password Manager & Digital Vault](https://www.pcmag.com/review/326390/keeper-password-manager-digital-vault)
@@ -39,6 +49,24 @@ LessPass calculates passwords
     * Guess: Loose your device will loose your psws, if not using Keeper 2FA
     * Self destruct devise after 5 wrong logins
     * OneClick generator creates a 16 char psw, but default/auto is only 12 char
+
+### LastPass
+
+* [LastPass](https://www.lastpass.com/)
+* Review: [LastPass Premium](https://www.pcmag.com/review/317692/lastpass-4-0-premium)
+* Pros:
+    * Does both have [IPhone Authenticator](https://lastpass.com/auth/) and IPhone PswMgr - both with backup to cloud
+    * You can convert any USB drive into an authenticator. Just install LastPass's Sesame utility on it and you're done. Plug it in to authenticate.
+    * Family edition gives you Shared folder / Vault
+    * Recommended in Free version: [LastPass](https://www.pcmag.com/review/317662/lastpass)
+* Cons: 
+    * Premium does support Yubikey OTP, but not U2F  
+    [Using Your YubiKey with LastPass on iPhone : Yubico Support](https://support.yubico.com/support/solutions/articles/15000006425-using-your-yubikey-with-lastpass-on-iphone)  
+    [Introducing YubiKey MFA for iOS on Your LastPass Account - The LastPass Blog](https://blog.lastpass.com/2018/05/introducing-yubikey-mfa-for-ios-on-your-lastpass-account.html/)
+
+### Firefox Lockwise
+
+* [‎Firefox Lockwise](https://apps.apple.com/us/app/firefox-lockwise/id1314000270)
 
 ### iCloud KeyChain
 
@@ -80,5 +108,13 @@ For companies
 ## Pwned check
 
 * [Have I Been Pwned: Check if your email has been compromised in a data breach](https://haveibeenpwned.com/)
+
+## Other
+
+* [Simple Tricks to Remember Insanely Secure Passwords](https://www.pcmag.com/article/359862/simple-tricks-to-remember-insanely-secure-passwords)
+
+## Vaults
+
+* OSS [Nextcloud](https://nextcloud.com/)
 
 The End
