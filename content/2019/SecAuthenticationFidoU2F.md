@@ -70,6 +70,21 @@ News:
 * PswMgr - OSS: [Home](https://psono.com/)
 * [Get YubiKey for Windows Hello - Microsoft Store](https://www.microsoft.com/en-us/p/yubikey-for-windows-hello/9nblggh511m5?SilentAuth=1&wa=wsignin1.0&activetab=pivot:overviewtab)
 
+|Who|RecoveryEmail|Yubi|Free|Payed|iCloud|
+|---|---|---|---|---|---|
+|--- Free ---|
+|MailFence|Y|N|Y ½G|e2½/m||
+|TutaNota|N|Y|Y 1G|e2½/m||
+|ProtonMail|Y|Y|Y ½G|e4/m||
+|--- Payed ---|
+|Mailbox.org|Y|Y|N|e1/m|100M|
+|Posteo|Y|Y|N|e1/m||
+|RunBox||Y|N|||
+|FastMail||Y|N|||
+|TheXYZ||Y|N|||
+|101Domain||?|N|||
+|Gandi||?|2mailbox/domain|||
+
 ## 2FA
 
 * [Authenticator - Wikipedia](https://en.wikipedia.org/wiki/Authenticator)
