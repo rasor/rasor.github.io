@@ -1,6 +1,6 @@
 Title:  Password Managers
 Date: 2099-01-01 00:00
-Category: Biz
+Category: DevOps
 Tags: #keeper, #yubikey, #2fa, #nfc
 
 ## Password Managers
@@ -10,7 +10,7 @@ Tags: #keeper, #yubikey, #2fa, #nfc
 * List: [Privacy Tools - How to Restore Your Online Privacy in 2019](https://restoreprivacy.com/privacy-tools/) - see "Password manager"
 * List: [Works With YubiKey Catalog | Yubico](https://www.yubico.com/works-with-yubikey/catalog/#protocol=all&usecase=password-management&key=all)
 
-Password Managers are browser plugins that capture form data. The data is stored on encrypted cloud drive (vault). The key is your master password.
+Password Managers are browser plugins that capture form data. The data is stored on encrypted cloud drive (vault). The privatekey is your master password.
 
 Some Extra features:
 
@@ -19,6 +19,8 @@ Some Extra features:
     * Share in vault
 * Pwned check
 * Inherit - who take over your data
+* Android [Autofill](https://www.addictivetips.com/android/google-autofill-settings-for-apps-android/)
+* Beware: [Thinking outside of the password manager box](https://labs.detectify.com/2019/02/28/thinking-outside-of-the-password-manager-box/)
 
 ### LessPass
 
@@ -28,12 +30,17 @@ LessPass calculates passwords
 
 ### Bitwarden
 
-* [Open Source Password Management Solutions | Bitwarden](https://bitwarden.com/)
+* [Open Source Password Management Solutions | Bitwarden](https://bitwarden.com/#organizations)
     * [Bitwarden](https://github.com/bitwarden)
 * [Security | Bitwarden Help](https://help.bitwarden.com/security/)
 * Pros:
+    * [Family](https://bitwarden.com/#organizations) version gives 5 users, 1GB storage for 1$/mo
     * Supports [YubiKey](https://help.bitwarden.com/article/setup-two-step-login-yubikey/) with NFC on IOS.
     * Is OSS: [Installing and deploying | Bitwarden Help](https://help.bitwarden.com/article/install-on-premise/)
+    * Fingerprint or pin protection after login
+    * Server can be self-hosted
+* Cons:
+    * Not U2F in free version, but TOTP
 
 ### Keeper
 
@@ -116,5 +123,12 @@ For companies
 ## Vaults
 
 * OSS [Nextcloud](https://nextcloud.com/)
+
+## Notes
+
+* List: [6 Best Cross Platform Note Apps for Windows, Mac, iOS &amp; Android | Mashtips](https://mashtips.com/crossplatform-note-apps-windows-mac-ios-android/)
+* Encrypted: [StandardNotes - What happens to my data if Standard Notes disappears?](https://standardnotes.org/help/4/what-happens-to-my-data-if-standard-notes-disappears)
+
+
 
 The End

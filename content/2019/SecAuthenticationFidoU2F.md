@@ -46,6 +46,7 @@ News:
 * [FIDO ®-NFC | FEITIAN](https://www.ftsafe.com/Products/FIDO/NFC)
 * Review 2018-09: [Google Titan Security Key Bundle](https://www.pcmag.com/review/363644/google-titan-security-key-bundle)
 * Mobile as HW key: [Google Offers Built-In Security Key Feature for Android Phones](https://www.pcmag.com/news/367713/google-offers-built-in-security-key-feature-for-android-phon)
+* Mobile as HW key: [How to Use Android Smartphone as a Security Key | Mashtips](https://mashtips.com/use-android-smartphone-as-security-key/)
 
 ### Who else supports U2F?
 
@@ -74,11 +75,11 @@ News:
 |---|---|---|---|---|---|
 |--- Free ---|
 |MailFence|Y|N|Y ½G|e2½/m||
-|TutaNota|N|Y|Y 1G|e2½/m||
-|ProtonMail|Y|Y|Y ½G|e4/m||
+|TutaNota|N|PC|Y 1G|e2½/m||
+|ProtonMail|Y|Android|Y ½G|e4/m|| Also 2FA TOTP
 |--- Payed ---|
-|Mailbox.org|Y|Y|N|e1/m|100M|
-|Posteo|Y|Y|N|e1/m||
+|Mailbox.org|Y|Y|N|e1/m|100M| Deleted after 60d
+|Posteo|Y|Y|N|e1/m|| Also sync IOS Notes
 |RunBox||Y|N|||
 |FastMail||Y|N|||
 |TheXYZ||Y|N|||

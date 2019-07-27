@@ -1,6 +1,6 @@
 Title:  KeyBase
 Date: 2099-01-01 00:00
-Category: Biz
+Category: DevOps
 Tags: #keybase
 
 ## KeyBase

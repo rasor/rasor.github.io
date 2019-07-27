@@ -1,6 +1,6 @@
 Title: Unity 3D + Vuforia + HoloLens
 Date: 2099-01-01 00:00
-Tags: #unity, #3d
+Tags: #unity, #3d, #ar, #vr
 
 * [Download Unity](https://store.unity.com/download?ref=personal)
 * GameObj - Vuforia - AR Camera: [Getting Title at 20:04](https://youtu.be/MtiUx_szKbI?t=223)

@@ -39,7 +39,10 @@ Tags: #aframe, #snapsvg, #ionic, #ng, #react, #svg, #css3d, #infamous, #threejs,
 
 ## ARCore (Android)
 
+* Download: [ARCore by Google - Apps on Google Play](https://play.google.com/store/apps/details?id=com.google.ar.core)
+* Certified devices: [Supported Devices ARCore](https://developers.google.com/ar/discover/supported-devices)
 * Vid: [What's new in AR (Google I/O '18)](https://www.youtube.com/watch?v=MeZcQguH124)
+* Blog 2019-05: [Install Google Playground and AR Stickers | On Any Android | Mashtips](https://mashtips.com/install-google-playground-ar-stickers-android/)
 
 ## WikiTude
 
