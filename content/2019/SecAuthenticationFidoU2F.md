@@ -40,6 +40,15 @@ News:
 
 * Lots of adds! [YubiKey 5 Series Arrives With Passwordless Authentication](https://www.tomshardware.com/news/yubikey-5-series-passwordless-authentication,37834.html)
 
+### Duo Authenticator (now Cisco)
+
+* [Duo Authenticator](https://duo.com/pricing)
+    * [Duo Mobile: Secure Two-Factor Authentication App](https://duo.com/product/trusted-users/two-factor-authentication/duo-mobile)
+    * [Authentication Methods](https://duo.com/product/trusted-users/two-factor-authentication/authentication-methods)
+    * Cons:
+        * [The Free version](https://duo.com/pricing/duo-free) is [only a 30d trail](https://duo.com/trial)
+        * You have to sign up. This enables Google Drive to backup you 2FA codes (thus sharing your 2FA codes with Google). You don't have to enable the backup feature.
+
 ### Other HW keys
 
 * [USB Dongle Authentication](https://www.dongleauth.info/dongles/)
