@@ -29,6 +29,9 @@ Tags: #cpu, #laptop
 * 8292/4/1.80 [PassMark - Intel Core i7-8550U @ 1.80GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8550U+%40+1.80GHz&id=3064)
 * 8134/4/2.10 [PassMark - AMD Ryzen 5 3500U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
 * 7677/4/1.60 [PassMark - Intel Core i5-8250U @ 1.60GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8250U+%40+1.60GHz&id=3042)
+* 7682/4/2.40 [PassMark - Intel Core i7-4700MQ @ 2.40GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-4700MQ+%40+2.40GHz&id=1923)
+    * My 6 year old PC:  
+    VT-x: Y, VT-d: N [Intel® Core™ i7-4700MQ Processor (6M Cache, up to 3.40 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/75117/intel-core-i7-4700mq-processor-6m-cache-up-to-3-40-ghz.html)
 * --- 2 chores----------------
 * 5039/2/2.20 [PassMark - Intel Core i3-8130U @ 2.20GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-8130U+%40+2.20GHz&id=3225)
 * 4602/2/2.50 [PassMark - Intel Core i5-7200U @ 2.50GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7200U+%40+2.50GHz&id=2865)
@@ -36,5 +39,10 @@ Tags: #cpu, #laptop
     * 
         * DKK 4499 / 4GB / 128SSD / 14'' [Lenovo Ideapad 530s 14&amp;quote; bærbar computer (mineral gray) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/LE81H10000MX/lenovo-ideapad-530s-14-barbar-computer-mineral-gray)
 
+
+Previous Posts:
+
+* [CPU: Can you live without VT-d?](https://rasor.wordpress.com/2013/03/24/cpu-can-you-live-without-vt-d/)
+* [CPU: Choosing a CPU for virtualization](https://rasor.wordpress.com/2010/01/29/cpu-choosing-a-cpu-for-virtualization/)
 
 The End
