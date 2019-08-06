@@ -13,13 +13,19 @@ I [installed DamnedSmallLinux](https://rasor.wordpress.com/2013/07/02/linux-on-u
 But [DSL apparently hasn't been updated since 2008](https://en.wikipedia.org/wiki/Damn_Small_Linux).  
 
 So what are [the choises?](https://en.wikipedia.org/wiki/Template:Linux_distributions). Here you can see some [more details](https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions)
-I think I'll try [Linux Lite](https://en.wikipedia.org/wiki/Linux_Lite) - a Ubuntu/Debian fork.
+I think I'll try [Linux Lite](https://en.wikipedia.org/wiki/Linux_Lite) - a Ubuntu/Debian fork.  
+Lite is recommended on [9 Best Linux Distros For Beginner Users — 2019 Edition](https://fossbytes.com/best-linux-distro-beginners/) for slow/old/small machines and for Linux dummies comming from Windows.   
+It uses a simmple Desktop Xfce without animations and fancy design.  
+Check out other desktops on [10 Best Linux Desktop Environments And Their Comparison | 2018 Edition](https://fossbytes.com/best-linux-desktop-environments/)
 
-Also interestion is [Android-x86](https://en.wikipedia.org/wiki/Android-x86) - of course an Android fork.
+Also interestion is [Android-x86](https://en.wikipedia.org/wiki/Android-x86) - of course an Android fork.  
 You can download from [Android-x86 - OSDN](https://osdn.net/projects/android-x86/releases).  
 
 For a development PC I would to use CentOS, which is the community edition of RedHat - a Fedoroa fork.  
-You can download [CentOS here](https://centos.org/download/). A DVD version is 4.5 GB, whereas a minimal version is only 1 GB.
+You can download [CentOS here](https://centos.org/download/). A DVD version is 4.5 GB, whereas a minimal version is only 1 GB.  
+But after reading [11 Best Linux Distros For Programming & Developers [2019 Edition]](https://fossbytes.com/best-linux-distros-for-programming-developers/) it seems like [Pop!_OS](https://system76.com/pop) is the choise for me. All developer tools already installed. Drivers installed. Pop!_OS is a Debian/Ubuntu fork.
+
+Also interesting is the [10 Most Secure Linux Distros For Complete Privacy & Anonymity | 2017 Edition](https://fossbytes.com/secure-linux-distros-privacy-anonymity/) list.
 
 ## Install LinuxLite
 
@@ -32,7 +38,9 @@ Now you need to burn the .iso to a bootable USB stick. [Here is HowTo On Windows
 * Select source (.iso), target (USB) and burn.
 * Info: balena also offers a Raspberri PI - [balenaFin](https://www.balena.io/fin/) to host the OS.
 
+### Testing Lite
 
-
+Lite was really easy to use - just as a user without cmd line needs - the tools are just where you are used to in Windows.  
+I didn't have to install any driver on my old PC.
 
 The End
