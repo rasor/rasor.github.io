@@ -1,7 +1,7 @@
 Title: Install LinuxLite on Laptop
 Date: 2099-01-01 00:00
 Category: DevOps
-Tags: #linux , #etcher, #usb
+Tags: #linux , #etcher, #usb, #rufus, #iso
 
 I want to have a small Linux running on a small old laptop.
 
@@ -37,6 +37,7 @@ Now you need to burn the .iso to a bootable USB stick. [Here is HowTo On Windows
 * Install and execute Etcher.
 * Select source (.iso), target (USB) and burn.
 * Info: balena also offers a Raspberri PI - [balenaFin](https://www.balena.io/fin/) to host the OS.
+* If problems: If the flash is not formatted and Windows refuses to format it, then Use [Rufus](https://rufus.ie/) either just to format or also for burning .iso
 
 ### Testing Lite
 
