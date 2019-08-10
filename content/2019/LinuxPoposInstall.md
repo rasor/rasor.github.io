@@ -22,6 +22,32 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 
 ### Install
 
+#### Pop Shop
+
+* VSCode
+* GParted
+* Remote Desktop Viewer
+
+#### Internet
+
+* Brave Browser
+
+#### Git
+
+* Prerequisites
+    * From PopShop installed VSCode
+* Guide: [How To Install and Configure Git on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
+
+```bash
+git --version
+# git version 2.20.1
+git config --global user.name "Your Name"
+git config --global user.email "youremail@domain.com"
+git config --list
+# user.name=Your Name
+# user.email=youremail@domain.com
+```
+
 #### xClip
 
 Install [xClip](https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/)
