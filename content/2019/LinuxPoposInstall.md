@@ -22,7 +22,7 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 
 ### Install
 
-#### Pop Shop
+#### From Pop Shop
 
 * VSCode
 * GParted
@@ -32,11 +32,56 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 
 * Brave Browser
 
+#### Authenticator
+
+For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  
+
+* [Yubico Authenticator](https://www.yubico.com/products/services-software/download/yubico-authenticator/)
+
+```bash
+# 64-bit Debian
+sudo apt-add-repository ppa:yubico/stable
+sudo apt update
+sudo apt install yubioath-desktop
+```
+
+Notes
+
+* Yubikey install also installed python 3
+* Some browsers supporting Yubikey: Chrome, Brave, Opera
+
+#### Keybase
+
+Keybase is a cloud vault (a kind like password managers) using keys from devices for encryption (unlike the psw mgrs, that uses a master key).  
+This enables encrypted sharing between users and trust based on proofs written to social networks.  
+
+* [Install Linux | Keybase Docs](https://keybase.io/docs/the_app/install_linux)
+
+```bash
+# 64-bit Debian install
+curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+sudo apt install ./keybase_amd64.deb
+run_keybase
+
+# Using:
+# are you a programmer? some terminal examples
+keybase prove twitter
+keybase id chris
+keybase help
+
+# KBFS examples
+cat /keybase/public/chris/plan.txt
+echo "dirty secret" > /keybase/private/yourname/diary.txt
+echo "Dear world, check me out." > /keybase/public/yourname/plan.txt
+```
+
 #### Git
 
 * Prerequisites
     * From PopShop installed VSCode
-* Guide: [How To Install and Configure Git on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
+* Guides
+    * [How To Install and Configure Git on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
+    * [Configuring 2FA for Github with Microsoft Visual Studio Code Integration](https://mattselkey.com/configuring-2fa-for-github-microsoft-visual-code-integration/)
 
 ```bash
 git --version
