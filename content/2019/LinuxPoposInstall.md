@@ -141,6 +141,9 @@ If you use 2FA on github, then SSH access with a private key avoids having a `Pe
 So from VSCode rather like to use SSH access (opposed to HTTPS access).  
 Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  
 
+Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode - Ref: 
+[Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code)
+
 ```bash
 # Check for existing SSH keys
 ls -al ~/.ssh
@@ -164,6 +167,10 @@ ssh-keygen -t rsa -b 4096 -C "youremail@domain.com"
 eval "$(ssh-agent -s)"
 # gent pid 17722
 ssh-add ~/.ssh/id_rsa_youruserid_github
+
+# If you want to remove keys from deamon
+# ssh-add -D
+# All identities removed.
 ```
 
 Add a new SSH key to your GitHub account
