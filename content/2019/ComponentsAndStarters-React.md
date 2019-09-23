@@ -23,4 +23,8 @@ Tags: #starter, #components, #react, #sencha, #apollo, #graphcool
 * 2017: [Win React Riot With This Tech Stack](https://www.reactriot.com/blog/win-with-this-techstack)
 * 2016: [Headless CMS with React.js](https://react-etc.net/entry/headless-cms-with-react-js)
 
+## Books
+
+* 2018-11: [Learn React with TypeScript 3](https://www.packtpub.com/web-development/learn-react-typescript-3)
+
 The End
