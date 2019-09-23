@@ -7,10 +7,26 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 
 ## After install
 
+* [What To Do After Installing Ubuntu 19.04](http://www.ubuntubuzz.com/2019/04/what-to-do-after-installing-ubuntu-1904-disco-dingo.html)
+* [Preparations for GNOME 3 Customization](http://www.ubuntubuzz.com/2019/03/preparations-for-gnome-3-customization.html)
+
 ### Tips
 
 * [RightClick = 2 finger click](https://who-t.blogspot.com/2018/04/gnome-328-uses-clickfinger-behaviour-by.html)
+* [[Quick Tip] Pin App Shortcuts to the Desktop in Ubuntu 18.04 | UbuntuHandbook](http://ubuntuhandbook.org/index.php/2018/09/pin-app-shortcut-desktop-ubuntu-18-04/)
 * [Create shortcut for URL](https://askubuntu.com/questions/359492/create-a-shortcut-for-url)
+    ```bash
+    # Check that you have xdg-open (contained in xdg-utils) installed
+    apt list xdg-utils
+    # xdg-utils/disco,disco,now 1.1.3-1ubuntu2 all [installed,automatic]
+    ```
+    * Now from Brave-browser you can
+        * File - More Tools - Create Shortcut  
+        => This will create a .desktop file using xdg-open in the Desktop folder.
+        * On the Desktop (not from desktop folder!): 
+            * Right-click the .desktop file - Allow launching
+            * Double-click the file to open in browser
+* Create a [Ubuntu One](https://login.launchpad.net/) account for SSO to Ubuntu social medias.
 
 #### Going from Dos to Terminal
 
@@ -28,8 +44,16 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 It is kind of a local appstore.
 
 * VSCode
+* FileManager-Actions (previously called Nautilus-Actions)
+    * 2019: [How to Install Nautilus Actions in Ubuntu 18.04](http://ubuntuhandbook.org/index.php/2019/01/install-nautilus-actions-ubuntu-18-04/)
+    * 2019: [GNOME / filemanager-actions](https://gitlab.gnome.org/GNOME/filemanager-actions)
+    * 2012: [How to Easily Add Custom Right-Click Options to Ubuntu&#8217;s File Manager](https://www.howtogeek.com/116807/how-to-easily-add-custom-right-click-options-to-ubuntus-file-manager/)
+* Gnome Tweaks - Also called Gnome Tweak Tool
+    * [Apps/Tweaks - GNOME Wiki!](https://wiki.gnome.org/Apps/Tweaks)
+    * CLI install: `sudo apt install gnome-tweaks`
 * GParted
 * Remote Desktop Viewer
+* Yubico Authenticator
 
 #### From SnapCraft
 
@@ -52,10 +76,66 @@ Install apps from the appstore
 
 * [GitHub Desktop](https://snapcraft.io/install/github-desktop/ubuntu)  
     `sudo snap install github-desktop --beta --classic`
+* Bitwarden - or use Gnome Seahorse
+* Riot - IRC client
+* Heroku CLI - cloud manager
+
+#### Packages / Software Updater
+
+* [How Do I Update Ubuntu Linux Software Using Command Line? - nixCraft](https://www.cyberciti.biz/faq/how-do-i-update-ubuntu-linux-softwares/)
+
+#### Desktops
+
+* Desktop Gnome (default in Linux distro Ubuntu and Pop_OS!)
+    * Default Filemanager is called **Gnome Files** and is also called **Nautilus**. Ref: [5 of the Best File Managers for Linux](https://www.maketecheasier.com/best-file-managers-linux/)
+        * Shortcuts:
+            * Ctrl+h: Toggle hidden files
+    * Gnome currently - in v 3.32 has removed possiblity to drag'n'drop url shortcuts to the desktop (last seen in 3.28), so I wanted another desktop.
+
+* Other desktops to consider: [10 Best Linux Desktop Environments And Their Comparison | 2018 Edition](https://fossbytes.com/best-linux-desktop-environments/)
+
+Install another desktop
+
+```bash
+# Get latest packages
+sudo apt-get update
+# Upgrade existing sw
+sudo apt-get upgrade
+# Upgrade existing kernel
+sudo apt-get dist upgrade
+sudo reboot
+
+# check if you have the new desktop - e.g. cinnamon
+apt-cache search cinnamon
+# install the desktop
+sudo apt-get install cinnamon
+# opt. remove old desktop
+# sudo apt-get remove kde
+```
+
+* Log out 
+* Press setting on login - choose cinnamon
+* Enter password and login
 
 #### Internet
 
 * Brave Browser
+    * Extensions
+        * [GNOME Shell-Integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+            * [How to Use GNOME Shell Extensions [Complete Guide]](https://itsfoss.com/gnome-shell-extensions/)
+                ```bash
+                # sudo apt install gnome-tweak-tool # installed via pop
+                apt list gnome-tweaks
+                # gnome-tweaks/disco,disco,now 3.32.0-1 all [installed]
+                gnome-shell --version
+                # GNOME Shell 3.32.2
+                sudo apt install gnome-shell-extensions
+                # sudo apt install chrome-gnome-shell # installed via chrome extension
+                apt list chrome-gnome-shell
+                # chrome-gnome-shell/disco,disco,now 10.1-5 all [installed,automatic]
+                ```
+            * Find [GNOME Shell Extensions](https://extensions.gnome.org/)
+        * Bitwarden
 
 #### Authenticator
 
@@ -163,12 +243,33 @@ ssh-keygen -t rsa -b 4096 -C "youremail@domain.com"
 # The key's randomart image is:
 # +---[RSA 4096]----+
 
-# Start the ssh-agent in the background
-eval "$(ssh-agent -s)"
-# gent pid 17722
+# Avoid error "Can't clone git repo and getting error ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory Host key verification failed"
+# https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+# github.com:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
+ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+```
+
+Now you are ready to use your key.  
+When using it to connect to Github from VSCode you should start VSCode from a prompt like this:
+
+```bash
+# goto a repo folder where you have cloned a repo into.
+cd ~/myrepos/someclonedrepo
+
+# Start the ssh-agent in the background - reuse the agent if it is already running
+ps -p $SSH_AGENT_PID > /dev/null || eval "$(ssh-agent -s)"
+# Agent pid 17722
+
+# Add the key to your agent
 ssh-add ~/.ssh/id_rsa_youruserid_github
 
-# If you want to remove keys from deamon
+# Open VSCode
+code .
+
+# Above three lines should be in a script
+
+# If you want to remove keys from daemon
 # ssh-add -D
 # All identities removed.
 ```
@@ -211,5 +312,8 @@ git remote -v
         * [Caching your GitHub password in Git - GitHub Help](https://help.github.com/en/articles/caching-your-github-password-in-git)
         * [How to setup Git Credential store in Windows](https://agilewarrior.wordpress.com/2017/09/25/how-to-setup-git-credential-store-in-windows/)
     * [How to Add a New Remote to your Git Repo](https://articles.assembla.com/en/articles/1136998-how-to-add-a-new-remote-to-your-git-repo)
+* Troubleshooting
+    * [How to check if ssh-agent is already running in bash?](https://stackoverflow.com/questions/40549332/how-to-check-if-ssh-agent-is-already-running-in-bash)
+    * [Can&#39;t clone git repo and getting error ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory Host key verification failed](https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass)
 
 The End

@@ -1,20 +1,23 @@
 Title: Buy new laptop
 Date: 2099-01-01 00:00
 Category: Biz
-Tags: #cpu, #laptop
+Tags: #cpu, #laptop, #hw
 
-* List: [PassMark CPU Benchmarks - New Laptop CPUs Performance](https://www.cpubenchmark.net/laptop.html)
+* Lists: 
+    * Laptops: [PassMark CPU Benchmarks - New Laptop CPUs Performance](https://www.cpubenchmark.net/laptop.html)
+    * Search: [PassMark - CPU Benchmarks - List of Benchmarked CPUs](https://www.cpubenchmark.net/cpu_list.php)
 * --- 6 chores----------------
 * 13669/6/2.60 [PassMark - Intel Core i7-9750H @ 2.60GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-9750H+%40+2.60GHz&id=3425)
     * VT-x: Y, VT-d: Y [Intel® Core™ i7-9750H Processor (12M Cache, up to 4.50 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/191045/intel-core-i7-9750h-processor-12m-cache-up-to-4-50-ghz.html)
         * DKK 7999 / 8GB / 512SSD [Lenovo Ideapad L340 15&quot; Gaming computer | K&oslash;b online p&aring; Bilka.dk](https://www.bilka.dk/elektronik/computere/gamer-pc/baerbar-gamer-pc/lenovo-ideapad-l340-15-gaming-computer/p/100488161?intcmpid=S_gamer-pc-baerbar_CA_AddWish_100488161#aw_source=pb-5bc72e8ee05181429caa57b1)
 * 12457/6/2.20 [PassMark - Intel Core i7-8750H @ 2.20GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8750H+%40+2.20GHz&id=3237)
     * VT-x: Y, VT-d: Y [Intel® Core™ i7-8750H Processor (9M Cache, up to 4.10 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/134906/intel-core-i7-8750h-processor-9m-cache-up-to-4-10-ghz.html)
-        * DKK 6999 / 8GB / 512SSD [ACER NITRO 5 AN515-52-75ZY 15,6&quot; GAMINGCOMPUTER](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/acer-nitro-5-an515-52-75zy-156-gamingcomputer/p-684944/)
+        * DKK 6799 / 8GB / 512SSD [ACER NITRO 5 AN515-52-75ZY 15,6&quot; GAMINGCOMPUTER](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/acer-nitro-5-an515-52-75zy-156-gamingcomputer/p-684944/)
         * DKK 5777 / 8GB / 256SSD [Acer Nitro 5 AN515-52-78XW gaming b&aelig;rbar PC | K&oslash;b online p&aring; Bilka.dk](https://www.bilka.dk/elektronik/computere/gamer-pc/baerbar-gamer-pc/acer-nitro-5-an515-52-78xw-gaming-baerbar-pc/p/100435217)
 * --- 4 chores----------------
 * 9823/4/2.40 [Intel Core i5-9300H @ 2.40GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9300H+%40+2.40GHz&id=3448)
     * VT-x: Y, VT-d: Y [Intel® Core™ i5-9300H Processor (8M Cache, up to 4.10 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/191075/intel-core-i5-9300h-processor-8m-cache-up-to-4-10-ghz.html)
+        * DKK 5999 / 8GB / 512SSD [HP Pavilion Gaming 15-dk0906no 15,6&amp;quote; bærbar gamingcomputer - Gaming laptop](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/32636/hp-pavilion-gaming-15-dk0906no-15-6-barbar-gamingcomputer)
         * DKK 6590 / 8GB / 512SSD [Dell G3 15 &quot;bærbar gaming-pc med Game Shift-teknologi | Dell Danmark](https://www.dell.com/da-dk/shop/b%C3%A6rbare-dell-computere/ny-dell-g3-15/spd/g-series-15-3590-laptop/cn35916)
         * DKK 6999 / 8GB / 512SSD [Lenovo Ideapad L340 15&quot; Gaming computer | K&oslash;b online p&aring; Bilka.dk](https://www.bilka.dk/elektronik/computere/gamer-pc/baerbar-gamer-pc/lenovo-ideapad-l340-15-gaming-computer/p/100488059?intcmpid=PR_100488159_PP_AddWish_100488059)
         * DKK 5999 / 8GB / 256SSD [Lenovo Ideapad L340 15&quot; Gaming computer | K&oslash;b online p&aring; Bilka.dk](https://www.bilka.dk/elektronik/computere/gamer-pc/baerbar-gamer-pc/lenovo-ideapad-l340-15-gaming-computer/p/100488159?intcmpid=PR_100488161_PP_AddWish_100488159#aw_source=pb-5922e9d8e4b07f430f26dc39)
@@ -28,6 +31,8 @@ Tags: #cpu, #laptop
         * DKK 4777 / 8GB / 512SSD [Acer Aspire 5 15,6&amp;quote; bærbar computer (sort) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/16466/acer-aspire-5-15-6-barbar-computer-sort)
 * 8292/4/1.80 [PassMark - Intel Core i7-8550U @ 1.80GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8550U+%40+1.80GHz&id=3064)
 * 8134/4/2.10 [PassMark - AMD Ryzen 5 3500U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
+* 8060/4/2.30 [PassMark - AMD Ryzen 7 3700U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3700U&id=3426)
+    * DKK 5999 / 16GB / 512SSD [Acer Aspire A315-42G-R2X5 15.6](https://storetablet.bilka.dk/elektronik/computere/baerbar-computer/acer-aspire-a315-42g-r2x5-15-6-baerbar-computer/p/100489095)
 * 7677/4/1.60 [PassMark - Intel Core i5-8250U @ 1.60GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8250U+%40+1.60GHz&id=3042)
 * 7682/4/2.40 [PassMark - Intel Core i7-4700MQ @ 2.40GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-4700MQ+%40+2.40GHz&id=1923)
     * My 6 year old PC:  
