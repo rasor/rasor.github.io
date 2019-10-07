@@ -13,7 +13,8 @@ Tags: #microsoft, #dotnet, #csharp, #aspnet
 
 * Agenda: [.NET Conf 2018](https://www.dotnetconf.net/Agenda)
 * PowerPoint Presentations: [dotnet-presentations/dotnetconf2018](https://github.com/dotnet-presentations/dotnetconf2018/tree/master/Technical/Decks)
-* Recorded events: [.NET Conf 2018 Channel 9](https://channel9.msdn.com/Events/dotnetConf/2018)
+* Recorded events: [.NET Conf September 2019 Channel 9](https://channel9.msdn.com/events/dotnetConf/NET-Conf-2019)
+* Recorded events: [.NET Conf September 2018 Channel 9](https://channel9.msdn.com/Events/dotnetConf/2018)
     * [Whats New in ASP.NET Core?](https://channel9.msdn.com/Events/dotnetConf/2018/S104)
         * [https://quicktype.io/](https://quicktype.io/) - generate code from JSON
         * [API design guidance](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)

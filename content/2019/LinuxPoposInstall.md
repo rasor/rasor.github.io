@@ -78,7 +78,11 @@ Install apps from the appstore
     `sudo snap install github-desktop --beta --classic`
 * Bitwarden - or use Gnome Seahorse
 * Riot - IRC client
+* juju - cloud manager [juju/juju](https://github.com/juju/juju) [Jujucharms | Juju](https://jaas.ai/)
 * Heroku CLI - cloud manager
+* Azure CLI - cloud manager
+* Microsoft Azure Storage Explorer - cloud storage manager
+* RedisDesktopManager
 
 #### Packages / Software Updater
 
