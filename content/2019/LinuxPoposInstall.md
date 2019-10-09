@@ -82,8 +82,12 @@ Install apps from the appstore
 * Heroku CLI - cloud manager
 * !Azure CLI - cloud manager !!! does not work with snap install.
     * [Install via CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest): `curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash`
+    * Test: `az login`
 * Microsoft Azure Storage Explorer - cloud storage manager
     * You need to connect to pws mgr after install: `snap connect storage-explorer:password-manager-service :password-manager-service`
+* Powershell - A Windows terminal
+    * [Install Azure PowerShell with PowerShellGet](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-2.7.0): `Install-Module -Name Az -AllowClobber -Scope CurrentUser`
+    * Test: `Connect-AzAccount`
 * RedisDesktopManager
 
 #### Packages / Software Updater
