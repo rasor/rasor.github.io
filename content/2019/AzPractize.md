@@ -48,16 +48,33 @@ Get-AzContext
 
 ### Get help from CLI
 
+[Tips for using Azure CLI effectively](https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_effectively.md)
+
 ```bash
 # BASH
 # Structure
 # az [ group ] [ subgroup ] [ command ] {parameters}
-# List all cmdlets
+# List all commands
 az -h
+# find a command
+az find blob
 # View group help
 az vm -h
 # View command help
 az vm create -h
+# looking up resource group and name
+az vm show -g [tab][tab]
+# AccountingGroup   RGOne  WebPropertiesRG
+az vm show -g WebPropertiesRG -n [tab][tab]
+# StoreVM  Bizlogic
+az vm show -g WebPropertiesRG -n Bizlogic
+# Using jq
+az vm list --out jsonc | jpterm
+az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageProfile.osDisk.osType }"
+# Name                    Os
+# ----------------------  -------
+# storevm                 Linux
+# bizlogic                Linux
 ```
 
 ```ps1
