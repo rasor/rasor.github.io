@@ -32,21 +32,30 @@ References
 
 When running from local CLI, then you'll have to select **current subscription**:
 ```bash
-# BASH login
+# BASH
+az -v
+# azure-cli                         2.0.74
+
+# login
 az login
 # Change to wanted subscription
 az account list
 az account set -s "some subscription name"
+# show current
 az account show
+az logout
 ```
 
 ```ps1
 # PS1 login
 connect-azaccount
 # Change to wanted subscription
-Get-AzContext -ListAvailable
+Get-AzSubscription
+Get-AzContext -ListAvailable #subset of above
 set-azcontext -subscriptionname "some subscription name"
+# show current
 Get-AzContext
+disconnect-azaccount
 ```
 
 ### Get help from CLI
@@ -71,9 +80,10 @@ az vm show -g [tab][tab]
 az vm show -g WebPropertiesRG -n [tab][tab]
 # StoreVM  Bizlogic
 az vm show -g WebPropertiesRG -n Bizlogic
-az vm list --output table
+az vm list --output table # {json,jsonc,table,tsv,yaml,none}
 # Using jq
 az vm list --output jsonc | jpterm
+# filter with http://jmespath.org/
 az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageProfile.osDisk.osType }"
 # Name                    Os
 # ----------------------  -------
@@ -83,6 +93,12 @@ az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageP
 
 ```ps1
 # PS1
+# List all az commands in currently installed az. modules
+Get-Help '-az'
+# List all cmdlets containing account in name
+Get-Help account
+# List currently installed modules
+Get-Module
 # List all cmdlets in the Az.Accounts module
 Get-Command -Module Az.Accounts
 # List all cmdlets that contain VirtualNetwork
@@ -101,6 +117,29 @@ Get-Help -Name Get-AzSubscription -Online
 
 ### Resource Group and ARM
 
+Study:
+* [Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-resource-manager)
+* [Course | AZ-103.1 | AzureAcademy - Resource Manager](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/#block-v1:FP+AZ-103.1+2019_T3+type@sequential+block@d14c5e7b-2617-7a76-c09d-cde3c1584c9d)
+
+Resource Group Tips:
+* Administrate via **Portal, BASH, PS1, SDK or REST API**
+    * New features: Max **180 days** from API to Portal
+    * API is provided by **resource provider**s - i.e. Microsoft.Storage providing storage accounts
+        * A resource **provider** delivers many resource **types**
+        * Format: {resource-provider}/{resource-type}
+        * Example: Microsoft.KeyVault/vaults
+        * A resource-type needs valid API version and locations
+* Use **same ARM template** for different **environments**
+* Use **ARM** templates for **deploy**
+    * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems)
+* Use **CLI** terminals (**BASH or PS1**) for **manage** (start, stop, delete, etc)
+    * Delete group, when not used
+* **Deploy, upgrade, manage, delete, apply-RBAC-to, tag, monitor** resources as a **single entity**
+    * View **billing** based on resourses with same **tag**
+    * View **systems** based on resourses with same **tag**
+    * View **infra** based on resourses with same **tag**
+    * Create **resource groups** based on these (tag-)groupings, which also separates **lifecycle**s
+
 [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 ```bash
 # BASH
@@ -110,17 +149,32 @@ az group deployment create \
   --resource-group ExampleGroup \
   --template-file storage.json \
   --parameters storageAccountType=Standard_GRS
+# print
+az group list # all yours - default: json format
+az group list --output table # {json,jsonc,table,tsv,yaml,none}
+az group list --output yaml # cool - converting json to yaml
+# filter with http://jmespath.org/
+az group list --query "[?location == 'westeurope']"
+az group list --query "[].name[?contains(@,'Exa')=='true']" # hmm - contains not working on my pc - am I missing a pip install or npm install?
+az group show -n ExampleGroup
+# Cleanup
+az group delete -n ExampleGroup 
 ```
 
 [Deploy resources with PowerShell and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy)
 ```ps1
 # PS1
-$resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
-$location = Read-Host -Prompt "Enter the location (i.e. centralus)"
+$resourceGroupName = Read-Host -Prompt "Enter the Resource Group name (i.e 'rg-envirname-infracontainer-or-systemname')" 
+$location = Read-Host -Prompt "Enter the location (i.e. centralus or westeurope)"
 
 New-AzResourceGroup -Name $resourceGroupName -Location $location
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
   -TemplateFile c:\MyTemplates\azuredeploy.json
+# print
+Get-AzResourceGroup # all yours
+Get-AzResourceGroup $resourceGroupName
+# Cleanup
+Remove-AzResourceGroup $resourceGroupName
 ```
 
 -------------------------------
