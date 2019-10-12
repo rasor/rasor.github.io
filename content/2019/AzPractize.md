@@ -22,8 +22,11 @@ References
 * BASH: [az](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest)
     * Source: [Azure/azure-cli](https://github.com/Azure/azure-cli)
 * PS1: [Az modules](hhttps://docs.microsoft.com/en-us/powershell/module/?view=azps-2.7.0)
+    * [All az powershell modules](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md)
     * Source: [Azure/azure-powershell](https://github.com/Azure/azure-powershell)
     * [Other PS1 Modules](https://docs.microsoft.com/en-us/powershell/module/)
+        * Print installed: `get-module`
+        * Install (e.g. Azure Stack): `install-module -name azs -allowclobber`
 
 ### Select Subscription
 
@@ -68,8 +71,9 @@ az vm show -g [tab][tab]
 az vm show -g WebPropertiesRG -n [tab][tab]
 # StoreVM  Bizlogic
 az vm show -g WebPropertiesRG -n Bizlogic
+az vm list --output table
 # Using jq
-az vm list --out jsonc | jpterm
+az vm list --output jsonc | jpterm
 az vm list --query "[?provisioningState=='Succeeded'].{ name: name, os: storageProfile.osDisk.osType }"
 # Name                    Os
 # ----------------------  -------
@@ -94,5 +98,38 @@ Get-Help -Name Get-AzSubscription -Full
 # View the help content for Get-AzSubscription on https://docs.microsoft.com
 Get-Help -Name Get-AzSubscription -Online
 ```
- 
+
+### Resource Group and ARM
+
+[Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
+```bash
+# BASH
+az group create --name ExampleGroup --location "Central US"
+az group deployment create \
+  --name ExampleDeployment \
+  --resource-group ExampleGroup \
+  --template-file storage.json \
+  --parameters storageAccountType=Standard_GRS
+```
+
+[Deploy resources with PowerShell and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy)
+```ps1
+# PS1
+$resourceGroupName = Read-Host -Prompt "Enter the Resource Group name"
+$location = Read-Host -Prompt "Enter the location (i.e. centralus)"
+
+New-AzResourceGroup -Name $resourceGroupName -Location $location
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
+  -TemplateFile c:\MyTemplates\azuredeploy.json
+```
+
+-------------------------------
+
+```bash
+# BASH
+```
+```ps1
+# PS1
+```
+
 The End

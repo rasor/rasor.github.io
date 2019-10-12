@@ -11,7 +11,9 @@ Tags: #azure
     * ARM:
         * [GAzure Resource Manager overview](http://docs.microsoft.com/en-ushttps://docs.microsoft.com/en-us/azure/azure-resource-manager/template-deployment-overview/azure/azure-resource-manager/resource-group-overview#resource-groups)
         * [Azure Resource Manager templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/template-deployment-overview)
-        * QuickStart: [Create and deploy an Azure Resource Manager template by using the Azure portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-the-portal)
+        * QuickStart: [Create and deploy an Azure Resource Manager template by using the Azure portal](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-the-portal)4
+        * PS1: [Deploy resources with PowerShell and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy)
+        * BASH: [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 * Integration:
     * Vid: [Azure Integration Services—Build Integrated Solutions | Microsoft Azure](https://azure.microsoft.com/en-us/product-categories/integration/)
     * Publishers:
