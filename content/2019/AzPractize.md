@@ -3,7 +3,7 @@ Date: 2099-01-01 00:00
 Category: DevOps
 Tags: #azure
 
-## Azure Portal Home
+# Azure Portal Home
 
 * [Microsoft Azure](https://portal.azure.com/#home)
     * [Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure&resource_type=learning%20path)
@@ -11,7 +11,7 @@ Tags: #azure
     * [Security Center](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0)
     * [Cost Management](https://portal.azure.com/#blade/Microsoft_Azure_CostManagement/Menu/overview)
 
-## Azure Cloud Shell
+# Azure Cloud Shell
 
 When you want to use the cloud shell via browser you need to create:
 * Resource Group
@@ -28,7 +28,7 @@ References
         * Print installed: `get-module`
         * Install (e.g. Azure Stack): `install-module -name azs -allowclobber`
 
-### Select Subscription
+## Select Subscription
 
 When running from local CLI, then you'll have to select **current subscription**:
 ```bash
@@ -58,7 +58,7 @@ Get-AzContext
 disconnect-azaccount
 ```
 
-### Get help from CLI
+## Get help from CLI
 
 [Tips for using Azure CLI effectively](https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_effectively.md)
 
@@ -115,7 +115,7 @@ Get-Help -Name Get-AzSubscription -Full
 Get-Help -Name Get-AzSubscription -Online
 ```
 
-### Resource Group and ARM
+## Resource Group and ARM
 
 Study:
 * [Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-resource-manager)
@@ -173,7 +173,7 @@ Resource Group Tips:
     * Users
     * Automation scripts
 
-[Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
+Guide: [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 ```bash
 # BASH
 az group create --name ExampleGroup --location "Central US"
@@ -194,7 +194,7 @@ az group show -n ExampleGroup
 az group delete -n ExampleGroup 
 ```
 
-[Deploy resources with PowerShell and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy)
+Guide: [Deploy resources with PowerShell and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy)
 ```ps1
 # PS1
 $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name (i.e 'rg-envirname-infracontainer-or-systemname')" 
@@ -210,12 +210,9 @@ Get-AzResourceGroup $resourceGroupName
 Remove-AzResourceGroup $resourceGroupName
 ```
 
-#### Move Resources
+### Move Resources
 
-* [Guide](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources#services-that-can-be-moved)
-
-![Move in 3 steps](https://docs.microsoft.com/en-us/azure/azure-resource-manager/media/resource-group-move-resources/cross-subscription-move-scenario.png)  
-(Image by Microsoft)
+[Guide](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources#services-that-can-be-moved)
 
 ```bash
 # BASH
@@ -241,6 +238,10 @@ $webapp = Get-AzResource -ResourceGroupName OldRG -ResourceName ExampleSite
 $plan = Get-AzResource -ResourceGroupName OldRG -ResourceName ExamplePlan
 Move-AzResource -DestinationResourceGroupName NewRG -ResourceId $webapp.ResourceId, $plan.ResourceId
 ```
+
+Dependent resources must be moved together, when moving across subscriptions  
+![Move in 3 steps](https://docs.microsoft.com/en-us/azure/azure-resource-manager/media/resource-group-move-resources/cross-subscription-move-scenario.png)  
+(Image by Microsoft)
 
 -------------------------------
 
