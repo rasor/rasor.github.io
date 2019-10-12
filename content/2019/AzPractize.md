@@ -148,6 +148,18 @@ Resource Group Tips:
     * needs a location (region) for storing their metadata - though its resources can be in different regions
 * **Resources**
     * can interact with resources in other groups
+* Resource Manager **Settings**:
+    * **Locks**:
+        * To avoid accidental deletion
+        * Apply on level
+            * Subscription
+                * Resource Group or
+                    * Resource
+        * Are inherited by child resources
+        * Apply by **Owner**s or **User Access Admin**s
+    * Tags
+    * Users
+    * Automation scripts
 
 [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 ```bash
