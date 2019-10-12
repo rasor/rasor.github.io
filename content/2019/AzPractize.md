@@ -115,7 +115,7 @@ Get-Help -Name Get-AzSubscription -Full
 Get-Help -Name Get-AzSubscription -Online
 ```
 
-## Resource Group and ARM
+## Resource Groups and ARM templates
 
 Study:
 * [Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-resource-manager)
@@ -172,6 +172,8 @@ Resource Group Tips:
     * Tags
     * Users
     * Automation scripts
+
+### Creating Resource Groups
 
 Guide: [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 ```bash
