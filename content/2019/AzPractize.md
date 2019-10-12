@@ -129,8 +129,8 @@ Resource Group Tips:
         * Format: {resource-provider}/{resource-type}
         * Example: Microsoft.KeyVault/vaults
         * A resource-type needs valid API version and locations
-* Use **same ARM template** for different **environments**
 * Use **ARM** templates for **deploy**
+    * Use **same ARM template** for different **environments**
     * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems)
 * Use **CLI** terminals (**BASH or PS1**) for **manage** (start, stop, delete, etc)
     * Delete group, when not used
@@ -139,6 +139,15 @@ Resource Group Tips:
     * View **systems** based on resourses with same **tag**
     * View **infra** based on resourses with same **tag**
     * Create **resource groups** based on these (tag-)groupings, which also separates **lifecycle**s
+* Resource **Groups**:
+    * cannot share same resource
+    * cannot be renamed
+    * can span regions
+    * can move its resources to other groups
+    * can scope RBAC
+    * needs a location (region) for storing their metadata - though its resources can be in different regions
+* **Resources**
+    * can interact with resources in other groups
 
 [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 ```bash
