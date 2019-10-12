@@ -131,7 +131,10 @@ Resource Group Tips:
         * A resource-type needs valid API version and locations
 * Use **ARM** templates for **deploy**
     * Use **same ARM template** for different **environments**
-    * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems)
+    * Link or nest templates for only having one place to change a set of resources using [linked or nested templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-linked-templates)
+        * Nested templates are within parent
+        * Linked templates are external templates outside parent
+    * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems) having **dependent resources**
 * Use **CLI** terminals (**BASH or PS1**) for **manage** (start, stop, delete, etc)
     * Delete group, when not used
 * **Deploy, upgrade, manage, delete, apply-RBAC-to, tag, monitor** resources as a **single entity**
@@ -192,7 +195,7 @@ az group list --output yaml # cool - converting json to yaml
 az group list --query "[?location == 'westeurope']"
 az group list --query "[].name[?contains(@,'Exa')=='true']" # hmm - contains not working on my pc - am I missing a pip install or npm install?
 az group show -n ExampleGroup
-# Cleanup
+# Cleanup - careful - there might be dependent resources in the group
 az group delete -n ExampleGroup 
 ```
 
@@ -208,8 +211,41 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
 # print
 Get-AzResourceGroup # all yours
 Get-AzResourceGroup $resourceGroupName
-# Cleanup
+# Cleanup - careful - there might be dependent resources in the group
 Remove-AzResourceGroup $resourceGroupName
+```
+
+### Lock Resources
+
+Guide: [Lock Azure resources to prevent changes](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
+
+```bash
+# BASH
+# Lock resource and print
+az lock create --name LockSite --lock-type CanNotDelete --resource-group exampleresourcegroup --resource-name examplesite --resource-type Microsoft.Web/sites
+az lock list --resource-group exampleresourcegroup --resource-name examplesite --namespace Microsoft.Web --resource-type sites --parent ""
+# Lock resource group and print
+az lock create --name LockGroup --lock-type CanNotDelete --resource-group exampleresourcegroup
+az lock list --resource-group exampleresourcegroup
+# Print all
+az lock list
+# Remove
+lockid=$(az lock show --name LockSite --resource-group exampleresourcegroup --resource-type Microsoft.Web/sites --resource-name examplesite --output tsv --query id)
+az lock delete --ids $lockid
+```
+```ps1
+# PS1
+# Lock resource and print
+New-AzResourceLock -LockLevel CanNotDelete -LockName LockSite -ResourceName examplesite -ResourceType Microsoft.Web/sites -ResourceGroupName exampleresourcegroup
+Get-AzResourceLock -ResourceName examplesite -ResourceType Microsoft.Web/sites -ResourceGroupName exampleresourcegroup
+# Lock resource group and print
+New-AzResourceLock -LockName LockGroup -LockLevel CanNotDelete -ResourceGroupName exampleresourcegroup
+Get-AzResourceLock -ResourceGroupName exampleresourcegroup
+# Print all
+Get-AzResourceLock
+# Remove
+$lockId = (Get-AzResourceLock -ResourceGroupName exampleresourcegroup -ResourceName examplesite -ResourceType Microsoft.Web/sites).LockId
+Remove-AzResourceLock -LockId $lockId
 ```
 
 ### Move Resources
