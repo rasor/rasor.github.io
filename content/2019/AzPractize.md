@@ -143,9 +143,21 @@ Resource Group Tips:
     * cannot share same resource
     * cannot be renamed
     * can span regions
-    * can move its resources to other groups
     * can scope RBAC
     * needs a location (region) for storing their metadata - though its resources can be in different regions
+    * can **move** its **resources** to other **groups** - even in other **subscriptions**
+        * [Guide](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources#services-that-can-be-moved)
+        * Some [services can't be moved](https://docs.microsoft.com/en-us/azure/azure-resource-manager/move-support-resources)
+        * Both **groups** will be **locked** until move completes, but resources will not be down
+        * Both **subscriptions** 
+            * must be **active**
+            * must have **same Azure AD tenant ID**
+        * Target **subscription** 
+            * must have the **provider registered**
+            * must be within [limits and quotas](https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits)
+        * Minimum **permissions** needed: **RG write** and **RG mmoveResources**
+        * When moving across subscriptions:  
+        **Dependent resources** must be moved together with wanted resource to move   
 * **Resources**
     * can interact with resources in other groups
 * Resource Manager **Settings**:
@@ -196,6 +208,38 @@ Get-AzResourceGroup # all yours
 Get-AzResourceGroup $resourceGroupName
 # Cleanup
 Remove-AzResourceGroup $resourceGroupName
+```
+
+#### Move Resources
+
+* [Guide](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources#services-that-can-be-moved)
+
+![Move in 3 steps](https://docs.microsoft.com/en-us/azure/azure-resource-manager/media/resource-group-move-resources/cross-subscription-move-scenario.png)  
+(Image by Microsoft)
+
+```bash
+# BASH
+# AAD Tenant in both subscriptions must match
+az account show --subscription <your-source-subscription> --query tenantId
+# Register provider in target subscription
+az provider list --query "[].{Provider:namespace, Status:registrationState}" --out table
+az provider register --namespace Microsoft.Batch
+# Move
+webapp=$(az resource show -g OldRG -n ExampleSite --resource-type "Microsoft.Web/sites" --query id --output tsv)
+plan=$(az resource show -g OldRG -n ExamplePlan --resource-type "Microsoft.Web/serverfarms" --query id --output tsv)
+az resource move --destination-group newgroup --ids $webapp $plan
+```
+```ps1
+# PS1
+# AAD Tenant in both subscriptions must match
+(Get-AzSubscription -SubscriptionName <your-source-subscription>).TenantId
+# Register provider in target subscription
+Get-AzResourceProvider -ListAvailable | Select-Object ProviderNamespace, RegistrationState
+Register-AzResourceProvider -ProviderNamespace Microsoft.Batch
+# Move
+$webapp = Get-AzResource -ResourceGroupName OldRG -ResourceName ExampleSite
+$plan = Get-AzResource -ResourceGroupName OldRG -ResourceName ExamplePlan
+Move-AzResource -DestinationResourceGroupName NewRG -ResourceId $webapp.ResourceId, $plan.ResourceId
 ```
 
 -------------------------------
