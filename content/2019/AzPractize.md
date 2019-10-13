@@ -181,7 +181,9 @@ Resource Group Tips:
 Guide: [Deploy resources with Azure CLI and template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli)
 ```bash
 # BASH
+# Create Resource Group
 az group create --name ExampleGroup --location "Central US"
+# Deploy resources via ARM template
 az group deployment create \
   --name ExampleDeployment \
   --resource-group ExampleGroup \
@@ -204,8 +206,9 @@ Guide: [Deploy resources with PowerShell and template](https://docs.microsoft.co
 # PS1
 $resourceGroupName = Read-Host -Prompt "Enter the Resource Group name (i.e 'rg-envirname-infracontainer-or-systemname')" 
 $location = Read-Host -Prompt "Enter the location (i.e. centralus or westeurope)"
-
+# Create Resource Group
 New-AzResourceGroup -Name $resourceGroupName -Location $location
+# Deploy resources via ARM template
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
   -TemplateFile c:\MyTemplates\azuredeploy.json
 # print
@@ -214,6 +217,12 @@ Get-AzResourceGroup $resourceGroupName
 # Cleanup - careful - there might be dependent resources in the group
 Remove-AzResourceGroup $resourceGroupName
 ```
+
+### Creating ARM templates
+
+References:
+* [ARM template structure and syntax](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
+* [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/)
 
 ### Lock Resources
 
@@ -289,5 +298,68 @@ Dependent resources must be moved together, when moving across subscriptions
 ```ps1
 # PS1
 ```
+-------------------------------
+# Using Azure DevOps
+
+Refs:
+* Portal: [Azure DevOps](https://dev.azure.com/)
+
+## Intro
+
+It was previously called VSTS.  
+In relation to Azure Resources we want to use DevOps for storing version controlled ARM templates and their deployment pipeline as well.
+
+Starting out simple we can have a PS1 script called `create-envir.ps1` for deployment.  
+It takes a parameter (-envir:t) for telling whether we want to deploy to test (t) or to prod (p).  
+The script will be stored in a git-repo called `IaC`.  
+It will 
+* Select subscription
+* Create resource group 
+* Deploy ARM template(s)
+
+It also takes a parameter (-delete:$false), so you can use the script to delete the resource group, when done.  
+
+## Enable connect to AzDevOps repo
+
+I prefer to use SSH keys for authetication from editor (VSCode) to git-repo (Azure DevOps).  
+You need to create a SSH public key and upload it to Azure DevOps - Guide: [Connect to your Git repos with SSH - Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops)
+
+After you have created a SSH key pair into `~/.ssh/` (or you might want to reuse an existing pair)  
+then upload the SSH public key to your AzDevOps account:
+```bash
+# Using Linux:
+# Copy the contents of the id_rsa_youruserid_github.pub file to your clipboard
+xclip -sel clip < ~/.ssh/id_rsa_youruserid_github.pub
+```
+
+* Goto [https://dev.azure.com/ryouruserid/_usersSettings/keys](https://dev.azure.com/youruserid/_usersSettings/keys)
+* Add SSH key
+* Paste key: Ctrl-V
+* Title: vscode_youruserid_github
+* Save key
+
+You also need to save AzDevOps url to [~/.ssh/known_hosts](https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass):
+`ssh-keyscan -t rsa ssh.dev.azure.com >> ~/.ssh/known_hosts`
+
+## First push to AzDevOps repo
+
+Now create a repo at AzDevOps - mine is called `iac-01`.  
+Then clone the repo to your local PC: 
+```bash
+# BASH
+cd ~/some-project-dir
+git clone git@ssh.dev.azure.com:v3/ryouruserid/iac-01/iac-01
+cd iac-01
+# Print remote url
+git remote -v
+# create a file
+touch README.md
+# start VSCode
+code .
+```
+
+Now add some text into README.md and use VSCode for commit and push the code to AzDevOps.  
+
+NEXT UP: Create the PS1 script....
 
 The End

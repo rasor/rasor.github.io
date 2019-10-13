@@ -297,6 +297,9 @@ xclip -sel clip < ~/.ssh/id_rsa_youruserid_github.pub
 * Title: vscode_youruserid_github
 * Save key: Add SSH key
 
+You also need to save github url to [~/.ssh/known_hosts](https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass):
+`ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts`
+
 Finally you need to change urls on your local repos remote origin from HTTPS to SSH
 
 ```bash
