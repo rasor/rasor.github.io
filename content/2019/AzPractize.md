@@ -3,9 +3,20 @@ Date: 2099-01-01 00:00
 Category: DevOps
 Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #git
 
-In this blog I training for Azure certification by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.
+# Azure Practize
+
+## Intro
+
+In this blog I am training for Azure certification by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.
 
 I setup devops envir on an Ubuntu Linux and create scripts for deploy ARM templates, so it becomes easy to build and tear-down training environments.
+
+Much of the learning comes from these sources
+* Course: [AZ-103.1 | AzureAcademy](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/)
+* Lab instructions: [AZ-103-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator)
+* The cloud: [Microsoft Azure Portal](https://portal.azure.com/#home)
+* The git repo tool: [Azure DevOps Portal](https://dev.azure.com/)
+* Docs: [Microsoft Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
 
 # Azure Portal Home
 
@@ -380,14 +391,6 @@ Dependent resources must be moved together, when moving across subscriptions
 (Image by Microsoft)
 
 -------------------------------
-
-```bash
-# BASH
-```
-```ps1
-# PS1
-```
--------------------------------
 # Using Azure DevOps
 
 Refs:
@@ -450,5 +453,21 @@ code .
 Now add some text into README.md and use VSCode for commit and push the code to AzDevOps.  
 
 NEXT UP: Create the PS1 script....
+
+-------------------------------
+
+```bash
+# BASH
+```
+```ps1
+# PS1
+```
+-------------------------------
+
+# Links
+
+* My old blogs
+    * [Azure Fundamentals Course 107979F](https://rasor.github.io/azure-fundamentals-course-107979f.html)
+    * [Microsoft Architecture and Implementations](https://rasor.github.io/microsoft-architecture-and-implementations.html)
 
 The End
