@@ -26,12 +26,15 @@ On Ubuntu Linux you by default have a BASH CLI called terminal installed, but yo
 You can install it via `Snap Store`, but it did not work for me.  Instead you can use curl:
 ```bash
 # BASH
+# Install Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+# check if zure CLI is installed
+az -v
 ```
 
 ### PS1
 
-On Ubuntu Linux you don't have a Powershell CLI. You can install it via the [Snap Store](https://snapcraft.io/snap-store)
+On Ubuntu Linux you don't have a PowerShell CLI. You can install it via the [Snap Store](https://snapcraft.io/snap-store)
 ```bash
 # BASH
 # Install snap store if you don't have it
@@ -40,11 +43,11 @@ sudo apt install snapd # snapcraft daemon
 sudo snap install snap-store # GUI for above
 ```
 
-Now open snapstore app, search for Powershell and install it.  
+Now open `snapstore` app, search for `PowerShell` and install it.  
   
-Up untill 2019 Azure was managed with module `AzureRM`. Now it is managed with module `az`. So now you can get the same features both in BASH and in PS1.  
+Up untill 2019 Azure was managed with module `AzureRM`. Now it is managed with module `az`. So now you can get the same features both in BASH and in PS1 (short for PowerShell).  
 
-Now open the Powershell CLI and install the `az` module:
+Now open the `PowerShell` CLI and install the `az` module:
 ```ps1
 # PS1
 # Install Azure module
@@ -55,8 +58,33 @@ Install-Module -Name Az -AllowClobber -Scope CurrentUser
 
 From snap store do also install 
 * `Visual Studio Code` # PS1 Script editor and CLI
-    * Install powershell and azure plugins
-    * VSCode also replaces Powershell ISE, which was suppurted before Powershell 6.
+    * Install plugins
+        * [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) - Replaces `Powershell ISE`, which was suppurted before Powershell 6
+        * [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) - a collection of azure extensions - including `Azure CLI Tools`
+        * [Shell launcher](https://marketplace.visualstudio.com/items?itemName=Tyriar.shell-launcher)
+            * Configure the launcher, so you can open PS1 shells within VS Code
+                * Create or open `~/.config/Code/User/keybindings.json`:  
+                (Ctrl+Shift+P) Preferences: Open Keyboard Shortcuts (JSON) 
+                * Add json in keybindings.json: `{"key": "ctrl+shift+t","command": "shellLauncher.launch"}`
+                * Create or open `~/.config/Code/User/settings.json`:  
+                (Ctrl+Shift+P) Preferences: Open Settings (JSON)
+                * Add json in settings.json:  
+                ```json
+                "shellLauncher.shells.linux": [
+                    {
+                    "shell": "bash",
+                    "args": ["-l"],
+                    "label": "bash shell"
+                    },
+                    {
+                    "shell": "pwsh",
+                    "label": "ps1 shell"
+                    }
+                ],
+                "terminal.explorerKind": "external"            
+                ```
+            * Test the terminal: (Ctrl+Shift+P) ps1
+    * Ref: [keyboard-shortcuts-linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 * `Microsoft Azure Storage Explorer`
 
 ## Docs and References
