@@ -1,9 +1,15 @@
 Title: Azure Practize
 Date: 2099-01-01 00:00
 Category: DevOps
-Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #github
+Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #git
+
+In this blog I training for Azure certification by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.
+
+I setup devops envir on an Ubuntu Linux and create scripts for deploy ARM templates, so it becomes easy to build and tear-down training environments.
 
 # Azure Portal Home
+
+In the Azure Portal I can quickly create a resource into an existing (or new) resource group, so I can export the ARM template and add it to my Infra-As-Code (IaC) git repo for easy reuse.
 
 * [Microsoft Azure](https://portal.azure.com/#home)
     * [Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure&resource_type=learning%20path)
@@ -13,7 +19,9 @@ Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #github
 
 # Azure Cloud Shell and Local CLIs
 
-When you want to use the cloud shell via browser you need to create:
+Sometimes you want to run a shell from a browser to avoid installing an azure shell locally.  
+
+When you want to use the cloud shell you need to create:
 * Resource Group
     * Storage Account
         * File Share
