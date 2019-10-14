@@ -31,27 +31,35 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 ### PS1
 
-On Ubuntu Linux you don't have a Powershell CLI. You can install it via the snap store
+On Ubuntu Linux you don't have a Powershell CLI. You can install it via the [Snap Store](https://snapcraft.io/snap-store)
 ```bash
 # BASH
-sudo snap install snap-store
+# Install snap store if you don't have it
+sudo apt update
+sudo apt install snapd # snapcraft daemon
+sudo snap install snap-store # GUI for above
 ```
 
 Now open snapstore app, search for Powershell and install it.  
-Up untill 2019 Azure was managed with module `AzureRM`. Now it is managed with module `az`. So now you can get the same features both in BASH and in PS1.
+  
+Up untill 2019 Azure was managed with module `AzureRM`. Now it is managed with module `az`. So now you can get the same features both in BASH and in PS1.  
 
+Now open the Powershell CLI and install the `az` module:
 ```ps1
 # PS1
 # Install Azure module
 Install-Module -Name Az -AllowClobber -Scope CurrentUser
 ```
 
-## Script Editors
+## Other tools
 
-VSCode with powershell and azure plugins.  
-VSCode also replaces Powershell ISE, which was suppurted before Powershell 6.
+From snap store do also install 
+* `Visual Studio Code` # PS1 Script editor and CLI
+    * Install powershell and azure plugins
+    * VSCode also replaces Powershell ISE, which was suppurted before Powershell 6.
+* `Microsoft Azure Storage Explorer`
 
-## References
+## Docs and References
 * BASH: [az](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest)
     * Source: [Azure/azure-cli](https://github.com/Azure/azure-cli)
 * PS1: [Az modules](hhttps://docs.microsoft.com/en-us/powershell/module/?view=azps-2.7.0)
