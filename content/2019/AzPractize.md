@@ -44,10 +44,11 @@ sudo snap install snap-store # GUI for above
 ```
 
 Now open `snapstore` app, search for `PowerShell` and install it.  
+Info: This will install `/snap/powershell/39/opt/powershell/pwsh`. We will later use it from within Visual Studio Code.  
   
 Up untill 2019 Azure was managed with module `AzureRM`. Now it is managed with module `az`. So now you can get the same features both in BASH and in PS1 (short for PowerShell).  
 
-Now open the `PowerShell` CLI and install the `az` module:
+Now open the `PowerShell` CLI (hiding in the Administration group of apps) and install the `az` module:
 ```ps1
 # PS1
 # Install Azure module
@@ -72,18 +73,20 @@ From snap store do also install
                 ```json
                 "shellLauncher.shells.linux": [
                     {
+                    "shell": "pwsh",
+                    "label": "ps1 shell"
+                    },
+                    {
                     "shell": "bash",
                     "args": ["-l"],
                     "label": "bash shell"
-                    },
-                    {
-                    "shell": "pwsh",
-                    "label": "ps1 shell"
                     }
                 ],
                 "terminal.explorerKind": "external"            
                 ```
-            * Test the terminal: (Ctrl+Shift+P) ps1
+            * Test the terminal:
+                * Open the CLI: (ctrl+shift+t) ps1
+                * Issue a cmd: `get-module`
     * Ref: [keyboard-shortcuts-linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 * `Microsoft Azure Storage Explorer`
 
