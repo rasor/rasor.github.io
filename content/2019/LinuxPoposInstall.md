@@ -1,7 +1,7 @@
 Title: Install LinuxPopOS on Laptop
 Date: 2099-01-01 00:00
 Category: DevOps
-Tags: #linux, #popos, #ubuntu, #ssh, #github
+Tags: #linux, #popos, #ubuntu, #ssh, #github, #snapstore
 
 HowTo get from Window to Ubuntu fork - Pop_OS
 

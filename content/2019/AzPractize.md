@@ -1,7 +1,7 @@
 Title: Azure Practize
 Date: 2099-01-01 00:00
 Category: DevOps
-Tags: #azure
+Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #github
 
 # Azure Portal Home
 
@@ -11,24 +11,66 @@ Tags: #azure
     * [Security Center](https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0)
     * [Cost Management](https://portal.azure.com/#blade/Microsoft_Azure_CostManagement/Menu/overview)
 
-# Azure Cloud Shell
+# Azure Cloud Shell and Local CLIs
 
 When you want to use the cloud shell via browser you need to create:
 * Resource Group
     * Storage Account
         * File Share
- 
-References
+
+## Local CLIs - Install on Linux
+
+### BASH 
+
+On Ubuntu Linux you by default have a BASH CLI called terminal installed, but you need to install the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest).  
+You can install it via `Snap Store`, but it did not work for me.  Instead you can use curl:
+```bash
+# BASH
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+```
+
+### PS1
+
+On Ubuntu Linux you don't have a Powershell CLI. You can install it via the snap store
+```bash
+# BASH
+sudo snap install snap-store
+```
+
+Now open snapstore app, search for Powershell and install it.  
+Up untill 2019 Azure was managed with module `AzureRM`. Now it is managed with module `az`. So now you can get the same features both in BASH and in PS1.
+
+```ps1
+# PS1
+# Install Azure module
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+```
+
+## Script Editors
+
+VSCode with powershell and azure plugins.  
+VSCode also replaces Powershell ISE, which was suppurted before Powershell 6.
+
+## References
 * BASH: [az](https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest)
     * Source: [Azure/azure-cli](https://github.com/Azure/azure-cli)
 * PS1: [Az modules](hhttps://docs.microsoft.com/en-us/powershell/module/?view=azps-2.7.0)
     * [All az powershell modules](https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md)
     * Source: [Azure/azure-powershell](https://github.com/Azure/azure-powershell)
     * [Other PS1 Modules](https://docs.microsoft.com/en-us/powershell/module/)
-        * Print installed: `get-module`
-        * Install (e.g. Azure Stack): `install-module -name azs -allowclobber`
+    * [PowerShellGet installs new modules](https://docs.microsoft.com/en-us/powershell/module/powershellget/?view=powershell-6)
+    ```ps1
+    # Print installed modules
+    get-module
+    # You might need to allow to fetch official modules
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    # Install module (e.g. Azure Stack)
+    install-module -name azs -allowclobber
+    # load module
+    Import-Module -Name azs
+    ```
 
-## Select Subscription
+## Login and Select Subscription
 
 When running from local CLI, then you'll have to select **current subscription**:
 ```bash
