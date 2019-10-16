@@ -7,16 +7,17 @@ Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #git
 
 ## Intro
 
-In this blog I am training for Azure certification by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.
+In this blog I am training for Azure certifications by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.
 
 I setup devops envir on an Ubuntu Linux and create scripts for deploy ARM templates, so it becomes easy to build and tear-down training environments.
 
-Much of the learning comes from these sources
-* Course: [AZ-103.1 | AzureAcademy](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/)
+Credits: Much of the learning comes from these sources
+* Online Course: [AZ-103.1 | AzureAcademy](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/)
 * Lab instructions: [AZ-103-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator)
 * The cloud: [Microsoft Azure Portal](https://portal.azure.com/#home)
 * The git repo tool: [Azure DevOps Portal](https://dev.azure.com/)
-* Docs: [Microsoft Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
+* ARM template repo: [azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates)
+* Docs: [Microsoft Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
 
 # Azure Portal Home
 
@@ -30,7 +31,7 @@ In the Azure Portal I can quickly create a resource into an existing (or new) re
 
 # Azure Cloud Shell and Local CLIs
 
-Sometimes you want to run a shell from a browser to avoid installing an azure shell locally.  
+Sometimes you want to run a shell from a **browser** to avoid installing an azure shell locally.  
 
 When you want to use the cloud shell you need to create:
 * Resource Group
