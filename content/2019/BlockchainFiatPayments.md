@@ -35,6 +35,10 @@ Tags: #blockchain, #fiat, #sepa, #mnemoniccode, #u2f
     * [qvolta](https://qvolta.com/)
 * CN: AliPay
 * CN: WeChat
+* US: [Bidali Payments](https://www.bidali.com/payments/) (author of featherjs)
+    * [Bidali Commerce — Bringing Brands to Crypto](https://medium.com/bidali/bidali-commerce-bringing-brands-to-crypto-8fc62bcb8ef8)
+        * [Bidali KYC & AML Policy](https://www.bidali.com/policies/aml/)
+    * [Purchase gift cards directly from your @CoinomiWallet](https://twitter.com/bidalihq/status/1169652614251851781)
 
 ## Fiat Instant payments ---------------------------
 

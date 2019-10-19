@@ -1,7 +1,7 @@
 Title:  OpenFaaS on Windows Devbox
 Status: published
 Date: 2019-03-29 00:00
-Modified: 2019-04-06 20:30
+Modified: 2019-10-19 00:00
 Category: Develop
 Tags: #openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python, #git, #gitlab, #openshift, #footloose
 
@@ -563,6 +563,7 @@ echo "HiHoh" | faas-cli invoke faas-py-test1
 
 * [Docker Secrets in action: Github integration](https://blog.alexellis.io/swarm-secrets-in-action/)
 * [ngrok - secure introspectable tunnels to localhost](https://ngrok.com/) - use it to expose you localhost to the internet, when testing.
+* [Turn Any CLI into a Function with OpenFaaS](https://blog.alexellis.io/cli-functions-with-openfaas/)
 
 ## Books
 
