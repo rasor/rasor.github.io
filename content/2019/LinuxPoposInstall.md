@@ -46,6 +46,7 @@ It is kind of a local appstore.
 * Snap backend
 * Snappy Support - Also called [SnapCraft](https://snapcraft.io/store). It is a Linux appstore, which lets app developers distribute their apps. In Pop!OS the UI is called `Software`  
 * VSCode
+    * Install [plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code)
 * FileManager-Actions (previously called Nautilus-Actions)
     * 2019: [How to Install Nautilus Actions in Ubuntu 18.04](http://ubuntuhandbook.org/index.php/2019/01/install-nautilus-actions-ubuntu-18-04/)
     * 2019: [GNOME / filemanager-actions](https://gitlab.gnome.org/GNOME/filemanager-actions)
@@ -55,7 +56,7 @@ It is kind of a local appstore.
     * CLI install: `sudo apt install gnome-tweaks`
 * GParted
 * Remote Desktop Viewer
-* Yubico Authenticator
+* Yubico Authenticator - no install via apt - see further down.
 
 #### From Software (Snap Store)
 
@@ -79,8 +80,8 @@ Install apps from the appstore
 
 Ref:
 * [SnapCraft](https://snapcraft.io/store) is a Linux appstore, which lets app developers distribute their apps.  
-* [Install Snap Store](https://snapcraft.io/snap-store) - a graphical desktop application for snapd
-* Manual install (when not installing from Pop"_shop):
+* [Snap Store](https://snapcraft.io/snap-store) - a graphical desktop application for snapd
+* Manual install (when not installing from Pop!_shop):
 ```bash
 # Install snapcraft
 sudo apt update
@@ -129,6 +130,19 @@ sudo apt-get install cinnamon
 #### Internet
 
 * Brave Browser
+    * [Intall](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#ubuntu-16-04-and-mint-18) via CLI
+    ```bash
+    sudo apt install apt-transport-https #curl
+
+    curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+    source /etc/os-release
+
+    echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
+
+    sudo apt update
+    sudo apt install brave-browser
+    ```
     * Extensions
         * [GNOME Shell-Integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
             * [How to Use GNOME Shell Extensions [Complete Guide]](https://itsfoss.com/gnome-shell-extensions/)
@@ -318,6 +332,7 @@ git remote -v
     * [Using SSH keys - Connect to Ionic Pro](https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html#using-ssh-keys-connect-to-ionic-pro)
     * [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows)
 * Other Guides
+    * [Using an ssh-agent, or how to type your ssh password once, safely](http://rabexc.org/posts/using-ssh-agent)
     * [How To Install and Configure Git on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
     * When accessing with HTTPS
         * [Configuring 2FA for Github with Microsoft Visual Studio Code Integration](https://mattselkey.com/configuring-2fa-for-github-microsoft-visual-code-integration/)
