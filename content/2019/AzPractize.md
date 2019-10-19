@@ -81,6 +81,11 @@ From snap store do also install
 * `Visual Studio Code` # PS1 Script editor and CLI
     * Install plugins
         * [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) - Replaces `Powershell ISE`, which was suppurted before Powershell 6
+            * Installs:
+                * Powershell integrated Console. 
+                    * Open it with `Ctrl+shift+p "pow show"`. Opposed to other terminal windows there is only one instance of this running.
+                    * `$host` reveals it is called Visual Studio code host. 
+                * Powershell command explorer A list under Extensions in the left side.
         * [Azure Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) - a collection of azure extensions - including `Azure CLI Tools`
         * [Shell launcher](https://marketplace.visualstudio.com/items?itemName=Tyriar.shell-launcher)
             * Configure the launcher, so you can open PS1 shells within VS Code
@@ -105,8 +110,8 @@ From snap store do also install
                 "terminal.explorerKind": "external"            
                 ```
             * Test the terminal:
-                * Open the CLI: (ctrl+shift+t) ps1
-                * Issue a cmd: `get-module`
+                * Open the CLI: `(ctrl+shift+t) ps1`. There can be multiple of this terminal
+                * Issue a cmd: `$host`. Reveals it is called ConsoleHost.
     * Ref: [keyboard-shortcuts-linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)
 * `Microsoft Azure Storage Explorer`
 
