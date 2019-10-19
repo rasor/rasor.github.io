@@ -43,6 +43,8 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 **Pop!_Shop** is an app installed into the Ubuntu distro [Pop!_OS](https://system76.com/pop).  
 It is kind of a local appstore.
 
+* Snap backend
+* Snappy Support - Also called [SnapCraft](https://snapcraft.io/store). It is a Linux appstore, which lets app developers distribute their apps. In Pop!OS the UI is called `Software`  
 * VSCode
 * FileManager-Actions (previously called Nautilus-Actions)
     * 2019: [How to Install Nautilus Actions in Ubuntu 18.04](http://ubuntuhandbook.org/index.php/2019/01/install-nautilus-actions-ubuntu-18-04/)
@@ -55,22 +57,7 @@ It is kind of a local appstore.
 * Remote Desktop Viewer
 * Yubico Authenticator
 
-#### From SnapCraft
-
-[SnapCraft](https://snapcraft.io/store) is a Linux appstore, which lets app developers distribute their apps.  
-
-Install snapcraft
-
-```bash
-sudo apt update
-sudo apt install snapd
-```
-
-[Install Snap Store](https://snapcraft.io/snap-store) - a graphical desktop application for snapd
-
-```bash
-sudo snap install snap-store
-```
+#### From Software (Snap Store)
 
 Install apps from the appstore
 
@@ -89,6 +76,18 @@ Install apps from the appstore
     * [Install Azure PowerShell with PowerShellGet](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-2.7.0): `Install-Module -Name Az -AllowClobber -Scope CurrentUser`
     * Test: `Connect-AzAccount`
 * RedisDesktopManager
+
+Ref:
+* [SnapCraft](https://snapcraft.io/store) is a Linux appstore, which lets app developers distribute their apps.  
+* [Install Snap Store](https://snapcraft.io/snap-store) - a graphical desktop application for snapd
+* Manual install (when not installing from Pop"_shop):
+```bash
+# Install snapcraft
+sudo apt update
+sudo apt install snapd
+# Install Snap-store
+sudo snap install snap-store
+```
 
 #### Packages / Software Updater
 
