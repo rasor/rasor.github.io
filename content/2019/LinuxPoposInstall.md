@@ -13,6 +13,7 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 ### Tips
 
 * [RightClick = 2 finger click](https://who-t.blogspot.com/2018/04/gnome-328-uses-clickfinger-behaviour-by.html)
+* **Windows key** is called **super** in documentation
 * [[Quick Tip] Pin App Shortcuts to the Desktop in Ubuntu 18.04 | UbuntuHandbook](http://ubuntuhandbook.org/index.php/2018/09/pin-app-shortcut-desktop-ubuntu-18-04/)
 * [Create shortcut for URL](https://askubuntu.com/questions/359492/create-a-shortcut-for-url)
     ```bash
@@ -54,6 +55,9 @@ It is kind of a local appstore.
 * Gnome Tweaks - Also called Gnome Tweak Tool
     * [Apps/Tweaks - GNOME Wiki!](https://wiki.gnome.org/Apps/Tweaks)
     * CLI install: `sudo apt install gnome-tweaks`
+    * Settings:
+        * Window Titlebars: Maximize and Minimize: On
+    * Gnome Tweaks also have a tab for Gnome Extension - more on them further down
 * GParted
 * Remote Desktop Viewer
 * Yubico Authenticator - no install via apt - see further down.
@@ -96,15 +100,18 @@ sudo snap install snap-store
 
 #### Desktops
 
-* Desktop Gnome (default in Linux distro Ubuntu and Pop_OS!)
-    * Default Filemanager is called **Gnome Files** and is also called **Nautilus**. Ref: [5 of the Best File Managers for Linux](https://www.maketecheasier.com/best-file-managers-linux/)
+* Desktop **Gnome** (default in Linux distro Ubuntu and Pop_OS!)
+    * Gnome Default Filemanager is called **Gnome Files** and is also called **Nautilus** (grey icon (blue in Cinnamon)). Ref: [5 of the Best File Managers for Linux](https://www.maketecheasier.com/best-file-managers-linux/)
         * Shortcuts:
             * Ctrl+h: Toggle hidden files
     * Gnome currently - in v 3.32 has removed possiblity to drag'n'drop url shortcuts to the desktop (last seen in 3.28), so I wanted another desktop.
-
+* Desktop **Cinnamon**
+    * Cinnamon Default filemanager is also called **Files** in the menu. It is also called **Nemo** (blue icon (brown in Cinnamon)). This one does support drag'n'drop url shortcuts. After you install Cinnamon you can use it from Gnome, too :-).
+    * Change default Filesmanager from **Nautilus** to **Nemo** (this will also be changed in Gnome):
+        * Settings - Preferred Applications - Files: Select the brown Files
 * Other desktops to consider: [10 Best Linux Desktop Environments And Their Comparison | 2018 Edition](https://fossbytes.com/best-linux-desktop-environments/)
 
-Install another desktop
+##### HowTo Install another desktop
 
 ```bash
 # Get latest packages
@@ -124,8 +131,9 @@ sudo apt-get install cinnamon
 ```
 
 * Log out 
-* Press setting on login - choose cinnamon
+* Press setting on login - choose **Cinnamon**
 * Enter password and login
+* Do the changes described above in bullet `Desktop Cinnamon` - logout and in again in Gnome - you will see the changes - like default Filemanager - has also been changed there.
 
 #### Internet
 
@@ -158,6 +166,10 @@ sudo apt-get install cinnamon
                 # chrome-gnome-shell/disco,disco,now 10.1-5 all [installed,automatic]
                 ```
             * Find [GNOME Shell Extensions](https://extensions.gnome.org/)
+                * [Window List - GNOME Shell Extensions](https://extensions.gnome.org/extension/602/window-list/)  
+                A bottom bar like in Windows
+                * [Toggle nemo - GNOME Shell Extensions](https://extensions.gnome.org/extension/846/toggle-nemo/)  
+                With Toggle nemo you can press `win+e` to open Nemo, if you have it installed (e.g. via Cinnamon)
         * Bitwarden
 
 #### Authenticator
@@ -328,6 +340,15 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git remote -v
 ```
 
+##### Save the SSH private key in the Vault
+
+* Open **Passwords and Keys**
+* OpenSSH keys - `+` - Import from file - `~/.ssh/id_rsa_youruserid_github`
+
+Now you don't have to add the key to agent (`ssh-add`) before you commit to github.  
+
+## Links
+
 * My related blogs
     * [Using SSH keys - Connect to Ionic Pro](https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html#using-ssh-keys-connect-to-ionic-pro)
     * [cUrl CLI on Windows](https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows)
@@ -335,7 +356,8 @@ git remote -v
     * [Using an ssh-agent, or how to type your ssh password once, safely](http://rabexc.org/posts/using-ssh-agent)
     * [How To Install and Configure Git on Ubuntu 18.04 | DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04)
     * When accessing with HTTPS
-        * [Configuring 2FA for Github with Microsoft Visual Studio Code Integration](https://mattselkey.com/configuring-2fa-for-github-microsoft-visual-code-integration/)
+        * [Configuring 2FA for Github with Microsoft Visual Studio Code Integration](https://mattselkey.com/configuring-2fa-for-github-mi
+crosoft-visual-code-integration/)
         * [Caching your GitHub password in Git - GitHub Help](https://help.github.com/en/articles/caching-your-github-password-in-git)
         * [How to setup Git Credential store in Windows](https://agilewarrior.wordpress.com/2017/09/25/how-to-setup-git-credential-store-in-windows/)
     * [How to Add a New Remote to your Git Repo](https://articles.assembla.com/en/articles/1136998-how-to-add-a-new-remote-to-your-git-repo)
