@@ -17,7 +17,8 @@ Credits: Much of the learning comes from these sources
 * The cloud: [Microsoft Azure Portal](https://portal.azure.com/#home)
 * The git repo tool: [Azure DevOps Portal](https://dev.azure.com/)
 * ARM template repo: [azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates)
-* Docs: [Microsoft Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
+* Learn: [Microsoft Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
+* Docs: [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/index#pivot=products&panel=all)
 
 # Azure Portal Home
 
@@ -225,6 +226,7 @@ Get-Help -Name Get-AzSubscription -Online
 
 Study:
 * [Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-resource-manager)
+* [Docs](https://docs.microsoft.com/en-us/azure/azure-resource-manager/)
 * [Course | AZ-103.1 | AzureAcademy - Resource Manager](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/#block-v1:FP+AZ-103.1+2019_T3+type@sequential+block@d14c5e7b-2617-7a76-c09d-cde3c1584c9d)
 
 Resource Group Tips:
@@ -330,6 +332,8 @@ References:
 * [ARM template structure and syntax](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
 * [Azure Quickstart Templates](https://azure.microsoft.com/en-us/resources/templates/)
 
+You create some PS1 or BASH scripts in [Azure DevOps](#Using-Azure-DevOps) together with your ARM templates and deploy your resources from them.
+
 ### Lock Resources
 
 Guide: [Lock Azure resources to prevent changes](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
@@ -394,7 +398,41 @@ Move-AzResource -DestinationResourceGroupName NewRG -ResourceId $webapp.Resource
 
 Dependent resources must be moved together, when moving across subscriptions  
 ![Move in 3 steps](https://docs.microsoft.com/en-us/azure/azure-resource-manager/media/resource-group-move-resources/cross-subscription-move-scenario.png)  
-(Image by Microsoft)
+(Image @Microsoft)
+
+## Azure networks
+
+Study:
+* [Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-virtual-network)
+* Docs: [Azure networking](https://docs.microsoft.com/en-us/azure/networking/networking-overview)
+* Docs: [VNets](https://docs.microsoft.com/en-us/azure/virtual-network/)
+* [Course | AZ-103.1 | AzureAcademy - Virtual Networks](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/#block-v1:FP+AZ-103.1+2019_T3+type@sequential+block@d74bdc62-11d1-d8bc-8ec0-b20f1110b85e)
+
+Tips:
+* VNets:
+    * Create **public subnet** for your DMZ in Azure and a **private subnet** for your intranet. Put both in one **VNet**.
+        * You can also create a subnet for a VPN Gateway to your onprem network
+    * Subnet **ranges** are defined in [CIDR blocks](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing).  
+    Example: 10.10.1.64/27 (32-27=5 bits = 32 IPs for a subnet starting with IP 10.10.1.64)  
+        * [CIDR to IPv4 Address Range Utility Tool | IPAddressGuide](https://www.ipaddressguide.com/cidr)
+        * **4 IPs are reserved** by Azure in **each subnet** (3 in beginning + 1 in end)
+        * Don't reuse a range (both onprem and VNet), that is already used by your organization.
+    * Default Max 50 VNets / subscription / region. Can be increased to 500.
+    * Use [Bastion server](https://docs.microsoft.com/en-us/azure/networking/networking-overview#bastion) if you need RDP to VMs without public IP
+    * Use [Service endpoints](https://docs.microsoft.com/en-us/azure/networking/networking-overview#serviceendpoints) for connection your subnet to SaaS resources like Azure SQL and storage. This limits access to the resources.
+    * Optional: Protect each subnet with a firewall called **NSG** (Network Security Group)
+
+Bastion server:  
+![Bastion server](https://docs.microsoft.com/en-us/azure/networking/media/networking-overview/architecture.png)  
+(Image @Microsoft)
+
+Service endpoint:  
+![Service endpoint](https://docs.microsoft.com/en-us/azure/networking/media/networking-overview/vnet-service-endpoints-overview.png)  
+(Image @Microsoft)
+
+VPN to OnPrem:  
+![VPN to OnPrem](https://docs.microsoft.com/en-us/azure/networking/media/networking-overview/vpngateway-multisite-connection-diagram.png)  
+(Image @Microsoft)
 
 -------------------------------
 # Using Azure DevOps
