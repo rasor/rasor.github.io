@@ -5,12 +5,12 @@ Tags: #linux, #popos, #ubuntu, #ssh, #github, #snapstore
 
 HowTo get from Window to Ubuntu fork - Pop_OS
 
-## After install
+# After install
 
 * [What To Do After Installing Ubuntu 19.04](http://www.ubuntubuzz.com/2019/04/what-to-do-after-installing-ubuntu-1904-disco-dingo.html)
 * [Preparations for GNOME 3 Customization](http://www.ubuntubuzz.com/2019/03/preparations-for-gnome-3-customization.html)
 
-### Tips
+## Tips
 
 * [RightClick = 2 finger click](https://who-t.blogspot.com/2018/04/gnome-328-uses-clickfinger-behaviour-by.html)
 * **Windows key** is called **super** in documentation
@@ -29,7 +29,7 @@ HowTo get from Window to Ubuntu fork - Pop_OS
             * Double-click the file to open in browser
 * Create a [Ubuntu One](https://login.launchpad.net/) account for SSO to Ubuntu social medias.
 
-#### Going from Dos to Terminal
+## Going from Dos to Terminal
 
 |Dos|Terminal|Comment|
 |---|---|---|
@@ -37,9 +37,9 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 ||touch a.md|Create an empty file|
 |"Hello" > a.md|cat > a.md|Create a file. Enter text. Ctrl-Z to save|
 
-### Install
+# Install
 
-#### From Pop!_Shop
+## Install From Pop!_Shop
 
 **Pop!_Shop** is an app installed into the Ubuntu distro [Pop!_OS](https://system76.com/pop).  
 It is kind of a local appstore.
@@ -62,7 +62,7 @@ It is kind of a local appstore.
 * Remote Desktop Viewer
 * Yubico Authenticator - no install via apt - see further down.
 
-#### From Software (Snap Store)
+## Install From Software (Snap Store)
 
 Install apps from the appstore
 
@@ -94,11 +94,11 @@ sudo apt install snapd
 sudo snap install snap-store
 ```
 
-#### Packages / Software Updater
+## Install Packages / Software Updater
 
 * [How Do I Update Ubuntu Linux Software Using Command Line? - nixCraft](https://www.cyberciti.biz/faq/how-do-i-update-ubuntu-linux-softwares/)
 
-#### Desktops
+## Install Desktops
 
 * Desktop **Gnome** (default in Linux distro Ubuntu and Pop_OS!)
     * Gnome Default Filemanager is called **Gnome Files** and is also called **Nautilus** (grey icon (blue in Cinnamon)). Ref: [5 of the Best File Managers for Linux](https://www.maketecheasier.com/best-file-managers-linux/)
@@ -111,7 +111,7 @@ sudo snap install snap-store
         * Settings - Preferred Applications - Files: Select the brown Files
 * Other desktops to consider: [10 Best Linux Desktop Environments And Their Comparison | 2018 Edition](https://fossbytes.com/best-linux-desktop-environments/)
 
-##### HowTo Install another desktop
+### HowTo Install another desktop
 
 ```bash
 # Get latest packages
@@ -135,7 +135,7 @@ sudo apt-get install cinnamon
 * Enter password and login
 * Do the changes described above in bullet `Desktop Cinnamon` - logout and in again in Gnome - you will see the changes - like default Filemanager - has also been changed there.
 
-#### Internet
+## Install Browsers
 
 * Brave Browser
     * [Intall](https://brave-browser.readthedocs.io/en/latest/installing-brave.html#ubuntu-16-04-and-mint-18) via CLI
@@ -172,7 +172,9 @@ sudo apt-get install cinnamon
                 With Toggle nemo you can press `win+e` to open Nemo, if you have it installed (e.g. via Cinnamon)
         * Bitwarden
 
-#### Authenticator
+## Install Other Apps
+
+### Authenticator
 
 For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  
 
@@ -190,7 +192,7 @@ Notes
 * Yubikey install also installed python 3
 * Some browsers supporting Yubikey: Chrome, Brave, Opera
 
-#### Keybase
+### Keybase
 
 Keybase is a cloud vault (a kind like password managers) using keys from devices for encryption (unlike the psw mgrs, that uses a master key).  
 This enables encrypted sharing between users and trust based on proofs written to social networks.  
@@ -217,7 +219,7 @@ echo "Dear world, check me out." > /keybase/public/yourname/plan.txt
 
 Your private files will now be available in `/run/user/1000/keybase/kbfs/private/<userid>`
 
-#### xClip
+### xClip
 
 Install [xClip](https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/)
 ```bash
@@ -229,7 +231,7 @@ xClip is used by
 * [Paste URL](https://marketplace.visualstudio.com/items?itemName=kukushi.pasteurl) VSCode plugin  
 * The follwing Git install
 
-#### Git
+### Git
 
 * Prerequisites
     * From PopShop installed VSCode
@@ -340,14 +342,19 @@ git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
 git remote -v
 ```
 
-##### Save the SSH private key in the Vault
+#### Save the SSH private key in the Vault
 
 * Open **Passwords and Keys**
 * OpenSSH keys - `+` - Import from file - `~/.ssh/id_rsa_youruserid_github`
 
 Now you don't have to add the key to agent (`ssh-add`) before you commit to github.  
 
-## Links
+### pCloud
+
+pCloud is an idrive. It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-drive-linux.html?download=electron-64).  
+And it [integrates into terminals](https://github.com/pcloudcom/console-client).
+
+# Links
 
 * My related blogs
     * [Using SSH keys - Connect to Ionic Pro](https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html#using-ssh-keys-connect-to-ionic-pro)
