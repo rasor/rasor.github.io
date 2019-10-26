@@ -9,16 +9,32 @@ Tags: #azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #git
 
 In this blog I am training for Azure certifications by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.
 
-I setup devops envir on an Ubuntu Linux and create scripts for deploy ARM templates, so it becomes easy to build and tear-down training environments.
+I setup devops envir on an **Ubuntu Linux** and create scripts for deploy ARM templates, so it becomes easy to build and tear-down training environments.
 
 Credits: Much of the learning comes from these sources
-* Online Course: [AZ-103.1 | AzureAcademy](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/)
-* Lab instructions: [AZ-103-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator)
-* The cloud: [Microsoft Azure Portal](https://portal.azure.com/#home)
-* The git repo tool: [Azure DevOps Portal](https://dev.azure.com/)
-* ARM template repo: [azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates)
-* Learn: [Microsoft Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
-* Docs: [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/index#pivot=products&panel=all)
+* Online Course: [Azure Academy Dashboard](https://training.azure-academy.com/dashboard) 
+    * [AZ-103.1 | Azure Administrator](https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/)
+    * [AZ-400.3 | Implementing Continuous Delivery](https://training.azure-academy.com/courses/course-v1:FP+AZ-400.3+2019_T1/course/)
+* Lab instructions: [Microsoft Learning](https://github.com/MicrosoftLearning)
+    * [AZ-103-MicrosoftAzureAdministrator](https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator)
+* Live Action:
+    * The Cloud: [Microsoft Azure Portal](https://portal.azure.com/#home)
+    * The CI/CD tool: [Azure DevOps Portal](https://dev.azure.com/)
+        * [ARM Outputs](https://marketplace.visualstudio.com/items?itemName=keesschollaart.arm-outputs)
+    * Visual Studio Code
+        * [Azure Pipelines](https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines)
+        * [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+* Content templates:
+    * ARM template repo: [azure-quickstart-templates](https://github.com/Azure/azure-quickstart-templates)
+    * [Azure DevOps Demo Generator](https://azuredevopsdemogenerator.azurewebsites.net/)
+        * [microsoft/TailwindTraders](https://github.com/microsoft/TailwindTraders)
+            * ---> [Integrating Azure DevOps](https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub)
+            * Setup environments with Deployment Slots: [Walkthrough: Azure App Service Features](https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Modernizing%20.NET%20Apps#walkthrough-azure-app-service-features)
+        * [microsoft/PartsUnlimited](https://github.com/microsoft/PartsUnlimited)
+        * NodeJs: [microsoft/ContosoAir](https://github.com/microsoft/ContosoAir)
+ * Read:
+    * Learn: [Microsoft Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
+    * Docs: [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/index#pivot=products&panel=all)
 
 # Azure Portal Home
 
@@ -497,6 +513,15 @@ code .
 Now add some text into README.md and use VSCode for commit and push the code to AzDevOps.  
 
 NEXT UP: Create the PS1 script....
+
+Deploy projects:
+* Modern: 
+    _ Guide: [microsoft/TailwindTraders](https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub)
+    * Frontend Code [TailwindTraders-Website](https://github.com/microsoft/TailwindTraders-Website/blob/master/Deploy/DeployWebAKS.ps1)
+    * Backend Code [TailwindTraders-Backend](https://github.com/microsoft/TailwindTraders-Backend/tree/master/Deploy)
+* 3y old: 
+    * Guide: [Introduction to Auto-assembly usage - Lab](https://training.azure-academy.com/courses/course-v1:FP+AZ-400.3+2019_T1/courseware/083e1ae3-93c7-1f72-6306-1765a78799e4/649fcbb5-9ffd-8340-28fb-ffd7acdf7aa2/1?activate_block_id=block-v1%3AFP%2BAZ-400.3%2B2019_T1%2Btype%40vertical%2Bblock%40cc9d8629-1a01-32f3-c599-647e806bdf90)
+    * Code: [microsoft/PartsUnlimited](https://github.com/microsoft/PartsUnlimited/tree/master/env)
 
 -------------------------------
 
