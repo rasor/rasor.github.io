@@ -5,11 +5,6 @@ Tags: #linux, #popos, #ubuntu, #ssh, #github, #snapstore
 
 HowTo get from Window to Ubuntu fork - Pop_OS
 
-# After install
-
-* [What To Do After Installing Ubuntu 19.04](http://www.ubuntubuzz.com/2019/04/what-to-do-after-installing-ubuntu-1904-disco-dingo.html)
-* [Preparations for GNOME 3 Customization](http://www.ubuntubuzz.com/2019/03/preparations-for-gnome-3-customization.html)
-
 ## Tips
 
 * [RightClick = 2 finger click](https://who-t.blogspot.com/2018/04/gnome-328-uses-clickfinger-behaviour-by.html)
@@ -39,6 +34,17 @@ HowTo get from Window to Ubuntu fork - Pop_OS
 
 # Install
 
+First you install Pop!_OS from a bootable USB stick.  
+
+## After initial install
+
+You should change download region via Software Updates ??
+
+Here are other tips - like this blog - to what to do after a fresh OS install
+
+* [What To Do After Installing Ubuntu 19.04](http://www.ubuntubuzz.com/2019/04/what-to-do-after-installing-ubuntu-1904-disco-dingo.html)
+* [Preparations for GNOME 3 Customization](http://www.ubuntubuzz.com/2019/03/preparations-for-gnome-3-customization.html)
+
 ## Install From Pop!_Shop
 
 **Pop!_Shop** is an app installed into the Ubuntu distro [Pop!_OS](https://system76.com/pop).  
@@ -62,7 +68,9 @@ It is kind of a local appstore.
 * Remote Desktop Viewer
 * Yubico Authenticator - no install via apt - see further down.
 
-## Install From Software (Snap Store)
+## Install From Software (Snap Store) - Used in Gnome
+
+Snap Store is an app store for Gnome.  
 
 Install apps from the appstore
 
@@ -103,10 +111,12 @@ sudo snap install snap-store
 * Desktop **Gnome** (default in Linux distro Ubuntu and Pop_OS!)
     * Gnome Default Filemanager is called **Gnome Files** and is also called **Nautilus** (grey icon (blue in Cinnamon)). Ref: [5 of the Best File Managers for Linux](https://www.maketecheasier.com/best-file-managers-linux/)
         * Shortcuts:
-            * Ctrl+h: Toggle hidden files
+            * Ctrl+h: Toggle **hidden files**
     * Gnome currently - in v 3.32 has removed possiblity to drag'n'drop url shortcuts to the desktop (last seen in 3.28), so I wanted another desktop.
 * Desktop **Cinnamon**
     * Cinnamon Default filemanager is also called **Files** in the menu. It is also called **Nemo** (blue icon (brown in Cinnamon)). This one does support drag'n'drop url shortcuts. After you install Cinnamon you can use it from Gnome, too :-).
+        * Shortcuts:
+            * Ctrl+m: Create a **shortcut (symbolic link)** to the selected file or folder
     * Change default Filesmanager from **Nautilus** to **Nemo** (this will also be changed in Gnome):
         * Settings - Preferred Applications - Files: Select the brown Files
 * Other desktops to consider: [10 Best Linux Desktop Environments And Their Comparison | 2018 Edition](https://fossbytes.com/best-linux-desktop-environments/)
@@ -118,8 +128,8 @@ sudo snap install snap-store
 sudo apt-get update
 # Upgrade existing sw
 sudo apt-get upgrade
-# Upgrade existing kernel
-sudo apt-get dist upgrade
+# Upgrade existing kernel - also needed before system upgrade via gnome settings
+sudo apt-get dist-upgrade
 sudo reboot
 
 # check if you have the new desktop - e.g. cinnamon
@@ -134,6 +144,12 @@ sudo apt-get install cinnamon
 * Press setting on login - choose **Cinnamon**
 * Enter password and login
 * Do the changes described above in bullet `Desktop Cinnamon` - logout and in again in Gnome - you will see the changes - like default Filemanager - has also been changed there.
+
+## Install from Discover - Used in Cinnamon
+
+Discover is an app store installed via Cinnamon.  
+
+Nothing so far to install...
 
 ## Install Browsers
 
