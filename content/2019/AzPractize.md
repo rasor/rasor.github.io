@@ -34,7 +34,11 @@ Credits: Much of the learning comes from these sources
         * NodeJs: [microsoft/ContosoAir](https://github.com/microsoft/ContosoAir)
  * Read:
     * Learn: [Microsoft Learn Azure](https://docs.microsoft.com/en-us/learn/browse/?products=azure)
-    * Docs: [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/index#pivot=products&panel=all)
+        * [Azure Portal - Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-portal)
+        * [Azure DevOps - Learn](https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops)
+    * Docs: 
+        * [Microsoft Azure Documentation](https://docs.microsoft.com/en-us/azure/index#pivot=products&panel=all)
+        * [Azure DevOps documentation](https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops)
 
 # Azure Portal Home
 
@@ -458,7 +462,7 @@ Refs:
 
 ## Intro
 
-It was previously called VSTS.  
+It was previously called VSTS and Visual Studio online before that.  
 In relation to Azure Resources we want to use DevOps for storing version controlled ARM templates and their deployment pipeline as well.
 
 Starting out simple we can have a PS1 script called `create-envir.ps1` for deployment.  
@@ -471,7 +475,7 @@ It will
 
 It also takes a parameter (-delete:$false), so you can use the script to delete the resource group, when done.  
 
-## Enable connect to AzDevOps repo
+## Enable connect from VSCode to AzDevOps repo
 
 I prefer to use SSH keys for authetication from editor (VSCode) to git-repo (Azure DevOps).  
 You need to create a SSH public key and upload it to Azure DevOps - Guide: [Connect to your Git repos with SSH - Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops)
@@ -512,16 +516,74 @@ code .
 
 Now add some text into README.md and use VSCode for commit and push the code to AzDevOps.  
 
-NEXT UP: Create the PS1 script....
+Later: Create the PS1 script....
 
-Deploy projects:
+-------------------------------
+# Azure DevOps Demo Generator
+
+## Intro
+
+To get a head start with **Azure DevOps**, then we in this section will use **Azure DevOps Demo Generator** to fork a Github demo web project which we can create a full CI/CD pipeline towards **Azure**
+
+I was evaluating two projects, which both can be created using **Azure DevOps Demo Generator**:
+
+Code Projects including deploy scripts:
 * Modern: 
-    _ Guide: [microsoft/TailwindTraders](https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub)
+    * Guide: [microsoft/TailwindTraders](https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub)
+        * MS Teams integration
+            * Connector: Azure DevOps:
+                * Guide: [Integrating Microsoft Teams with Azure DevOps Services](https://azuredevopslabs.com/labs/vstsextend/teams/#integrating-microsoft-teams-with-azure-devops-services)
+                * Guide: [Create a service hook for Azure DevOps Services and TFS with Microsoft Teams](https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/teams?view=azure-devops)
+                * Azure DevOps connector not available in Teams Free edistion! [DevOps Connector and Visual Studio app is missing. - Developer Community](https://developercommunity.visualstudio.com/content/problem/420390/devops-connector-and-visual-studio-app-is-missing.html)
+            * App: Azure Boards
+                * [Azure Boards with Microsoft Teams - Azure Boards](https://docs.microsoft.com/en-us/azure/devops/boards/integrations/boards-teams?view=azure-devops)
+                * [Microsoft Teams with Azure DevOps Services (Collaborate, Communicate and Celebrate)](https://azuredevopslabs.com/labs/vstsextend/teams/#azure-devops-kanban-board--dashboards-in-teams)
+            * App: Azure Repos
+                * [Azure Repos with Microsoft Teams - Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/integrations/repos-teams?view=azure-devops)
+            * App: Azure Pipelines
+                * [Azure Pipelines with Microsoft Teams - Azure Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/integrations/microsoft-teams?view=azure-devops)
+                * [Microsoft Teams with Azure DevOps Services (Collaborate, Communicate and Celebrate)](https://azuredevopslabs.com/labs/vstsextend/teams/#azure-pipelines-with-microsoft-teams)
     * Frontend Code [TailwindTraders-Website](https://github.com/microsoft/TailwindTraders-Website/blob/master/Deploy/DeployWebAKS.ps1)
     * Backend Code [TailwindTraders-Backend](https://github.com/microsoft/TailwindTraders-Backend/tree/master/Deploy)
 * 3y old: 
     * Guide: [Introduction to Auto-assembly usage - Lab](https://training.azure-academy.com/courses/course-v1:FP+AZ-400.3+2019_T1/courseware/083e1ae3-93c7-1f72-6306-1765a78799e4/649fcbb5-9ffd-8340-28fb-ffd7acdf7aa2/1?activate_block_id=block-v1%3AFP%2BAZ-400.3%2B2019_T1%2Btype%40vertical%2Bblock%40cc9d8629-1a01-32f3-c599-647e806bdf90)
     * Code: [microsoft/PartsUnlimited](https://github.com/microsoft/PartsUnlimited/tree/master/env)
+
+Needless to say that I continued with the modern one - TailwindTraders.  
+
+## Implement TailwindTraders DevOps integration
+
+The integration process is described in guide: [Integrating Azure DevOps, Microsoft Teams and GitHub](https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub).  
+I have used a **personal (MSDN) account**, since with my enterprise account I don't have permissions to create DevOps projects, which is needed by the Demo Generator.  
+But using pesonal account means you cannot connect to MS Teams, since **Azure DevOps connector** (in MS Teams) requires
+* Non-free MS Teams (O365) account
+* DevOps and MS Teams accounts must be in same AAD tenant (same org)
+
+Prerequisites:
+* Accounts
+    * Github account
+    * Azure account
+    * Azure Devops account
+* SW
+    * VS Code
+        * [Azure Pipelines](https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines)
+        * [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+    * Git
+
+### Prefill an Azure DevOps project
+
+Using Azure DevOps Demo Generator you can prefill an Azure DevOps project, so you can get to know what you get OOTB (out of the box).  
+
+Steps:
+* Open the [Azure DevOps Demo Generator webapp](https://azuredevopsdemogenerator.azurewebsites.net/?name=tailwindtraders)
+* Login to Azure Devops and select an organization
+* Give this new project a name. I gave mine the name `TailwindForkedMsDemo`.
+* Select the template `Tailwind Traders`
+* Select option `Yes, I want to fork`. With this option the webapp will fork the two github repos for Tailwind Traders to your own github account. This enables you to make changes to the code, which will trigger a build in Azure DevOps
+    * [TailwindTraders-Website](https://github.com/microsoft/TailwindTraders-Website) and
+    * [TailwindTraders-Backend](https://github.com/microsoft/TailwindTraders-Backend) 
+* Go This enables you to make changesahead and press `Create Project`
+
 
 -------------------------------
 
