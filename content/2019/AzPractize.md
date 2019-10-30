@@ -582,8 +582,9 @@ Steps:
 * Select option `Yes, I want to fork`. With this option the webapp will fork the two github repos for Tailwind Traders to your own github account. This enables you to make changes to the code, which will trigger a build in Azure DevOps
     * [TailwindTraders-Website](https://github.com/microsoft/TailwindTraders-Website) and
     * [TailwindTraders-Backend](https://github.com/microsoft/TailwindTraders-Backend) 
-* Go This enables you to make changesahead and press `Create Project`
+* Go ahead and press `Create Project`
 
+You should now have personal forks of the Github repos and an Azure DevOps projects, that 
 
 -------------------------------
 
