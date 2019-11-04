@@ -53,6 +53,7 @@ It is kind of a local appstore.
 * Snap backend
 * Snappy Support - Also called [SnapCraft](https://snapcraft.io/store). It is a Linux appstore, which lets app developers distribute their apps. In Pop!OS the UI is called `Software`  
 * VSCode
+    * Optional (when coding C#): [.NET Core SDK](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu19-04/sdk-current) for VSCode
     * Install [plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code)
 * FileManager-Actions (previously called Nautilus-Actions)
     * 2019: [How to Install Nautilus Actions in Ubuntu 18.04](http://ubuntuhandbook.org/index.php/2019/01/install-nautilus-actions-ubuntu-18-04/)
@@ -301,6 +302,8 @@ ssh-keygen -t rsa -b 4096 -C "youremail@domain.com"
 ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 # github.com:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8
 ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+ssh-keyscan -t rsa bitbucket.org >> ~/.ssh/known_hosts
+ssh-keyscan -t rsa ssh.dev.azure.com >> ~/.ssh/known_hosts
 ```
 
 Now you are ready to use your key.  
@@ -327,7 +330,7 @@ code .
 # All identities removed.
 ```
 
-Add a new SSH key to your GitHub account
+Add a new SSH key to your GitHub (bitbucket, gitlab, etc) account
 
 ```bash
 # Copy the contents of the id_rsa_youruserid_github.pub file to your clipboard
@@ -335,6 +338,9 @@ xclip -sel clip < ~/.ssh/id_rsa_youruserid_github.pub
 ```
 
 * Goto [https://github.com/settings/keys](https://github.com/settings/keys)
+    * or [bitbucket](https://bitbucket.org/account/user/your_userid/)
+    * or [dev.azure](https://dev.azure.com/your_userid/_usersSettings/keys)
+    * or [gitlab.com](https://gitlab.com/profile/keys)
 * New SSH key
 * Paste key: Ctrl-V
 * Title: vscode_youruserid_github
