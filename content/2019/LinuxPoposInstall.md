@@ -1,7 +1,7 @@
 Title: Install LinuxPopOS on Laptop
 Date: 2099-01-01 00:00
 Category: DevOps
-Tags: #linux, #popos, #ubuntu, #ssh, #github, #snapstore
+Tags: #linux, #popos, #ubuntu, #ssh, #github, #snapstore, #nodejs, #electron
 
 HowTo get from Window to Ubuntu fork - Pop_OS
 
@@ -48,6 +48,7 @@ Here are other tips - like this blog - to what to do after a fresh OS install
 ## Install From Pop!_Shop
 
 Installed applications can be found in `/usr/share/applications`.  
+* Other places you can find apps: [Linux Directory Map](http://blog.danyll.com/linux-directory-map/)
 
 **Pop!_Shop** is an app installed into the Ubuntu distro [Pop!_OS](https://system76.com/pop).  
 It is kind of a local appstore.
@@ -448,6 +449,22 @@ npm i electron -g
 # Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
 electron -v
 # v7.0.1
+```
+
+##### Git challenge
+
+Either (get latest version):
+* Download zip from https://github.com/jlord/git-it-electron/releases
+* Unzip
+* `cd /Downloads/Git-it-Linux-x64/resources/app`
+* run: `electron .`
+
+Or (npm an old version):
+```bash
+md git-it-electr && cd git-it-electr
+npm install git-it-electron
+# Browse to app
+x-www-browser ./node_modules/git-it-electron/index.html
 ```
 
 The End
