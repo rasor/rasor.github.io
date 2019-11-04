@@ -47,12 +47,14 @@ Here are other tips - like this blog - to what to do after a fresh OS install
 
 ## Install From Pop!_Shop
 
+Installed applications can be found in `/usr/share/applications`.  
+
 **Pop!_Shop** is an app installed into the Ubuntu distro [Pop!_OS](https://system76.com/pop).  
 It is kind of a local appstore.
 
 * Snap backend
 * Snappy Support - Also called [SnapCraft](https://snapcraft.io/store). It is a Linux appstore, which lets app developers distribute their apps. In Pop!OS the UI is called `Software`  
-* VSCode
+* VSCode - Code Editor
     * Optional (when coding C#): [.NET Core SDK](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu19-04/sdk-current) for VSCode
     * Install [plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code)
 * FileManager-Actions (previously called Nautilus-Actions)
@@ -65,7 +67,8 @@ It is kind of a local appstore.
     * Settings:
         * Window Titlebars: Maximize and Minimize: On
     * Gnome Tweaks also have a tab for Gnome Extension - more on them further down
-* GParted
+* Chromium - Browser
+* GParted - Disk partitioner
 * Remote Desktop Viewer
 * Yubico Authenticator - no install via apt - see further down.
 
@@ -393,5 +396,58 @@ crosoft-visual-code-integration/)
 * Troubleshooting
     * [How to check if ssh-agent is already running in bash?](https://stackoverflow.com/questions/40549332/how-to-check-if-ssh-agent-is-already-running-in-bash)
     * [Can&#39;t clone git repo and getting error ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory Host key verification failed](https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass)
+
+### Node
+
+* [nvm](https://github.com/nvm-sh/nvm) should be installed before node, so you can switch node version.  
+
+```bash
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+# => Close and reopen your terminal to start using nvm
+
+nvm -v
+# Node Version Manager (v0.35.1)
+
+nvm list
+# N/A
+```
+
+Current LTS of [Node.js](https://nodejs.org/en/) is 12.13.0
+
+```bash
+# Install LTS
+nvm install 12.13.0
+nvm list
+# ->     v12.13.0
+# default -> 12.13.0 (-> v12.13.0)
+# node -> stable (-> v12.13.0) (default)
+# stable -> 12.13 (-> v12.13.0) (default)
+# iojs -> N/A (default)
+# unstable -> N/A (default)
+# lts/* -> lts/erbium (-> v12.13.0)
+# lts/argon -> v4.9.1 (-> N/A)
+# lts/boron -> v6.17.1 (-> N/A)
+# lts/carbon -> v8.16.2 (-> N/A)
+# lts/dubnium -> v10.17.0 (-> N/A)
+# lts/erbium -> v12.13.0
+node -v
+# v12.13.0
+npm -v
+# 6.12.0
+```
+
+* Optional install: Automatic Version Switching for Node: [wbyoung/avn](https://github.com/wbyoung/avn)
+
+#### Electron
+
+* [Electron](https://electronjs.org/)
+* [How to Install and Set Up Electron on Ubuntu 19.04 - Techomoro](https://www.techomoro.com/how-to-install-and-set-up-electron-on-ubuntu-19-04-disco-dingo/)
+
+```bash
+npm i electron -g
+# Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!
+electron -v
+# v7.0.1
+```
 
 The End
