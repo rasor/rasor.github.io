@@ -116,12 +116,20 @@ sudo snap install snap-store
 * Desktop **Gnome** (default in Linux distro Ubuntu and Pop_OS!)
     * Gnome Default Filemanager is called **Gnome Files** and is also called **Nautilus** (grey icon (blue in Cinnamon)). Ref: [5 of the Best File Managers for Linux](https://www.maketecheasier.com/best-file-managers-linux/)
         * Shortcuts:
-            * Ctrl+h: Toggle **hidden files**
+            * **Ctrl+h**: Toggle **hidden files**
     * Gnome currently - in v 3.32 has removed possiblity to drag'n'drop url shortcuts to the desktop (last seen in 3.28), so I wanted another desktop.
 * Desktop **Cinnamon**
     * Cinnamon Default filemanager is also called **Files** in the menu. It is also called **Nemo** (blue icon (brown in Cinnamon)). This one does support drag'n'drop url shortcuts. After you install Cinnamon you can use it from Gnome, too :-).
         * Shortcuts:
-            * Ctrl+m: Create a **shortcut (symbolic link)** to the selected file or folder
+            * **Ctrl+m**: Create a **shortcut (symbolic link)** to the selected file or folder
+        * Default filetype associations - or setting default **Open With**:
+            * You problably have some Windows **.url** shortcuts lying around. From Nemo choose **Open With other application**
+            * Custom Executable `bash -c 'cat %f | grep URL | cut -d= -f2 | xargs xdg-open &'`
+            * Set as default
+            * Now you can double-click to open them, too. Thanks to 
+                * https://saidulhassan.com/open-url-files-in-linux-mint-ubuntu-1029
+                * https://steronius.blogspot.com/2013/01/open-url-files-in-linux.html
+                * https://unix.stackexchange.com/questions/41372/changing-file-associations-in-gnome#41374
     * Change default Filesmanager from **Nautilus** to **Nemo** (this will also be changed in Gnome):
         * Settings - Preferred Applications - Files: Select the brown Files
 * Other desktops to consider: [10 Best Linux Desktop Environments And Their Comparison | 2018 Edition](https://fossbytes.com/best-linux-desktop-environments/)
