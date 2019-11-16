@@ -122,6 +122,7 @@ sudo snap install snap-store
     * Cinnamon Default filemanager is also called **Files** in the menu. It is also called **Nemo** (blue icon (brown in Cinnamon)). This one does support drag'n'drop url shortcuts. After you install Cinnamon you can use it from Gnome, too :-).
         * Shortcuts:
             * **Ctrl+m**: Create a **shortcut (symbolic link)** to the selected file or folder
+            * **Ctrl+d**: Create a tree-view bookmark of current folder
         * Default filetype associations - or setting default **Open With**:
             * You problably have some Windows **.url** shortcuts lying around. From Nemo choose **Open With other application**
             * Custom Executable `bash -c 'cat %f | grep URL | cut -d= -f2 | xargs xdg-open &'`
