@@ -126,7 +126,9 @@ sudo snap install snap-store
             * You problably have some Windows **.url** shortcuts lying around. From Nemo choose **Open With other application**
             * Custom Executable `bash -c 'cat %f | grep URL | cut -d= -f2 | xargs xdg-open &'`
             * Set as default
-            * Now you can double-click to open them, too. Thanks to 
+            * Now you can double-click to open them, too. 
+            * It saves the cfg into `$HOME/.local/share/applications`
+            * Thanks to 
                 * https://saidulhassan.com/open-url-files-in-linux-mint-ubuntu-1029
                 * https://steronius.blogspot.com/2013/01/open-url-files-in-linux.html
                 * https://unix.stackexchange.com/questions/41372/changing-file-associations-in-gnome#41374
