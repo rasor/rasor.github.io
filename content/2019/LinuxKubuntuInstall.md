@@ -48,7 +48,7 @@ It also removes the annoying effect the middle button has in a browser - closing
 
 Double-click on a Windows `.url` file. Since Linux don't know what to do with it then it will ask for a program to handle it.  
 Enter `cat %f | grep URL | cut -d= -f2 | xargs xdg-open &`. This will open the url from the file in the default browser.
-![bash command for opening url](img/2019/2019-11-19-Kubuntu01.PNG)
+![bash command for opening url](../img/2019/2019-11-19-Kubuntu01.PNG)
 
 ## Starting with [nvm](https://github.com/nvm-sh/nvm) and [node](https://nodejs.org/en/)
 
