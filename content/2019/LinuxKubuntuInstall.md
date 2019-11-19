@@ -48,9 +48,23 @@ It also removes the annoying effect the middle button has in a browser - closing
 
 Double-click on a Windows `.url` file. Since Linux don't know what to do with it then it will ask for a program to handle it.  
 Enter `cat %f | grep URL | cut -d= -f2 | xargs xdg-open &`. This will open the url from the file in the default browser.
-![bash command for opening url](../img/2019/2019-11-19-Kubuntu01.PNG)
+![bash command for opening url](../img/2019/2019-11-19-Kubuntu01.PNG)  
+
+It saves the cfg into `$HOME/.local/share/applications/cat.desktop` with the content
+```text
+[Desktop Entry]
+Exec=cat %f | grep URL | cut -d= -f2 | xargs xdg-open &
+MimeType=application/x-mswinurl;
+Name=cat
+NoDisplay=true
+Type=Application
+```
+
+Thanks to [Saidul Hassan](https://saidulhassan.com/open-url-files-in-linux-mint-ubuntu-1029)
 
 ## Starting with [nvm](https://github.com/nvm-sh/nvm) and [node](https://nodejs.org/en/)
+
+From Windows I have gotten used to start with installing nvm, so nvm was not disturbed by having node installed before nvm. So why not continue with the habbit?
 
 ```bash
 # Install nvm https://github.com/nvm-sh/nvm
