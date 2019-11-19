@@ -84,6 +84,8 @@ nvm list
 * [keychain](https://www.funtoo.org/Keychain) - for SSH and PGP keys - see more in section [git](#git)
 * curl
 * Visual Studio Code
+    * Optional (when coding C#): [.NET Core SDK](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu19-04/sdk-current) for VSCode
+    * Install [plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code)
 
 ## Install from apt, wget, curl
 
