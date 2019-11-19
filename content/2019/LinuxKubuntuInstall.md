@@ -37,6 +37,19 @@ Blogs and lists like the one I am writing
 
 * List: [reorx](https://gist.github.com/reorx/4066620#install)
 
+### System Settings
+
+* Input Devices - Touchpad - **Right-Click**: Change from bottom-right to **two-fingers** - this is normal behavior on a Mac. 
+It also removes the annoying effect the middle button has in a browser - closing a tab. **Middle-button-click** is now changed to **three fingers**.
+
+### Dolphin
+
+#### Opening Windows .url files
+
+Double-click on a Windows `.url` file. Since Linux don't know what to do with it then it will ask for a program to handle it.  
+Enter `cat %f | grep URL | cut -d= -f2 | xargs xdg-open &`. This will open the url from the file in the default browser.
+![bash command for opening url](img/2019/2019-11-19-Kubuntu01.PNG)
+
 ## Starting with [nvm](https://github.com/nvm-sh/nvm) and [node](https://nodejs.org/en/)
 
 ```bash
@@ -215,8 +228,10 @@ If you use 2FA on github, then SSH access with a private key avoids having a `Pe
 So from VSCode rather like to use SSH access (opposed to HTTPS access).  
 Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  
 
-Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode - Ref: 
+Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode
+* Ref: 
 [Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code)
+* But you might get it working by [Storing SSH key passphrase in KDE Wallet](https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases)
 
 ```bash
 # Check for existing SSH keys
@@ -253,6 +268,7 @@ in ~/.bash_profile add your newly generated ssh key
 ```bash
 # Add your SSH key to SSH Agent
 eval `keychain --eval --agents ssh id_rsa_youruserid_github`
+# Now you don't have to add your SSH key to agent (`ssh-add`) before you commit to github.
 ```
 
 Note: keychain was installed via Discover.  
@@ -280,9 +296,6 @@ xclip -sel clip < ~/.ssh/id_rsa_youruserid_github.pub
 * Paste key: Ctrl-V
 * Title: vscode_youruserid_github
 * Save key: Add SSH key
-
-You also need to save github url to [~/.ssh/known_hosts](https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass):
-`ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts`
 
 Finally you need to change urls on your local repos remote origin from HTTPS to SSH
 
