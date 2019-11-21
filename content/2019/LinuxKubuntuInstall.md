@@ -78,14 +78,21 @@ nvm list
 
 ## Install From Discover
 
-**Discover** is the appstore for KDE. It uses **snapd** - also called [SnapCraft](https://snapcraft.io/store) - as one of its apt sources, so you don't need snap installed separately. You will find it under **Installed** as **core**.  
+**Discover** is the appstore for KDE.  
+It uses **snapd** - the Snap Daemon. But not all apps in the Snap Store is found through Discover, so you can install that, too. Snapd is found under **Installed** as **core**.  
 
+* [Snap Store](https://snapcraft.io/snap-store) - extra app store
+* [Snapcraft](https://snapcraft.io/snapcraft) - package your own apps (in containers)
 * git
 * [keychain](https://www.funtoo.org/Keychain) - for SSH and PGP keys - see more in section [git](#git)
 * curl
 * Visual Studio Code
     * Optional (when coding C#): [.NET Core SDK](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu19-04/sdk-current) for VSCode
     * Install [plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code)
+
+## Install from Snap Store
+
+* PowerShell - installed into `/snap/powershell/77/opt/powershell/pwsh`
 
 ## Install from apt, wget, curl
 
@@ -328,5 +335,52 @@ git remote add origin git@github.com:USERNAME/REPOSITORY.git
 # Print remote url
 git remote -v
 ```
+
+### .NET Core SDK
+
+[Install .NET Core 3.0 SDK (v3.0.101) on Linux](https://dotnet.microsoft.com/download/linux-package-manager/sdk-current)
+```bash
+wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+sudo apt-get update
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-3.0
+# verify install
+dotnet --info
+# .NET Core SDK (reflecting any global.json):
+# Version:   3.0.100
+```
+
+### Azure CLI and PS1
+
+[Install the Azure CLI on Linux with apt](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
+```bash
+# BASH
+# Install Azure CLI
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+# If you get into problems it be that you in SW sources should change from eoan (19.10) to disco (19.04) and do one more apt update and install
+# verify install
+az -v
+# azure-cli                         2.0.
+az login
+```
+
+```ps1
+# PS1
+$host
+# Name             : ConsoleHost
+# Version          : 6.2.3
+# Install Azure module
+Install-Module -Name Az -AllowClobber -Scope CurrentUser
+# Print installed modules
+get-module
+# List all az commands in currently installed az. modules
+Get-Help 'get-az'
+# PS1 login
+connect-azaccount
+```
+
+More on [Azure](https://github.com/rasor/rasor.github.io/blob/pelican/content/2019/AzPractize.md)
 
 The End
