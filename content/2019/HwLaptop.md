@@ -3,6 +3,8 @@ Date: 2099-01-01 00:00
 Category: Biz
 Tags: #cpu, #laptop, #hw, #ssd
 
+# Laptops
+
 * Lists: 
     * Laptops: [PassMark CPU Benchmarks - New Laptop CPUs Performance](https://www.cpubenchmark.net/laptop.html)
     * Search: [PassMark - CPU Benchmarks - List of Benchmarked CPUs](https://www.cpubenchmark.net/cpu_list.php)
@@ -55,10 +57,58 @@ Tags: #cpu, #laptop, #hw, #ssd
     * 
         * DKK 4499 / 4GB / 128SSD / 14'' [Lenovo Ideapad 530s 14&amp;quote; bærbar computer (mineral gray) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/LE81H10000MX/lenovo-ideapad-530s-14-barbar-computer-mineral-gray)
 
-Links:
-* [The Best M.2 Solid-State Drives for 2019](https://www.pcmag.com/roundup/358910/the-best-m-2-solid-state-drives)
+# SSDs
 
-Previous Posts:
+* [The Best M.2 Solid-State Drives for 2019](https://www.pcmag.com/roundup/358910/the-best-m-2-solid-state-drives)
+* [Easy Guide to SSDs: SATA, mSATA, M.2 and U.2 | ROG - Republic of Gamers Global](https://rog.asus.com/articles/hands-on/easy-guide-to-ssds-sata-msata-m-2-and-u-2/)
+
+## Buses and sizes
+
+**SATA** bus:  
+[![SSD Sizes](https://images-na.ssl-images-amazon.com/images/I/61uNuL7LIdL._SL1200_.jpg)](https://www.amazon.de/Adapter-22pin-Combo-mSATA-Converter/dp/B00S6AHQBM/ref=pd_sbs_147_9)
+* SATA - (as HDD size)
+* mSATA (as mPCIe size). Width: 30 mm
+    * Half size - 25 mm
+    * Full size - 51 mm
+* M.2 SSD. Width: 22 mm
+    * 30 mm
+    * 42 mm
+    * 60 mm
+    * 80 mm
+
+**PCI-Express** (PCIe) and **NVM-Express** (NVMe) buses:
+* mPCIe (as mSATA size). Width: 30 mm
+* M.2 SSD. Width: 22 mm
+    * 30 mm
+    * 42 mm
+    * 60 mm
+    * 80 mm
+* U.2
+
+Notice:
+* NVMe needs to have a motherboard, that can boot it. Same goes for PCIe.
+
+## Replacement for mz-mtd1280/0l1
+
+Device [MZMTD128HAFV MZ MTD1280](https://www.aliexpress.com/item/2020987744.html) is a 128G mSATA 512MB cache 128G SSD-in Internal SSD from 2013.  
+I need a replacement.
+* Form Factor: mSATA
+* Size: 50.8 mm * 30.5 mm (Full size)
+
+Specs: [MZ-MTD1280](https://www.newegg.com/p/N82E16820147387)
+
+### Buy
+* 240 GB, 37 EUR: [Dogfish SSD mSATA 240GB Integrierte: Amazon.de: Computer &amp; Zubehör](https://www.amazon.de/Dogfish-Solid-State-Festplatte-Hochleistungs-Festplatte-Desktop-Laptop-Einschlie%C3%9Flich/dp/B07HHD5CK1/ref=sr_1_1_sspa)
+* List: [Suchergebnis auf Amazon.de für: msata ssd](https://www.amazon.de/s?k=msata+ssd&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=J4O2IAD5BQ9J&sprefix=msata+%2Caps%2C162&ref=nb_sb_ss_i_1_6)
+* mSATA USB adapter. 8.5 EUR: [ELUTENG mSATA Adapter,mSATA auf USB 50mm Asm1153E Chip: Amazon.de: Computer &amp; Zubehör](https://www.amazon.de/ELUTENG-Asm1153E-Unterst%C3%BCtzung-Portable-External/dp/B07VSM233H/ref=sr_1_22_sspa)
+* * mSATA USB adapter. 15 EUR:  [QNINE M.2 USB Adapter, Kein Kabel Ben&ouml;tigt, M.2: Amazon.de: Computer &amp; Zubehör](https://www.amazon.de/QNINE-erforderlich-Schnell%C3%BCbertragung-Unterst%C3%BCtzung-Schl%C3%BCssel/dp/B07KWT5H13/ref=pd_bxgy_147_img_2/258-0774714-3986125)
+
+# Keyboards
+
+* IdeaPad Yoga 13:
+    * [Lenovo Keyboard (NORDIC), 25205820](https://dk.eetgroup.com/i/25205820-lenovo-keyboard-nordic)
+
+# Previous Posts
 
 * [CPU: Can you live without VT-d?](https://rasor.wordpress.com/2013/03/24/cpu-can-you-live-without-vt-d/)
 * [CPU: Choosing a CPU for virtualization](https://rasor.wordpress.com/2010/01/29/cpu-choosing-a-cpu-for-virtualization/)
