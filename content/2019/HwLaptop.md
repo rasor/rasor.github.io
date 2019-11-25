@@ -98,6 +98,7 @@ I need a replacement.
 Specs: [MZ-MTD1280](https://www.newegg.com/p/N82E16820147387)
 
 ### Buy
+
 * 240 GB, 37 EUR: [Dogfish SSD mSATA 240GB Integrierte: Amazon.de: Computer &amp; Zubehör](https://www.amazon.de/Dogfish-Solid-State-Festplatte-Hochleistungs-Festplatte-Desktop-Laptop-Einschlie%C3%9Flich/dp/B07HHD5CK1/ref=sr_1_1_sspa)
 * List: [Suchergebnis auf Amazon.de für: msata ssd](https://www.amazon.de/s?k=msata+ssd&__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=J4O2IAD5BQ9J&sprefix=msata+%2Caps%2C162&ref=nb_sb_ss_i_1_6)
 * mSATA USB adapter. 8.5 EUR: [ELUTENG mSATA Adapter,mSATA auf USB 50mm Asm1153E Chip: Amazon.de: Computer &amp; Zubehör](https://www.amazon.de/ELUTENG-Asm1153E-Unterst%C3%BCtzung-Portable-External/dp/B07VSM233H/ref=sr_1_22_sspa)
@@ -106,7 +107,9 @@ Specs: [MZ-MTD1280](https://www.newegg.com/p/N82E16820147387)
 # Keyboards
 
 * IdeaPad Yoga 13:
-    * [Lenovo Keyboard (NORDIC), 25205820](https://dk.eetgroup.com/i/25205820-lenovo-keyboard-nordic)
+    * Approx 150 EUR: [Lenovo Keyboard (NORDIC), 25205820](https://dk.eetgroup.com/i/25205820-lenovo-keyboard-nordic)
+* Wireless
+    * Mouse + Keyb - Approx 15 EUR: [Mini model - Deltaco](https://www.avxperten.dk/traadloest-tastatur-mus/tastatur-mus-mini-model-deltaco.asp#aw_source=pb-5d6f67185ebfe50b85bfd122)
 
 # Previous Posts
 
