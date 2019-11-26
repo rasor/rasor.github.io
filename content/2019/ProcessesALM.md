@@ -28,7 +28,7 @@ Which rules should the code be validated against?
 * Does a code change oppinion mean that the code **must** be changed or is it only **nice-to-have** or should the change be done at **next change** ?
 * Must Design Patterns or links to examples have to added in oppinions?
 * Should there exist **automated code / performance check** that must be applied to?
-* How can we check for **Bad Complexity** - does the code add any value? _(Ref: The Developer's Code)_
+* Maybes: How can we check for **Bad Complexity** - does the code add any value? _(Ref: The Developer's Code)_
     * When not to use review - doesn't HotDog-code needs review?
     * When not to use Entities and Services (Classes)?
     * When not to use Generics?
@@ -40,6 +40,11 @@ Which rules should the code be validated against?
     * When not to use CI/CD?
     * When not to use Authentication/Authorization?
     * Avoid BUFD (Big upfront Design) - YAGNI (You ain't gonna need it) - KISS (Keep it simple, Stupid)
+* Do's:
+    * Use correct data types ( don't use strings everywhere)
+    * Use names - not abbreviations (e.g. not CLX32)
+* Dont's:
+    * Don't put logic in dto's (data tranfer objects)
 * How can we check for the best level of doing **workflow / deviance** coding?
     * When not to use Azure Logic Flow?
     * When not to use Events brokers / Service Busses?
