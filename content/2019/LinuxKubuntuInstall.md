@@ -83,6 +83,8 @@ It uses **snapd** - the Snap Daemon. But not all apps in the Snap Store is found
 
 * [Snap Store](https://snapcraft.io/snap-store) - extra app store
 * [Snapcraft](https://snapcraft.io/snapcraft) - package your own apps (in containers)
+* [ClamAV](https://www.clamav.net/downloads) - Anti Virus CLI
+* ClamTK - Gui for above
 * git
 * [keychain](https://www.funtoo.org/Keychain) - for SSH and PGP keys - see more in section [git](#git)
 * curl
@@ -123,7 +125,13 @@ Now you can execute you AppImage as a normal APT install.
 
 More info on [appimages](https://itsfoss.com/use-appimage-linux/)
 
-### Authenticator
+#### pCloud
+
+pCloud is an idrive.  
+It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-drive-linux.html?download=electron-64).  
+It [integrates into terminals](https://github.com/pcloudcom/console-client).
+
+cccccckndiegvrcrgrivcrlrjifudibhjvdtiknfjjb### Authenticator
 
 For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  
 
@@ -183,7 +191,18 @@ Setting Brave as default browser:
     * Turn off everything under Autofill
 
 [Extensions](https://chrome.google.com/webstore/category/extensions?hl=en-US)
+
 * Password manager
+* [Avast Online Security](https://chrome.google.com/webstore/detail/avast-online-security/gomekmidlodglbbmalcneegieacbdmki?hl=en)
+
+### Chrome (for less trusted extensions)
+
+* Download: [Google Chrome](https://www.google.com/intl/en/chrome/)
+
+[Extensions](http://chrome://extensions/)
+
+* [Avast Online Security](https://chrome.google.com/webstore/detail/avast-online-security/gomekmidlodglbbmalcneegieacbdmki?hl=en)
+* [Video Downloader professional](https://chrome.google.com/webstore/detail/video-downloader-professi/elicpjhcidhpjomhibiffojpinpmmpil?hl=en)
 
 ### Keybase
 
@@ -382,5 +401,9 @@ connect-azaccount
 ```
 
 More on [Azure](https://github.com/rasor/rasor.github.io/blob/pelican/content/2019/AzPractize.md)
+
+# Links
+
+* [LinuxPoposInstall](LinuxPoposInstall.md)
 
 The End
