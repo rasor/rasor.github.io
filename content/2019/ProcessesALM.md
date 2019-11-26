@@ -13,7 +13,7 @@ In the **(1) Fork and Pull** git model code review should be done [after a Pull 
 Likewise in the **(2) Shared Repository** git model.
 
 In (1) you have 
-* **Contributers** to send PRs.
+* **Contributors** to send PRs.
 * **Maintainers** to do code-review and merge changes.
 
 In (2) the repo is the same (no fork) and our enterprise team wants to have both roles for all.  
@@ -25,8 +25,8 @@ Or is merging so easy with Git, that we want the benefits from branching?
 Which rules should the code be validated against?
 
 * Should there exist a **design review** or should it be allowed to **trash the whole change** due to **badly chosen design**?
-* Does a code change oppinion mean that the code **must** be changed or is it only **nice-to-have** or should the change be done at **next change** ?
-* Must Design Patterns or links to examples have to added in oppinions?
+* Does a code change opinion mean that the code **must** be changed or is it only **nice-to-have** or should the change be done at **next change** ?
+* Must Design Patterns or links to examples have to added in opinions?
 * Should there exist **automated code / performance check** that must be applied to?
 * Maybes: How can we check for **Bad Complexity** - does the code add any value? _(Ref: The Developer's Code)_
     * When not to use review - doesn't HotDog-code needs review?
@@ -54,9 +54,9 @@ Which rules should the code be validated against?
 
 ### Finding the Maintainer
 
-* Can the Contributer **choose** his wanted Maintainer?
+* Can the Contributor **choose** his wanted Maintainer?
 * Or are the Maintainers **fixed** for per system, per tech or per something else?
-* Should Contributers and Maintainer work in teams with someone they have the **best relation** with?
+* Should Contributors and Maintainer work in teams with someone they have the **best relation** with?
 
 # Links
 
