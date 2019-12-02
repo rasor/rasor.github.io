@@ -33,6 +33,16 @@ Tags: #graphql, #react, #cms, #apollo, #graphcool, #typescript, #docker
 * Server Code: [apollo-server for Express, Hapi, Restify, AWS Lambda, AzureFunctions etc.](https://github.com/apollographql/apollo-server)
   * Serves [graphiql IDE for GraphQL](https://github.com/graphql/graphiql)
 
+### C#
+
+* [Learn how you can use GraphQL in .NET Core and C#](https://dev.to/dotnet/learn-how-you-can-use-graphql-in-net-core-and-c-4h96)
+* [GraphQL: A query language for APIs. - C#](https://graphql.org/code/#c-net)
+* [Introduction · Hot Chocolate](https://hotchocolate.io/docs/introduction.html)
+    * [ChilliCream/hotchocolate](https://github.com/ChilliCream/hotchocolate)
+* [lukemurray/EntityGraphQL](https://github.com/lukemurray/EntityGraphQL)
+* [GraphQL .NET](https://graphql-dotnet.github.io/docs/getting-started/introduction)
+* [Building GraphQL APIs with ASP.NET Core](https://medium.com/volosoft/building-graphql-apis-with-asp-net-core-419b32a5305b)
+
 ### OCaml
 
 * Event: [Andreas Garnæs: Type-Safe GraphQL with OCaml](https://www.meetup.com/MoedegruppeFunktionelleKoebenhavnere/events/245605883/)
