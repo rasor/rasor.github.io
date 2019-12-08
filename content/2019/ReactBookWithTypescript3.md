@@ -3,11 +3,19 @@ Date: 2099-01-01 00:00
 Category: Develop
 Tags: #react
 
-Notes from book [Learn React with TypeScript 3](https://www.packtpub.com/web-development/learn-react-typescript-3)  
+Notes from 
 
+* Vid 2019-10: [React Hooks](https://subscription.packtpub.com/video/web_development/9781839210075)
+    * [PacktPublishing/React-Hooks](https://github.com/PacktPublishing/React-Hooks)
+* Vid 2019-10: [Awesome Apps with React Hooks and Firebase](https://subscription.packtpub.com/video/web_development/9781839211348)
+    * [PacktPublishing/Awesome-Apps-with-React-Hooks-and-Firebase](https://github.com/PacktPublishing/Awesome-Apps-with-React-Hooks-and-Firebase)
+* Book 2018-11: [Learn React with TypeScript 3](https://www.packtpub.com/web-development/learn-react-typescript-3)  
+    * [PacktPublishing/Learn-React-with-TypeScript-3](https://github.com/PacktPublishing/Learn-React-with-TypeScript-3)
 
-I have pushed some code to [rasor/my-react-ts-app](https://github.com/rasor/my-react-ts-app)
+I have pushed some code to 
 
+* [rasor/react-stencil-poc](https://github.com/rasor/react-stencil-poc)
+* [rasor/my-react-ts-app](https://github.com/rasor/my-react-ts-app)
 
 ```bash
 # running on
@@ -70,6 +78,24 @@ Add file `tslint.json`
 
 ## Links
 
+* Hooks:
+    * Vid 2019-10: [React Hooks](https://subscription.packtpub.com/video/web_development/9781839210075)
+    * [Hooks at a Glance – React](https://reactjs.org/docs/hooks-overview.html)
+    * `useLayoutEffect`:
+        * [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#uselayouteffect)
+            * Identical to useEffect, but it fires synchronously after all DOM mutations. 
+            * Use this to read layout from the DOM and synchronously re-render. 
+            * Prefer the standard useEffect when possible to avoid blocking visual updates.
+        * `ref.current.setAttribute`: [How to use SVG Icons as React Components?](https://www.robinwieruch.de/react-svg-icon-components)
+    * `useRef`:
+        * [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#useref)
+        * [React: Using Refs with the useRef Hook](https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29)
+    * `useMemo`: 
+        * [Hooks API Reference – React](https://reactjs.org/docs/hooks-reference.html#usememo)
+            * A cache
+        * Automatic generation of ids: [Managing ARIA attributes with React hooks](https://medium.com/gronda/managing-aria-attributes-with-react-hooks-a7470d572683)
+* TSX:
+    * [How to conditionally add attributes to React components?](https://stackoverflow.com/questions/31163693/how-to-conditionally-add-attributes-to-react-components/35428331#35428331)
 * 2018-11: [Learn React with TypeScript 3](https://www.packtpub.com/web-development/learn-react-typescript-3)
     * [Online book](https://subscription.packtpub.com/book/web_development/9781789610253)
     * Code: [PacktPublishing/Learn-React-with-TypeScript-3](https://github.com/PacktPublishing/Learn-React-with-TypeScript-3)
