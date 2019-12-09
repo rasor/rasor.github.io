@@ -3,10 +3,13 @@ Date: 2099-01-01 00:00
 Category: Develop
 Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
 
-* Hackathon 2019-11: [Honeycomb Smart Contract Hackathon](https://honeycomb.devpost.com/)
-    * Rules: [Honeycomb Smart Contract Hackathon](https://honeycomb.devpost.com/rules)
-    * Hackathon Questions: [Honeycomb Marketplace Discord Discord](https://discordapp.com/invite/NgKdSv4)
-    * Other Questions: [Honeycomb Telegram](https://t.me/clcgio)
+* Hackathons
+    * 2019-11: [Honeycomb Smart Contract Hackathon](https://honeycomb.devpost.com/)
+        * Rules: [Honeycomb Smart Contract Hackathon](https://honeycomb.devpost.com/rules)
+        * Hackathon Questions: [Honeycomb Marketplace Discord Discord](https://discordapp.com/invite/NgKdSv4)
+        * Other Questions: [Honeycomb Telegram](https://t.me/clcgio)
+    * Other Chainlink hackathons:
+        * [Exploring the Wide Variety of Winning Chainlink Applications](https://blog.chain.link/exploring-the-wide-variety-of-winning-chainlink-applications-from-recent-hackathons/)
 * About Chainlink and Hoenycomb:
     * Docs: 
         * What is Chainlink? [Welcome to Chainlink](https://docs.chain.link/docs)
@@ -35,6 +38,7 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
         * Chainlinks to Consume
             * [Chainlinks (Ethereum Mainnet)](https://docs.chain.link/docs/chainlinks-ethereum-mainnet)
         * [Viewing Chainlink Transactions on the Ropsten Testnet](https://blog.chain.link/viewing-chainlink-transactions-on-the-ropsten-testnet/)
+        * DApp code generator: [CONTRACTOR - CoinList](https://coinlist.co/build/chainlink/projects/4d7f84a3-8f93-4262-8281-5691257df35d)
     * Honeycomb (Partner nodes hosting Chainlink Oracle **jobs**/DApps)
         * [Honeycomb Marketplace 101 for Ethereum Developers](https://medium.com/clc-group/honeycomb-marketplace-101-for-ethereum-developers-c7c63c2d3049)
         * [Example Walkthrough](https://docs.chain.link/docs/example-walkthrough)
@@ -50,7 +54,10 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
         * Wiki: [Chainlink Wiki](https://github.com/smartcontractkit/chainlink/wiki)
             * [Development Setup Guide](https://github.com/smartcontractkit/chainlink/wiki/Development-Setup-Guide)
         * API: [Chainlink](https://docs.chain.link/reference)
-        * [Chainlink Faucet](https://ropsten.chain.link/)
+    * Chainlink Faucet
+        * [Ropsten Chainlink Faucet](https://ropsten.chain.link/)
+        * [Rinkeby Chainlink Faucet](https://rinkeby.chain.link/)
+        * [Kovan Chainlink Faucet](https://kovan.chain.link/)
 * APIs available for hackathon participants (on API Marketplace - see above): 
     * Aeris Weather - Weather data
     * Aviation Edge - Flight schedules 
@@ -87,6 +94,14 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
     _Image by Google_
     * 
 * Other
-    * Off-chain trusted compute off-load: [Introducing Hyperledger Avalon &ndash; Hyperledger](https://www.hyperledger.org/blog/2019/10/03/introducing-hyperledger-avalon)
+    * TCF (Off-chain Trusted Compute Framework)
+        * Hyperledger Avalon: [Introducing Hyperledger Avalon](https://www.hyperledger.org/blog/2019/10/03/introducing-hyperledger-avalon)
+        * Chainlink and TCF/TEE: [Chainlink and the Trusted Compute Framework](https://medium.com/coinmonks/chainlinks-implications-in-the-trusted-compute-framework-7b7628c86b09)
+    * TEE (Off-chain Trusted Execution Environments)
+        * Intel SGX
+        * ARM TrustZone
+        * TEE Oracle [Town Crier](https://www.town-crier.org/what-is-tc.html) - using Intel SGX
+            * [Getting Started](https://www.town-crier.org/get-started.html)
+        * [IoTeX & Chainlink: Delivering Real World Data to the Blockchain](https://medium.com/iotex/iotex-chainlink-delivering-real-world-data-to-the-blockchain-17abb11981a7)
 
 The End
