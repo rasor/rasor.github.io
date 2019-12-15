@@ -335,8 +335,8 @@ Gas price oracles:
 * BIP44 compliant wallets [ Migrating from other wallets into Coinomi](https://coinomi.freshdesk.com/support/solutions/articles/29000009716-migrating-from-other-wallets-into-coinomi)
 * Export private keys [ What is the Recovery Tool and how do I export my private keys?](https://coinomi.freshdesk.com/support/solutions/articles/29000009717-what-is-the-recovery-tool-and-how-do-i-export-my-private-keys-)
 * [BIP39 - Mnemonic Code](https://iancoleman.io/bip39/)
-    * BIP39 Mnemonic code for generating deterministic keys
-    * BIP32 Hierarchical Deterministic Wallets
+    * BIP39 Mnemonic code for generating deterministic keys: [bitcoin/bips](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
+    * BIP32 Hierarchical Deterministic Wallets: [bitcoin/bips](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
     * BIP44 Multi-Account Hierarchy for Deterministic Wallets
     * BIP49 Derivation scheme for P2WPKH-nested-in-P2SH based accounts
 

@@ -163,4 +163,8 @@ Version 17.03 or higher. Compose: Version 1.8 or higher
 
 * [Webinars | Altoros](https://www.altoros.com/blog/events/?showcat=128)
 
+## Compare
+
+* [Enterprise Blockchain Protocols: A Technical Analysis of Ethereum vs Fabric vs Corda - Kaleido](https://kaleido.io/a-technical-analysis-of-ethereum-vs-fabric-vs-corda/)
+
 The End

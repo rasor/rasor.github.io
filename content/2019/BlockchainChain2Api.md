@@ -28,9 +28,9 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
             * [Dapp Store](https://honeycomb.market/dappstore)
 * Dev:
     * Outgoing flow:
-        * (ETH) **Blockchain DApp** calls 
-        * **Chainlink Dapp** (on-chain Oracle - see [Honeycomb DApp store](https://honeycomb.market/dappstore)) which uses/aggregates  
-        * **External Adapter** (see [API Marketplace](https://developer.honeycomb.market/browse-apis)) that calls
+        * (ETH) **Blockchain DApp** (see [Honeycomb DApp store](https://honeycomb.market/dappstore)) calls 
+        * **Chainlink Dapp** (on-chain Oracle/Job - see [API Marketplace](https://developer.honeycomb.market/browse-apis)) which uses/aggregates  
+        * **External Adapter** that calls
         * **External API** (off-chain)
     * Blockchain DApps
         * [Using Chainlink Reference Data Contracts](https://docs.chain.link/docs/using-chainlink-reference-contracts)
@@ -54,10 +54,14 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
         * Wiki: [Chainlink Wiki](https://github.com/smartcontractkit/chainlink/wiki)
             * [Development Setup Guide](https://github.com/smartcontractkit/chainlink/wiki/Development-Setup-Guide)
         * API: [Chainlink](https://docs.chain.link/reference)
-    * Chainlink Faucet
-        * [Ropsten Chainlink Faucet](https://ropsten.chain.link/)
-        * [Rinkeby Chainlink Faucet](https://rinkeby.chain.link/)
-        * [Kovan Chainlink Faucet](https://kovan.chain.link/)
+        * Chainlink code Samples: [SmartContract](https://github.com/smartcontractkit)
+        * [Chainlink Explorer](https://explorer.chain.link/)
+        * Oracles: [Chainlinks (Testnet)](https://docs.chain.link/docs/available-oracles)
+    * Faucet
+        * Link: [Ropsten Chainlink Faucet](https://ropsten.chain.link/)
+        * Link: [Rinkeby Chainlink Faucet](https://rinkeby.chain.link/)
+        * Link: [Kovan Chainlink Faucet](https://kovan.chain.link/)
+        * ETH: [Test Ether Faucet](https://faucet.metamask.io/)
 * APIs available for hackathon participants (on API Marketplace - see above): 
     * Aeris Weather - Weather data
     * Aviation Edge - Flight schedules 
@@ -88,11 +92,12 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
     * Upcoming
         * [Oracle selects first 20 startups for Chainlink blockchain project - Ledger Insights](https://www.ledgerinsights.com/oracle-selects-startups-chainlink-project/)
 * Press
-    * [What is the &#039;oracle problem&#039; &amp; how does Chainlink solve it? | Data Driven Investor](https://www.datadriveninvestor.com/2019/06/15/what-is-the-oracle-problem-how-does-chainlink-solve-it/) - including Google announcement
+    * [What is the oracle problem & how does Chainlink solve it? | Data Driven Investor](https://www.datadriveninvestor.com/2019/06/15/what-is-the-oracle-problem-how-does-chainlink-solve-it/) - including Google announcement
     * [Building hybrid blockchain/cloud applications with Ethereum and Google Cloud | Google Cloud Blog](https://cloud.google.com/blog/products/data-analytics/building-hybrid-blockchain-cloud-applications-with-ethereum-and-google-cloud)  
     ![Chainlink + Google](https://storage.googleapis.com/gweb-cloudblog-publish/images/Untitled_6.max-1600x1600.png)  
     _Image by Google_
-    * 
+    * Google BigQuery Blockchain? DApp: [smartcontractkit/bq-example-contract](https://github.com/smartcontractkit/bq-example-contract)
+    * [Kaleido selects Chainlink to provide oracle services  for Blockchain Business Cloud](https://kaleido.io/kaleido-selects-chainlink-to-provide-oracle-services-for-blockchain-business-cloud/)
 * Other
     * TCF (Off-chain Trusted Compute Framework)
         * Hyperledger Avalon: [Introducing Hyperledger Avalon](https://www.hyperledger.org/blog/2019/10/03/introducing-hyperledger-avalon)
@@ -103,5 +108,9 @@ Tags: #blockchain, #chainlink, #api, #hackathon, #honeycomb
         * TEE Oracle [Town Crier](https://www.town-crier.org/what-is-tc.html) - using Intel SGX
             * [Getting Started](https://www.town-crier.org/get-started.html)
         * [IoTeX & Chainlink: Delivering Real World Data to the Blockchain](https://medium.com/iotex/iotex-chainlink-delivering-real-world-data-to-the-blockchain-17abb11981a7)
+        * [Privacy & Anonymity](https://docs.kaleido.io/kaleido-platform/full-stack/privacy/)
+    * [Kaleido Full-stack Blockchain](https://docs.kaleido.io/kaleido-platform/full-stack/)  
+    ![Kaleido Fullstack](https://docs.kaleido.io/images/full_stack_blockchain_b2b_tech_stack.png)  
+    _Image by Kaleido_
 
 The End
