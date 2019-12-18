@@ -34,6 +34,7 @@ Tags: #javascript
 * [ES6 In Depth: Modules – Mozilla Hacks - the Web developer blog](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)
 * Ref: [Microsoft/TypeScript - Import Declarations](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#1132-import-declarations)
 * Ref: [Microsoft/TypeScript - Export Declarations](https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md#11342-export-default-declarations)
+* Guide: Using Imports and Exports via [Modules](https://www.typescriptlang.org/docs/handbook/modules.html)
 * Ref: [Compiler Options - TypeScript](https://www.typescriptlang.org/docs/handbook/compiler-options.html)
 * Ref: [tsconfig.json - @types, typeRoots and types](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html#types-typeroots-and-types)
 * Ref - TS Libs: [Microsoft/TypeScript](https://github.com/Microsoft/TypeScript/tree/master/lib)
