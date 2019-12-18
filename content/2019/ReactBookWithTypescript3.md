@@ -75,6 +75,77 @@ Add file `tslint.json`
   }
 ```
 
+## Using WebComponents in React
+
+index.tsx:
+```ts
+import { defineCustomElements } from 'my-stencil-components/loader';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+defineCustomElements(window);
+```
+
+declarations.d.ts:
+```ts
+// Load my-component for untyped elements
+import 'my-stencil-components'
+
+// Load my-component for typed elements
+import { JSX as ExtJSX } from 'my-stencil-components'
+
+export declare global {
+    namespace JSX {
+        // From /my-stencil-app/node_modules/@stencil/core/dist/index.d.ts
+        // Untyped elements
+        interface IntrinsicElements extends d.JSX.IntrinsicElements, d.JSXBase.IntrinsicElements {
+            [tagName: string]: any;
+        }
+        // Typed elements from imported webcomponent
+        interface IntrinsicElements extends ExtJSX.IntrinsicElements{}
+    }
+}
+```
+
+Home.tsx
+```ts
+import { Person } from 'my-stencil-components/dist/types/models/person';
+
+const Home: React.FC = () => {
+  const pers: Person = {
+    email: 'donald.duck@andeby.disney',
+    name: 'Donald Duck',
+    position: '0',
+    photo: ''
+  };
+  const commonProps = {person: pers};
+  return (
+      {/* Soon a sln? https://github.com/skatejs/skatejs/issues/1058#issuecomment-275851441 */}
+      {/* https://stackoverflow.com/a/49081745/750989 */}
+       {pers && <my-component first="External Stencil" last="'Don't call me a framework' JS" {...commonProps}></my-component>}
+     {/* {pers && <my-component first="External Stencil" last="'Don't call me a framework' JS" person={pers}></my-component>} */}
+  )
+```
+
+* [ionic-team/ionic](https://github.com/ionic-team/ionic/blob/master/packages/react/src/components/utils/attachProps.ts)
+* [Passing state through the props object in React](https://dev.to/cesareferrari/passing-state-through-the-props-object-in-react-5fmm)
+* [Can I use JSX to pass an object to an attribute? · Issue #1058 · skatejs/skatejs](https://github.com/skatejs/skatejs/issues/1058#issuecomment-275851441)
+* [Web Components – React](https://reactjs.org/docs/web-components.html)
+* [Refs and the DOM – React](https://reactjs.org/docs/refs-and-the-dom.html)
+* [Forwarding Refs – React](https://reactjs.org/docs/forwarding-refs.html#forwarding-refs-to-dom-components)
+* [How to use Web Components in React](https://vaadin.com/learn/tutorials/using-web-components-in-react)
+    * Includes: @webcomponents/webcomponentsjs vendor-copy
+    * [@webcomponents/webcomponentsjs](https://www.npmjs.com/package/@webcomponents/webcomponentsjs)
+* [Custom Elements Everywhere](https://custom-elements-everywhere.com/)
+* [Stencil 4 React](https://stenciljs.com/docs/react)
+* [Stencil 4 JS](https://stenciljs.com/docs/javascript)
+* [Direflow](https://direflow.io/)
+
+## Ionic React
+
+* [@ionic/react](https://www.npmjs.com/package/@ionic/react)
+* [Ionic React - First Look](https://dev.to/dabit3/ionic-react-first-look-104l)
+* [Announcing Ionic React Hooks](https://ionicframework.com/blog/announcing-ionic-react-hooks/)
 
 ## Links
 

@@ -9,6 +9,6 @@ Tags: #stratis, #blockchain, #csharp
     * [Stratis Academy  documentation](https://academy.stratisplatform.com/index.html)
     * [Stratis Blockchain Development Platform](https://stratisplatform.com/)
 * Dev
-    * [Stratis Smart Contracts &mdash; Stratis Academy  documentation](https://academy.stratisplatform.com/SmartContracts/smart-contracts-introduction.html)
+    * [Stratis Smart Contracts](https://academy.stratisplatform.com/SmartContracts/smart-contracts-introduction.html)
 
 The End
