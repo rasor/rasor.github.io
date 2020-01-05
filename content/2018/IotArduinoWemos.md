@@ -25,6 +25,7 @@ After that the board is started, when it is powered on and it connects to the wo
     * Upload default program to board (Arduino IDE - Upload program):  
     ![Arduino IDE - Upload program](img/2018/2018-09-16-hack-arduino4.PNG)]
 * Pins: [Setup - Micropython on ESP8266 Workshop 1.0 documentation](https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html#development-board)
+* eBook: [ESP8266 Internet of Things Cookbook](https://www.packtpub.com/hardware-and-creative/esp8266-internet-things-cookbook)
 
 ## NodeMCU
 
@@ -46,8 +47,16 @@ After that the board is started, when it is powered on and it connects to the wo
 ## Blynk
 
 * [Wemos D1 Mini + 0.96 Inch SSD1306 OLED Display Using SPI](https://www.instructables.com/id/Wemos-D1-Mini-096-SSD1306-OLED-Display-Using-SPI/)
-* [Blynk](https://docs.blynk.cc/)
+* [Blynk](https://d ocs.blynk.cc/)
 * [blynkkk/blynkkk.github.io](https://github.com/blynkkk/blynkkk.github.io)
+* eBook: [Hands-On Internet of Things with Blynk](https://www.packtpub.com/application-development/hands-internet-things-blynk)
+
+## Alternatives to ES8266
+
+### ESP32
+
+* Compare: [ESP32 vs ESP8266 | Circuits4you.com](https://circuits4you.com/2019/03/02/esp32-vs-esp8266/)
+* eBook: [Internet of Things Projects with ESP32](https://www.packtpub.com/hardware-and-creative/internet-things-projects-esp32)
 
 ## AWS
 

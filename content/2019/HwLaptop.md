@@ -22,7 +22,12 @@ Tags: #cpu, #laptop, #hw, #ssd
     * VT-x: Y, VT-d: Y [Intel® Core™ i7-8750H Processor (9M Cache, up to 4.10 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/134906/intel-core-i7-8750h-processor-9m-cache-up-to-4-10-ghz.html)
         * DKK 6799 / 8GB / 512SSD [ACER NITRO 5 AN515-52-75ZY 15,6&quot; GAMINGCOMPUTER](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/acer-nitro-5-an515-52-75zy-156-gamingcomputer/p-684944/)
         * DKK 5777 / 8GB / 256SSD [Acer Nitro 5 AN515-52-78XW gaming b&aelig;rbar PC | K&oslash;b online p&aring; Bilka.dk](https://www.bilka.dk/elektronik/computere/gamer-pc/baerbar-gamer-pc/acer-nitro-5-an515-52-78xw-gaming-baerbar-pc/p/100435217)
+* 12446/6/1.10 [PassMark - Intel Core i7-10710U @ 1.10GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-10710U+%40+1.10GHz&id=3567)
+    * xx
 * --- 4 chores----------------
+* 10535/4/1.30 [PassMark - Intel Core i7-1065G7 @ 1.30GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-1065G7+%40+1.30GHz&id=3466)
+    * xx
+        * DKK 12999 / 16GB / 256SSD [MICROSOFT SURFACE PRO 7 I7 256 GB PLATIN - Power.dk](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/microsoft-surface-pro-7-i7-256-gb-platin/p-1024187/)
 * 9823/4/2.40 [Intel Core i5-9300H @ 2.40GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-9300H+%40+2.40GHz&id=3448)
     * VT-x: Y, VT-d: Y [Intel® Core™ i5-9300H Processor (8M Cache, up to 4.10 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/191075/intel-core-i5-9300h-processor-8m-cache-up-to-4-10-ghz.html)
         * DKK 7999 / 16GB / 512SSD [MSI GF75 TYND 9SC-087NE 17,3&quot; COMPUTER - Power.dk](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/msi-gf75-tynd-9sc-087ne-173-computer/p-991179/)
@@ -30,6 +35,10 @@ Tags: #cpu, #laptop, #hw, #ssd
         * DKK 6590 / 8GB / 512SSD [Dell G3 15 &quot;bærbar gaming-pc med Game Shift-teknologi | Dell Danmark](https://www.dell.com/da-dk/shop/b%C3%A6rbare-dell-computere/ny-dell-g3-15/spd/g-series-15-3590-laptop/cn35916)
         * DKK 6999 / 8GB / 512SSD [Lenovo Ideapad L340 15&quot; Gaming computer | K&oslash;b online p&aring; Bilka.dk](https://www.bilka.dk/elektronik/computere/gamer-pc/baerbar-gamer-pc/lenovo-ideapad-l340-15-gaming-computer/p/100488059?intcmpid=PR_100488159_PP_AddWish_100488059)
         * DKK 4999 / 8GB / 256SSD / 250NIT / 9.5H [Lenovo Ideapad L340 15,6&amp;quote; gaming-computer (sort) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/32170/lenovo-ideapad-l340-15-6-gaming-computer-sort?fbclid=IwAR0l6HwHqCAjnznoaI2RJEVuZhA7FNCol1uVZoKMgcgVyRZKjTyAs7phgaE)
+* 9687/4/1.20 [PassMark - Intel Core i5-1035G7 @ 1.20GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1035G7+%40+1.20GHz&id=3582)
+    * xx
+* 9671/4/1.80 [PassMark - Intel Core i7-10510U @ 1.80GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-10510U+%40+1.80GHz&id=3549)
+    * xx
 * 9500/4/3.30 [PassMark - Intel Core i5-8300H @ 2.30GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8300H+%40+2.30GHz&id=3254)
     * VT-x: Y, VT-d: Y [Intel® Core™ i5-8300H Processor (8M Cache, up to 4.00 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/134876/intel-core-i5-8300h-processor-8m-cache-up-to-4-00-ghz.html)
         * DKK 5555 / 8GB / 512SSD [ACER NITRO 5 NH.Q3MED.038 15,6&quot; B&#198;RBAR COMPUTER - Power.dk](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/acer-nitro-5-nhq3med038-156-baerbar-computer/p-991407/)
@@ -42,6 +51,11 @@ Tags: #cpu, #laptop, #hw, #ssd
         * DKK 5797 / 16GB / 512SSD / 10.2H [HP 15-DW0021NO B&#198;RBAR COMPUTER - Power.dk](https://www.power.dk/pc-og-tilbehoer/computere/baerbar-pc/hp-15-dw0021no-baerbar-computer/p-991215/)
         * DKK 5997 / 16GB / 512SSD [Acer Aspire 5 15,6&amp;quote; bærbar computer (sort) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/10237/acer-aspire-5-15-6-barbar-computer-sort)
         * DKK 4777 / 8GB / 512SSD [Acer Aspire 5 15,6&amp;quote; bærbar computer (sort) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/16466/acer-aspire-5-15-6-barbar-computer-sort)
+* 8953/4/1.10 [PassMark - Intel Core i5-1035G4 @ 1.10GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1035G4+%40+1.10GHz&id=3581)
+    * xx
+* 8839/4/1.00 [PassMark - Intel Core i5-1035G1 @ 1.00GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1035G1+%40+1.00GHz&id=3558)
+    * VT-x: Y, VT-d: Y [Intel® Core™ i5-1035G1 Processor (6M Cache, up to 3.60 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/196603/intel-core-i5-1035g1-processor-6m-cache-up-to-3-60-ghz.html)
+        * DKK 4499 / 8GB / 1000SSD / 220NIT / 10H [Lenovo Ideapad S340 14&amp;quote; bærbar computer (platinum grey) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/50474/lenovo-ideapad-s340-14-barbar-computer-platinum-grey#)
 * 8292/4/1.80 [PassMark - Intel Core i7-8550U @ 1.80GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8550U+%40+1.80GHz&id=3064)
 * 8134/4/2.10 [PassMark - AMD Ryzen 5 3500U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
 * 8060/4/2.30 [PassMark - AMD Ryzen 7 3700U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3700U&id=3426)
@@ -56,6 +70,14 @@ Tags: #cpu, #laptop, #hw, #ssd
 * 4578/2/2.50 [PassMark - AMD Ryzen 3 2200U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+3+2200U&id=3152)
     * 
         * DKK 4499 / 4GB / 128SSD / 14'' [Lenovo Ideapad 530s 14&amp;quote; bærbar computer (mineral gray) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/LE81H10000MX/lenovo-ideapad-530s-14-barbar-computer-mineral-gray)
+
+# RAM
+
+* List - Buy: [Hukommelse (RAM) - PC-komponenter](https://www.komplett.dk/category/11209/hardware/pc-komponenter/hukommelse-ram)
+    * DDR4 2666Mhz:
+        * 2*16G: DKK 1149 [Corsair Vengeance LPX DDR4 2666MHz 32GB - Hukommelse (RAM)](https://www.komplett.dk/product/893834/hardware/pc-komponenter/hukommelse-ram/corsair-vengeance-lpx-ddr4-2666mhz-32gb#)
+        * 16G: DKK 548 [Crucial DDR4-2666MHz 16GB SODIMM - Hukommelse (RAM)](https://www.komplett.dk/product/1117072/hardware/pc-komponenter/hukommelse-ram/crucial-ddr4-2666mhz-16gb-sodimm#)
+        * 16G: DKK 549 [HyperX Fury DDR4 2666MHz 16GB - Hukommelse (RAM)](https://www.komplett.dk/product/1136583/hardware/pc-komponenter/hukommelse-ram/hyperx-fury-ddr4-2666mhz-16gb#)
 
 # SSDs
 
