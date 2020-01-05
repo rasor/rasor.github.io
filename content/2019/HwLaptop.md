@@ -53,6 +53,7 @@ Tags: #cpu, #laptop, #hw, #ssd
         * DKK 4777 / 8GB / 512SSD [Acer Aspire 5 15,6&amp;quote; bærbar computer (sort) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/16466/acer-aspire-5-15-6-barbar-computer-sort)
 * 8953/4/1.10 [PassMark - Intel Core i5-1035G4 @ 1.10GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1035G4+%40+1.10GHz&id=3581)
     * xx
+        * DKK 8199 / 8GB / 128SSD / 465NIT [Surface Pro 7 128 GB i5 (platinum) - Tablet og iPad](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/52998/surface-pro-7-128-gb-i5-platinum)
 * 8839/4/1.00 [PassMark - Intel Core i5-1035G1 @ 1.00GHz - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-1035G1+%40+1.00GHz&id=3558)
     * VT-x: Y, VT-d: Y [Intel® Core™ i5-1035G1 Processor (6M Cache, up to 3.60 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/196603/intel-core-i5-1035g1-processor-6m-cache-up-to-3-60-ghz.html)
         * DKK 4499 / 8GB / 1000SSD / 220NIT / 10H [Lenovo Ideapad S340 14&amp;quote; bærbar computer (platinum grey) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/50474/lenovo-ideapad-s340-14-barbar-computer-platinum-grey#)
@@ -60,6 +61,9 @@ Tags: #cpu, #laptop, #hw, #ssd
 * 8134/4/2.10 [PassMark - AMD Ryzen 5 3500U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
 * 8060/4/2.30 [PassMark - AMD Ryzen 7 3700U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3700U&id=3426)
     * DKK 5999 / 16GB / 512SSD [Acer Aspire A315-42G-R2X5 15.6](https://storetablet.bilka.dk/elektronik/computere/baerbar-computer/acer-aspire-a315-42g-r2x5-15-6-baerbar-computer/p/100489095)
+* 7803/4/2.10 [PassMark - AMD Ryzen 5 3500U - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
+    * xx
+        * DKK 5999 / 16GB / 512SSD / x360 Touch [HP ENVY x360 - 15-ds0007no (8UC00EA)](https://ssl.www8.hp.com/dk/da/products/laptops/product-detail.html?oid=32255944#!tab=specs)
 * 7677/4/1.60 [PassMark - Intel Core i5-8250U @ 1.60GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8250U+%40+1.60GHz&id=3042)
 * 7682/4/2.40 [PassMark - Intel Core i7-4700MQ @ 2.40GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-4700MQ+%40+2.40GHz&id=1923)
     * My 6 year old PC:  
