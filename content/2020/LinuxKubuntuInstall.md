@@ -29,7 +29,6 @@ sha256sum kubuntu-19.10-desktop-amd64.iso
     * Including **snapd**
     * Including **Software Sources** - `sudo software-properties-qt`
 * **Kate** code editor
-* **Startup Disk Creator** - burner
 
 ## After Install
 
@@ -98,6 +97,13 @@ It uses **snapd** - the Snap Daemon. But not all apps in the Snap Store is found
 
 ## Install from apt, wget, curl
 
+### LaunchPad
+
+[Launchpad](https://launchpad.net/) is an apt **package hosting site**. It shall not be installed, but several packages below are downloaded from there.  
+The package needs to match the Ubuntu version. If it does not, then you need to specify the version the repo does contain e.g.
+`deb http://ppa.launchpad.net/yubico/stable/ubuntu disco main`  
+Read more below at Yubico.  
+
 ### [appimaged](https://askubuntu.com/questions/902672/registering-appimage-files-as-a-desktop-app/935249#935249)
 
 AppImageD allows you to Pin AppImage programs to Task Manager.  
@@ -125,13 +131,46 @@ Now you can execute you AppImage as a normal APT install.
 
 More info on [appimages](https://itsfoss.com/use-appimage-linux/)
 
-#### pCloud
+### xClip
+
+A copy-paste tool  
+
+Install [xClip](https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/)
+```bash
+sudo apt-get install xclip
+```
+
+xClip is used by 
+
+* [Paste URL](https://marketplace.visualstudio.com/items?itemName=kukushi.pasteurl) VSCode plugin  
+* The follwing Git install
+
+### UNetbootin
+
+For creating bootable USBs.  
+
+[Install UNetbootin](https://unetbootin.github.io/linux_download.html):
+```bash
+sudo add-apt-repository ppa:gezakovacs/ppa
+sudo apt-get update
+sudo apt-get install unetbootin
+```
+
+Notes: 
+
+* Before use: Erase content from USB via `KDE Partition Manager` and re-create a new FAT32 partition on the USB.  
+* Alternatives:
+    * [Tuxboot](https://tuxboot.org/)
+    * [Rufus](https://rufus.ie/) - for Windows
+* About Using [Clonezilla](https://clonezilla.org/clonezilla-live.php) and GParted: [BSOD with new PC and old SSD](https://rasor.wordpress.com/2013/08/01/bsod-with-new-pc-and-old-ssd/)
+
+### pCloud
 
 pCloud is an idrive.  
 It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-drive-linux.html?download=electron-64).  
 It [integrates into terminals](https://github.com/pcloudcom/console-client).
 
-cccccckndiegvrcrgrivcrlrjifudibhjvdtiknfjjb### Authenticator
+### Yubikey
 
 For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  
 
@@ -230,18 +269,6 @@ echo "Dear world, check me out." > /keybase/public/yourname/plan.txt
 ```
 
 Your private files will now be available in `/run/user/1000/keybase/kbfs/private/<userid>`
-
-### xClip
-
-Install [xClip](https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/)
-```bash
-sudo apt-get install xclip
-```
-
-xClip is used by 
-
-* [Paste URL](https://marketplace.visualstudio.com/items?itemName=kukushi.pasteurl) VSCode plugin  
-* The follwing Git install
 
 ### Git
 
