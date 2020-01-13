@@ -1,6 +1,7 @@
 Title: Using SSH keys - Connect to Ionic Pro
 Status: published
 Date: 2017-10-03 20:30
+Modified: 2020-01-13 22:00
 Category: Develop
 Tags: #git, #ssh, #ionic
 
@@ -149,6 +150,26 @@ ionic start --pro-id 09faf85a
 choco install openssh # takes a while
 # reload environment variables
 refresh env
+```
+
+### If you want Git Bash to add your Github SSH key to an agent
+
+[How to Setup SSH Authentication for Git Bash on Windows](https://dev.to/bsara/how-to-setup-ssh-authentication-for-git-bash-on-windows-a63)
+
+### If you want Powershell to add your SSH key to an agent
+
+[Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent)
+
+```ps1
+# PS1
+# Make sure you're running as an Administrator
+Set-Service ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent
+# Add SSH private key to agent
+ssh-add c:\users\<yourid>\.ssh\id_rsa
+# Verity key added
+ssh-add -l
 ```
 
 # Links
