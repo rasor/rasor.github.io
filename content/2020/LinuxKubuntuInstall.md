@@ -431,6 +431,6 @@ More on [Azure](https://github.com/rasor/rasor.github.io/blob/pelican/content/20
 
 # Links
 
-* [LinuxPoposInstall](LinuxPoposInstall.md)
+* [LinuxPoposInstall](../2019/LinuxPoposInstall.md)
 
 The End
