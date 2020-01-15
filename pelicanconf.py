@@ -49,7 +49,7 @@ DEFAULT_METADATA = {
 FAVICON = 'img/favicon.ico'
 CUSTOM_CSS = 'static/custom.css'
 
-PLUGIN_PATHS = ['C:\Program Files (x86)\Python36-32\pelican-addon-clones\pelican-plugins']
+PLUGIN_PATHS = ['C:\\Users\\Soren\\AppData\\Local\\Programs\\Python\\Python38-32\\pelican-addon-clones\\pelican-plugins']
 #PLUGINS = ['neighbors']
 #PLUGINS = ['sitemap', 'post_stats', 'i18n_subsites']
 PLUGINS = ['sitemap']

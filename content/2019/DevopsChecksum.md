@@ -1,4 +1,4 @@
-Title: Create npm packages
+Title: Checksum
 Date: 2099-01-01 00:00
 Category: DevOps
 Tags: #checksum, #sha256, #md5
