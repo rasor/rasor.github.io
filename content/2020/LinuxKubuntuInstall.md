@@ -19,6 +19,8 @@ sha256sum kubuntu-19.10-desktop-amd64.iso
 # e56388512a0610bd991192b197a13f1496c107377d9c96d332939c08e305b028
 ```
 
+You can also [check CD](https://help.ubuntu.com/community/HowToSHA256SUM)
+
 ## Kubuntu OOTB - out of the box
 
 * **KDE** Desktop

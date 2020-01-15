@@ -16,9 +16,17 @@ I ran Kubuntu from a usb-stick.
     * Fingerprint scanner - apparently no linux driver currently exists for that particular scanner 
 * Probably not working:
     * Stylus Auto-Rotation
+    * Mouse should disappear in x360
+* [other issues](https://forums.linuxmint.com/viewtopic.php?f=90&t=288812)
 
 ## HowTo enable?
 
 * [Tablet PC - ArchWiki](https://wiki.archlinux.org/index.php/Tablet_PC)
+* [Ubuntu with tablet mode for Lenovo Yoga](https://askubuntu.com/questions/799727/ubuntu-with-tablet-mode-for-lenovo-yoga/880436#880436)
+
+## Tablet features on Windows
+
+* [Switching Between Tablet Mode and Desktop Mode (Windows 10)](https://support.hp.com/in-en/document/c04856156)
+
 
 The End

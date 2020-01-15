@@ -35,7 +35,12 @@ nvm use 12.14.1
 
 ## Visual Studio Code
 
-Download VSCode from [here](https://code.visualstudio.com/docs/?dv=win64user)
+* Download VSCode from [here](https://code.visualstudio.com/docs/?dv=win64user)
+* [Plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code)
 
+## Brave browser
+
+* Download [Brave](https://laptop-updates.brave.com/latest/winx64)
+* [Plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#chrome)
 
 The end
