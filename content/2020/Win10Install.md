@@ -85,6 +85,6 @@ pip3 -V
 ### Pelican static site generator
 
 * [Using Pelican blog on Github pages](https://rasor.github.io/using-pelican-blog-on-github-pages.html)
-
+....
 
 The end
