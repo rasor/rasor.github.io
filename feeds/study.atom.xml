@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Study</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/study.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-02-23T13:00:00+01:00</updated><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Study</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/study.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-10-09T22:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-10-09T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Labs: &lt;ul&gt;
@@ -132,6 +132,7 @@ az login
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;More on &lt;a href="https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest"&gt;Azure CLI&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;Azure PowerShell&lt;/h4&gt;
 &lt;p&gt;Azure PowerShell will be used for automation scripts together with container yaml files and json ARM templates.&lt;br&gt;
 It replaces AzureRM, which you should uninstall first.  &lt;/p&gt;
@@ -162,12 +163,18 @@ Connect-AzAccount
 &lt;p&gt;The course leads towards the &lt;a href="https://www.microsoft.com/en-us/learning/azure-exams.aspx"&gt;Azure certification exams&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-900.aspx"&gt;Exam AZ-900: Microsoft Azure Fundamentals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-100.aspx"&gt;Exam AZ-100: Microsoft Azure Infrastructure and Deployment&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-100.aspx"&gt;Exam AZ-100: Microsoft Azure Infrastructure and Deployment&lt;/a&gt;&lt;/em&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment"&gt;MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-101.aspx"&gt;Exam AZ-101: Microsoft Azure Integration and Security&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-101.aspx"&gt;Exam AZ-101: Microsoft Azure Integration and Security&lt;/a&gt;&lt;/em&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity"&gt;MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-103.aspx"&gt;Exam AZ-103 Microsoft Azure Administrator&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Retires AZ-100 and AZ-101&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator"&gt;MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/"&gt;Course | AZ-103.1 | AzureAcademy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-200.aspx"&gt;Exam AZ-200: Microsoft Azure Developer Core Solutions (beta)&lt;/a&gt;&lt;/li&gt;
@@ -175,11 +182,34 @@ Connect-AzAccount
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-202.aspx"&gt;Exam AZ-202: Microsoft Azure Developer Certification Transition (beta)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-203.aspx"&gt;Exam AZ-203: Developing Solutions for Microsoft Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-300.aspx"&gt;Exam AZ-300: Microsoft Azure Architect Technologies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;The exam is an extended version of AZ-103.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies"&gt;MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-301.aspx"&gt;Exam AZ-301: Microsoft Azure Architect Design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-301.aspx"&gt;Exam AZ-301: Microsoft Azure Architect Design&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign"&gt;MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://training.azure-academy.com/dashboard"&gt;Courses&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/learn/?WT.mc_id=home_homepage-azureportal-learn&amp;amp;tab=tab-start-a-learning-path"&gt;Microsoft Learn&lt;/a&gt; - Learning Paths (LP) &amp;amp; Modules (M)&lt;ul&gt;
+&lt;li&gt;Roles:&lt;/li&gt;
+&lt;li&gt;Admin&lt;/li&gt;
+&lt;li&gt;AI&lt;/li&gt;
+&lt;li&gt;Biz analyst&lt;/li&gt;
+&lt;li&gt;Biz user&lt;/li&gt;
+&lt;li&gt;Data eng.&lt;/li&gt;
+&lt;li&gt;Data sci.&lt;/li&gt;
+&lt;li&gt;Developer&lt;/li&gt;
+&lt;li&gt;Functional consultant&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/learn/browse/?roles=solution-architect"&gt;Sln. Architecht&lt;/a&gt; - 13 LPs + 100 Ms &lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/learn/browse/?roles=solution-architect&amp;amp;resource_type=learning%20path&amp;amp;levels=beginner"&gt;Beginner Learning path&lt;/a&gt; - 8 LPs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Security eng.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -193,7 +223,7 @@ Connect-AzAccount
 &lt;li&gt;&lt;a href="https://www.linkedin.com/in/andersbustedjanum/"&gt;Anders Busted-Janum&lt;/a&gt; - developer&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.linkedin.com/in/nielslunn/"&gt;Niels Lunn&lt;/a&gt; - developer&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#azure"></category><category term="#microsoft"></category><category term="#docker"></category><category term="#paas"></category><category term="#iaas"></category><category term="#vm"></category><category term="#powershell"></category><category term="#visualstudio"></category><category term="#aci"></category><category term="#arm"></category><category term="#iac"></category></entry><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Study"></category><category term="#azure"></category><category term="#microsoft"></category><category term="#docker"></category><category term="#paas"></category><category term="#iaas"></category><category term="#vm"></category><category term="#powershell"></category><category term="#visualstudio"></category><category term="#aci"></category><category term="#arm"></category><category term="#iac"></category></entry><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;
 &lt;p&gt;I have moved. Previously I was living on &lt;a href="https://rasor.wordpress.com/"&gt;https://rasor.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Reason for move&lt;/h3&gt;
 &lt;ul&gt;
@@ -239,4 +269,4 @@ Connect-AzAccount
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/2017/04/15/markdown-saas-blogs/"&gt;Thinking about moving&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The end&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category></entry></feed>
+&lt;p&gt;The end&lt;/p&gt;</content><category term="Study"></category><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category></entry></feed>

@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
 
     <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
@@ -28,6 +30,7 @@
 <meta name="author" content="rasor" />
 <meta name="description" content="CI meetup 2019 Meetup: Next-gen CI night 17:30 Gitlab CI intro by Markus Suonto Working @Eficode ROOT - currently @Tryg Markus Suonto (@marextw) | Twitter suonto - Overview PuTTY to get VNCViewer VNCViewer to enter workstation .gitlab-ci.yaml stages: - build - test build: services: - docker:dind # docker in docker script: - docker build ... - docker …" />
 <meta name="keywords" content="#ci">
+
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="CI meetup-2019"/>
@@ -57,22 +60,47 @@
       <nav>
         <ul class="list">
 
-          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
-          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
-          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
-          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
-          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
-          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
       </ul>
     </div>
 
@@ -101,7 +129,7 @@
     <p>
           Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
-          </br>
+      </br>
     </p>
   </header>
 
@@ -120,30 +148,30 @@
 <li>VNCViewer to enter workstation</li>
 </ul>
 <h3>.gitlab-ci.yaml</h3>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">stages</span><span class="p p-Indicator">:</span>
+<div class="highlight"><pre><span></span><span class="nt">stages</span><span class="p">:</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">build</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
-<span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+<span class="nt">build</span><span class="p">:</span>
+    <span class="nt">services</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker:dind</span> <span class="c1"># docker in docker </span>
-    <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+    <span class="nt">script</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker build ...</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker login ...</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker push ...</span>
-    <span class="l l-Scalar l-Scalar-Plain">only</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">changes</span><span class="p p-Indicator">:</span>
+    <span class="nt">only</span><span class="p">:</span>
+        <span class="nt">changes</span><span class="p">:</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">src/*</span>
             <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">html/*</span>
-<span class="l l-Scalar l-Scalar-Plain">test</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">docker:stable</span>
-    <span class="l l-Scalar l-Scalar-Plain">stage</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
-    <span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+<span class="nt">test</span><span class="p">:</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">docker:stable</span>
+    <span class="nt">stage</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
+    <span class="nt">services</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker:dind</span> <span class="c1"># docker in docker </span>
-    <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
+    <span class="nt">script</span><span class="p">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">docker login</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
-    <span class="l l-Scalar l-Scalar-Plain">coverage</span><span class="p p-Indicator">:</span> <span class="s">&#39;xxxx&#39;</span>
+    <span class="nt">coverage</span><span class="p">:</span> <span class="s">&#39;xxxx&#39;</span>
 </pre></div>
 
 
@@ -199,17 +227,17 @@
 <li><a href="https://twitter.com/laszlocph">Laszlo Fogas (@laszlocph) | Twitter</a></li>
 <li>Slides: <a href="https://docs.google.com/presentation/d/12cZ0B9axdQ-EWs4SJMC28-MB2bOHhRV0rErx863sLiE/edit#slide=id.p">Drone CI intro</a></li>
 </ul>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">pipeline</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">npm-install</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
-        <span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span> <span class="err">-</span> <span class="l l-Scalar l-Scalar-Plain">npm install</span>
-    <span class="l l-Scalar l-Scalar-Plain">test</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
-    <span class="l l-Scalar l-Scalar-Plain">buld</span><span class="p p-Indicator">:</span>
-        <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
-        <span class="l l-Scalar l-Scalar-Plain">secrets</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span> <span class="nv">docler_username</span><span class="p p-Indicator">,</span> <span class="nv">docker_psw</span><span class="p p-Indicator">]</span>
-        <span class="l l-Scalar l-Scalar-Plain">when</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span> <span class="c1">#condition</span>
-        <span class="l l-Scalar l-Scalar-Plain">event</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">push</span>
+<div class="highlight"><pre><span></span><span class="nt">pipeline</span><span class="p">:</span>
+    <span class="nt">npm-install</span><span class="p">:</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+        <span class="nt">commands</span><span class="p">:</span> <span class="err">-</span> <span class="l l-Scalar l-Scalar-Plain">npm install</span>
+    <span class="nt">test</span><span class="p">:</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+    <span class="nt">buld</span><span class="p">:</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">xxx</span>
+        <span class="nt">secrets</span><span class="p">:</span> <span class="p p-Indicator">[</span> <span class="nv">docler_username</span><span class="p p-Indicator">,</span> <span class="nv">docker_psw</span><span class="p p-Indicator">]</span>
+        <span class="nt">when</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">master</span> <span class="c1">#condition</span>
+        <span class="nt">event</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">push</span>
 </pre></div>
 
 
@@ -252,7 +280,6 @@
 
 
 
-    <div class="addthis_relatedposts_inline">
 
 
 </article>
@@ -261,7 +288,7 @@
 <p>
   &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -269,7 +296,7 @@
     <img alt="Creative Commons License"
          title="Creative Commons License"
          style="border-width:0"
-         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
          width="80"
          height="15"/>
   </a>

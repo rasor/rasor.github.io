@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="I want to have a small Linux running on a small old laptop. Currently it is running Fedora and Windows on different partitions. I haven&#39;t used the PC for many years, so now it is time for it to get a fresh install. This time I don&#39;t want the larger …" />
+<meta name="keywords" content="#linux, #etcher, #usb, #rufus, #iso">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Install LinuxLite on Laptop"/>
+<meta property="og:description" content="I want to have a small Linux running on a small old laptop. Currently it is running Fedora and Windows on different partitions. I haven&#39;t used the PC for many years, so now it is time for it to get a fresh install. This time I don&#39;t want the larger …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/install-linuxlite-on-laptop.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#linux"/>
+<meta property="article:tag" content="#etcher"/>
+<meta property="article:tag" content="#usb"/>
+<meta property="article:tag" content="#rufus"/>
+<meta property="article:tag" content="#iso"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Install LinuxLite on Laptop</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="install-linuxlite-on-laptop">Install LinuxLite on Laptop</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>I want to have a small Linux running on a small old laptop.</p>
+<p>Currently it is running <a href="https://rasor.wordpress.com/2012/12/12/xen-hypervisor/">Fedora and Windows</a> on different partitions. I haven't used the PC for many years, so now it is time for it to get a fresh install.<br>
+This time I don't want the larger Fedora, but a more easy and small one.<br>
+The disk also needs a wipe. For that I flashed <a href="https://gparted.sourceforge.io/livecd.php">Gnome Partition Editor</a> to USB (see using Etcher below).  </p>
+<p>I <a href="https://rasor.wordpress.com/2013/07/02/linux-on-usb/">installed DamnedSmallLinux</a> (DSL) back in 2013.<br>
+But <a href="https://en.wikipedia.org/wiki/Damn_Small_Linux">DSL apparently hasn't been updated since 2008</a>.  </p>
+<p>So what are <a href="https://en.wikipedia.org/wiki/Template:Linux_distributions">the choises?</a>. Here you can see some <a href="https://en.wikipedia.org/wiki/Comparison_of_Linux_distributions">more details</a>
+I think I'll try <a href="https://en.wikipedia.org/wiki/Linux_Lite">Linux Lite</a> - a Ubuntu/Debian fork.<br>
+Lite is recommended on <a href="https://fossbytes.com/best-linux-distro-beginners/">9 Best Linux Distros For Beginner Users — 2019 Edition</a> for slow/old/small machines and for Linux dummies comming from Windows. <br>
+It uses a simmple Desktop Xfce without animations and fancy design.<br>
+Check out other desktops on <a href="https://fossbytes.com/best-linux-desktop-environments/">10 Best Linux Desktop Environments And Their Comparison | 2018 Edition</a></p>
+<p>Also interestion is <a href="https://en.wikipedia.org/wiki/Android-x86">Android-x86</a> - of course an Android fork.<br>
+You can download from <a href="https://osdn.net/projects/android-x86/releases">Android-x86 - OSDN</a>.  </p>
+<p>For a development PC I would to use CentOS, which is the community edition of RedHat - a Fedoroa fork.<br>
+You can download <a href="https://centos.org/download/">CentOS here</a>. A DVD version is 4.5 GB, whereas a minimal version is only 1 GB.<br>
+But after reading <a href="https://fossbytes.com/best-linux-distros-for-programming-developers/">11 Best Linux Distros For Programming &amp; Developers [2019 Edition]</a> it seems like <a href="https://system76.com/pop">Pop!_OS</a> is the choise for me. All developer tools already installed. Drivers installed. Pop!_OS is a Debian/Ubuntu fork.</p>
+<p>Also interesting is the <a href="https://fossbytes.com/secure-linux-distros-privacy-anonymity/">10 Most Secure Linux Distros For Complete Privacy &amp; Anonymity | 2017 Edition</a> list.</p>
+<h2>Install LinuxLite</h2>
+<p>You can download <a href="https://www.linuxliteos.com/download.php">LinuxLite here</a>. The .iso file is 1.3 GB, so not exactly small. Perhaps not that fast after all. The Andoid .iso is only 0.88 GB.<br>
+After download you can drag'n'drop the .iso back to the page to MD5sum checker to see if the file is uncorrupt.  </p>
+<p>Now you need to burn the .iso to a bootable USB stick. <a href="https://www.linuxliteos.com/manual/install.html#llusbwin">Here is HowTo On Windows</a>.<br>
+* Download a burner like <a href="https://www.balena.io/etcher/">balena Etcher</a>
+* Install and execute Etcher.
+* Select source (.iso), target (USB) and burn.
+* Info: balena also offers a Raspberri PI - <a href="https://www.balena.io/fin/">balenaFin</a> to host the OS.
+* If problems: If the flash is not formatted and Windows refuses to format it, then Use <a href="https://rufus.ie/">Rufus</a> either just to format or also for burning .iso</p>
+<h3>Testing Lite</h3>
+<p>Lite was really easy to use - just as a user without cmd line needs - the tools are just where you are used to in Windows.<br>
+I didn't have to install any driver on my old PC.</p>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/linux.html">#linux</a>
+      <a href="https://rasor.github.io/tag/etcher.html">#etcher</a>
+      <a href="https://rasor.github.io/tag/usb.html">#usb</a>
+      <a href="https://rasor.github.io/tag/rufus.html">#rufus</a>
+      <a href="https://rasor.github.io/tag/iso.html">#iso</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
 
     <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
@@ -28,6 +30,7 @@
 <meta name="author" content="rasor" />
 <meta name="description" content="At EMS Heart Hackathon I connected a D1 mini [WEMOS] to AWS together with Allan Yde. The WeMos D1 Mini board has a WiFi module build in through which it can communicate with AWS. You can connect sensors to WeMos, so it can send its sensor data to AWS …" />
 <meta name="keywords" content="#iot, #arduino, #wemos, #es8266, #aws">
+
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Connexting a WeMos ES8266 Arduino borad to AWS"/>
@@ -61,22 +64,47 @@
       <nav>
         <ul class="list">
 
-          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
-          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
-          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
-          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
-          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
-          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
       </ul>
     </div>
 
@@ -105,7 +133,7 @@
     <p>
           Posted on January 01, 2099 in <a href="https://rasor.github.io/category/dev.html">Dev</a>
 
-          </br>
+      </br>
     </p>
   </header>
 
@@ -131,6 +159,7 @@ After that the board is started, when it is powered on and it connects to the wo
 </ul>
 </li>
 <li>Pins: <a href="https://micropython-on-wemos-d1-mini.readthedocs.io/en/latest/setup.html#development-board">Setup - Micropython on ESP8266 Workshop 1.0 documentation</a></li>
+<li>eBook: <a href="https://www.packtpub.com/hardware-and-creative/esp8266-internet-things-cookbook">ESP8266 Internet of Things Cookbook</a></li>
 </ul>
 <h2>NodeMCU</h2>
 <ul>
@@ -152,8 +181,15 @@ After that the board is started, when it is powered on and it connects to the wo
 <h2>Blynk</h2>
 <ul>
 <li><a href="https://www.instructables.com/id/Wemos-D1-Mini-096-SSD1306-OLED-Display-Using-SPI/">Wemos D1 Mini + 0.96 Inch SSD1306 OLED Display Using SPI</a></li>
-<li><a href="https://docs.blynk.cc/">Blynk</a></li>
+<li><a href="https://d ocs.blynk.cc/">Blynk</a></li>
 <li><a href="https://github.com/blynkkk/blynkkk.github.io">blynkkk/blynkkk.github.io</a></li>
+<li>eBook: <a href="https://www.packtpub.com/application-development/hands-internet-things-blynk">Hands-On Internet of Things with Blynk</a></li>
+</ul>
+<h2>Alternatives to ES8266</h2>
+<h3>ESP32</h3>
+<ul>
+<li>Compare: <a href="https://circuits4you.com/2019/03/02/esp32-vs-esp8266/">ESP32 vs ESP8266 | Circuits4you.com</a></li>
+<li>eBook: <a href="https://www.packtpub.com/hardware-and-creative/internet-things-projects-esp32">Internet of Things Projects with ESP32</a></li>
 </ul>
 <h2>AWS</h2>
 <p><img alt="AWS IoT - thing installed" src="img/2018/2018-09-16-hack-arduino5.PNG">]</p>
@@ -249,7 +285,6 @@ After that the board is started, when it is powered on and it connects to the wo
 
 
 
-    <div class="addthis_relatedposts_inline">
 
 
 </article>
@@ -258,7 +293,7 @@ After that the board is started, when it is powered on and it connects to the wo
 <p>
   &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -266,7 +301,7 @@ After that the board is started, when it is powered on and it connects to the wo
     <img alt="Creative Commons License"
          title="Creative Commons License"
          style="border-width:0"
-         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
          width="80"
          height="15"/>
   </a>

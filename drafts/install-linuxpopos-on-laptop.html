@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="HowTo get from Window to Ubuntu fork - Pop_OS Tips RightClick = 2 finger click Windows key is called super in documentation [Quick Tip] Pin App Shortcuts to the Desktop in Ubuntu 18.04 | UbuntuHandbook Create shortcut for URL bash # Check that you have xdg-open (contained in xdg-utils) installed apt list xdg-utils …" />
+<meta name="keywords" content="#linux, #popos, #ubuntu, #ssh, #github, #snapstore, #nodejs, #electron">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Install LinuxPopOS on Laptop"/>
+<meta property="og:description" content="HowTo get from Window to Ubuntu fork - Pop_OS Tips RightClick = 2 finger click Windows key is called super in documentation [Quick Tip] Pin App Shortcuts to the Desktop in Ubuntu 18.04 | UbuntuHandbook Create shortcut for URL bash # Check that you have xdg-open (contained in xdg-utils) installed apt list xdg-utils …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/install-linuxpopos-on-laptop.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#linux"/>
+<meta property="article:tag" content="#popos"/>
+<meta property="article:tag" content="#ubuntu"/>
+<meta property="article:tag" content="#ssh"/>
+<meta property="article:tag" content="#github"/>
+<meta property="article:tag" content="#snapstore"/>
+<meta property="article:tag" content="#nodejs"/>
+<meta property="article:tag" content="#electron"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Install LinuxPopOS on Laptop</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="install-linuxpopos-on-laptop">Install LinuxPopOS on Laptop</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>HowTo get from Window to Ubuntu fork - Pop_OS</p>
+<h2>Tips</h2>
+<ul>
+<li><a href="https://who-t.blogspot.com/2018/04/gnome-328-uses-clickfinger-behaviour-by.html">RightClick = 2 finger click</a></li>
+<li><strong>Windows key</strong> is called <strong>super</strong> in documentation</li>
+<li><a href="http://ubuntuhandbook.org/index.php/2018/09/pin-app-shortcut-desktop-ubuntu-18-04/">[Quick Tip] Pin App Shortcuts to the Desktop in Ubuntu 18.04 | UbuntuHandbook</a></li>
+<li><a href="https://askubuntu.com/questions/359492/create-a-shortcut-for-url">Create shortcut for URL</a>
+    <code>bash
+    # Check that you have xdg-open (contained in xdg-utils) installed
+    apt list xdg-utils
+    # xdg-utils/disco,disco,now 1.1.3-1ubuntu2 all [installed,automatic]</code><ul>
+<li>Now from Brave-browser you can<ul>
+<li>File - More Tools - Create Shortcut<br>
+=&gt; This will create a .desktop file using xdg-open in the Desktop folder.</li>
+<li>On the Desktop (not from desktop folder!): <ul>
+<li>Right-click the .desktop file - Allow launching</li>
+<li>Double-click the file to open in browser</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Create a <a href="https://login.launchpad.net/">Ubuntu One</a> account for SSO to Ubuntu social medias.</li>
+</ul>
+<h2>Going from Dos to Terminal</h2>
+<table>
+<thead>
+<tr>
+<th>Dos</th>
+<th>Terminal</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cls</td>
+<td>clear</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>touch a.md</td>
+<td>Create an empty file</td>
+</tr>
+<tr>
+<td>"Hello" &gt; a.md</td>
+<td>cat &gt; a.md</td>
+<td>Create a file. Enter text. Ctrl-Z to save</td>
+</tr>
+</tbody>
+</table>
+<h1>Install</h1>
+<p>First you install Pop!_OS from a bootable USB stick.  </p>
+<h2>After initial install</h2>
+<p>You should change download region via Software Updates ??</p>
+<p>Here are other tips - like this blog - to what to do after a fresh OS install</p>
+<ul>
+<li><a href="http://www.ubuntubuzz.com/2019/04/what-to-do-after-installing-ubuntu-1904-disco-dingo.html">What To Do After Installing Ubuntu 19.04</a></li>
+<li><a href="http://www.ubuntubuzz.com/2019/03/preparations-for-gnome-3-customization.html">Preparations for GNOME 3 Customization</a></li>
+</ul>
+<h2>Install From Pop!_Shop</h2>
+<p>Installed applications can be found in <code>/usr/share/applications</code>.<br>
+* Other places you can find apps: <a href="http://blog.danyll.com/linux-directory-map/">Linux Directory Map</a></p>
+<p><strong>Pop!_Shop</strong> is an app installed into the Ubuntu distro <a href="https://system76.com/pop">Pop!_OS</a>.<br>
+It is kind of a local appstore.</p>
+<ul>
+<li>Snap backend</li>
+<li>Snappy Support - Also called <a href="https://snapcraft.io/store">SnapCraft</a>. It is a Linux appstore, which lets app developers distribute their apps. In Pop!OS the UI is called <code>Software</code>  </li>
+<li>VSCode - Code Editor<ul>
+<li>Optional (when coding C#): <a href="https://dotnet.microsoft.com/download/linux-package-manager/ubuntu19-04/sdk-current">.NET Core SDK</a> for VSCode</li>
+<li>Install <a href="https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#visual-studio-code">plugins</a></li>
+</ul>
+</li>
+<li>FileManager-Actions (previously called Nautilus-Actions)<ul>
+<li>2019: <a href="http://ubuntuhandbook.org/index.php/2019/01/install-nautilus-actions-ubuntu-18-04/">How to Install Nautilus Actions in Ubuntu 18.04</a></li>
+<li>2019: <a href="https://gitlab.gnome.org/GNOME/filemanager-actions">GNOME / filemanager-actions</a></li>
+<li>2012: <a href="https://www.howtogeek.com/116807/how-to-easily-add-custom-right-click-options-to-ubuntus-file-manager/">How to Easily Add Custom Right-Click Options to Ubuntu&#8217;s File Manager</a></li>
+</ul>
+</li>
+<li>Gnome Tweaks - Also called Gnome Tweak Tool<ul>
+<li><a href="https://wiki.gnome.org/Apps/Tweaks">Apps/Tweaks - GNOME Wiki!</a></li>
+<li>CLI install: <code>sudo apt install gnome-tweaks</code></li>
+<li>Settings:<ul>
+<li>Window Titlebars: Maximize and Minimize: On</li>
+</ul>
+</li>
+<li>Gnome Tweaks also have a tab for Gnome Extension - more on them further down</li>
+</ul>
+</li>
+<li>Chromium - Browser</li>
+<li>GParted - Disk partitioner</li>
+<li>Remote Desktop Viewer</li>
+<li>Yubico Authenticator - no install via apt - see further down.</li>
+</ul>
+<h2>Install From Software (Snap Store) - Used in Gnome</h2>
+<p>Snap Store is an app store for Gnome.  </p>
+<p>Install apps from the appstore</p>
+<ul>
+<li><a href="https://snapcraft.io/install/github-desktop/ubuntu">GitHub Desktop</a><br>
+<code>sudo snap install github-desktop --beta --classic</code></li>
+<li>Bitwarden - or use Gnome Seahorse</li>
+<li>Riot - IRC client</li>
+<li>juju - cloud manager <a href="https://github.com/juju/juju">juju/juju</a> <a href="https://jaas.ai/">Jujucharms | Juju</a></li>
+<li>Heroku CLI - cloud manager</li>
+<li>!Azure CLI - cloud manager !!! does not work with snap install.<ul>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest">Install via CLI</a>: <code>curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash</code></li>
+<li>Test: <code>az login</code></li>
+</ul>
+</li>
+<li>Microsoft Azure Storage Explorer - cloud storage manager<ul>
+<li>You need to connect to pws mgr after install: <code>snap connect storage-explorer:password-manager-service :password-manager-service</code></li>
+</ul>
+</li>
+<li>Powershell - A Windows terminal<ul>
+<li><a href="https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-2.7.0">Install Azure PowerShell with PowerShellGet</a>: <code>Install-Module -Name Az -AllowClobber -Scope CurrentUser</code></li>
+<li>Test: <code>Connect-AzAccount</code></li>
+</ul>
+</li>
+<li>RedisDesktopManager</li>
+</ul>
+<p>Ref:
+* <a href="https://snapcraft.io/store">SnapCraft</a> is a Linux appstore, which lets app developers distribute their apps.<br>
+* <a href="https://snapcraft.io/snap-store">Snap Store</a> - a graphical desktop application for snapd
+* Manual install (when not installing from Pop!_shop):</p>
+<div class="highlight"><pre><span></span><span class="c1"># Install snapcraft</span>
+sudo apt update
+sudo apt install snapd
+<span class="c1"># Install Snap-store</span>
+sudo snap install snap-store
+</pre></div>
+
+
+<h2>Install Packages / Software Updater</h2>
+<ul>
+<li><a href="https://www.cyberciti.biz/faq/how-do-i-update-ubuntu-linux-softwares/">How Do I Update Ubuntu Linux Software Using Command Line? - nixCraft</a></li>
+</ul>
+<h2>Install Desktops</h2>
+<ul>
+<li>Desktop <strong>Gnome</strong> (default in Linux distro Ubuntu and Pop_OS!)<ul>
+<li>Gnome Default Filemanager is called <strong>Gnome Files</strong> and is also called <strong>Nautilus</strong> (grey icon (blue in Cinnamon)). Ref: <a href="https://www.maketecheasier.com/best-file-managers-linux/">5 of the Best File Managers for Linux</a><ul>
+<li>Shortcuts:<ul>
+<li><strong>Ctrl+h</strong>: Toggle <strong>hidden files</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Gnome currently - in v 3.32 has removed possiblity to drag'n'drop url shortcuts to the desktop (last seen in 3.28), so I wanted another desktop.</li>
+</ul>
+</li>
+<li>Desktop <strong>Cinnamon</strong><ul>
+<li>Cinnamon Default filemanager is also called <strong>Files</strong> in the menu. It is also called <strong>Nemo</strong> (blue icon (brown in Cinnamon)). This one does support drag'n'drop url shortcuts. After you install Cinnamon you can use it from Gnome, too :-).<ul>
+<li>Shortcuts:<ul>
+<li><strong>Ctrl+m</strong>: Create a <strong>shortcut (symbolic link)</strong> to the selected file or folder</li>
+<li><strong>Ctrl+d</strong>: Create a tree-view bookmark of current folder</li>
+</ul>
+</li>
+<li>Default filetype associations - or setting default <strong>Open With</strong>:<ul>
+<li>You problably have some Windows <strong>.url</strong> shortcuts lying around. From Nemo choose <strong>Open With other application</strong></li>
+<li>Custom Executable <code>bash -c 'cat %f | grep URL | cut -d= -f2 | xargs xdg-open &amp;'</code></li>
+<li>Set as default</li>
+<li>Now you can double-click to open them, too. </li>
+<li>It saves the cfg into <code>$HOME/.local/share/applications</code></li>
+<li>Thanks to <ul>
+<li>https://saidulhassan.com/open-url-files-in-linux-mint-ubuntu-1029</li>
+<li>https://steronius.blogspot.com/2013/01/open-url-files-in-linux.html</li>
+<li>https://unix.stackexchange.com/questions/41372/changing-file-associations-in-gnome#41374</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Change default Filesmanager from <strong>Nautilus</strong> to <strong>Nemo</strong> (this will also be changed in Gnome):<ul>
+<li>Settings - Preferred Applications - Files: Select the brown Files</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other desktops to consider: <a href="https://fossbytes.com/best-linux-desktop-environments/">10 Best Linux Desktop Environments And Their Comparison | 2018 Edition</a></li>
+</ul>
+<h3>HowTo Install another desktop</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Get latest packages</span>
+sudo apt-get update
+<span class="c1"># Upgrade existing sw</span>
+sudo apt-get upgrade
+<span class="c1"># Upgrade existing kernel - also needed before system upgrade via gnome settings</span>
+sudo apt-get dist-upgrade
+sudo reboot
+
+<span class="c1"># check if you have the new desktop - e.g. cinnamon</span>
+apt-cache search cinnamon
+<span class="c1"># install the desktop</span>
+sudo apt-get install cinnamon
+<span class="c1"># opt. remove old desktop</span>
+<span class="c1"># sudo apt-get remove kde</span>
+</pre></div>
+
+
+<ul>
+<li>Log out </li>
+<li>Press setting on login - choose <strong>Cinnamon</strong></li>
+<li>Enter password and login</li>
+<li>Do the changes described above in bullet <code>Desktop Cinnamon</code> - logout and in again in Gnome - you will see the changes - like default Filemanager - has also been changed there.</li>
+</ul>
+<h2>Install from Discover - Used in Cinnamon</h2>
+<p>Discover is an app store installed via Cinnamon.  </p>
+<p>Nothing so far to install...</p>
+<h2>Install Browsers</h2>
+<ul>
+<li>
+<p>Brave Browser</p>
+<ul>
+<li><a href="https://brave-browser.readthedocs.io/en/latest/installing-brave.html#ubuntu-16-04-and-mint-18">Intall</a> via CLI
+```bash
+sudo apt install apt-transport-https #curl</li>
+</ul>
+<p>curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -</p>
+<p>source /etc/os-release</p>
+<p>echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ $UBUNTU_CODENAME main" | sudo tee /etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list</p>
+<p>sudo apt update
+sudo apt install brave-browser
+<code>* Extensions
+    * [GNOME Shell-Integration](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep)
+        * [How to Use GNOME Shell Extensions [Complete Guide]](https://itsfoss.com/gnome-shell-extensions/)</code>bash
+            # sudo apt install gnome-tweak-tool # installed via pop
+            apt list gnome-tweaks
+            # gnome-tweaks/disco,disco,now 3.32.0-1 all [installed]
+            gnome-shell --version
+            # GNOME Shell 3.32.2
+            sudo apt install gnome-shell-extensions
+            # sudo apt install chrome-gnome-shell # installed via chrome extension
+            apt list chrome-gnome-shell
+            # chrome-gnome-shell/disco,disco,now 10.1-5 all [installed,automatic]
+            <code>``
+        * Find [GNOME Shell Extensions](https://extensions.gnome.org/)
+            * [Window List - GNOME Shell Extensions](https://extensions.gnome.org/extension/602/window-list/)  
+            A bottom bar like in Windows
+            * [Toggle nemo - GNOME Shell Extensions](https://extensions.gnome.org/extension/846/toggle-nemo/)  
+            With Toggle nemo you can press</code>win+e` to open Nemo, if you have it installed (e.g. via Cinnamon)
+    * Bitwarden</p>
+</li>
+</ul>
+<h2>Install Other Apps</h2>
+<h3>Authenticator</h3>
+<p>For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  </p>
+<ul>
+<li><a href="https://www.yubico.com/products/services-software/download/yubico-authenticator/">Yubico Authenticator</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># 64-bit Debian</span>
+sudo apt-add-repository ppa:yubico/stable
+sudo apt update
+sudo apt install yubioath-desktop
+</pre></div>
+
+
+<p>Notes</p>
+<ul>
+<li>Yubikey install also installed python 3</li>
+<li>Some browsers supporting Yubikey: Chrome, Brave, Opera</li>
+</ul>
+<h3>Keybase</h3>
+<p>Keybase is a cloud vault (a kind like password managers) using keys from devices for encryption (unlike the psw mgrs, that uses a master key).<br>
+This enables encrypted sharing between users and trust based on proofs written to social networks.  </p>
+<ul>
+<li><a href="https://keybase.io/docs/the_app/install_linux">Install Linux | Keybase Docs</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># 64-bit Debian install</span>
+curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+sudo apt install ./keybase_amd64.deb
+run_keybase
+
+<span class="c1"># Using:</span>
+<span class="c1"># are you a programmer? some terminal examples</span>
+keybase prove twitter
+keybase id chris
+keybase <span class="nb">help</span>
+
+<span class="c1"># KBFS examples</span>
+cat /keybase/public/chris/plan.txt
+<span class="nb">echo</span> <span class="s2">&quot;dirty secret&quot;</span> &gt; /keybase/private/yourname/diary.txt
+<span class="nb">echo</span> <span class="s2">&quot;Dear world, check me out.&quot;</span> &gt; /keybase/public/yourname/plan.txt
+</pre></div>
+
+
+<p>Your private files will now be available in <code>/run/user/1000/keybase/kbfs/private/&lt;userid&gt;</code></p>
+<h3>xClip</h3>
+<p>Install <a href="https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/">xClip</a></p>
+<div class="highlight"><pre><span></span>sudo apt-get install xclip
+</pre></div>
+
+
+<p>xClip is used by </p>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=kukushi.pasteurl">Paste URL</a> VSCode plugin  </li>
+<li>The follwing Git install</li>
+</ul>
+<h3>Git</h3>
+<ul>
+<li>Prerequisites<ul>
+<li>From PopShop installed VSCode</li>
+</ul>
+</li>
+<li>Guides<ul>
+<li><a href="https://help.github.com/en/articles/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a></li>
+<li><a href="https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh">Changing a remote URL</a></li>
+</ul>
+</li>
+</ul>
+<p>Optionally add some author info:</p>
+<div class="highlight"><pre><span></span>git --version
+<span class="c1"># git version 2.20.1</span>
+
+git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+git config --global user.email <span class="s2">&quot;youremail@domain.com&quot;</span>
+git config --list
+<span class="c1"># user.name=Your Name</span>
+<span class="c1"># user.email=youremail@domain.com</span>
+
+<span class="c1"># The information you entered is stored in your Git configuration file ~/.gitconfig</span>
+</pre></div>
+
+
+<p>If you use 2FA on github, then SSH access with a private key avoids having a <code>Personal Access Token</code> to risk to loose and having to cache. More info on <a href="https://help.github.com/en/articles/which-remote-url-should-i-use#cloning-with-ssh-urls">Which remote URL should I use?</a>.<br>
+So from VSCode rather like to use SSH access (opposed to HTTPS access).<br>
+Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  </p>
+<p>Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode - Ref: 
+<a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code">Version Control in Visual Studio Code</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># Check for existing SSH keys</span>
+ls -al ~/.ssh
+<span class="c1"># Are there any you want to reuse?</span>
+
+<span class="c1"># I want to generate a new key pair</span>
+<span class="nb">cd</span> ~/.ssh
+ssh-keygen -t rsa -b <span class="m">4096</span> -C <span class="s2">&quot;youremail@domain.com&quot;</span>
+<span class="c1"># Generating public/private rsa key pair.</span>
+<span class="c1"># Enter file in which to save the key (/home/youruserid/.ssh/id_rsa): id_rsa_youruserid_github</span>
+<span class="c1"># Enter passphrase (empty for no passphrase): </span>
+<span class="c1"># Enter same passphrase again: </span>
+<span class="c1"># Your identification has been saved in id_rsa_youruserid_github.</span>
+<span class="c1"># Your public key has been saved in id_rsa_youruserid_github.pub.</span>
+<span class="c1"># The key fingerprint is:</span>
+<span class="c1"># SHA256:X4uMb123456789012345678901234567rWzWRZD1Szl youremail@domain.com</span>
+<span class="c1"># The key&#39;s randomart image is:</span>
+<span class="c1"># +---[RSA 4096]----+</span>
+
+<span class="c1"># Avoid error &quot;Can&#39;t clone git repo and getting error ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory Host key verification failed&quot;</span>
+<span class="c1"># https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass</span>
+ssh-keyscan -t rsa github.com &gt;&gt; ~/.ssh/known_hosts
+<span class="c1"># github.com:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8</span>
+ssh-keyscan -t rsa gitlab.com &gt;&gt; ~/.ssh/known_hosts
+ssh-keyscan -t rsa bitbucket.org &gt;&gt; ~/.ssh/known_hosts
+ssh-keyscan -t rsa ssh.dev.azure.com &gt;&gt; ~/.ssh/known_hosts
+</pre></div>
+
+
+<p>Now you are ready to use your key.<br>
+When using it to connect to Github from VSCode you should start VSCode from a prompt like this:</p>
+<div class="highlight"><pre><span></span><span class="c1"># goto a repo folder where you have cloned a repo into.</span>
+<span class="nb">cd</span> ~/myrepos/someclonedrepo
+
+<span class="c1"># Start the ssh-agent in the background - reuse the agent if it is already running</span>
+ps -p <span class="nv">$SSH_AGENT_PID</span> &gt; /dev/null <span class="o">||</span> <span class="nb">eval</span> <span class="s2">&quot;</span><span class="k">$(</span>ssh-agent -s<span class="k">)</span><span class="s2">&quot;</span>
+<span class="c1"># Agent pid 17722</span>
+
+<span class="c1"># Add the key to your agent</span>
+ssh-add ~/.ssh/id_rsa_youruserid_github
+
+<span class="c1"># Open VSCode</span>
+code .
+
+<span class="c1"># Above three lines should be in a script</span>
+
+<span class="c1"># If you want to remove keys from daemon</span>
+<span class="c1"># ssh-add -D</span>
+<span class="c1"># All identities removed.</span>
+</pre></div>
+
+
+<p>Add a new SSH key to your GitHub (bitbucket, gitlab, etc) account</p>
+<div class="highlight"><pre><span></span><span class="c1"># Copy the contents of the id_rsa_youruserid_github.pub file to your clipboard</span>
+xclip -sel clip &lt; ~/.ssh/id_rsa_youruserid_github.pub
+</pre></div>
+
+
+<ul>
+<li>Goto <a href="https://github.com/settings/keys">https://github.com/settings/keys</a><ul>
+<li>or <a href="https://bitbucket.org/account/user/your_userid/">bitbucket</a></li>
+<li>or <a href="https://dev.azure.com/your_userid/_usersSettings/keys">dev.azure</a></li>
+<li>or <a href="https://gitlab.com/profile/keys">gitlab.com</a></li>
+</ul>
+</li>
+<li>New SSH key</li>
+<li>Paste key: Ctrl-V</li>
+<li>Title: vscode_youruserid_github</li>
+<li>Save key: Add SSH key</li>
+</ul>
+<p>Finally you need to change urls on your local repos remote origin from HTTPS to SSH</p>
+<div class="highlight"><pre><span></span><span class="nb">cd</span> your_local_repo
+<span class="c1"># Print remote url</span>
+git remote -v
+<span class="c1"># is it using HTTPS?</span>
+
+<span class="c1"># Change to SSH (get the SSH url from your remote repo on github)</span>
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+
+<span class="c1"># Print remote url</span>
+git remote -v
+</pre></div>
+
+
+<h4>Save the SSH private key in the Vault</h4>
+<ul>
+<li>Open <strong>Passwords and Keys</strong></li>
+<li>OpenSSH keys - <code>+</code> - Import from file - <code>~/.ssh/id_rsa_youruserid_github</code></li>
+</ul>
+<p>Now you don't have to add the key to agent (<code>ssh-add</code>) before you commit to github.  </p>
+<h3>pCloud</h3>
+<p>pCloud is an idrive. It <a href="https://www.pcloud.com/how-to-install-pcloud-drive-linux.html?download=electron-64">integrates into filemanagers</a>.<br>
+And it <a href="https://github.com/pcloudcom/console-client">integrates into terminals</a>.</p>
+<h1>Links</h1>
+<ul>
+<li>My related blogs<ul>
+<li><a href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html#using-ssh-keys-connect-to-ionic-pro">Using SSH keys - Connect to Ionic Pro</a></li>
+<li><a href="https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows">cUrl CLI on Windows</a></li>
+</ul>
+</li>
+<li>Other Guides<ul>
+<li><a href="http://rabexc.org/posts/using-ssh-agent">Using an ssh-agent, or how to type your ssh password once, safely</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04">How To Install and Configure Git on Ubuntu 18.04 | DigitalOcean</a></li>
+<li>When accessing with HTTPS<ul>
+<li><a href="https://mattselkey.com/configuring-2fa-for-github-mi
+crosoft-visual-code-integration/">Configuring 2FA for Github with Microsoft Visual Studio Code Integration</a></li>
+<li><a href="https://help.github.com/en/articles/caching-your-github-password-in-git">Caching your GitHub password in Git - GitHub Help</a></li>
+<li><a href="https://agilewarrior.wordpress.com/2017/09/25/how-to-setup-git-credential-store-in-windows/">How to setup Git Credential store in Windows</a></li>
+</ul>
+</li>
+<li><a href="https://articles.assembla.com/en/articles/1136998-how-to-add-a-new-remote-to-your-git-repo">How to Add a New Remote to your Git Repo</a></li>
+</ul>
+</li>
+<li>Troubleshooting<ul>
+<li><a href="https://stackoverflow.com/questions/40549332/how-to-check-if-ssh-agent-is-already-running-in-bash">How to check if ssh-agent is already running in bash?</a></li>
+<li><a href="https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass">Can&#39;t clone git repo and getting error ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory Host key verification failed</a></li>
+</ul>
+</li>
+</ul>
+<h3>Node</h3>
+<ul>
+<li><a href="https://github.com/nvm-sh/nvm">nvm</a> should be installed before node, so you can switch node version.  </li>
+</ul>
+<div class="highlight"><pre><span></span>wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh <span class="p">|</span> bash
+<span class="c1"># =&gt; Close and reopen your terminal to start using nvm</span>
+
+nvm -v
+<span class="c1"># Node Version Manager (v0.35.1)</span>
+
+nvm list
+<span class="c1"># N/A</span>
+</pre></div>
+
+
+<p>Current LTS of <a href="https://nodejs.org/en/">Node.js</a> is 12.13.0</p>
+<div class="highlight"><pre><span></span><span class="c1"># Install LTS</span>
+nvm install <span class="m">12</span>.13.0
+nvm list
+<span class="c1"># -&gt;     v12.13.0</span>
+<span class="c1"># default -&gt; 12.13.0 (-&gt; v12.13.0)</span>
+<span class="c1"># node -&gt; stable (-&gt; v12.13.0) (default)</span>
+<span class="c1"># stable -&gt; 12.13 (-&gt; v12.13.0) (default)</span>
+<span class="c1"># iojs -&gt; N/A (default)</span>
+<span class="c1"># unstable -&gt; N/A (default)</span>
+<span class="c1"># lts/* -&gt; lts/erbium (-&gt; v12.13.0)</span>
+<span class="c1"># lts/argon -&gt; v4.9.1 (-&gt; N/A)</span>
+<span class="c1"># lts/boron -&gt; v6.17.1 (-&gt; N/A)</span>
+<span class="c1"># lts/carbon -&gt; v8.16.2 (-&gt; N/A)</span>
+<span class="c1"># lts/dubnium -&gt; v10.17.0 (-&gt; N/A)</span>
+<span class="c1"># lts/erbium -&gt; v12.13.0</span>
+node -v
+<span class="c1"># v12.13.0</span>
+npm -v
+<span class="c1"># 6.12.0</span>
+</pre></div>
+
+
+<ul>
+<li>Optional install: Automatic Version Switching for Node: <a href="https://github.com/wbyoung/avn">wbyoung/avn</a></li>
+</ul>
+<h4>Electron</h4>
+<ul>
+<li><a href="https://electronjs.org/">Electron</a></li>
+<li><a href="https://www.techomoro.com/how-to-install-and-set-up-electron-on-ubuntu-19-04-disco-dingo/">How to Install and Set Up Electron on Ubuntu 19.04 - Techomoro</a></li>
+</ul>
+<div class="highlight"><pre><span></span>npm i electron -g
+<span class="c1"># Thank you for using core-js ( https://github.com/zloirock/core-js ) for polyfilling JavaScript standard library!</span>
+electron -v
+<span class="c1"># v7.0.1</span>
+</pre></div>
+
+
+<h5>Git challenge</h5>
+<p>Either (get latest version):
+* Download zip from https://github.com/jlord/git-it-electron/releases
+* Unzip
+* <code>cd /Downloads/Git-it-Linux-x64/resources/app</code>
+* run: <code>electron .</code></p>
+<p>Or (npm an old version):</p>
+<div class="highlight"><pre><span></span>md git-it-electr <span class="o">&amp;&amp;</span> <span class="nb">cd</span> git-it-electr
+npm install git-it-electron
+<span class="c1"># Browse to app</span>
+x-www-browser ./node_modules/git-it-electron/index.html
+</pre></div>
+
+
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/linux.html">#linux</a>
+      <a href="https://rasor.github.io/tag/popos.html">#popos</a>
+      <a href="https://rasor.github.io/tag/ubuntu.html">#ubuntu</a>
+      <a href="https://rasor.github.io/tag/ssh.html">#ssh</a>
+      <a href="https://rasor.github.io/tag/github.html">#github</a>
+      <a href="https://rasor.github.io/tag/snapstore.html">#snapstore</a>
+      <a href="https://rasor.github.io/tag/nodejs.html">#nodejs</a>
+      <a href="https://rasor.github.io/tag/electron.html">#electron</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

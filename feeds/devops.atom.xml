@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-05-15T00:00:00+02:00</updated><entry><title>VPN client - Download on IPhone - Copy to PC</title><link href="https://rasor.github.io/vpn-client-download-on-iphone-copy-to-pc.html" rel="alternate"></link><published>2019-05-06T00:00:00+02:00</published><updated>2019-05-15T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-06:/vpn-client-download-on-iphone-copy-to-pc.html</id><summary type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the websites, which are barred in China.
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-07-13T00:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>VPN client - Download on IPhone - Copy to PC</title><link href="https://rasor.github.io/vpn-client-download-on-iphone-copy-to-pc.html" rel="alternate"></link><published>2019-05-06T00:00:00+02:00</published><updated>2019-07-13T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-06:/vpn-client-download-on-iphone-copy-to-pc.html</id><summary type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the websites, which are barred in China.
 I can install VPN clients on IPhone from AppStore, but I can't install VPN client on PC, since I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the websites, which are barred in China.
 I can install VPN clients on IPhone from AppStore, but I can't install VPN client on PC, since I can't reach the sites from China. So here is a fix.&lt;/p&gt;
 &lt;h2&gt;Download VPN client on IPhone - and Copy it to PC&lt;/h2&gt;
@@ -61,6 +61,7 @@ So you'll need an email provider that can be accessed from you country - so case
 &lt;li&gt;Pros:&lt;ul&gt;
 &lt;li&gt;Top score on Trustpilot&lt;/li&gt;
 &lt;li&gt;Monthly charge&lt;/li&gt;
+&lt;li&gt;1 year plan: $3,25/mo&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Cons:&lt;ul&gt;
@@ -73,10 +74,40 @@ So you'll need an email provider that can be accessed from you country - so case
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.namecheap.com/vpn/"&gt;Namecheap VPN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;Cheap 3 year plan: $2/mo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;No Linux app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.privateinternetaccess.com/"&gt;Private Internet Access&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;2 year plan: $3½/mo&lt;/li&gt;
+&lt;li&gt;Recommended by &lt;a href="https://tutanota.com/blog/posts/private-internet-access-pia/"&gt;TutaNota&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Opera &lt;a href="https://mashtips.com/enable-free-vpn-opera-browser-android/"&gt;How to Enable Free VPN on Opera Browser for Android | Mashtips&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;Probably only works with Opera Browser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I have not not been choosing VPN for speed, privacy or security reasons, so there you have to do your own research.  &lt;/p&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.trustpilot.com/categories/vpn_providers"&gt;Trustpilot VPN Providers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#vpn"></category><category term="#icloud"></category></entry></feed>
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#vpn"></category><category term="#icloud"></category></entry></feed>

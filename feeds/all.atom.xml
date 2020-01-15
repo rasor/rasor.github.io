@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-05-15T00:00:00+02:00</updated><entry><title>Neo4j on Windows</title><link href="https://rasor.github.io/neo4j-on-windows.html" rel="alternate"></link><published>2019-05-08T00:00:00+02:00</published><updated>2019-05-15T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-08:/neo4j-on-windows.html</id><summary type="html">&lt;p&gt;Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-01-13T22:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Neo4j on Windows</title><link href="https://rasor.github.io/neo4j-on-windows.html" rel="alternate"></link><published>2019-05-08T00:00:00+02:00</published><updated>2019-05-15T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-08:/neo4j-on-windows.html</id><summary type="html">&lt;p&gt;Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.&lt;br&gt;
 First I'll install a docker version. It might come handy in deployment case.&lt;br&gt;
 Next I'll install a Desktop version to get a GUI both …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.&lt;br&gt;
 First I'll install a docker version. It might come handy in deployment case.&lt;br&gt;
@@ -118,7 +118,7 @@ docker &lt;span class="nb"&gt;exec&lt;/span&gt; -ti &lt;span class="nv"&gt;$CONT
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# where are we?&lt;/span&gt;
-&lt;span class="n"&gt;pwd&lt;/span&gt;
+&lt;span class="nb"&gt;pwd&lt;/span&gt;
 &lt;span class="c"&gt;# /var/lib/neo4j&lt;/span&gt;
 
 &lt;span class="c"&gt;# What is the version?&lt;/span&gt;
@@ -311,7 +311,7 @@ A new window opens and complains that it can't connect to &lt;code&gt;bolt://loc
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#graphdb"></category><category term="#cypher"></category><category term="#neo4j"></category><category term="#docker"></category></entry><entry><title>VPN client - Download on IPhone - Copy to PC</title><link href="https://rasor.github.io/vpn-client-download-on-iphone-copy-to-pc.html" rel="alternate"></link><published>2019-05-06T00:00:00+02:00</published><updated>2019-05-15T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-06:/vpn-client-download-on-iphone-copy-to-pc.html</id><summary type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the websites, which are barred in China.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#graphdb"></category><category term="#cypher"></category><category term="#neo4j"></category><category term="#docker"></category></entry><entry><title>VPN client - Download on IPhone - Copy to PC</title><link href="https://rasor.github.io/vpn-client-download-on-iphone-copy-to-pc.html" rel="alternate"></link><published>2019-05-06T00:00:00+02:00</published><updated>2019-07-13T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-05-06:/vpn-client-download-on-iphone-copy-to-pc.html</id><summary type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the websites, which are barred in China.
 I can install VPN clients on IPhone from AppStore, but I can't install VPN client on PC, since I …&lt;/p&gt;</summary><content type="html">&lt;p&gt;While writing this blog I am in China. I have an immediate need for VPN, since so much SW and websites are dependent on the websites, which are barred in China.
 I can install VPN clients on IPhone from AppStore, but I can't install VPN client on PC, since I can't reach the sites from China. So here is a fix.&lt;/p&gt;
 &lt;h2&gt;Download VPN client on IPhone - and Copy it to PC&lt;/h2&gt;
@@ -373,6 +373,7 @@ So you'll need an email provider that can be accessed from you country - so case
 &lt;li&gt;Pros:&lt;ul&gt;
 &lt;li&gt;Top score on Trustpilot&lt;/li&gt;
 &lt;li&gt;Monthly charge&lt;/li&gt;
+&lt;li&gt;1 year plan: $3,25/mo&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Cons:&lt;ul&gt;
@@ -385,13 +386,43 @@ So you'll need an email provider that can be accessed from you country - so case
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.namecheap.com/vpn/"&gt;Namecheap VPN&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;Cheap 3 year plan: $2/mo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;No Linux app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.privateinternetaccess.com/"&gt;Private Internet Access&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;2 year plan: $3½/mo&lt;/li&gt;
+&lt;li&gt;Recommended by &lt;a href="https://tutanota.com/blog/posts/private-internet-access-pia/"&gt;TutaNota&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Opera &lt;a href="https://mashtips.com/enable-free-vpn-opera-browser-android/"&gt;How to Enable Free VPN on Opera Browser for Android | Mashtips&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Pros:&lt;ul&gt;
+&lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Cons:&lt;ul&gt;
+&lt;li&gt;Probably only works with Opera Browser&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I have not not been choosing VPN for speed, privacy or security reasons, so there you have to do your own research.  &lt;/p&gt;
 &lt;h2&gt;Links&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.trustpilot.com/categories/vpn_providers"&gt;Trustpilot VPN Providers&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#vpn"></category><category term="#icloud"></category></entry><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-04-06T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#vpn"></category><category term="#icloud"></category></entry><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-10-19T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
@@ -747,17 +778,17 @@ faas-cli new faas-py-test1 --lang python
 
 
 &lt;p&gt;Tips about templates: 
-&lt;em&gt; &lt;a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md"&gt;faas-cli/guide/TEMPLATE&lt;/a&gt;
-&lt;/em&gt; &lt;a href="https://github.com/openfaas/faas-cli"&gt;faas-cli&lt;/a&gt;&lt;/p&gt;
+* &lt;a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md"&gt;faas-cli/guide/TEMPLATE&lt;/a&gt;
+* &lt;a href="https://github.com/openfaas/faas-cli"&gt;faas-cli&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Edit faas-py-test1.yml:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;provider&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;name&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;openfaas&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;gateway&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;http://127.0.0.1:8080&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;functions&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;faas-py-test1&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;lang&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;handler&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./faas-py-test1&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;image&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rasor/faas-py-test1:v1&lt;/span&gt; &lt;span class="c1"&gt;# edited! Added dockerhub userid/. Changed :latest to v1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;provider&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;openfaas&lt;/span&gt;
+  &lt;span class="nt"&gt;gateway&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;http://127.0.0.1:8080&lt;/span&gt;
+&lt;span class="nt"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;faas-py-test1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+    &lt;span class="nt"&gt;handler&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./faas-py-test1&lt;/span&gt;
+    &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rasor/faas-py-test1:v1&lt;/span&gt; &lt;span class="c1"&gt;# edited! Added dockerhub userid/. Changed :latest to v1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -767,7 +798,7 @@ faas-cli new faas-py-test1 --lang python
 &lt;span class="sd"&gt;    Args:&lt;/span&gt;
 &lt;span class="sd"&gt;        req (str): request body&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello! You said: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Added this line&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello! You said: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Added this line&lt;/span&gt;
     &lt;span class="c1"&gt;# return req # Removed this line&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -812,7 +843,7 @@ Note: It also tells OpenFaaS how and where to start the function.&lt;/p&gt;
 &lt;p&gt;.\build\faas-py-test1\Dockerfile:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# ... Lines omitted&lt;/span&gt;
 &lt;span class="c"&gt;# Here OpenFaaS knows howto starts the program&lt;/span&gt;
-&lt;span class="k"&gt;ENV&lt;/span&gt;&lt;span class="s"&gt; fprocess=&amp;quot;python index.py&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;ENV&lt;/span&gt; &lt;span class="nv"&gt;fprocess&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python index.py&amp;quot;&lt;/span&gt;
 &lt;span class="c"&gt;# ... Lines omitted&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -930,12 +961,13 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://blog.alexellis.io/swarm-secrets-in-action/"&gt;Docker Secrets in action: Github integration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ngrok.com/"&gt;ngrok - secure introspectable tunnels to localhost&lt;/a&gt; - use it to expose you localhost to the internet, when testing.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/cli-functions-with-openfaas/"&gt;Turn Any CLI into a Function with OpenFaaS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Books&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2018-04: &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications | PACKT Books&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category><category term="#git"></category><category term="#gitlab"></category><category term="#openshift"></category><category term="#footloose"></category></entry><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-02-23T13:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category><category term="#git"></category><category term="#gitlab"></category><category term="#openshift"></category><category term="#footloose"></category></entry><entry><title>Azure Fundamentals Course 107979F</title><link href="https://rasor.github.io/azure-fundamentals-course-107979f.html" rel="alternate"></link><published>2019-02-23T10:00:00+01:00</published><updated>2019-10-09T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-02-23:/azure-fundamentals-course-107979f.html</id><summary type="html">&lt;h2&gt;Notes from Azure Fundamentals Course 107979F&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Course: &lt;a href="https://www.microsoft.com/en-us/learning/course.aspx?cid=10979"&gt;107979F | Microsoft Learning&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Labs: &lt;ul&gt;
@@ -1068,6 +1100,7 @@ az login
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;More on &lt;a href="https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest"&gt;Azure CLI&lt;/a&gt;&lt;/p&gt;
 &lt;h4&gt;Azure PowerShell&lt;/h4&gt;
 &lt;p&gt;Azure PowerShell will be used for automation scripts together with container yaml files and json ARM templates.&lt;br&gt;
 It replaces AzureRM, which you should uninstall first.  &lt;/p&gt;
@@ -1098,12 +1131,18 @@ Connect-AzAccount
 &lt;p&gt;The course leads towards the &lt;a href="https://www.microsoft.com/en-us/learning/azure-exams.aspx"&gt;Azure certification exams&lt;/a&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-900.aspx"&gt;Exam AZ-900: Microsoft Azure Fundamentals&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-100.aspx"&gt;Exam AZ-100: Microsoft Azure Infrastructure and Deployment&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-100.aspx"&gt;Exam AZ-100: Microsoft Azure Infrastructure and Deployment&lt;/a&gt;&lt;/em&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment"&gt;MicrosoftLearning/AZ-100-MicrosoftAzureInfrastructureDeployment&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-101.aspx"&gt;Exam AZ-101: Microsoft Azure Integration and Security&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-101.aspx"&gt;Exam AZ-101: Microsoft Azure Integration and Security&lt;/a&gt;&lt;/em&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity"&gt;MicrosoftLearning/AZ-101-MicrosoftAzureIntegrationandSecurity&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-103.aspx"&gt;Exam AZ-103 Microsoft Azure Administrator&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Retires AZ-100 and AZ-101&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator"&gt;MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/"&gt;Course | AZ-103.1 | AzureAcademy&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-200.aspx"&gt;Exam AZ-200: Microsoft Azure Developer Core Solutions (beta)&lt;/a&gt;&lt;/li&gt;
@@ -1111,11 +1150,34 @@ Connect-AzAccount
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-202.aspx"&gt;Exam AZ-202: Microsoft Azure Developer Certification Transition (beta)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-az-203.aspx"&gt;Exam AZ-203: Developing Solutions for Microsoft Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-300.aspx"&gt;Exam AZ-300: Microsoft Azure Architect Technologies&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;The exam is an extended version of AZ-103.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies"&gt;MicrosoftLearning/AZ-300-MicrosoftAzureArchitectTechnologies&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-301.aspx"&gt;Exam AZ-301: Microsoft Azure Architect Design&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.microsoft.com/en-us/learning/exam-AZ-301.aspx"&gt;Exam AZ-301: Microsoft Azure Architect Design&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://github.com/MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign"&gt;MicrosoftLearning/AZ-301-MicrosoftAzureArchitectDesign&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://training.azure-academy.com/dashboard"&gt;Courses&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/learn/?WT.mc_id=home_homepage-azureportal-learn&amp;amp;tab=tab-start-a-learning-path"&gt;Microsoft Learn&lt;/a&gt; - Learning Paths (LP) &amp;amp; Modules (M)&lt;ul&gt;
+&lt;li&gt;Roles:&lt;/li&gt;
+&lt;li&gt;Admin&lt;/li&gt;
+&lt;li&gt;AI&lt;/li&gt;
+&lt;li&gt;Biz analyst&lt;/li&gt;
+&lt;li&gt;Biz user&lt;/li&gt;
+&lt;li&gt;Data eng.&lt;/li&gt;
+&lt;li&gt;Data sci.&lt;/li&gt;
+&lt;li&gt;Developer&lt;/li&gt;
+&lt;li&gt;Functional consultant&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/learn/browse/?roles=solution-architect"&gt;Sln. Architecht&lt;/a&gt; - 13 LPs + 100 Ms &lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/learn/browse/?roles=solution-architect&amp;amp;resource_type=learning%20path&amp;amp;levels=beginner"&gt;Beginner Learning path&lt;/a&gt; - 8 LPs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Security eng.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1129,7 +1191,7 @@ Connect-AzAccount
 &lt;li&gt;&lt;a href="https://www.linkedin.com/in/andersbustedjanum/"&gt;Anders Busted-Janum&lt;/a&gt; - developer&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.linkedin.com/in/nielslunn/"&gt;Niels Lunn&lt;/a&gt; - developer&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#azure"></category><category term="#microsoft"></category><category term="#docker"></category><category term="#paas"></category><category term="#iaas"></category><category term="#vm"></category><category term="#powershell"></category><category term="#visualstudio"></category><category term="#aci"></category><category term="#arm"></category><category term="#iac"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Study"></category><category term="#azure"></category><category term="#microsoft"></category><category term="#docker"></category><category term="#paas"></category><category term="#iaas"></category><category term="#vm"></category><category term="#powershell"></category><category term="#visualstudio"></category><category term="#aci"></category><category term="#arm"></category><category term="#iac"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
 &lt;a href="https://blog.github.com/2013-09-27-viewing-yaml-metadata-in-your-documents/"&gt;&lt;img alt="Nested tables with yaml" src="https://f.cloud.github.com/assets/64050/1228267/e049d0c6-27a0-11e3-9dd8-a1cd22599344.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is opposed to using &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables"&gt;normal markdown tables&lt;/a&gt; as here:  &lt;/p&gt;
 &lt;table&gt;
@@ -1193,13 +1255,13 @@ Connect-AzAccount
 &lt;a href="https://github.com/loomnetwork/cryptozombie-lessons/blob/master/en/3/02-ownable.md"&gt;&lt;img alt="cryptozombie markdown" src="img/2018/2018-09-07-YamlTable1.PNG"&gt;&lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;The corresponding yaml markdown:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;title&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Ownable Contracts&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;checkAnswer&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hints&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;requireLogin&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;material&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;editor&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;language&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;sol&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;startingCode&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Ownable Contracts&lt;/span&gt;
+&lt;span class="nt"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;checkAnswer&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hints&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;span class="nt"&gt;requireLogin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+&lt;span class="nt"&gt;material&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;editor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;language&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;sol&lt;/span&gt;
+    &lt;span class="nt"&gt;startingCode&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
       &lt;span class="s"&gt;&amp;quot;zombiefactory.sol&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
         &lt;span class="no"&gt;pragma solidity ^0.4.19;&lt;/span&gt;
         &lt;span class="no"&gt;// 1. Import here&lt;/span&gt;
@@ -1208,7 +1270,7 @@ Connect-AzAccount
         &lt;span class="no"&gt;// other sol code here &lt;/span&gt;
       &lt;span class="s"&gt;&amp;quot;ownable.sol&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
         &lt;span class="no"&gt;// other sol code here &lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;answer&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;answer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="no"&gt;pragma solidity ^0.4.19;&lt;/span&gt;
       &lt;span class="no"&gt;// other sol code here &lt;/span&gt;
 &lt;span class="nn"&gt;---&lt;/span&gt;
@@ -1225,7 +1287,7 @@ Connect-AzAccount
 &lt;li&gt;&lt;a href="https://cryptozombies.io/en/course"&gt;CryptoZombies - Learn to code games on Ethereum.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/loomnetwork/cryptozombie-lessons"&gt;CryptoZombies lessons webapp on github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#github"></category><category term="#yaml"></category><category term="#markdown"></category></entry><entry><title>Using TFS from VSCode</title><link href="https://rasor.github.io/using-tfs-from-vscode.html" rel="alternate"></link><published>2018-09-02T14:00:00+02:00</published><updated>2018-09-07T11:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-02:/using-tfs-from-vscode.html</id><summary type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#github"></category><category term="#yaml"></category><category term="#markdown"></category></entry><entry><title>Using TFS from VSCode</title><link href="https://rasor.github.io/using-tfs-from-vscode.html" rel="alternate"></link><published>2018-09-02T14:00:00+02:00</published><updated>2018-09-07T11:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-02:/using-tfs-from-vscode.html</id><summary type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
 At least we do that at my work. For frontend projects like Ionic, Angular, Vue, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).&lt;br&gt;
 So …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
 At least we do that at my work. For frontend projects like Ionic, Angular, Vue, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).&lt;br&gt;
@@ -1275,7 +1337,7 @@ Here is a sample:&lt;/li&gt;
 &lt;li&gt;So now you can checkin (incl see diffs, undo and exclude) to TFS from the Source Control tab&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#the-tfvc-source-control-viewlet"&gt;&lt;img alt="Source Control Tab in VSCode" src="https://raw.githubusercontent.com/Microsoft/vsts-vscode/master/assets/tfvc-viewlet.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#vscode"></category><category term="#tfs"></category><category term="#git"></category><category term="#npm"></category><category term="#visualstudio"></category></entry><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#vscode"></category><category term="#tfs"></category><category term="#git"></category><category term="#npm"></category><category term="#visualstudio"></category></entry><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
 &lt;h1&gt;Lists of Architectures and Implementations&lt;/h1&gt;
 &lt;p&gt;Here are some lists that can be gives you several designs.  &lt;/p&gt;
 &lt;ul&gt;
@@ -1423,7 +1485,7 @@ Governance, Architecture, Operations, Service Management&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://archive.codeplex.com/?s=patterns%20practices"&gt;CodePlex Archive&lt;/a&gt; - Pattern &amp;amp; Practices&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#microsoft"></category><category term="#architecture"></category><category term="#ebooks"></category><category term="#azure"></category><category term="#microservices"></category><category term="#faas"></category></entry><entry><title>Tools for Wordpress sites</title><link href="https://rasor.github.io/tools-for-wordpress-sites.html" rel="alternate"></link><published>2018-06-10T22:00:00+02:00</published><updated>2018-06-10T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-06-10:/tools-for-wordpress-sites.html</id><summary type="html">&lt;p&gt;Wordpress sites is still going strong with a large community creating beautiful themes.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#microsoft"></category><category term="#architecture"></category><category term="#ebooks"></category><category term="#azure"></category><category term="#microservices"></category><category term="#faas"></category></entry><entry><title>Tools for Wordpress sites</title><link href="https://rasor.github.io/tools-for-wordpress-sites.html" rel="alternate"></link><published>2018-06-10T22:00:00+02:00</published><updated>2018-06-10T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-06-10:/tools-for-wordpress-sites.html</id><summary type="html">&lt;p&gt;Wordpress sites is still going strong with a large community creating beautiful themes.&lt;/p&gt;
 &lt;h2&gt;Chrome Plugin: WP Sniffer&lt;/h2&gt;
 &lt;p&gt;PenguinWP has created a  &lt;a href="https://chrome.google.com/webstore/detail/wpsniffer-wordpress-theme/kihhefcbenhkjgjhchanjfhhflaojldn"&gt;Chrome plugin&lt;/a&gt; called &lt;a href="https://penguinwp.com/better-way-to-find-most-popular-wordpress-themes/"&gt;WPSniffer&lt;/a&gt; &lt;/p&gt;
 &lt;h3&gt;Testing&lt;/h3&gt;
@@ -1447,7 +1509,7 @@ Governance, Architecture, Operations, Service Management&lt;/li&gt;
 &lt;p&gt;Knowledge Cube web also uses the tool &lt;a href="https://visualcomposer.io/"&gt;Visual Composer&lt;/a&gt; to edit the Website.&lt;/p&gt;
 &lt;h2&gt;WP Plugin: Yoast SEO&lt;/h2&gt;
 &lt;p&gt;Knowledge Cube web does SEO optimisation with &lt;a href="https://yoast.com/wordpress/plugins/seo/"&gt;Yoast SEO&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#wordpress"></category><category term="#themes"></category><category term="#seo"></category></entry><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-08-18T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#wordpress"></category><category term="#themes"></category><category term="#seo"></category></entry><entry><title>Vue Storefront installation on Windows Dev box</title><link href="https://rasor.github.io/vue-storefront-installation-on-windows-dev-box.html" rel="alternate"></link><published>2018-05-15T23:00:00+02:00</published><updated>2018-08-18T19:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-15:/vue-storefront-installation-on-windows-dev-box.html</id><summary type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  &lt;/p&gt;
 &lt;p&gt;I think I'll give it a testdrive.&lt;br&gt;
 I am attending a online marketing seminar and workshop presented by &lt;a href="https://twitter.com/tzacchi"&gt;Thomas Zacchi (@tzacchi)&lt;/a&gt; from &lt;a href="https://www.intoto.dk/"&gt;intoto digital&lt;/a&gt;, so I could use a modern webshop to play …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4"&gt;Vue Storefront&lt;/a&gt; will soon be out (june 2018).
@@ -1519,8 +1581,8 @@ vue create my-30project
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
-2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro&lt;/span&gt;
+&lt;span class="err"&gt;2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1660,11 +1722,11 @@ docker container ls
 
 
 &lt;p&gt;Output: &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                              NAMES
-fcd38fe4910e   kibana:5.5          &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:5601-&amp;gt;5601/tcp             vue-storefront-api_kibana_1
-070f93cc3a08   redis               &amp;quot;docker-entrypoint.s…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:6379-&amp;gt;6379/tcp             vue-storefront-api_redis_1
-a3fec0cc4f2b   elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
-56caf26862c4   elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:9200-&amp;gt;9200/tcp, 9300/tcp   es1
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                              NAMES&lt;/span&gt;
+&lt;span class="err"&gt;fcd38fe4910e   kibana:5.5          &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:5601-&amp;gt;5601/tcp             vue-storefront-api_kibana_1&lt;/span&gt;
+&lt;span class="err"&gt;070f93cc3a08   redis               &amp;quot;docker-entrypoint.s…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:6379-&amp;gt;6379/tcp             vue-storefront-api_redis_1&lt;/span&gt;
+&lt;span class="err"&gt;a3fec0cc4f2b   elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   9200/tcp, 9300/tcp                 vue-storefront-api_es2_1&lt;/span&gt;
+&lt;span class="err"&gt;56caf26862c4   elasticsearch:5.5   &amp;quot;/docker-entrypoint.…&amp;quot;   2 hours ago   Up 2 hours   0.0.0.0:9200-&amp;gt;9200/tcp, 9300/tcp   es1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1677,31 +1739,31 @@ docker-compose stop
 
 
 &lt;p&gt;Output:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Stopping vue-storefront-api_kibana_1 ... done
-Stopping vue-storefront-api_redis_1  ... done
-Stopping vue-storefront-api_es2_1    ... done
-Stopping es1                         ... done
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Stopping vue-storefront-api_kibana_1 ... done&lt;/span&gt;
+&lt;span class="err"&gt;Stopping vue-storefront-api_redis_1  ... done&lt;/span&gt;
+&lt;span class="err"&gt;Stopping vue-storefront-api_es2_1    ... done&lt;/span&gt;
+&lt;span class="err"&gt;Stopping es1                         ... done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;The CMD promt will display this, so you can close it.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;redis_1   | 1:signal-handler (1526416098) Received SIGTERM scheduling shutdown...
-redis_1   | 1:M 15 May 20:28:18.957 # User requested shutdown...
-redis_1   | 1:M 15 May 20:28:19.142 * Saving the final RDB snapshot before exiting.
-es2_1     | [2018-05-15T20:28:19,274][INFO ][o.e.n.Node               ] [J8Lto-u] stopping ...
-es1       | [2018-05-15T20:28:19,271][INFO ][o.e.n.Node               ] [sH31WJW] stopping ...
-redis_1   | 1:M 15 May 20:28:19.306 * DB saved on disk
-redis_1   | 1:M 15 May 20:28:19.306 # Redis is now ready to exit, bye bye...
-es1       | [2018-05-15T20:28:19,444][INFO ][o.e.n.Node               ] [sH31WJW] stopped
-es1       | [2018-05-15T20:28:19,444][INFO ][o.e.n.Node               ] [sH31WJW] closing ...
-es2_1     | [2018-05-15T20:28:19,473][INFO ][o.e.n.Node               ] [J8Lto-u] stopped
-es2_1     | [2018-05-15T20:28:19,473][INFO ][o.e.n.Node               ] [J8Lto-u] closing ...
-es1       | [2018-05-15T20:28:19,509][INFO ][o.e.n.Node               ] [sH31WJW] closed
-es2_1     | [2018-05-15T20:28:19,509][INFO ][o.e.n.Node               ] [J8Lto-u] closed
-vue-storefront-api_es2_1 exited with code 143
-vue-storefront-api_redis_1 exited with code 0
-vue-storefront-api_kibana_1 exited with code 143
-es1 exited with code 143
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;redis_1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;signal&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;handler&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1526416098&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Received&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;SIGTERM&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;scheduling&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;shutdown&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;redis_1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;May&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;18.957&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;User&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;requested&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;shutdown&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;redis_1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;May&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;19.142&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Saving&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;final&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;RDB&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;snapshot&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;before&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exiting&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es2_1&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,274&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;J8Lto-u&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stopping&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es1&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,271&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sH31WJW&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stopping&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;redis_1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;May&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;19.306&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;DB&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;saved&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;disk&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;redis_1&lt;/span&gt;&lt;span class="w"&gt;   &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;May&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;28&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="mf"&gt;19.306&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Redis&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;is&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;ready&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;to&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bye&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;bye&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es1&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,444&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sH31WJW&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stopped&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es1&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,444&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sH31WJW&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es2_1&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,473&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;J8Lto-u&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;stopped&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es2_1&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,473&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;J8Lto-u&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closing&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es1&lt;/span&gt;&lt;span class="w"&gt;       &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,509&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;sH31WJW&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closed&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es2_1&lt;/span&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;2018-05-15T20:28:19,509&lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;INFO &lt;/span&gt;&lt;span class="o"&gt;][&lt;/span&gt;&lt;span class="n"&gt;o.e.n.Node               &lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="n"&gt;J8Lto-u&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;closed&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;vue&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;storefront&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;api_es2_1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exited&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;143&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;vue&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;storefront&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;api_redis_1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exited&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;vue&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;storefront&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;api_kibana_1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exited&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;143&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;es1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;exited&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;with&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;code&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="mi"&gt;143&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1794,7 +1856,7 @@ You can put them in &lt;code&gt;\your-vue-root\&lt;/code&gt; and just double-cli
 &lt;li&gt;&lt;a href="https://rasor.github.io/developing-with-openshift.html"&gt;Installing OpenShift&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.openshift.org/latest/minishift/getting-started/quickstart.html#deploy-sample-app"&gt;Deploying&lt;/a&gt; to MiniShift&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#vue"></category><category term="#magento"></category><category term="#webshop"></category><category term="#seo"></category><category term="#pwa"></category><category term="#docker"></category><category term="#git"></category><category term="#yarn"></category><category term="#npm"></category><category term="#nvm"></category></entry><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2019-03-28T09:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#vue"></category><category term="#magento"></category><category term="#webshop"></category><category term="#seo"></category><category term="#pwa"></category><category term="#docker"></category><category term="#git"></category><category term="#yarn"></category><category term="#npm"></category><category term="#nvm"></category></entry><entry><title>Docker for Windows</title><link href="https://rasor.github.io/docker-for-windows.html" rel="alternate"></link><published>2018-05-06T17:00:00+02:00</published><updated>2019-03-28T09:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-05-06:/docker-for-windows.html</id><summary type="html">&lt;p&gt;For a development project I needed Docker for Windows (D4W).&lt;br&gt;
 In this blog I'll install Docker. Playing with it I'll do in another post.  &lt;/p&gt;
 &lt;h2&gt;Prerequisite&lt;/h2&gt;
 &lt;ul&gt;
@@ -1887,7 +1949,7 @@ Here is a Gist for setting up Swarm for host for OpenFaas: &lt;a href="https://g
 &lt;li&gt;&lt;a href="https://blog.jayway.com/2017/04/19/running-docker-on-bash-on-windows/"&gt;Running Docker containers on Bash on Windows&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/DivanteLtd/vue-storefront/blob/master/doc/Installing%20on%20Windows.md"&gt;vue-storefront Installing on Windows.md&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#openfaas"></category><category term="#kitematic"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2019-04-06T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="DevOp"></category><category term="#docker"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#openfaas"></category><category term="#kitematic"></category></entry><entry><title>Developing with OpenShift</title><link href="https://rasor.github.io/developing-with-openshift.html" rel="alternate"></link><published>2018-04-15T15:00:00+02:00</published><updated>2019-04-06T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-04-15:/developing-with-openshift.html</id><summary type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It has become time (for me) to explore OpenShift.
 OpenShift is a Build and Deployment block using Kubernetes and Docker as deployment target. In other words: It connects GitHub and DockerHub to your cloud provider. It allows you to do do on-premise deployment and to monitor and operate your cloud.
 In this blog I'll run it (my own little cloud) locally on Windows.&lt;/p&gt;
@@ -2344,7 +2406,7 @@ start chrome https://192.168.99.100:8443/
 &lt;/li&gt;
 &lt;li&gt;Old &lt;a href="https://rasor.wordpress.com/2013/11/26/cloud-services/"&gt;Cloud&lt;/a&gt; landscape anno 2013 - from my old blog.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category><category term="#kubernetic"></category><category term="#openfaas"></category><category term="#footloose"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#openshift"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#redhat"></category><category term="#paas"></category><category term="#virtualbox"></category><category term="#ansible"></category><category term="#kubernetic"></category><category term="#openfaas"></category><category term="#footloose"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
@@ -2571,8 +2633,8 @@ The error is thrown when we try to auto-load A-Frame inside &lt;code&gt;scripts.
 
 
 &lt;p&gt;WebPack complains:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;error TS2552: Cannot find name &amp;#39;AFRAME&amp;#39;. Did you mean &amp;#39;frames&amp;#39;
-error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;error TS2552: Cannot find name &amp;#39;AFRAME&amp;#39;. Did you mean &amp;#39;frames&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -2655,7 +2717,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/angular/angular-cli/wiki/angular-cli"&gt;Angular CLI Config Schema&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html"&gt;TypeScript Compiler Options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2019-02-20T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;h1&gt;Low-Code&lt;/h1&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2019-02-20T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;h1&gt;Low-Code&lt;/h1&gt;
 &lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
@@ -2734,7 +2796,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;Microservices, SOA, and APIs: Friends or enemies?&lt;br&gt;
 &lt;a href="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html"&gt;&lt;img alt="Microservices, SOA, and APIs" src="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/images/figure8.jpg"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="#mbaas"></category><category term="#ipaas"></category><category term="#esb"></category><category term="#designsprint"></category><category term="#nocode"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#hpapaas"></category><category term="#rpa"></category><category term="#mbaas"></category><category term="#ipaas"></category><category term="#esb"></category><category term="#designsprint"></category><category term="#nocode"></category></entry><entry><title>Moveslink 2 crash</title><link href="https://rasor.github.io/moveslink-2-crash.html" rel="alternate"></link><published>2018-01-11T19:00:00+01:00</published><updated>2018-01-11T19:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/moveslink-2-crash.html</id><summary type="html">&lt;p&gt;A few days ago I &lt;a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options"&gt;resat my Windows 10&lt;/a&gt;, so I could start from scratch.&lt;/p&gt;
 &lt;h2&gt;Problem&lt;/h2&gt;
 &lt;p&gt;The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.&lt;/p&gt;
 &lt;p&gt;I just connected the watch with USB cable.&lt;br&gt;
@@ -2774,7 +2836,7 @@ Then I installed &lt;a href="http://www.movescount.com/connect/moveslink"&gt;Mov
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/2012/11/09/garmin-305-display-misbehaving/"&gt;Garmin 305 display misbehaving&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasordk.wordpress.com/2015/01/08/suunto-ruter/"&gt;Suunto Ruter (in danish)&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ambit"></category><category term="#moveslink"></category><category term="#drivers"></category><category term="#windows"></category></entry><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#ambit"></category><category term="#moveslink"></category><category term="#drivers"></category><category term="#windows"></category></entry><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
 &lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
 One of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
 &lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
@@ -2800,7 +2862,7 @@ Price: EUR 250,-&lt;/p&gt;
 &lt;li&gt;Seems to not the best integration with uppload photos from IOS, but neither would a local NAS be, probably&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;So finally I won't have to worry about loosing photos and other content.&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#nas"></category><category term="#storage"></category><category term="#cloud"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2018-01-05T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#nas"></category><category term="#storage"></category><category term="#cloud"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2018-01-05T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
 &lt;p&gt;Here is howto:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Download latest &lt;a href="https://curl.haxx.se/dlwiz/?type=bin&amp;amp;os=Win64&amp;amp;flav=-&amp;amp;ver=*&amp;amp;cpu=x86_64"&gt;windows version of cUrl&lt;/a&gt;. I used &lt;a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip"&gt;curl-7.57.0&lt;/a&gt;, which is SSL and SSH enabled.&lt;/li&gt;
@@ -2861,7 +2923,7 @@ curl -X GET &lt;span class="s2"&gt;&amp;quot;http://petstore.swagger.io/v2/pet/1
 By default ca-bundle.crt file from OpenSSL&lt;br&gt;
 &lt;img alt="GitInstall-SSL" src="img/2017/2017-12-11-GitInstall1.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;If you during installation change to use Windows Certificate Store, then Windows will keep the ca-list updated for you, I assume.&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#curl"></category><category term="#windows"></category><category term="#shell"></category><category term="#ssl"></category><category term="#git"></category><category term="#openssl"></category></entry><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-12-16T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#curl"></category><category term="#windows"></category><category term="#shell"></category><category term="#ssl"></category><category term="#git"></category><category term="#openssl"></category></entry><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-12-16T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
 Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
@@ -3101,22 +3163,22 @@ Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This h
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;put&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-      &lt;span class="l l-Scalar l-Scalar-Plain"&gt;responses&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;201&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;created&amp;quot;&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;409&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exist&amp;quot;&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;post&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-      &lt;span class="l l-Scalar l-Scalar-Plain"&gt;responses&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;404&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;405&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Validation&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exception&amp;quot;&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;get&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-      &lt;span class="l l-Scalar l-Scalar-Plain"&gt;responses&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;404&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nt"&gt;put&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;responses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;201&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;created&amp;quot;&lt;/span&gt;
+        &lt;span class="nt"&gt;409&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exist&amp;quot;&lt;/span&gt;
+    &lt;span class="nt"&gt;post&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;responses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
+        &lt;span class="nt"&gt;405&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Validation&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exception&amp;quot;&lt;/span&gt;
+    &lt;span class="nt"&gt;get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;responses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -3154,7 +3216,7 @@ Towards a partner you could use certificates as demonstrated in &lt;a href="http
 &lt;li&gt;Official WCF REST Docs: &lt;a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web"&gt;https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;WCF REST with ASP.NET routing: &lt;a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration"&gt;https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#wcf"></category><category term="#rest"></category><category term="#swagger"></category><category term="#depencyinjection"></category><category term="#dotnet"></category><category term="#visualstudio"></category><category term="#cors"></category></entry><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#wcf"></category><category term="#rest"></category><category term="#swagger"></category><category term="#depencyinjection"></category><category term="#dotnet"></category><category term="#visualstudio"></category><category term="#cors"></category></entry><entry><title>Deploying Express REST API to Azure</title><link href="https://rasor.github.io/deploying-express-rest-api-to-azure.html" rel="alternate"></link><published>2017-10-29T21:00:00+01:00</published><updated>2017-10-30T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-29:/deploying-express-rest-api-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;
@@ -3381,7 +3443,7 @@ Instead I could browse in the App Service Console and the files were alse viewab
 &lt;p&gt;So to verify that browse to you service on&lt;br&gt;
 &lt;a href="http://yourvstsusername-dreamhouse-mobile-rest.azurewebsites.net/properties"&gt;http://yourvstsusername-dreamhouse-mobile-rest.azurewebsites.net/properties&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;If you are just reading along you can also find my site &lt;a href="http://dreamhouse-mobile-rest.azurewebsites.net/properties"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#express"></category><category term="#nodejs"></category><category term="#azure"></category></entry><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="DevOp"></category><category term="#npm"></category><category term="#git"></category><category term="#express"></category><category term="#nodejs"></category><category term="#azure"></category></entry><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
 It is quite a bit - read all about it &lt;a href="https://opensource.guide/how-to-contribute/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This blog post assumes you contribute by doing changes to a git repo.&lt;br&gt;
 So In short you need to&lt;/p&gt;
@@ -3546,7 +3608,7 @@ git branch -d
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/vsts/git/gitquickstart?tabs=visual-studio"&gt;Git and VS2017&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;A Git branching model&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2018-05-10T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#git"></category></entry><entry><title>Deploying Ionic to Azure</title><link href="https://rasor.github.io/deploying-ionic-to-azure.html" rel="alternate"></link><published>2017-10-10T21:00:00+02:00</published><updated>2018-05-10T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-10:/deploying-ionic-to-azure.html</id><summary type="html">&lt;p&gt;This blog is part of a series.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-ionic-to-azure.html"&gt;Deploying Ionic to Azure&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/deploying-express-rest-api-to-azure.html"&gt;Deploying Express REST API to Azure&lt;/a&gt;&lt;/li&gt;
@@ -3799,7 +3861,7 @@ I don't think Azure Storage can handle SSR. Instead it is a great place for stat
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest"&gt;Azure CLI 2.0&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-cli-samples"&gt;Azure CLI Samples - App Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2019-04-19T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2019-04-19T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With Nvm For Windows you can stay in the shell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
@@ -3916,7 +3978,7 @@ yarn install &lt;span class="c1"&gt;# same as npm install, but using yarn.lock: 
 &lt;li&gt;&lt;a href="https://docs.npmjs.com/cli" target="_blank"&gt;Npm commands&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/rasor/awesome-tables/blob/master/awesome-cli-on-windows.md#chocolatey" target="_blank"&gt;Awesome CLI - on Windows - Chocolatey&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category><category term="#chocolatay"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category><category term="#chocolatay"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2020-01-13T22:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
 &lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
@@ -4039,12 +4101,28 @@ refresh env
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;h3&gt;If you want Git Bash to add your Github SSH key to an agent&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://dev.to/bsara/how-to-setup-ssh-authentication-for-git-bash-on-windows-a63"&gt;How to Setup SSH Authentication for Git Bash on Windows&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;If you want Powershell to add your SSH key to an agent&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent"&gt;Setting up the SSH Agent&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# PS1&lt;/span&gt;
+&lt;span class="c"&gt;# Make sure you&amp;#39;re running as an Administrator&lt;/span&gt;
+&lt;span class="nb"&gt;Set-Service&lt;/span&gt; &lt;span class="n"&gt;ssh-agent&lt;/span&gt; &lt;span class="n"&gt;-StartupType&lt;/span&gt; &lt;span class="n"&gt;Automatic&lt;/span&gt;
+&lt;span class="nb"&gt;Start-Service&lt;/span&gt; &lt;span class="n"&gt;ssh-agent&lt;/span&gt;
+&lt;span class="nb"&gt;Get-Service&lt;/span&gt; &lt;span class="n"&gt;ssh-agent&lt;/span&gt;
+&lt;span class="c"&gt;# Add SSH private key to agent&lt;/span&gt;
+&lt;span class="n"&gt;ssh-add&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="p"&gt;\&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;yourid&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;\.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;
+&lt;span class="c"&gt;# Verity key added&lt;/span&gt;
+&lt;span class="n"&gt;ssh-add&lt;/span&gt; &lt;span class="n"&gt;-l&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://ionicframework.com/docs/pro/basics/getting-started/" target="_blank"&gt;http://ionicframework.com/docs/pro/basics/getting-started/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples" target="_blank"&gt;https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Use Google Drive as your Desktop</title><link href="https://rasor.github.io/use-google-drive-as-your-desktop.html" rel="alternate"></link><published>2017-09-30T12:00:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/use-google-drive-as-your-desktop.html</id><summary type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Use Google Drive as your Desktop</title><link href="https://rasor.github.io/use-google-drive-as-your-desktop.html" rel="alternate"></link><published>2017-09-30T12:00:00+02:00</published><updated>2017-09-30T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/use-google-drive-as-your-desktop.html</id><summary type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
 &lt;p&gt;There are several plugins for Chrome.
 The first …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you have had the thought of using Google Drive as the place where you store your links - just as when you have them on your desktop, then you will learn that you can't navigate to the URL by double-clicking on them.&lt;/p&gt;
 &lt;p&gt;There are several plugins for Chrome.
@@ -4053,7 +4131,7 @@ The first one I found useful was &lt;a href="https://chrome.google.com/webstore/
 &lt;p&gt;&lt;img alt="picture alt" src="img/2017/2017-09-30-GDriveLinkTo.PNG" title="A Link in Google Drive"&gt;&lt;/p&gt;
 &lt;p&gt;It also has more features, but the double-click feature is the only one I need so far.&lt;/p&gt;
 &lt;p&gt;Thanks a lot, &lt;a href="https://github.com/ntxcode" target="_blank"&gt;ntxDev&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#googledrive"></category><category term="#chrome"></category><category term="#desktop"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Biz"></category><category term="#googledrive"></category><category term="#chrome"></category><category term="#desktop"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -4265,7 +4343,7 @@ start %PYTHON_HOME%&lt;span class="se"&gt;\l&lt;/span&gt;ib&lt;span class="se"&g
 &lt;/li&gt;
 &lt;li&gt;Images &lt;a href="https://unsplash.com/" target="_blank"&gt;https://unsplash.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-11-05T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#blog"></category><category term="#pelican"></category><category term="#themes"></category><category term="#cms"></category><category term="#install"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-11-05T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
@@ -4342,7 +4420,7 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://angular.io/guide/visual-studio-2015" target="_blank"&gt;Visual Studio 2015 QuickStart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-11-26T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-11-26T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -4526,7 +4604,7 @@ Then the document will be put in the &lt;code&gt;/drafts/&lt;/code&gt; folder. &
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/" target="_blank"&gt;My old Wordpress blog&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category><category term="#git"></category><category term="#install"></category><category term="#python"></category></entry><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOp"></category><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category><category term="#git"></category><category term="#install"></category><category term="#python"></category></entry><entry><title>Welcome to my Pelican blog on Github pages</title><link href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:00:00+02:00</published><updated>2017-09-30T10:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/welcome-to-my-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;Hi there.&lt;/p&gt;
 &lt;p&gt;I have moved. Previously I was living on &lt;a href="https://rasor.wordpress.com/"&gt;https://rasor.wordpress.com/&lt;/a&gt;.&lt;/p&gt;
 &lt;h3&gt;Reason for move&lt;/h3&gt;
 &lt;ul&gt;
@@ -4572,4 +4650,4 @@ Then the document will be put in the &lt;code&gt;/drafts/&lt;/code&gt; folder. &
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/2017/04/15/markdown-saas-blogs/"&gt;Thinking about moving&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The end&lt;/p&gt;</content><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category></entry></feed>
+&lt;p&gt;The end&lt;/p&gt;</content><category term="Study"></category><category term="#blog"></category><category term="#pelican"></category><category term="#githubpages"></category><category term="#cms"></category></entry></feed>

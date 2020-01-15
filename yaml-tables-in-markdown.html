@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
 
     <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
@@ -28,6 +30,7 @@
 <meta name="author" content="rasor" />
 <meta name="description" content="If you put YAML in your github markdown, you can use it for creating nested tables This is opposed to using normal markdown tables as here: Normal Markdown Tables col 3 is right-aligned $1600 col 2 is centered $12 zebra stripes are neat $1 Cool usage sample CryptoZombies is a …" />
 <meta name="keywords" content="#github, #yaml, #markdown">
+
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="YAML tables in Markdown"/>
@@ -59,22 +62,47 @@
       <nav>
         <ul class="list">
 
-          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
-          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
-          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
-          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
-          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
-          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
       </ul>
     </div>
 
@@ -103,7 +131,7 @@
     <p>
           Posted on September 07, 2018 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
-          </br>
+      </br>
     </p>
   </header>
 
@@ -143,13 +171,13 @@
 <a href="https://github.com/loomnetwork/cryptozombie-lessons/blob/master/en/3/02-ownable.md"><img alt="cryptozombie markdown" src="img/2018/2018-09-07-YamlTable1.PNG"></a>  </p>
 <p>The corresponding yaml markdown:</p>
 <div class="highlight"><pre><span></span><span class="nn">---</span>
-<span class="l l-Scalar l-Scalar-Plain">title</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Ownable Contracts</span>
-<span class="l l-Scalar l-Scalar-Plain">actions</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;checkAnswer&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;hints&#39;</span><span class="p p-Indicator">]</span>
-<span class="l l-Scalar l-Scalar-Plain">requireLogin</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="l l-Scalar l-Scalar-Plain">material</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">editor</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">sol</span>
-    <span class="l l-Scalar l-Scalar-Plain">startingCode</span><span class="p p-Indicator">:</span>
+<span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ownable Contracts</span>
+<span class="nt">actions</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;checkAnswer&#39;</span><span class="p p-Indicator">,</span> <span class="s">&#39;hints&#39;</span><span class="p p-Indicator">]</span>
+<span class="nt">requireLogin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">material</span><span class="p">:</span>
+  <span class="nt">editor</span><span class="p">:</span>
+    <span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sol</span>
+    <span class="nt">startingCode</span><span class="p">:</span>
       <span class="s">&quot;zombiefactory.sol&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
         <span class="no">pragma solidity ^0.4.19;</span>
         <span class="no">// 1. Import here</span>
@@ -158,7 +186,7 @@
         <span class="no">// other sol code here </span>
       <span class="s">&quot;ownable.sol&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">|</span>
         <span class="no">// other sol code here </span>
-    <span class="l l-Scalar l-Scalar-Plain">answer</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">&gt;</span>
+    <span class="nt">answer</span><span class="p">:</span> <span class="p p-Indicator">&gt;</span>
       <span class="no">pragma solidity ^0.4.19;</span>
       <span class="no">// other sol code here </span>
 <span class="nn">---</span>
@@ -187,7 +215,6 @@
 
 
 
-    <div class="addthis_relatedposts_inline">
 
 
 </article>
@@ -196,7 +223,7 @@
 <p>
   &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -204,7 +231,7 @@
     <img alt="Creative Commons License"
          title="Creative Commons License"
          style="border-width:0"
-         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
          width="80"
          height="15"/>
   </a>

@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Notes from Vid 2019-10: React Hooks PacktPublishing/React-Hooks Vid 2019-10: Awesome Apps with React Hooks and Firebase PacktPublishing/Awesome-Apps-with-React-Hooks-and-Firebase Book 2018-11: Learn React with TypeScript 3 PacktPublishing/Learn-React-with-TypeScript-3 I have pushed some code to rasor/react-stencil-poc rasor/my-react-ts-app # running on node -v # v10.16.2 # create react code npx create-react-app …" />
+<meta name="keywords" content="#react">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Notes from book &#39;Learn React with TypeScript 3&#39;"/>
+<meta property="og:description" content="Notes from Vid 2019-10: React Hooks PacktPublishing/React-Hooks Vid 2019-10: Awesome Apps with React Hooks and Firebase PacktPublishing/Awesome-Apps-with-React-Hooks-and-Firebase Book 2018-11: Learn React with TypeScript 3 PacktPublishing/Learn-React-with-TypeScript-3 I have pushed some code to rasor/react-stencil-poc rasor/my-react-ts-app # running on node -v # v10.16.2 # create react code npx create-react-app …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/notes-from-book-learn-react-with-typescript-3.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#react"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Notes from book &#39;Learn React with TypeScript 3&#39;</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="notes-from-book-learn-react-with-typescript-3">Notes from book 'Learn React with TypeScript 3'</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <p>Notes from </p>
+<ul>
+<li>Vid 2019-10: <a href="https://subscription.packtpub.com/video/web_development/9781839210075">React Hooks</a><ul>
+<li><a href="https://github.com/PacktPublishing/React-Hooks">PacktPublishing/React-Hooks</a></li>
+</ul>
+</li>
+<li>Vid 2019-10: <a href="https://subscription.packtpub.com/video/web_development/9781839211348">Awesome Apps with React Hooks and Firebase</a><ul>
+<li><a href="https://github.com/PacktPublishing/Awesome-Apps-with-React-Hooks-and-Firebase">PacktPublishing/Awesome-Apps-with-React-Hooks-and-Firebase</a></li>
+</ul>
+</li>
+<li>Book 2018-11: <a href="https://www.packtpub.com/web-development/learn-react-typescript-3">Learn React with TypeScript 3</a>  <ul>
+<li><a href="https://github.com/PacktPublishing/Learn-React-with-TypeScript-3">PacktPublishing/Learn-React-with-TypeScript-3</a></li>
+</ul>
+</li>
+</ul>
+<p>I have pushed some code to </p>
+<ul>
+<li><a href="https://github.com/rasor/react-stencil-poc">rasor/react-stencil-poc</a></li>
+<li><a href="https://github.com/rasor/my-react-ts-app">rasor/my-react-ts-app</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># running on</span>
+node -v
+<span class="c1"># v10.16.2</span>
+
+<span class="c1"># create react code</span>
+npx create-react-app my-react-ts-app --typescript
+<span class="c1"># We detected TypeScript in your project (src/App.test.tsx) and created a tsconfig.json file for you.</span>
+<span class="c1"># Your tsconfig.json has been populated with default values.</span>
+<span class="c1"># Success! Created my-react-ts-app at /home/rasor/e-toshiba/projs-react/my-react-ts-app</span>
+<span class="c1"># Inside that directory, you can run several commands:</span>
+<span class="c1">#   npm start        #     Starts the development server.</span>
+<span class="c1">#   npm run build    #     Bundles the app into static files for production.</span>
+<span class="c1">#   npm test         #     Starts the test runner.</span>
+<span class="c1">#   npm run eject    #     Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back!</span>
+
+<span class="c1"># Enter the project folder</span>
+<span class="nb">cd</span> my-react-ts-app
+
+<span class="c1"># 1st run - incl download and build</span>
+npm start
+
+<span class="c1"># Commit locally</span>
+git add .
+git commit -m <span class="s2">&quot;first commit&quot;</span>
+
+<span class="c1"># push to new empty repo</span>
+git remote add origin git@github.com:yourgithub/my-react-ts-app.git
+git push -u origin master
+
+<span class="c1"># add lint</span>
+npm install tslint tslint-react tslint-config-prettier --save-dev
+
+<span class="c1"># open editor</span>
+code .
+</pre></div>
+
+
+<p>Add file <code>tslint.json</code></p>
+<div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;extends&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;tslint:recommended&quot;</span><span class="p">,</span> <span class="s2">&quot;tslint-react&quot;</span><span class="p">,</span> <span class="s2">&quot;tslint-config-prettier&quot;</span><span class="p">],</span>
+    <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ordered-imports&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;object-literal-sort-keys&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;no-debugger&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;no-console&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;linterOptions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;exclude&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;config/**/*.js&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;node_modules/**/*.ts&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;coverage/lcov-report/*.js&quot;</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+
+<h2>Using WebComponents in React</h2>
+<p>index.tsx:</p>
+<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">defineCustomElements</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;my-stencil-components/loader&#39;</span><span class="p">;</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">));</span>
+
+<span class="nx">defineCustomElements</span><span class="p">(</span><span class="nb">window</span><span class="p">);</span>
+</pre></div>
+
+
+<p>declarations.d.ts:</p>
+<div class="highlight"><pre><span></span><span class="c1">// Load my-component for untyped elements</span>
+<span class="kr">import</span> <span class="s1">&#39;my-stencil-components&#39;</span>
+
+<span class="c1">// Load my-component for typed elements</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">JSX</span> <span class="kr">as</span> <span class="nx">ExtJSX</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;my-stencil-components&#39;</span>
+
+<span class="kr">export</span> <span class="kr">declare</span> <span class="nx">global</span> <span class="p">{</span>
+    <span class="nx">namespace</span> <span class="nx">JSX</span> <span class="p">{</span>
+        <span class="c1">// From /my-stencil-app/node_modules/@stencil/core/dist/index.d.ts</span>
+        <span class="c1">// Untyped elements</span>
+        <span class="kr">interface</span> <span class="nx">IntrinsicElements</span> <span class="kr">extends</span> <span class="nx">d</span><span class="p">.</span><span class="nx">JSX</span><span class="p">.</span><span class="nx">IntrinsicElements</span><span class="p">,</span> <span class="nx">d</span><span class="p">.</span><span class="nx">JSXBase</span><span class="p">.</span><span class="nx">IntrinsicElements</span> <span class="p">{</span>
+            <span class="p">[</span><span class="nx">tagName</span>: <span class="kt">string</span><span class="p">]</span><span class="o">:</span> <span class="nx">any</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// Typed elements from imported webcomponent</span>
+        <span class="kr">interface</span> <span class="nx">IntrinsicElements</span> <span class="kr">extends</span> <span class="nx">ExtJSX</span><span class="p">.</span><span class="nx">IntrinsicElements</span><span class="p">{}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Home.tsx</p>
+<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Person</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;my-stencil-components/dist/types/models/person&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">Home</span>: <span class="kt">React.FC</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">pers</span>: <span class="kt">Person</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;donald.duck@andeby.disney&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Donald Duck&#39;</span><span class="p">,</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span>
+    <span class="nx">photo</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+  <span class="p">};</span>
+  <span class="kr">const</span> <span class="nx">commonProps</span> <span class="o">=</span> <span class="p">{</span><span class="nx">person</span>: <span class="kt">pers</span><span class="p">};</span>
+  <span class="k">return</span> <span class="p">(</span>
+      <span class="p">{</span><span class="cm">/* Soon a sln? https://github.com/skatejs/skatejs/issues/1058#issuecomment-275851441 */</span><span class="p">}</span>
+      <span class="p">{</span><span class="cm">/* https://stackoverflow.com/a/49081745/750989 */</span><span class="p">}</span>
+       <span class="p">{</span><span class="nx">pers</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">my</span><span class="o">-</span><span class="nx">component</span> <span class="nx">first</span><span class="o">=</span><span class="s2">&quot;External Stencil&quot;</span> <span class="nx">last</span><span class="o">=</span><span class="s2">&quot;&#39;Don&#39;t call me a framework&#39; JS&quot;</span> <span class="p">{...</span><span class="nx">commonProps</span><span class="p">}</span><span class="o">&gt;&lt;</span><span class="err">/my-component&gt;}</span>
+     <span class="p">{</span><span class="cm">/* {pers &amp;&amp; &lt;my-component first=&quot;External Stencil&quot; last=&quot;&#39;Don&#39;t call me a framework&#39; JS&quot; person={pers}&gt;&lt;/my-component&gt;} */</span><span class="p">}</span>
+  <span class="p">)</span>
+</pre></div>
+
+
+<ul>
+<li><a href="https://github.com/ionic-team/ionic/blob/master/packages/react/src/components/utils/attachProps.ts">ionic-team/ionic</a></li>
+<li><a href="https://dev.to/cesareferrari/passing-state-through-the-props-object-in-react-5fmm">Passing state through the props object in React</a></li>
+<li><a href="https://github.com/skatejs/skatejs/issues/1058#issuecomment-275851441">Can I use JSX to pass an object to an attribute? · Issue #1058 · skatejs/skatejs</a></li>
+<li><a href="https://reactjs.org/docs/web-components.html">Web Components – React</a></li>
+<li><a href="https://reactjs.org/docs/refs-and-the-dom.html">Refs and the DOM – React</a></li>
+<li><a href="https://reactjs.org/docs/forwarding-refs.html#forwarding-refs-to-dom-components">Forwarding Refs – React</a></li>
+<li><a href="https://vaadin.com/learn/tutorials/using-web-components-in-react">How to use Web Components in React</a><ul>
+<li>Includes: @webcomponents/webcomponentsjs vendor-copy</li>
+<li><a href="https://www.npmjs.com/package/@webcomponents/webcomponentsjs">@webcomponents/webcomponentsjs</a></li>
+</ul>
+</li>
+<li><a href="https://custom-elements-everywhere.com/">Custom Elements Everywhere</a></li>
+<li><a href="https://stenciljs.com/docs/react">Stencil 4 React</a></li>
+<li><a href="https://stenciljs.com/docs/javascript">Stencil 4 JS</a></li>
+<li><a href="https://direflow.io/">Direflow</a></li>
+</ul>
+<h2>Ionic React</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/@ionic/react">@ionic/react</a></li>
+<li><a href="https://dev.to/dabit3/ionic-react-first-look-104l">Ionic React - First Look</a></li>
+<li><a href="https://ionicframework.com/blog/announcing-ionic-react-hooks/">Announcing Ionic React Hooks</a></li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li>React - guide: <a href="https://reactjs.org/">React – A JavaScript library for building user interfaces</a><ul>
+<li><a href="https://reactjs.org/docs/getting-started.html">Getting Started – React</a><ul>
+<li><a href="https://www.taniarascia.com/getting-started-with-react/">Getting Started with React - An Overview and Walkthrough Tutorial</a></li>
+</ul>
+</li>
+<li><a href="https://reactjs.org/tutorial/tutorial.html">Tutorial: Intro to React – React</a></li>
+</ul>
+</li>
+<li>Support: <a href="https://reactjs.org/community/support.html">Where To Get Support – React</a><ul>
+<li><a href="https://discordapp.com/invite/0ZcbPKXt5bZjGY5n">Join the Reactiflux Discord Server!</a></li>
+</ul>
+</li>
+<li>React Playground: <a href="https://babeljs.io/repl">Babel · The compiler for next generation JavaScript</a></li>
+<li>Create React App (CRA) - guide: <a href="https://github.com/facebook/create-react-app">facebook/create-react-app</a><ul>
+<li>User guide: <a href="https://create-react-app.dev/">Create React App · Set up a modern web app by running one command.</a></li>
+<li><a href="https://create-react-app.dev/docs/getting-started">Getting Started · Create React App</a></li>
+</ul>
+</li>
+<li>TSX:<ul>
+<li><a href="https://stackoverflow.com/questions/31163693/how-to-conditionally-add-attributes-to-react-components/35428331#35428331">How to conditionally add attributes to React components?</a></li>
+</ul>
+</li>
+<li>TypeScript:<ul>
+<li>2018-11: <a href="https://www.packtpub.com/web-development/learn-react-typescript-3">Learn React with TypeScript 3</a><ul>
+<li><a href="https://subscription.packtpub.com/book/web_development/9781789610253">Online book</a></li>
+<li>Code: <a href="https://github.com/PacktPublishing/Learn-React-with-TypeScript-3">PacktPublishing/Learn-React-with-TypeScript-3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hooks:<ul>
+<li>Vid 2019-10: <a href="https://subscription.packtpub.com/video/web_development/9781839210075">React Hooks</a></li>
+<li>Why? <a href="https://reactjs.org/docs/hooks-intro.html#its-hard-to-reuse-stateful-logic-between-components">Hooks allow you to reuse stateful logic without changing your component hierarchy.</a><ul>
+<li>Removes layers of<ul>
+<li>Providers</li>
+<li>Consumers</li>
+<li><a href="https://reactjs.org/docs/higher-order-components.html">Higher-Order Components (HOC)</a></li>
+<li><a href="https://reactjs.org/docs/render-props.html">Render Props</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://reactjs.org/docs/hooks-overview.html">Hooks at a Glance – React</a></li>
+<li><code>useLayoutEffect</code>:<ul>
+<li><a href="https://reactjs.org/docs/hooks-reference.html#uselayouteffect">Hooks API Reference</a><ul>
+<li>Identical to useEffect, but it fires synchronously after all DOM mutations. </li>
+<li>Use this to read layout from the DOM and synchronously re-render. </li>
+<li>Prefer the standard useEffect when possible to avoid blocking visual updates.</li>
+</ul>
+</li>
+<li><code>ref.current.setAttribute</code>: <a href="https://www.robinwieruch.de/react-svg-icon-components">How to use SVG Icons as React Components?</a></li>
+</ul>
+</li>
+<li>
+<p><code>useRef</code>:</p>
+<ul>
+<li><a href="https://reactjs.org/docs/refs-and-the-dom.html#when-to-use-refs">When?</a><ul>
+<li>When can't do it declaratively (<strong>can't use props</strong>) - opposed to <strong>can only call methods</strong> (imperatively)<ul>
+<li>For example, instead of exposing open() and close() methods on a Dialog component, pass an isOpen prop to it (declaratively).</li>
+</ul>
+</li>
+<li>Examples:<ul>
+<li>Managing focus, text selection, or media playback.</li>
+<li>Triggering imperative animations.</li>
+<li>Integrating with <strong>third-party DOM libraries</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://reactjs.org/docs/hooks-reference.html#useref">Hooks API Reference</a></p>
+</li>
+<li>
+<p>Using Class: <a href="https://reactjs.org/docs/refs-and-the-dom.html#adding-a-ref-to-a-dom-element">Refs and the DOM – React</a></p>
+</li>
+<li><a href="https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29">React: Using Refs with the useRef Hook</a><ul>
+<li><code>useMemo</code>: </li>
+</ul>
+</li>
+<li><a href="https://reactjs.org/docs/hooks-reference.html#usememo">Hooks API Reference</a><ul>
+<li>A cache</li>
+</ul>
+</li>
+<li>Automatic generation of ids: <a href="https://medium.com/gronda/managing-aria-attributes-with-react-hooks-a7470d572683">Managing ARIA attributes with React hooks</a></li>
+<li>Default Props:<ul>
+<li>Blog 2019-01 <a href="https://blog.bitsrc.io/understanding-react-default-props-5c50401ed37d?gi=ae3da137374d">Understanding React Default Props</a></li>
+<li>Blog 2019-07 <a href="https://medium.com/@matanbobi/react-defaultprops-is-dying-whos-the-contender-443c19d9e7f1">React defaultProps is dying, who’s the contender?</a></li>
+</ul>
+</li>
+<li>React and WebComponents:<ul>
+<li><a href="https://reactjs.org/docs/web-components.html">Web Components – React</a></li>
+<li><a href="https://github.com/rasor/react-stencil-poc/blob/master/my-ionic-react-app/src/pages/Home.tsx">rasor/react-stencil-poc</a></li>
+<li><a href="https://github.com/skatejs/skatejs/issues/1058#issuecomment-275851441">Can I use JSX to pass an object to an attribute?</a></li>
+<li><a href="https://stenciljs.com/blog/how-lazy-loading-web-components-work">How Lazy-Loading Web Components Work with Stencil</a></li>
+</ul>
+</li>
+<li>Lazy Loading:<ul>
+<li><a href="https://blog.bitsrc.io/lazy-loading-react-components-with-react-lazy-and-suspense-f05c4cfde10c">Lazy Loading React Components (with react.lazy and suspense)</a></li>
+<li><a href="https://stenciljs.com/blog/how-lazy-loading-web-components-work">How Lazy-Loading Web Components Work with Stencil</a></li>
+<li><a href="https://developers.google.com/web/updates/2017/12/modulepreload">Preloading modules - Google Developers</a></li>
+</ul>
+</li>
+<li>Authentication:<ul>
+<li>Blog 2019-04 <a href="https://jasonwatmore.com/post/2019/04/06/react-jwt-authentication-tutorial-example">React (without Redux) - JWT Authentication</a></li>
+<li>Blog 2019-02 <a href="https://medium.com/@franciscopa91/how-to-implement-oidc-authentication-with-react-context-api-and-react-router-205e13f2d49">How To Implement OIDC Authentication with React Context API and React Router</a></li>
+</ul>
+</li>
+<li>IFrame Headers:<ul>
+<li><a href="https://github.com/enriquemorenotent/react-auth-iframe">enriquemorenotent/react-auth-iframe</a></li>
+<li><a href="https://stackoverflow.com/questions/13432821/is-it-possible-to-add-request-headers-to-an-iframe-src-request/42280739#42280739">Is it possible to add Request Headers to an iframe src request?</a></li>
+</ul>
+</li>
+<li>npm runner (npx): <a href="https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner">Introducing npx: an npm package runner</a><ul>
+<li>Exec js gist: <a href="https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32">npx is cool</a></li>
+</ul>
+</li>
+<li><a href="https://blog.developer.atlassian.com/scripting-with-node/">Building command line tools with Node.js - Atlassian Developer Blog</a><ul>
+<li>Depricated: <a href="https://www.npmjs.com/package/node-bin">node-bin</a></li>
+</ul>
+</li>
+<li>Replaced by engines?<a href="https://docs.npmjs.com/files/package.json#engines">npm-package.json</a><ul>
+<li>Probably requires <code>n</code>: <a href="https://www.codementor.io/victor-nizeyimana/how-to-change-to-an-older-version-of-node-js-ofs3xt53n">How to change to an older version of Node.js | Codementor</a></li>
+<li>Compile and Exec Babel: <a href="https://babeljs.io/docs/en/babel-node">@babel/node · Babel</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/react.html">#react</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

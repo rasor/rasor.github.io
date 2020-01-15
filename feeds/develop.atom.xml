@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2019-04-06T20:30:00+02:00</updated><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-04-06T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-01-13T22:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>OpenFaaS on Windows Devbox</title><link href="https://rasor.github.io/openfaas-on-windows-devbox.html" rel="alternate"></link><published>2019-03-29T00:00:00+01:00</published><updated>2019-10-19T00:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2019-03-29:/openfaas-on-windows-devbox.html</id><summary type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
 &lt;p&gt;Finally the time has arrived, when I'll start using &lt;a href="https://www.openfaas.com/"&gt;OpenFaas&lt;/a&gt;.&lt;br&gt;
 I first heard about OpenFaaS at a meetup in May 2018, &lt;a href="https://www.meetup.com/GOTO-Nights-CPH/events/249895973/"&gt;6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup!&lt;/a&gt; by OpenFaaS creator, &lt;a href="https://github.com/alexellis"&gt;Alex Ellis&lt;/a&gt;.&lt;br&gt;
 Next I bought the book &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Running OpenFaas in Dev on Windows&lt;/h1&gt;
@@ -355,17 +355,17 @@ faas-cli new faas-py-test1 --lang python
 
 
 &lt;p&gt;Tips about templates: 
-&lt;em&gt; &lt;a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md"&gt;faas-cli/guide/TEMPLATE&lt;/a&gt;
-&lt;/em&gt; &lt;a href="https://github.com/openfaas/faas-cli"&gt;faas-cli&lt;/a&gt;&lt;/p&gt;
+* &lt;a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md"&gt;faas-cli/guide/TEMPLATE&lt;/a&gt;
+* &lt;a href="https://github.com/openfaas/faas-cli"&gt;faas-cli&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Edit faas-py-test1.yml:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="l l-Scalar l-Scalar-Plain"&gt;provider&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;name&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;openfaas&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;gateway&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;http://127.0.0.1:8080&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;functions&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;faas-py-test1&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;lang&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;handler&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./faas-py-test1&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;image&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rasor/faas-py-test1:v1&lt;/span&gt; &lt;span class="c1"&gt;# edited! Added dockerhub userid/. Changed :latest to v1&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;provider&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;openfaas&lt;/span&gt;
+  &lt;span class="nt"&gt;gateway&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;http://127.0.0.1:8080&lt;/span&gt;
+&lt;span class="nt"&gt;functions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;faas-py-test1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;python&lt;/span&gt;
+    &lt;span class="nt"&gt;handler&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./faas-py-test1&lt;/span&gt;
+    &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;rasor/faas-py-test1:v1&lt;/span&gt; &lt;span class="c1"&gt;# edited! Added dockerhub userid/. Changed :latest to v1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -375,7 +375,7 @@ faas-cli new faas-py-test1 --lang python
 &lt;span class="sd"&gt;    Args:&lt;/span&gt;
 &lt;span class="sd"&gt;        req (str): request body&lt;/span&gt;
 &lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-    &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello! You said: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Added this line&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello! You said: &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# Added this line&lt;/span&gt;
     &lt;span class="c1"&gt;# return req # Removed this line&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -420,7 +420,7 @@ Note: It also tells OpenFaaS how and where to start the function.&lt;/p&gt;
 &lt;p&gt;.\build\faas-py-test1\Dockerfile:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# ... Lines omitted&lt;/span&gt;
 &lt;span class="c"&gt;# Here OpenFaaS knows howto starts the program&lt;/span&gt;
-&lt;span class="k"&gt;ENV&lt;/span&gt;&lt;span class="s"&gt; fprocess=&amp;quot;python index.py&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;ENV&lt;/span&gt; &lt;span class="nv"&gt;fprocess&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python index.py&amp;quot;&lt;/span&gt;
 &lt;span class="c"&gt;# ... Lines omitted&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -538,12 +538,13 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://blog.alexellis.io/swarm-secrets-in-action/"&gt;Docker Secrets in action: Github integration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://ngrok.com/"&gt;ngrok - secure introspectable tunnels to localhost&lt;/a&gt; - use it to expose you localhost to the internet, when testing.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.alexellis.io/cli-functions-with-openfaas/"&gt;Turn Any CLI into a Function with OpenFaaS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Books&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;2018-04: &lt;a href="https://www.packtpub.com/virtualization-and-cloud/docker-serverless-applications"&gt;Docker for Serverless Applications | PACKT Books&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category><category term="#git"></category><category term="#gitlab"></category><category term="#openshift"></category><category term="#footloose"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#openfaas"></category><category term="#curl"></category><category term="#docker"></category><category term="#kubernetes"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#dockerswarm"></category><category term="#python"></category><category term="#git"></category><category term="#gitlab"></category><category term="#openshift"></category><category term="#footloose"></category></entry><entry><title>YAML tables in Markdown</title><link href="https://rasor.github.io/yaml-tables-in-markdown.html" rel="alternate"></link><published>2018-09-07T17:00:00+02:00</published><updated>2018-09-07T17:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-07:/yaml-tables-in-markdown.html</id><summary type="html">&lt;p&gt;If you put YAML in your github markdown, you can use it for creating &lt;strong&gt;nested&lt;/strong&gt; tables&lt;br&gt;
 &lt;a href="https://blog.github.com/2013-09-27-viewing-yaml-metadata-in-your-documents/"&gt;&lt;img alt="Nested tables with yaml" src="https://f.cloud.github.com/assets/64050/1228267/e049d0c6-27a0-11e3-9dd8-a1cd22599344.png"&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is opposed to using &lt;a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables"&gt;normal markdown tables&lt;/a&gt; as here:  &lt;/p&gt;
 &lt;table&gt;
@@ -607,13 +608,13 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;a href="https://github.com/loomnetwork/cryptozombie-lessons/blob/master/en/3/02-ownable.md"&gt;&lt;img alt="cryptozombie markdown" src="img/2018/2018-09-07-YamlTable1.PNG"&gt;&lt;/a&gt;  &lt;/p&gt;
 &lt;p&gt;The corresponding yaml markdown:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;title&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Ownable Contracts&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;actions&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;checkAnswer&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hints&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;requireLogin&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
-&lt;span class="l l-Scalar l-Scalar-Plain"&gt;material&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-  &lt;span class="l l-Scalar l-Scalar-Plain"&gt;editor&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;language&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;sol&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;startingCode&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
+&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Ownable Contracts&lt;/span&gt;
+&lt;span class="nt"&gt;actions&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;checkAnswer&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;hints&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;span class="nt"&gt;requireLogin&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;true&lt;/span&gt;
+&lt;span class="nt"&gt;material&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;editor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;language&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;sol&lt;/span&gt;
+    &lt;span class="nt"&gt;startingCode&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
       &lt;span class="s"&gt;&amp;quot;zombiefactory.sol&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
         &lt;span class="no"&gt;pragma solidity ^0.4.19;&lt;/span&gt;
         &lt;span class="no"&gt;// 1. Import here&lt;/span&gt;
@@ -622,7 +623,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
         &lt;span class="no"&gt;// other sol code here &lt;/span&gt;
       &lt;span class="s"&gt;&amp;quot;ownable.sol&amp;quot;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;|&lt;/span&gt;
         &lt;span class="no"&gt;// other sol code here &lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;answer&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;answer&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;&amp;gt;&lt;/span&gt;
       &lt;span class="no"&gt;pragma solidity ^0.4.19;&lt;/span&gt;
       &lt;span class="no"&gt;// other sol code here &lt;/span&gt;
 &lt;span class="nn"&gt;---&lt;/span&gt;
@@ -639,7 +640,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://cryptozombies.io/en/course"&gt;CryptoZombies - Learn to code games on Ethereum.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/loomnetwork/cryptozombie-lessons"&gt;CryptoZombies lessons webapp on github&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#github"></category><category term="#yaml"></category><category term="#markdown"></category></entry><entry><title>Using TFS from VSCode</title><link href="https://rasor.github.io/using-tfs-from-vscode.html" rel="alternate"></link><published>2018-09-02T14:00:00+02:00</published><updated>2018-09-07T11:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-02:/using-tfs-from-vscode.html</id><summary type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#github"></category><category term="#yaml"></category><category term="#markdown"></category></entry><entry><title>Using TFS from VSCode</title><link href="https://rasor.github.io/using-tfs-from-vscode.html" rel="alternate"></link><published>2018-09-02T14:00:00+02:00</published><updated>2018-09-07T11:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-09-02:/using-tfs-from-vscode.html</id><summary type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
 At least we do that at my work. For frontend projects like Ionic, Angular, Vue, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).&lt;br&gt;
 So …&lt;/p&gt;</summary><content type="html">&lt;p&gt;You might continue a while working with TFS before you jump to GIT.&lt;br&gt;
 At least we do that at my work. For frontend projects like Ionic, Angular, Vue, etc using a CLI for generation code templates it makes most sense to to stay in VSCode (opposed to Visual Studio).&lt;br&gt;
@@ -689,7 +690,7 @@ Here is a sample:&lt;/li&gt;
 &lt;li&gt;So now you can checkin (incl see diffs, undo and exclude) to TFS from the Source Control tab&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;a href="https://github.com/Microsoft/vsts-vscode/blob/master/TFVC_README.md#the-tfvc-source-control-viewlet"&gt;&lt;img alt="Source Control Tab in VSCode" src="https://raw.githubusercontent.com/Microsoft/vsts-vscode/master/assets/tfvc-viewlet.png"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#vscode"></category><category term="#tfs"></category><category term="#git"></category><category term="#npm"></category><category term="#visualstudio"></category></entry><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#vscode"></category><category term="#tfs"></category><category term="#git"></category><category term="#npm"></category><category term="#visualstudio"></category></entry><entry><title>Microsoft Architecture and Implementations</title><link href="https://rasor.github.io/microsoft-architecture-and-implementations.html" rel="alternate"></link><published>2018-08-18T20:00:00+02:00</published><updated>2018-08-18T20:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-08-18:/microsoft-architecture-and-implementations.html</id><summary type="html">&lt;p&gt;This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.&lt;/p&gt;
 &lt;h1&gt;Lists of Architectures and Implementations&lt;/h1&gt;
 &lt;p&gt;Here are some lists that can be gives you several designs.  &lt;/p&gt;
 &lt;ul&gt;
@@ -837,7 +838,7 @@ Governance, Architecture, Operations, Service Management&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://archive.codeplex.com/?s=patterns%20practices"&gt;CodePlex Archive&lt;/a&gt; - Pattern &amp;amp; Practices&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#microsoft"></category><category term="#architecture"></category><category term="#ebooks"></category><category term="#azure"></category><category term="#microservices"></category><category term="#faas"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#microsoft"></category><category term="#architecture"></category><category term="#ebooks"></category><category term="#azure"></category><category term="#microservices"></category><category term="#faas"></category></entry><entry><title>Dependency management in Angular CLI - Lib: A-Frame</title><link href="https://rasor.github.io/dependency-management-in-angular-cli-lib-a-frame.html" rel="alternate"></link><published>2018-03-29T22:00:00+02:00</published><updated>2018-05-12T03:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-03-29:/dependency-management-in-angular-cli-lib-a-frame.html</id><summary type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Code from the post can be …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Using 3rd party libraries in Angular 2+ takes a while to become friends with.
 In this blog the Virtual Reality library &lt;a href="https://aframe.io/"&gt;A-Frame&lt;/a&gt; is what I want to use together with Angular CLI (Currently using Ng core: 5.2.0, Ng cli: 1.7.3).&lt;/p&gt;
@@ -1064,8 +1065,8 @@ The error is thrown when we try to auto-load A-Frame inside &lt;code&gt;scripts.
 
 
 &lt;p&gt;WebPack complains:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;error TS2552: Cannot find name &amp;#39;AFRAME&amp;#39;. Did you mean &amp;#39;frames&amp;#39;
-error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;error TS2552: Cannot find name &amp;#39;AFRAME&amp;#39;. Did you mean &amp;#39;frames&amp;#39;&lt;/span&gt;
+&lt;span class="err"&gt;error TS2503: Cannot find namespace &amp;#39;AFrame&amp;#39;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1148,7 +1149,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://github.com/angular/angular-cli/wiki/angular-cli"&gt;Angular CLI Config Schema&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.typescriptlang.org/docs/handbook/compiler-options.html"&gt;TypeScript Compiler Options&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2019-02-20T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;h1&gt;Low-Code&lt;/h1&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#ng"></category><category term="#aframe"></category><category term="#webpack"></category><category term="#vr"></category></entry><entry><title>D'n'd development with RPA, hpaPaaS, mBaaS and ESB (iPaaS)</title><link href="https://rasor.github.io/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html" rel="alternate"></link><published>2018-01-11T20:00:00+01:00</published><updated>2019-02-20T15:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-11:/dnd-development-with-rpa-hpapaas-mbaas-and-esb-ipaas.html</id><summary type="html">&lt;h1&gt;Low-Code&lt;/h1&gt;
 &lt;p&gt;Development using Drag'n'drop (&lt;a href="https://en.wikipedia.org/wiki/Low-code_development_platforms"&gt;Low-code development platforms - LCDP&lt;/a&gt;)
  is also taking a share in development pipelines with test/prod environments and version control.&lt;/p&gt;
 &lt;p&gt;Some of the areas are&lt;/p&gt;
@@ -1227,7 +1228,7 @@ Notice: In that repo I am using the latest version of A-Frame: 0.8.0.&lt;/p&gt;
 &lt;li&gt;Microservices, SOA, and APIs: Friends or enemies?&lt;br&gt;
 &lt;a href="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html"&gt;&lt;img alt="Microservices, SOA, and APIs" src="https://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/images/figure8.jpg"&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#hpapaas"></category><category term="#rpa"></category><category term="#mbaas"></category><category term="#ipaas"></category><category term="#esb"></category><category term="#designsprint"></category><category term="#nocode"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2018-01-05T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#hpapaas"></category><category term="#rpa"></category><category term="#mbaas"></category><category term="#ipaas"></category><category term="#esb"></category><category term="#designsprint"></category><category term="#nocode"></category></entry><entry><title>cUrl CLI on Windows</title><link href="https://rasor.github.io/curl-cli-on-windows.html" rel="alternate"></link><published>2017-12-11T21:00:00+01:00</published><updated>2018-01-05T23:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-12-11:/curl-cli-on-windows.html</id><summary type="html">&lt;p&gt;cUrl on Windows is not trouble-free to get working, when posting to SSL domains.&lt;/p&gt;
 &lt;p&gt;Here is howto:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Download latest &lt;a href="https://curl.haxx.se/dlwiz/?type=bin&amp;amp;os=Win64&amp;amp;flav=-&amp;amp;ver=*&amp;amp;cpu=x86_64"&gt;windows version of cUrl&lt;/a&gt;. I used &lt;a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip"&gt;curl-7.57.0&lt;/a&gt;, which is SSL and SSH enabled.&lt;/li&gt;
@@ -1288,7 +1289,7 @@ curl -X GET &lt;span class="s2"&gt;&amp;quot;http://petstore.swagger.io/v2/pet/1
 By default ca-bundle.crt file from OpenSSL&lt;br&gt;
 &lt;img alt="GitInstall-SSL" src="img/2017/2017-12-11-GitInstall1.PNG"&gt;&lt;/p&gt;
 &lt;p&gt;If you during installation change to use Windows Certificate Store, then Windows will keep the ca-list updated for you, I assume.&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#curl"></category><category term="#windows"></category><category term="#shell"></category><category term="#ssl"></category><category term="#git"></category><category term="#openssl"></category></entry><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-12-16T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#curl"></category><category term="#windows"></category><category term="#shell"></category><category term="#ssl"></category><category term="#git"></category><category term="#openssl"></category></entry><entry><title>Expand your WCF service with REST</title><link href="https://rasor.github.io/expand-your-wcf-service-with-rest.html" rel="alternate"></link><published>2017-11-19T13:00:00+01:00</published><updated>2017-12-16T10:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-11-19:/expand-your-wcf-service-with-rest.html</id><summary type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
 Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This have the advantage of a smaller learning …&lt;/p&gt;</summary><content type="html">&lt;p&gt;If you are working with .NET you probably have WCF services.&lt;br&gt;
 You might have thought of expanding those WCF services to REST allowing you to make mobile or SPA frontends.&lt;br&gt;
@@ -1528,22 +1529,22 @@ Instead of using ServiceStack or WebApi+Swashbuckle, you can stay in WCF. This h
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;put&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-      &lt;span class="l l-Scalar l-Scalar-Plain"&gt;responses&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;201&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;created&amp;quot;&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;409&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exist&amp;quot;&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;post&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-      &lt;span class="l l-Scalar l-Scalar-Plain"&gt;responses&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;404&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;405&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Validation&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exception&amp;quot;&lt;/span&gt;
-    &lt;span class="l l-Scalar l-Scalar-Plain"&gt;get&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-      &lt;span class="l l-Scalar l-Scalar-Plain"&gt;responses&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-        &lt;span class="l l-Scalar l-Scalar-Plain"&gt;404&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt;
-          &lt;span class="l l-Scalar l-Scalar-Plain"&gt;description&lt;/span&gt;&lt;span class="p p-Indicator"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nt"&gt;put&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;responses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;201&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;created&amp;quot;&lt;/span&gt;
+        &lt;span class="nt"&gt;409&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exist&amp;quot;&lt;/span&gt;
+    &lt;span class="nt"&gt;post&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;responses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
+        &lt;span class="nt"&gt;405&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Validation&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;exception&amp;quot;&lt;/span&gt;
+    &lt;span class="nt"&gt;get&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;responses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;404&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+          &lt;span class="nt"&gt;description&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Book&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;not&lt;/span&gt;&lt;span class="nv"&gt; &lt;/span&gt;&lt;span class="s"&gt;found&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -1581,7 +1582,7 @@ Towards a partner you could use certificates as demonstrated in &lt;a href="http
 &lt;li&gt;Official WCF REST Docs: &lt;a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web"&gt;https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/web&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;WCF REST with ASP.NET routing: &lt;a href="https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration"&gt;https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/aspnetrouteintegration&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#wcf"></category><category term="#rest"></category><category term="#swagger"></category><category term="#depencyinjection"></category><category term="#dotnet"></category><category term="#visualstudio"></category><category term="#cors"></category></entry><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#wcf"></category><category term="#rest"></category><category term="#swagger"></category><category term="#depencyinjection"></category><category term="#dotnet"></category><category term="#visualstudio"></category><category term="#cors"></category></entry><entry><title>Contributing to Open Source</title><link href="https://rasor.github.io/contributing-to-open-source.html" rel="alternate"></link><published>2017-10-14T23:00:00+02:00</published><updated>2017-10-27T21:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-14:/contributing-to-open-source.html</id><summary type="html">&lt;p&gt;What is needed to contribute to Open Source hosted in Git?&lt;br&gt;
 It is quite a bit - read all about it &lt;a href="https://opensource.guide/how-to-contribute/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This blog post assumes you contribute by doing changes to a git repo.&lt;br&gt;
 So In short you need to&lt;/p&gt;
@@ -1746,7 +1747,7 @@ git branch -d
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/vsts/git/gitquickstart?tabs=visual-studio"&gt;Git and VS2017&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://nvie.com/posts/a-successful-git-branching-model/"&gt;A Git branching model&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2017-10-03T20:30:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#git"></category></entry><entry><title>Using SSH keys - Connect to Ionic Pro</title><link href="https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html" rel="alternate"></link><published>2017-10-03T20:30:00+02:00</published><updated>2020-01-13T22:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-03:/using-ssh-keys-connect-to-ionic-pro.html</id><summary type="html">&lt;p&gt;HowTo connect to Ionic Pro, when &lt;code&gt;ionic link&lt;/code&gt; fails?&lt;br&gt;
 &lt;em&gt;&lt;a href="https://ionicframework.com/docs/pro/" target="_blank"&gt;Ionic Pro&lt;/a&gt; is a new site taking over the features from Ionic Cloud - a hosted mobile build, test and deploy service&lt;/em&gt;&lt;/p&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;h3&gt;The problem&lt;/h3&gt;
@@ -1869,12 +1870,28 @@ refresh env
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;h3&gt;If you want Git Bash to add your Github SSH key to an agent&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://dev.to/bsara/how-to-setup-ssh-authentication-for-git-bash-on-windows-a63"&gt;How to Setup SSH Authentication for Git Bash on Windows&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;If you want Powershell to add your SSH key to an agent&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent"&gt;Setting up the SSH Agent&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# PS1&lt;/span&gt;
+&lt;span class="c"&gt;# Make sure you&amp;#39;re running as an Administrator&lt;/span&gt;
+&lt;span class="nb"&gt;Set-Service&lt;/span&gt; &lt;span class="n"&gt;ssh-agent&lt;/span&gt; &lt;span class="n"&gt;-StartupType&lt;/span&gt; &lt;span class="n"&gt;Automatic&lt;/span&gt;
+&lt;span class="nb"&gt;Start-Service&lt;/span&gt; &lt;span class="n"&gt;ssh-agent&lt;/span&gt;
+&lt;span class="nb"&gt;Get-Service&lt;/span&gt; &lt;span class="n"&gt;ssh-agent&lt;/span&gt;
+&lt;span class="c"&gt;# Add SSH private key to agent&lt;/span&gt;
+&lt;span class="n"&gt;ssh-add&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;users&lt;/span&gt;&lt;span class="p"&gt;\&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;yourid&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;\.&lt;/span&gt;&lt;span class="n"&gt;ssh&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;id_rsa&lt;/span&gt;
+&lt;span class="c"&gt;# Verity key added&lt;/span&gt;
+&lt;span class="n"&gt;ssh-add&lt;/span&gt; &lt;span class="n"&gt;-l&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h1&gt;Links&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://ionicframework.com/docs/pro/basics/getting-started/" target="_blank"&gt;http://ionicframework.com/docs/pro/basics/getting-started/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples" target="_blank"&gt;https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-11-05T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#git"></category><category term="#ssh"></category><category term="#ionic"></category></entry><entry><title>Ngx: Template for Visual Studio 2017</title><link href="https://rasor.github.io/ngx-template-for-visual-studio-2017.html" rel="alternate"></link><published>2017-09-24T17:00:00+02:00</published><updated>2017-11-05T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-24:/ngx-template-for-visual-studio-2017.html</id><summary type="html">&lt;p&gt;At my work all web developers are getting an Angular 4 course.
 But there are a couple of issues with that.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When you work with ngx in Visual Studio code you get a &lt;code&gt;.gitnore&lt;/code&gt; file from the Angular CLI to take care of what not to commit to GIT.
@@ -1951,4 +1968,4 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://angular.io/guide/visual-studio-2015" target="_blank"&gt;Visual Studio 2015 QuickStart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry></feed>
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry></feed>

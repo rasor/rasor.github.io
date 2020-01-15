@@ -221,7 +221,7 @@ main {
       font-size: .78em;
     }
 
-    code {
+    *:not(pre) > code {
       font-size: .8em;
       white-space: nowrap;
       color: #c25;
@@ -248,6 +248,26 @@ main {
         line-height: 20px;
         vertical-align: top;
         border-top: 1px solid #ddd;
+      }
+    }
+
+    table.highlighttable {
+      width: 100%;
+      table-layout: fixed;
+
+      td {
+        border-style: none;
+        padding: 0px;
+      }
+
+      td.linenos {
+        width: 2.5em;
+
+        pre {
+          padding-right: .8em;
+          background-color: inherit;
+          text-align: right;
+        }
       }
     }
   }
@@ -368,8 +388,8 @@ ul.social {
 
   a:hover {
     z-index: 2;
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
+    -webkit-transform: translateY(-2px);
+    transform: translateY(-2px);
   }
 
   a {
@@ -392,6 +412,10 @@ ul.social {
 
   a.sc-instagram {
     background-color: @instagram-bg-color;
+  }
+
+  a.sc-keybase {
+    background-color: @keybase-bg-color;
   }
 
   a.sc-pinterest {
@@ -430,7 +454,7 @@ ul.social {
     background-color: @github-bg-color;
   }
 
-  a.sc-envelope-o {
+  a.sc-envelope {
     background-color: @email-bg-color;
   }
 
@@ -450,6 +474,17 @@ ul.social {
     background-color: @xing-bg-color;
   }
 
+  a.sc-bitbucket {
+    background-color: @bitbucket-bg-color;
+  }
+
+  a.sc-mastodon {
+    background-color: @mastodon-bg-color;
+  }
+
+  a.sc-flickr {
+    background-color: @flickr-bg-color;
+  }
 }
 
 .ads-aside {
@@ -472,8 +507,8 @@ ul.social {
 
 @media screen and (min-width: 768px) {
   aside {
-    width: 25%;
-    height: 100%;
+    width: 25vw;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -498,16 +533,17 @@ ul.social {
   }
 
   main {
-    width: 75%;
-    height: 100%;
+    width: 75vw;
+    height: 100vh;
     position: absolute;
     top: 0;
-    left: 25%;
+    left: 25vw;
+    overflow-x: hidden;
 
     article {
 
       &.single {
-        min-height: 80%;
+        min-height: 80vh;
       }
 
       ul.list {

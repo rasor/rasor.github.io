@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
 
     <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
@@ -28,6 +30,7 @@
 <meta name="author" content="rasor" />
 <meta name="description" content="Vue Storefront will soon be out (june 2018). It is a PWA frontend to the Magento webshop. I think I&#39;ll give it a testdrive. I am attending a online marketing seminar and workshop presented by Thomas Zacchi (@tzacchi) from intoto digital, so I could use a modern webshop to play …" />
 <meta name="keywords" content="#vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm">
+
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Vue Storefront installation on Windows Dev box"/>
@@ -66,22 +69,47 @@
       <nav>
         <ul class="list">
 
-          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
-          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
-          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
-          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
-          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
-          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
       </ul>
     </div>
 
@@ -110,8 +138,8 @@
     <p>
           Posted on May 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
 
-          </br>
-            Updated: August 18, 2018
+      </br>
+        Updated: August 18, 2018
     </p>
   </header>
 
@@ -186,8 +214,8 @@ vue create my-30project
 </pre></div>
 
 
-<div class="highlight"><pre><span></span>1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro
-2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro
+<div class="highlight"><pre><span></span><span class="err">1. v2.9.3 [vue-cli](https://github.com/vuejs/vue-cli/tree/master) intro</span>
+<span class="err">2. v3.0. [@vue/cli](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md#introduction) intro</span>
 </pre></div>
 
 
@@ -327,11 +355,11 @@ docker container ls
 
 
 <p>Output: </p>
-<div class="highlight"><pre><span></span>CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                              NAMES
-fcd38fe4910e   kibana:5.5          &quot;/docker-entrypoint.…&quot;   2 hours ago   Up 2 hours   0.0.0.0:5601-&gt;5601/tcp             vue-storefront-api_kibana_1
-070f93cc3a08   redis               &quot;docker-entrypoint.s…&quot;   2 hours ago   Up 2 hours   0.0.0.0:6379-&gt;6379/tcp             vue-storefront-api_redis_1
-a3fec0cc4f2b   elasticsearch:5.5   &quot;/docker-entrypoint.…&quot;   2 hours ago   Up 2 hours   9200/tcp, 9300/tcp                 vue-storefront-api_es2_1
-56caf26862c4   elasticsearch:5.5   &quot;/docker-entrypoint.…&quot;   2 hours ago   Up 2 hours   0.0.0.0:9200-&gt;9200/tcp, 9300/tcp   es1
+<div class="highlight"><pre><span></span><span class="err">CONTAINER ID   IMAGE               COMMAND                  CREATED       STATUS       PORTS                              NAMES</span>
+<span class="err">fcd38fe4910e   kibana:5.5          &quot;/docker-entrypoint.…&quot;   2 hours ago   Up 2 hours   0.0.0.0:5601-&gt;5601/tcp             vue-storefront-api_kibana_1</span>
+<span class="err">070f93cc3a08   redis               &quot;docker-entrypoint.s…&quot;   2 hours ago   Up 2 hours   0.0.0.0:6379-&gt;6379/tcp             vue-storefront-api_redis_1</span>
+<span class="err">a3fec0cc4f2b   elasticsearch:5.5   &quot;/docker-entrypoint.…&quot;   2 hours ago   Up 2 hours   9200/tcp, 9300/tcp                 vue-storefront-api_es2_1</span>
+<span class="err">56caf26862c4   elasticsearch:5.5   &quot;/docker-entrypoint.…&quot;   2 hours ago   Up 2 hours   0.0.0.0:9200-&gt;9200/tcp, 9300/tcp   es1</span>
 </pre></div>
 
 
@@ -344,31 +372,31 @@ docker-compose stop
 
 
 <p>Output:</p>
-<div class="highlight"><pre><span></span>Stopping vue-storefront-api_kibana_1 ... done
-Stopping vue-storefront-api_redis_1  ... done
-Stopping vue-storefront-api_es2_1    ... done
-Stopping es1                         ... done
+<div class="highlight"><pre><span></span><span class="err">Stopping vue-storefront-api_kibana_1 ... done</span>
+<span class="err">Stopping vue-storefront-api_redis_1  ... done</span>
+<span class="err">Stopping vue-storefront-api_es2_1    ... done</span>
+<span class="err">Stopping es1                         ... done</span>
 </pre></div>
 
 
 <p>The CMD promt will display this, so you can close it.</p>
-<div class="highlight"><pre><span></span>redis_1   | 1:signal-handler (1526416098) Received SIGTERM scheduling shutdown...
-redis_1   | 1:M 15 May 20:28:18.957 # User requested shutdown...
-redis_1   | 1:M 15 May 20:28:19.142 * Saving the final RDB snapshot before exiting.
-es2_1     | [2018-05-15T20:28:19,274][INFO ][o.e.n.Node               ] [J8Lto-u] stopping ...
-es1       | [2018-05-15T20:28:19,271][INFO ][o.e.n.Node               ] [sH31WJW] stopping ...
-redis_1   | 1:M 15 May 20:28:19.306 * DB saved on disk
-redis_1   | 1:M 15 May 20:28:19.306 # Redis is now ready to exit, bye bye...
-es1       | [2018-05-15T20:28:19,444][INFO ][o.e.n.Node               ] [sH31WJW] stopped
-es1       | [2018-05-15T20:28:19,444][INFO ][o.e.n.Node               ] [sH31WJW] closing ...
-es2_1     | [2018-05-15T20:28:19,473][INFO ][o.e.n.Node               ] [J8Lto-u] stopped
-es2_1     | [2018-05-15T20:28:19,473][INFO ][o.e.n.Node               ] [J8Lto-u] closing ...
-es1       | [2018-05-15T20:28:19,509][INFO ][o.e.n.Node               ] [sH31WJW] closed
-es2_1     | [2018-05-15T20:28:19,509][INFO ][o.e.n.Node               ] [J8Lto-u] closed
-vue-storefront-api_es2_1 exited with code 143
-vue-storefront-api_redis_1 exited with code 0
-vue-storefront-api_kibana_1 exited with code 143
-es1 exited with code 143
+<div class="highlight"><pre><span></span><span class="n">redis_1</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="n">signal</span><span class="o">-</span><span class="n">handler</span><span class="w"> </span><span class="p">(</span><span class="mi">1526416098</span><span class="p">)</span><span class="w"> </span><span class="n">Received</span><span class="w"> </span><span class="n">SIGTERM</span><span class="w"> </span><span class="n">scheduling</span><span class="w"> </span><span class="k">shutdown</span><span class="p">...</span><span class="w"></span>
+<span class="n">redis_1</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="n">M</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="mi">20</span><span class="err">:</span><span class="mi">28</span><span class="err">:</span><span class="mf">18.957</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="k">User</span><span class="w"> </span><span class="n">requested</span><span class="w"> </span><span class="k">shutdown</span><span class="p">...</span><span class="w"></span>
+<span class="n">redis_1</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="n">M</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="mi">20</span><span class="err">:</span><span class="mi">28</span><span class="err">:</span><span class="mf">19.142</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Saving</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">final</span><span class="w"> </span><span class="n">RDB</span><span class="w"> </span><span class="n">snapshot</span><span class="w"> </span><span class="k">before</span><span class="w"> </span><span class="n">exiting</span><span class="p">.</span><span class="w"></span>
+<span class="n">es2_1</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,274</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">J8Lto-u</span><span class="o">]</span><span class="w"> </span><span class="n">stopping</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="n">es1</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,271</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">sH31WJW</span><span class="o">]</span><span class="w"> </span><span class="n">stopping</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="n">redis_1</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="n">M</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="mi">20</span><span class="err">:</span><span class="mi">28</span><span class="err">:</span><span class="mf">19.306</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">DB</span><span class="w"> </span><span class="n">saved</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="k">disk</span><span class="w"></span>
+<span class="n">redis_1</span><span class="w">   </span><span class="o">|</span><span class="w"> </span><span class="mi">1</span><span class="err">:</span><span class="n">M</span><span class="w"> </span><span class="mi">15</span><span class="w"> </span><span class="n">May</span><span class="w"> </span><span class="mi">20</span><span class="err">:</span><span class="mi">28</span><span class="err">:</span><span class="mf">19.306</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="n">Redis</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">ready</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">exit</span><span class="p">,</span><span class="w"> </span><span class="n">bye</span><span class="w"> </span><span class="n">bye</span><span class="p">...</span><span class="w"></span>
+<span class="n">es1</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,444</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">sH31WJW</span><span class="o">]</span><span class="w"> </span><span class="n">stopped</span><span class="w"></span>
+<span class="n">es1</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,444</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">sH31WJW</span><span class="o">]</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="n">es2_1</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,473</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">J8Lto-u</span><span class="o">]</span><span class="w"> </span><span class="n">stopped</span><span class="w"></span>
+<span class="n">es2_1</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,473</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">J8Lto-u</span><span class="o">]</span><span class="w"> </span><span class="n">closing</span><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="n">es1</span><span class="w">       </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,509</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">sH31WJW</span><span class="o">]</span><span class="w"> </span><span class="n">closed</span><span class="w"></span>
+<span class="n">es2_1</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="o">[</span><span class="n">2018-05-15T20:28:19,509</span><span class="o">][</span><span class="n">INFO </span><span class="o">][</span><span class="n">o.e.n.Node               </span><span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="n">J8Lto-u</span><span class="o">]</span><span class="w"> </span><span class="n">closed</span><span class="w"></span>
+<span class="n">vue</span><span class="o">-</span><span class="n">storefront</span><span class="o">-</span><span class="n">api_es2_1</span><span class="w"> </span><span class="n">exited</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="mi">143</span><span class="w"></span>
+<span class="n">vue</span><span class="o">-</span><span class="n">storefront</span><span class="o">-</span><span class="n">api_redis_1</span><span class="w"> </span><span class="n">exited</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="n">vue</span><span class="o">-</span><span class="n">storefront</span><span class="o">-</span><span class="n">api_kibana_1</span><span class="w"> </span><span class="n">exited</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="mi">143</span><span class="w"></span>
+<span class="n">es1</span><span class="w"> </span><span class="n">exited</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="mi">143</span><span class="w"></span>
 </pre></div>
 
 
@@ -480,7 +508,6 @@ You can put them in <code>\your-vue-root\</code> and just double-click on them t
 
 
 
-    <div class="addthis_relatedposts_inline">
 
 
 </article>
@@ -489,7 +516,7 @@ You can put them in <code>\your-vue-root\</code> and just double-click on them t
 <p>
   &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -497,7 +524,7 @@ You can put them in <code>\your-vue-root\</code> and just double-click on them t
     <img alt="Creative Commons License"
          title="Creative Commons License"
          style="border-width:0"
-         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
          width="80"
          height="15"/>
   </a>

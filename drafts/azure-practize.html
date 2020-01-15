@@ -1,0 +1,748 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Azure Practize Intro In this blog I am training for Azure certifications by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates. I setup devops envir on an Ubuntu Linux and create scripts for deploy ARM templates, so it becomes easy …" />
+<meta name="keywords" content="#azure, #cli, #ps1, #snapstore, #linux, #ssh, #azdevops, #git">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Azure Practize"/>
+<meta property="og:description" content="Azure Practize Intro In this blog I am training for Azure certifications by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates. I setup devops envir on an Ubuntu Linux and create scripts for deploy ARM templates, so it becomes easy …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/azure-practize.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#azure"/>
+<meta property="article:tag" content="#cli"/>
+<meta property="article:tag" content="#ps1"/>
+<meta property="article:tag" content="#snapstore"/>
+<meta property="article:tag" content="#linux"/>
+<meta property="article:tag" content="#ssh"/>
+<meta property="article:tag" content="#azdevops"/>
+<meta property="article:tag" content="#git"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Azure Practize</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="azure-practize">Azure Practize</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Azure Practize</h1>
+<h2>Intro</h2>
+<p>In this blog I am training for Azure certifications by going through howto deploy the basic resources in Azure through CLI (BASH and PS1) and through ARM templates.</p>
+<p>I setup devops envir on an <strong>Ubuntu Linux</strong> and create scripts for deploy ARM templates, so it becomes easy to build and tear-down training environments.</p>
+<p>Credits: Much of the learning comes from these sources
+* Online Course: <a href="https://training.azure-academy.com/dashboard">Azure Academy Dashboard</a> 
+    * <a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/">AZ-103.1 | Azure Administrator</a>
+    * <a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-400.3+2019_T1/course/">AZ-400.3 | Implementing Continuous Delivery</a>
+* Lab instructions: <a href="https://github.com/MicrosoftLearning">Microsoft Learning</a>
+    * <a href="https://github.com/MicrosoftLearning/AZ-103-MicrosoftAzureAdministrator">AZ-103-MicrosoftAzureAdministrator</a>
+* Live Action:
+    * The Cloud: <a href="https://portal.azure.com/#home">Microsoft Azure Portal</a>
+    * The CI/CD tool: <a href="https://dev.azure.com/">Azure DevOps Portal</a>
+        * <a href="https://marketplace.visualstudio.com/items?itemName=keesschollaart.arm-outputs">ARM Outputs</a>
+    * Visual Studio Code
+        * <a href="https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines">Azure Pipelines</a>
+        * <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github">GitHub Pull Requests</a>
+* Content templates:
+    * ARM template repo: <a href="https://github.com/Azure/azure-quickstart-templates">azure-quickstart-templates</a>
+    * <a href="https://azuredevopsdemogenerator.azurewebsites.net/">Azure DevOps Demo Generator</a>
+        * <a href="https://github.com/microsoft/TailwindTraders">microsoft/TailwindTraders</a>
+            * ---&gt; <a href="https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub">Integrating Azure DevOps</a>
+            * Setup environments with Deployment Slots: <a href="https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Modernizing%20.NET%20Apps#walkthrough-azure-app-service-features">Walkthrough: Azure App Service Features</a>
+        * <a href="https://github.com/microsoft/PartsUnlimited">microsoft/PartsUnlimited</a>
+        * NodeJs: <a href="https://github.com/microsoft/ContosoAir">microsoft/ContosoAir</a>
+ * Read:
+    * Learn: <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure">Microsoft Learn Azure</a>
+        * <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-portal">Azure Portal - Learn</a>
+        * <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-devops">Azure DevOps - Learn</a>
+    * Docs: 
+        * <a href="https://docs.microsoft.com/en-us/azure/index#pivot=products&amp;panel=all">Microsoft Azure Documentation</a>
+        * <a href="https://docs.microsoft.com/en-us/azure/devops/?view=azure-devops">Azure DevOps documentation</a></p>
+<h1>Azure Portal Home</h1>
+<p>In the Azure Portal I can quickly create a resource into an existing (or new) resource group, so I can export the ARM template and add it to my Infra-As-Code (IaC) git repo for easy reuse.</p>
+<ul>
+<li><a href="https://portal.azure.com/#home">Microsoft Azure</a><ul>
+<li><a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure&amp;resource_type=learning%20path">Learn Azure</a></li>
+<li><a href="https://portal.azure.com/#blade/Microsoft_Azure_Monitoring/AzureMonitoringBrowseBlade/overview">Monitor</a></li>
+<li><a href="https://portal.azure.com/#blade/Microsoft_Azure_Security/SecurityMenuBlade/0">Security Center</a></li>
+<li><a href="https://portal.azure.com/#blade/Microsoft_Azure_CostManagement/Menu/overview">Cost Management</a></li>
+</ul>
+</li>
+</ul>
+<h1>Azure Cloud Shell and Local CLIs</h1>
+<p>Sometimes you want to run a shell from a <strong>browser</strong> to avoid installing an azure shell locally.  </p>
+<p>When you want to use the cloud shell you need to create:
+* Resource Group
+    * Storage Account
+        * File Share</p>
+<h2>Local CLIs - Install on Linux</h2>
+<h3>BASH</h3>
+<p>On Ubuntu Linux you by default have a BASH CLI called terminal installed, but you need to install the <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest">Azure CLI</a>.<br>
+You can install it via <code>Snap Store</code>, but it did not work for me.  Instead you can use curl:</p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="c1"># Install Azure CLI</span>
+curl -sL https://aka.ms/InstallAzureCLIDeb <span class="p">|</span> sudo bash
+<span class="c1"># check if zure CLI is installed</span>
+az -v
+</pre></div>
+
+
+<h3>PS1</h3>
+<p>On Ubuntu Linux you don't have a PowerShell CLI. You can install it via the <a href="https://snapcraft.io/snap-store">Snap Store</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="c1"># Install snap store if you don&#39;t have it</span>
+sudo apt update
+sudo apt install snapd <span class="c1"># snapcraft daemon</span>
+sudo snap install snap-store <span class="c1"># GUI for above</span>
+</pre></div>
+
+
+<p>Now open <code>snapstore</code> app, search for <code>PowerShell</code> and install it.<br>
+Info: This will install <code>/snap/powershell/39/opt/powershell/pwsh</code>. We will later use it from within Visual Studio Code.  </p>
+<p>Up untill 2019 Azure was managed with module <code>AzureRM</code>. Now it is managed with module <code>az</code>. So now you can get the same features both in BASH and in PS1 (short for PowerShell).  </p>
+<p>Now open the <code>PowerShell</code> CLI (hiding in the Administration group of apps) and install the <code>az</code> module:</p>
+<div class="highlight"><pre><span></span><span class="c"># PS1</span>
+<span class="c"># Install Azure module</span>
+<span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">Az</span> <span class="n">-AllowClobber</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</pre></div>
+
+
+<h2>Other tools</h2>
+<p>From snap store do also install 
+* <code>Visual Studio Code</code> # PS1 Script editor and CLI
+    * Install plugins
+        * <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell">PowerShell</a> - Replaces <code>Powershell ISE</code>, which was suppurted before Powershell 6
+            * Installs:
+                * Powershell integrated Console. 
+                    * Open it with <code>Ctrl+shift+p "pow show"</code>. Opposed to other terminal windows there is only one instance of this running.
+                    * <code>$host</code> reveals it is called Visual Studio code host. 
+                * Powershell command explorer A list under Extensions in the left side.
+        * <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack">Azure Tools</a> - a collection of azure extensions - including <code>Azure CLI Tools</code>
+        * <a href="https://marketplace.visualstudio.com/items?itemName=Tyriar.shell-launcher">Shell launcher</a>
+            * Configure the launcher, so you can open PS1 shells within VS Code
+                * Create or open <code>~/.config/Code/User/keybindings.json</code>:<br>
+                (Ctrl+Shift+P) Preferences: Open Keyboard Shortcuts (JSON) 
+                * Add json in keybindings.json: <code>{"key": "ctrl+shift+t","command": "shellLauncher.launch"}</code>
+                * Create or open <code>~/.config/Code/User/settings.json</code>:<br>
+                (Ctrl+Shift+P) Preferences: Open Settings (JSON)
+                * Add json in settings.json:<br>
+<code>json
+                "shellLauncher.shells.linux": [
+                    {
+                    "shell": "pwsh",
+                    "label": "ps1 shell"
+                    },
+                    {
+                    "shell": "bash",
+                    "args": ["-l"],
+                    "label": "bash shell"
+                    }
+                ],
+                "terminal.explorerKind": "external"</code>
+            * Test the terminal:
+                * Open the CLI: <code>(ctrl+shift+t) ps1</code>. There can be multiple of this terminal
+                * Issue a cmd: <code>$host</code>. Reveals it is called ConsoleHost.
+    * Ref: <a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf">keyboard-shortcuts-linux</a>
+* <code>Microsoft Azure Storage Explorer</code></p>
+<h2>Docs and References</h2>
+<ul>
+<li>BASH: <a href="https://docs.microsoft.com/en-us/cli/azure/reference-index?view=azure-cli-latest">az</a><ul>
+<li>Source: <a href="https://github.com/Azure/azure-cli">Azure/azure-cli</a></li>
+</ul>
+</li>
+<li>PS1: <a href="hhttps://docs.microsoft.com/en-us/powershell/module/?view=azps-2.7.0">Az modules</a><ul>
+<li><a href="https://github.com/Azure/azure-powershell/blob/master/documentation/azure-powershell-modules.md">All az powershell modules</a></li>
+<li>Source: <a href="https://github.com/Azure/azure-powershell">Azure/azure-powershell</a></li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/">Other PS1 Modules</a></li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/powershellget/?view=powershell-6">PowerShellGet installs new modules</a>
+```ps1</li>
+</ul>
+<h1>Print installed modules</h1>
+<p>get-module</p>
+<h1>You might need to allow to fetch official modules</h1>
+<p>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned</p>
+<h1>Install module (e.g. Azure Stack)</h1>
+<p>install-module -name azs -allowclobber</p>
+<h1>load module</h1>
+<p>Import-Module -Name azs
+```</p>
+</li>
+</ul>
+<h2>Login and Select Subscription</h2>
+<p>When running from local CLI, then you'll have to select <strong>current subscription</strong>:</p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+az -v
+<span class="c1"># azure-cli                         2.0.74</span>
+
+<span class="c1"># login</span>
+az login
+<span class="c1"># Change to wanted subscription</span>
+az account list
+az account <span class="nb">set</span> -s <span class="s2">&quot;some subscription name&quot;</span>
+<span class="c1"># show current</span>
+az account show
+az <span class="nb">logout</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c"># PS1 login</span>
+<span class="nb">connect-azaccount</span>
+<span class="c"># Change to wanted subscription</span>
+<span class="nb">Get-AzSubscription</span>
+<span class="nb">Get-AzContext</span> <span class="n">-ListAvailable</span> <span class="c">#subset of above</span>
+<span class="nb">set-azcontext</span> <span class="n">-subscriptionname</span> <span class="s2">&quot;some subscription name&quot;</span>
+<span class="c"># show current</span>
+<span class="nb">Get-AzContext</span>
+<span class="nb">disconnect-azaccount</span>
+</pre></div>
+
+
+<h2>Get help from CLI</h2>
+<p><a href="https://github.com/Azure/azure-cli/blob/dev/doc/use_cli_effectively.md">Tips for using Azure CLI effectively</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="c1"># Structure</span>
+<span class="c1"># az [ group ] [ subgroup ] [ command ] {parameters}</span>
+<span class="c1"># List all commands</span>
+az -h
+<span class="c1"># find a command</span>
+az find blob
+<span class="c1"># View group help</span>
+az vm -h
+<span class="c1"># View command help</span>
+az vm create -h
+<span class="c1"># looking up resource group and name</span>
+az vm show -g <span class="o">[</span>tab<span class="o">][</span>tab<span class="o">]</span>
+<span class="c1"># AccountingGroup   RGOne  WebPropertiesRG</span>
+az vm show -g WebPropertiesRG -n <span class="o">[</span>tab<span class="o">][</span>tab<span class="o">]</span>
+<span class="c1"># StoreVM  Bizlogic</span>
+az vm show -g WebPropertiesRG -n Bizlogic
+az vm list --output table <span class="c1"># {json,jsonc,table,tsv,yaml,none}</span>
+<span class="c1"># Using jq</span>
+az vm list --output jsonc <span class="p">|</span> jpterm
+<span class="c1"># filter with http://jmespath.org/</span>
+az vm list --query <span class="s2">&quot;[?provisioningState==&#39;Succeeded&#39;].{ name: name, os: storageProfile.osDisk.osType }&quot;</span>
+<span class="c1"># Name                    Os</span>
+<span class="c1"># ----------------------  -------</span>
+<span class="c1"># storevm                 Linux</span>
+<span class="c1"># bizlogic                Linux</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c"># PS1</span>
+<span class="c"># List all az commands in currently installed az. modules</span>
+<span class="nb">Get-Help</span> <span class="s1">&#39;-az&#39;</span>
+<span class="c"># List all cmdlets containing account in name</span>
+<span class="nb">Get-Help</span> <span class="n">account</span>
+<span class="c"># List currently installed modules</span>
+<span class="nb">Get-Module</span>
+<span class="c"># List all cmdlets in the Az.Accounts module</span>
+<span class="nb">Get-Command</span> <span class="n">-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Accounts</span>
+<span class="c"># List all cmdlets that contain VirtualNetwork</span>
+<span class="nb">Get-Command</span> <span class="n">-Name</span> <span class="s1">&#39;*VirtualNetwork*&#39;</span>
+<span class="c"># List all cmdlets that contain VM in the Az.Compute module</span>
+<span class="nb">Get-Command</span> <span class="n">-Module</span> <span class="n">Az</span><span class="p">.</span><span class="n">Compute</span> <span class="n">-Name</span> <span class="s1">&#39;*VM*&#39;</span>
+<span class="c"># View the basic help content for Get-AzSubscription</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="nb">Get-AzSubscription</span>
+<span class="c"># View the examples for Get-AzSubscription</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="nb">Get-AzSubscription</span> <span class="n">-Examples</span>
+<span class="c"># View the full help content for Get-AzSubscription</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="nb">Get-AzSubscription</span> <span class="n">-Full</span>
+<span class="c"># View the help content for Get-AzSubscription on https://docs.microsoft.com</span>
+<span class="nb">Get-Help</span> <span class="n">-Name</span> <span class="nb">Get-AzSubscription</span> <span class="n">-Online</span>
+</pre></div>
+
+
+<h2>Resource Groups and ARM templates</h2>
+<p>Study:
+* <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-resource-manager">Learn</a>
+* <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/">Docs</a>
+* <a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/#block-v1:FP+AZ-103.1+2019_T3+type@sequential+block@d14c5e7b-2617-7a76-c09d-cde3c1584c9d">Course | AZ-103.1 | AzureAcademy - Resource Manager</a></p>
+<p>Resource Group Tips:
+* Administrate via <strong>Portal, BASH, PS1, SDK or REST API</strong>
+    * New features: Max <strong>180 days</strong> from API to Portal
+    * API is provided by <strong>resource provider</strong>s - i.e. Microsoft.Storage providing storage accounts
+        * A resource <strong>provider</strong> delivers many resource <strong>types</strong>
+        * Format: {resource-provider}/{resource-type}
+        * Example: Microsoft.KeyVault/vaults
+        * A resource-type needs valid API version and locations
+* Use <strong>ARM</strong> templates for <strong>deploy</strong>
+    * Use <strong>same ARM template</strong> for different <strong>environments</strong>
+    * Link or nest templates for only having one place to change a set of resources using <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-linked-templates">linked or nested templates</a>
+        * Nested templates are within parent
+        * Linked templates are external templates outside parent
+    * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems) having <strong>dependent resources</strong>
+* Use <strong>CLI</strong> terminals (<strong>BASH or PS1</strong>) for <strong>manage</strong> (start, stop, delete, etc)
+    * Delete group, when not used
+* <strong>Deploy, upgrade, manage, delete, apply-RBAC-to, tag, monitor</strong> resources as a <strong>single entity</strong>
+    * View <strong>billing</strong> based on resourses with same <strong>tag</strong>
+    * View <strong>systems</strong> based on resourses with same <strong>tag</strong>
+    * View <strong>infra</strong> based on resourses with same <strong>tag</strong>
+    * Create <strong>resource groups</strong> based on these (tag-)groupings, which also separates <strong>lifecycle</strong>s
+* Resource <strong>Groups</strong>:
+    * cannot share same resource
+    * cannot be renamed
+    * can span regions
+    * can scope RBAC
+    * needs a location (region) for storing their metadata - though its resources can be in different regions
+    * can <strong>move</strong> its <strong>resources</strong> to other <strong>groups</strong> - even in other <strong>subscriptions</strong>
+        * <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources#services-that-can-be-moved">Guide</a>
+        * Some <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/move-support-resources">services can't be moved</a>
+        * Both <strong>groups</strong> will be <strong>locked</strong> until move completes, but resources will not be down
+        * Both <strong>subscriptions</strong> 
+            * must be <strong>active</strong>
+            * must have <strong>same Azure AD tenant ID</strong>
+        * Target <strong>subscription</strong> 
+            * must have the <strong>provider registered</strong>
+            * must be within <a href="https://docs.microsoft.com/en-us/azure/azure-subscription-service-limits">limits and quotas</a>
+        * Minimum <strong>permissions</strong> needed: <strong>RG write</strong> and <strong>RG mmoveResources</strong>
+        * When moving across subscriptions:<br>
+<strong>Dependent resources</strong> must be moved together with wanted resource to move <br>
+* <strong>Resources</strong>
+    * can interact with resources in other groups
+* Resource Manager <strong>Settings</strong>:
+    * <strong>Locks</strong>:
+        * To avoid accidental deletion
+        * Apply on level
+            * Subscription
+                * Resource Group or
+                    * Resource
+        * Are inherited by child resources
+        * Apply by <strong>Owner</strong>s or <strong>User Access Admin</strong>s
+    * Tags
+    * Users
+    * Automation scripts</p>
+<h3>Creating Resource Groups</h3>
+<p>Guide: <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli">Deploy resources with Azure CLI and template</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="c1"># Create Resource Group</span>
+az group create --name ExampleGroup --location <span class="s2">&quot;Central US&quot;</span>
+<span class="c1"># Deploy resources via ARM template</span>
+az group deployment create <span class="se">\</span>
+  --name ExampleDeployment <span class="se">\</span>
+  --resource-group ExampleGroup <span class="se">\</span>
+  --template-file storage.json <span class="se">\</span>
+  --parameters <span class="nv">storageAccountType</span><span class="o">=</span>Standard_GRS
+<span class="c1"># print</span>
+az group list <span class="c1"># all yours - default: json format</span>
+az group list --output table <span class="c1"># {json,jsonc,table,tsv,yaml,none}</span>
+az group list --output yaml <span class="c1"># cool - converting json to yaml</span>
+<span class="c1"># filter with http://jmespath.org/</span>
+az group list --query <span class="s2">&quot;[?location == &#39;westeurope&#39;]&quot;</span>
+az group list --query <span class="s2">&quot;[].name[?contains(@,&#39;Exa&#39;)==&#39;true&#39;]&quot;</span> <span class="c1"># hmm - contains not working on my pc - am I missing a pip install or npm install?</span>
+az group show -n ExampleGroup
+<span class="c1"># Cleanup - careful - there might be dependent resources in the group</span>
+az group delete -n ExampleGroup 
+</pre></div>
+
+
+<p>Guide: <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy">Deploy resources with PowerShell and template</a></p>
+<div class="highlight"><pre><span></span><span class="c"># PS1</span>
+<span class="nv">$resourceGroupName</span> <span class="p">=</span> <span class="nb">Read-Host</span> <span class="n">-Prompt</span> <span class="s2">&quot;Enter the Resource Group name (i.e &#39;rg-envirname-infracontainer-or-systemname&#39;)&quot;</span> 
+<span class="nv">$location</span> <span class="p">=</span> <span class="nb">Read-Host</span> <span class="n">-Prompt</span> <span class="s2">&quot;Enter the location (i.e. centralus or westeurope)&quot;</span>
+<span class="c"># Create Resource Group</span>
+<span class="nb">New-AzResourceGroup</span> <span class="n">-Name</span> <span class="nv">$resourceGroupName</span> <span class="n">-Location</span> <span class="nv">$location</span>
+<span class="c"># Deploy resources via ARM template</span>
+<span class="nb">New-AzResourceGroupDeployment</span> <span class="n">-ResourceGroupName</span> <span class="nv">$resourceGroupName</span> <span class="p">`</span>
+  <span class="n">-TemplateFile</span> <span class="n">c</span><span class="err">:</span><span class="p">\</span><span class="n">MyTemplates</span><span class="p">\</span><span class="n">azuredeploy</span><span class="p">.</span><span class="n">json</span>
+<span class="c"># print</span>
+<span class="nb">Get-AzResourceGroup</span> <span class="c"># all yours</span>
+<span class="nb">Get-AzResourceGroup</span> <span class="nv">$resourceGroupName</span>
+<span class="c"># Cleanup - careful - there might be dependent resources in the group</span>
+<span class="nb">Remove-AzResourceGroup</span> <span class="nv">$resourceGroupName</span>
+</pre></div>
+
+
+<h3>Creating ARM templates</h3>
+<p>References:
+* <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates">ARM template structure and syntax</a>
+* <a href="https://azure.microsoft.com/en-us/resources/templates/">Azure Quickstart Templates</a></p>
+<p>You create some PS1 or BASH scripts in <a href="#Using-Azure-DevOps">Azure DevOps</a> together with your ARM templates and deploy your resources from them.</p>
+<h3>Lock Resources</h3>
+<p>Guide: <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources">Lock Azure resources to prevent changes</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="c1"># Lock resource and print</span>
+az lock create --name LockSite --lock-type CanNotDelete --resource-group exampleresourcegroup --resource-name examplesite --resource-type Microsoft.Web/sites
+az lock list --resource-group exampleresourcegroup --resource-name examplesite --namespace Microsoft.Web --resource-type sites --parent <span class="s2">&quot;&quot;</span>
+<span class="c1"># Lock resource group and print</span>
+az lock create --name LockGroup --lock-type CanNotDelete --resource-group exampleresourcegroup
+az lock list --resource-group exampleresourcegroup
+<span class="c1"># Print all</span>
+az lock list
+<span class="c1"># Remove</span>
+<span class="nv">lockid</span><span class="o">=</span><span class="k">$(</span>az lock show --name LockSite --resource-group exampleresourcegroup --resource-type Microsoft.Web/sites --resource-name examplesite --output tsv --query id<span class="k">)</span>
+az lock delete --ids <span class="nv">$lockid</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c"># PS1</span>
+<span class="c"># Lock resource and print</span>
+<span class="nb">New-AzResourceLock</span> <span class="n">-LockLevel</span> <span class="n">CanNotDelete</span> <span class="n">-LockName</span> <span class="n">LockSite</span> <span class="n">-ResourceName</span> <span class="n">examplesite</span> <span class="n">-ResourceType</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Web</span><span class="p">/</span><span class="n">sites</span> <span class="n">-ResourceGroupName</span> <span class="n">exampleresourcegroup</span>
+<span class="nb">Get-AzResourceLock</span> <span class="n">-ResourceName</span> <span class="n">examplesite</span> <span class="n">-ResourceType</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Web</span><span class="p">/</span><span class="n">sites</span> <span class="n">-ResourceGroupName</span> <span class="n">exampleresourcegroup</span>
+<span class="c"># Lock resource group and print</span>
+<span class="nb">New-AzResourceLock</span> <span class="n">-LockName</span> <span class="n">LockGroup</span> <span class="n">-LockLevel</span> <span class="n">CanNotDelete</span> <span class="n">-ResourceGroupName</span> <span class="n">exampleresourcegroup</span>
+<span class="nb">Get-AzResourceLock</span> <span class="n">-ResourceGroupName</span> <span class="n">exampleresourcegroup</span>
+<span class="c"># Print all</span>
+<span class="nb">Get-AzResourceLock</span>
+<span class="c"># Remove</span>
+<span class="nv">$lockId</span> <span class="p">=</span> <span class="p">(</span><span class="nb">Get-AzResourceLock</span> <span class="n">-ResourceGroupName</span> <span class="n">exampleresourcegroup</span> <span class="n">-ResourceName</span> <span class="n">examplesite</span> <span class="n">-ResourceType</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Web</span><span class="p">/</span><span class="n">sites</span><span class="p">).</span><span class="n">LockId</span>
+<span class="nb">Remove-AzResourceLock</span> <span class="n">-LockId</span> <span class="nv">$lockId</span>
+</pre></div>
+
+
+<h3>Move Resources</h3>
+<p><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources#services-that-can-be-moved">Guide</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="c1"># AAD Tenant in both subscriptions must match</span>
+az account show --subscription &lt;your-source-subscription&gt; --query tenantId
+<span class="c1"># Register provider in target subscription</span>
+az provider list --query <span class="s2">&quot;[].{Provider:namespace, Status:registrationState}&quot;</span> --out table
+az provider register --namespace Microsoft.Batch
+<span class="c1"># Move</span>
+<span class="nv">webapp</span><span class="o">=</span><span class="k">$(</span>az resource show -g OldRG -n ExampleSite --resource-type <span class="s2">&quot;Microsoft.Web/sites&quot;</span> --query id --output tsv<span class="k">)</span>
+<span class="nv">plan</span><span class="o">=</span><span class="k">$(</span>az resource show -g OldRG -n ExamplePlan --resource-type <span class="s2">&quot;Microsoft.Web/serverfarms&quot;</span> --query id --output tsv<span class="k">)</span>
+az resource move --destination-group newgroup --ids <span class="nv">$webapp</span> <span class="nv">$plan</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c"># PS1</span>
+<span class="c"># AAD Tenant in both subscriptions must match</span>
+<span class="p">(</span><span class="nb">Get-AzSubscription</span> <span class="n">-SubscriptionName</span> <span class="p">&lt;</span><span class="n">your-source-subscription</span><span class="p">&gt;).</span><span class="n">TenantId</span>
+<span class="c"># Register provider in target subscription</span>
+<span class="nb">Get-AzResourceProvider</span> <span class="n">-ListAvailable</span> <span class="p">|</span> <span class="nb">Select-Object</span> <span class="n">ProviderNamespace</span><span class="p">,</span> <span class="n">RegistrationState</span>
+<span class="nb">Register-AzResourceProvider</span> <span class="n">-ProviderNamespace</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">Batch</span>
+<span class="c"># Move</span>
+<span class="nv">$webapp</span> <span class="p">=</span> <span class="nb">Get-AzResource</span> <span class="n">-ResourceGroupName</span> <span class="n">OldRG</span> <span class="n">-ResourceName</span> <span class="n">ExampleSite</span>
+<span class="nv">$plan</span> <span class="p">=</span> <span class="nb">Get-AzResource</span> <span class="n">-ResourceGroupName</span> <span class="n">OldRG</span> <span class="n">-ResourceName</span> <span class="n">ExamplePlan</span>
+<span class="nb">Move-AzResource</span> <span class="n">-DestinationResourceGroupName</span> <span class="n">NewRG</span> <span class="n">-ResourceId</span> <span class="nv">$webapp</span><span class="p">.</span><span class="n">ResourceId</span><span class="p">,</span> <span class="nv">$plan</span><span class="p">.</span><span class="n">ResourceId</span>
+</pre></div>
+
+
+<p>Dependent resources must be moved together, when moving across subscriptions<br>
+<img alt="Move in 3 steps" src="https://docs.microsoft.com/en-us/azure/azure-resource-manager/media/resource-group-move-resources/cross-subscription-move-scenario.png"><br>
+(Image @Microsoft)</p>
+<h2>Azure networks</h2>
+<p>Study:
+* <a href="https://docs.microsoft.com/en-us/learn/browse/?products=azure-virtual-network">Learn</a>
+* Docs: <a href="https://docs.microsoft.com/en-us/azure/networking/networking-overview">Azure networking</a>
+* Docs: <a href="https://docs.microsoft.com/en-us/azure/virtual-network/">VNets</a>
+* <a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-103.1+2019_T3/course/#block-v1:FP+AZ-103.1+2019_T3+type@sequential+block@d74bdc62-11d1-d8bc-8ec0-b20f1110b85e">Course | AZ-103.1 | AzureAcademy - Virtual Networks</a></p>
+<p>Tips:
+* VNets:
+    * Create <strong>public subnet</strong> for your DMZ in Azure and a <strong>private subnet</strong> for your intranet. Put both in one <strong>VNet</strong>.
+        * You can also create a subnet for a VPN Gateway to your onprem network
+    * Subnet <strong>ranges</strong> are defined in <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR blocks</a>.<br>
+    Example: 10.10.1.64/27 (32-27=5 bits = 32 IPs for a subnet starting with IP 10.10.1.64)<br>
+        * <a href="https://www.ipaddressguide.com/cidr">CIDR to IPv4 Address Range Utility Tool | IPAddressGuide</a>
+        * <strong>4 IPs are reserved</strong> by Azure in <strong>each subnet</strong> (3 in beginning + 1 in end)
+        * Don't reuse a range (both onprem and VNet), that is already used by your organization.
+    * Default Max 50 VNets / subscription / region. Can be increased to 500.
+    * Use <a href="https://docs.microsoft.com/en-us/azure/networking/networking-overview#bastion">Bastion server</a> if you need RDP to VMs without public IP
+    * Use <a href="https://docs.microsoft.com/en-us/azure/networking/networking-overview#serviceendpoints">Service endpoints</a> for connection your subnet to SaaS resources like Azure SQL and storage. This limits access to the resources.
+    * Optional: Protect each subnet with a firewall called <strong>NSG</strong> (Network Security Group)</p>
+<p>Bastion server:<br>
+<img alt="Bastion server" src="https://docs.microsoft.com/en-us/azure/networking/media/networking-overview/architecture.png"><br>
+(Image @Microsoft)</p>
+<p>Service endpoint:<br>
+<img alt="Service endpoint" src="https://docs.microsoft.com/en-us/azure/networking/media/networking-overview/vnet-service-endpoints-overview.png"><br>
+(Image @Microsoft)</p>
+<p>VPN to OnPrem:<br>
+<img alt="VPN to OnPrem" src="https://docs.microsoft.com/en-us/azure/networking/media/networking-overview/vpngateway-multisite-connection-diagram.png"><br>
+(Image @Microsoft)</p>
+<hr>
+<h1>Using Azure DevOps</h1>
+<p>Refs:
+* Portal: <a href="https://dev.azure.com/">Azure DevOps</a></p>
+<h2>Intro</h2>
+<p>It was previously called VSTS and Visual Studio online before that.<br>
+In relation to Azure Resources we want to use DevOps for storing version controlled ARM templates and their deployment pipeline as well.</p>
+<p>Starting out simple we can have a PS1 script called <code>create-envir.ps1</code> for deployment.<br>
+It takes a parameter (-envir:t) for telling whether we want to deploy to test (t) or to prod (p).<br>
+The script will be stored in a git-repo called <code>IaC</code>.<br>
+It will 
+* Select subscription
+* Create resource group 
+* Deploy ARM template(s)</p>
+<p>It also takes a parameter (-delete:$false), so you can use the script to delete the resource group, when done.  </p>
+<h2>Enable connect from VSCode to AzDevOps repo</h2>
+<p>I prefer to use SSH keys for authetication from editor (VSCode) to git-repo (Azure DevOps).<br>
+You need to create a SSH public key and upload it to Azure DevOps - Guide: <a href="https://docs.microsoft.com/en-us/azure/devops/repos/git/use-ssh-keys-to-authenticate?view=azure-devops">Connect to your Git repos with SSH - Azure Repos</a></p>
+<p>After you have created a SSH key pair into <code>~/.ssh/</code> (or you might want to reuse an existing pair)<br>
+then upload the SSH public key to your AzDevOps account:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Using Linux:</span>
+<span class="c1"># Copy the contents of the id_rsa_youruserid_github.pub file to your clipboard</span>
+xclip -sel clip &lt; ~/.ssh/id_rsa_youruserid_github.pub
+</pre></div>
+
+
+<ul>
+<li>Goto <a href="https://dev.azure.com/youruserid/_usersSettings/keys">https://dev.azure.com/ryouruserid/_usersSettings/keys</a></li>
+<li>Add SSH key</li>
+<li>Paste key: Ctrl-V</li>
+<li>Title: vscode_youruserid_github</li>
+<li>Save key</li>
+</ul>
+<p>You also need to save AzDevOps url to <a href="https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass">~/.ssh/known_hosts</a>:
+<code>ssh-keyscan -t rsa ssh.dev.azure.com &gt;&gt; ~/.ssh/known_hosts</code></p>
+<h2>First push to AzDevOps repo</h2>
+<p>Now create a repo at AzDevOps - mine is called <code>iac-01</code>.<br>
+Then clone the repo to your local PC: </p>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+<span class="nb">cd</span> ~/some-project-dir
+git clone git@ssh.dev.azure.com:v3/ryouruserid/iac-01/iac-01
+<span class="nb">cd</span> iac-01
+<span class="c1"># Print remote url</span>
+git remote -v
+<span class="c1"># create a file</span>
+touch README.md
+<span class="c1"># start VSCode</span>
+code .
+</pre></div>
+
+
+<p>Now add some text into README.md and use VSCode for commit and push the code to AzDevOps.  </p>
+<p>Later: Create the PS1 script....</p>
+<hr>
+<h1>Azure DevOps Demo Generator</h1>
+<h2>Intro</h2>
+<p>To get a head start with <strong>Azure DevOps</strong>, then we in this section will use <strong>Azure DevOps Demo Generator</strong> to fork a Github demo web project which we can create a full CI/CD pipeline towards <strong>Azure</strong></p>
+<p>I was evaluating two projects, which both can be created using <strong>Azure DevOps Demo Generator</strong>:</p>
+<p>Code Projects including deploy scripts:
+* Modern: 
+    * Guide: <a href="https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub">microsoft/TailwindTraders</a>
+        * MS Teams integration
+            * Connector: Azure DevOps:
+                * Guide: <a href="https://azuredevopslabs.com/labs/vstsextend/teams/#integrating-microsoft-teams-with-azure-devops-services">Integrating Microsoft Teams with Azure DevOps Services</a>
+                * Guide: <a href="https://docs.microsoft.com/en-us/azure/devops/service-hooks/services/teams?view=azure-devops">Create a service hook for Azure DevOps Services and TFS with Microsoft Teams</a>
+                * Azure DevOps connector not available in Teams Free edistion! <a href="https://developercommunity.visualstudio.com/content/problem/420390/devops-connector-and-visual-studio-app-is-missing.html">DevOps Connector and Visual Studio app is missing. - Developer Community</a>
+            * App: Azure Boards
+                * <a href="https://docs.microsoft.com/en-us/azure/devops/boards/integrations/boards-teams?view=azure-devops">Azure Boards with Microsoft Teams - Azure Boards</a>
+                * <a href="https://azuredevopslabs.com/labs/vstsextend/teams/#azure-devops-kanban-board--dashboards-in-teams">Microsoft Teams with Azure DevOps Services (Collaborate, Communicate and Celebrate)</a>
+            * App: Azure Repos
+                * <a href="https://docs.microsoft.com/en-us/azure/devops/repos/integrations/repos-teams?view=azure-devops">Azure Repos with Microsoft Teams - Azure Repos</a>
+            * App: Azure Pipelines
+                * <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/integrations/microsoft-teams?view=azure-devops">Azure Pipelines with Microsoft Teams - Azure Pipelines</a>
+                * <a href="https://azuredevopslabs.com/labs/vstsextend/teams/#azure-pipelines-with-microsoft-teams">Microsoft Teams with Azure DevOps Services (Collaborate, Communicate and Celebrate)</a>
+    * Frontend Code <a href="https://github.com/microsoft/TailwindTraders-Website/blob/master/Deploy/DeployWebAKS.ps1">TailwindTraders-Website</a>
+    * Backend Code <a href="https://github.com/microsoft/TailwindTraders-Backend/tree/master/Deploy">TailwindTraders-Backend</a>
+* 3y old: 
+    * Guide: <a href="https://training.azure-academy.com/courses/course-v1:FP+AZ-400.3+2019_T1/courseware/083e1ae3-93c7-1f72-6306-1765a78799e4/649fcbb5-9ffd-8340-28fb-ffd7acdf7aa2/1?activate_block_id=block-v1%3AFP%2BAZ-400.3%2B2019_T1%2Btype%40vertical%2Bblock%40cc9d8629-1a01-32f3-c599-647e806bdf90">Introduction to Auto-assembly usage - Lab</a>
+    * Code: <a href="https://github.com/microsoft/PartsUnlimited/tree/master/env">microsoft/PartsUnlimited</a></p>
+<p>Needless to say that I continued with the modern one - TailwindTraders.  </p>
+<h2>Implement TailwindTraders DevOps integration</h2>
+<p>The integration process is described in guide: <a href="https://github.com/microsoft/TailwindTraders/tree/master/Documents/DemoScripts/Integrating%20Azure%20DevOps%2C%20Microsoft%20Teams%20and%20GitHub">Integrating Azure DevOps, Microsoft Teams and GitHub</a>.<br>
+I have used a <strong>personal (MSDN) account</strong>, since with my enterprise account I don't have permissions to create DevOps projects, which is needed by the Demo Generator.<br>
+But using pesonal account means you cannot connect to MS Teams, since <strong>Azure DevOps connector</strong> (in MS Teams) requires
+* Non-free MS Teams (O365) account
+* DevOps and MS Teams accounts must be in same AAD tenant (same org)</p>
+<p>Prerequisites:
+* Accounts
+    * Github account
+    * Azure account
+    * Azure Devops account
+* SW
+    * VS Code
+        * <a href="https://marketplace.visualstudio.com/items?itemName=ms-azure-devops.azure-pipelines">Azure Pipelines</a>
+        * <a href="https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github">GitHub Pull Requests</a>
+    * Git</p>
+<h3>Prefill an Azure DevOps project</h3>
+<p>Using Azure DevOps Demo Generator you can prefill an Azure DevOps project, so you can get to know what you get OOTB (out of the box).  </p>
+<p>Steps:
+* Open the <a href="https://azuredevopsdemogenerator.azurewebsites.net/?name=tailwindtraders">Azure DevOps Demo Generator webapp</a>
+* Login to Azure Devops and select an organization
+* Give this new project a name. I gave mine the name <code>TailwindForkedMsDemo</code>.
+* Select the template <code>Tailwind Traders</code>
+* Select option <code>Yes, I want to fork</code>. With this option the webapp will fork the two github repos for Tailwind Traders to your own github account. This enables you to make changes to the code, which will trigger a build in Azure DevOps
+    * <a href="https://github.com/microsoft/TailwindTraders-Website">TailwindTraders-Website</a> and
+    * <a href="https://github.com/microsoft/TailwindTraders-Backend">TailwindTraders-Backend</a> 
+* Go ahead and press <code>Create Project</code></p>
+<p>You should now have personal forks of the Github repos and an Azure DevOps projects, that </p>
+<hr>
+<div class="highlight"><pre><span></span><span class="c1"># BASH</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c"># PS1</span>
+</pre></div>
+
+
+<hr>
+<h1>Links</h1>
+<ul>
+<li>My old blogs<ul>
+<li><a href="https://rasor.github.io/azure-fundamentals-course-107979f.html">Azure Fundamentals Course 107979F</a></li>
+<li><a href="https://rasor.github.io/microsoft-architecture-and-implementations.html">Microsoft Architecture and Implementations</a></li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/azure.html">#azure</a>
+      <a href="https://rasor.github.io/tag/cli.html">#cli</a>
+      <a href="https://rasor.github.io/tag/ps1.html">#ps1</a>
+      <a href="https://rasor.github.io/tag/snapstore.html">#snapstore</a>
+      <a href="https://rasor.github.io/tag/linux.html">#linux</a>
+      <a href="https://rasor.github.io/tag/ssh.html">#ssh</a>
+      <a href="https://rasor.github.io/tag/azdevops.html">#azdevops</a>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Hackathons 2019-11: Honeycomb Smart Contract Hackathon Rules: Honeycomb Smart Contract Hackathon Hackathon Questions: Honeycomb Marketplace Discord Discord Other Questions: Honeycomb Telegram Other Chainlink hackathons: Exploring the Wide Variety of Winning Chainlink Applications About Chainlink and Hoenycomb: Docs: What is Chainlink? Welcome to Chainlink Architecture Overview Chainlink External Adapters Explained What …" />
+<meta name="keywords" content="#blockchain, #chainlink, #api, #hackathon, #honeycomb">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Chain 2 API - Chainlink"/>
+<meta property="og:description" content="Hackathons 2019-11: Honeycomb Smart Contract Hackathon Rules: Honeycomb Smart Contract Hackathon Hackathon Questions: Honeycomb Marketplace Discord Discord Other Questions: Honeycomb Telegram Other Chainlink hackathons: Exploring the Wide Variety of Winning Chainlink Applications About Chainlink and Hoenycomb: Docs: What is Chainlink? Welcome to Chainlink Architecture Overview Chainlink External Adapters Explained What …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/chain-2-api-chainlink.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#blockchain"/>
+<meta property="article:tag" content="#chainlink"/>
+<meta property="article:tag" content="#api"/>
+<meta property="article:tag" content="#hackathon"/>
+<meta property="article:tag" content="#honeycomb"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Chain 2 API - Chainlink</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="chain-2-api-chainlink">Chain 2 API - Chainlink</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>Hackathons<ul>
+<li>2019-11: <a href="https://honeycomb.devpost.com/">Honeycomb Smart Contract Hackathon</a><ul>
+<li>Rules: <a href="https://honeycomb.devpost.com/rules">Honeycomb Smart Contract Hackathon</a></li>
+<li>Hackathon Questions: <a href="https://discordapp.com/invite/NgKdSv4">Honeycomb Marketplace Discord Discord</a></li>
+<li>Other Questions: <a href="https://t.me/clcgio">Honeycomb Telegram</a></li>
+</ul>
+</li>
+<li>Other Chainlink hackathons:<ul>
+<li><a href="https://blog.chain.link/exploring-the-wide-variety-of-winning-chainlink-applications-from-recent-hackathons/">Exploring the Wide Variety of Winning Chainlink Applications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>About Chainlink and Hoenycomb:<ul>
+<li>Docs: <ul>
+<li>What is Chainlink? <a href="https://docs.chain.link/docs">Welcome to Chainlink</a></li>
+<li><a href="https://docs.chain.link/docs/architecture-overview">Architecture Overview</a></li>
+<li><a href="https://blog.chain.link/chainlink-external-adapters-explained/">Chainlink External Adapters Explained</a></li>
+<li>What is Hoenycomb? <a href="https://medium.com/clc-group/honeycomb-joins-the-chainlink-reference-data-contract-45b873576010">Honeycomb Joins the Chainlink Reference Data Contract</a><ul>
+<li>Honeycomb API Marketplace provides <strong>per call priced premium API data</strong> to smart contract developers <strong>over the Chainlink network</strong>. We <strong>serve this data over a number of Chainlink nodes</strong> connected to a large number of <strong>external adapters</strong> </li>
+</ul>
+</li>
+<li>Why Chainlink? <a href="https://medium.com/clc-group/honeycomb-joins-the-chainlink-reference-data-contract-45b873576010">Honeycomb Joins the Chainlink Reference Data Contract</a>  <ul>
+<li>Aggregation of multiple APIs into a single deterministic answer</li>
+<li>Put trust on Oracles (e.g. Honeycomb) - not on API (transport)<ul>
+<li>Provides highly secure and reliable oracles to large enterprises (Google, Oracle and SWIFT)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Honeycomb Services: <a href="https://www.clcg.io/">Home - CLC Group</a><ul>
+<li><a href="https://www.clcg.io/honeycomb/">Honeycomb - CLC Group</a></li>
+<li>-&gt; Login: <a href="https://honeycomb.market/">Honeycomb</a><ul>
+<li><a href="https://developer.honeycomb.market/browse-apis">API Marketplace</a></li>
+<li><a href="https://honeycomb.market/dappstore">Dapp Store</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Dev:<ul>
+<li>Outgoing flow:<ul>
+<li>(ETH) <strong>Blockchain DApp</strong> (see <a href="https://honeycomb.market/dappstore">Honeycomb DApp store</a>) calls </li>
+<li><strong>Chainlink Dapp</strong> (on-chain Oracle/Job - see <a href="https://developer.honeycomb.market/browse-apis">API Marketplace</a>) which uses/aggregates  </li>
+<li><strong>External Adapter</strong> that calls</li>
+<li><strong>External API</strong> (off-chain)</li>
+</ul>
+</li>
+<li>Blockchain DApps<ul>
+<li><a href="https://docs.chain.link/docs/using-chainlink-reference-contracts">Using Chainlink Reference Data Contracts</a></li>
+<li>HowTo: <a href="https://docs.chain.link/docs/contract-creators-overview">Consume Chainlinks</a></li>
+<li>Chainlinks to Consume<ul>
+<li><a href="https://docs.chain.link/docs/chainlinks-ethereum-mainnet">Chainlinks (Ethereum Mainnet)</a></li>
+</ul>
+</li>
+<li><a href="https://blog.chain.link/viewing-chainlink-transactions-on-the-ropsten-testnet/">Viewing Chainlink Transactions on the Ropsten Testnet</a></li>
+<li>DApp code generator: <a href="https://coinlist.co/build/chainlink/projects/4d7f84a3-8f93-4262-8281-5691257df35d">CONTRACTOR - CoinList</a></li>
+</ul>
+</li>
+<li>Honeycomb (Partner nodes hosting Chainlink Oracle <strong>jobs</strong>/DApps)<ul>
+<li><a href="https://medium.com/clc-group/honeycomb-marketplace-101-for-ethereum-developers-c7c63c2d3049">Honeycomb Marketplace 101 for Ethereum Developers</a></li>
+<li><a href="https://docs.chain.link/docs/example-walkthrough">Example Walkthrough</a></li>
+<li>Blog: <a href="https://medium.com/clc-group">CLC Group – Medium</a><ul>
+<li><a href="https://medium.com/clc-group/honeycomb-marketplace-101-for-ethereum-developers-c7c63c2d3049">Honeycomb Marketplace 101 for Ethereum Developers</a></li>
+</ul>
+</li>
+<li>Wiki + Starter: <a href="https://github.com/clc-group/honeycomb-wiki/wiki">honeycomb-wiki</a></li>
+<li>HowTo create Oracle DApps: <a href="https://docs.chain.link/docs/contract-creators">Contract Creators</a></li>
+</ul>
+</li>
+<li>Chainlink network (Chainlink node hosting on-chain Oracle DApps/External Adapters)<ul>
+<li>Blog: <a href="https://blog.chain.link/tag/development/">Development - Chainlink</a></li>
+<li>HowTo + Starter: <a href="https://blog.chain.link/how-to-use-chainlink-with-truffle-2/">How to use Chainlink with Truffle</a><ul>
+<li><a href="https://www.trufflesuite.com/blog/using-truffle-to-interact-with-chainlink-smart-contracts">Using Truffle to interact with Chainlink Smart Contracts | Blog | Truffle Suite</a></li>
+</ul>
+</li>
+<li>HowTo: <a href="https://blog.chain.link/running-a-chainlink-node-for-the-first-time/">Running a Chainlink Node for the First Time</a></li>
+<li>Wiki: <a href="https://github.com/smartcontractkit/chainlink/wiki">Chainlink Wiki</a><ul>
+<li><a href="https://github.com/smartcontractkit/chainlink/wiki/Development-Setup-Guide">Development Setup Guide</a></li>
+</ul>
+</li>
+<li>API: <a href="https://docs.chain.link/reference">Chainlink</a></li>
+<li>Chainlink code Samples: <a href="https://github.com/smartcontractkit">SmartContract</a></li>
+<li><a href="https://explorer.chain.link/">Chainlink Explorer</a></li>
+<li>Oracles: <a href="https://docs.chain.link/docs/available-oracles">Chainlinks (Testnet)</a></li>
+</ul>
+</li>
+<li>Faucet<ul>
+<li>Link: <a href="https://ropsten.chain.link/">Ropsten Chainlink Faucet</a></li>
+<li>Link: <a href="https://rinkeby.chain.link/">Rinkeby Chainlink Faucet</a></li>
+<li>Link: <a href="https://kovan.chain.link/">Kovan Chainlink Faucet</a></li>
+<li>ETH: <a href="https://faucet.metamask.io/">Test Ether Faucet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>APIs available for hackathon participants (on API Marketplace - see above): <ul>
+<li>Aeris Weather - Weather data</li>
+<li>Aviation Edge - Flight schedules </li>
+<li>Brave New Coin - Crypto market data</li>
+<li>PeakMetrics - News data</li>
+<li>Coinlayer - Crypto market rates</li>
+<li>Crowdscores - Soccer scores</li>
+<li>Currencylayer - Forex rates</li>
+<li>Daneel - Blockchain news and market data </li>
+<li>Data Sports Group - Sports scores and statistics </li>
+<li>EOD Historical Data - Traditional market rates</li>
+<li>Fixer - Forex rates</li>
+<li>Geo DB Cities - Global City and Region Data</li>
+<li>Ipstack - IP geolocation</li>
+<li>NeutrinoAPI - Utility functions, inc. SMS and email outputs</li>
+<li>Regulus - Company details database</li>
+<li>Sports Open Data - Sports data</li>
+<li>SteamAPIs - Steam marketplace data</li>
+<li>Tatum Blockchain API - Blockchain data</li>
+<li>TheRundown - Sports scores and odds</li>
+<li>Twinword - Text analysis</li>
+<li>World Weather Online - Weather data</li>
+</ul>
+</li>
+<li>Other APIs: <a href="https://rapidapi.com/">API Marketplace - Free Public &amp; Open Rest APIs | RapidAPI</a></li>
+<li>Data scraping<ul>
+<li><a href="https://pepzwee.com/">Kristjan Kirpu · PEPZ</a></li>
+</ul>
+</li>
+<li>Chainlink Projects /Oracles<ul>
+<li>Inspiration: <a href="https://blog.chain.link/44-ways-to-enhance-your-smart-contract-with-chainlink/">44 Ways to Enhance Your Smart Contract With Chainlink</a></li>
+<li>Upcoming<ul>
+<li><a href="https://www.ledgerinsights.com/oracle-selects-startups-chainlink-project/">Oracle selects first 20 startups for Chainlink blockchain project - Ledger Insights</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Press<ul>
+<li><a href="https://www.datadriveninvestor.com/2019/06/15/what-is-the-oracle-problem-how-does-chainlink-solve-it/">What is the oracle problem &amp; how does Chainlink solve it? | Data Driven Investor</a> - including Google announcement</li>
+<li><a href="https://cloud.google.com/blog/products/data-analytics/building-hybrid-blockchain-cloud-applications-with-ethereum-and-google-cloud">Building hybrid blockchain/cloud applications with Ethereum and Google Cloud | Google Cloud Blog</a><br>
+<img alt="Chainlink + Google" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/Untitled_6.max-1600x1600.png"><br>
+<em>Image by Google</em></li>
+<li>Google BigQuery Blockchain? DApp: <a href="https://github.com/smartcontractkit/bq-example-contract">smartcontractkit/bq-example-contract</a></li>
+<li><a href="https://kaleido.io/kaleido-selects-chainlink-to-provide-oracle-services-for-blockchain-business-cloud/">Kaleido selects Chainlink to provide oracle services  for Blockchain Business Cloud</a></li>
+</ul>
+</li>
+<li>Other<ul>
+<li>TCF (Off-chain Trusted Compute Framework)<ul>
+<li>Hyperledger Avalon: <a href="https://www.hyperledger.org/blog/2019/10/03/introducing-hyperledger-avalon">Introducing Hyperledger Avalon</a></li>
+<li>Chainlink and TCF/TEE: <a href="https://medium.com/coinmonks/chainlinks-implications-in-the-trusted-compute-framework-7b7628c86b09">Chainlink and the Trusted Compute Framework</a></li>
+</ul>
+</li>
+<li>TEE (Off-chain Trusted Execution Environments)<ul>
+<li>Intel SGX</li>
+<li>ARM TrustZone</li>
+<li>TEE Oracle <a href="https://www.town-crier.org/what-is-tc.html">Town Crier</a> - using Intel SGX<ul>
+<li><a href="https://www.town-crier.org/get-started.html">Getting Started</a></li>
+</ul>
+</li>
+<li><a href="https://medium.com/iotex/iotex-chainlink-delivering-real-world-data-to-the-blockchain-17abb11981a7">IoTeX &amp; Chainlink: Delivering Real World Data to the Blockchain</a></li>
+<li><a href="https://docs.kaleido.io/kaleido-platform/full-stack/privacy/">Privacy &amp; Anonymity</a></li>
+</ul>
+</li>
+<li><a href="https://docs.kaleido.io/kaleido-platform/full-stack/">Kaleido Full-stack Blockchain</a><br>
+<img alt="Kaleido Fullstack" src="https://docs.kaleido.io/images/full_stack_blockchain_b2b_tech_stack.png"><br>
+<em>Image by Kaleido</em></li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/blockchain.html">#blockchain</a>
+      <a href="https://rasor.github.io/tag/chainlink.html">#chainlink</a>
+      <a href="https://rasor.github.io/tag/api.html">#api</a>
+      <a href="https://rasor.github.io/tag/hackathon.html">#hackathon</a>
+      <a href="https://rasor.github.io/tag/honeycomb.html">#honeycomb</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

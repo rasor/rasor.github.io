@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Manage Azure: Portal: Microsoft Azure Tools: Microsoft Azure Documentation CLI: Overview of the Azure CLI Naming resources: Ready: Recommended naming and tagging conventions - Microsoft Cloud Adoption Framework for Azure ARM: GAzure Resource Manager overview Azure Resource Manager templates QuickStart: Create and deploy an Azure Resource Manager template by using the …" />
+<meta name="keywords" content="#azure">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Azure Integrations"/>
+<meta property="og:description" content="Manage Azure: Portal: Microsoft Azure Tools: Microsoft Azure Documentation CLI: Overview of the Azure CLI Naming resources: Ready: Recommended naming and tagging conventions - Microsoft Cloud Adoption Framework for Azure ARM: GAzure Resource Manager overview Azure Resource Manager templates QuickStart: Create and deploy an Azure Resource Manager template by using the …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/azure-integrations.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#azure"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Azure Integrations</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="azure-integrations">Azure Integrations</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>Manage Azure:<ul>
+<li>Portal: <a href="https://portal.azure.com/#home">Microsoft Azure</a></li>
+<li>Tools: <a href="https://docs.microsoft.com/en-us/azure/#pivot=sdkstools">Microsoft Azure Documentation</a></li>
+<li>CLI: <a href="https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest">Overview of the Azure CLI</a></li>
+<li>Naming resources: <a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/naming-and-tagging#naming-rules-and-restrictions">Ready: Recommended naming and tagging conventions - Microsoft Cloud Adoption Framework for Azure</a></li>
+<li>ARM:<ul>
+<li><a href="http://docs.microsoft.com/en-ushttps://docs.microsoft.com/en-us/azure/azure-resource-manager/template-deployment-overview/azure/azure-resource-manager/resource-group-overview#resource-groups">GAzure Resource Manager overview</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/template-deployment-overview">Azure Resource Manager templates</a></li>
+<li>QuickStart: <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-quickstart-create-templates-use-the-portal">Create and deploy an Azure Resource Manager template by using the Azure portal</a>4</li>
+<li>PS1: <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy">Deploy resources with PowerShell and template</a></li>
+<li>BASH: <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-template-deploy-cli">Deploy resources with Azure CLI and template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Integration:<ul>
+<li>Vid: <a href="https://azure.microsoft.com/en-us/product-categories/integration/">Azure Integration Services—Build Integrated Solutions | Microsoft Azure</a></li>
+<li>Publishers:<ul>
+<li><a href="https://azure.microsoft.com/en-us/services/service-bus/">Azure Service Bus—Cloud Messaging Service | Microsoft Azure</a></li>
+<li>Event Grid:</li>
+<li>Storage queue:<ul>
+<li><a href="https://azure.microsoft.com/en-us/services/storage/queues/">Queue Storage | Microsoft Azure</a></li>
+<li>Pricing: <a href="https://azure.microsoft.com/en-us/pricing/details/storage/">Azure Storage Pricing | Microsoft Azure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Hub:<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/event-grid/overview">Publish and subscribe to application events - Azure Event Grid</a></li>
+<li>Tutorial: <a href="https://docs.microsoft.com/en-us/azure/event-grid/event-grid-event-hubs-integration">Send Event Hubs data to data warehouse - Event Grid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>On-Prem Integration;<ul>
+<li>Vid: <a href="https://www.youtube.com/watch?v=JUKt7ajE1Y8&amp;list=PLXtHYVsvn_b8xpydYGuVR0b7gWu4JJfRh&amp;index=4&amp;t=0s">YouTube</a></li>
+<li>Azure Stack:<ul>
+<li><a href="https://azure.microsoft.com/en-us/overview/azure-stack/">What is Azure Stack | Microsoft Azure</a></li>
+<li><a href="https://azure.microsoft.com/en-us/solutions/architecture/unlock-legacy-data/">Unlock Legacy Data with Azure Stack | Microsoft Azure</a></li>
+<li><a href="https://www.thomasmaurer.ch/2018/09/windows-server-azure-network-adapter/">How to set up Windows Server Azure Network Adapter</a></li>
+<li><a href="https://www.thomasmaurer.ch/2018/03/run-azure-stack-powershell-azure-stack-tools-docker-container/">Run Azure Stack PowerShell and Azure Stack Tools in a Docker Container</a></li>
+</ul>
+</li>
+<li><a href="https://www.thomasmaurer.ch/2019/04/sync-file-servers-with-azure-file-sync-in-windows-admin-center/">Sync File Servers with Azure File Sync in Windows Admin Center</a></li>
+</ul>
+</li>
+<li>My blogs:<ul>
+<li><a href="https://rasor.github.io/azure-fundamentals-course-107979f.html">Azure Fundamentals Course 107979F</a></li>
+<li><a href="https://rasor.github.io/microsoft-architecture-and-implementations.html">Microsoft Architecture and Implementations</a></li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/azure.html">#azure</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

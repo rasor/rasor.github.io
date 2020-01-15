@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
 
     <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
@@ -28,6 +30,7 @@
 <meta name="author" content="rasor" />
 <meta name="description" content="Polyfills Using new cool javascript features and frameworks requires polyfills for the browsers, that don&#39;t support them. And how do you then do it? There can be several strategies. I am currently looking at this Add Global Fallback for non-supported browsers Use polyfills.io to determine which polyfills to return …" />
 <meta name="keywords" content="#polyfills, #loader, #webcomponents, #pwa, #polymer, #ionic, #stencil, #preact">
+
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Using js polyfills, dependency managers and PWAs"/>
@@ -64,22 +67,47 @@
       <nav>
         <ul class="list">
 
-          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
-          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
-          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
-          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
-          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
-          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
       </ul>
     </div>
 
@@ -108,7 +136,7 @@
     <p>
           Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
-          </br>
+      </br>
     </p>
   </header>
 
@@ -178,8 +206,8 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
 </li>
 </ul>
 <p>PWA:<br>
-<em> <a href="https://blog.ionicframework.com/announcing-the-ionic-pwa-toolkit-beta/">Ionic PWA Toolkit Beta</a>
-</em> <a href="https://ionicframework.com/pwa/toolkit">Ionic Framework - Pwa-toolkit</a>
+* <a href="https://blog.ionicframework.com/announcing-the-ionic-pwa-toolkit-beta/">Ionic PWA Toolkit Beta</a>
+* <a href="https://ionicframework.com/pwa/toolkit">Ionic Framework - Pwa-toolkit</a>
 * <a href="https://github.com/ionic-team/ionic-pwa-toolkit">ionic-team/ionic-pwa-toolkit</a></p>
 <h2>Ionic V3</h2>
 <p><a href="https://ionicframework.com/docs/intro/browser-support/">Browser Support</a></p>
@@ -200,12 +228,12 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
 <h2>WebComponets</h2>
 <p><a href="https://www.webcomponents.org/polyfills">webcomponents.org</a><br>
 <a href="https://github.com/WebComponents/webcomponentsjs#browser-support">Browser Support</a>
-<em> Edge
-</em> IE11+
-<em> Chrome
-</em> Firefox
-<em> Safari 9+
-</em> Chrome Android
+* Edge
+* IE11+
+* Chrome
+* Firefox
+* Safari 9+
+* Chrome Android
 * Mobile Safari</p>
 <h3>Polymer V1</h3>
 <p><a href="https://www.polymer-project.org/1.0/docs/browsers">Browser Support</a></p>
@@ -219,8 +247,8 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
 </ul>
 <h3>Polymer V3</h3>
 <p>PWA:<br>
-<em> <a href="https://www.polymer-project.org/3.0/toolbox/">Polymer App Toolbox - Polymer Project</a>
-</em> <a href="https://react-etc.net/entry/polymer-3-0-released-io-accelerates-pwa-development">Polymer 3.0 released at I/O, accelerates PWA development</a>
+* <a href="https://www.polymer-project.org/3.0/toolbox/">Polymer App Toolbox - Polymer Project</a>
+* <a href="https://react-etc.net/entry/polymer-3-0-released-io-accelerates-pwa-development">Polymer 3.0 released at I/O, accelerates PWA development</a>
 * <a href="https://github.com/Polymer/pwa-starter-kit/blob/master/README.md">Polymer/pwa-starter-kit</a></p>
 <h2>Preact</h2>
 <p><a href="https://preactjs.com/about/browser-support">Browser Support</a></p>
@@ -232,8 +260,8 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
 <li>Safari 10.11</li>
 </ul>
 <p>PWA:<br>
-<em> <a href="https://preactjs.com/guide/progressive-web-apps">Overiew</a>
-</em> <a href="https://github.com/developit/preact-cli">developit/preact-cli</a></p>
+* <a href="https://preactjs.com/guide/progressive-web-apps">Overiew</a>
+* <a href="https://github.com/developit/preact-cli">developit/preact-cli</a></p>
 <h1>Testing</h1>
 <ul>
 <li><a href="https://www.webpagetest.org/easy">WebPagetest - Website Performance and Optimization Test</a> with the <code>Run Lighthouse Audit</code> option turned on.</li>
@@ -257,7 +285,6 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
 
 
 
-    <div class="addthis_relatedposts_inline">
 
 
 </article>
@@ -266,7 +293,7 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
 <p>
   &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -274,7 +301,7 @@ Otherwise then just use <a href="https://polyfill.io/v2/docs/examples#basic">bas
     <img alt="Creative Commons License"
          title="Creative Commons License"
          style="border-width:0"
-         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
          width="80"
          height="15"/>
   </a>

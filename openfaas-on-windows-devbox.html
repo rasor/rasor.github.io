@@ -8,12 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="" />
 
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
 
   <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
 
     <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
 
@@ -29,6 +31,7 @@
 <meta name="description" content="Running OpenFaas in Dev on Windows Finally the time has arrived, when I&#39;ll start using OpenFaas. I first heard about OpenFaaS at a meetup in May 2018, 6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup! by OpenFaaS creator, Alex Ellis. Next I bought the book Docker for …" />
 <meta name="keywords" content="#openfaas, #curl, #docker, #kubernetes, #hyperv, #virtualbox, #kitematic, #dockerswarm, #python, #git, #gitlab, #openshift, #footloose">
 
+
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="OpenFaaS on Windows Devbox"/>
 <meta property="og:description" content="Running OpenFaas in Dev on Windows Finally the time has arrived, when I&#39;ll start using OpenFaas. I first heard about OpenFaaS at a meetup in May 2018, 6 Cloud Native Talks, 1 Evening: Special KubeCon + CloudNativeCon EU Meetup! by OpenFaaS creator, Alex Ellis. Next I bought the book Docker for …"/>
@@ -36,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/openfaas-on-windows-devbox.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2019-03-29 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2019-04-06 20:30:00+02:00"/>
+<meta property="article:modified_time" content="2019-10-19 00:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#openfaas"/>
@@ -69,22 +72,47 @@
       <nav>
         <ul class="list">
 
-          <li><a href="https://stackoverflow.com/users/750989/rasor" target="_blank">StackOverflow</a></li>
-          <li><a href="https://www.npmjs.com/~rasor" target="_blank">npm</a></li>
-          <li><a href="https://dock.io?r=sorenraarup:aaaaCSAu" target="_blank">dock.io</a></li>
-          <li><a href="https://keybase.io/rasor" target="_blank">Keybase</a></li>
-          <li><a href="https://stackoverflow.com/cv/rasor" target="_blank">-- CV --</a></li>
-          <li><a href="https://angel.co/rasor" target="_blank">AngelList</a></li>
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-twitter" href="https://twitter.com/rasor" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        <li><a class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank"><i class="fa fa-wordpress"></i></a></li>
-        <li><a class="sc-github" href="https://github.com/rasor" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank"><i class="fa fa-bitbucket"></i></a></li>
-        <li><a class="sc-rss" href="/feeds/all.atom.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
       </ul>
     </div>
 
@@ -113,8 +141,8 @@
     <p>
           Posted on March 29, 2019 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
-          </br>
-            Updated: April 06, 2019
+      </br>
+        Updated: October 19, 2019
     </p>
   </header>
 
@@ -473,17 +501,17 @@ faas-cli new faas-py-test1 --lang python
 
 
 <p>Tips about templates: 
-<em> <a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md">faas-cli/guide/TEMPLATE</a>
-</em> <a href="https://github.com/openfaas/faas-cli">faas-cli</a></p>
+* <a href="https://github.com/openfaas/faas-cli/blob/master/guide/TEMPLATE.md">faas-cli/guide/TEMPLATE</a>
+* <a href="https://github.com/openfaas/faas-cli">faas-cli</a></p>
 <p>Edit faas-py-test1.yml:</p>
-<div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">provider</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">name</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">openfaas</span>
-  <span class="l l-Scalar l-Scalar-Plain">gateway</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8080</span>
-<span class="l l-Scalar l-Scalar-Plain">functions</span><span class="p p-Indicator">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">faas-py-test1</span><span class="p p-Indicator">:</span>
-    <span class="l l-Scalar l-Scalar-Plain">lang</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
-    <span class="l l-Scalar l-Scalar-Plain">handler</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">./faas-py-test1</span>
-    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">rasor/faas-py-test1:v1</span> <span class="c1"># edited! Added dockerhub userid/. Changed :latest to v1</span>
+<div class="highlight"><pre><span></span><span class="nt">provider</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">openfaas</span>
+  <span class="nt">gateway</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http://127.0.0.1:8080</span>
+<span class="nt">functions</span><span class="p">:</span>
+  <span class="nt">faas-py-test1</span><span class="p">:</span>
+    <span class="nt">lang</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+    <span class="nt">handler</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./faas-py-test1</span>
+    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rasor/faas-py-test1:v1</span> <span class="c1"># edited! Added dockerhub userid/. Changed :latest to v1</span>
 </pre></div>
 
 
@@ -493,7 +521,7 @@ faas-cli new faas-py-test1 --lang python
 <span class="sd">    Args:</span>
 <span class="sd">        req (str): request body</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello! You said: &quot;</span> <span class="o">+</span> <span class="n">req</span><span class="p">)</span> <span class="c1"># Added this line</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello! You said: &quot;</span> <span class="o">+</span> <span class="n">req</span><span class="p">)</span> <span class="c1"># Added this line</span>
     <span class="c1"># return req # Removed this line</span>
 </pre></div>
 
@@ -538,7 +566,7 @@ Note: It also tells OpenFaaS how and where to start the function.</p>
 <p>.\build\faas-py-test1\Dockerfile:</p>
 <div class="highlight"><pre><span></span><span class="c"># ... Lines omitted</span>
 <span class="c"># Here OpenFaaS knows howto starts the program</span>
-<span class="k">ENV</span><span class="s"> fprocess=&quot;python index.py&quot;</span>
+<span class="k">ENV</span> <span class="nv">fprocess</span><span class="o">=</span><span class="s2">&quot;python index.py&quot;</span>
 <span class="c"># ... Lines omitted</span>
 </pre></div>
 
@@ -656,6 +684,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
 <ul>
 <li><a href="https://blog.alexellis.io/swarm-secrets-in-action/">Docker Secrets in action: Github integration</a></li>
 <li><a href="https://ngrok.com/">ngrok - secure introspectable tunnels to localhost</a> - use it to expose you localhost to the internet, when testing.</li>
+<li><a href="https://blog.alexellis.io/cli-functions-with-openfaas/">Turn Any CLI into a Function with OpenFaaS</a></li>
 </ul>
 <h2>Books</h2>
 <ul>
@@ -683,7 +712,6 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
 
 
 
-    <div class="addthis_relatedposts_inline">
 
 
 </article>
@@ -692,7 +720,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
 <p>
   &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
 </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
 </p><p>
   <a rel="license"
      href="http://creativecommons.org/licenses/by-sa/4.0/"
@@ -700,7 +728,7 @@ See book D4S chapter 4 (The OpenFaaS dashboard page 80).  </li>
     <img alt="Creative Commons License"
          title="Creative Commons License"
          style="border-width:0"
-         src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
          width="80"
          height="15"/>
   </a>

@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Authentication with FIDO U2F - Universal 2nd Factor Download Specifications - FIDO Alliance Universal 2nd Factor (U2F) Overview FIDO U2F JavaScript API FIDO Bluetooth® Specification v1.0 FIDO NFC Protocol Specification v1.0 U2F Security Key - Buy Guide - FIDO &amp; YubiKey FIDO® Certified products Applications Yubikey YubiKeys | Strong Two-Factor Authentication for Secure Login …" />
+<meta name="keywords" content="#authentication, #fido, #2fa, #nfc, #bluetooth, #yubikey">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Authentication with FIDO"/>
+<meta property="og:description" content="Authentication with FIDO U2F - Universal 2nd Factor Download Specifications - FIDO Alliance Universal 2nd Factor (U2F) Overview FIDO U2F JavaScript API FIDO Bluetooth® Specification v1.0 FIDO NFC Protocol Specification v1.0 U2F Security Key - Buy Guide - FIDO &amp; YubiKey FIDO® Certified products Applications Yubikey YubiKeys | Strong Two-Factor Authentication for Secure Login …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/authentication-with-fido.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#authentication"/>
+<meta property="article:tag" content="#fido"/>
+<meta property="article:tag" content="#2fa"/>
+<meta property="article:tag" content="#nfc"/>
+<meta property="article:tag" content="#bluetooth"/>
+<meta property="article:tag" content="#yubikey"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Authentication with FIDO</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="authentication-with-fido">Authentication with FIDO</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h2>Authentication with FIDO U2F - Universal 2nd Factor</h2>
+<ul>
+<li><a href="https://fidoalliance.org/specifications/download/">Download Specifications - FIDO Alliance</a><ul>
+<li><a href="https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-overview-v1.2-ps-20170411.html">Universal 2nd Factor (U2F) Overview</a></li>
+<li><a href="https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-javascript-api-v1.2-ps-20170411.html">FIDO U2F JavaScript API</a></li>
+<li><a href="https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-bt-protocol-v1.2-ps-20170411.html">FIDO Bluetooth® Specification v1.0</a></li>
+<li><a href="https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-nfc-protocol-v1.2-ps-20170411.html">FIDO NFC Protocol Specification v1.0</a></li>
+<li><a href="https://u2f-key.tech/">U2F Security Key - Buy Guide - FIDO &amp; YubiKey</a></li>
+</ul>
+</li>
+<li><a href="https://fidoalliance.org/certification/fido-certified-products/">FIDO® Certified products</a></li>
+</ul>
+<h2>Applications</h2>
+<h3>Yubikey</h3>
+<ul>
+<li><a href="https://www.yubico.com/products/yubikey-hardware/">YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico</a> - supports U2F and NFC (for mobile) and USB (for PC)</li>
+<li>Features: <a href="https://www.yubico.com/products/yubikey-hardware/compare-products-series/">Compare Products | Yubico</a></li>
+<li>Review 2018-09: <a href="https://www.pcmag.com/review/363889/yubico-yubikey-5-nfc">Yubico YubiKey 5 NFC</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=com.yubico.yubioath&amp;hl=en">Yubico Authenticator - Apps on Google Play</a> - Uses OTP - not U2F</li>
+<li>Manage: <a href="https://www.yubico.com/products/services-software/download/">Downloads | Yubico</a></li>
+</ul>
+<p>Guides:</p>
+<ul>
+<li><a href="https://support.yubico.com/support/solutions/articles/15000006419-using-your-yubikey-with-authenticator-codes">Using Your YubiKey with Authenticator Codes : Yubico Support</a></li>
+<li><a href="https://support.yubico.com/support/solutions/articles/15000014219-yubikey-5-series-technical-manual">YubiKey 5 Series Technical Manual : Yubico Support</a></li>
+<li><a href="https://wiki.archlinux.org/index.php/YubiKey">YubiKey - ArchWiki</a></li>
+<li><a href="https://support.yubico.com/support/solutions/articles/15000006454-using-gnupg-for-custom-configuration-secrets">Using GnuPG for Custom Configuration Secrets : Yubico Support</a></li>
+<li><a href="https://ocramius.github.io/blog/yubikey-for-ssh-gpg-git-and-local-login/">YubiKey for SSH, Login, 2FA, GPG and Git Signing</a></li>
+<li>2019-02: <a href="https://www.thepolyglotdeveloper.com/2019/02/use-yubikey-pgp-signing-encryption-authentication/">Use A YubiKey For PGP Signing, Encryption, And Authentication</a></li>
+<li><a href="https://blog.eleven-labs.com/en/openpgp-secret-keys-yubikey-part-2/">OpenPGP - Export Secret Keys to a Yubikey</a></li>
+<li>2017-09: <a href="https://www.andreagrandi.it/2017/09/30/configuring-offline-gnupg-masterkey-subkeys-on-yubikey/">Configuring an offline GnuPG master key and subkeys on YubiKey</a></li>
+<li>Keyboard bot: <a href="https://www.blackhillsinfosec.com/how-to-weaponize-the-yubikey/">How to Weaponize the Yubikey - Black Hills Information Security</a></li>
+<li><a href="https://upgrade.yubico.com/getapikey/">Yubico Get API Key</a></li>
+</ul>
+<p>News:</p>
+<ul>
+<li>Lots of adds! <a href="https://www.tomshardware.com/news/yubikey-5-series-passwordless-authentication,37834.html">YubiKey 5 Series Arrives With Passwordless Authentication</a></li>
+</ul>
+<h3>Duo Authenticator (now Cisco)</h3>
+<ul>
+<li><a href="https://duo.com/pricing">Duo Authenticator</a><ul>
+<li><a href="https://duo.com/product/trusted-users/two-factor-authentication/duo-mobile">Duo Mobile: Secure Two-Factor Authentication App</a></li>
+<li><a href="https://duo.com/product/trusted-users/two-factor-authentication/authentication-methods">Authentication Methods</a></li>
+<li>Cons:<ul>
+<li><a href="https://duo.com/pricing/duo-free">The Free version</a> is <a href="https://duo.com/trial">only a 30d trail</a></li>
+<li>You have to sign up. This enables Google Drive to backup you 2FA codes (thus sharing your 2FA codes with Google). You don't have to enable the backup feature.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Other HW keys</h3>
+<ul>
+<li><a href="https://www.dongleauth.info/dongles/">USB Dongle Authentication</a></li>
+<li><a href="https://www.ftsafe.com/Products/FIDO/NFC">FIDO ®-NFC | FEITIAN</a></li>
+<li>Review 2018-09: <a href="https://www.pcmag.com/review/363644/google-titan-security-key-bundle">Google Titan Security Key Bundle</a></li>
+<li>Mobile as HW key: <a href="https://www.pcmag.com/news/367713/google-offers-built-in-security-key-feature-for-android-phon">Google Offers Built-In Security Key Feature for Android Phones</a></li>
+<li>Mobile as HW key: <a href="https://mashtips.com/use-android-smartphone-as-security-key/">How to Use Android Smartphone as a Security Key | Mashtips</a></li>
+</ul>
+<h3>Who else supports U2F?</h3>
+<ul>
+<li>List: <a href="https://www.dongleauth.info/">USB Dongle Authentication</a></li>
+<li>List: <a href="https://www.yubico.com/works-with-yubikey/catalog/">YubiKey Catalog</a></li>
+<li>List: <a href="https://en.wikipedia.org/wiki/Comparison_of_webmail_providers">Comparison of webmail providers - Wikipedia</a></li>
+<li>Github, Twitter, Google, AWS, Microsoft, Facebook ...</li>
+<li>WebMail Review: <a href="https://restoreprivacy.com/secure-email/">Best Secure Email: Top 10 Services for 2019 | Restore Privacy</a><ul>
+<li>WebMail - De: <a href="https://tutanota.com/security">TutaNota</a></li>
+<li>WebMail - De (No U2F - only TOTP): <a href="https://posteo.de/en/site/features">posteo.de</a><ul>
+<li><a href="https://posteo.de/en/help/how-can-i-use-a-yubikey-for-two-factor-authentication-with-posteo">Help - How can I use a YubiKey for two-factor authentication with Posteo?  - posteo.de</a></li>
+</ul>
+</li>
+<li>WebMail - No - $20/user/year: <a href="https://runbox.com/">Runbox</a></li>
+<li>WebMail - Au/Us - $30/user/year : <a href="https://www.fastmail.com/pricing/">FastMail</a></li>
+<li>WebMail - Ca: <a href="https://www.thexyz.com/">Thexyz</a></li>
+<li>WebMail - Ch - Free: <a href="https://protonmail.com/security-details">ProtonMail</a></li>
+<li>WebMail $12/user/year: <a href="https://www.101domain.com/email_services.htm">101Domain</a> - Poor on Trustpilot</li>
+<li>WebMail: <a href="https://www.gandi.net/en/domain/email">Gandi Email</a> - Poor on Trustpilot</li>
+<li>WebMail: <a href="http://squirrelmail.org/plugin_view.php?id=273">Yubikey Hardware Authentication Plugin - SquirrelMail - Webmail for Nuts</a></li>
+</ul>
+</li>
+<li>Domain - Uk: <a href="https://uk.godaddy.com/">GoDaddy UK</a></li>
+<li>Domain - De: <a href="https://www.hetzner.com/domainregistration">Hetzner Online GmbH</a> - Poor on Trustpilot</li>
+<li>PswMgr: <a href="SecPasswordMgrs.md">Keeper</a></li>
+<li>PswMgr - OSS: <a href="https://psono.com/">Home</a></li>
+<li><a href="https://www.microsoft.com/en-us/p/yubikey-for-windows-hello/9nblggh511m5?SilentAuth=1&amp;wa=wsignin1.0&amp;activetab=pivot:overviewtab">Get YubiKey for Windows Hello - Microsoft Store</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Who</th>
+<th>RecoveryEmail</th>
+<th>Yubi</th>
+<th>Free</th>
+<th>Payed</th>
+<th>iCloud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>--- Free ---</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>MailFence</td>
+<td>Y</td>
+<td>N</td>
+<td>Y ½G</td>
+<td>e2½/m</td>
+<td></td>
+</tr>
+<tr>
+<td>TutaNota</td>
+<td>N</td>
+<td>PC</td>
+<td>Y 1G</td>
+<td>e2½/m</td>
+<td></td>
+</tr>
+<tr>
+<td>ProtonMail</td>
+<td>Y</td>
+<td>Android</td>
+<td>Y ½G</td>
+<td>e4/m</td>
+<td></td>
+</tr>
+<tr>
+<td>--- Payed ---</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Mailbox.org</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+<td>e1/m</td>
+<td>100M</td>
+</tr>
+<tr>
+<td>Posteo</td>
+<td>Y</td>
+<td>Y</td>
+<td>N</td>
+<td>e1/m</td>
+<td></td>
+</tr>
+<tr>
+<td>RunBox</td>
+<td></td>
+<td>Y</td>
+<td>N</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>FastMail</td>
+<td></td>
+<td>Y</td>
+<td>N</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>TheXYZ</td>
+<td></td>
+<td>Y</td>
+<td>N</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>101Domain</td>
+<td></td>
+<td>?</td>
+<td>N</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Gandi</td>
+<td></td>
+<td>?</td>
+<td>2mailbox/domain</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>2FA</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Authenticator">Authenticator - Wikipedia</a></li>
+<li><a href="https://johngallias.com/two-factor-auth/">Two-Factor Authentication (2FA) – John Gallias</a></li>
+</ul>
+<h2>SW 2FA</h2>
+<ul>
+<li><a href="https://krypt.co/">Krypton U2F Authenticator</a><ul>
+<li><a href="https://github.com/kryptco">krypt.co</a></li>
+<li>Good for Google since Google don't support Yubikey NFC login via IPhone</li>
+</ul>
+</li>
+<li><a href="https://www.yubico.com/products/services-software/download/yubico-authenticator/">Yubico Authenticator | Yubico</a> - Not for IPhone</li>
+<li><a href="https://duo.com/">Duo Trusted Access</a></li>
+</ul>
+<h2>Other FIDO protocols</h2>
+<ul>
+<li>FIDO UAF - Universal Authentication Framework - see specs above</li>
+<li><a href="https://www.wired.com/story/yubikey-lightning-ios-authentication-passwords/">A YubiKey for iOS Will Soon Free Your iPhone From Passwords</a></li>
+</ul>
+<h2>Recover from 2FA loss</h2>
+<p>If you loose your <strong>authenticator app</strong> and you have recovery keys then you need to  </p>
+<ul>
+<li>Install the authenticator app on a new device</li>
+<li>For each app <ul>
+<li>Use recovery code to regain access to the app</li>
+<li>Enter the app - goto security settings - Remove Authenticator 2FA<br>
+Then your lost device is not possible to use</li>
+<li>Recreate Authenticator 2FA</li>
+<li>Backup the new recover code</li>
+</ul>
+</li>
+<li>If your authenticator was on IOS:<ul>
+<li>Reset lost device to factory settings via Find My IPhone: <a href="https://support.apple.com/kb/PH2701?locale=en_US">iCloud: Erase your device with Find My iPhone</a></li>
+<li>You can choose between <strong>Lost Mode</strong> and <strong>Erase iPhone</strong></li>
+</ul>
+</li>
+<li>If your authenticator was on Android:<ul>
+<li><a href="https://www.techtolead.com/how-to-remotely-ringlockerasefactory-reset-your-android-phone/442/">[How To] Remotely Ring/Lock/Erase/Factory Reset your Android Phone | TechToLead.com</a></li>
+<li>You can choose between <strong>Lock</strong> and <strong>Erase</strong></li>
+</ul>
+</li>
+</ul>
+<p>If you loose your <strong>2FA HW key</strong> like YubiKey you need to </p>
+<ul>
+<li>Go to each app trusing on that key<ul>
+<li>Log in using alternative 2FA method / device / key</li>
+<li>Remove the lost key</li>
+<li>Add a new key</li>
+<li>You also have the option of adding several keys, but you should be ready to follow this procedure if any of the keys are lost.<br>
+So you need to know the ID of the one which was lost</li>
+</ul>
+</li>
+</ul>
+<p>This means you should have two 2FA devices / keys for every app. Optimally this should be two HW devices like Yubikey.<br>
+With a lot of apps supporting 2FA you would also need a list of what app is using what 2FA device / key.  </p>
+<p>If you uses a HW key as 2FA for a password manager, then you risk all your accounts has been compromized.<br>
+Tip: You could use two separeate 2FA devices for password manager and for the apps.</p>
+<ul>
+<li>Use Key-M to protect your email (to avoid password reset) - If you loose it ...</li>
+<li>Use Key-A to protect your apps (including password manager) with 2FA</li>
+</ul>
+<p>App Precautions:</p>
+<ul>
+<li>Don't use email as recovery option</li>
+<li>Don't use mobile phone number as recovery option</li>
+<li>Do Use 2 HW keys as login - keep the backup key safe</li>
+<li>Do protect cloud account with HW keys</li>
+<li>If you can't use keys then use authenticator apps on two different phones - keep the backup authenticator app safe<ul>
+<li>If you use phone backup to cloud then your cloud account must be protected by HW key</li>
+<li>Use authenticator apps with finger print login - e.g. Microsoft authenticator</li>
+</ul>
+</li>
+</ul>
+<p>More:</p>
+<ul>
+<li><a href="https://support.yubico.com/support/solutions/articles/15000006444-losing-your-yubikey">Losing Your YubiKey : Yubico Support</a></li>
+<li><a href="https://www.reddit.com/r/ethtrader/comments/6vwk7p/what_happens_if_you_lose_your_phone_with_google/">What happens if you lose your phone with Google Authenticator</a></li>
+</ul>
+<h2>Other Links</h2>
+<ul>
+<li><a href="https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e">MyCrypto’s Security Guide For Dummies And Smart People Too</a></li>
+<li><a href="https://www.tomsguide.com/us/2fa-right-way,news-29824.html">You're Probably Doing 2FA Wrong: Here's the Right Way</a></li>
+<li><a href="https://www.pcmag.com/news/367026/google-phishing-attacks-that-can-beat-two-factor-are-on-the">Google: Phishing Attacks That Can Beat Two-Factor Are on the Rise</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/authentication.html">#authentication</a>
+      <a href="https://rasor.github.io/tag/fido.html">#fido</a>
+      <a href="https://rasor.github.io/tag/2fa.html">#2fa</a>
+      <a href="https://rasor.github.io/tag/nfc.html">#nfc</a>
+      <a href="https://rasor.github.io/tag/bluetooth.html">#bluetooth</a>
+      <a href="https://rasor.github.io/tag/yubikey.html">#yubikey</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
