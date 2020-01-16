@@ -228,8 +228,10 @@ sudo apt install brave-browser
 Setting Brave as default browser:  
 * System Settings - Personalization - Applications - Web Browser: Brave
 
-* brave://settings/
-    * Turn off everything under Autofill
+* [Settings](brave://settings/)
+    * Appearance: Hide Brave Rewards button
+    * Privacy and security: Turn off most things 
+    * Autofill: Turn off everything 
 
 [Extensions](https://chrome.google.com/webstore/category/extensions?hl=en-US)
 

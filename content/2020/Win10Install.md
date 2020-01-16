@@ -61,6 +61,11 @@ code -v
 
 * Download [Brave](https://laptop-updates.brave.com/latest/winx64)
 * [Plugins](https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#chrome)
+    * Password manager
+* [Settings](brave://settings/)
+    * Appearance: Hide Brave Rewards button
+    * Privacy and security: Turn off most things 
+    * Autofill: Turn off everything 
 
 ## Python
 
@@ -92,5 +97,16 @@ pip3 -V
 .\build
 .\publish "msg"
 ```
+
+### Yubikey
+
+For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  
+
+* [Yubico Authenticator](https://www.yubico.com/products/services-software/download/yubico-authenticator/)
+
+### pCloud
+
+pCloud is an idrive.  
+It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-drive-windows.html?download=windows-10-64bit).  
 
 The end
