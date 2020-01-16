@@ -109,4 +109,8 @@ For Timebased-OneTime-Passcodes (TOTP) using Yubikey:
 pCloud is an idrive.  
 It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-drive-windows.html?download=windows-10-64bit).  
 
+### PDF reader
+
+* [Adobe Acrobat Reader DC, free PDF viewer download](https://get.adobe.com/uk/reader/)
+
 The end
