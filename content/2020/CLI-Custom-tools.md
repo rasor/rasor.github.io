@@ -33,11 +33,13 @@ CLI - write (6)
 ```
 
 1) Write BASH CLI tools
+* Awesome List: [sw-yx/cli-cheatsheet](https://github.com/sw-yx/cli-cheatsheet)
 * [Vorpal](https://vorpal.js.org/)
     * [Feathers - Built on the Shoulders of Giants](https://github.com/gaearon/feathers-docs/blob/master/why/philosophy.md#built-on-the-shoulders-of-giants)
 * [commander](https://www.npmjs.com/package/commander)
     * [commander examples](https://github.com/tj/commander.js/tree/master/examples)
     * 2015: [Building command line tools with Node.js - Atlassian Developer Blog](https://blog.developer.atlassian.com/scripting-with-node/)
+* Using React or Stencil in your CLI via [Import-jsx](https://www.npmjs.com/package/import-jsx)
 
 2) Run adhoc CLI tools
 * npm runner: [Introducing npx: an npm package runner](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
