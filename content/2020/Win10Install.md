@@ -119,4 +119,11 @@ For uploading GPS data from Suunto GPS watches to [Movescount](http://www.movesc
 
 * [Moveslink](https://www.suunto.com/en-gb/Support/software-support/moveslink/)
 
+### Keybase
+
+Keybase is a cloud vault (a kind like password managers) using keys from devices for encryption (unlike the psw mgrs, that uses a master key).  
+This enables encrypted sharing between users and trust based on proofs written to social networks.  
+
+* [Install Windows | Keybase Docs](https://keybase.io/docs/the_app/install_windows)
+
 The end
