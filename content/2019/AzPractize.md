@@ -262,7 +262,7 @@ Resource Group Tips:
     * Link or nest templates for only having one place to change a set of resources using [linked or nested templates](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-linked-templates)
         * Nested templates are within parent
         * Linked templates are external templates outside parent
-    * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems) having **dependent resources**
+    * Link resources between groups, so a group can contain shared resources (e.g. infrastructure spanning systems) having **dependent resources** using [dependsOn](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/define-resource-dependency)
 * Use **CLI** terminals (**BASH or PS1**) for **manage** (start, stop, delete, etc)
     * Delete group, when not used
 * **Deploy, upgrade, manage, delete, apply-RBAC-to, tag, monitor** resources as a **single entity**
