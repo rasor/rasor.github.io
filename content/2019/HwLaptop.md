@@ -58,16 +58,15 @@ Tags: #cpu, #laptop, #hw, #ssd
     * VT-x: Y, VT-d: Y [Intel® Core™ i5-1035G1 Processor (6M Cache, up to 3.60 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/196603/intel-core-i5-1035g1-processor-6m-cache-up-to-3-60-ghz.html)
         * DKK 4499 / 8GB / 1000SSD / 220NIT / 10H [Lenovo Ideapad S340 14&amp;quote; bærbar computer (platinum grey) - Bærbar computer](https://www.elgiganten.dk/product/pc-tablets/barbar-computer/50474/lenovo-ideapad-s340-14-barbar-computer-platinum-grey#)
 * 8292/4/1.80 [PassMark - Intel Core i7-8550U @ 1.80GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-8550U+%40+1.80GHz&id=3064)
-* 8134/4/2.10 [PassMark - AMD Ryzen 5 3500U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
 * 8060/4/2.30 [PassMark - AMD Ryzen 7 3700U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+7+3700U&id=3426)
     * DKK 5999 / 16GB / 512SSD [Acer Aspire A315-42G-R2X5 15.6](https://storetablet.bilka.dk/elektronik/computere/baerbar-computer/acer-aspire-a315-42g-r2x5-15-6-baerbar-computer/p/100489095)
-* 7803/4/2.10 [PassMark - AMD Ryzen 5 3500U - Price performance comparison](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
-    * xx
+* 7803/4/2.10 [PassMark - AMD Ryzen 5 3500U](https://www.cpubenchmark.net/cpu.php?cpu=AMD+Ryzen+5+3500U&id=3421)
+    * AMD-V: Y, AMD-Vi: Y [Ryzen 5 3500U  - AMD - WikiChip](https://en.wikichip.org/wiki/amd/ryzen_5/3500u)
         * DKK 5999 / 16GB / 512SSD / x360 Touch [HP ENVY x360 - 15-ds0007no (8UC00EA)](https://ssl.www8.hp.com/dk/da/products/laptops/product-detail.html?oid=32255944#!tab=specs)
 * 7677/4/1.60 [PassMark - Intel Core i5-8250U @ 1.60GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-8250U+%40+1.60GHz&id=3042)
 * 7682/4/2.40 [PassMark - Intel Core i7-4700MQ @ 2.40GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i7-4700MQ+%40+2.40GHz&id=1923)
     * My 6 year old PC:  
-    VT-x: Y, VT-d: N [Intel® Core™ i7-4700MQ Processor (6M Cache, up to 3.40 GHz) Product Specifications](https://ark.intel.com/content/www/us/en/ark/products/75117/intel-core-i7-4700mq-processor-6m-cache-up-to-3-40-ghz.html)
+    VT-x: Y, VT-d: N [Intel® Core™ i7-4700MQ Processor (6M Cache, up to 3.40 GHz)](https://ark.intel.com/content/www/us/en/ark/products/75117/intel-core-i7-4700mq-processor-6m-cache-up-to-3-40-ghz.html)
 * --- 2 chores----------------
 * 5039/2/2.20 [PassMark - Intel Core i3-8130U @ 2.20GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i3-8130U+%40+2.20GHz&id=3225)
 * 4602/2/2.50 [PassMark - Intel Core i5-7200U @ 2.50GHz](https://www.cpubenchmark.net/cpu.php?cpu=Intel+Core+i5-7200U+%40+2.50GHz&id=2865)
