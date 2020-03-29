@@ -1,7 +1,16 @@
 Title:  Authentication with FIDO
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #authentication, #fido, #2fa, #nfc, #bluetooth, #yubikey
+Tags: #authentication, #fido, #2fa, #usb, #nfc, #bluetooth, #yubikey, #iot
+
+# Intro
+
+FIDO **UAF** uses **shared keys** using e.g. **HOTP or TOTP** meaning you can copy that key and loose it to fishing.  
+FIDO **U2F** uses **public keys**. The private key stays in your device, which can be a USB Key, embedded in phone, watch or anything else.  
+[FIDO2](https://fidoalliance.org/fido2/) introduced **WebAuthn**
+
+* [https://paulstamatiou.com/getting-started-with-security-keys/](https://paulstamatiou.com/getting-started-with-security-keys/)
+* Functions covered by [Yubico](https://www.yubico.com/products/compare-products-series/)
 
 ## Authentication with FIDO U2F - Universal 2nd Factor
 
@@ -13,15 +22,24 @@ Tags: #authentication, #fido, #2fa, #nfc, #bluetooth, #yubikey
     * [U2F Security Key - Buy Guide - FIDO & YubiKey](https://u2f-key.tech/)
 * [FIDO® Certified products](https://fidoalliance.org/certification/fido-certified-products/)
 
+### FIDO2, WebAuthn & CTAP
+
+* [FIDO2: Moving the World Beyond Passwords using WebAuthn & CTAP](https://fidoalliance.org/fido2/)
+* [FIDO2: Web Authentication (WebAuthn) - FIDO Alliance](https://fidoalliance.org/fido2/fido2-web-authentication-webauthn/)
+* [Web Authentication: An API for accessing Public Key Credentials Level 1](https://www.w3.org/TR/webauthn/)
+
 ## Applications
 
 ### Yubikey
 
+* [Yubico Reveals First Biometric YubiKey at Microsoft Ignite | Yubico](https://www.yubico.com/blog/yubico-reveals-first-biometric-yubikey-at-microsoft-ignite/)
 * [YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico](https://www.yubico.com/products/yubikey-hardware/) - supports U2F and NFC (for mobile) and USB (for PC)
 * Features: [Compare Products | Yubico](https://www.yubico.com/products/yubikey-hardware/compare-products-series/)
 * Review 2018-09: [Yubico YubiKey 5 NFC](https://www.pcmag.com/review/363889/yubico-yubikey-5-nfc)
 * [Yubico Authenticator - Apps on Google Play](https://play.google.com/store/apps/details?id=com.yubico.yubioath&hl=en) - Uses OTP - not U2F
 * Manage: [Downloads | Yubico](https://www.yubico.com/products/services-software/download/)
+* Yubikey 5:
+    * Limit [32 OATH-TOTP credentials](https://support.yubico.com/support/solutions/articles/15000014174--yubikey-5-nfc) via Yubico Authenticator
 
 Guides:
 
@@ -38,6 +56,8 @@ Guides:
 
 News:
 
+* [Yubico Authenticator App for iOS Now Supports NFC | Yubico](https://www.yubico.com/blog/yubico-authenticator-app-for-ios-now-supports-nfc/)
+    * [Yubico iOS Authentication Expands to Include NFC | Yubico](https://www.yubico.com/blog/yubico-ios-authentication-expands-to-include-nfc/)
 * Lots of adds! [YubiKey 5 Series Arrives With Passwordless Authentication](https://www.tomshardware.com/news/yubikey-5-series-passwordless-authentication,37834.html)
 
 ### Duo Authenticator (now Cisco)
@@ -51,11 +71,31 @@ News:
 
 ### Other HW keys
 
-* [USB Dongle Authentication](https://www.dongleauth.info/dongles/)
 * [FIDO ®-NFC | FEITIAN](https://www.ftsafe.com/Products/FIDO/NFC)
 * Review 2018-09: [Google Titan Security Key Bundle](https://www.pcmag.com/review/363644/google-titan-security-key-bundle)
 * Mobile as HW key: [Google Offers Built-In Security Key Feature for Android Phones](https://www.pcmag.com/news/367713/google-offers-built-in-security-key-feature-for-android-phon)
 * Mobile as HW key: [How to Use Android Smartphone as a Security Key | Mashtips](https://mashtips.com/use-android-smartphone-as-security-key/)
+* [U2FReviews](https://github.com/hillbrad/U2FReviews)
+* [USB Dongle Authentication](https://www.dongleauth.info/dongles/)
+* [Google open-sources the firmware needed to build hardware security keys | ZDNet](https://www.zdnet.com/article/google-open-sources-the-firmware-needed-to-build-hardware-security-keys/)
+    * [google/OpenSK](https://github.com/google/OpenSK)
+    * [Tock Embedded Operating System](https://www.tockos.org/)
+    * Case: [OpenSK Key Enclosure by RightBrainElectronics](https://www.thingiverse.com/thing:4132768)
+
+| [Dongle](https://www.dongleauth.info/dongles/) | OTP credentials | Comment |
+|------------------------------------------------|-----------------|---------|
+|[Bluink](https://bluink.ca/buy) key ($30)|[Unlimited TOTP (in app)](https://bluink.ca/files/BluinkKeyUserGuide.pdf)|App not in eu|
+|[Feitian](https://www.ftsafe.com/Products/FIDO/Single_Button_FIDO) ePass FIDO2|[]()|3 keys: USB-A/NFC, USB-C, BlueTooth|
+|[Google](https://store.google.com/us/config/titan_security_key?hl=en-US) Titan|[]()|3 keys: USB-A/NFC ($25), USB-C ($40), BlueTooth ($35) - no OTP|
+|HyperSecu|[]()|
+|[Nitrokey](https://www.nitrokey.com/#comparison) PRO 2 ($49)|[5 TOTP](https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf)|
+|[Nitrokey](https://www.nitrokey.com/#comparison) Storage 2 ($109)|[15 TOTP](https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf)|
+|OnlyKey|[]()|
+|Secalot|[]()|
+|[SoloKeys](https://solokeys.com/)|[]()|No OTP|
+|VASCO|[]()|
+|WWPass|[]()|
+|Yubikey 5|[32 OATH-TOTP](https://support.yubico.com/support/solutions/articles/15000014174--yubikey-5-nfc)|
 
 ### Who else supports U2F?
 
@@ -105,8 +145,14 @@ News:
 * [Krypton U2F Authenticator](https://krypt.co/)
     * [krypt.co](https://github.com/kryptco)
     * Good for Google since Google don't support Yubikey NFC login via IPhone
-* [Yubico Authenticator | Yubico](https://www.yubico.com/products/services-software/download/yubico-authenticator/) - Not for IPhone
+* [Yubico Authenticator | Yubico](https://www.yubico.com/products/services-software/download/yubico-authenticator/)
 * [Duo Trusted Access](https://duo.com/)
+
+## Keys
+
+Guides:
+
+* [getting-started-with-security-keys/](https://paulstamatiou.com/getting-started-with-security-keys/)
 
 ## Other FIDO protocols
 
@@ -169,5 +215,6 @@ More:
 * [MyCrypto’s Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e)
 * [You're Probably Doing 2FA Wrong: Here's the Right Way](https://www.tomsguide.com/us/2fa-right-way,news-29824.html)
 * [Google: Phishing Attacks That Can Beat Two-Factor Are on the Rise](https://www.pcmag.com/news/367026/google-phishing-attacks-that-can-beat-two-factor-are-on-the)
+* [FBI Issues Surprise New Cyber Attack Warning: Multi-Factor Authentication Is Being Defeated](https://www.forbes.com/sites/zakdoffman/2019/10/07/fbi-issues-surprise-cyber-attack-warningurges-new-precautions/#636eccfa7efb)
         
 The End
