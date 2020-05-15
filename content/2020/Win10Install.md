@@ -126,4 +126,30 @@ This enables encrypted sharing between users and trust based on proofs written t
 
 * [Install Windows | Keybase Docs](https://keybase.io/docs/the_app/install_windows)
 
+### Windows Terminal or Ps7
+
+* [How to make a pretty prompt in Windows Terminal with Powerline, Nerd Fonts, Cascadia Code, WSL, and oh-my-posh](https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx)
+    * Download: [Get Windows Terminal - Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
+* PS7: [Installing PowerShell on Windows - PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7)
+    * Download: [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell/releases)
+* In either terminal you can get git info by doing:
+```ps1
+# as admin:
+Set-ExecutionPolicy RemoteSigned
+# as any
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+# if ps core (6+, I think)
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+
+# edit ps1 profile:
+notepad $PROFILE
+# paste into file:
+#---------------------
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+#---------------------
+```
+
 The end
