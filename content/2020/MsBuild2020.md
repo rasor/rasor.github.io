@@ -61,6 +61,8 @@ Tags: #arm, #winterm, #arc, #teams, #logicapps, #powerapps, #ai, #vscode, #windo
         * O365 Teams + Office - Fluid Framwork - MS Graph (AD)
         * Teams Apps
     * Archana Saseetharan
+        * [Microsoft&#32;Teams&#32;Toolkit&#32;-&#32;Visual&#32;Studio&#32;Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)
+        * [Microsoft&#32;Teams&#32;Integration&#32;-&#32;Visual&#32;Studio&#32;Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vsts.vss-services-teams)
 
 
 # Live / All events -----------------------
