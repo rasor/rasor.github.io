@@ -3,7 +3,7 @@ Date: 2099-01-01 00:00
 Category: Develop
 Tags: #git, #merge, #pr
 
-In github when you have dependabot prs:
+In github when you have dependabot PRs:
 
 * Find Dependabot PRs
     * Enter the PRs on https://github.com/<user>/<project>/pulls
@@ -30,5 +30,9 @@ In github when you have dependabot prs:
     # Test
     npm start
     ```
+
+More:
+
+* [Configuring automated security updates - GitHub Help](https://help.github.com/en/github/managing-security-vulnerabilities/configuring-automated-security-updates)
 
 The End
