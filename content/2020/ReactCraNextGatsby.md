@@ -22,6 +22,7 @@ Next.js vs Gatsby vs create-react-app
 
 * [CRA - Create React App](https://create-react-app.dev/)
     * App CLI: `npx create-react-app my-app --template typescript --use-npm` - [Getting Started](https://create-react-app.dev/docs/getting-started)
+    * App CLI: `npx create-react-app my-app --template redux-typescript --use-npm` - [cra-template-redux-typescript](https://github.com/reduxjs/cra-template-redux-typescript)
 * [CRA using Ionic components](https://ionicframework.com/)
     * [App CLI:](https://ionicframework.com/docs/cli/commands/start)
     ```bash
