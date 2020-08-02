@@ -35,6 +35,7 @@ Next.js vs Gatsby vs create-react-app
     npm install -g gatsby-cli
     gatsby new my-app
     ```
+    * [Starter templates](https://www.gatsbyjs.org/starters?v=2)
 * [CNA - Next.js](https://nextjs.org/)
     * App CLI: `npm init next-app nextjs-blog --example "https://github.com/zeit/next-learn-starter/tree/master/learn-starter --use-npm"` - [Create a Next.js App](https://nextjs.org/learn/basics/create-nextjs-app/setup)
     * Guide: [The Next.js Handbook](https://www.freecodecamp.org/news/the-next-js-handbook/)

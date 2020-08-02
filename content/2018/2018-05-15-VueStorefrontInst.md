@@ -1,9 +1,9 @@
 Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
-Modified: 2018-08-18 19:00
+Modified: 2020-06-26 19:00
 Category: DevOp
-Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm
+Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm, #shopify, #snipchart
 
 [Vue Storefront](https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4) will soon be out (june 2018).
 It is a PWA frontend to the Magento webshop.  
@@ -323,6 +323,9 @@ Note:
 * [Other headless / API first apps](HeadlessApiFirst.md)
 * [Other ecommerce projects on GitHub](https://github.com/topics/ecommerce)
 * My [list of npm installs locally](https://github.com/rasor/awesome-tables/blob/master/awesome-cli-js.md#nvm-sets-of-tools---avoiding-version-conficts)
+* [Gatsby Shopify Starter](https://www.gatsbyjs.org/starters/AlexanderProd/gatsby-shopify-starter/)
+* [gatsby-graphcms-ecommerce-starter](https://www.gatsbyjs.org/starters/GraphCMS/gatsby-graphcms-ecommerce-starter/)
+* [OneShopper](https://www.gatsbyjs.org/starters/rohitguptab/OneShopper/) - using SnipChart
 
 ### OpenShift 
 
