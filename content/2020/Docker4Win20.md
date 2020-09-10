@@ -2,7 +2,7 @@ Title: Docker Desktop for Windows on WSL2
 Date: 2099-01-01 00:00
 Modified: 2019-03-28 09:00
 Category: DevOp
-Tags: #docker, #hyperv, #virtualbox, #openfaas, #kitematic
+Tags: #docker, #hyperv, #virtualbox, #openfaas, #kitematic, #wsl2, #win10, #virtualmachineplatform
 
 ## Something nice-to-know
 
@@ -124,16 +124,41 @@ By using workflow [Develop with Docker and WSL2](https://docs.docker.com/docker-
 Using VSCode extention [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) then you can get a remote CLI into your linux distro by typing `wsl` (and `exit` to get back locally).  
 From the remote CLI you startup vscode just as when you work locally: `code .`
 
+### Choosing and installing a Distro
+
 But you might be missing a WSL2 distro - I did:
 ![Missing WSL2 distro](../img/2020/2020-09-06-OpenFaaS22.PNG "Missing WSL2 distro").  
 There are a small [selection of distros](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice).  
-Most of all I wanted a CenOS distro, since I want to have OpenShift in it and CentOS is the RedHat community version. There is [Pengwin Enterprise](https://www.microsoft.com/da-dk/p/pengwin-enterprise/9n8lp0x93vcp?rtc=1&activetab=pivot:overviewtab) based on CentOS, but what - now Microsoft wants me to pay for Linúx???  
+Most of all I wanted a CenOS distro, since I want to have OpenShift in it and CentOS is the RedHat community version coming with OpenShift.  
+There is [Pengwin Enterprise](https://www.microsoft.com/da-dk/p/pengwin-enterprise/9n8lp0x93vcp?rtc=1&activetab=pivot:overviewtab) based on CentOS, but what - now Microsoft wants me to pay for Linúx???  
 And also Biz users are required to get a Red Hat Enterprise Linux subscription, when using it.  
 I'll go for 2nd best which is [another RPM based distro](https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based).  
 I can choose between Fedora and OpenSuse.
 Also [Fedora Remix for WSL](https://www.microsoft.com/da-dk/p/fedora-remix-for-wsl/9n6gdm4k2hnc?rtc=1&activetab=pivot:overviewtab) is not free....  
 So remaining is [openSUSE-Leap-15-1](https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&activetab=pivot:overviewtab), which still is free.  
 Also there are two SUSE Enterprise for free.  
+
+### A little sidestep to OpenShift
+
+As an alternative to have CentOS there are
+
+* [Guide to Installing an OKD 4.4 Cluster on your Home Lab](https://www.openshift.com/blog/guide-to-installing-an-okd-4-4-cluster-on-your-home-lab)
+    * [Installing an OKD 4.5 Cluster](https://itnext.io/guide-installing-an-okd-4-5-cluster-508a2631cbee)
+* [Setup Local OpenShift Origin (OKD) Cluster on CentOS 7](https://computingforgeeks.com/setup-openshift-origin-local-cluster-on-centos/)
+* Install [OKD - The Community Distribution of Kubernetes that powers Red Hat OpenShift.](https://www.okd.io/) (before: openshift.org)
+* Install [openSUSE Kubic](https://kubic.opensuse.org/) container manager
+    * Install [OpenShift Origin on Kubic](https://hackweek.suse.com/17/projects/openshift-origin-on-kubic?)
+    * Kubic is using [cri-o](https://cri-o.io/) container runtime
+* [OpenShift Client Tools](https://software.opensuse.org/package/rubygem-rhc)
+* [Setup OpenShift Origin (OKD) on Ubuntu 19.04/18.04/16.04](https://computingforgeeks.com/how-to-setup-openshift-origin-on-ubuntu/)
+* [Install OpenShift Origin on Ubuntu 18.04](https://www.techrepublic.com/article/how-to-install-openshift-origin-on-ubuntu-18-04/)
+
+And perhaps this could be of interest
+
+* Yet another pod manager [Podman Installation](https://podman.io/getting-started/installation.html)
+* [10 Kubernetes distributions leading the container revolution](https://www.infoworld.com/article/3265059/10-kubernetes-distributions-leading-the-container-revolution.html)
+
+### Install a WSL distro
 
 ![Installing WSL2 distro](../img/2020/2020-09-06-OpenFaaS23.PNG "Installing WSL2 distro")  
 Note: You have to give this WSL PC a default username and psw - just like your Windows box.  
@@ -186,6 +211,8 @@ wsl -l -v
 wsl
 ```
 
+### Note about sharing folders
+
 Notice the local folder in Windows is mounted inside the Linux distro,  
 so you are able to work from Linux on your files in your Windows drive.
 
@@ -200,13 +227,17 @@ logout
 rasorwin@MYPC>
 ```
 
+Best practice for **sharing folders** are not sharing windows into linux, but instead [sharing linux out to windows](https://docs.docker.com/docker-for-windows/wsl/#best-practices)
+
+### Docker integration
+
 Going back in docker - Press Refresh - then you will also see your OpenSuse installed  
 ![WSL2 distro installed](../img/2020/2020-09-06-OpenFaaS24.PNG "WSL2 distro installed")  
 you don't have to enable integration there, since you have set it default and you have enabled integration to default distro.
 
-### Links
+## Links
 
 * [Install Docker Desktop on Windows Home](https://docs.docker.com/docker-for-windows/install-windows-home/)
 * [DD4W Frequently asked questions (FAQ)](https://docs.docker.com/docker-for-windows/faqs/)
 
-The End.
+The End
