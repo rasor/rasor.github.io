@@ -47,11 +47,11 @@ After that the board is started, when it is powered on and it connects to the wo
 ## Blynk
 
 * [Wemos D1 Mini + 0.96 Inch SSD1306 OLED Display Using SPI](https://www.instructables.com/id/Wemos-D1-Mini-096-SSD1306-OLED-Display-Using-SPI/)
-* [Blynk](https://d ocs.blynk.cc/)
+* [Blynk](https://docs.blynk.cc/)
 * [blynkkk/blynkkk.github.io](https://github.com/blynkkk/blynkkk.github.io)
 * eBook: [Hands-On Internet of Things with Blynk](https://www.packtpub.com/application-development/hands-internet-things-blynk)
 
-## Alternatives to ES8266
+## Alternatives to ESP8266
 
 ### ESP32
 

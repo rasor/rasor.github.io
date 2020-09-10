@@ -98,35 +98,35 @@ pip3 -V
 .\publish "msg"
 ```
 
-### Yubikey
+## Yubikey
 
 For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  
 
 * [Yubico Authenticator](https://www.yubico.com/products/services-software/download/yubico-authenticator/)
 
-### pCloud
+## pCloud
 
 pCloud is an idrive.  
 It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-drive-windows.html?download=windows-10-64bit).  
 
-### PDF reader
+## PDF reader
 
 * [Adobe Acrobat Reader DC, free PDF viewer download](https://get.adobe.com/uk/reader/)
 
-### MovesLink
+## MovesLink
 
 For uploading GPS data from Suunto GPS watches to [Movescount](http://www.movescount.com/) 
 
 * [Moveslink](https://www.suunto.com/en-gb/Support/software-support/moveslink/)
 
-### Keybase
+## Keybase
 
 Keybase is a cloud vault (a kind like password managers) using keys from devices for encryption (unlike the psw mgrs, that uses a master key).  
 This enables encrypted sharing between users and trust based on proofs written to social networks.  
 
 * [Install Windows | Keybase Docs](https://keybase.io/docs/the_app/install_windows)
 
-### Windows Terminal or Ps7
+## Windows Terminal or Ps7
 
 * [How to make a pretty prompt in Windows Terminal with Powerline, Nerd Fonts, Cascadia Code, WSL, and oh-my-posh](https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx)
     * Download: [Get Windows Terminal - Microsoft Store](https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
@@ -151,5 +151,10 @@ Import-Module oh-my-posh
 Set-Theme Paradox
 #---------------------
 ```
+
+## WSL2
+
+* [Download Windows 10 May 2020 Update (v 2004)](https://www.microsoft.com/en-us/software-download/windows10)
+    * Click Udate Now
 
 The end
