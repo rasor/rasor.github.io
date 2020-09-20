@@ -34,6 +34,7 @@ But there are other options than **Arkade** to install k8s?
 * On localhost
     * Using **Kind**
         * [Installing Kubernetes with Kind](https://kubernetes.io/docs/setup/learning-environment/kind/)
+        * [kind Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
     * Using **Minikube**
         * [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
         * [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
@@ -152,14 +153,59 @@ kind create cluster
 # Set kubectl context to "kind-kind"
 # You can now use your cluster with:
 kubectl cluster-info --context kind-kind
-# Kubernetes master is running at https://127.0.0.1:54040
-# KubeDNS is running at https://127.0.0.1:54040/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+# Kubernetes master is running at https://127.0.0.1:52295
+# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 # To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+
+# And what is the name of cluster?
+kind get clusters
+# kind
+
+# If you need to delete your cluster:
+# kind delete cluster
+# kind delete cluster --name kind
+
+# Check cluster location and credentials that kubectl knows about:
+kubectl config view
+# apiVersion: v1
+# clusters:
+# - cluster:
+#     certificate-authority-data: DATA+OMITTED
+#     server: https://127.0.0.1:52295
+#   name: kind-kind
+# contexts:
+# - context:
+#     cluster: kind-kind
+#     user: kind-kind
+#   name: kind-kind
+# current-context: kind-kind
+# kind: Config
+# preferences: {}
+# users:
+# - name: kind-kind
+#   user:
+#     client-certificate-data: REDACTED
+#     client-key-data: REDACTED
+
+kubectl get nodes
+# NAME                 STATUS   ROLES    AGE   VERSION
+# kind-control-plane   Ready    master   18m   v1.19.1
+
+kubectl get pods
+# No resources found in default namespace.
 ```
+
+So now having a master node running and no pod what is next?  
+
+Issues: 
+* Booting Windows made bash unable to access cluster. Why?
+    * It was not an envir var problem, since after delete + create cluster then no new envir vars were created
+    * Tips about accessing clusters: [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/)
 
 ## Links
 
 * [Deploy on Kubernetes](https://docs.docker.com/docker-for-windows/kubernetes/)
+* [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
 * [OpenFaaS on Windows Devbox](https://rasor.github.io/openfaas-on-windows-devbox.html)
 * [alexellis/arkade](https://github.com/alexellis/arkade)
     * [Alex Ellis - arkade](https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD)
