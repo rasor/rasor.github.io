@@ -35,6 +35,8 @@ But there are other options than **Arkade** to install k8s?
     * Using **Kind**
         * [Installing Kubernetes with Kind](https://kubernetes.io/docs/setup/learning-environment/kind/)
         * [kind Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
+    * Using **Rancher**
+    * Using **k3d**
     * Using **Minikube**
         * [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
         * [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
@@ -119,6 +121,48 @@ export REPO=arkade
 export BINLOCATION="/c/users/yourusername/.arkade/bin"
 chmod +x "$BINLOCATION/$REPO"
 ln -sf "$BINLOCATION/$REPO" "$BINLOCATION/$ALIAS_NAME"
+
+arkade version
+#             _             _
+#   __ _ _ __| | ____ _  __| | ___
+#  / _` | '__| |/ / _` |/ _` |/ _ \
+# | (_| | |  |   < (_| | (_| |  __/
+#  \__,_|_|  |_|\_\__,_|\__,_|\___|
+# Get Kubernetes apps the easy way
+# Version: 0.6.12
+# Git Commit: 0415b5fa9d0a6740feb3d9093b7555d38c7e1a51
+
+ark get --help
+# The get command downloads a CLI or application from the specific tool's releases or downloads page. 
+# The tool is usually downloaded in binary format and provides a fast and easy alternative to a package manager.
+
+# Usage:
+#   arkade get [flags]
+
+# Examples:
+#   arkade get helm
+#   arkade get linkerd2 --stash=false
+
+# See which CLIs arkade can install:
+ark get
+# Use "arkade get TOOL" to download a tool or application:
+# faas-cli
+# helm
+# kubectl
+# kubectx
+# kind
+# k3d
+# k3sup
+# kubeseal
+# inletsctl
+# osm
+# linkerd2
+# kubebuilder
+# kustomize
+# doctl
+# k9s
+# civo
+# terraform
 ```
 
 #### Install k8s cluster
@@ -129,13 +173,15 @@ arkade get kubectl
 # https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe
 # Tool written to: C:\Users\yourusername/.arkade/bin/kubectl.exe
 
+# We will use kind to create a k8s cluster, but first install it:
 arkade get kind
 # Downloading kind
 # https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-windows-amd64
 # Tool written to: C:\Users\yourusername/.arkade/bin/kind.exe
-kind --version
-# kind version 0.9.0
+kind version
+# kind v0.9.0 go1.15.2 windows/amd64
 
+# Crate a k8s cluster:
 kind create cluster
 # Creating cluster "kind" ...
 #  • Ensuring node image (kindest/node:v1.19.1) 🖼  ...
@@ -164,6 +210,11 @@ kind get clusters
 # If you need to delete your cluster:
 # kind delete cluster
 # kind delete cluster --name kind
+
+# Seems like I have a client version from docker and a server version is in the cluster with the version installed by arkade.
+kubectl version
+# Client Version: version.Info{Major:"1", Minor:"16+", GitVersion:"v1.16.6-beta.0", GitCommit:"e7f962ba86f4ce7033828210ca3556393c377bcc", GitTreeState:"clean", BuildDate:"2020-01-15T08:26:26Z", GoVersion:"go1.13.5", Compiler:"gc", Platform:"windows/amd64"}
+# Server Version: version.Info{Major:"1", Minor:"19", GitVersion:"v1.19.1", GitCommit:"206bcadf021e76c27513500ca24182692aabd17e", GitTreeState:"clean", BuildDate:"2020-09-14T07:30:52Z", GoVersion:"go1.15", Compiler:"gc", Platform:"linux/amd64"}
 
 # Check cluster location and credentials that kubectl knows about:
 kubectl config view
@@ -200,7 +251,70 @@ So now having a master node running and no pod what is next?
 Issues: 
 * Booting Windows made bash unable to access cluster. Why?
     * It was not an envir var problem, since after delete + create cluster then no new envir vars were created
+    * In vid [Walk-through of arkade - for Kubernetes](https://www.youtube.com/watch?v=8wU9s_mua8M), Alex think boot persistence has been implemented - and before we had to recreate cluster after boot.
     * Tips about accessing clusters: [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/)
+
+#### Install k8s apps
+
+```bash
+# Check which apps arkade lets you easily install:
+ark install --help
+# Install Kubernetes apps from helm charts or YAML files using the "install" command.
+
+# You can also find the post-install message for each app with the "info" command.
+
+# Usage:
+#   arkade install [flags]
+#   arkade install [command]
+
+# Examples:
+#   arkade install
+#   arkade install openfaas  --gateways=2
+#   arkade install inlets-operator --token-file $HOME/do-token
+
+# Available Commands:
+#   argocd                  Install argocd
+#   cert-manager            Install cert-manager
+#   chart                   Install the specified helm chart
+#   cron-connector          Install cron-connector for OpenFaaS
+#   crossplane              Install Crossplane
+#   docker-registry         Install a Docker registry
+#   docker-registry-ingress Install registry ingress with TLS
+#   gitea                   Install gitea
+#   grafana                 Install grafana
+#   info                    Find info about a Kubernetes app
+#   ingress-nginx           Install ingress-nginx
+#   inlets-operator         Install inlets-operator
+#   istio                   Install istio
+#   jenkins                 Install jenkins
+#   kafka-connector         Install kafka-connector for OpenFaaS
+#   kube-image-prefetch     Install kube-image-prefetch
+#   kube-state-metrics      Install kube-state-metrics
+#   kubernetes-dashboard    Install kubernetes-dashboard
+#   linkerd                 Install linkerd
+#   loki                    Install Loki for monitoring and tracing
+#   metrics-server          Install metrics-server
+#   minio                   Install minio
+#   mongodb                 Install mongodb
+#   nats-connector          Install OpenFaaS connector for NATS
+#   nfs-client-provisioner  Install nfs client provisioner
+#   openfaas                Install openfaas
+#   openfaas-ingress        Install openfaas ingress with TLS
+#   openfaas-loki           Install Loki-OpenFaaS and Configure Loki logs provider for OpenFaaS
+#   osm                     Install osm
+#   portainer               Install portainer to visualise and manage containers
+#   postgresql              Install postgresql
+#   redis                   Install redis
+#   registry-creds          Install registry-creds
+#   tekton                  Install Tekton pipelines and dashboard
+#   traefik2                Install traefik2
+
+# Flags:
+#   -h, --help                help for install
+#       --kubeconfig string   Local path for your kubeconfig file (default "kubeconfig")
+#       --wait                If we should wait for the resource to be ready before returning (helm3 only, default false)
+
+```
 
 ## Links
 
