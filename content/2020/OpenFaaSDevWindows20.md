@@ -246,7 +246,11 @@ kubectl get pods
 # No resources found in default namespace.
 ```
 
+The cluster config seen in `kubectl config view` is stored in C:\Users\youruserid\.kube\config
+
 So now having a master node running and no pod what is next?  
+* We could add worker nodes to the cluster
+* We could install apps
 
 Issues: 
 * Booting Windows made bash unable to access cluster. Why?
@@ -255,6 +259,8 @@ Issues:
     * Tips about accessing clusters: [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/)
 
 #### Install k8s apps
+
+Arkade makes it easy to install many ready-to-use apps. You can print the list it contains:  
 
 ```bash
 # Check which apps arkade lets you easily install:
@@ -313,8 +319,188 @@ ark install --help
 #   -h, --help                help for install
 #       --kubeconfig string   Local path for your kubeconfig file (default "kubeconfig")
 #       --wait                If we should wait for the resource to be ready before returning (helm3 only, default false)
+```
+##### Install k8s app kubernetes-dashboard
+
+```bash
+arkade install kubernetes-dashboard
+# Using kubeconfig: C:\Users\youruserid/.kube/config
+# Node architecture: "amd64"
+# # To create the Service Account and the ClusterRoleBinding
+# # @See https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md#creating-sample-user
+
+cat <<EOF | kubectl apply -f -
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+---
+EOF
+
+# #To get your Token for logging in
+kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user-token | awk '{print $1}')
+# Shown last part of the output
+# Name:         admin-user-token-8ltkm
+# Namespace:    kubernetes-dashboard
+# Labels:       <none>
+# Annotations:  kubernetes.io/service-account.name: admin-user
+#               kubernetes.io/service-account.uid: cf8c00d4-e353-46cd-a60f-52b976278a5c
+
+# Type:  kubernetes.io/service-account-token
+
+# Data
+# ====
+# ca.crt:     1066 bytes
+# namespace:  20 bytes
+# token:      eyJhbGciOiJSUzI1NiIsImtpZCI6InBXbUdUMG01cHU1b21mWl9HQ2hvckpnc2piTE8xZFhraE16Qnl6b0FUYWsifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLThsdGttIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiJjZjhjMDBkNC1lMzUzLTQ2Y2QtYTYwZi01MmI5NzYyNzhhNWMiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.HOkirmDW_KEpNcH_W2kotH5V_r_MgxzMiZnYctyP2bdCt7yBZijfwVK6rv3SuYizZM5FuxWsHARR8aFmsIG5wtL4Pv1mS0wHggt1Tt3rX-8Du2kj0UZwjM6pKZ5zECSC-JM1fItUAjsZyad2qxAThPaYtaJw2HVbJHdrQxn7I65kZY9qNGTPevwVrfs8PeUnpeUqlmaeZ9doob0x1zB_3TKvvST9r38m9nsRblfQU2P9QY82Q4qU74sV3lwE5cRs0XuviyQBEvfGxH5od7ahTXea5B5zHA-3_7SSyvLWHvjMMk4fn8_ZWwxJKFYc1zbxL2JqNvqzvvqRqsfbwOjX8g
+
+# #To forward the dashboard to your local machine
+kubectl proxy
+# Starting to serve on 127.0.0.1:8001
+
+# # Once Proxying you can navigate to the below
+# http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+# Paste the token above into the Dashboard login screen
+```
+
+![k8s dashboard login](../img/2020/2020-09-06-OpenFaaS25.PNG "k8s dashboard login")  
+
+When logged in:  
+![k8s dashboard logged in](../img/2020/2020-09-06-OpenFaaS26.PNG "k8s dashboard logged in")  
+
+There are several k8s namespaces. Select some to see what they are comprised of:  
+![k8s dashboard namespaces](../img/2020/2020-09-06-OpenFaaS27.PNG "k8s dashboard namespaces")  
+
+Issues:
+* Default user has too little permissions, if you forget to paste the `cat << EOF` block.
+    * Create An [Authentication Token (RBAC)](https://github.com/kubernetes/dashboard#create-an-authentication-token-rbac)
+    * Read about [Access control](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md)
+
+More info: 
+* [Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
+* Github: [kubernetes/dashboard](https://github.com/kubernetes/dashboard)
+
+##### Install k8s app metrics-server (- and heml)
+
+Apparently installing metrics-server does also do `arkade get helm`, when it is not yet installed.  
+Helm is a package manager for k8s apps (packaged in helm charts).  
+
+```bash
+arkade install metrics-server
+# Using kubeconfig: C:\Users\youruserid/.kube/config
+# Node architecture: "amd64"
+# Client: "x86_64", "MINGW64_NT-10.0-19041"
+# 2020/09/22 12:41:45 User dir established as: C:\Users\youruserid/.arkade/
+# https://get.helm.sh/helm-v3.2.4-windows-amd64.zip
+# C:\Users\Soren\AppData\Local\Temp/windows-amd64
+# C:\Users\Soren\AppData\Local\Temp/helm.exe
+# C:\Users\Soren\AppData\Local\Temp/README.md
+# C:\Users\Soren\AppData\Local\Temp/LICENSE
+# 2020/09/22 12:42:19 extracted zip into C:\Users\youruserid\AppData\Local\Temp: 4 files, 0 dirs (991.479ms)
+# Downloaded to:  C:\Users\youruserid/.arkade/bin/helm.exe helm.exe
+# Error: no repositories found. You must add one before updating
+# Error: exit code 1
+
+helm version
+# version.BuildInfo{Version:"v3.2.4", GitCommit:"0ad800ef43d3b826f31a5ad8dfbb4fe05d143688", GitTreeState:"clean", GoVersion:"go1.13.12"}
+```
+
+So what's with `Error: no repositories found`?
+[Getting Started with Helm v3](https://www.jforte.me/2020/01/getting-started-with-helm-v3/)
+
+```bash
+# Verify repo (list of helm charts) is missing
+helm repo update
+# Error: no repositories found. You must add one before updating
+
+# get stable repo - this can take 10s of minutes without output in the shell...
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+# "stable" has been added to your repositories
+```
+
+On https://helm.sh/docs/intro/quickstart/ in the version dropdown you will see which version of Helm is the latest stable version, which was installed above.  
+
+Having the helm chart list downloaded we try again:
+```bash
+arkade install metrics-server
+# Using kubeconfig: C:\Users\youruserid/.kube/config
+# Node architecture: "amd64"
+# Client: "x86_64", "MINGW64_NT-10.0-19041"
+# 2020/09/24 17:27:20 User dir established as: C:\Users\youruserid/.arkade/
+# https://get.helm.sh/helm-v3.2.4-windows-amd64.zip
+# C:\Users\youruserid\AppData\Local\Temp/windows-amd64
+# C:\Users\youruserid\AppData\Local\Temp/helm.exe
+# C:\Users\youruserid\AppData\Local\Temp/README.md
+# C:\Users\youruserid\AppData\Local\Temp/LICENSE
+# 2020/09/24 17:27:22 extracted zip into C:\Users\youruserid\AppData\Local\Temp: 4 files, 0 dirs (406.024ms)
+# Downloaded to:  C:\Users\youruserid/.arkade/bin/helm.exe helm.exe
+# Hang tight while we grab the latest from your chart repositories...
+# ...Successfully got an update from the "stable" chart repository
+# Update Complete. ⎈ Happy Helming!⎈
+# Chart path:  C:\Users\youruserid\AppData\Local\Temp/charts
+# VALUES values.yaml
+# Command: C:\Users\youruserid/.arkade/bin/helm [upgrade --install metrics-server stable/metrics-server --namespace kube-system --values C:\Users\youruserid\AppData\Local\Temp/charts/metrics-server/values.yaml --set args={--kubelet-insecure-tls,--kubelet-preferred-address-types=InternalIP\,ExternalIP\,Hostname}]
+# Release "metrics-server" does not exist. Installing it now.
+# NAME: metrics-server
+# LAST DEPLOYED: Thu Sep 24 17:27:29 2020
+# NAMESPACE: kube-system
+# STATUS: deployed
+# REVISION: 1
+# NOTES:
+# The metric server has been deployed.
+
+# In a few minutes you should be able to list metrics using the following
+# command:
+
+#   kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+# =======================================================================
+# = metrics-server has been installed.                                  =
+# =======================================================================
+
+# # It can take a few minutes for the metrics-server to collect data
+# # from the cluster. Try these commands and wait a few moments if
+# # no data is showing.
+
+# # Check pod usage
+# kubectl top pod
+
+# # Check node usage
+kubectl top node
+# Error from server (ServiceUnavailable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)
+
+# # Find out more at:
+# # https://github.com/helm/charts/tree/master/stable/metrics-server
+
+# Thanks for using arkade!
 
 ```
+
+So now we have `Error from server (ServiceUnavailable)`.  
+
+More info:
+* Metrics Server:
+  * [helm/charts - metrics-server](https://github.com/helm/charts/tree/master/stable/metrics-server)
+  * Github: [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
+  * k8s Debug: [Resource metrics pipeline](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
+* Helm:
+  * [Quickstart Guide](https://helm.sh/docs/intro/quickstart/)
+  * Download: [Releases · helm/helm](https://github.com/helm/helm/releases)
+  * [helm/charts](https://github.com/helm/charts/tree/master/stable)
 
 ## Links
 

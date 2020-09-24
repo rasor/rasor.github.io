@@ -239,5 +239,8 @@ you don't have to enable integration there, since you have set it default and yo
 
 * [Install Docker Desktop on Windows Home](https://docs.docker.com/docker-for-windows/install-windows-home/)
 * [DD4W Frequently asked questions (FAQ)](https://docs.docker.com/docker-for-windows/faqs/)
+* Deploy containers to cloud without k8s:
+    * [Deploying Docker containers on Azure ACI](https://docs.docker.com/engine/context/aci-integration/)
+    * [Deploying Docker containers on Amazon ECS](https://docs.docker.com/engine/context/ecs-integration/)
 
 The End
