@@ -25,6 +25,7 @@ Moved to (BlockchainTokens)[BlockchainTokens.md]
     * Article (2018-02): [Explaining Side Chains](https://www.forbes.com/sites/shermanlee/2018/02/07/explaining-side-chains-the-next-breakthrough-in-blockchain/#49f853ee52eb)
     * Article (2018-02): [DAppChains: Scaling Ethereum DApps Through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447)
     * Article (2017-12): [An Introduction to Application-Specific Sidechains](https://medium.com/loom-network/million-user-dapps-on-ethereum-an-introduction-to-application-specific-sidechains-c0fdc288c5e5)
+    * [Sidechains - Horizen academy](https://academy.horizen.io/horizen/advanced/sidechains/)
     * Framwork using SideChains: [ælf - Decentralized Cloud Computing Blockchain Network](https://aelf.io/)
 * DAG (Blockchain 3.0?)
     * Article (2018-01): [Explaining Directed Acylic Graph (DAG)](https://www.forbes.com/sites/shermanlee/2018/01/22/explaining-directed-acylic-graph-dag-the-real-blockchain-3-0/#756afa9a180b)

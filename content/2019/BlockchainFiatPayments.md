@@ -154,6 +154,41 @@ In this definition of Crypto banks the banks
 * Kucoin
 * Article: [One Person Drove Bitcoin from $150 to $1,000, Study Finds](https://www.calcalistech.com/ctech/articles/0,7340,L-3729964,00.html)
 
+## UniSwap DEXs, Lending protocols, Yield Farming ---------------------------
+
+* Guides:
+    * [DeFi Crypto Lending Platforms & Decentralized Finance News](https://defirate.com/)
+    * [Yield Farming Frenzy: Uniswap, Sushiswap and Liquidity Pools](https://medium.com/the-blogchain/yield-farming-frenzy-uniswap-sushiswap-and-liquidity-pools-fdd20e5b0aa3)
+* Protocols:
+    * [UniSwap](https://uniswap.org/):
+        * Guide: [Uniswap Full Guide: How To Make Money Yield Farming - Asia Crypto Today](https://www.asiacryptotoday.com/uniswap-guide/)
+        * Blog: [Uniswap Overview](https://uniswap.org/blog/uniswap-v2/)
+        * Docs: [Uniswap Docs](https://uniswap.org/docs/v2/)
+            * [How Uniswap works](https://uniswap.org/docs/v2/protocol-overview/how-uniswap-works)
+        * Code: [Uniswap](https://github.com/Uniswap)
+        * Use: [Uniswap Interface](https://app.uniswap.org/#/swap)
+        * Use: [Uniswap Info](https://uniswap.info/home)
+        * Token: [Introducing UNI](https://uniswap.org/blog/uni)
+        * Pool ROI: [Uniswap ROI | Find the best liquidity pools & track your returns](https://www.uniswaproi.com/#)
+        * Pool withdraw: [Uniswap Interface](https://app.uniswap.org/#/pool)
+    * SushiSwap:
+        * [@sushiswap](https://twitter.com/sushiswap)
+        * Podcast: [A Tale of Sushi(Swap) with Tarun, Hasu and Anna - Part1](https://www.zeroknowledge.fm/148)
+        * Code: [sushiswap/sushiswap](https://github.com/sushiswap/sushiswap)
+        * Use: [SushiSwap - An Evolution over Uniswap with Yield Farming](https://sushiswapclassic.org/)
+    * [SashimiSwap](https://twitter.com/SASHIMISASHIMI5/status/1309062014409551879):
+        * [@SASHIMISASHIMI5](https://twitter.com/SASHIMISASHIMI5)
+        * Vid: [SashimiSwap2.0: More Than a Dex!](https://www.youtube.com/watch?time_continue=3&v=pMsTK4viDhQ&feature=emb_logo)
+        * Doc: [https://sashimi.cool/files/SashimiSwap_protocol.pdf](https://sashimi.cool/files/SashimiSwap_protocol.pdf)
+        * Code: [SashimiProject/sashimiswap](https://github.com/SashimiProject/sashimiswap)
+        * Use: [🍣 SashimiSwap - An Evolution over Uniswap with Yield Farming](https://sashimi.cool/)
+        * Innovator: [aelf](https://twitter.com/aelfblockchain/status/1309132889989222400)
+* Pools:
+    * [DeFi Yield Farming Tutorials - Earn Passive Crypto Income](https://defirate.com/earn/)
+    * [Top 10 Liquidity Pools](https://pools.fyi/#/)
+    * [DexWallet DeFi Tracker - The Open Financial System of the future. Today.](https://www.defitracker.io/)
+    * [DeFi Pulse | The DeFi Leaderboard | Stats, Charts and Guides](https://defipulse.com/)
+
 ### HowTo Buy, Trade and calculate tax
 
 * Buy:

@@ -392,6 +392,7 @@ Issues:
     * Read about [Access control](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md)
 
 More info: 
+* Other apis exposed though [local proxy](http://127.0.0.1:8001/)
 * [Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 * Github: [kubernetes/dashboard](https://github.com/kubernetes/dashboard)
 
@@ -489,8 +490,26 @@ kubectl top node
 # Thanks for using arkade!
 
 ```
-
 So now we have `Error from server (ServiceUnavailable)`.  
+Try fix: [issue 448](https://github.com/kubernetes-sigs/metrics-server/issues/448).  
+
+```bash
+# Is pod running?
+kubectl get pods -n kube-system
+# NAME                                         READY   STATUS    RESTARTS   AGE
+# metrics-server-56c4ff648b-jdzv6              1/1     Running   0          53m
+
+# Is service running?
+kubectl get svc -n kube-system
+# NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE
+# metrics-server   ClusterIP   10.106.132.12   <none>        443/TCP                  55m
+
+# Can we ping?
+ping 10.106.132.12
+# Pinging 10.106.132.12 with 32 bytes of data:
+# Request timed out.
+# Nope!
+```
 
 More info:
 * Metrics Server:
@@ -502,17 +521,67 @@ More info:
   * Download: [Releases · helm/helm](https://github.com/helm/helm/releases)
   * [helm/charts](https://github.com/helm/charts/tree/master/stable)
 
-## Links
+## What's next?
 
-* [Deploy on Kubernetes](https://docs.docker.com/docker-for-windows/kubernetes/)
-* [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-* [OpenFaaS on Windows Devbox](https://rasor.github.io/openfaas-on-windows-devbox.html)
-* [alexellis/arkade](https://github.com/alexellis/arkade)
-    * [Alex Ellis - arkade](https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD)
-    * Vid 2020: [Walk-through of arkade - for Kubernetes](https://www.youtube.com/watch?v=8wU9s_mua8M)
-* [Kubernetes - OpenFaaS](https://docs.openfaas.com/deployment/kubernetes/)
-* Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
+I want to build apps on a solid setup.  
+What I have in mind is the [Bitnami stack](https://kubeprod.io/)  
+![Bitnami stack](https://kubeprod.io/assets/images/bkpr.png)  
+(_Image on kubeprod.io_)
+* Apps - e.g [Kubeapps, deploy your applications in Kubernetes](https://kubeapps.com/)
+  * [Charts hub](https://hub.kubeapps.com/charts)
+  * [Get Started with Kubeapps](https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md)
+* BKPR (Bitnami Kubernetes Production Runtime)
+  * Monitoring
+    * Prometheus
+    * Grafana
+    * Alertmanager
+  * Logging
+    * Fluentd
+    * Elasticsearch
+    * Kibana
+  * Ingress
+    * nginx-ingress
+    * ExternalDNS
+    * cert-manager
+    * OAuth2 Proxy
+* k8s
+  * Google Kubernetes Engine (GKE), 
+  * Azure Kubernetes Service (AKS) and 
+  * Amazon Elastic Container Service for Kubernetes (EKS)
 
-* [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
+I might want to add to the stack:
+* [charts/rabbitmq](https://hub.kubeapps.com/charts?q=rabbitmq)
+
+Some apps I have in mind could be 
+* A DeFi app using 
+  * a private [ethereum](https://hub.kubeapps.com/charts/stable/ethereum) network as transaction and currency cluster
+  * [vulcanlink](https://hub.kubeapps.com/charts/vulcanlink) - chainlink as Dapp GW
+  * Dedicated [Elastos DID sidechain](https://elastos.academy/did/) as customer IdM cluster
+  * [Gnosis Safe](https://gnosis-safe.io/) as multisig provider
+  * Perhaps use aelf as common sidechain?  
+  ![aelf](https://pbs.twimg.com/media/EiliSVUVkAAH1Kc?format=jpg&name=large)  
+  (_Image on[twitter](https://twitter.com/aelfblockchain/status/1308688001073991680/photo/1)_)
+
+## More Links
+
+* Docker:
+  * My blog 2020: [Docker Desktop for Windows on WSL2](./Docker4Win20.md)
+  * [Logs and troubleshooting](https://docs.docker.com/docker-for-windows/troubleshoot/)
+* k8s:
+  * [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+  * [Deploy on Kubernetes](https://docs.docker.com/docker-for-windows/kubernetes/)
+  * [Deploy on Kubernetes - Example app](https://docs.docker.com/docker-for-windows/kubernetes/#example-app)
+  * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
+  * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
+* Kind:
+  * [Installation](https://kind.sigs.k8s.io/#installation-and-usage)
+  * [Quick start](https://kind.sigs.k8s.io/docs/user/quick-start/)
+* Arkade:
+  * [alexellis/arkade](https://github.com/alexellis/arkade)
+  * [Alex Ellis - arkade](https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD)
+  * Vid 2020: [Walk-through of arkade - for Kubernetes](https://www.youtube.com/watch?v=8wU9s_mua8M)
+* OpenFaaS:
+  * My blog 2019:[OpenFaaS on Windows Devbox](https://rasor.github.io/openfaas-on-windows-devbox.html)
+  * [Kubernetes - OpenFaaS](https://docs.openfaas.com/deployment/kubernetes/)
 
 The End
