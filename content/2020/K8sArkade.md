@@ -1,4 +1,4 @@
-Title:  OpenFaaS on Windows Devbox - k8s
+Title:  k8s on Windows Devbox
 Date: 2099-01-01 00:00
 Category: Develop
 Tags: #arkade, #docker, #kubernetes, #openfaas, #curl, #hyperv, #virtualbox, #kitematic, #wsl2, #win10, #virtualmachineplatform

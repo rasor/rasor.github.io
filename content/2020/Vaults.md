@@ -3,7 +3,7 @@ Date: 2099-01-01 00:00
 Category: Devops
 Tags: #
 
-HowTo setup you w vault?
+HowTo setup your own vault?
 
 * Deploye an I-drive using [ownCloud - share files and folders, easy and secure](https://owncloud.com/)
     * Code: [ownCloud](https://github.com/owncloud)
