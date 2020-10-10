@@ -511,6 +511,34 @@ ping 10.106.132.12
 # Nope!
 ```
 
+3 days later
+
+```bash
+kubectl top node
+# NAME                 CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
+# kind-control-plane   473m         5%     952Mi           8%
+
+kubectl top pod
+
+kubectl get --raw "/apis/metrics.k8s.io/v1beta1/nodes"
+# Error from server (NotFound): the server could not find the requested resource
+```
+
+Start proxy in another terminal
+```bash
+kubectl proxy
+```
+Then open browser http://127.0.0.1:8001/
+```json
+{
+  "paths": [
+    "/apis/metrics.k8s.io",
+    "/apis/metrics.k8s.io/v1beta1",
+```
+
+http://127.0.0.1:8001/apis/metrics.k8s.io/v1beta1/nodes 
+gives "ERR_CONNECTION_REFUSED"
+
 More info:
 * Metrics Server:
   * [helm/charts - metrics-server](https://github.com/helm/charts/tree/master/stable/metrics-server)
@@ -556,7 +584,9 @@ Some apps I have in mind could be
 * A DeFi app using 
   * a private [ethereum](https://hub.kubeapps.com/charts/stable/ethereum) network as transaction and currency cluster
   * [vulcanlink](https://hub.kubeapps.com/charts/vulcanlink) - chainlink as Dapp GW
+    * [Vulcan Link](https://vulcan.link/)
   * Dedicated [Elastos DID sidechain](https://elastos.academy/did/) as customer IdM cluster
+    * [Bringing Chainlink to Elastos Mainnet](https://medium.com/@leo.vigna/bringing-chainlink-to-elastos-mainnet-9134bb3da6c9)    
   * [Gnosis Safe](https://gnosis-safe.io/) as multisig provider
   * Perhaps use aelf as common sidechain?  
   ![aelf](https://pbs.twimg.com/media/EiliSVUVkAAH1Kc?format=jpg&name=large)  
@@ -573,6 +603,8 @@ Some apps I have in mind could be
   * [Deploy on Kubernetes - Example app](https://docs.docker.com/docker-for-windows/kubernetes/#example-app)
   * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
   * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
+* k3s:
+  * SaaS: [Managed Kubernetes service, powered by k3s - Civo.com](https://www.civo.com/)
 * Kind:
   * [Installation](https://kind.sigs.k8s.io/#installation-and-usage)
   * [Quick start](https://kind.sigs.k8s.io/docs/user/quick-start/)
@@ -583,5 +615,8 @@ Some apps I have in mind could be
 * OpenFaaS:
   * My blog 2019:[OpenFaaS on Windows Devbox](https://rasor.github.io/openfaas-on-windows-devbox.html)
   * [Kubernetes - OpenFaaS](https://docs.openfaas.com/deployment/kubernetes/)
+* VPN Connect to OnPrem server/service
+  * [inlets: Cloud Native Tunnel](https://docs.inlets.dev/#/)
+  * Ngrok
 
 The End

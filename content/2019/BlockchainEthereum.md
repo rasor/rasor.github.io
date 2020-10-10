@@ -55,6 +55,10 @@ Moved to (BlockchainTokens)[BlockchainTokens.md]
 
 [Article 2018-02](https://www.forbes.com/sites/shermanlee/2018/02/07/explaining-side-chains-the-next-breakthrough-in-blockchain/#49f853ee52eb)
 
+# Sidechains
+
+* [Sidechains](https://academy.horizen.io/horizen/advanced/sidechains/)
+
 # Development ------------------------------
 
 ## SW

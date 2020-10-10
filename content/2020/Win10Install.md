@@ -104,6 +104,10 @@ For Timebased-OneTime-Passcodes (TOTP) using Yubikey:
 
 * [Yubico Authenticator](https://www.yubico.com/products/services-software/download/yubico-authenticator/)
 
+## Apple iCloud
+
+* [Get iCloud - Microsoft Store](https://www.microsoft.com/en-us/p/icloud/9pktq5699m62?rtc=1)
+
 ## pCloud
 
 pCloud is an idrive.  

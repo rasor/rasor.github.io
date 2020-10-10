@@ -10,4 +10,10 @@ Tags: #meetup, #blockchain, #ssi
 * [iden3](https://github.com/iden3)
 * [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
 
+* Providers
+    * Elastos:
+        * [Elastos DID](https://elastos.academy/did/)
+        * [Elastos | Welcome to the Modern Internet](https://www.elastos.org/)
+        * [Bringing Chainlink to Elastos Mainnet](https://medium.com/@leo.vigna/bringing-chainlink-to-elastos-mainnet-9134bb3da6c9)
+
 The End
