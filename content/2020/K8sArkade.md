@@ -603,6 +603,7 @@ Some apps I have in mind could be
   * [Deploy on Kubernetes - Example app](https://docs.docker.com/docker-for-windows/kubernetes/#example-app)
   * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
   * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
+  * Vid: [Kubernetes and Container Orchestration 101 - Hanselman](https://www.youtube.com/watch?v=3RTvoI-A7UQ)
 * k3s:
   * SaaS: [Managed Kubernetes service, powered by k3s - Civo.com](https://www.civo.com/)
 * Kind:
