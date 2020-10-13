@@ -20,7 +20,9 @@ See list on [github](https://github.com/PacktPublishing/ASP.NET-Core-3-and-React
 * FrontEnd
     * [Node.js](https://nodejs.org/en/)
 * Backend
-    * VS Code plugin: [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+    * VS Code plugins: 
+        * [C# for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+        * [SQL Server (mssql)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
     * .NET Core SDK: [Download .NET Core 3.1 SDK (v3.1.402) - Windows x64 Installer](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.402-windows-x64-installer?journey=vs-code)
     * [SQL Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
         * Connection string: `Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;`
@@ -37,10 +39,10 @@ See list on [github](https://github.com/PacktPublishing/ASP.NET-Core-3-and-React
 
 ## Run code
 
-* Open VSCode in folder .\ASP.NET-Core-3-and-React\Chapter15
+* Open VSCode in folder .\ASP.NET-Core-3-and-React\Chapter08
 ```bash
 # Terminal for Backend:
-cd Chapter15
+cd Chapter08
 cd backend
 dotnet restore
 dotnet run
@@ -70,5 +72,13 @@ dotnet run
 # info: Microsoft.Hosting.Lifetime[0]
 #       Content root path: \ASP.NET-Core-3-and-React\Chapter15\backend
 ```
+Test from browser:
+* [http://localhost:5000/api/questions/](http://localhost:5000/api/questions/)
+* [http://localhost:5000/api/questions/?search=type](http://localhost:5000/api/questions/?search=type)
+* [https://localhost:5001/api/questions/](https://localhost:5001/api/questions/)
+
+These will give you json responses.
+
+* Press `ctrl-c` to stop the webserver.
 
 The End
