@@ -1,11 +1,11 @@
 Title: ASP.NET Core 3 and React
 Date: 2099-01-01 00:00
-Category: DevOps
+Category: Develop
 Tags: #csharp, #react, #netcore3
 
 # Running code from eBook `ASP.NET Core 3 and React`
 
-* eBook: [ASP.NET Core 3 and React](https://www.packtpub.com/product/asp-net-core-3-and-react/9781789950229)
+* eBook (2019-12): [ASP.NET Core 3 and React](https://www.packtpub.com/product/asp-net-core-3-and-react/9781789950229)
     * By [@carlrippon](https://twitter.com/carlrippon) 
     * on  github as [carlrip](https://github.com/carlrip)
     * home: [https://www.carlrippon.com/books/](https://www.carlrippon.com/books/)
