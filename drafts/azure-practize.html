@@ -386,7 +386,7 @@ az vm list --query <span class="s2">&quot;[?provisioningState==&#39;Succeeded&#3
     * Link or nest templates for only having one place to change a set of resources using <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-linked-templates">linked or nested templates</a>
         * Nested templates are within parent
         * Linked templates are external templates outside parent
-    * Link groups, so a group can be a shared group (e.g. infrastructure spanning systems) having <strong>dependent resources</strong>
+    * Link resources between groups, so a group can contain shared resources (e.g. infrastructure spanning systems) having <strong>dependent resources</strong> using <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/define-resource-dependency">dependsOn</a>
 * Use <strong>CLI</strong> terminals (<strong>BASH or PS1</strong>) for <strong>manage</strong> (start, stop, delete, etc)
     * Delete group, when not used
 * <strong>Deploy, upgrade, manage, delete, apply-RBAC-to, tag, monitor</strong> resources as a <strong>single entity</strong>

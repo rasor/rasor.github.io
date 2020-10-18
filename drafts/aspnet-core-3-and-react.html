@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Running code from eBook ASP.NET Core 3 and React eBook: ASP.NET Core 3 and React By @carlrippon on github as carlrip home: https://www.carlrippon.com/books/ Code: https://github.com/PacktPublishing/ASP.NET-Core-3-and-React Tested on Fork: https://github.com/rasor/ASP.NET-Core-3-and-React Install PreReqs See list on …" />
+<meta name="keywords" content="#csharp, #react, #netcore3">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="ASP.NET Core 3 and React"/>
+<meta property="og:description" content="Running code from eBook ASP.NET Core 3 and React eBook: ASP.NET Core 3 and React By @carlrippon on github as carlrip home: https://www.carlrippon.com/books/ Code: https://github.com/PacktPublishing/ASP.NET-Core-3-and-React Tested on Fork: https://github.com/rasor/ASP.NET-Core-3-and-React Install PreReqs See list on …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/aspnet-core-3-and-react.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#csharp"/>
+<meta property="article:tag" content="#react"/>
+<meta property="article:tag" content="#netcore3"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; ASP.NET Core 3 and React</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="aspnet-core-3-and-react">ASP.NET Core 3 and React</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Running code from eBook <code>ASP.NET Core 3 and React</code></h1>
+<ul>
+<li>eBook: <a href="https://www.packtpub.com/product/asp-net-core-3-and-react/9781789950229">ASP.NET Core 3 and React</a><ul>
+<li>By <a href="https://twitter.com/carlrippon">@carlrippon</a> </li>
+<li>on  github as <a href="https://github.com/carlrip">carlrip</a></li>
+<li>home: <a href="https://www.carlrippon.com/books/">https://www.carlrippon.com/books/</a></li>
+</ul>
+</li>
+<li>Code: <ul>
+<li>https://github.com/PacktPublishing/ASP.NET-Core-3-and-React</li>
+<li>Tested on Fork: https://github.com/rasor/ASP.NET-Core-3-and-React</li>
+</ul>
+</li>
+</ul>
+<h2>Install</h2>
+<h3>PreReqs</h3>
+<p>See list on <a href="https://github.com/PacktPublishing/ASP.NET-Core-3-and-React">github</a>:
+* VS Code
+* FrontEnd
+    * <a href="https://nodejs.org/en/">Node.js</a>
+* Backend
+    * VS Code plugins: 
+        * <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp">C# for Visual Studio Code</a>
+        * <a href="https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql">SQL Server (mssql)</a>
+    * .NET Core SDK: <a href="https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.402-windows-x64-installer?journey=vs-code">Download .NET Core 3.1 SDK (v3.1.402) - Windows x64 Installer</a>
+    * <a href="https://www.microsoft.com/en-us/sql-server/sql-server-downloads">SQL Express</a>
+        * Connection string: <code>Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;</code>
+        * Verify:
+        <code>ps1
+        # From CMD shell:
+        sqlcmd -S localhost\SQLEXPRESS -E
+        select @@Version
+        go
+        # Microsoft SQL Server 2019 (RTM) - 15.0.2000.5 (X64)</code>
+        * Optionally <a href="https://docs.microsoft.com/en-us/sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?view=sql-server-ver15">Configure Windows Firewall</a>
+    * <a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15">SQL Server Management Studio (SSMS) - SQL Server Management Studio (SSMS)</a></p>
+<h2>Run code</h2>
+<ul>
+<li>Open VSCode in folder .\ASP.NET-Core-3-and-React\Chapter08</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Terminal for Backend:</span>
+<span class="nb">cd</span> Chapter08
+<span class="nb">cd</span> backend
+dotnet restore
+dotnet run
+<span class="c1"># Master ConnectionString =&gt; Data Source=localhost\SQLEXPRESS;Initial Catalog=master;Integrated Security=True;Password=</span>
+<span class="c1"># Created database QandA</span>
+<span class="c1"># Beginning transaction</span>
+<span class="c1"># Checking whether journal table exists..</span>
+<span class="c1"># Journal table does not exist</span>
+<span class="c1"># Beginning transaction     </span>
+<span class="c1"># Beginning database upgrade</span>
+<span class="c1"># Checking whether journal table exists..</span>
+<span class="c1"># Journal table does not exist</span>
+<span class="c1"># Executing Database Server script &#39;QandA.SQLScripts.01-Tables.sql&#39;</span>
+<span class="c1"># Checking whether journal table exists..</span>
+<span class="c1"># Creating the [SchemaVersions] table</span>
+<span class="c1"># The [SchemaVersions] table has been created</span>
+<span class="c1"># Executing Database Server script &#39;QandA.SQLScripts.02-Sprocs.sql&#39;</span>
+<span class="c1"># Upgrade successful</span>
+<span class="c1"># info: Microsoft.Hosting.Lifetime[0]</span>
+<span class="c1">#       Now listening on: https://localhost:5001</span>
+<span class="c1"># info: Microsoft.Hosting.Lifetime[0]</span>
+<span class="c1">#       Now listening on: http://localhost:5000</span>
+<span class="c1"># info: Microsoft.Hosting.Lifetime[0]</span>
+<span class="c1">#       Application started. Press Ctrl+C to shut down.</span>
+<span class="c1"># info: Microsoft.Hosting.Lifetime[0]</span>
+<span class="c1">#       Hosting environment: Development</span>
+<span class="c1"># info: Microsoft.Hosting.Lifetime[0]</span>
+<span class="c1">#       Content root path: \ASP.NET-Core-3-and-React\Chapter15\backend</span>
+</pre></div>
+
+
+<p>Test from SMSS:</p>
+<div class="highlight"><pre><span></span>  <span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="p">[</span><span class="n">QandA</span><span class="p">].[</span><span class="n">dbo</span><span class="p">].[</span><span class="n">Question</span><span class="p">]</span>
+</pre></div>
+
+
+<p>Test from browser:
+* <a href="http://localhost:5000/api/questions/">http://localhost:5000/api/questions/</a>
+* <a href="http://localhost:5000/api/questions/?search=type">http://localhost:5000/api/questions/?search=type</a>
+* <a href="https://localhost:5001/api/questions/">https://localhost:5001/api/questions/</a></p>
+<p>These will give you json responses.</p>
+<ul>
+<li>Press <code>ctrl-c</code> to stop the webserver.</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/csharp.html">#csharp</a>
+      <a href="https://rasor.github.io/tag/react.html">#react</a>
+      <a href="https://rasor.github.io/tag/netcore3.html">#netcore3</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

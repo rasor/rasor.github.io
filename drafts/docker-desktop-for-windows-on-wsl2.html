@@ -1,0 +1,445 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Something nice-to-know Docker needs a hypervisor, which on Windows can either be hyper-v or VirtualBox and now also Virtual Machine Platform. Hypervisor alternatives Docker Desktop For Windows (DD4W) superseeds Docker CE For Windows (DCE4W) Presumingly DD4W runs on top of WSL2, so it is only on Windows 10 from May …" />
+<meta name="keywords" content="#docker, #hyperv, #virtualbox, #openfaas, #kitematic, #wsl2, #win10, #virtualmachineplatform">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Docker Desktop for Windows on WSL2"/>
+<meta property="og:description" content="Something nice-to-know Docker needs a hypervisor, which on Windows can either be hyper-v or VirtualBox and now also Virtual Machine Platform. Hypervisor alternatives Docker Desktop For Windows (DD4W) superseeds Docker CE For Windows (DCE4W) Presumingly DD4W runs on top of WSL2, so it is only on Windows 10 from May …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/docker-desktop-for-windows-on-wsl2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2019-03-28 09:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOp"/>
+<meta property="article:tag" content="#docker"/>
+<meta property="article:tag" content="#hyperv"/>
+<meta property="article:tag" content="#virtualbox"/>
+<meta property="article:tag" content="#openfaas"/>
+<meta property="article:tag" content="#kitematic"/>
+<meta property="article:tag" content="#wsl2"/>
+<meta property="article:tag" content="#win10"/>
+<meta property="article:tag" content="#virtualmachineplatform"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Docker Desktop for Windows on WSL2</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="docker-desktop-for-windows-on-wsl2">Docker Desktop for Windows on WSL2</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+
+      </br>
+        Updated: March 28, 2019
+    </p>
+  </header>
+
+
+  <div>
+    <h2>Something nice-to-know</h2>
+<ul>
+<li>Docker needs a hypervisor, which on Windows can either be <strong>hyper-v</strong> or <strong>VirtualBox</strong> and now also <strong>Virtual Machine Platform</strong>.  <ul>
+<li><a href="https://superuser.com/a/1510175">Hypervisor alternatives</a></li>
+</ul>
+</li>
+<li><strong>Docker Desktop For Windows (DD4W)</strong> superseeds <strong>Docker CE For Windows (DCE4W)</strong></li>
+<li>Presumingly DD4W runs on top of <a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-about">WSL2</a>, so it is only on Windows 10 from May 2020</li>
+<li>DCE4W:<ul>
+<li>By default <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">DCE4W</a> will use hyper-v.  </li>
+<li>If you wanted to use VirtualBox you could get it included with <a href="https://kitematic.com/">Kitematic</a> in <a href="https://docs.docker.com/toolbox/overview/">Docker Toolbox</a>. You could then can use Kitematic to swap from hyper-v to ViretualBox.  </li>
+<li>With DD4W then <strong>Docker Toolbox</strong>, <strong>Kitematic</strong> and <strong>Docker machine</strong> are <a href="https://docs.docker.com/kitematic/userguide/">superceeded products</a></li>
+<li>See these blogs to to install DCE4W:<ul>
+<li><a href="https://rasor.github.io/docker-for-windows.html">Docker for Windows</a></li>
+<li>Heading Practice <a href="https://rasor.github.io/openfaas-on-windows-devbox.html">on this blog</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Install Docker</h2>
+<p>To check if you have Docker. Start by typing    </p>
+<div class="highlight"><pre><span></span>docker -v
+</pre></div>
+
+
+<p>to see if you already have it installed.  </p>
+<ul>
+<li>Download latest DD4W. I tried to use <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2304">v.2.3.0.4</a></li>
+<li>Issues and solutions:<ul>
+<li>Trying to install v.2.3.0.4 gave me this error:<ul>
+<li>Error: <code>Docker Desktop requires Windows 10 Pro/Enterprise (15063+) or Windows 10 Home (19018+).</code></li>
+<li>Mine was only Home os 18362 / <a href="https://docs.microsoft.com/en-us/windows/release-information/">v1909</a> (see System Information) </li>
+</ul>
+</li>
+<li>TryFix: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2105">Download DD4W v.2.1.0.5</a><ul>
+<li>Error: <code>Docker Desktop requires Windows 10 Pro or Enterprise version 15063 to run.</code></li>
+</ul>
+</li>
+<li>TryFix: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-2000-win81-2018-12-07">Download DCE4W v.2.0.0.0</a><ul>
+<li>Error: <code>Docker for Windows requires Windows 10 Pro or Enterprise version 14393 to run.</code></li>
+</ul>
+</li>
+<li>TryFix: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17091-ce-win42-2017-12-11">Download DCE4W v.17.0.9.1</a><ul>
+<li>Error: <code>Docker for Windows requires Windows 10 Pro or Enterprise version 10586, or Windows server 2016 RTM to run</code></li>
+</ul>
+</li>
+<li>TryFix: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17090-ce-win33-2017-10-06">Download DCE4W v.17.0.9.0</a><ul>
+<li>Error: <code>Unable to stop: The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The specified module 'Hyper-V' was not loaded because no valid module file was found in any module directory.</code></li>
+<li>OK, Hyper-V needs to be activated - Activate the <code>windows hypervisor platform</code> feature.
+<img alt="Activate win hypervisor" src="../img/2020/2020-09-06-OpenFaaS10.PNG" title="Activate win hypervisor"></li>
+<li>Boot the PC</li>
+<li>Uninstall DCE4W</li>
+<li>Re-install DCE4w</li>
+<li>Start DCE4w</li>
+<li>Error - same as above - yak!</li>
+<li>Deactivate <code>windows hypervisor platform</code></li>
+<li>Please uninstall DCE4W again.</li>
+<li>Boot PC</li>
+<li>Apparently win Hypervisor does not cover for hyper-v from this old Docker version!  </li>
+</ul>
+</li>
+<li>
+<p>TryFix: Trying to install hyper-v on win 10 home:
+    ```bash
+    # https://answers.microsoft.com/en-us/windows/forum/all/hyper-v-is-missing/191e7c79-2c95-4417-b877-f40f6f856108
+    dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All</p>
+<h1>Deployment Image Servicing and Management tool</h1>
+<h1>Version: 10.0.18362.900</h1>
+<h1>Image Version: 10.0.18362.1016</h1>
+<h1>Error: 0x800f080c</h1>
+<h1>Feature name Microsoft-Hyper-V is unknown.</h1>
+<h1>A Windows feature name was not recognized.</h1>
+<h1>Use the /Get-Features option to find the name of the feature in the image and try the command again.</h1>
+<h1>The DISM log file can be found at C:\windows\Logs\DISM\dism.log</h1>
+<p><code>* Hyper-V can't be installed on Win 10 Home! It requires Pro or more:
+* So instead we could let it run on VirtualBox
+    * Other alternatives: [How to install Windows 10 Home 19018 update?](https://superuser.com/questions/1550291/how-to-install-windows-10-home-19018-update)
+    * [Download Windows 10 may 2020 update (v 2004)](https://www.microsoft.com/en-us/software-download/windows10)
+* Click Update Now - this takes a loooong time.
+* Boot the PC
+* Now running os 10.0.19041.423 [v2004](https://docs.microsoft.com/en-us/windows/release-information/)
+* OK, another Hypervisor needs to be activated - Activate the `Virtual Machine Platform` feature.
+![Activate Virtual Machine Platform](../img/2020/2020-09-06-OpenFaaS11.PNG "Activate Virtual Machine Platform")
+* Boot the PC
+* [Download DD4W v.2.3.0.4](https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2304)
+    * Choose to enable WSL2  
+    ![Enable WSL2](../img/2020/2020-09-06-OpenFaaS12.PNG "Enable WSL2")
+    * Boot the PC
+    * WSL2 is now enabled  
+    ![WSL2 enabled](../img/2020/2020-09-06-OpenFaaS15.PNG "WSL2 enabled")  
+    * Now you are told to [Update the WSL2 Linux kernel](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel)  
+    ![Update Linux kernel](../img/2020/2020-09-06-OpenFaaS13.PNG "Update Linux kernel")  
+    * From the link you enter a web, where you can download the X64 update. When you execute it, you see  
+    ![WSL2 Update wiz](../img/2020/2020-09-06-OpenFaaS14.PNG "WSL2 Update wiz")  
+    * Now press `Restart` - This restarts DD4W - and now it will come up in state `runnning`. You can see it in the taskbar.
+    ![DD4W running](../img/2020/2020-09-06-OpenFaaS17.PNG "DD4W running")  
+    * There is a new `virtual network adapter (WSL)`. Before - with Hyper-V there were two: Default switch and DockerNAT  
+    ![WSL virtual network adapter](../img/2020/2020-09-06-OpenFaaS19.PNG "WSL virtual network adapter")</code>bash
+    # Check that Docker is installed
+    docker -v
+    # Docker version 19.03.12, build 48a66213fe</p>
+<div class="highlight"><pre><span></span><span class="cp"># Check WSL modes (1 or 2):</span>
+<span class="n">wsl</span> <span class="o">-</span><span class="n">l</span> <span class="o">-</span><span class="n">v</span>
+<span class="cp">#   NAME                   STATE           VERSION</span>
+<span class="cp"># * docker-desktop         Running         2</span>
+<span class="cp">#   docker-desktop-data    Running         2</span>
+<span class="err">```</span>
+<span class="o">*</span> <span class="n">Visual</span> <span class="n">Studio</span> <span class="n">Code</span> <span class="n">recommends</span> <span class="n">to</span> <span class="n">install</span> <span class="p">[</span><span class="n">Remote</span> <span class="o">-</span> <span class="n">WSL</span> <span class="n">extension</span><span class="p">](</span><span class="nl">https</span><span class="p">:</span><span class="c1">//marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)  </span>
+<span class="o">!</span><span class="p">[</span><span class="n">VSCode</span> <span class="n">WSL</span> <span class="n">extension</span><span class="p">](..</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="n">OpenFaaS16</span><span class="p">.</span><span class="n">PNG</span> <span class="s">&quot;VSCode WSL extension&quot;</span><span class="p">)</span>  
+<span class="o">*</span> <span class="n">This</span> <span class="n">enables</span> <span class="n">you</span> <span class="n">to</span> <span class="n">start</span> <span class="n">a</span> <span class="n">terminal</span> <span class="n">into</span> <span class="n">the</span> <span class="n">Linux</span> <span class="n">machines</span> <span class="n">running</span> <span class="k">in</span> <span class="n">WSL2</span>  
+<span class="o">!</span><span class="p">[</span><span class="n">Connect</span> <span class="n">to</span> <span class="n">WSL2</span> <span class="n">machines</span><span class="p">](..</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="n">OpenFaaS18</span><span class="p">.</span><span class="n">PNG</span> <span class="s">&quot;Connect to WSL2 machines&quot;</span><span class="p">)</span>  
+<span class="o">*</span> <span class="n">In</span> <span class="n">DD4W</span> <span class="n">settings</span> <span class="n">you</span> <span class="n">see</span> <span class="n">that</span> <span class="n">with</span> <span class="n">Win</span> <span class="n">Home</span> <span class="n">you</span> <span class="n">can</span> <span class="n">only</span> <span class="n">run</span> <span class="k">in</span> <span class="n">WSL2</span> <span class="p">(</span><span class="n">opposed</span> <span class="n">to</span> <span class="n">WSL1</span><span class="p">).</span> <span class="n">We</span> <span class="n">know</span> <span class="n">that</span> <span class="o">-</span> <span class="n">we</span> <span class="n">had</span> <span class="n">to</span> <span class="n">update</span> <span class="n">Win</span> <span class="mi">10</span> <span class="n">to</span> <span class="n">v2004</span> <span class="k">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">install</span> <span class="n">DD4W</span><span class="o">!</span>  
+<span class="o">!</span><span class="p">[</span><span class="n">DD4W</span> <span class="n">settings</span><span class="p">](..</span><span class="o">/</span><span class="n">img</span><span class="o">/</span><span class="mi">2020</span><span class="o">/</span><span class="mi">2020</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="n">OpenFaaS20</span><span class="p">.</span><span class="n">PNG</span> <span class="s">&quot;DD4W settings&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<h2>Connect to an Image Registry - DockerHub</h2>
+<p>You need an image registry to read base images from and to save your images to.
+I'll just use the public and free <strong>Docker hub</strong>.<br>
+If you don't have an account then create one.  </p>
+<p><img alt="SignIn to DockerHub" src="../img/2020/2020-09-06-OpenFaaS21.PNG" title="SignIn to DockerHub">  </p>
+<h2>Develop with Docker and WSL2</h2>
+<p>By using workflow <a href="https://docs.docker.com/docker-for-windows/wsl/#develop-with-docker-and-wsl-2">Develop with Docker and WSL2</a> then you work with VSCode in your default Linux distro running in a container in WSL2.<br>
+Using VSCode extention <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL</a> then you can get a remote CLI into your linux distro by typing <code>wsl</code> (and <code>exit</code> to get back locally).<br>
+From the remote CLI you startup vscode just as when you work locally: <code>code .</code></p>
+<h3>Choosing and installing a Distro</h3>
+<p>But you might be missing a WSL2 distro - I did:
+<img alt="Missing WSL2 distro" src="../img/2020/2020-09-06-OpenFaaS22.PNG" title="Missing WSL2 distro">.<br>
+There are a small <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice">selection of distros</a>.<br>
+Most of all I wanted a CenOS distro, since I want to have OpenShift in it and CentOS is the RedHat community version coming with OpenShift.<br>
+There is <a href="https://www.microsoft.com/da-dk/p/pengwin-enterprise/9n8lp0x93vcp?rtc=1&amp;activetab=pivot:overviewtab">Pengwin Enterprise</a> based on CentOS, but what - now Microsoft wants me to pay for Linúx???<br>
+And also Biz users are required to get a Red Hat Enterprise Linux subscription, when using it.<br>
+I'll go for 2nd best which is <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based">another RPM based distro</a>.<br>
+I can choose between Fedora and OpenSuse.
+Also <a href="https://www.microsoft.com/da-dk/p/fedora-remix-for-wsl/9n6gdm4k2hnc?rtc=1&amp;activetab=pivot:overviewtab">Fedora Remix for WSL</a> is not free....<br>
+So remaining is <a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;activetab=pivot:overviewtab">openSUSE-Leap-15-1</a>, which still is free.<br>
+Also there are two SUSE Enterprise for free.  </p>
+<h3>A little sidestep to OpenShift</h3>
+<p>As an alternative to have CentOS there are</p>
+<ul>
+<li><a href="https://www.openshift.com/blog/guide-to-installing-an-okd-4-4-cluster-on-your-home-lab">Guide to Installing an OKD 4.4 Cluster on your Home Lab</a><ul>
+<li><a href="https://itnext.io/guide-installing-an-okd-4-5-cluster-508a2631cbee">Installing an OKD 4.5 Cluster</a></li>
+</ul>
+</li>
+<li><a href="https://computingforgeeks.com/setup-openshift-origin-local-cluster-on-centos/">Setup Local OpenShift Origin (OKD) Cluster on CentOS 7</a></li>
+<li>Install <a href="https://www.okd.io/">OKD - The Community Distribution of Kubernetes that powers Red Hat OpenShift.</a> (before: openshift.org)</li>
+<li>Install <a href="https://kubic.opensuse.org/">openSUSE Kubic</a> container manager<ul>
+<li>Install <a href="https://hackweek.suse.com/17/projects/openshift-origin-on-kubic?">OpenShift Origin on Kubic</a></li>
+<li>Kubic is using <a href="https://cri-o.io/">cri-o</a> container runtime</li>
+</ul>
+</li>
+<li><a href="https://software.opensuse.org/package/rubygem-rhc">OpenShift Client Tools</a></li>
+<li><a href="https://computingforgeeks.com/how-to-setup-openshift-origin-on-ubuntu/">Setup OpenShift Origin (OKD) on Ubuntu 19.04/18.04/16.04</a></li>
+<li><a href="https://www.techrepublic.com/article/how-to-install-openshift-origin-on-ubuntu-18-04/">Install OpenShift Origin on Ubuntu 18.04</a></li>
+</ul>
+<p>And perhaps this could be of interest</p>
+<ul>
+<li>Yet another pod manager <a href="https://podman.io/getting-started/installation.html">Podman Installation</a></li>
+<li><a href="https://www.infoworld.com/article/3265059/10-kubernetes-distributions-leading-the-container-revolution.html">10 Kubernetes distributions leading the container revolution</a></li>
+</ul>
+<h3>Install a WSL distro</h3>
+<p><img alt="Installing WSL2 distro" src="../img/2020/2020-09-06-OpenFaaS23.PNG" title="Installing WSL2 distro"><br>
+Note: You have to give this WSL PC a default username and psw - just like your Windows box.  </p>
+<div class="highlight"><pre><span></span>wsl -l -v
+<span class="c1">#   NAME                   STATE           VERSION</span>
+<span class="c1"># * docker-desktop         Running         2      </span>
+<span class="c1">#   docker-desktop-data    Running         2      </span>
+<span class="c1">#   openSUSE-Leap-15-1     Running         1</span>
+</pre></div>
+
+
+<p>Hmm - Suse is not running wsl2 and is not default</p>
+<div class="highlight"><pre><span></span><span class="c1"># future WSLs will be v2</span>
+wsl --set-default-version <span class="m">2</span>
+
+<span class="c1"># set suse v2</span>
+wsl --set-version openSUSE-Leap-15-1 <span class="m">2</span>
+<span class="c1"># Conversion in progress, this may take a few minutes...</span>
+<span class="c1"># For information on key differences with WSL 2 please visit https://aka.ms/wsl2</span>
+<span class="c1"># Conversion complete.</span>
+
+<span class="c1"># so what is status now?</span>
+wsl -l -v
+<span class="c1">#   NAME                   STATE           VERSION</span>
+<span class="c1">#   openSUSE-Leap-15-1     Stopped         2</span>
+
+<span class="c1"># Please help</span>
+wsl -h
+<span class="c1"># Usage: wsl.exe [Argument] [Options...] [CommandLine]</span>
+<span class="c1"># Options:</span>
+<span class="c1">#     --distribution, -d &lt;Distro&gt;</span>
+<span class="c1">#         Run the specified distribution.</span>
+
+<span class="c1"># Arguments for managing Windows Subsystem for Linux:</span>
+<span class="c1">#     --set-default, -s &lt;Distro&gt;</span>
+<span class="c1">#         Sets the distribution as the default.</span>
+
+<span class="c1"># set suse default and start it</span>
+wsl --set-default openSUSE-Leap-15-1
+
+<span class="c1"># so what is status now?</span>
+wsl -l -v
+<span class="c1">#   NAME                   STATE           VERSION</span>
+<span class="c1"># * openSUSE-Leap-15-1     Running         2</span>
+
+<span class="c1"># Now you can enter your default SUSE wsl just by typing</span>
+wsl
+</pre></div>
+
+
+<h3>Note about sharing folders</h3>
+<p>Notice the local folder in Windows is mounted inside the Linux distro,<br>
+so you are able to work from Linux on your files in your Windows drive.</p>
+<div class="highlight"><pre><span></span>rasorwin@MYPC&gt; <span class="c1"># Now in Windows</span>
+rasorwin@MYPC❯ wsl <span class="c1"># Enter SUSE </span>
+rasorsuse@MYPC:/mnt/c/Users/rasorwin&gt; <span class="nb">cd</span> .. <span class="c1"># Notice current dir is in windows</span>
+rasorsuse@MYPC:/mnt/c/Users&gt; ls
+All Users  Default  Default User  desktop.ini  Public  rasorwin
+rasorsuse@MYPC:/mnt/c/Users&gt; <span class="nb">exit</span> <span class="c1"># Go back into windows</span>
+<span class="nb">logout</span>
+rasorwin@MYPC&gt;
+</pre></div>
+
+
+<p>Best practice for <strong>sharing folders</strong> are not sharing windows into linux, but instead <a href="https://docs.docker.com/docker-for-windows/wsl/#best-practices">sharing linux out to windows</a></p>
+<h3>Docker integration</h3>
+<p>Going back in docker - Press Refresh - then you will also see your OpenSuse installed<br>
+<img alt="WSL2 distro installed" src="../img/2020/2020-09-06-OpenFaaS24.PNG" title="WSL2 distro installed"><br>
+you don't have to enable integration there, since you have set it default and you have enabled integration to default distro.</p>
+<h2>Links</h2>
+<ul>
+<li><a href="https://docs.docker.com/docker-for-windows/install-windows-home/">Install Docker Desktop on Windows Home</a></li>
+<li><a href="https://docs.docker.com/docker-for-windows/faqs/">DD4W Frequently asked questions (FAQ)</a></li>
+<li>Deploy containers to cloud without k8s:<ul>
+<li><a href="https://docs.docker.com/engine/context/aci-integration/">Deploying Docker containers on Azure ACI</a></li>
+<li><a href="https://docs.docker.com/engine/context/ecs-integration/">Deploying Docker containers on Amazon ECS</a></li>
+</ul>
+</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/docker.html">#docker</a>
+      <a href="https://rasor.github.io/tag/hyperv.html">#hyperv</a>
+      <a href="https://rasor.github.io/tag/virtualbox.html">#virtualbox</a>
+      <a href="https://rasor.github.io/tag/openfaas.html">#openfaas</a>
+      <a href="https://rasor.github.io/tag/kitematic.html">#kitematic</a>
+      <a href="https://rasor.github.io/tag/wsl2.html">#wsl2</a>
+      <a href="https://rasor.github.io/tag/win10.html">#win10</a>
+      <a href="https://rasor.github.io/tag/virtualmachineplatform.html">#virtualmachineplatform</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

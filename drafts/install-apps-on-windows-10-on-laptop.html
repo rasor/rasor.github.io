@@ -192,7 +192,16 @@ node -v
 <h2>Brave browser</h2>
 <ul>
 <li>Download <a href="https://laptop-updates.brave.com/latest/winx64">Brave</a></li>
-<li><a href="https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#chrome">Plugins</a></li>
+<li><a href="https://github.com/rasor/awesome-tables/blob/master/awesome-plugins.md#chrome">Plugins</a><ul>
+<li>Password manager</li>
+</ul>
+</li>
+<li><a href="brave://settings/">Settings</a><ul>
+<li>Appearance: Hide Brave Rewards button</li>
+<li>Privacy and security: Turn off most things </li>
+<li>Autofill: Turn off everything </li>
+</ul>
+</li>
 </ul>
 <h2>Python</h2>
 <ul>
@@ -217,8 +226,80 @@ pip3 -V
 
 <h3>Pelican static site generator</h3>
 <ul>
-<li><a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html">Using Pelican blog on Github pages</a>
-.....</li>
+<li><a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html">Using Pelican blog on Github pages</a></li>
+<li>Remember: <code>pip install ghp-import</code></li>
+<li>Test build + publish</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># CMD</span>
+.<span class="se">\b</span>uild
+.<span class="se">\p</span>ublish <span class="s2">&quot;msg&quot;</span>
+</pre></div>
+
+
+<h2>Yubikey</h2>
+<p>For Timebased-OneTime-Passcodes (TOTP) using Yubikey:  </p>
+<ul>
+<li><a href="https://www.yubico.com/products/services-software/download/yubico-authenticator/">Yubico Authenticator</a></li>
+</ul>
+<h2>Apple iCloud</h2>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/p/icloud/9pktq5699m62?rtc=1">Get iCloud - Microsoft Store</a></li>
+</ul>
+<h2>pCloud</h2>
+<p>pCloud is an idrive.<br>
+It <a href="https://www.pcloud.com/how-to-install-pcloud-drive-windows.html?download=windows-10-64bit">integrates into filemanagers</a>.  </p>
+<h2>PDF reader</h2>
+<ul>
+<li><a href="https://get.adobe.com/uk/reader/">Adobe Acrobat Reader DC, free PDF viewer download</a></li>
+</ul>
+<h2>MovesLink</h2>
+<p>For uploading GPS data from Suunto GPS watches to <a href="http://www.movescount.com/">Movescount</a> </p>
+<ul>
+<li><a href="https://www.suunto.com/en-gb/Support/software-support/moveslink/">Moveslink</a></li>
+</ul>
+<h2>Keybase</h2>
+<p>Keybase is a cloud vault (a kind like password managers) using keys from devices for encryption (unlike the psw mgrs, that uses a master key).<br>
+This enables encrypted sharing between users and trust based on proofs written to social networks.  </p>
+<ul>
+<li><a href="https://keybase.io/docs/the_app/install_windows">Install Windows | Keybase Docs</a></li>
+</ul>
+<h2>Windows Terminal or Ps7</h2>
+<ul>
+<li><a href="https://www.hanselman.com/blog/HowToMakeAPrettyPromptInWindowsTerminalWithPowerlineNerdFontsCascadiaCodeWSLAndOhmyposh.aspx">How to make a pretty prompt in Windows Terminal with Powerline, Nerd Fonts, Cascadia Code, WSL, and oh-my-posh</a><ul>
+<li>Download: <a href="https://www.microsoft.com/en-us/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">Get Windows Terminal - Microsoft Store</a></li>
+</ul>
+</li>
+<li>PS7: <a href="https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-7">Installing PowerShell on Windows - PowerShell</a><ul>
+<li>Download: <a href="https://github.com/PowerShell/PowerShell/releases">PowerShell/PowerShell</a></li>
+</ul>
+</li>
+<li>In either terminal you can get git info by doing:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c"># as admin:</span>
+<span class="nb">Set-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
+<span class="c"># as any</span>
+<span class="nb">Install-Module</span> <span class="n">posh-git</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<span class="nb">Install-Module</span> <span class="n">oh-my-posh</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+<span class="c"># if ps core (6+, I think)</span>
+<span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSReadLine</span> <span class="n">-AllowPrerelease</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span> <span class="n">-SkipPublisherCheck</span>
+
+<span class="c"># edit ps1 profile:</span>
+<span class="n">notepad</span> <span class="nv">$PROFILE</span>
+<span class="c"># paste into file:</span>
+<span class="c">#---------------------</span>
+<span class="nb">Import-Module</span> <span class="n">posh-git</span>
+<span class="nb">Import-Module</span> <span class="n">oh-my-posh</span>
+<span class="nb">Set-Theme</span> <span class="n">Paradox</span>
+<span class="c">#---------------------</span>
+</pre></div>
+
+
+<h2>WSL2</h2>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/software-download/windows10">Download Windows 10 May 2020 Update (v 2004)</a><ul>
+<li>Click Udate Now</li>
+</ul>
+</li>
 </ul>
 <p>The end</p>
   </div>

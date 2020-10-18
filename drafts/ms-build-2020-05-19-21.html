@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="OnDemand events ----------------------- Microsoft Build 2020 - OnDemand Microsoft Build 2020 - Prerecorded Microsoft Build 2020 - Channel 9 Microsoft Build skilling sessions 2020-05-19 CEST 17:20 Empowering every developer, with Satya Nadella Satya Nadella @satyanadella Opportunities: Remote, Simulate, Automate, Pickup VSCode in Github PowerPlatform Azure AI (compute), Data (store), Arc (Infra) O365: Teams …" />
+<meta name="keywords" content="#arm, #winterm, #arc, #teams, #logicapps, #powerapps, #ai, #vscode, #windows">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="MS Build 2020-05-19 - 21"/>
+<meta property="og:description" content="OnDemand events ----------------------- Microsoft Build 2020 - OnDemand Microsoft Build 2020 - Prerecorded Microsoft Build 2020 - Channel 9 Microsoft Build skilling sessions 2020-05-19 CEST 17:20 Empowering every developer, with Satya Nadella Satya Nadella @satyanadella Opportunities: Remote, Simulate, Automate, Pickup VSCode in Github PowerPlatform Azure AI (compute), Data (store), Arc (Infra) O365: Teams …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/ms-build-2020-05-19-21.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#arm"/>
+<meta property="article:tag" content="#winterm"/>
+<meta property="article:tag" content="#arc"/>
+<meta property="article:tag" content="#teams"/>
+<meta property="article:tag" content="#logicapps"/>
+<meta property="article:tag" content="#powerapps"/>
+<meta property="article:tag" content="#ai"/>
+<meta property="article:tag" content="#vscode"/>
+<meta property="article:tag" content="#windows"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; MS Build 2020-05-19 - 21</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ms-build-2020-05-19-21">MS Build 2020-05-19 - 21</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h1>OnDemand events -----------------------</h1>
+<ul>
+<li><a href="https://mybuild.microsoft.com/sessions?t=%257B%2522from%2522%253A%25222020-05-19T00%253A00%253A00%252B02%253A00%2522%252C%2522to%2522%253A%25222020-05-21T23%253A59%253A00%252B02%253A00%2522%257D&amp;g=%255B%2522on-demand%2522%255D">Microsoft Build 2020 - OnDemand</a></li>
+<li><a href="https://mybuild.microsoft.com/sessions?f=%255B%257B%2522name%2522%253A%2522Pre-recorded%2520Session%2522%252C%2522facetName%2522%253A%2522sessionType%2522%257D%255D&amp;t=%257B%2522from%2522%253A%25222020-05-19T00%253A00%253A00%252B02%253A00%2522%252C%2522to%2522%253A%25222020-05-21T23%253A59%253A00%252B02%253A00%2522%257D">Microsoft Build 2020 - Prerecorded</a></li>
+<li><a href="https://channel9.msdn.com/Events/Build/2020">Microsoft Build 2020 - Channel 9</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLWZJrkeLOrbZREf9hLNrsWD6Uqo-_2v9B">Microsoft Build skilling sessions</a></li>
+</ul>
+<h2>2020-05-19 CEST</h2>
+<ul>
+<li>17:20 <a href="https://mybuild.microsoft.com/sessions/23912de2-1531-4684-b85a-d57ac30af09e?source=sessions">Empowering every developer, with Satya Nadella</a><ul>
+<li>Satya Nadella <a href="https://twitter.com/satyanadella">@satyanadella</a></li>
+<li>Opportunities: Remote, Simulate, Automate, Pickup</li>
+<li>VSCode in Github</li>
+<li>PowerPlatform</li>
+<li>Azure AI (compute), Data (store), Arc (Infra)</li>
+<li>O365: Teams (Fluid Framework), Teams Apps, Power Apps. In VS exec on Edge - then Teams open Teams</li>
+<li>Windows</li>
+</ul>
+</li>
+<li>18:00 <a href="https://mybuild.microsoft.com/sessions/871ef73f-f04a-405b-a0fa-01d7433067d1?source=sessions">Every developer is welcome, with Scott Hanselman and guests</a><ul>
+<li><a href="https://twitter.com/LuiseFreese/status/1262793506894028805/photo/1">https://twitter.com/LuiseFreese/status/1262793506894028805/photo/1</a></li>
+<li>Scott Hanselman <a href="https://twitter.com/shanselman">@shanselman</a><ul>
+<li>PowerToys to drag windows around in Windows</li>
+</ul>
+</li>
+<li>Kayla Cinnamon <a href="https://twitter.com/cinnamon_msft?lang=en">@cinnamon_msft</a><ul>
+<li>WinGet Package Mgr to install tools on windows</li>
+<li><code>&gt; winget install terminl</code> # install windows terminal<ul>
+<li><a href="https://devblogs.microsoft.com/commandline/windows-terminal-1-0/">Windows Terminal 1.0 | Windows Command Line</a></li>
+<li><a href="https://devblogs.microsoft.com/commandline/windows-package-manager-preview/">Windows Package Manager Preview | Windows Command Line</a><ul>
+<li><a href="https://github.com/microsoft/winget-cli">microsoft/winget-cli</a></li>
+<li><a href="https://github.com/microsoft/winget-pkgs">microsoft/winget-pkgs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>From winterm goto ubuntu
+<code>bash
+cd ~
+gimp dork.png # running in wsl2</code></li>
+<li><a href="https://medium.com/@gmusumeci/linux-on-windows-totally-how-to-install-wsl-1-and-wsl-2-307c9dd38a36">Linux on Windows? Totally! How to Install WSL 1 and WSL 2</a></li>
+<li><a href="https://docs.microsoft.com/en-us/windows/wsl/about">An overview on the the Windows Subsystem for Linux</a></li>
+<li>Teams<ul>
+<li>@codeconversations # a bot that executes the code  </li>
+<li>``` # three backticks - then write c# code e.g. Console.WriteLine("");  </li>
+<li>Code: <a href="https://github.com/CodeConversations/CodeConversations">CodeConversations/CodeConversations</a></li>
+<li><a href="https://blog.airsquirrels.com/screen-mirroring/how-to-share-your-iphone-ipad-android-tablet-screen-to-microsoft-teams-meetings">How to Share Your Android Screen to Teams Meetings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Nat Friedman <a href="https://twitter.com/natfriedman?lang=en">@natfriedman?lang=en</a><ul>
+<li>Github<ul>
+<li>CLI: <a href="https://octo-cli.github.io/octo-cli/#/">octo-cli</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Allison Buchholtz-Au <a href="https://twitter.com/allison_au">@allison_au</a><ul>
+<li>Github Codespaces = Spins up VSCode in docker in a browser<ul>
+<li><a href="https://github.com/features/codespaces">Codespaces</a></li>
+<li><a href="https://github.com/abuchholtzau/Olive-Tracker">Sample Code</a></li>
+<li>VSCode Live Share<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare">Plugin</a></li>
+<li><a href="https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vscode">Collaborate using Visual Studio Code -  Visual Studio Live Share - Visual Studio Live Share</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://dotnet.microsoft.com/download/dotnet-core/3.1">.NET Core 3.1</a> - incl Blazor</li>
+<li><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/zoomit">ZoomIt - Windows Sysinternals</a></li>
+<li>Maddy Leger <a href="https://twitter.com/maddyleger1">@maddyleger1</a><ul>
+<li>Xaml TwoPaneView</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>20:00 <a href="https://mybuild.microsoft.com/sessions/828faeb1-b24f-427f-bfce-078b8c0f4fd5?source=sessions">Building the tools to work and learn, with Rajesh Jha and guests</a><ul>
+<li>Rajesh Jha<ul>
+<li>O365 Teams + Office - Fluid Framwork - MS Graph (AD)</li>
+<li>Teams Apps</li>
+</ul>
+</li>
+<li>Archana Saseetharan<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension">Microsoft&#32;Teams&#32;Toolkit&#32;-&#32;Visual&#32;Studio&#32;Marketplace</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vsts.vss-services-teams">Microsoft&#32;Teams&#32;Integration&#32;-&#32;Visual&#32;Studio&#32;Marketplace</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1>Live / All events -----------------------</h1>
+<ul>
+<li><a href="https://mybuild.microsoft.com/sessions">Microsoft Build 2020</a></li>
+</ul>
+<h2>2020-05-20 CEST</h2>
+<ul>
+<li>18:00 <a href="https://mybuild.microsoft.com/sessions/9dc2abbd-d13a-448b-a17d-6342fc0ee0c2">Creating Trustworthy applications with Microsoft Identity</a></li>
+<li>05-21 11:15 <a href="https://mybuild.microsoft.com/sessions/ea019a5c-6599-4ae4-96fb-2050624db668?source=sessions">Creating Trustworthy applications with Microsoft Identity</a><ul>
+<li>Kyle Marsh<ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-overview">Learn about MSAL - Microsoft identity platform</a></li>
+<li><a href="https://twitter.com/msiddev">@msiddev</a></li>
+</ul>
+</li>
+<li>Jeff Sakowicz<ul>
+<li>MSAL libraries - e.g. js</li>
+<li>AppIds are like userids</li>
+<li>Integration Assistant</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>18:45 <a href="https://mybuild.microsoft.com/sessions/6c6ecd46-c39c-49d8-baed-3bc207bc5bec?source=sessions">The future of tech, with Kevin Scott and guests</a><ul>
+<li>Kevin Scott <a href="https://twitter.com/kevin_scott">@kevin_scott</a></li>
+<li>Book: <a href="https://news.microsoft.com/reprogramming-the-american-dream/">Reprogramming the American Dream</a></li>
+<li>Luis Vargas <a href="https://twitter.com/luisvargas_sql">@luisvargas_sql</a></li>
+<li>Lila Tretikov <a href="https://twitter.com/lilatretikov">@lilatretikov</a><ul>
+<li>Dapr <a href="https://cloudblogs.microsoft.com/opensource/2020/04/29/distributed-application-runtime-dapr-growth-community-update/">How Distributed Application Runtime (Dapr) has grown since its announcement</a></li>
+<li><a href="http://How Distributed Application Runtime (Dapr) has grown since its announcement">Dapr</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>19:30 <a href="https://mybuild.microsoft.com/sessions/e5c81ba2-c901-4293-a27a-ea9c000b58c2?source=schedule">Ask Scott Guthrie, with Scott Guthrie</a><ul>
+<li>Scott Guthrie <a href="https://twitter.com/scottgu">@scottgu</a></li>
+<li>Live Share in VS</li>
+</ul>
+</li>
+<li>20:30 <a href="https://mybuild.microsoft.com/sessions/4b904963-a22a-4046-b01b-85eb2c1f9732?source=schedule">Accelerating enterprise app development with Power Platform</a><ul>
+<li>James Phillips</li>
+<li>Julie Strauss<ul>
+<li>Deploy Legazy API as a Azure Function and publish in API Mgt</li>
+<li>Use the API in Power Apps</li>
+<li>Power Automate has an Form AI reader</li>
+<li>and records query a legazy system</li>
+</ul>
+</li>
+<li>Charles Lamanna <a href="https://twitter.com/clamanna">@clamanna</a><ul>
+<li>PowerAppsPortals has easy bot</li>
+<li>PowerVirtualAgent (PVA)</li>
+<li>Common Data Services for making TSQL queries</li>
+</ul>
+</li>
+<li>Kim Manis<ul>
+<li>PowerBI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>21:30 <a href="https://mybuild.microsoft.com/sessions/314e756d-b145-4d84-90c1-1aea9235df72?source=sessions">Build Python apps in Azure faster with Visual Studio Code</a><ul>
+<li>Nicolas Garfinkel <a href="https://twitter.com/NicolasGarfink1">@NicolasGarfink1</a> - <a href="https://www.linkedin.com/in/nicolas-garfinkel/">linkedin</a></li>
+<li>Can debug Az Function locally</li>
+<li>Can see what happens when func is deployed</li>
+<li>Code: <a href="https://github.com/Garfinkel/GithubDataVisTool">Garfinkel/GithubDataVisTool</a></li>
+</ul>
+</li>
+<li>00:15 <a href="https://mybuild.microsoft.com/sessions/274f3496-ee62-4e79-82ce-85b37dff48d6?source=schedule">Using Live Share for remote work in your team</a><ul>
+<li>Filisha Shah <a href="https://twitter.com/Filisha12">@Filisha12</a></li>
+<li>Live Share: VS, VSCode, Web</li>
+<li>Web: <a href="https://visualstudio.microsoft.com/services/live-share/">Visual Studio Live Share | Visual Studio - Visual Studio</a></li>
+<li>Vid: <a href="https://www.youtube.com/watch?v=9QXwSg9-2qQ&amp;feature=youtu.be">Collaboration made easy with Visual Studio Live Share</a></li>
+<li>Jon Chu <a href="https://twitter.com/jonwchu">@jonwchu</a></li>
+<li><a href="https://docs.microsoft.com/en-us/visualstudio/liveshare/use/vs">Collaborate using Visual Studio - Visual Studio Live Share - Visual Studio Live Share</a></li>
+</ul>
+</li>
+</ul>
+<h2>2020-05-21 CEST</h2>
+<ul>
+<li>01:00 <a href="https://mybuild.microsoft.com/sessions/c35e3f97-67ca-4927-817b-39af80f2bf5f?source=schedule">Azure SQL Game Changers for Developers</a><ul>
+<li>Anna Hoffman <a href="https://twitter.com/analyticanna">@analyticanna</a><ul>
+<li>SQL for returning Json API served by AzSQL</li>
+<li>Code: <a href="https://github.com/amthomas46/data-migration-app">amthomas46/data-migration-app</a><ul>
+<li>Github Action - Deploy: <a href="https://github.com/amthomas46/data-migration-app/actions/runs/109812041/workflow">amthomas46/data-migration-app</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Asad Khan <a href="https://twitter.com/asadikhan">@asadikhan</a><ul>
+<li>AzSQLServerless - Scale up when in use</li>
+<li>HyperScale</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>08:45 <a href="https://mybuild.microsoft.com/sessions/a49759ae-4de4-4d00-8b41-cfc96c3891bf?source=schedule">What’s new with Application Insights &amp; Azure Monitor</a><ul>
+<li>Evgeny Ternovsky<ul>
+<li><a href="https://info.microsoft.com/Azure-Monitor-Virtual-Series-On-Demand-Registration.html">Azure-Monitor-Virtual-Series-On-Demand-Registration</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/azure-monitor/">Azure Monitor documentation - Azure Monitor</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/monitor/suggested-skills">Skills readiness for cloud monitoring - Cloud Adoption Framework</a></li>
+<li><a href="https://customers.microsoft.com/en-us/search?sq=%22Azure%20Monitor%22&amp;ff=&amp;p=0&amp;so=story_publish_date%20desc">Customer Stories</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>10:15 <a href="https://mybuild.microsoft.com/sessions/0525094b-1fd2-4f69-bfd6-6d2fff6ffe5f">Making Infra as Code easy with the ARM Template Visualizer</a><ul>
+<li>Benjamin Coleman <a href="https://twitter.com/bencodegeek">@bencodegeek</a></li>
+<li>VS Code<a href="https://marketplace.visualstudio.com/items?itemName=bencoleman.armview">ARM Template Viewer</a></li>
+<li><a href="https://rc.portal.azure.com/#home">Microsoft Azure - with Preview features</a></li>
+<li><a href="https://sharepains.com/2020/04/20/power-apps-for-kids/">Microsoft Power Apps for Kids!</a></li>
+</ul>
+</li>
+<li>10:30 <a href="https://mybuild.microsoft.com/sessions/a85400e6-2dc7-4e45-b531-e35614b83108">Evaluate and optimize your costs using the Microsoft Azure Well-Architected Framework</a><ul>
+<li>Abdul Sheik <a href="https://twitter.com/SheikMicrosoft">@SheikMicrosoft</a><ul>
+<li><a href="https://docs.microsoft.com/en-us/azure/architecture/framework/">Microsoft Azure Well-Architected Framework - Microsoft Azure Well-Architected Framework introduction</a></li>
+<li><a href="https://docs.microsoft.com/en-us/assessments/?mode=pre-assessment&amp;session=local">Welcome to Microsoft Assessments</a></li>
+</ul>
+</li>
+<li>Alex Agudelo</li>
+<li>Dayli Cost: Azure Cost Management PowerBI</li>
+</ul>
+</li>
+<li>11:15 <a href="https://mybuild.microsoft.com/sessions/26541c47-9712-4e1d-ae7a-d7e4acec40d2?source=sessions">The Journey to One .NET - Live</a><ul>
+<li>Scott Hanselman<ul>
+<li>VS webapp - run on WSL2 - deploy to Docker</li>
+</ul>
+</li>
+<li>Scott Hunter<ul>
+<li><strong>.NET Multi-platform App UI</strong> (MAUI) - Xamarin evolution. On top of <strong>.NET Platform</strong></li>
+<li>Plug in Ios - Use Reflector to see screeen on PC - Debug from VS - run on IPhone</li>
+<li><a href="https://www.dotnetconf.net/">.NET Conf 2020</a></li>
+<li>Longer vid: <a href="https://channel9.msdn.com/Events/Build/2020/BOD106?ocid=AID3012654&amp;WT.mc_id=Build2020_pmmsocialblog">The Journey to One .NET</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>11:45 <a href="https://mybuild.microsoft.com/sessions/378b11a7-d70a-4f85-beec-3cd961f4a3c8">Runtime Encryption with Azure Confidential Computing</a><ul>
+<li>Manuel Costa<ul>
+<li>DLTs</li>
+<li>TEE</li>
+<li>2017: <a href="https://azure.microsoft.com/en-us/blog/introducing-azure-confidential-computing/">Introducing Azure confidential computing</a></li>
+<li>Home: <a href="https://azure.microsoft.com/en-us/solutions/confidential-compute/">Azure Confidential Computing | Microsoft Azure</a></li>
+<li>OpenEnclace SDK <a href="https://github.com/openenclave/openenclave">openenclave</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>12:00 <a href="https://mybuild.microsoft.com/sessions/99d6f90a-c8fc-4b4f-b326-52add6d2f1c9?source=sessions">Building zero friction apps on Teams with SSO and Graph</a><ul>
+<li>Nick Kramer<ul>
+<li>Teams SSO tabs<ul>
+<li><a href="https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/authentication/auth-aad-sso">Single Sign-On - Teams</a></li>
+<li>Code: <a href="https://github.com/lokimeyburg/msteams-auth-sample">lokimeyburg/msteams-auth-sample</a></li>
+<li>Vid: <a href="https://www.youtube.com/watch?v=B3wRYkIfFSM&amp;feature=youtu.be">SK106 Tips for Teams developers: Authentication and proactive messaging</a></li>
+</ul>
+</li>
+<li>Teams RSC<ul>
+<li><a href="https://docs.microsoft.com/en-us/microsoftteams/platform/graph-permissions/resource-specific-consent">Resource specific consent in Teams - Teams</a></li>
+<li><a href="https://docs.microsoft.com/en-us/MicrosoftTeams/resource-specific-consent">Resource-specific consent in Microsoft Teams - Microsoft Teams</a></li>
+</ul>
+</li>
+<li>More<ul>
+<li>Vid: <a href="https://www.youtube.com/watch?v=DO-erPYtG1M&amp;feature=youtu.be">SK102 What&#39;s new with Microsoft Teams as a platform</a></li>
+<li>Vid: <a href="https://www.youtube.com/watch?v=jDB2OqSApmk&amp;feature=youtu.be">SK109 A blueprint for building trustworthy apps that reach millions of users</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>13:00 <a href="https://mybuild.microsoft.com/sessions/1d1c0b95-2dc0-48c6-b400-d20abf3de560?source=sessions">Build messaging and integration apps on Azure</a><ul>
+<li>Matthew Farmer <a href="https://twitter.com/matthewfarmer">@matthewfarmer</a><ul>
+<li>Logic app<ul>
+<li>Scope # like try-catch<ul>
+<li>ServiceBus - Parse JSON - use know json to create schema</li>
+<li>Call custom REST</li>
+<li>Send Email</li>
+</ul>
+</li>
+<li>ServiceBus - Complete</li>
+</ul>
+</li>
+<li>ServiceBus Explorer: Send Msg in</li>
+<li>Runs History to debug</li>
+<li>Coming: VSCode LogicApps editor</li>
+<li>Vid: <a href="https://channel9.msdn.com/Events/Build/2020/BOD127">Build scalable hybrid integration applications that run anywhere with Azure Logic Apps and API Management</a></li>
+</ul>
+</li>
+<li>Kevin Lam <a href="https://twitter.com/kevinlam_msft">@kevinlam_msft</a></li>
+</ul>
+</li>
+<li>13:30 <a href="https://mybuild.microsoft.com/sessions/d99aae19-cb5e-474c-a05a-12cbb8dd70aa">Building a Financial Markets Intelligence Platform in the Cloud</a><ul>
+<li>Kevin Smith<ul>
+<li>Redis for Pub/Sub bus - using StackExchange lib</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>13:45 <a href="https://mybuild.microsoft.com/sessions/6776b8ab-7f6a-45f2-afd4-5100d394f3e7?source=sessions">Building scalable and secure applications with Azure Cosmos DB</a><ul>
+<li>Deborah Chen <a href="https://twitter.com/chendeborah?lang=en">@chendeborah</a><ul>
+<li>Cosmos DB Notebooks</li>
+</ul>
+</li>
+<li>Thomas Weiss</li>
+</ul>
+</li>
+<li>14:00 <a href="https://mybuild.microsoft.com/sessions/333d653f-cc69-4f46-85e6-45b47296f847?source=sessions">PowerShell Everywhere for Microsoft Graph</a><ul>
+<li>Darrel Miller <a href="https://twitter.com/darrel_miller?lang=en">@darrel_miller</a></li>
+<li>OpenApi -&gt; AutoRest <ul>
+<li>AutoRest team are building CLI generator - next terraform support</li>
+<li>More: Desired State mechanism</li>
+</ul>
+</li>
+<li>https://aka.ms/devicelogin + <code>connect-graph</code></li>
+<li>Code: <a href="https://github.com/microsoftgraph/msgraph-sdk-powershell">microsoftgraph/msgraph-sdk-powershell</a></li>
+</ul>
+</li>
+<li>14:15 <a href="https://mybuild.microsoft.com/sessions/cbc67739-c951-4475-9a86-534b39bb2bea?source=sessions">Azure Security Center for Developers</a><ul>
+<li>Gilad Elyashar</li>
+</ul>
+</li>
+<li>14:30 <a href="https://mybuild.microsoft.com/sessions/38bc37b4-d263-49eb-8aa0-56f3146b3aff?source=sessions">Unlock speech interactions and insights in 10 minutes</a><ul>
+<li>Oliver Scholz <a href="https://twitter.com/olischolz">@olischolz</a></li>
+<li><a href="https://speech.microsoft.com/">Speech Studio - Microsoft Azure</a></li>
+<li>Speech to text<ul>
+<li>Custom speech: Upload training text and its audio - create model - test model</li>
+</ul>
+</li>
+<li>Text to speech<ul>
+<li>Tune voice - e.g. cheerful</li>
+<li>Custom nueral voice</li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/speech-sdk?tabs=windows%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio">About the Speech SDK - Speech service - Azure Cognitive Services</a></li>
+<li>CLI: <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/spx-overview">SPX - Speech service - Azure Cognitive Services</a></li>
+<li><a href="https://azure.microsoft.com/en-us/services/cognitive-services/speaker-recognition/">Speaker Recognition</a><ul>
+<li>Can be used in call center</li>
+</ul>
+</li>
+<li>AI is running in cloud</li>
+<li>Pronounciation Assessment</li>
+</ul>
+</li>
+<li>15:00 <a href="https://mybuild.microsoft.com/sessions/6eca5580-bbc6-4f6f-aee5-617ac2791a12?source=sessions">Researching, Building &amp; Consuming Responsible ML</a><ul>
+<li>Amy Boyd</li>
+<li>Willem Meints <a href="https://twitter.com/willem_meints">@willem_meints</a><ul>
+<li><a href="https://globalai.community/">Global AI Community - Connecting AI communities across the world</a></li>
+</ul>
+</li>
+<li>Hanna Wallach <a href="https://twitter.com/hannawallach">@hannawallach</a><ul>
+<li><a href="https://www.microsoft.com/en-us/research/publication/fairlearn-a-toolkit-for-assessing-and-improving-fairness-in-ai/">Fairlearn: A toolkit for assessing and improving fairness in AI - Microsoft Research</a></li>
+<li>Vid: <a href="https://channel9.msdn.com/Shows/AI-Show/Building-fairer-AI-Systems-with-Fairlearn">Building fairer AI Systems with Fairlearn</a></li>
+</ul>
+</li>
+<li>Mehrnoosh Sameki <a href="https://www.linkedin.com/in/mehrnoosh-sameki-a2a02245/">linkedin</a><ul>
+<li><a href="https://www.microsoft.com/en-us/research/publication/interpretml-a-toolkit-for-understanding-machine-learning-models/">InterpretML: A toolkit for understanding machine learning models - Microsoft Research</a></li>
+<li><a href="https://github.com/interpretml/interpret">interpretml/interpret</a></li>
+<li>Vid: <a href="https://channel9.msdn.com/Shows/AI-Show/Machine-Learning-Interpretability-Toolkit">Machine Learning Interpretability Toolkit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>15:30 <a href="https://mybuild.microsoft.com/sessions/a1638103-16a8-4059-90ac-54c7e0dda8a2?source=sessions">Inspiring Next Gen Coders with Make Code</a><ul>
+<li>Scott Hanselman<ul>
+<li>Visual code editor - using lots of OSS editors</li>
+</ul>
+</li>
+<li><a href="https://www.microsoft.com/en-us/makecode">Microsoft MakeCode Computer Science Education</a><ul>
+<li><a href="https://www.mantisedu.io/">MANTISEdu</a><ul>
+<li>Used Climatag for IOT</li>
+</ul>
+</li>
+<li><a href="https://www.wunderground.com/">Local Weather Forecast, News and Conditions | Weather Underground</a><ul>
+<li>Send data to Weather Underground</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Louanne Murphy</li>
+</ul>
+</li>
+</ul>
+<h1>Other</h1>
+<ul>
+<li><a href="https://startups.microsoft.com/en-us/">Microsoft for Startups – Building Startups | Microsoft for Startups</a></li>
+<li>https://github.com/michaelfery/dotnetexplorer</li>
+<li>https://github.com/summitech/gitexplorer</li>
+<li>https://github.com/sdras/array-explorer</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/arm.html">#arm</a>
+      <a href="https://rasor.github.io/tag/winterm.html">#winterm</a>
+      <a href="https://rasor.github.io/tag/arc.html">#arc</a>
+      <a href="https://rasor.github.io/tag/teams.html">#teams</a>
+      <a href="https://rasor.github.io/tag/logicapps.html">#logicapps</a>
+      <a href="https://rasor.github.io/tag/powerapps.html">#powerapps</a>
+      <a href="https://rasor.github.io/tag/ai.html">#ai</a>
+      <a href="https://rasor.github.io/tag/vscode.html">#vscode</a>
+      <a href="https://rasor.github.io/tag/windows.html">#windows</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

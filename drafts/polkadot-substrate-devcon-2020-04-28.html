@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="DevCon 2020-04-28: Substrate Blockchain Developer Conference | Sub0 Online Conference Discord Sub0 Online - Crowdcast Misc Polkadot lauching in may Example of a TEE: scs/substraTEE Overview of Substrate as a Framework - Fredrik Harrysson @fredhrson Blockchain and Shared Storytelling - Joshy Orndorff, Parity @JoshyOrndorff Github: JoshOrndorff Introduction - Substrate Recipes Seminar Offchain Workers - Tomasz …" />
+<meta name="keywords" content="#blockchain, #polkadot, #substrate, #rust">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Polkadot / Substrate DevCon 2020-04-28"/>
+<meta property="og:description" content="DevCon 2020-04-28: Substrate Blockchain Developer Conference | Sub0 Online Conference Discord Sub0 Online - Crowdcast Misc Polkadot lauching in may Example of a TEE: scs/substraTEE Overview of Substrate as a Framework - Fredrik Harrysson @fredhrson Blockchain and Shared Storytelling - Joshy Orndorff, Parity @JoshyOrndorff Github: JoshOrndorff Introduction - Substrate Recipes Seminar Offchain Workers - Tomasz …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/polkadot-substrate-devcon-2020-04-28.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#blockchain"/>
+<meta property="article:tag" content="#polkadot"/>
+<meta property="article:tag" content="#substrate"/>
+<meta property="article:tag" content="#rust"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Polkadot / Substrate DevCon 2020-04-28</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="polkadot-substrate-devcon-2020-04-28">Polkadot / Substrate DevCon 2020-04-28</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>DevCon<ul>
+<li>2020-04-28: <a href="https://sub0.parity.io/#program">Substrate Blockchain Developer Conference | Sub0 Online Conference</a></li>
+<li><a href="https://discordapp.com/channels/692678289138909255/692678289579311135">Discord</a></li>
+<li><a href="https://www.crowdcast.io/e/sub0-online/1">Sub0 Online - Crowdcast</a></li>
+</ul>
+</li>
+<li>
+<p>Misc</p>
+<ul>
+<li><a href="https://medium.com/web3foundation/the-polkadot-genesis-security-audits-hub-4d8b65e7f564">Polkadot lauching in may</a></li>
+<li>Example of a TEE: <a href="https://github.com/scs/substraTEE">scs/substraTEE</a></li>
+</ul>
+</li>
+<li>
+<p>Overview of Substrate as a Framework - Fredrik Harrysson <a href="https://twitter.com/fredhrson">@fredhrson</a></p>
+</li>
+<li>Blockchain and Shared Storytelling - Joshy Orndorff, Parity<ul>
+<li><a href="https://twitter.com/JoshyOrndorff">@JoshyOrndorff</a></li>
+<li>Github: <a href="https://github.com/joshorndorff">JoshOrndorff</a></li>
+<li><a href="https://substrate.dev/recipes/">Introduction - Substrate Recipes</a></li>
+<li><a href="https://www.substrate.io/seminar/">Seminar</a></li>
+</ul>
+</li>
+<li>Offchain Workers - Tomasz Drwięga <a href="https://twitter.com/tomusdrw">@tomusdrw</a>, Rakan Al-Hneiti, Pozdrowienia z Polski, Igor Matuszewski, Bernhard Schuster<ul>
+<li><a href="https://www.youtube.com/watch?v=rwzvRi1JkWU">Intro to Substrate Off-Chain Workers with Joe Petrowski and Tomasz Drwięga</a></li>
+<li><a href="https://www.youtube.com/watch?v=t38opH5Et0E">Substrate Off-chain Workers - Tomasz Drwięga</a></li>
+</ul>
+</li>
+<li>Rust: Lifetimes, Traits, and Generics - Maciej Hirsz<ul>
+<li><a href="https://twitter.com/maciejhirsz">https://twitter.com/maciejhirsz</a></li>
+<li><a href="https://github.com/maciejhirsz">maciejhirsz - Overview</a></li>
+<li><a href="https://github.com/maciejhirsz/sub0_examples">maciejhirsz/sub0_examples</a></li>
+</ul>
+</li>
+<li>Weights Systems - Gavin Wood</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/blockchain.html">#blockchain</a>
+      <a href="https://rasor.github.io/tag/polkadot.html">#polkadot</a>
+      <a href="https://rasor.github.io/tag/substrate.html">#substrate</a>
+      <a href="https://rasor.github.io/tag/rust.html">#rust</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Download Erl REPL: Erlang Programming Language Download a prebuild version e.g. http://erlang.org/download/otp_win64_23.0.1.exe Put erl in your path - Run CMD as admin SETX PATH &#34;%PATH%;%ProgramFiles%\erl-23.0.1\bin&#34; /M Verify install: ```bash erl Eshell V11.0.1 1&gt; ``` Erl Webserver: Nine …" />
+<meta name="keywords" content="#erlang, #elixir, #cli, #beam">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Erlang"/>
+<meta property="og:description" content="Download Erl REPL: Erlang Programming Language Download a prebuild version e.g. http://erlang.org/download/otp_win64_23.0.1.exe Put erl in your path - Run CMD as admin SETX PATH &#34;%PATH%;%ProgramFiles%\erl-23.0.1\bin&#34; /M Verify install: ```bash erl Eshell V11.0.1 1&gt; ``` Erl Webserver: Nine …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/erlang.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#erlang"/>
+<meta property="article:tag" content="#elixir"/>
+<meta property="article:tag" content="#cli"/>
+<meta property="article:tag" content="#beam"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Erlang</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="erlang">Erlang</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>Download <ul>
+<li>Erl REPL: <a href="https://www.erlang.org/downloads">Erlang Programming Language</a><ul>
+<li>Download a prebuild version e.g. http://erlang.org/download/otp_win64_23.0.1.exe</li>
+<li>Put erl in your path - Run CMD as admin
+<code>SETX PATH "%PATH%;%ProgramFiles%\erl-23.0.1\bin" /M</code></li>
+<li>Verify install: 
+```bash
+erl</li>
+</ul>
+<h1>Eshell V11.0.1</h1>
+<h1>1&gt;</h1>
+<p>```</p>
+</li>
+<li>Erl Webserver: <a href="https://ninenines.eu/docs/en/cowboy/2.6/guide/">Nine Nines: Cowboy User Guide</a><ul>
+<li>Code: <a href="https://github.com/ninenines/cowboy">ninenines/cowboy</a></li>
+</ul>
+</li>
+<li>Erl Webserver: <a href="http://yaws.hyber.org/">Yaws</a><ul>
+<li>Linux: <code>apt-get install yaws</code></li>
+<li>Windows: <a href="http://yaws.hyber.org/download/windows/">/download/windows/</a></li>
+<li>Verify install: 
+```bash
+yaws --help
+yaws --version</li>
+</ul>
+<h1>Yaws 2.0.4</h1>
+<p>```</p>
+</li>
+<li>Erl WebFramework: <a href="http://chicagoboss.org/">Chicago Boss: The Erlang Web Framework</a></li>
+<li>Erl WebFramework/AppServer: <a href="https://synrc.com/apps/n2o/doc/web/">N2O</a><ul>
+<li>Erlang JavaScript Parse Transform</li>
+<li>SSR with Erl on cli and srv</li>
+<li>Offline cli</li>
+<li>Cowboy Rest API</li>
+<li>Nitrogen DSL templates</li>
+</ul>
+</li>
+<li>Erl <strong>AVZ</strong> authorization library</li>
+<li>Erl key-value storages access library <strong>KVS</strong></li>
+<li>Erl <strong>MQS</strong> Message Bus client library (gproc, emqttd)</li>
+<li>Erl Webserver lib: <a href="https://github.com/mochi/mochiweb">mochi/mochiweb</a></li>
+<li>Erl Package Manager: <a href="https://www.rebar3.org/docs">Rebar3</a><ul>
+<li>Code: <a href="https://www.rebar3.org/docs">Getting Started</a></li>
+</ul>
+</li>
+<li>Elixir WebFramework: <a href="https://www.phoenixframework.org/">Phoenix Framework</a></li>
+</ul>
+</li>
+<li>QuickStarts<ul>
+<li><a href="https://erlang.org/doc/index.html">Erlang/OTP 23.0</a></li>
+<li><a href="https://www.erlang.org/docs">Erlang Programming Language</a></li>
+<li><a href="https://erlang.org/doc/getting_started/users_guide.html">Erlang -- Getting Started With Erlang</a></li>
+<li><a href="https://erlang.org/doc/design_principles/users_guide.html">Erlang -- OTP Design Principles</a></li>
+<li><a href="https://www.slideshare.net/nashjain/erlang-from-behing-the-trenches-by-francesco-cesarini">Erlang from behing the trenches by Francesco Cesarini</a></li>
+<li><a href="https://www.youtube.com/watch?v=OCkL9z8IxOI">Learning Erlang - Easier than you think</a></li>
+<li>Elixir <a href="https://elixir-lang.org/getting-started/processes.html">Processes</a></li>
+<li>Elixir Build tool: <a href="https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html">Introduction to Mix</a></li>
+</ul>
+</li>
+<li>BEAM (Erlang VM)<ul>
+<li><a href="https://en.wikipedia.org/wiki/BEAM_(Erlang_virtual_machine)">BEAM (Erlang virtual machine) - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comparison_of_application_virtualization_software">Comparison of application virtualization software - Wikipedia</a></li>
+<li><a href="http://www.cs-lab.org/historical_beam_instruction_set.html">Erlang BEAM Instruction Set</a></li>
+<li><a href="https://medium.com/flatiron-labs/elixir-and-the-beam-how-concurrency-really-works-3cc151cddd61">Elixir and The Beam: How Concurrency Really Works</a></li>
+<li>Tooling Mix instead of Rebar</li>
+<li>Ruby like syntax</li>
+<li><a href="https://www.educba.com/elixir-vs-erlang/">Elixir vs Erlang | Learn the Key Differences of Elxir vs Erlang</a></li>
+<li><a href="https://medium.com/@devathon_/elixir-vs-erlang-2020-de0facb6cd92">Elixir vs Erlang 2020</a></li>
+</ul>
+</li>
+<li>OTP<ul>
+<li>Supervisors - branches</li>
+<li>Workers - leaves<ul>
+<li>Managers<ul>
+<li>Starts other workers</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Monitoring<ul>
+<li><a href="https://lethain.com/nagios-monitoring-for-erlang/">Nagios Monitoring for Erlang</a></li>
+<li><a href="https://github.com/lethain/nagios_erlang">lethain/nagios_erlang</a></li>
+<li><a href="https://www.youtube.com/watch?v=EHqs_RrVMoE">Monitoring and Preemptive Support The Road to Five Nines on the Beam - Francesco Cesarini</a></li>
+<li><a href="https://www.erlang-solutions.com/blog/erlang-elixir-devops-from-the-trenches-why-we-felt-the-need-to-formalize-operational-experience-with-the-beam-virtual-machine.html">Erlang &amp; Elixir DevOps From The Trenches - Why we felt the need to formalize operational experience with the BEAM virtual machine</a></li>
+</ul>
+</li>
+<li>Other Docs<ul>
+<li>Benchmarked all the existing modern web frameworks <a href="https://synrc.com/framework/web/">N2O</a></li>
+<li><a href="https://github.com/ChicagoBoss/ChicagoBoss/wiki/Comparison-of-Erlang-Web-Frameworks">Comparison of Erlang Web Frameworks</a></li>
+<li>Webserver theory and tests<ul>
+<li><a href="https://ninenines.eu/docs/en/cowboy/2.6/guide/modern_web/">Nine Nines: The modern Web</a></li>
+<li><a href="http://www.ostinelli.net/a-comparison-between-misultin-mochiweb-cowboy-nodejs-and-tornadoweb/">A comparison between Misultin, Mochiweb, Cowboy, NodeJS and Tornadoweb</a></li>
+</ul>
+</li>
+<li><a href="https://web.archive.org/web/20170615113350/https://esl-website-production.s3.amazonaws.com/uploads/document/file/77/The_route_to_the_successful_adoption_of_non-mainstream_programming_languages_-_Erlang_Solutions_Whitepaper_2017_.pdf">Wayback Machine</a></li>
+</ul>
+</li>
+<li>Events<ul>
+<li><a href="https://www.meetup.com/erlangusergroup/events/272331762/">BEAM Virtual Meetup: Come listen to SAŠA JURIĆ, author of Elixir in Action</a><ul>
+<li><a href="https://twitter.com/sasajuric">@sasajuric</a></li>
+<li><a href="https://twitter.com/FrancescoC">@FrancescoC</a></li>
+</ul>
+</li>
+<li>ClojErl: <a href="https://www.youtube.com/watch?v=ooN3AiF8qPQ&amp;feature=youtu.be">Virtual BEAM Meetup GMT, July 29 - Clojerl on the BEAM!</a></li>
+</ul>
+</li>
+<li>Plugin<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Remote&#32;-&#32;Containers&#32;-&#32;Visual&#32;Studio&#32;Marketplace</a></li>
+</ul>
+</li>
+</ul>
+<h3>Yaws</h3>
+<p>Readme:</p>
+<p>For just running yaws, it works pretty much the same as on UNIX.
+Commands that don't work are --id, --heart and some more
+Try yaws --help for available options.</p>
+<p>Just starting</p>
+<blockquote>
+<p>yaws -i </p>
+</blockquote>
+<p>Starts a basic yaws system with a yaws.conf taken from
+the install dir.</p>
+<p>The End</p>
+<h3>Blockchain</h3>
+<ul>
+<li><a href="https://www.erlang-solutions.com/blog/blockchain-2018-myths-vs-reality.html">Blockchain 2018: Myths vs Reality | Erlang Solution blog</a></li>
+<li><a href="https://www.erlang-solutions.com/blog/blockchain-no-brainer-ownership-in-the-digital-era.html">Blockchain No Brainer Ownership in the Digital Era</a></li>
+<li><a href="https://aeternity.com/">æternity - a blockchain for scalable, secure and decentralized æpps</a><ul>
+<li><a href="https://esl-web-static.s3.amazonaws.com/uploads/document/file/86/aeternity_Case_Study_-_blockchain_Erlang_scale_billions_users_2018___Erlang_Solutions.pdf">BLOCKCHAIN INNOVATOR ÆTERNITY CHOOSES ERLANG TO SCALE TO BILLIONS OF USERS</a></li>
+</ul>
+</li>
+</ul>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/erlang.html">#erlang</a>
+      <a href="https://rasor.github.io/tag/elixir.html">#elixir</a>
+      <a href="https://rasor.github.io/tag/cli.html">#cli</a>
+      <a href="https://rasor.github.io/tag/beam.html">#beam</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

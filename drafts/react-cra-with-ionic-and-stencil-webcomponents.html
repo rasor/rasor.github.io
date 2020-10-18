@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Intro CRA is create-react-app, which is a React starter template CLI tool. Ionic is a webcomponet library, which can be used by JS and TypeScript apps in modern browsers. Stencil is a webcomponet builder tool using TypeScript. It can also can build apps. CRA with Ionic Why is this cool …" />
+<meta name="keywords" content="#react, #cra, #ionic, #stencil, #webcomponents, #typescript">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="React CRA with Ionic and Stencil WebComponents"/>
+<meta property="og:description" content="Intro CRA is create-react-app, which is a React starter template CLI tool. Ionic is a webcomponet library, which can be used by JS and TypeScript apps in modern browsers. Stencil is a webcomponet builder tool using TypeScript. It can also can build apps. CRA with Ionic Why is this cool …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/react-cra-with-ionic-and-stencil-webcomponents.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#react"/>
+<meta property="article:tag" content="#cra"/>
+<meta property="article:tag" content="#ionic"/>
+<meta property="article:tag" content="#stencil"/>
+<meta property="article:tag" content="#webcomponents"/>
+<meta property="article:tag" content="#typescript"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; React CRA with Ionic and Stencil WebComponents</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="react-cra-with-ionic-and-stencil-webcomponents">React CRA with Ionic and Stencil WebComponents</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Intro</h1>
+<ul>
+<li><strong>CRA</strong> is create-react-app, which is a React starter template CLI tool.</li>
+<li><strong>Ionic</strong> is a webcomponet library, which can be used by JS and TypeScript apps in modern browsers.</li>
+<li><strong>Stencil</strong> is a webcomponet builder tool using TypeScript. It can also can build apps.</li>
+</ul>
+<h2>CRA with Ionic</h2>
+<p>Why is this cool?<br>
+* Ionic is a great mobile-first component lib
+* Ionic has great PWA features
+* Ionic can be build for native deployments</p>
+<h2>CRA with Stencil WebComponents</h2>
+<p>Why is this cool?<br>
+* You can within CRA use TypeScript to discover properties (attributes)
+* You can set typed objects to properties</p>
+<p>Why is it not so cool? (compared to using Stencil (or Angular) app as a webcomponent host)
+* In Stencil a typed object on an attribute will both be settable and gettable from the host directly in the custom element
+* Debugging webcomponents is not a good experience compared to debugging React components</p>
+<h1>Starter templates</h1>
+<div class="highlight"><pre><span></span><span class="c1"># CRA using TypeScript:</span>
+npx create-react-app my-cra-typescript-app --template typescript
+<span class="c1"># More: https://www.pluralsight.com/guides/typescript-react-getting-started</span>
+
+<span class="c1"># CRA using TypeScript and Ionic components:</span>
+npm install -g ionic
+ionic start my-ionic-react-app
+<span class="c1"># More: https://ionicframework.com/blog/announcing-ionic-react/</span>
+
+<span class="c1"># Clone an existing starter template</span>
+ionic start my-cloned-app https://github.com/ionic-team/ionic-conference-app
+
+<span class="c1"># Stencil Typescript-App - without React:</span>
+npm init stencil <span class="c1"># – Select app</span>
+<span class="c1"># More: https://stenciljs.com/docs/getting-started</span>
+
+<span class="c1"># Stencil Typescript-App with Ionic components - without React:</span>
+npm init stencil <span class="c1"># – Select ionic-pwa</span>
+<span class="c1"># More: https://stenciljs.com/docs/getting-started</span>
+
+<span class="c1"># Stencil Typescript-webcomponents:</span>
+npm init stencil <span class="c1"># – Select component</span>
+<span class="c1"># More: https://stenciljs.com/docs/getting-started</span>
+</pre></div>
+
+
+<p>The end</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/react.html">#react</a>
+      <a href="https://rasor.github.io/tag/cra.html">#cra</a>
+      <a href="https://rasor.github.io/tag/ionic.html">#ionic</a>
+      <a href="https://rasor.github.io/tag/stencil.html">#stencil</a>
+      <a href="https://rasor.github.io/tag/webcomponents.html">#webcomponents</a>
+      <a href="https://rasor.github.io/tag/typescript.html">#typescript</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

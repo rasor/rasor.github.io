@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Agenda IPFS Pinning Summit (May 7th - 8th) (2020) Organizers: IPFS Powers the Distributed Web The IPFS Team FileCoin Filecoin Documentation Making Storage Deals Filecoin Value Proposition Technical Barriers to Blockchain Filecoin Testnet Mining porepgraphicv2-watermark.png Filecoin: Proof-of-Replication, Power-Fault-Tolerance and Research Roadmap Skycoin/CXO vs FileCoin/IPFS Sponsor: Protocol Labs New …" />
+<meta name="keywords" content="#blockchain, #p2p, #ipfs, #filecoin, #textile">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="IPFS Pinning summit 2020-05-07"/>
+<meta property="og:description" content="Agenda IPFS Pinning Summit (May 7th - 8th) (2020) Organizers: IPFS Powers the Distributed Web The IPFS Team FileCoin Filecoin Documentation Making Storage Deals Filecoin Value Proposition Technical Barriers to Blockchain Filecoin Testnet Mining porepgraphicv2-watermark.png Filecoin: Proof-of-Replication, Power-Fault-Tolerance and Research Roadmap Skycoin/CXO vs FileCoin/IPFS Sponsor: Protocol Labs New …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/ipfs-pinning-summit-2020-05-07.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#blockchain"/>
+<meta property="article:tag" content="#p2p"/>
+<meta property="article:tag" content="#ipfs"/>
+<meta property="article:tag" content="#filecoin"/>
+<meta property="article:tag" content="#textile"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; IPFS Pinning summit 2020-05-07</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="ipfs-pinning-summit-2020-05-07">IPFS Pinning summit 2020-05-07</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+    </p>
+  </header>
+
+
+  <div>
+    <ul>
+<li>Agenda <a href="https://ipfspinningsummit.com/">IPFS Pinning Summit (May 7th - 8th) (2020)</a><ul>
+<li>Organizers:<ul>
+<li><a href="https://ipfs.io/">IPFS Powers the Distributed Web</a><ul>
+<li><a href="https://ipfs.io/team/">The IPFS Team</a></li>
+</ul>
+</li>
+<li><a href="https://filecoin.io/">FileCoin</a><ul>
+<li><a href="https://docs.filecoin.io/">Filecoin Documentation</a></li>
+<li><a href="https://docs.filecoin.io/how-to/store-making-storage-deals/">Making Storage Deals</a></li>
+<li><a href="https://discuss.filecoin.io/t/filecoin-value-proposition/788/2">Filecoin Value Proposition</a></li>
+<li><a href="https://protocol.ai/blog/technical-barriers-to-blockchain/">Technical Barriers to Blockchain</a></li>
+<li><a href="https://filecoin.io/blog/filecoin-testnet-mining/">Filecoin Testnet Mining</a><ul>
+<li><a href="https://filecoin.io/images/blog/porepgraphicv2-watermark.png">porepgraphicv2-watermark.png</a></li>
+</ul>
+</li>
+<li><a href="https://protocol.ai/blog/filecoin-proof-of-replication-power-fault-tolerance-research-roadmap/">Filecoin: Proof-of-Replication, Power-Fault-Tolerance and Research Roadmap</a></li>
+<li><a href="https://www.skycoin.com/blog/posts/skycoin-vs-ipfs/">Skycoin/CXO vs FileCoin/IPFS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Sponsor: <a href="https://protocol.ai/">Protocol Labs</a></li>
+<li>New Meet: <a href="https://protocol.zoom.us/j/97465931409">Join our Cloud HD Video Meeting now</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/ipfs/awesome-ipfs">ipfs/awesome-ipfs</a></li>
+<li>Chat / Links<ul>
+<li><a href="https://github.com/oduwsdl/ipwb">oduwsdl/ipwb</a></li>
+<li><a href="https://www.facebook.com/photo.php?fbid=10221054727735964&amp;set=a.1128009638538&amp;type=3&amp;theater">T&#xf5;nu Samuel</a></li>
+</ul>
+</li>
+<li>10:00 AM PT   Introduction <ul>
+<li>00 Molly Mackinlay <a href="https://twitter.com/momack28">@momack28</a></li>
+<li>Welcome to the IPFS Pinning Summit! The IPFS ecosystem has grown significantly in the last year, creating new opportunities for services and applications. In this talk, we discuss ecosystem growth, the 2020 project roadmap, and what we hope to accomplish from the inaugural IPFS Pinning Summit.</li>
+<li>Is P2P network</li>
+<li>Opera has default support, Brave some</li>
+<li>Use own node or gw to access IPFS network<ul>
+<li><a href="https://ipfs.github.io/public-gateway-checker/">Public IPFS Gateways</a></li>
+</ul>
+</li>
+<li>Use Pinning to let data remain on network, when your node is offline</li>
+</ul>
+</li>
+<li>10:40 AM PT IPFS 0.5<ul>
+<li>20 Steven Allen<ul>
+<li><a href="https://github.com/Stebalien">Stebalien</a></li>
+</ul>
+</li>
+<li>A presentation on IPFS 0.5, and the features and metrics relevant for pinning services and other infrastructure and service providers.</li>
+<li>Slides: <a href="https://docs.google.com/presentation/d/1a7TtjAxVL9_za1HNdiQmScKz31eQRAM_XzBv2aD7eEs/edit#slide=id.p1">go-ipfs 0.5</a></li>
+<li>The Code: <a href="https://github.com/ipfs/go-ipfs/releases/tag/v0.5.0">ipfs/go-ipfs</a></li>
+</ul>
+</li>
+<li>11:15 AM PT Pinning advanced data structures — Thread and Bucket pinning at Textile<ul>
+<li>40 Andrew Hill <a href="https://twitter.com/andrewxhill">@andrewxhill</a></li>
+<li><strong>Textile</strong>’s latest releases of <strong>ThreadsDB</strong> and <strong>Buckets</strong> come with new pinning capabilities that support dynamic datasets and IPNS addresses. In this talk, we will highlight how Threads, Buckets, and IPFS can enable new forms of pinning services.</li>
+<li>Slides: <a href="https://speakerdeck.com/andrewxhill/future-of-pinning-storing-threads-and-buckets-at-textile">Future of Pinning - storing Threads and Buckets at Textile</a></li>
+<li>About owning data</li>
+<li>Buckets are build on ThreadsDB</li>
+<li>Hubs are hosted hosted Theads services</li>
+</ul>
+</li>
+<li>11:45 AM PT Infura<ul>
+<li>60 Mike Godsey <a href="https://twitter.com/godofthesey?lang=en">@godofthesey</a></li>
+<li>Overview of the past, present, and a brief glimpse of the future for IPFS at Infura. IPFS is an essential part of the Infura Web3 development suite and we will talk about why we started to support it, how developers use it today, and what's to come.</li>
+<li><a href="https://infura.io/">Ethereum API | IPFS API Gateway | ETH Nodes as a Service | Infura</a><ul>
+<li><a href="https://blog.infura.io/dapp-frontend-network/">Building Dapp Frontends with React &amp; Network.js</a></li>
+<li><a href="https://infura.io/docs">Infura Documentation | Infura Documentation</a></li>
+<li><a href="https://docs.ipfs.io/reference/api/http/">IPFS Documentation - HTTP API</a></li>
+<li><a href="https://blog.infura.io/new-tools-for-running-ipfs-nodes-196de636f079/">Infura News | New Tools for Running IPFS Nodes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>12:15 PM PT Super Pinning with Fleek's New IPFS/S3 Product<ul>
+<li>80 Brett Shear <a href="https://twitter.com/brettshear?lang=en">@brettshear</a></li>
+<li>Learn how to use Fleek's new IPFS/S3 product to upload, pin &amp; fetch files to/from IPFS at lightning speed thanks to built in compression, image resizing, CDN, &amp; more!</li>
+<li>Easy IPFS deployments</li>
+<li>Pinning Host with cloudflare as CDN</li>
+<li><a href="https://fleek.co/">Fleek</a></li>
+<li><a href="https://blog.fleek.co/posts/fleek-nextJS">How to deploy a Next.js app onto IPFS using Fleek</a><ul>
+<li><a href="https://nextjs.org/">Next.js by Vercel - The React Framework</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>12:45 PM PT Is Da Vinci Responsible for Maintaining the Mona Lisa?<ul>
+<li>100 Kyle Tut <a href="https://twitter.com/kyletut?lang=en">@kyletut</a></li>
+<li>When data is created on IPFS, who is responsible for maintaining that data? In this talk, Kyle dives into data permanence and discusses how to keep the data behind a CID alive.</li>
+<li><a href="https://pinata.cloud/">Pinata - Add Files To IPFS Effortlessly</a><ul>
+<li>Is a Pinning service</li>
+<li>OffChain storage of NFTs<ul>
+<li>Instead of storing on web2 (urls data can change) then use IPFS (CIDs can't change)</li>
+<li>Who's paying for offchain data? Buyer (Mona Lisa)? Creator (Warrenties/tombstone)? (Game) Platform?</li>
+</ul>
+</li>
+<li>OpenSea - eBay for NFTs</li>
+<li>https://openbazaar.org/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>??? 1:15 PM PT Web3 products for the web2 mind<ul>
+<li>120 Greg Markou <a href="https://twitter.com/gregthegreek?lang=en">@gregthegreek</a></li>
+<li>Offering users new and innovative products without disrupting their daily routine is a challenge for most blockchain projects. Our goal is to offer users a real alternative to storage without users having to think twice about how it works. The goal is to build products for real users, not subject matter experts, and this talk aims to guide us to that path with Filecoin.</li>
+<li><a href="https://chainsafe.io/">ChainSafe Systems</a></li>
+</ul>
+</li>
+<li>1:45 PM PT Using Ceramic to control pinsets with DIDs<ul>
+<li>140 Joel Thorstensson <a href="https://twitter.com/oedth">@oedth</a></li>
+<li>Ceramic combines merkle linked data with decentralized identifiers to create a public network of mutable documents. In this talk we will explore how this can be used to let any DID control data pinsets.</li>
+<li><a href="https://3box.io/">Shared backend for Web3 | 3Box</a></li>
+<li>DID - Decentralized ID e.g. for creds.<ul>
+<li>DID foundation: <a href="https://identity.foundation/">DIF - Decentralized Identity Foundation</a></li>
+<li>Verifialble Credentials</li>
+</ul>
+</li>
+<li>Ceramic Document <ul>
+<li>Versions - must be signed by owner DID</li>
+<li>Owned by DID</li>
+<li><a href="https://www.ceramic.network/">Ceramic Network | A web without silos</a></li>
+<li>Example: <a href="https://github.com/ceramicnetwork/js-ceramic">ceramicnetwork/js-ceramic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>2:30 PM PT Blockchain domains + IPFS = Decentralized Websites<ul>
+<li>160 Bradley Kam <a href="https://www.linkedin.com/in/bradley-kam-444aa228/">bradley-kam-444aa228</a></li>
+<li>Traditional DNS has two points of failure - domain names require centralized custodians and content is stored on servers controlled by one company, meaning websites can be taken down. Unstoppable Domains builds domain registries on blockchains. These domains are not part of DNS and are stored in users’ Ethereum wallets. The user signs a message with their private key and writes their IPFS hash to the blockchain, giving them the power to put up or take down their website. Domains work in apps like MyEtherWallet, Trust Wallet, and Opera Browser.</li>
+<li><a href="https://docs.google.com/presentation/d/1-MXS7VdcB_vqCLTIef4pVIccWRynNh6cjeMbYt0zoTg/edit#slide=id.g6ef81f88c1_0_28">Slides</a></li>
+<li><a href="https://unstoppabledomains.com/about">Unstoppable Domains</a></li>
+</ul>
+</li>
+<li>3:00 PM PT Sending, Receiving, and Validating Filecoin Payments<ul>
+<li>180 Jonathan Schwartz <a href="https://twitter.com/j_schwartzz">@j_schwartzz</a> - Open Work Labs<ul>
+<li><a href="https://preview.autark.xyz/#/autarklabs/profile/0xA780b7eE456d6054f4ae77C6798FD0599464f740">Aragon</a></li>
+</ul>
+</li>
+<li>If you're an IPFS pinning service, infrastructure provider, or just interested in learning about accepting Filecoin as a form of payment without running your own Filecoin node, this talk is for you! First, we'll construct and send a Filecoin transaction together. Next, we'll locate the transaction on the network in a couple different ways, which might be useful for confirming a customer's payment. We'll wrap up by comparing the different wallet options to expect by Mainnet launch.</li>
+<li><a href="https://www.openworklabs.com/">Open Work Labs</a><ul>
+<li><a href="https://github.com/openworklabs/react-native-ipfs-http-client">openworklabs/react-native-ipfs-http-client</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/filecoin-project/lotus/blob/master/api/api_full.go#L57">filecoin-project/lotus</a></li>
+<li><a href="https://github.com/openworklabs/filecoin-web-wallet">openworklabs/filecoin-web-wallet</a></li>
+<li><a href="https://filecoin.io/blog/community-jonathan-schwartz-owl/">Jonathan Schwartz, Open Work Labs</a></li>
+</ul>
+</li>
+<li>3:30 PM PT Make Your Home Not Spy On You - Ucam: Indoor Camera with Full Data Sovereignty<ul>
+<li>200 Raullen Chai <a href="https://twitter.com/Raullen">@Raullen</a></li>
+<li>We're surrounded by billions of Internet-connected and intelligent devices, which are observing and recording us all the time. The dream of a smart, safe, and efficient future is threatened by intrusive surveillance. Ucam, powered by IoTeX, is the next-gen indoor camera that is user-centric, feature-packed, and fully private. By shifting data ownership from corporations to consumers, Ucam ensures value extracted from data is delivered to their rightful owner. This presentation introduces Ucam’s technology including blockchain identity, decentralized storage (IPFS), and e2e encryption.</li>
+<li><a href="https://docsend.com/view/5fyz9wk">Slides</a></li>
+<li><a href="https://www.iotex.io/">IoTeX Offical</a></li>
+<li><a href="http://ucam.iotex.io/">Home - Ucam</a></li>
+</ul>
+</li>
+<li>4:00 PM PT Day 1 Close<ul>
+<li>220 Juan Benet <a href="https://twitter.com/juanbenet">@juanbenet</a><ul>
+<li><a href="https://juan.benet.ai/">juan.benet.ai</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>10:00 AM PT Day 2 Keynote<ul>
+<li>220 Juan Benet</li>
+</ul>
+</li>
+<li>10:40 AM PT Pinning APIs &amp; Use Cases<ul>
+<li>240 Juan Benet</li>
+<li>In this presentation, we discuss current and potential pinning use cases and a pinning API to meet these envisioned needs.</li>
+<li>Slides: <a href="https://ipfs.io/ipfs/QmUQjFpjZYJYNTbpubBHwwgC12iup1ogQv3d8dBXxzjCq6/ipfs-pinning-api.compressed.pdf">https://ipfs.io/ipfs/QmUQjFpjZYJYNTbpubBHwwgC12iup1ogQv3d8dBXxzjCq6/ipfs-pinning-api.compressed.pdf</a></li>
+<li>API: <a href="https://app.swaggerhub.com/apis/lanzafame/ipfs-pinning-service/0.0.1#/">Build, Collaborate &amp; Integrate APIs | SwaggerHub</a></li>
+</ul>
+</li>
+<li>11:10 AM PT Pinning Service Integrations in IPFS Applications<ul>
+<li>260 Molly Mackinlay</li>
+<li><a href="https://www.figma.com/file/2bVNnjoOmxh4TtID9kzqEG/IPFS-Applications-Diagram">IPFS-Applications-Diagram</a></li>
+</ul>
+</li>
+<li>12:00 PM PT Exploring Filecoin Integrations<ul>
+<li>280 Pooja Shah <a href="https://twitter.com/poojaks_">@poojaks_</a> - <a href="https://www.linkedin.com/in/pooja01/">linkedin</a> - <a href="https://thedigitalmoneyforum.com/speakers/pooja-shah/">Digital Money Forum</a></li>
+<li>Retrieval minors becomes CDN</li>
+<li>Pinning Service is like pinning into memory</li>
+<li>Minors batch for storage</li>
+<li><a href="https://filecoin.onrender.com/">Prototype 0.0.1 : home</a></li>
+</ul>
+</li>
+<li>12:40 PM PT A Tour of Powergate<ul>
+<li>320 Andrew Hill</li>
+<li>The Powergate is an API driven solution for deploying multitiered storage across Filecoin and IPFS. Persistent storage on Filecoin allows rich storage configuration for data such as replication factor, miner selection, deal renewal, and repair. Network available storage is configurable and provided through a connected IPFS peer or pinning network.</li>
+<li>Aron</li>
+</ul>
+</li>
+<li>1:30 PM PT Interactive Sessions</li>
+<li>3:30 PM PT Summit Close</li>
+<li>https://docs.google.com/document/d/1t5oAN92wtZ1_A2R8y1CEILEGi5OpRQ4f-Sdah03XqCU/edit<ul>
+<li>See the slides of the IPFS Pinning API talk https://ipfs.io/ipfs/QmUQjFpjZYJYNTbpubBHwwgC12iup1ogQv3d8dBXxzjCq6/ipfs-pinning-api.compressed.pdf</li>
+<li>A previous proposal for the Pin RPC API https://app.swaggerhub.com/apis/lanzafame/ipfs-pinning-service/0.0.1#/</li>
+<li>Textile Threads Docs  https://docs.textile.io/threads/introduction/</li>
+<li>and the Paper https://docsend.com/view/gu3ywqi</li>
+</ul>
+</li>
+<li>Discussion Room Q&amp;A Breakout Session: https://protocol.zoom.us/j/94443651912<ul>
+<li>https://rl1-lotus-workshop.glitch.me/</li>
+</ul>
+</li>
+<li>(@jbenet) Pinning API Workshop 1hr (1:30pm) https://protocol.zoom.us/j/91027000462</li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/blockchain.html">#blockchain</a>
+      <a href="https://rasor.github.io/tag/p2p.html">#p2p</a>
+      <a href="https://rasor.github.io/tag/ipfs.html">#ipfs</a>
+      <a href="https://rasor.github.io/tag/filecoin.html">#filecoin</a>
+      <a href="https://rasor.github.io/tag/textile.html">#textile</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

@@ -28,13 +28,13 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="Authentication with FIDO U2F - Universal 2nd Factor Download Specifications - FIDO Alliance Universal 2nd Factor (U2F) Overview FIDO U2F JavaScript API FIDO Bluetooth® Specification v1.0 FIDO NFC Protocol Specification v1.0 U2F Security Key - Buy Guide - FIDO &amp; YubiKey FIDO® Certified products Applications Yubikey YubiKeys | Strong Two-Factor Authentication for Secure Login …" />
-<meta name="keywords" content="#authentication, #fido, #2fa, #nfc, #bluetooth, #yubikey">
+<meta name="description" content="Intro FIDO UAF uses shared keys using e.g. HOTP or TOTP meaning you can copy that key and loose it to fishing. FIDO U2F uses public keys. The private key stays in your device, which can be a USB Key, embedded in phone, watch or anything else. FIDO2 introduced …" />
+<meta name="keywords" content="#authentication, #fido, #2fa, #usb, #nfc, #bluetooth, #yubikey, #iot">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Authentication with FIDO"/>
-<meta property="og:description" content="Authentication with FIDO U2F - Universal 2nd Factor Download Specifications - FIDO Alliance Universal 2nd Factor (U2F) Overview FIDO U2F JavaScript API FIDO Bluetooth® Specification v1.0 FIDO NFC Protocol Specification v1.0 U2F Security Key - Buy Guide - FIDO &amp; YubiKey FIDO® Certified products Applications Yubikey YubiKeys | Strong Two-Factor Authentication for Secure Login …"/>
+<meta property="og:description" content="Intro FIDO UAF uses shared keys using e.g. HOTP or TOTP meaning you can copy that key and loose it to fishing. FIDO U2F uses public keys. The private key stays in your device, which can be a USB Key, embedded in phone, watch or anything else. FIDO2 introduced …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/authentication-with-fido.html"/>
 <meta property="og:type" content="article"/>
@@ -45,9 +45,11 @@
 <meta property="article:tag" content="#authentication"/>
 <meta property="article:tag" content="#fido"/>
 <meta property="article:tag" content="#2fa"/>
+<meta property="article:tag" content="#usb"/>
 <meta property="article:tag" content="#nfc"/>
 <meta property="article:tag" content="#bluetooth"/>
 <meta property="article:tag" content="#yubikey"/>
+<meta property="article:tag" content="#iot"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; Authentication with FIDO</title>
@@ -140,7 +142,15 @@
 
 
   <div>
-    <h2>Authentication with FIDO U2F - Universal 2nd Factor</h2>
+    <h1>Intro</h1>
+<p>FIDO <strong>UAF</strong> uses <strong>shared keys</strong> using e.g. <strong>HOTP or TOTP</strong> meaning you can copy that key and loose it to fishing.<br>
+FIDO <strong>U2F</strong> uses <strong>public keys</strong>. The private key stays in your device, which can be a USB Key, embedded in phone, watch or anything else.<br>
+<a href="https://fidoalliance.org/fido2/">FIDO2</a> introduced <strong>WebAuthn</strong></p>
+<ul>
+<li><a href="https://paulstamatiou.com/getting-started-with-security-keys/">https://paulstamatiou.com/getting-started-with-security-keys/</a></li>
+<li>Functions covered by <a href="https://www.yubico.com/products/compare-products-series/">Yubico</a></li>
+</ul>
+<h2>Authentication with FIDO U2F - Universal 2nd Factor</h2>
 <ul>
 <li><a href="https://fidoalliance.org/specifications/download/">Download Specifications - FIDO Alliance</a><ul>
 <li><a href="https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-overview-v1.2-ps-20170411.html">Universal 2nd Factor (U2F) Overview</a></li>
@@ -152,14 +162,25 @@
 </li>
 <li><a href="https://fidoalliance.org/certification/fido-certified-products/">FIDO® Certified products</a></li>
 </ul>
+<h3>FIDO2, WebAuthn &amp; CTAP</h3>
+<ul>
+<li><a href="https://fidoalliance.org/fido2/">FIDO2: Moving the World Beyond Passwords using WebAuthn &amp; CTAP</a></li>
+<li><a href="https://fidoalliance.org/fido2/fido2-web-authentication-webauthn/">FIDO2: Web Authentication (WebAuthn) - FIDO Alliance</a></li>
+<li><a href="https://www.w3.org/TR/webauthn/">Web Authentication: An API for accessing Public Key Credentials Level 1</a></li>
+</ul>
 <h2>Applications</h2>
 <h3>Yubikey</h3>
 <ul>
+<li><a href="https://www.yubico.com/blog/yubico-reveals-first-biometric-yubikey-at-microsoft-ignite/">Yubico Reveals First Biometric YubiKey at Microsoft Ignite | Yubico</a></li>
 <li><a href="https://www.yubico.com/products/yubikey-hardware/">YubiKeys | Strong Two-Factor Authentication for Secure Login | Yubico</a> - supports U2F and NFC (for mobile) and USB (for PC)</li>
 <li>Features: <a href="https://www.yubico.com/products/yubikey-hardware/compare-products-series/">Compare Products | Yubico</a></li>
 <li>Review 2018-09: <a href="https://www.pcmag.com/review/363889/yubico-yubikey-5-nfc">Yubico YubiKey 5 NFC</a></li>
 <li><a href="https://play.google.com/store/apps/details?id=com.yubico.yubioath&amp;hl=en">Yubico Authenticator - Apps on Google Play</a> - Uses OTP - not U2F</li>
 <li>Manage: <a href="https://www.yubico.com/products/services-software/download/">Downloads | Yubico</a></li>
+<li>Yubikey 5:<ul>
+<li>Limit <a href="https://support.yubico.com/support/solutions/articles/15000014174--yubikey-5-nfc">32 OATH-TOTP credentials</a> via Yubico Authenticator</li>
+</ul>
+</li>
 </ul>
 <p>Guides:</p>
 <ul>
@@ -176,6 +197,10 @@
 </ul>
 <p>News:</p>
 <ul>
+<li><a href="https://www.yubico.com/blog/yubico-authenticator-app-for-ios-now-supports-nfc/">Yubico Authenticator App for iOS Now Supports NFC | Yubico</a><ul>
+<li><a href="https://www.yubico.com/blog/yubico-ios-authentication-expands-to-include-nfc/">Yubico iOS Authentication Expands to Include NFC | Yubico</a></li>
+</ul>
+</li>
 <li>Lots of adds! <a href="https://www.tomshardware.com/news/yubikey-5-series-passwordless-authentication,37834.html">YubiKey 5 Series Arrives With Passwordless Authentication</a></li>
 </ul>
 <h3>Duo Authenticator (now Cisco)</h3>
@@ -193,12 +218,90 @@
 </ul>
 <h3>Other HW keys</h3>
 <ul>
-<li><a href="https://www.dongleauth.info/dongles/">USB Dongle Authentication</a></li>
 <li><a href="https://www.ftsafe.com/Products/FIDO/NFC">FIDO ®-NFC | FEITIAN</a></li>
 <li>Review 2018-09: <a href="https://www.pcmag.com/review/363644/google-titan-security-key-bundle">Google Titan Security Key Bundle</a></li>
 <li>Mobile as HW key: <a href="https://www.pcmag.com/news/367713/google-offers-built-in-security-key-feature-for-android-phon">Google Offers Built-In Security Key Feature for Android Phones</a></li>
 <li>Mobile as HW key: <a href="https://mashtips.com/use-android-smartphone-as-security-key/">How to Use Android Smartphone as a Security Key | Mashtips</a></li>
+<li><a href="https://github.com/hillbrad/U2FReviews">U2FReviews</a></li>
+<li><a href="https://www.dongleauth.info/dongles/">USB Dongle Authentication</a></li>
+<li><a href="https://www.zdnet.com/article/google-open-sources-the-firmware-needed-to-build-hardware-security-keys/">Google open-sources the firmware needed to build hardware security keys | ZDNet</a><ul>
+<li><a href="https://github.com/google/OpenSK">google/OpenSK</a></li>
+<li><a href="https://www.tockos.org/">Tock Embedded Operating System</a></li>
+<li>Case: <a href="https://www.thingiverse.com/thing:4132768">OpenSK Key Enclosure by RightBrainElectronics</a></li>
 </ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><a href="https://www.dongleauth.info/dongles/">Dongle</a></th>
+<th>OTP credentials</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://bluink.ca/buy">Bluink</a> key ($30)</td>
+<td><a href="https://bluink.ca/files/BluinkKeyUserGuide.pdf">Unlimited TOTP (in app)</a></td>
+<td>App not in eu</td>
+</tr>
+<tr>
+<td><a href="https://www.ftsafe.com/Products/FIDO/Single_Button_FIDO">Feitian</a> ePass FIDO2</td>
+<td><a href=""></a></td>
+<td>3 keys: USB-A/NFC, USB-C, BlueTooth</td>
+</tr>
+<tr>
+<td><a href="https://store.google.com/us/config/titan_security_key?hl=en-US">Google</a> Titan</td>
+<td><a href=""></a></td>
+<td>3 keys: USB-A/NFC ($25), USB-C ($40), BlueTooth ($35) - no OTP</td>
+</tr>
+<tr>
+<td>HyperSecu</td>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.nitrokey.com/#comparison">Nitrokey</a> PRO 2 ($49)</td>
+<td><a href="https://www.nitrokey.com/files/doc/Nitrokey_Pro_factsheet.pdf">5 TOTP</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.nitrokey.com/#comparison">Nitrokey</a> Storage 2 ($109)</td>
+<td><a href="https://www.nitrokey.com/files/doc/Nitrokey_Storage_factsheet.pdf">15 TOTP</a></td>
+<td></td>
+</tr>
+<tr>
+<td>OnlyKey</td>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+<tr>
+<td>Secalot</td>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://solokeys.com/">SoloKeys</a></td>
+<td><a href=""></a></td>
+<td>No OTP</td>
+</tr>
+<tr>
+<td>VASCO</td>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+<tr>
+<td>WWPass</td>
+<td><a href=""></a></td>
+<td></td>
+</tr>
+<tr>
+<td>Yubikey 5</td>
+<td><a href="https://support.yubico.com/support/solutions/articles/15000014174--yubikey-5-nfc">32 OATH-TOTP</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3>Who else supports U2F?</h3>
 <ul>
 <li>List: <a href="https://www.dongleauth.info/">USB Dongle Authentication</a></li>
@@ -348,8 +451,13 @@
 <li>Good for Google since Google don't support Yubikey NFC login via IPhone</li>
 </ul>
 </li>
-<li><a href="https://www.yubico.com/products/services-software/download/yubico-authenticator/">Yubico Authenticator | Yubico</a> - Not for IPhone</li>
+<li><a href="https://www.yubico.com/products/services-software/download/yubico-authenticator/">Yubico Authenticator | Yubico</a></li>
 <li><a href="https://duo.com/">Duo Trusted Access</a></li>
+</ul>
+<h2>Keys</h2>
+<p>Guides:</p>
+<ul>
+<li><a href="https://paulstamatiou.com/getting-started-with-security-keys/">getting-started-with-security-keys/</a></li>
 </ul>
 <h2>Other FIDO protocols</h2>
 <ul>
@@ -420,6 +528,7 @@ Tip: You could use two separeate 2FA devices for password manager and for the ap
 <li><a href="https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e">MyCrypto’s Security Guide For Dummies And Smart People Too</a></li>
 <li><a href="https://www.tomsguide.com/us/2fa-right-way,news-29824.html">You're Probably Doing 2FA Wrong: Here's the Right Way</a></li>
 <li><a href="https://www.pcmag.com/news/367026/google-phishing-attacks-that-can-beat-two-factor-are-on-the">Google: Phishing Attacks That Can Beat Two-Factor Are on the Rise</a></li>
+<li><a href="https://www.forbes.com/sites/zakdoffman/2019/10/07/fbi-issues-surprise-cyber-attack-warningurges-new-precautions/#636eccfa7efb">FBI Issues Surprise New Cyber Attack Warning: Multi-Factor Authentication Is Being Defeated</a></li>
 </ul>
 <p>The End</p>
   </div>
@@ -428,9 +537,11 @@ Tip: You could use two separeate 2FA devices for password manager and for the ap
       <a href="https://rasor.github.io/tag/authentication.html">#authentication</a>
       <a href="https://rasor.github.io/tag/fido.html">#fido</a>
       <a href="https://rasor.github.io/tag/2fa.html">#2fa</a>
+      <a href="https://rasor.github.io/tag/usb.html">#usb</a>
       <a href="https://rasor.github.io/tag/nfc.html">#nfc</a>
       <a href="https://rasor.github.io/tag/bluetooth.html">#bluetooth</a>
       <a href="https://rasor.github.io/tag/yubikey.html">#yubikey</a>
+      <a href="https://rasor.github.io/tag/iot.html">#iot</a>
     </p>
   </div>
 
