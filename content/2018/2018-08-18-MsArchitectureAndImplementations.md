@@ -1,8 +1,9 @@
 Title: Microsoft Architecture and Implementations
 Status: published
 Date: 2018-08-18 20:00
+Modified: 2020-10-18 10:00
 Category: Develop
-Tags: #microsoft, #architecture, #ebooks, #azure, #microservices, #faas
+Tags: #microsoft, #architecture, #ebooks, #azure, #microservices, #faas, #react, #ng, #ef, #dapper, #vue
 
 This blog will help you choosing the right design and corresponding code, when you build microsoft web and services in 2017 and 2018.
 
@@ -62,11 +63,15 @@ The drawings below gives you a fast overview of some web patterns you can use.
 
 If you want code to look at here is a list of samples with code.
 
-* N-tier: [Architect modern web applications with ASP.NET Core and Azure](https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/)  
+* N-tier (monolith): [Architect modern web applications with ASP.NET Core and Azure](https://docs.microsoft.com/en-us/dotnet/standard/modern-web-apps-azure-architecture/)  
 How to select appropriate frontend and backend
-    * eBook (2017, 115 pages): [Architecting Modern Web Applications with ASP.NET Core and Azure](https://aka.ms/webappebook)
+    * eBook core 3.1 (2020, 113 pages): [Architecting Modern Web Applications with ASP.NET Core and Azure](https://aka.ms/webappebook)
     * Code: [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)  
+    * Code: [CleanArchitecture](https://github.com/ardalis/cleanarchitecture)
     MVC and Razor Pages frontend, EF Code first
+* eBook (12-2019, 598 pages): [ASP.NET Core 3 and React](https://www.packtpub.com/product/asp-net-core-3-and-react/9781789950229)
+    * code: [PacktPublishing/ASP.NET-Core-3-and-React](https://github.com/PacktPublishing/ASP.NET-Core-3-and-React)  
+    React frontend, WebAPI, Dapper, OIDConnect
 * eBook (11-2017, 542 pages): [ASP.NET Core 2 and Angular 5](https://www.packtpub.com/application-development/aspnet-core-2-and-angular-5?utm_source=GitHub&utm_medium=repository&utm_campaign=9781788293600)
     * Code: [PacktPublishing/ASP.NET-Core-2-and-Angular-5](https://github.com/PacktPublishing/ASP.NET-Core-2-and-Angular-5)  
     Angular frontend, WebAPI, EF Code first, OIDConnect

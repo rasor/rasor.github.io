@@ -9,7 +9,9 @@ Tags: #csharp, #react, #netcore3
     * By [@carlrippon](https://twitter.com/carlrippon) 
     * on  github as [carlrip](https://github.com/carlrip)
     * home: [https://www.carlrippon.com/books/](https://www.carlrippon.com/books/)
-* Code: https://github.com/PacktPublishing/ASP.NET-Core-3-and-React
+* Code: 
+    * https://github.com/PacktPublishing/ASP.NET-Core-3-and-React
+    * Tested on Fork: https://github.com/rasor/ASP.NET-Core-3-and-React
 
 ## Install
 
@@ -72,6 +74,12 @@ dotnet run
 # info: Microsoft.Hosting.Lifetime[0]
 #       Content root path: \ASP.NET-Core-3-and-React\Chapter15\backend
 ```
+
+Test from SMSS:
+```sql
+  SELECT * FROM [QandA].[dbo].[Question]
+```
+
 Test from browser:
 * [http://localhost:5000/api/questions/](http://localhost:5000/api/questions/)
 * [http://localhost:5000/api/questions/?search=type](http://localhost:5000/api/questions/?search=type)
