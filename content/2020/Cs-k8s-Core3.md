@@ -116,9 +116,23 @@ docker stop mvcapp # notice - stopping by name
 docker rm mvcapp
 ```
 
+## Chapter 2 Create Your Application with Docker
 ### Develop your ASP.NET Core application using Docker
 
+Dotnet core commands:
+
+* dotnet new: Creates a new project from the specified template. If you want to create an MVC application, you can use dotnet new mvc.
+* dotnet restore: Restores all the NuGet dependencies of our application.
+* dotnet build: Builds our project.
+* dotnet run: Executes our project.
+* dotnet watch run: Runs our project and watches for file changes to rebuild and re-run it.
+* dotnet publish: Creates a deployable build (the .dll) of our project.
+
 ```bash
+mkdir -p cpt2/frontend
+cd cpt2/frontend
+dotnet new mvc
+
 ```
 ```bash
 ```
