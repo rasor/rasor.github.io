@@ -128,6 +128,8 @@ Dotnet core commands:
 * dotnet watch run: Runs our project and watches for file changes to rebuild and re-run it.
 * dotnet publish: Creates a deployable build (the .dll) of our project.
 
+Install VSCode plugin [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+
 ```bash
 # Terminal 1:
 # Create a C# gitignore file in the root
@@ -148,6 +150,21 @@ dotnet run
 # open a browser
 start https://localhost:5001/
 ```
+Stop the webserver in Teminal 1 with ctrl-c.  
+
+Now create `.vscode` files `launch.json` and `tasks.json`:  
+* Ctrl-shft-p # to open cmd palette
+* `.NET: Generate Assets for Build and Debug`
+    * Choose `ASPNET Core`, `linux` container and ports `5000, 5001`
+
+You can now goto runner with `ctrl-shft-d` and press run. You can hit breakpoints.  
+
+Now create a `Dockerfile`, `.dockerignore` and `docker-compose.yml`:  
+* In explorer put cursor on cpt2\frontend
+* Ctrl-shft-p # to open cmd palette
+* `Docker: Add Docker files to workspace`
+    * Choose `ASPNET Core`, `linux` container and ports `5000, 5001`, `yes` to create compose file
+
 ```bash
 ```
 ```bash
