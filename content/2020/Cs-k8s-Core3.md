@@ -129,12 +129,24 @@ Dotnet core commands:
 * dotnet publish: Creates a deployable build (the .dll) of our project.
 
 ```bash
+# Terminal 1:
+# Create a C# gitignore file in the root
+dotnet new gitignore
+
+# create a folder for MVC frontend
 mkdir -p cpt2/frontend
 cd cpt2/frontend
+# Create mvc web
 dotnet new mvc
 
+# Build an run a webserver
+dotnet build
+dotnet run
 ```
 ```bash
+# Terminal 2:
+# open a browser
+start https://localhost:5001/
 ```
 ```bash
 ```

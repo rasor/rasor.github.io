@@ -24,5 +24,9 @@ Tags: #k3s, #civo
 * Rancher
     * [K3s: Lightweight Kubernetes](https://k3s.io/)
     * Persistent volumes: [longhorn](https://github.com/longhorn/longhorn)
+    * [Quick Start](https://rancher.com/quick-start/)
+    * Training: [Kubernetes Online Master Class Series](https://rancher.com/kubernetes-master-class)
+        * [Kubernetes Master Class: Cluster Monitoring with Prometheus, Grafana and Alertmanager in Rancher 2.5 - Oct 27](https://info.rancher.com/kubernetes-master-class-oct27-2020)
+    * [All Things Open](https://allthingsopen.6connex.com/event/ATO/en-us/?mcc=ato-day-8am#!/RancherBooth)
 
 The End
