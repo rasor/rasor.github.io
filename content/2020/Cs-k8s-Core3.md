@@ -164,6 +164,9 @@ Now create a `Dockerfile`, `.dockerignore` and `docker-compose.yml`:
 * Ctrl-shft-p # to open cmd palette
 * `Docker: Add Docker files to workspace`
     * Choose `ASPNET Core`, `linux` container and ports `5000, 5001`, `yes` to create compose file
+    ![Add Dockerfile](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png)  
+    _(Img from Microsoft) Add Dockerfile in VSCode_
+
 
 ```dockerfile
 # Generated Dockerfile
@@ -312,10 +315,6 @@ docker build -t frontend2 .
 #  ---> 2ac048ea1f90
 # Step 17/17 : ENTRYPOINT ["dotnet", "frontend.dll"]
 #  ---> Running in 7359a524012b
-# Step 17/17 : ENTRYPOINT ["dotnet", "frontend.dll", "--urls", "'http://0.0.0.0:5000;https://0.0.0.0:5001'"]
-#  ---> Running in ef35cfccc80f
-# Step 17/17 : CMD dotnet watch run --urls "http://0.0.0.0:5000;https://0.0.0.0:5001"
-#  ---> Running in 7bcf38a65540
 # Removing intermediate container 7359a524012b
 #  ---> f7828ef4f47e
 # Successfully built f7828ef4f47e
@@ -331,7 +330,7 @@ docker images
 # mcr.microsoft.com/dotnet/core/sdk      3.1                 5fe503d51830        7 days ago          708MB 
 
 # Test run the img
-docker run -p 5000:5000 --name nfrontend2 -t frontend2
+docker run -p 5000:5000 --name nfrontend2 -t frontend2 -e "ASPNETCORE_URLS=http://+:5000"
 #docker run -p 5000:5000 -p 5001:5001 --name nfrontend2 -t frontend2
 #docker create -p 5000:5000 -p 5001:5001 --name nfrontend2 -t frontend2 --entrypoint 'dotnet dev-certs https && # warn: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[60]
 #       Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable 
@@ -359,8 +358,7 @@ docker ps -a --format "table {{.Image}}:\t {{.Command}}" --no-trunc
 docker ps -a --output table
 
 # Open browser
-start https://localhost:5001
-# --- Can't be reached using localhost .....
+start http://localhost:5000
 
 # Cleanup
 docker stop nfrontend2
@@ -369,55 +367,51 @@ docker rm nfrontend2
 docker ps -a
 ```
 
-To fix that the the webserver does not hear anything on localhost you would normally change
-```jsonc
-    <!-- Properties/launchSettings.json -->
-    "frontend": {
-      "applicationUrl": "https://localhost:5001;http://localhost:5000",
-    }
-```
-to
-```jsonc
-    <!-- Properties/launchSettings.json -->
-    "frontend": {
-      "applicationUrl": "https://0.0.0.0:5001;http://0.0.0.0:5000",
-    }
-```
+### Debug your docker container
 
-But apparently `launchSettings.json` is totally replaced by what Dockerfile, so you should replace
-```dockerfile
-# 17. Define start command
-ENTRYPOINT ["dotnet", "frontend.dll"]
-```
-with
-```dockerfile
-# 17. Pass in UseUrls
-#ENV MVCAPPURLS=https://0.0.0.0:5001;http://0.0.0.0:5000
-ENV MVCAPPURLS=http://0.0.0.0:5000
-# 18. Define start command
-ENTRYPOINT ["dotnet", "frontend.dll"]
-```
-Notice that I am not sending in the https-part. For that to work you will also have to install a SSL certificate!  
-If you had the SDK on the image you could have installed the certificate with `dotnet dev-certs https`.  
-
-The ENV we defined we read in 
+To be able to debug on port 5000 you need to do a change in the launcsetting:
 
 Before:
-```csharp
-// Program.cs
-                    webBuilder
-                        .UseStartup<Startup>();
-
+```jsonc
+// .vscode/tasks.json
+            "label": "docker-run: debug",
+            "dependsOn": [
+                "docker-build: debug"
+            ],
+            "dockerRun": {},
 ```
-After
-```csharp
-// Program.cs
-                    webBuilder
-                        .UseUrls(Environment.GetEnvironmentVariable("MVCAPPURLS"))
-                        .UseStartup<Startup>();
+After:
+```jsonc
+// .vscode/tasks.json
+            "label": "docker-run: debug",
+            "dependsOn": [
+                "docker-build: debug"
+            ],
+            "dockerRun": {
+                "env": {
+                    "ASPNETCORE_URLS": "https://+:5001;http://+:5000"
+                },
+                "ports": [
+                    { "hostPort": 5000, "containerPort": 5000 },
+                    { "hostPort": 5001, "containerPort": 5001 }
+                ]
+            },
 ```
 
-After `docker build` and `docker run` you can `start http://localhost:5000/`.  
+If you goto **RUN** pane and choose `Docker` in the dropdown and then press the "Play" button then you can place breakpoints in your code and remote debug into your container. VSCode will show this:
+
+```bash
+#> Executing task: docker-build: debug <
+
+docker build --rm --pull -f "C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend/Dockerfile" --label "com.microsoft.created-by=visual-studio-code" -t "ebookusingnetcoredockerkubernetes:dev" --target "base" "C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes"
+
+#> Executing task: docker-run: debug <
+
+docker run -dt -P --name "ebookusingnetcoredockerkubernetes-dev" -e "DOTNET_USE_POLLING_FILE_WATCHER=1" -e "ASPNETCORE_ENVIRONMENT=Development" -e "ASPNETCORE_URLS=https://+:5001;http://+:5000" --label "com.microsoft.created-by=visual-studio-code" -v "C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend:/app:rw" -v "c:\Users\zzz\eBook-UsingNETCoreDockerKubernetes:/src:rw" -v "C:\Users\zzz\.vsdbg:/remote_debugger:ro" -v "C:\Users\zzz\.nuget\packages:/root/.nuget/packages:ro" -v "C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro" -v "C:\Users\zzz\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro" -v "C:\Users\zzz\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro" -p "5000:5000" -p "5001:5001" "ebookusingnetcoredockerkubernetes:dev"
+```
+
+Isn't that nice?
+
 
 ```yaml
 # Generated docker-compose.debug.yml
@@ -473,6 +467,9 @@ Change frontend in both the .debug.yml and then non-debug yml to:
 
 * [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
 * [Development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow)
+* [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
+* [OmniSharp/omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md)
+* [Build and run an ASP.NET Core app in a container](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
 * [DevOps with Kubernetes and VSTS: Part 1](https://colinsalmcorner.com/devops-with-kubernetes-and-vsts-part-1/)
 * [Generic Host Builder in ASP .NET Core 3.1](https://wakeupandcode.com/generic-host-builder-in-asp-net-core-3-1/)
 * Change entry point: [Containerize an app with Docker tutorial - .NET Core](https://docs.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=linux#change-the-entrypoint)
