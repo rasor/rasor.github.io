@@ -200,9 +200,17 @@ In this definition of Crypto banks the banks
     * Taker/Market Order - with stops: [End of CoinBase Pro? Introduces Maker Fees and No Market Order Stops](https://ethereumworldnews.com/end-of-coinbase-pro-introduces-maker-fees-and-no-market-order-stops/)
     * [Binance Chain Mainnet Now Available, Ledger Nano S Compatible - Ledger](https://www.ledger.com/2019/04/23/binance-chain-mainnet-now-available-ledger-nano-s-compatible/)
 * Tax:
+    * [Best crypto tax software for my money $$](https://medium.com/coinmonks/best-crypto-tax-tool-for-my-money-72d4b430816b)
+        * Accounting.com
+        * Cointracker
+        * Cointracking
+        * TokenTax
+        * Blox
+    ![Tax compare](https://miro.medium.com/max/875/0*k38oSOBf4rRSovY_)
     * [How to Calculate and File your Cryptocurrency Taxes using TurboTax](https://hackernoon.com/how-to-calculate-and-file-your-cryptocurrency-taxes-using-turbotax-a613a6dd25da)
     * App: [BearTax - Cryptocurrency Tax Software for Traders & Accounting Firms](https://bear.tax/)
     * App: [Calculate Bitcoin and Crypto Taxes for Capital Gains and Income](https://bitcoin.tax/)
+    * App: [Cryptocurrency Tax Software | TaxBit](https://taxbit.com/)
     * Tweet: [Confused Coin on Twitter](https://twitter.com/confusedcoin/status/972928943392198658)
     * 2018-03: [Investors in Bitcoin and other cryptocurrencies face hefty tax bills](https://www.theguardian.com/technology/2018/mar/18/cryptocurrency-bitcoin-irs-tax)
 
@@ -372,7 +380,8 @@ Gas price oracles:
 * [BIP39 - Mnemonic Code](https://iancoleman.io/bip39/)
     * BIP39 Mnemonic code for generating deterministic keys: [bitcoin/bips](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
     * BIP32 Hierarchical Deterministic Wallets: [bitcoin/bips](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
-    * BIP44 Multi-Account Hierarchy for Deterministic Wallets
+    * [BIP44 Multi-Account Hierarchy for Deterministic Wallets](https://github.com/bitcoin/bips/blob/master/bip-0044.mediawiki#Address_gap_limit)
+        * [Mind the Bitcoin Address Gap](https://blog.lopp.net/mind-the-bitcoin-address-gap/)
     * BIP49 Derivation scheme for P2WPKH-nested-in-P2SH based accounts
 
 The End
