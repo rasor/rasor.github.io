@@ -217,5 +217,7 @@ More:
 * [Google: Phishing Attacks That Can Beat Two-Factor Are on the Rise](https://www.pcmag.com/news/367026/google-phishing-attacks-that-can-beat-two-factor-are-on-the)
 * [FBI Issues Surprise New Cyber Attack Warning: Multi-Factor Authentication Is Being Defeated](https://www.forbes.com/sites/zakdoffman/2019/10/07/fbi-issues-surprise-cyber-attack-warningurges-new-precautions/#636eccfa7efb)
 * [How to Protect Your Bitcoin from $5 Wrench Attacks](https://blog.keys.casa/how-to-protect-your-bitcoin-from-5-wrench-attacks/)
-        
+* [The Dos and Don'ts of Bitcoin Key Management](https://blog.keys.casa/the-dos-and-donts-of-bitcoin-key-management/)
+    * [Metal Bitcoin Seed Storage Reviews](https://jlopp.github.io/metal-bitcoin-storage-reviews/)
+
 The End

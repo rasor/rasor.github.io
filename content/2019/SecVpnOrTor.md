@@ -10,6 +10,7 @@ Or can I get a the VPN in my Wifi router working as a gateway - It is using Open
 
 Link:
 
+* Use VPN with Tor: [Jolly Roger’s Security Guide for Beginners](https://web.archive.org/web/20190331175207/https://www.deepdotweb.com/jolly-rogers-security-guide-for-beginners/)
 * [Tor or VPN - Which is Best for Security, Privacy & Anonymity? [2019]](https://blokt.com/guides/tor-vs-vpn)
 * [VPN: Everything You Need to Know (Ultimate Guide) | Restore Privacy](https://restoreprivacy.com/vpn/)
 * [Tor Browser - What You Really Need to Know (Read This First)](https://restoreprivacy.com/tor/)

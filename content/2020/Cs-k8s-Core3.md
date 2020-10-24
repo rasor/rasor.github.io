@@ -11,6 +11,7 @@ Source is:
 * eBook (2019): [Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly)
     * By [@apomic80](https://twitter.com/apomic80)        
         * Github: [apomic80](https://github.com/apomic80)
+* Repo: [rasor/eBook-UsingNETCoreDockerKubernetes](https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes)
 
 ## Chapter 1 ASP.NET and Docker Together
 ### Execute .NET Core application with Docker
