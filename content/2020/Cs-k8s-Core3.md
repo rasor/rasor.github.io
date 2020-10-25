@@ -158,7 +158,15 @@ Now create `.vscode` files `launch.json` and `tasks.json`:
 * `.NET: Generate Assets for Build and Debug`
     * Choose `ASPNET Core`, `linux` container and ports `5000, 5001`
 
-You can now goto runner with `ctrl-shft-d` and press run. You can hit breakpoints.  
+You can now goto **RUN** pane with `ctrl-shft-d`, select the `.NET Core Launch (web)` config and press run.    
+In the Debug console you will see
+```bash
+# Debug console
+# Using launch settings from 'C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend\Properties\launchSettings.json' [Profile 'frontend']...
+# Loaded 'C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes\cpt2\frontend\bin\Debug\netcoreapp3.1\frontend.dll'. Symbols loaded.
+# .....
+```
+You can hit breakpoints.  
 
 Now create a `Dockerfile`, `.dockerignore` and `docker-compose.yml`:  
 * In explorer put cursor on cpt2\frontend
@@ -399,7 +407,7 @@ After:
             },
 ```
 
-If you goto **RUN** pane and choose `Docker` in the dropdown and then press the "Play" button then you can place breakpoints in your code and remote debug into your container. VSCode will show this:
+If you goto **RUN** pane and choose `Docker .NET Core Launch` in the dropdown and then press the "Play" button then you can place breakpoints in your code and remote debug into your container. VSCode will show this:
 
 ```bash
 #> Executing task: docker-build: debug <
@@ -431,6 +439,8 @@ docker run -dt -P --name "ebookusingnetcoredockerkubernetes-dev" -e "DOTNET_USE_
 ```
 
 Isn't that nice?
+
+* Ref: [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
 
 ### Add containers to your project
 
@@ -468,7 +478,7 @@ Change frontend in both the .debug.yml and then non-debug yml to:
   frontend:
     image: frontend2
     # Add this
-    container_name: frontend2 # then you can also do `docker rm frontend2`, if needed
+    container_name: frontend2 # then you can attach to this name
     build:
       context: ./cpt2/frontend
       dockerfile: Dockerfile
@@ -502,10 +512,77 @@ docker ps -a
 # then restart # if not removed
 docker-compose start
 ```
-```bash
+
+* Refs: 
+    * [Overview of docker-compose CLI](https://docs.docker.com/compose/reference/overview/)
+
+Can we debug code running in a container by attiching our local code to it?
+
+* Goto the **RUN** pane
+* In the Run-dropdown - do `Àdd Confuguration`
+* Choose `Docker .NET Core Attach (Preview)`
+
+This will create most of this
+
+```json
+//.vscode/launch.json
+    {
+        "name": "Docker .NET Core Attach (Preview)",
+        "type": "docker",
+        "request": "attach",
+        "containerName": "frontend2",
+        "platform": "netCore",
+        "sourceFileMap": {
+            "/src": "${workspaceFolder}"
+        },
+    },
 ```
+
+Optionally add `containerName` in or to auto attach to a specific running container.  
+
+Now spin up the container
 ```bash
+# use debug compose file
+docker-compose -f docker-compose.debug.yml up
 ```
+
+That will show in a docker terminal:
+```bash
+# Docker terminal
+# > Executing task: docker-compose -f "docker-compose.debug.yml" up -d --build <
+
+# Creating network "ebook-usingnetcoredockerkubernetes_default" with the default driver
+# Building frontend
+# Step 1/17 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
+#  ---> e3559b2d50bb
+# ......
+# Step 17/17 : ENTRYPOINT ["dotnet", "frontend.dll"]
+#  ---> Using cache
+#  ---> 6572076fad45
+
+# Successfully built 6572076fad45
+# Successfully tagged frontend2:latest
+# Creating frontend2 ... done
+```
+
+Now in the **RUN** pane select the `Docker .NET Core Attach (Preview)` config and press run.  
+In the Debug console you will see
+```bash
+# Debug console
+# Starting: "docker" exec -i frontend2 /remote_debugger/vsdbg --interpreter=vscode
+# .....
+# Loaded '/app/frontend.dll'. Symbols loaded.
+# .....
+```
+
+You should be able to set breakpoints in your code and break.  
+But something is not quite right, yet. It does not work on my PC.  
+
+* Refs: 
+    * [Use Docker Compose to work with multiple containers](https://code.visualstudio.com/docs/containers/docker-compose)
+        * Debug NetCore: [NetCore](https://code.visualstudio.com/docs/containers/docker-compose#_net)
+    * [Attach to a running container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/remote/attach-container)
+
 ```bash
 ```
 ```bash
