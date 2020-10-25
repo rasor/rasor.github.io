@@ -406,13 +406,39 @@ If you goto **RUN** pane and choose `Docker` in the dropdown and then press the 
 
 docker build --rm --pull -f "C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend/Dockerfile" --label "com.microsoft.created-by=visual-studio-code" -t "ebookusingnetcoredockerkubernetes:dev" --target "base" "C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes"
 
+# Where
+# -f, --file string         Name of the Dockerfile (Default is 'PATH/Dockerfile')
+# --label list              Set metadata for an image
+# --pull                    Always attempt to pull a newer version of the image
+# --rm                      Remove intermediate containers after a successful build (default true)
+# -t, --tag list            Name and optionally a tag in the 'name:tag' format
+# --target string           Set the target build stage to build.
+
 #> Executing task: docker-run: debug <
 
 docker run -dt -P --name "ebookusingnetcoredockerkubernetes-dev" -e "DOTNET_USE_POLLING_FILE_WATCHER=1" -e "ASPNETCORE_ENVIRONMENT=Development" -e "ASPNETCORE_URLS=https://+:5001;http://+:5000" --label "com.microsoft.created-by=visual-studio-code" -v "C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend:/app:rw" -v "c:\Users\zzz\eBook-UsingNETCoreDockerKubernetes:/src:rw" -v "C:\Users\zzz\.vsdbg:/remote_debugger:ro" -v "C:\Users\zzz\.nuget\packages:/root/.nuget/packages:ro" -v "C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro" -v "C:\Users\zzz\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro" -v "C:\Users\zzz\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro" -p "5000:5000" -p "5001:5001" "ebookusingnetcoredockerkubernetes:dev"
+
+# Where
+# -d, --detach                         Run container in background and print container ID
+# -t, --tty                            Allocate a pseudo-TTY
+# -l, --label list                     Set meta data on a container
+# -P, --publish-all                    Publish all exposed ports to random ports
+# -v, --volume list                    Bind mount a volume
+# Some from tasks.json:
+# -e, --env list                       Set environment variables
+# -p, --publish list                   Publish a container's port(s) to the host
+
 ```
 
 Isn't that nice?
 
+### Add containers to your project
+
+_To Be Added_
+
+### Run your container with Docker Compose
+
+When you used Command Palette command `Docker: Add Docker files to workspace` then you said yes to create compose files:
 
 ```yaml
 # Generated docker-compose.debug.yml
@@ -441,13 +467,40 @@ Change frontend in both the .debug.yml and then non-debug yml to:
 ```yaml
   frontend:
     image: frontend2
+    # Add this
+    container_name: frontend2 # then you can also do `docker rm frontend2`, if needed
     build:
-      context: .
+      context: ./cpt2/frontend
       dockerfile: Dockerfile
+    environment:
+    # Add this to the non-debug
+      - ASPNETCORE_URLS=https://+:5001;http://+:5000
 ```
 
+So now we can start several containers at once (if more containeres were present in the compose file).  
+Compose will also create a docker network for the containers to communicate through.  
 
 ```bash
+# ensure you find the root folder
+cd cpt2/frontend
+# go back to root, where docker-compose.yml exists
+cd ../..
+
+docker-compose up
+
+start http://localhost:5000
+
+# ctrl-c to stop the servers
+# or
+docker-compose stop
+# or
+docker-compose down # will also remove (docker-compose rm)
+
+# check which containers exists
+docker ps -a
+
+# then restart # if not removed
+docker-compose start
 ```
 ```bash
 ```
