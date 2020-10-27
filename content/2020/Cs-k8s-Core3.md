@@ -583,8 +583,47 @@ But something is not quite right, yet. It does not work on my PC.
         * Debug NetCore: [NetCore](https://code.visualstudio.com/docs/containers/docker-compose#_net)
     * [Attach to a running container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/remote/attach-container)
 
+#### Publish image to docker hub
+
+Create a docker hub repo. I'll publish to  
+https://hub.docker.com/repository/docker/rasor/usingnetcoredockerkubernetes 
+
 ```bash
+# goto folder with Dockerfile
+cd cpt2/frontend
+docker build --help
+# build img and tag it
+docker build -t frontend2:v1 .
+# Successfully built 6572076fad45
+# Successfully tagged frontend2:v1
+
+docker images | grep frontend2
+# frontend2                              latest              6572076fad45        3 days ago          212MB
+# frontend2                              v1                  6572076fad45        3 days ago          212MB
+
+# tag the image, so you can upload it to docker hub
+# docker tag local-image:tagname new-repo:tagname
+docker tag frontend2:v1 rasor/usingnetcoredockerkubernetes:frontend2-v1
+
+docker images | grep frontend2
+# REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE
+# rasor/usingnetcoredockerkubernetes     frontend2-v1        6572076fad45        3 days ago          212MB
+# frontend2                              latest              6572076fad45        3 days ago          212MB
+# frontend2                              v1                  6572076fad45        3 days ago          212MB
+
+# upload docker img to https://hub.docker.com/repository/docker/rasor/usingnetcoredockerkubernetes
+# docker push new-repo:tagname
+docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
+# The push refers to repository [docker.io/rasor/usingnetcoredockerkubernetes]
+# ...
+# frontend2-v1: digest: sha256:e413934f1dba2e85b66f69125f6b4ac9944122c8f1c3d8f0f97355abb6ad8ec9 size: 1793
+
+# When you want to download it do:
+# docker pull rasor/usingnetcoredockerkubernetes:frontend2-v1
 ```
+
+
+
 ```bash
 ```
 ```bash
