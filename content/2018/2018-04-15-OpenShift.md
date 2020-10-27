@@ -1,7 +1,7 @@
 Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
-Modified: 2019-04-06 20:00
+Modified: 2020-10-27 20:00
 Category: DevOp
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #kubernetic, #openfaas, #footloose
 
@@ -86,7 +86,7 @@ Fig 3. Continuous Deployment to Kubernetes Engine using Jenkins (Drawing hosted 
 [![Continuous Deployment to Kubernetes Engine using Jenkins](https://cloud.google.com/solutions/images/jenkins-cd-container-engine.svg)](https://cloud.google.com/solutions/continuous-delivery-jenkins-kubernetes-engine?hl=en)  
 
 Fig 4. RedHats own picture of OpenShift runtime environment (Drawing by [Mike Barret](https://blog.openshift.com/author/mikebarrett/) hosted by openshift.com)
-[![OpenShift runtime environment](https://blog.openshift.com/wp-content/uploads/arch-diagram.png)](https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/)
+[![OpenShift runtime environment](https://www.openshift.com/hubfs/Imported_Blog_Media/arch-diagram.png)](https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/)
 
 ## Installation
 
@@ -116,8 +116,8 @@ ipconfig /all
 
 ### MiniShift
 
-I downloded and unzipped [minishift/minishift](https://github.com/minishift/minishift/releases) for Windows.  
-It could be unzipped to anywhere. I chose `C:\Program Files\`, so after unzip the MiniShift path was `C:\Program Files\minishift-1.15.1-windows-amd64`. That path had to be added to the enviroment %path%.
+I downloaded and unzipped [minishift/minishift](https://github.com/minishift/minishift/releases) for Windows.  
+It could be unzipped to anywhere. I chose `C:\Program Files\`, so after unzip the MiniShift path was `C:\Program Files\minishift-1.15.1-windows-amd64`. That path had to be added to the environment %path%.
 
 ```bash
 # Verify minishift can be reached from any local path

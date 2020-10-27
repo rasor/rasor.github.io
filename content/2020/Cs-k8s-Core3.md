@@ -645,6 +645,8 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 
 I am using `kind` for creating a `k8s` cluster. I did that in [this blog](K8sArkade.md).  
 
+kubectl is a CLI using API to access k8s.  
+
 ```bash
 # check if k8s cluster is running
 kubectl cluster-info
@@ -728,6 +730,9 @@ kubectl describe pod frontend2
 #   Normal  Created    11s        kubelet, kind-control-plane  Created container frontend2
 #   Normal  Started    11s        kubelet, kind-control-plane  Started container frontend2
 
+# And what does that mean?
+kubectl explain pods
+
 # read all deployed in default namespace
 kubectl get all
 # NAME            READY   STATUS    RESTARTS   AGE
@@ -740,6 +745,9 @@ kubectl get all
 kubectl delete pod frontend2
 # pod "frontend2" deleted
 ```
+
+#### API into k8s
+
 Start proxy in another terminal
 ```bash
 kubectl proxy
@@ -752,17 +760,57 @@ http://127.0.0.1:8001/api/v1/namespaces/default/pods/frontend2/proxy/
   "message": "error trying to reach service: dial tcp 10.244.0.10:5000: connect: connection refused",
   "code": 500
 
-#### Declare your infrastructure using yaml
+#### UI into k8s
 
-To manage k8s you can use
-* Rancher
-* portainer
-* kubernetes-dashboard - just read 
+To manage k8s you could use
+* kubernetes-dashboard - just read - install via arkade or from remote yml file
+```bash
+# install kubernetes-dashboard as a k8s app
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+# get login token
+kubectl -n kube-system get secret
+kubectl -n kube-system describe secret deployment-controller-token-?????
+kubectl proxy
+# paste login token into
+start http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+```
+* portainer - install via arkade
+* [Rancher](https://rancher.com/quick-start/)
+  * `docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher`
+* [Kubernetic](https://www.kubernetic.com/)
 
 ![rancher](../img/2020/2020-10-27-K8s01.JPG)
 (_Image from Rancher_)
 
+#### Declare your infrastructure using yaml
+
 To define managed k8s infrastructure you write k8s yaml.  
+
+k8s-deploy-dev.yml
+
+With yml created you create or apply the file using -f.  
+When you apply k8s will create-if-not-exist or change-if-not-correct.  
+If you create you should 'create --save-config'.  
+
+These are the resources you can create:
+* clusterrole         Create a ClusterRole.
+* clusterrolebinding  Create a ClusterRoleBinding for a particular ClusterRole
+* configmap           Create a configmap from a local file, directory or literal value
+* cronjob             Create a cronjob with the specified name.
+* deployment          Create a deployment with the specified name.
+* job                 Create a job with the specified name.
+* namespace           Create a namespace with the specified name
+* poddisruptionbudget Create a pod disruption budget with the specified name.
+* priorityclass       Create a priorityclass with the specified name.
+* quota               Create a quota with the specified name.
+* role                Create a role with single rule.
+* rolebinding         Create a RoleBinding for a particular Role or ClusterRole
+* secret              Create a secret using specified subcommand
+* service             Create a service using specified subcommand.
+* serviceaccount      Create a service account with the specified name
+
+
+
 
 
 
@@ -771,8 +819,6 @@ kubectl port-forward svc/frontend2 5000:5000
 # Forwarding from 127.0.0.1:5000 -> 5000
 # Forwarding from [::1]:5000 -> 5000
 # Handling connection for 5000
-```
-```bash
 ```
 ```bash
 ```
