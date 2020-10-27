@@ -35,14 +35,15 @@ But there are other options than **Arkade** to install k8s?
     * Using **Kind**
         * [Installing Kubernetes with Kind](https://kubernetes.io/docs/setup/learning-environment/kind/)
         * [kind Quick Start](https://kind.sigs.k8s.io/docs/user/quick-start/)
-    * Using **Rancher**
-    * Using **k3d**
-    * Using **Minikube**
+    * Using **k3d** - for dev, Raspberry Pi or IoT
+    * Using **Minikube** - for dev
         * [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
         * [Installing Kubernetes with Minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
-    * Enable k8s in **Docker Desktop**
+    * Enable k8s in **Docker Desktop** - for dev
+    * OpenShift
 * In cloud
-    * All cloud providers have their own k8s services
+    * All cloud providers have their own k8s services [EKS (AWS), AKS (Az), GKE (Google)]
+    * Using **[RKE](https://rancher.com/products)**
 
 So why use Arkade to install k8s?
 * If you only need a single node cluster then option 3 - using **Docker Desktop** automates the work you manually can do with **Minikube**.  
@@ -632,7 +633,10 @@ Some apps I have in mind could be
   * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
   * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
   * Vid: [Kubernetes and Container Orchestration 101 - Hanselman](https://www.youtube.com/watch?v=3RTvoI-A7UQ)
-* k3s:
+  * [Best Practices for Monitoring and Alerting on Kubernetes](https://rancher.com/learning-paths/best-practices-for-monitoring-and-alerting-on-kubernetes/)
+    * [bashofmann/rancher-2.5-monitoring](https://github.com/bashofmann/rancher-2.5-monitoring)
+    * [Events](https://rancher.com/events)
+* k3s (k8s that can run on Raspberry Pi):
   * SaaS: [Managed Kubernetes service, powered by k3s - Civo.com](https://www.civo.com/)
 * Kind:
   * [Installation](https://kind.sigs.k8s.io/#installation-and-usage)

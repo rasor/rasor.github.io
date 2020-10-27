@@ -20,8 +20,10 @@ Main Sources are:
 # PreRequisites
 
 * Windows 10
+* [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
 * [Git Bash](https://gitforwindows.org/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
+  * [C# for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 * [Docker Desktop for Windows user manual](https://docs.docker.com/docker-for-windows/)
 * `k8s` (I am using `kind` for [creating cluster](K8sArkade.md))
 * Optional: [jq](https://stedolan.github.io/jq/download/)
@@ -726,14 +728,49 @@ kubectl describe pod frontend2
 #   Normal  Created    11s        kubelet, kind-control-plane  Created container frontend2
 #   Normal  Started    11s        kubelet, kind-control-plane  Started container frontend2
 
+# read all deployed in default namespace
+kubectl get all
+# NAME            READY   STATUS    RESTARTS   AGE
+# pod/frontend2   1/1     Running   0          6m57s
+
+# NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+# service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   38d
+
 # Delete the pod
 kubectl delete pod frontend2
 # pod "frontend2" deleted
 ```
+Start proxy in another terminal
+```bash
+kubectl proxy
+```
+Then open browser http://127.0.0.1:8001/
+
+Try to reach pod via api:
+http://127.0.0.1:8001/api/v1/namespaces/default/pods/frontend2/proxy/
+  "status": "Failure",
+  "message": "error trying to reach service: dial tcp 10.244.0.10:5000: connect: connection refused",
+  "code": 500
+
+#### Declare your infrastructure using yaml
+
+To manage k8s you can use
+* Rancher
+* portainer
+* kubernetes-dashboard - just read 
+
+![rancher](../img/2020/2020-10-27-K8s01.JPG)
+(_Image from Rancher_)
+
+To define managed k8s infrastructure you write k8s yaml.  
 
 
 
 ```bash
+kubectl port-forward svc/frontend2 5000:5000
+# Forwarding from 127.0.0.1:5000 -> 5000
+# Forwarding from [::1]:5000 -> 5000
+# Handling connection for 5000
 ```
 ```bash
 ```
@@ -755,12 +792,14 @@ docker stop kind-control-plane
 * Using VSCode: [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
 * Using Visual Studio: [Development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow)
 * [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
-* [OmniSharp/omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md)
-* [Build and run an ASP.NET Core app in a container](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
-* [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
-* [DevOps with Kubernetes and VSTS: Part 1](https://colinsalmcorner.com/devops-with-kubernetes-and-vsts-part-1/)
-* [Generic Host Builder in ASP .NET Core 3.1](https://wakeupandcode.com/generic-host-builder-in-asp-net-core-3-1/)
+* Debug using launch.json: [OmniSharp/omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md)
+* tasks.json: [Build and run an ASP.NET Core app in a container](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)
+* tasks.json: [Tasks in Visual Studio Code](https://code.visualstudio.com/docs/editor/tasks)
+* Dockerfile: [Setting Default Docker Environment Variables During Image Build](https://vsupalov.com/docker-build-time-env-values/)
 * Change entry point: [Containerize an app with Docker tutorial - .NET Core](https://docs.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=linux#change-the-entrypoint)
-* [Setting Default Docker Environment Variables During Image Build](https://vsupalov.com/docker-build-time-env-values/)
+* k8s: [DevOps with Kubernetes and VSTS: Part 1](https://colinsalmcorner.com/devops-with-kubernetes-and-vsts-part-1/)
+* AKS: [Deploy to Azure Kubernetes Service (AKS)](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/deploy-azure-kubernetes-service)
+* Using VS - AKS: [Build ASP.NET Core applications deployed as Linux containers into AKS/Kubernetes clusters](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes)
+* Program.cs [Generic Host Builder in ASP .NET Core 3.1](https://wakeupandcode.com/generic-host-builder-in-asp-net-core-3-1/)
 
 The End
