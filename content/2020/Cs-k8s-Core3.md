@@ -23,7 +23,7 @@ Main Sources are:
 * [Git Bash](https://gitforwindows.org/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * [Docker Desktop for Windows user manual](https://docs.docker.com/docker-for-windows/)
-* k8s
+* `k8s` (I am using `kind` for [creating cluster](K8sArkade.md))
 * Optional: [jq](https://stedolan.github.io/jq/download/)
 
 # Chapters from eBook **Using .NET Core, Docker, and Kubernetes**
@@ -378,7 +378,8 @@ docker ps -a --format "table {{.Image}}:\t {{.Command}}" --no-trunc
 # IMAGE:                   COMMAND
 # frontend2:               "dotnet frontend.dll…"
 
-docker ps -a --output table
+# Print as json
+docker ps -a --format " {{json .}}" | jq '{ID, Image, Command}'
 
 # Open browser
 start http://localhost:5000
@@ -640,6 +641,98 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 ## Chapter 3 Deploy Your Application on Kubernetes
 ### Chapter 3.2 Deploy your images in Kubernetes
 
+I am using `kind` for creating a `k8s` cluster. I did that in [this blog](K8sArkade.md).  
+
+```bash
+# check if k8s cluster is running
+kubectl cluster-info
+# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made
+
+# Check if there are any clusters
+$ kind get clusters
+# kind
+
+# Check it the container is running
+docker ps -a | grep kind
+# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES
+# 0b9a7220b4f8        kindest/node:v1.19.1   "/usr/local/bin/entr…"   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295->6443/tcp   kind-control-plane
+
+# start the k8s cluster
+docker start kind-control-plane
+
+# check if k8s cluster is running
+kubectl cluster-info
+# Kubernetes master is running at https://127.0.0.1:52295
+# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```
+
+Testing starting the image in a pod manually:
+```bash
+# Manually start the container in k8s - and never restart it, when it dies.  
+kubectl run frontend2 --image=rasor/usingnetcoredockerkubernetes:frontend2-v1 --port 5000 --restart=Never
+# pod/frontend2 created
+
+kubectl get pods
+# NAME        READY   STATUS    RESTARTS   AGE
+# frontend2   1/1     Running   0          24s
+
+kubectl describe pod frontend2
+# Name:         frontend2
+# Namespace:    default
+# Priority:     0
+# Node:         kind-control-plane/172.18.0.2
+# Start Time:   Tue, 27 Oct 2020 12:24:42 +0100
+# Labels:       run=frontend2
+# Annotations:  <none>
+# Status:       Running
+# IP:           10.244.0.9
+# IPs:
+#   IP:  10.244.0.9
+# Containers:
+#   frontend2:
+#     Container ID:   containerd://6134c6c308d49c4c49835009333ca5aaedf18d235712bec49a4ae4fbe9606c12
+#     Image:          rasor/usingnetcoredockerkubernetes:frontend2-v1
+#     Image ID:       docker.io/rasor/usingnetcoredockerkubernetes@sha256:e413934f1dba2e85b66f69125f6b4ac9944122c8f1c3d8f0f97355abb6ad8ec9       
+#     Port:           5000/TCP
+#     Host Port:      0/TCP
+#     State:          Running
+#       Started:      Tue, 27 Oct 2020 12:24:42 +0100
+#     Ready:          True
+#     Restart Count:  0
+#     Environment:    <none>
+#     Mounts:
+#       /var/run/secrets/kubernetes.io/serviceaccount from default-token-95gtj (ro)
+# Conditions:
+#   Type              Status
+#   Initialized       True
+#   Ready             True
+#   ContainersReady   True
+#   PodScheduled      True
+# Volumes:
+#   default-token-95gtj:
+#     Type:        Secret (a volume populated by a Secret)
+#     SecretName:  default-token-95gtj
+#     Optional:    false
+# QoS Class:       BestEffort
+# Node-Selectors:  <none>
+# Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+#                  node.kubernetes.io/unreachable:NoExecute for 300s
+# Events:
+#   Type    Reason     Age        From                         Message
+#   ----    ------     ----       ----                         -------
+#   Normal  Scheduled  <unknown>                               Successfully assigned default/frontend2 to kind-control-plane
+#   Normal  Pulled     11s        kubelet, kind-control-plane  Container image "rasor/usingnetcoredockerkubernetes:frontend2-v1" already present 
+# on machine
+#   Normal  Created    11s        kubelet, kind-control-plane  Created container frontend2
+#   Normal  Started    11s        kubelet, kind-control-plane  Started container frontend2
+
+# Delete the pod
+kubectl delete pod frontend2
+# pod "frontend2" deleted
+```
+
+
+
 ```bash
 ```
 ```bash
@@ -647,6 +740,14 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 ```bash
 ```
 ```bash
+```
+```bash
+```
+```bash
+```
+```bash
+# stop the k8s cluster
+docker stop kind-control-plane
 ```
 
 # REFs

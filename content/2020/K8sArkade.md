@@ -549,6 +549,34 @@ More info:
   * Download: [Releases · helm/helm](https://github.com/helm/helm/releases)
   * [helm/charts](https://github.com/helm/charts/tree/master/stable)
 
+## Stop and start the cluster
+
+```bash
+# stop the k8s cluster
+docker stop kind-control-plane
+
+# check if k8s cluster is running
+kubectl cluster-info
+# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made
+
+# Check if there are any clusters
+$ kind get clusters
+# kind
+
+# Check it the container is running
+docker ps -a | grep kind
+# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES
+# 0b9a7220b4f8        kindest/node:v1.19.1   "/usr/local/bin/entr…"   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295->6443/tcp   kind-control-plane
+
+# start the k8s cluster
+docker start kind-control-plane
+
+# check if k8s cluster is running
+kubectl cluster-info
+# Kubernetes master is running at https://127.0.0.1:52295
+# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```
+
 ## What's next?
 
 I want to build apps on a solid setup.  
