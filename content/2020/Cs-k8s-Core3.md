@@ -763,6 +763,10 @@ http://127.0.0.1:8001/api/v1/namespaces/default/pods/frontend2/proxy/
 #### UI into k8s
 
 To manage k8s you could use
+* [Kubernetes VSCode plugin](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools)
+  * Double-click on a resource to see its yaml
+  * View helm repos
+  * View cloud clusters
 * kubernetes-dashboard - just read - install via arkade or from remote yml file
 ```bash
 # install kubernetes-dashboard as a k8s app
@@ -779,25 +783,29 @@ start http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/http
   * `docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher`
 * [Kubernetic](https://www.kubernetic.com/)
 
-![rancher](../img/2020/2020-10-27-K8s01.JPG)
+![rancher](../img/2020/2020-10-27-K8s01.JPG)  
 (_Image from Rancher_)
 
 #### Declare your infrastructure using yaml
 
 To define managed k8s infrastructure you write k8s yaml.  
+Install [Kubernetes Support](https://marketplace.visualstudio.com/items?itemName=ipedrazas.kubernetes-snippets) in VSCode.  
+This will provide you with snippets for pods, services, deployments, etc.  
 
-k8s-deploy-dev.yml
+Now create a new file called `k8s-deploy-dev.yml`
+* Write `kind: De` then 
+* Press ctrl-space and select a Deployment template.   
 
-With yml created you create or apply the file using -f.  
-When you apply k8s will create-if-not-exist or change-if-not-correct.  
-If you create you should 'create --save-config'.  
+With yml created you `create` or `apply` the file using `-f`.  
+When you `apply` k8s will create-if-not-exist or change-if-not-correct.  
+If you `create` you should `create --save-config`.  
 
-These are the resources you can create:
+These are the resources you can create (with the snippets):
 * clusterrole         Create a ClusterRole.
 * clusterrolebinding  Create a ClusterRoleBinding for a particular ClusterRole
 * configmap           Create a configmap from a local file, directory or literal value
 * cronjob             Create a cronjob with the specified name.
-* deployment          Create a deployment with the specified name.
+* **deployment**      Create a deployment with the specified name.
 * job                 Create a job with the specified name.
 * namespace           Create a namespace with the specified name
 * poddisruptionbudget Create a pod disruption budget with the specified name.
@@ -806,7 +814,7 @@ These are the resources you can create:
 * role                Create a role with single rule.
 * rolebinding         Create a RoleBinding for a particular Role or ClusterRole
 * secret              Create a secret using specified subcommand
-* service             Create a service using specified subcommand.
+* **service**         Create a service using specified subcommand.
 * serviceaccount      Create a service account with the specified name
 
 
