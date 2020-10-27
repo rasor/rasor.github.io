@@ -1,7 +1,13 @@
 Title:  OpenFaaS Cleanup
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #openfaas, #docker
+Tags: #openfaas, #docker, #jq
+
+## PreRequisites
+
+* Docker
+* OpenFaaS
+* [jq](https://stedolan.github.io/jq/download/)
 
 ## OpenFaaS Cleanup
 

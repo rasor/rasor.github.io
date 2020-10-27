@@ -1,20 +1,34 @@
 Title: ASP.NET Core with k8s hosting
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #csharp, #netcore3, #docker, #k8s
+Tags: #csharp, #netcore3, #docker, #k8s, #jq, #vscode
 
 # Intro
 
-This is an extract of content from an eBook into small, reusable snippets.
+This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  
 
-Source is:
-* eBook (2019): [Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly)
-    * By [@apomic80](https://twitter.com/apomic80)        
-        * Github: [apomic80](https://github.com/apomic80)
-* Repo: [rasor/eBook-UsingNETCoreDockerKubernetes](https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes)
+This blog is inspired by content from an eBook and some tutorials.  
+You find its code in this git repo: [rasor/eBook-UsingNETCoreDockerKubernetes](https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes).  
 
+Main Sources are:
+* Free eBook (2019): [Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly)
+  * By [@apomic80](https://twitter.com/apomic80)        
+    * Github: [apomic80](https://github.com/apomic80)
+* Guide: [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
+  * from free eBook (2020): [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/) from Microsoft
+
+# PreRequisites
+
+* Windows 10
+* [Git Bash](https://gitforwindows.org/)
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [Docker Desktop for Windows user manual](https://docs.docker.com/docker-for-windows/)
+* k8s
+* Optional: [jq](https://stedolan.github.io/jq/download/)
+
+# Chapters from eBook **Using .NET Core, Docker, and Kubernetes**
 ## Chapter 1 ASP.NET and Docker Together
-### Execute .NET Core application with Docker
+### Chapter 1.1 Execute .NET Core application with Docker
 
 Install and start Docker.  
 Then open a shell.  
@@ -118,7 +132,7 @@ docker rm mvcapp
 ```
 
 ## Chapter 2 Create Your Application with Docker
-### Develop your ASP.NET Core application using Docker
+### Chapter 2.1 Develop your ASP.NET Core application using Docker
 
 Dotnet core commands:
 
@@ -376,7 +390,7 @@ docker rm nfrontend2
 docker ps -a
 ```
 
-### Debug your docker container
+### Chapter 2.1B (not in eBook) Debug your docker container
 
 To be able to debug on port 5000 you need to do a change in the launcsetting:
 
@@ -442,11 +456,11 @@ Isn't that nice?
 
 * Ref: [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
 
-### Add containers to your project
+### Chapter 2.2 Add containers to your project
 
 _To Be Added_
 
-### Run your container with Docker Compose
+### Chapter 2.3 Run your container with Docker Compose
 
 When you used Command Palette command `Docker: Add Docker files to workspace` then you said yes to create compose files:
 
@@ -583,6 +597,7 @@ But something is not quite right, yet. It does not work on my PC.
         * Debug NetCore: [NetCore](https://code.visualstudio.com/docs/containers/docker-compose#_net)
     * [Attach to a running container using Visual Studio Code Remote Development](https://code.visualstudio.com/docs/remote/attach-container)
 
+### Chapter 2.4 Create the final image for publication
 #### Publish image to docker hub
 
 Create a docker hub repo. I'll publish to  
@@ -622,7 +637,8 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 # docker pull rasor/usingnetcoredockerkubernetes:frontend2-v1
 ```
 
-
+## Chapter 3 Deploy Your Application on Kubernetes
+### Chapter 3.2 Deploy your images in Kubernetes
 
 ```bash
 ```
@@ -635,8 +651,8 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 
 # REFs
 
-* [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
-* [Development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow)
+* Using VSCode: [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
+* Using Visual Studio: [Development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow)
 * [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)
 * [OmniSharp/omnisharp-vscode](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md)
 * [Build and run an ASP.NET Core app in a container](https://code.visualstudio.com/docs/containers/quickstart-aspnet-core)

@@ -32,6 +32,52 @@ node -v
 # v12.14.1
 ```
 
+## Chocolatey - package manager for Windows
+
+* Install [Chocolatey](https://chocolatey.org/install)
+
+```ps1
+# ps1 - run as admin:
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+# Getting Chocolatey from https://chocolatey.org/api/v2/package/chocolatey/0.10.15.
+# .........
+# Installing chocolatey on this machine
+# .........
+# PATH environment variable does not have C:\ProgramData\chocolatey\bin in it. Adding...
+# Adding Chocolatey to the profile. This will provide tab completion, refreshenv, etc.
+# WARNING: Unable to add Chocolatey to the profile. You will need to do it manually. Error was 'Cannot process argument transformation on parameter 'Encoding'. 'byte' is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter 'name')'
+# This is how add the Chocolatey Profile manually.
+# Find your $profile. Then add the following lines to it:
+
+# $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+# if (Test-Path($ChocolateyProfile)) {
+#   Import-Module "$ChocolateyProfile"
+# }
+# Chocolatey (choco.exe) is now ready.
+# You can call choco from anywhere, command line or powershell by typing choco.
+# Run choco /? for a list of functions.
+# You may need to shut down and restart powershell and/or consoles
+#  first prior to using choco.
+# Ensuring chocolatey commands are on the path
+# Ensuring chocolatey.nupkg is in the lib folder
+
+choco -v
+# 0.10.15
+```
+Hmm - apparently you need a non-admin prompt to add above to ps1 profile
+
+```ps1
+# edit ps1 profile:
+notepad $PROFILE
+# paste into file:
+#---------------------
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
+#---------------------
+```
+
 ## Git 4 Windows
 
 * Download `64-bit Git for Windows Setup` from [Git Download Package](https://git-scm.com/download/win)
@@ -39,6 +85,22 @@ node -v
 ```bash
 git --version
 # git version 2.24.1.windows.2
+```
+
+### jq
+
+jq is like `sed` for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that `sed, awk, grep`. See examples in [Tutorial](https://stedolan.github.io/jq/tutorial/).  
+
+* Install [jq](https://stedolan.github.io/jq/download/) to Windows using choco:
+
+```ps1
+# ps1 run-as-admi:
+choco install jq
+# C:\ProgramData\chocolatey\lib\jq\tools\jq.exe
+#  ShimGen has successfully created a shim for jq.exe
+#  The install of jq was successful.
+jq --version
+# jq-1.6
 ```
 
 ### SSH
