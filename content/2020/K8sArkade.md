@@ -633,6 +633,7 @@ Some apps I have in mind could be
   * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
   * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
   * Vid: [Kubernetes and Container Orchestration 101 - Hanselman](https://www.youtube.com/watch?v=3RTvoI-A7UQ)
+  * [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
   * [Best Practices for Monitoring and Alerting on Kubernetes](https://rancher.com/learning-paths/best-practices-for-monitoring-and-alerting-on-kubernetes/)
     * [bashofmann/rancher-2.5-monitoring](https://github.com/bashofmann/rancher-2.5-monitoring)
     * [Events](https://rancher.com/events)
@@ -641,6 +642,8 @@ Some apps I have in mind could be
 * Kind:
   * [Installation](https://kind.sigs.k8s.io/#installation-and-usage)
   * [Quick start](https://kind.sigs.k8s.io/docs/user/quick-start/)
+* helm: 
+  * [Artifact Hub](https://artifacthub.io/)
 * Arkade:
   * [alexellis/arkade](https://github.com/alexellis/arkade)
   * [Alex Ellis - arkade](https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD)

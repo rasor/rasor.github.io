@@ -26,7 +26,11 @@ Main Sources are:
   * [C# for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 * [Docker Desktop for Windows user manual](https://docs.docker.com/docker-for-windows/)
 * `k8s` (I am using `kind` for [creating cluster](K8sArkade.md))
+* Optional: [choco](https://chocolatey.org/install)
 * Optional: [jq](https://stedolan.github.io/jq/download/)
+* Optional: [helm](https://helm.sh/)
+  * `choco install kubernetes-helm` or `arkade get helm`
+* Optional: [draft](https://github.com/Azure/draft/blob/master/docs/quickstart.md)
 
 # Chapters from eBook **Using .NET Core, Docker, and Kubernetes**
 ## Chapter 1 ASP.NET and Docker Together
@@ -762,7 +766,7 @@ http://127.0.0.1:8001/api/v1/namespaces/default/pods/frontend2/proxy/
 
 #### UI into k8s
 
-To manage k8s you could use
+To manage k8s you could use many different apps like
 * [Kubernetes VSCode plugin](https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools)
   * Double-click on a resource to see its yaml
   * View helm repos
@@ -798,25 +802,116 @@ Now create a new file called `k8s-deploy-dev.yml`
 
 With yml created you `create` or `apply` the file using `-f`.  
 When you `apply` k8s will create-if-not-exist or change-if-not-correct.  
-If you `create` you should `create --save-config`.  
+If you `create` you should `create --save-config`. Create will throw error, if resource exists.  
+[Read more...](https://stackoverflow.com/a/54248723/750989)
 
 These are the resources you can create (with the snippets):
-* clusterrole         Create a ClusterRole.
-* clusterrolebinding  Create a ClusterRoleBinding for a particular ClusterRole
-* configmap           Create a configmap from a local file, directory or literal value
-* cronjob             Create a cronjob with the specified name.
-* **deployment**      Create a deployment with the specified name.
-* job                 Create a job with the specified name.
-* namespace           Create a namespace with the specified name
-* poddisruptionbudget Create a pod disruption budget with the specified name.
-* priorityclass       Create a priorityclass with the specified name.
-* quota               Create a quota with the specified name.
-* role                Create a role with single rule.
-* rolebinding         Create a RoleBinding for a particular Role or ClusterRole
-* secret              Create a secret using specified subcommand
-* **service**         Create a service using specified subcommand.
-* serviceaccount      Create a service account with the specified name
+```text
+clusterrole         - Create a ClusterRole.
+clusterrolebinding  - Create a ClusterRoleBinding for a particular ClusterRole
+configmap           - Create a configmap from a local file, directory or literal value
+cronjob             - Create a cronjob with the specified name.
+deployment          - Create a deployment with the specified name.
+job                 - Create a job with the specified name.
+namespace           - Create a namespace with the specified name
+poddisruptionbudget - Create a pod disruption budget with the specified name.
+priorityclass       - Create a priorityclass with the specified name.
+quota               - Create a quota with the specified name.
+role                - Create a role with single rule.
+rolebinding         - Create a RoleBinding for a particular Role or ClusterRole
+secret              - Create a secret using specified subcommand
+service             - Create a service using specified subcommand.
+serviceaccount      - Create a service account with the specified name
+```
 
+Besides those above snippets you can find `C#` helm chart templates for
+* [deployment](https://github.com/Azure/draft/blob/master/packs/csharp/charts/templates/deployment.yaml)
+* [ingress](https://github.com/Azure/draft/blob/master/packs/csharp/charts/templates/ingress.yaml)
+* [service](https://github.com/Azure/draft/blob/master/packs/csharp/charts/templates/service.yaml)
+... used by the k8s App builder tool [Draft](https://github.com/Azure/draft/blob/master/docs/quickstart.md).  
+Note: draft is not yet upgraded to core 3.1, but is using core 2.1. The project is archieved!  
+
+You can also just grap the whole yaml from this blog: [Build ASP.NET Core applications deployed as Linux containers into AKS/Kubernetes clusters](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes#deploy-webappyml)  
+and correct then names.  
+
+You can print all resource types with  
+`kubectl api-resources --sort-by=kind`  
+They are
+```text
+NAME                              SHORTNAMES   APIGROUP                       NAMESPACED   KIND
+bindings                                                                      true         Binding
+componentstatuses                 cs                                          false        ComponentStatus
+configmaps                        cm                                          true         ConfigMap
+endpoints                         ep                                          true         Endpoints
+limitranges                       limits                                      true         LimitRange
+namespaces                        ns                                          false        Namespace
+nodes                             no                                          false        Node
+persistentvolumes                 pv                                          false        PersistentVolume
+persistentvolumeclaims            pvc                                         true         PersistentVolumeClaim
+pods                              po                                          true         Pod
+podtemplates                                                                  true         PodTemplate
+replicationcontrollers            rc                                          true         ReplicationController
+resourcequotas                    quota                                       true         ResourceQuota
+secrets                                                                       true         Secret
+services                          svc                                         true         Service
+serviceaccounts                   sa                                          true         ServiceAccount
+
+mutatingwebhookconfigurations                  admissionregistration.k8s.io   false        MutatingWebhookConfiguration
+validatingwebhookconfigurations                admissionregistration.k8s.io   false        ValidatingWebhookConfiguration
+customresourcedefinitions         crd,crds     apiextensions.k8s.io           false        CustomResourceDefinition
+apiservices                                    apiregistration.k8s.io         false        APIService
+controllerrevisions                            apps                           true         ControllerRevision
+daemonsets                        ds           apps                           true         DaemonSet
+deployments                       deploy       apps                           true         Deployment
+replicasets                       rs           apps                           true         ReplicaSet
+statefulsets                      sts          apps                           true         StatefulSet
+tokenreviews                                   authentication.k8s.io          false        TokenReview
+selfsubjectaccessreviews                       authorization.k8s.io           false        SelfSubjectAccessReview
+selfsubjectrulesreviews                        authorization.k8s.io           false        SelfSubjectRulesReview
+subjectaccessreviews                           authorization.k8s.io           false        SubjectAccessReview
+localsubjectaccessreviews                      authorization.k8s.io           true         LocalSubjectAccessReview
+horizontalpodautoscalers          hpa          autoscaling                    true         HorizontalPodAutoscaler
+cronjobs                          cj           batch                          true         CronJob
+jobs                                           batch                          true         Job
+certificatesigningrequests        csr          certificates.k8s.io            false        CertificateSigningRequest
+leases                                         coordination.k8s.io            true         Lease
+endpointslices                                 discovery.k8s.io               true         EndpointSlice
+events                            ev           events.k8s.io                  true         Event
+nodes                                          metrics.k8s.io                 false        NodeMetrics
+pods                                           metrics.k8s.io                 true         PodMetrics
+ingresses                         ing          networking.k8s.io              true         Ingress
+ingressclasses                                 networking.k8s.io              false        IngressClass
+networkpolicies                   netpol       networking.k8s.io              true         NetworkPolicy
+runtimeclasses                                 node.k8s.io                    false        RuntimeClass
+poddisruptionbudgets              pdb          policy                         true         PodDisruptionBudget
+podsecuritypolicies               psp          policy                         false        PodSecurityPolicy
+clusterroles                                   rbac.authorization.k8s.io      false        ClusterRole
+clusterrolebindings                            rbac.authorization.k8s.io      false        ClusterRoleBinding
+roles                                          rbac.authorization.k8s.io      true         Role
+rolebindings                                   rbac.authorization.k8s.io      true         RoleBinding
+priorityclasses                   pc           scheduling.k8s.io              false        PriorityClass
+csidrivers                                     storage.k8s.io                 false        CSIDriver
+csinodes                                       storage.k8s.io                 false        CSINode
+storageclasses                    sc           storage.k8s.io                 false        StorageClass
+volumeattachments                              storage.k8s.io                 false        VolumeAttachment
+```
+
+With the yaml in place you can now `create` or `apply` it:
+```bash
+# deploy image to k8s
+kubectl create -f k8s-deploy-dev.yml
+# deployment.apps/frontend2 created
+# service/frontend2 created
+
+# print
+kubectl get services | grep frontend2
+# NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+# frontend2    LoadBalancer   10.106.254.38   <pending>     5000:30300/TCP   53s
+
+# remove service
+kubectl delete service frontend2
+# service "frontend2" deleted
+```
 
 
 
@@ -827,8 +922,6 @@ kubectl port-forward svc/frontend2 5000:5000
 # Forwarding from 127.0.0.1:5000 -> 5000
 # Forwarding from [::1]:5000 -> 5000
 # Handling connection for 5000
-```
-```bash
 ```
 ```bash
 ```
