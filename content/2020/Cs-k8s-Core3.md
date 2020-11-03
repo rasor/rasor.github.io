@@ -676,8 +676,8 @@ kubectl cluster-info
 
 Testing starting the image in a pod manually:
 ```bash
-# Manually start the container in k8s - and never restart it, when it dies.  
-kubectl run frontend2 --image=rasor/usingnetcoredockerkubernetes:frontend2-v1 --port 5000 --restart=Never
+# Manually start the container in k8s - and never restart it, when it dies - let proxy know that pod should listen to :5000 and give container env-vars.  
+kubectl run frontend2 --image=rasor/usingnetcoredockerkubernetes:frontend2-v1 --port=5000 --restart=Never --env="ASPNETCORE_URLS=http://+:5000"
 # pod/frontend2 created
 
 kubectl get pods
@@ -744,15 +744,12 @@ kubectl get all
 
 # NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 # service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   38d
-
-# Delete the pod
-kubectl delete pod frontend2
-# pod "frontend2" deleted
 ```
 
 #### API into k8s
 
-Start proxy in another terminal
+Start proxy in another terminal.  
+This gives HTTP access to the k8s API on port 8001  
 ```bash
 kubectl proxy
 ```
@@ -760,9 +757,43 @@ Then open browser http://127.0.0.1:8001/
 
 Try to reach pod via api:
 http://127.0.0.1:8001/api/v1/namespaces/default/pods/frontend2/proxy/
-  "status": "Failure",
-  "message": "error trying to reach service: dial tcp 10.244.0.10:5000: connect: connection refused",
-  "code": 500
+
+Nice - the pod responds with a webpage :-)
+
+```bash
+# print stdout from the container
+kubectl logs frontend2
+#       Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+#       No XML encryptor configured. Key {d848e8f7-df39-44b3-902c-b11019a1d9ab} may be persisted to storage in unencrypted form.
+#       Now listening on: http://[::]:5000
+#       Application started. Press Ctrl+C to shut down.
+#       Hosting environment: Production
+#       Content root path: /app
+#       Failed to determine the https port for redirect.
+```
+
+Stop the proxy with ctrl-c and instead use port forwarding:
+```bash
+# Give localhost TCP access from port 5000 to the POD port 5000
+kubectl port-forward pod/frontend2 5000:5000
+# Forwarding from 127.0.0.1:5000 -> 5000
+# Forwarding from [::1]:5000 -> 5000
+
+# browse to pod
+start http://localhost:5000
+```
+![Web responds from pod](../img/2020/2020-10-27-K8s02.JPG)  
+
+```bash
+# Delete the pod
+kubectl delete pod frontend2
+# pod "frontend2" deleted
+```
+
+Tip:
+* [Port-forward also can forward to RS, SVC or Deployment](https://stackoverflow.com/a/51469150/750989)
+* [Port-forward also has --address to listen to](https://stackoverflow.com/a/62727416/750989)
+* Port-forward tool for local dev: [kubefwd](https://github.com/txn2/kubefwd)
 
 #### UI into k8s
 
@@ -911,6 +942,12 @@ kubectl get services | grep frontend2
 # remove service
 kubectl delete service frontend2
 # service "frontend2" deleted
+
+# remove replicaset, pod and deployment
+kubectl delete deployment frontend2
+# deployment.apps "frontend2" deleted
+
+
 ```
 
 
@@ -936,6 +973,7 @@ docker stop kind-control-plane
 
 # REFs
 
+* [Kubectl Reference Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 * Using VSCode: [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
 * Using Visual Studio: [Development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow)
 * [Debug an app running in a Docker container](https://code.visualstudio.com/docs/containers/debug-common)

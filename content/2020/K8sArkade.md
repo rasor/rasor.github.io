@@ -627,6 +627,7 @@ Some apps I have in mind could be
   * My blog 2020: [Docker Desktop for Windows on WSL2](./Docker4Win20.md)
   * [Logs and troubleshooting](https://docs.docker.com/docker-for-windows/troubleshoot/)
 * k8s:
+  * [Kubectl Reference Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
   * [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
   * [Deploy on Kubernetes](https://docs.docker.com/docker-for-windows/kubernetes/)
   * [Deploy on Kubernetes - Example app](https://docs.docker.com/docker-for-windows/kubernetes/#example-app)

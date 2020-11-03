@@ -182,6 +182,7 @@ civo kubernetes remove Cluster-1-just-dashboard
     * email: info@civo.com
 * Deploy
     * [Deploy OpenFaaS with k3s on Civo – Civo.com](https://www.civo.com/learn/deploy-openfaas-with-k3s-on-civo)
+    * [Deploy a Batch Monitoring Stack With Prometheus PushGateway – Civo.com](https://www.civo.com/learn/deploy-a-batch-monitoring-stack-with-prometheus-pushgateway)
 * Develop
     * [Civo Cloud API Documentation - Civo.com](https://www.civo.com/api)
 * Rancher
@@ -191,5 +192,7 @@ civo kubernetes remove Cluster-1-just-dashboard
     * Training: [Kubernetes Online Master Class Series](https://rancher.com/kubernetes-master-class)
         * [Kubernetes Master Class: Cluster Monitoring with Prometheus, Grafana and Alertmanager in Rancher 2.5 - Oct 27](https://info.rancher.com/kubernetes-master-class-oct27-2020)
     * [All Things Open](https://allthingsopen.6connex.com/event/ATO/en-us/?mcc=ato-day-8am#!/RancherBooth)
+* k8s
+    * [Kubectl Reference Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
 
 The End
