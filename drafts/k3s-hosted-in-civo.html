@@ -28,13 +28,13 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="Civo offers a hosted k3s cluster with an app market: civo/kubernetes-marketplace, like Arkade. Links Learn Learn – Civo.com Civo Kubernetes Quick Start Guide – Civo.com What’s the difference between k3s vs k8s – Civo.com Signup Apply: Join the world’s first managed k3s Kubernetes service – Civo.com Operate …" />
-<meta name="keywords" content="#k3s, #civo">
+<meta name="description" content="Intro Civo offers a hosted k3s cluster with an app market: civo/kubernetes-marketplace, like Arkade. At time of writing Civo k8s is in beta. You can apply for $70 monthly free service. You can work with Civo from * Civo web via https://www.civo.com/account/kubernetes * Civo CLI that …" />
+<meta name="keywords" content="#k3s, #civo, #k8s">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="k3s hosted in Civo"/>
-<meta property="og:description" content="Civo offers a hosted k3s cluster with an app market: civo/kubernetes-marketplace, like Arkade. Links Learn Learn – Civo.com Civo Kubernetes Quick Start Guide – Civo.com What’s the difference between k3s vs k8s – Civo.com Signup Apply: Join the world’s first managed k3s Kubernetes service – Civo.com Operate …"/>
+<meta property="og:description" content="Intro Civo offers a hosted k3s cluster with an app market: civo/kubernetes-marketplace, like Arkade. At time of writing Civo k8s is in beta. You can apply for $70 monthly free service. You can work with Civo from * Civo web via https://www.civo.com/account/kubernetes * Civo CLI that …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/k3s-hosted-in-civo.html"/>
 <meta property="og:type" content="article"/>
@@ -44,6 +44,7 @@
 <meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#k3s"/>
 <meta property="article:tag" content="#civo"/>
+<meta property="article:tag" content="#k8s"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; k3s hosted in Civo</title>
@@ -136,17 +137,171 @@
 
 
   <div>
-    <p><a href="https://www.civo.com/features">Civo</a> offers a hosted k3s cluster with an app market: <a href="https://github.com/civo/kubernetes-marketplace">civo/kubernetes-marketplace</a>, like Arkade.</p>
+    <h2>Intro</h2>
+<p><a href="https://www.civo.com/features">Civo</a> offers a hosted k3s cluster with an app market: <a href="https://github.com/civo/kubernetes-marketplace">civo/kubernetes-marketplace</a>, like Arkade.</p>
+<p>At time of writing Civo k8s is in beta. You can <a href="https://www.civo.com/kube100">apply</a> for $70 monthly free service.</p>
+<p>You can work with Civo from 
+* Civo web via <a href="https://www.civo.com/account/kubernetes">https://www.civo.com/account/kubernetes</a>
+* <a href="https://www.civo.com/learn/kubernetes-cluster-administration-using-civo-cli">Civo CLI</a> that you download from <a href="https://github.com/civo/cli/releases/tag/v0.6.39">Release v0.6.39 · civo/cli</a></p>
+<p>From those you create a k8s cluster.<br>
+Then you download the kubeconfig and continue work on that remote cluster via your local installed kubectl.  </p>
+<h2>Prerequisites</h2>
+<p>You must have <code>kubectl</code> installed.  </p>
+<h2>Get started</h2>
+<ul>
+<li>First you <a href="https://github.com/civo/cli/releases/tag/v0.6.39">download civo cli</a> and save it into <code>C:\Program Files\Civo</code>.  </li>
+<li>Next add that path to environment path.  </li>
+<li>Test civo:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># is civo reachable?</span>
+civo verision
+<span class="c1"># Civo CLI v0.6.39</span>
+</pre></div>
+
+
+<p>Get <a href="https://www.civo.com/account/security">API key</a></p>
+<div class="highlight"><pre><span></span><span class="c1"># save API key into civo CLI</span>
+civo apikey add My_Api_Key DAb75oyqVeaE7BI6Aa74FaRSP0E2tMZXkDWLC9wNQdcpGfH51r
+<span class="c1"># Saved the API Key DAb75oyqVeaE7BI6Aa74FaRSP0E2tMZXkDWLC9wNQdcpGfH51r as My_Api_Key</span>
+
+<span class="c1"># Set the key as current</span>
+civo apikey current My_Api_Key
+<span class="c1"># The current API Key is now My_Api_Key</span>
+
+<span class="c1"># help me create a cluster</span>
+civo k8s create -h
+<span class="c1"># create a cluster and wait for it to finish</span>
+civo k8s create Cluster-1-just-dashboard --size<span class="o">=</span>g2.xsmall --nodes<span class="o">=</span><span class="m">1</span> --wait -a<span class="o">=</span>kubernetes-dashboard
+
+<span class="c1"># print kube config for the created cluster</span>
+civo k8s config Cluster-1-just-dashboard
+<span class="c1"># apiVersion: v1</span>
+<span class="c1"># clusters:</span>
+<span class="c1"># - cluster:</span>
+<span class="c1">#   name: cluster-1-just-dashboard</span>
+
+<span class="c1"># save (or merge) the config into your kubeconfig</span>
+civo k8s config Cluster-1-just-dashboard --save
+<span class="c1"># Saved config to ~/.kube/config</span>
+
+<span class="c1"># print nodes and apps in your cluster</span>
+civo k8s show Cluster-1-just-dashboard
+<span class="c1">#           ID : 18779094-3e4e-4db5-85d4-6294c5ffffff</span>
+<span class="c1">#         Name : Cluster-1-just-dashboard</span>
+<span class="c1">#        Nodes : 1</span>
+<span class="c1">#         Size : g2.xsmall</span>
+<span class="c1">#       Status : ACTIVE</span>
+<span class="c1">#      Version : 1.18.6+k3s1</span>
+<span class="c1"># API Endpoint : https://91.211.144.244:6443</span>
+<span class="c1">#    Master IP : 91.211.144.244</span>
+<span class="c1"># DNS A record : 18779094-3e4e-4db5-85d4-6294c5ffffff.k8s.civo.com</span>
+
+<span class="c1"># Nodes:</span>
+<span class="c1"># +------------------+----+--------+-----------+-----------+------+----------+</span>
+<span class="c1"># | Name             | IP | Status | Size      | Cpu Cores | Ram  | SSD disk |</span>
+<span class="c1"># +------------------+----+--------+-----------+-----------+------+----------+</span>
+<span class="c1"># | kube-master-5cbc |    | ACTIVE | g2.xsmall |         1 | 1024 |       25 |</span>
+<span class="c1"># +------------------+----+--------+-----------+-----------+------+----------+</span>
+<span class="c1"># Applications:</span>
+<span class="c1"># +----------------------+---------+-----------+------------+</span>
+<span class="c1"># | Name                 | Version | Installed | Category   |</span>
+<span class="c1"># +----------------------+---------+-----------+------------+</span>
+<span class="c1"># | kubernetes-dashboard | v2.0.0  | true      | management |</span>
+<span class="c1"># +----------------------+---------+-----------+------------+</span>
+</pre></div>
+
+
+<p>With the cluster up browse to<br>
+https://www.civo.com/account/kubernetes/18779094-3e4e-4db5-85d4-6294c5ffffff<br>
+and expand kubernetes-dashboard.
+It will tell you howto connect:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Get login token</span>
+kubectl -n kubernetes-dashboard describe secret admin-user-token <span class="p">|</span> grep ^token
+<span class="c1"># get api access</span>
+kubectl proxy
+
+<span class="c1"># Open dashboard in browser</span>
+start http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+<span class="c1"># Signin and paste token</span>
+</pre></div>
+
+
+<p>You can add more apps out of the box:  </p>
+<div class="highlight"><pre><span></span><span class="c1"># Print the apps you can install</span>
+civo k8s applications list
+<span class="c1"># +---------------------------+------------------+--------------+-----------------+-----------------------------+</span>
+<span class="c1"># | Name                      | Version          | Category     | Plans           | Dependencies                |</span>
+<span class="c1"># +---------------------------+------------------+--------------+-----------------+-----------------------------+</span>
+<span class="c1"># | argo                      | (default)        | ci_cd        |                 |                             |</span>
+<span class="c1"># | cert-manager              | v1.0.2           | architecture |                 | Helm                        |</span>
+<span class="c1"># | docker-registry           | ALPHA            | architecture |                 | Helm, cert-manager, Traefik |</span>
+<span class="c1"># | dynamic-pv-scaler         | 0.1.0            | storage      |                 | prometheus-operator         |</span>
+<span class="c1"># | Ghost                     | 3.35.5           | management   | 5GB, 10GB, 15GB | longhorn                    |</span>
+<span class="c1"># | gitea                     | 1.12.5           | management   |                 |                             |</span>
+<span class="c1"># | haproxy                   | 1.4.6            | architecture |                 |                             |</span>
+<span class="c1"># | Helm                      | 2.16.5           | management   |                 |                             |</span>
+<span class="c1"># | Jaeger-Operator           | 1.2.0            | monitoring   |                 |                             |</span>
+<span class="c1"># | Jenkins                   | 2.190.1          | ci_cd        | 5GB, 10GB, 20GB | Longhorn                    |</span>
+<span class="c1"># | keptn                     | 0.7.1            | ci_cd        |                 |                             |</span>
+<span class="c1"># | kube-hunter               | latest           | security     |                 |                             |</span>
+<span class="c1"># | kube-scan                 | v20.5            | security     |                 |                             |</span>
+<span class="c1"># | KubeDB                    | v0.12.0-r1       | database     |                 | Longhorn                    |</span>
+<span class="c1"># | Kubei                     | 1.0.7            | security     |                 |                             |</span>
+<span class="c1"># | Kubeless                  | 1.0.5            | architecture |                 |                             |</span>
+<span class="c1"># | kubernetes-dashboard      | v2.0.0           | management   |                 |                             |</span>
+<span class="c1"># | Linkerd                   | Latest           | architecture |                 |                             |</span>
+<span class="c1"># | loki-stack                | v0.41.2          | monitoring   |                 | prometheus-operator         |</span>
+<span class="c1"># | Longhorn                  | 1.0.2            | storage      |                 |                             |</span>
+<span class="c1"># | Maesh                     | Latest           | architecture |                 | Helm                        |</span>
+<span class="c1"># | MariaDB                   | 10.4.7           | database     | 5GB, 10GB, 20GB | Longhorn                    |</span>
+<span class="c1"># | metrics-server            | (default)        | architecture |                 |                             |</span>
+<span class="c1"># | MinIO                     | 2019-08-29       | storage      | 5GB, 10GB, 20GB | Longhorn                    |</span>
+<span class="c1"># | MongoDB                   | 4.2.0            | database     | 5GB, 10GB, 20GB | Longhorn                    |</span>
+<span class="c1"># | Netdata                   | Latest           | monitoring   |                 | Helm                        |</span>
+<span class="c1"># | Nginx                     | latest           | architecture |                 |                             |</span>
+<span class="c1"># | OpenFaaS                  | 0.18.0           | architecture |                 | Helm                        |</span>
+<span class="c1"># | permission-manager        | 1.6.0            | management   |                 |                             |</span>
+<span class="c1"># | Polaris                   | 1.2.0            | security     |                 |                             |</span>
+<span class="c1"># | Portainer                 | ce               | management   |                 |                             |</span>
+<span class="c1"># | PostgreSQL                |             11.5 | database     | 5GB, 10GB, 20GB | Longhorn                    |</span>
+<span class="c1"># | prometheus-operator       | 0.35.0           | monitoring   |                 |                             |</span>
+<span class="c1"># | RabbitMQ                  | 3.8.8-management | architecture |                 |                             |</span>
+<span class="c1"># | Rancher                   | v2.5.0           | management   |                 |                             |</span>
+<span class="c1"># | Redis                     |              3.2 | database     |                 |                             |</span>
+<span class="c1"># | sealed-secrets            | v0.12.4          | architecture |                 |                             |</span>
+<span class="c1"># | Selenium                  | 3.141.59-r1      | ci_cd        |                 |                             |</span>
+<span class="c1"># | system-upgrade-controller | v0.6.2           | architecture |                 |                             |</span>
+<span class="c1"># | Tekton                    | v0.17.0          | ci_cd        |                 |                             |</span>
+<span class="c1"># | Traefik                   | (default)        | architecture |                 |                             |</span>
+<span class="c1"># | Traefik-v2                |              2.3 | architecture |                 |                             |</span>
+<span class="c1"># | Wordpress                 | 5.5.1            | management   | 5GB, 10GB, 20GB | longhorn, mariadb:5GB       |</span>
+<span class="c1"># +---------------------------+------------------+--------------+-----------------+-----------------------------+</span>
+
+civo kubernetes applications add PostgreSQL --cluster<span class="o">=</span>Cluster-1-just-dashboard
+<span class="c1"># You requested to add PostgreSQL but didn&#39;t select a plan. Please choose one... (5GB, 10GB, 20GB) [5GB]: 5GB</span>
+<span class="c1"># Thank you, next time you could use &quot;PostgreSQL:5GB&quot; to choose automatically</span>
+<span class="c1"># Added PostgreSQL 11.5 to Kubernetes cluster Cluster-1-just-dashboard</span>
+</pre></div>
+
+
+<p>And finally - tear down and stop costs:  </p>
+<div class="highlight"><pre><span></span><span class="c1"># Delete cluster</span>
+civo kubernetes remove Cluster-1-just-dashboard
+<span class="c1"># The Kubernetes cluster called Cluster-1-just-dashboard with ID 18779094-3e4e-4db5-85d4-6294c5ffffff was deleted</span>
+</pre></div>
+
+
 <h2>Links</h2>
 <ul>
 <li>Learn<ul>
-<li><a href="https://www.civo.com/learn">Learn – Civo.com</a></li>
-<li><a href="https://www.civo.com/learn/civo-kubernetes-quick-start-guide">Civo Kubernetes Quick Start Guide – Civo.com</a></li>
-<li><a href="https://www.civo.com/blog/k8s-vs-k3s">What’s the difference between k3s vs k8s – Civo.com</a></li>
+<li><a href="https://www.civo.com/learn">Learn</a></li>
+<li><a href="https://www.civo.com/learn/civo-kubernetes-quick-start-guide">Civo Kubernetes Quick Start Guide</a></li>
+<li><a href="https://www.civo.com/learn/kubernetes-cluster-administration-using-civo-cli">Kubernetes Cluster Administration Using Civo CLI</a></li>
+<li><a href="https://www.civo.com/blog/k8s-vs-k3s">What’s the difference between k3s vs k8s</a></li>
 </ul>
 </li>
 <li>Signup<ul>
-<li>Apply: <a href="https://www.civo.com/kube100">Join the world’s first managed k3s Kubernetes service – Civo.com</a></li>
+<li>Apply: <a href="https://www.civo.com/kube100">Join the world’s first managed k3s Kubernetes service</a></li>
 <li>Operate: <a href="https://www.civo.com/account">https://www.civo.com/account</a></li>
 <li><a href="https://github.com/civo/kubernetes-marketplace">kubernetes-marketplace</a></li>
 <li>Incidents: <a href="http://status.civo.com/">Civo Status</a></li>
@@ -155,6 +310,7 @@
 </li>
 <li>Deploy<ul>
 <li><a href="https://www.civo.com/learn/deploy-openfaas-with-k3s-on-civo">Deploy OpenFaaS with k3s on Civo – Civo.com</a></li>
+<li><a href="https://www.civo.com/learn/deploy-a-batch-monitoring-stack-with-prometheus-pushgateway">Deploy a Batch Monitoring Stack With Prometheus PushGateway – Civo.com</a></li>
 </ul>
 </li>
 <li>Develop<ul>
@@ -164,6 +320,16 @@
 <li>Rancher<ul>
 <li><a href="https://k3s.io/">K3s: Lightweight Kubernetes</a></li>
 <li>Persistent volumes: <a href="https://github.com/longhorn/longhorn">longhorn</a></li>
+<li><a href="https://rancher.com/quick-start/">Quick Start</a></li>
+<li>Training: <a href="https://rancher.com/kubernetes-master-class">Kubernetes Online Master Class Series</a><ul>
+<li><a href="https://info.rancher.com/kubernetes-master-class-oct27-2020">Kubernetes Master Class: Cluster Monitoring with Prometheus, Grafana and Alertmanager in Rancher 2.5 - Oct 27</a></li>
+</ul>
+</li>
+<li><a href="https://allthingsopen.6connex.com/event/ATO/en-us/?mcc=ato-day-8am#!/RancherBooth">All Things Open</a></li>
+</ul>
+</li>
+<li>k8s<ul>
+<li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands">Kubectl Reference Docs</a></li>
 </ul>
 </li>
 </ul>
@@ -173,6 +339,7 @@
     <p>
       <a href="https://rasor.github.io/tag/k3s.html">#k3s</a>
       <a href="https://rasor.github.io/tag/civo.html">#civo</a>
+      <a href="https://rasor.github.io/tag/k8s.html">#k8s</a>
     </p>
   </div>
 

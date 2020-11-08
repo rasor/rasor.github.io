@@ -162,6 +162,52 @@ node -v
 </pre></div>
 
 
+<h2>Chocolatey - package manager for Windows</h2>
+<ul>
+<li>Install <a href="https://chocolatey.org/install">Chocolatey</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c"># ps1 - run as admin:</span>
+<span class="nb">Set-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="n">-Scope</span> <span class="k">Process</span> <span class="n">-Force</span><span class="p">;</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="p">=</span> <span class="no">[System.Net.ServicePointManager]</span><span class="p">::</span><span class="n">SecurityProtocol</span> <span class="o">-bor</span> <span class="n">3072</span><span class="p">;</span> <span class="nb">iex </span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="n">Net</span><span class="p">.</span><span class="n">WebClient</span><span class="p">).</span><span class="n">DownloadString</span><span class="p">(</span><span class="s1">&#39;https://chocolatey.org/install.ps1&#39;</span><span class="p">))</span>
+<span class="c"># Getting Chocolatey from https://chocolatey.org/api/v2/package/chocolatey/0.10.15.</span>
+<span class="c"># .........</span>
+<span class="c"># Installing chocolatey on this machine</span>
+<span class="c"># .........</span>
+<span class="c"># PATH environment variable does not have C:\ProgramData\chocolatey\bin in it. Adding...</span>
+<span class="c"># Adding Chocolatey to the profile. This will provide tab completion, refreshenv, etc.</span>
+<span class="c"># WARNING: Unable to add Chocolatey to the profile. You will need to do it manually. Error was &#39;Cannot process argument transformation on parameter &#39;Encoding&#39;. &#39;byte&#39; is not a supported encoding name. For information on defining a custom encoding, see the documentation for the Encoding.RegisterProvider method. (Parameter &#39;name&#39;)&#39;</span>
+<span class="c"># This is how add the Chocolatey Profile manually.</span>
+<span class="c"># Find your $profile. Then add the following lines to it:</span>
+
+<span class="c"># $ChocolateyProfile = &quot;$env:ChocolateyInstall\helpers\chocolateyProfile.psm1&quot;</span>
+<span class="c"># if (Test-Path($ChocolateyProfile)) {</span>
+<span class="c">#   Import-Module &quot;$ChocolateyProfile&quot;</span>
+<span class="c"># }</span>
+<span class="c"># Chocolatey (choco.exe) is now ready.</span>
+<span class="c"># You can call choco from anywhere, command line or powershell by typing choco.</span>
+<span class="c"># Run choco /? for a list of functions.</span>
+<span class="c"># You may need to shut down and restart powershell and/or consoles</span>
+<span class="c">#  first prior to using choco.</span>
+<span class="c"># Ensuring chocolatey commands are on the path</span>
+<span class="c"># Ensuring chocolatey.nupkg is in the lib folder</span>
+
+<span class="n">choco</span> <span class="n">-v</span>
+<span class="c"># 0.10.15</span>
+</pre></div>
+
+
+<p>Hmm - apparently you need a non-admin prompt to add above to ps1 profile</p>
+<div class="highlight"><pre><span></span><span class="c"># edit ps1 profile:</span>
+<span class="n">notepad</span> <span class="nv">$PROFILE</span>
+<span class="c"># paste into file:</span>
+<span class="c">#---------------------</span>
+<span class="nv">$ChocolateyProfile</span> <span class="p">=</span> <span class="s2">&quot;$env:ChocolateyInstall\helpers\chocolateyProfile.psm1&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nb">Test-Path</span><span class="p">(</span><span class="nv">$ChocolateyProfile</span><span class="p">))</span> <span class="p">{</span>
+  <span class="nb">Import-Module</span> <span class="s2">&quot;$ChocolateyProfile&quot;</span>
+<span class="p">}</span>
+<span class="c">#---------------------</span>
+</pre></div>
+
+
 <h2>Git 4 Windows</h2>
 <ul>
 <li>Download <code>64-bit Git for Windows Setup</code> from <a href="https://git-scm.com/download/win">Git Download Package</a></li>
@@ -169,6 +215,21 @@ node -v
 </ul>
 <div class="highlight"><pre><span></span>git --version
 <span class="c1"># git version 2.24.1.windows.2</span>
+</pre></div>
+
+
+<h3>jq</h3>
+<p>jq is like <code>sed</code> for JSON data - you can use it to slice and filter and map and transform structured data with the same ease that <code>sed, awk, grep</code>. See examples in <a href="https://stedolan.github.io/jq/tutorial/">Tutorial</a>.  </p>
+<ul>
+<li>Install <a href="https://stedolan.github.io/jq/download/">jq</a> to Windows using choco:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c"># ps1 run-as-admi:</span>
+<span class="n">choco</span> <span class="n">install</span> <span class="n">jq</span>
+<span class="c"># C:\ProgramData\chocolatey\lib\jq\tools\jq.exe</span>
+<span class="c">#  ShimGen has successfully created a shim for jq.exe</span>
+<span class="c">#  The install of jq was successful.</span>
+<span class="n">jq</span> <span class="p">-</span><span class="n">-version</span>
+<span class="c"># jq-1.6</span>
 </pre></div>
 
 
@@ -248,6 +309,10 @@ pip3 -V
 <h2>pCloud</h2>
 <p>pCloud is an idrive.<br>
 It <a href="https://www.pcloud.com/how-to-install-pcloud-drive-windows.html?download=windows-10-64bit">integrates into filemanagers</a>.  </p>
+<h2>iTunes</h2>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/p/itunes/9pb2mz1zmb1s">Service Unavailable</a></li>
+</ul>
 <h2>PDF reader</h2>
 <ul>
 <li><a href="https://get.adobe.com/uk/reader/">Adobe Acrobat Reader DC, free PDF viewer download</a></li>

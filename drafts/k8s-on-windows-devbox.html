@@ -170,14 +170,15 @@ In that blog I ended up with <strong>Docker Desktop</strong> on <strong>Windows 
     * Using <strong>Kind</strong>
         * <a href="https://kubernetes.io/docs/setup/learning-environment/kind/">Installing Kubernetes with Kind</a>
         * <a href="https://kind.sigs.k8s.io/docs/user/quick-start/">kind Quick Start</a>
-    * Using <strong>Rancher</strong>
-    * Using <strong>k3d</strong>
-    * Using <strong>Minikube</strong>
+    * Using <strong>k3d</strong> - for dev, Raspberry Pi or IoT
+    * Using <strong>Minikube</strong> - for dev
         * <a href="https://kubernetes.io/docs/tasks/tools/install-minikube/">Install Minikube</a>
         * <a href="https://kubernetes.io/docs/setup/learning-environment/minikube/">Installing Kubernetes with Minikube</a>
-    * Enable k8s in <strong>Docker Desktop</strong>
+    * Enable k8s in <strong>Docker Desktop</strong> - for dev
+    * OpenShift
 * In cloud
-    * All cloud providers have their own k8s services</p>
+    * All cloud providers have their own k8s services [EKS (AWS), AKS (Az), GKE (Google)]
+    * Using <strong><a href="https://rancher.com/products">RKE</a></strong></p>
 <p>So why use Arkade to install k8s?
 * If you only need a single node cluster then option 3 - using <strong>Docker Desktop</strong> automates the work you manually can do with <strong>Minikube</strong>.<br>
 <em> If you need a multi node cluster then option 0 - using <strong>Arkade</strong> automates the work you manually can do with <strong>Kind</strong>.<br>
@@ -661,6 +662,33 @@ gives "ERR_CONNECTION_REFUSED"</p>
   * <a href="https://helm.sh/docs/intro/quickstart/">Quickstart Guide</a>
   * Download: <a href="https://github.com/helm/helm/releases">Releases · helm/helm</a>
   * <a href="https://github.com/helm/charts/tree/master/stable">helm/charts</a></p>
+<h2>Stop and start the cluster</h2>
+<div class="highlight"><pre><span></span><span class="c1"># stop the k8s cluster</span>
+docker stop kind-control-plane
+
+<span class="c1"># check if k8s cluster is running</span>
+kubectl cluster-info
+<span class="c1"># Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made</span>
+
+<span class="c1"># Check if there are any clusters</span>
+$ kind get clusters
+<span class="c1"># kind</span>
+
+<span class="c1"># Check it the container is running</span>
+docker ps -a <span class="p">|</span> grep kind
+<span class="c1"># CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES</span>
+<span class="c1"># 0b9a7220b4f8        kindest/node:v1.19.1   &quot;/usr/local/bin/entr…&quot;   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295-&gt;6443/tcp   kind-control-plane</span>
+
+<span class="c1"># start the k8s cluster</span>
+docker start kind-control-plane
+
+<span class="c1"># check if k8s cluster is running</span>
+kubectl cluster-info
+<span class="c1"># Kubernetes master is running at https://127.0.0.1:52295</span>
+<span class="c1"># KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy</span>
+</pre></div>
+
+
 <h2>What's next?</h2>
 <p>I want to build apps on a solid setup.<br>
 What I have in mind is the <a href="https://kubeprod.io/">Bitnami stack</a><br>
@@ -706,17 +734,26 @@ What I have in mind is the <a href="https://kubeprod.io/">Bitnami stack</a><br>
 <li>My blog 2020: <a href="./Docker4Win20.md">Docker Desktop for Windows on WSL2</a></li>
 <li><a href="https://docs.docker.com/docker-for-windows/troubleshoot/">Logs and troubleshooting</a></li>
 <li>k8s:</li>
+<li><a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands">Kubectl Reference Docs</a></li>
 <li><a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/">kubectl Cheat Sheet</a></li>
 <li><a href="https://docs.docker.com/docker-for-windows/kubernetes/">Deploy on Kubernetes</a></li>
 <li><a href="https://docs.docker.com/docker-for-windows/kubernetes/#example-app">Deploy on Kubernetes - Example app</a></li>
 <li>Vid 2017: <a href="https://www.youtube.com/watch?v=6xJwQgDnMFE">Create a 2-node Kubernetes cluster in 10 minutes</a></li>
 <li>When k8s? <a href="https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343">Alex Ellis posted on LinkedIn</a></li>
 <li>Vid: <a href="https://www.youtube.com/watch?v=3RTvoI-A7UQ">Kubernetes and Container Orchestration 101 - Hanselman</a></li>
-<li>k3s:</li>
+<li><a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/">Init Containers</a></li>
+<li><a href="https://rancher.com/learning-paths/best-practices-for-monitoring-and-alerting-on-kubernetes/">Best Practices for Monitoring and Alerting on Kubernetes</a><ul>
+<li><a href="https://github.com/bashofmann/rancher-2.5-monitoring">bashofmann/rancher-2.5-monitoring</a></li>
+<li><a href="https://rancher.com/events">Events</a></li>
+</ul>
+</li>
+<li>k3s (k8s that can run on Raspberry Pi):</li>
 <li>SaaS: <a href="https://www.civo.com/">Managed Kubernetes service, powered by k3s - Civo.com</a></li>
 <li>Kind:</li>
 <li><a href="https://kind.sigs.k8s.io/#installation-and-usage">Installation</a></li>
 <li><a href="https://kind.sigs.k8s.io/docs/user/quick-start/">Quick start</a></li>
+<li>helm: </li>
+<li><a href="https://artifacthub.io/">Artifact Hub</a></li>
 <li>Arkade:</li>
 <li><a href="https://github.com/alexellis/arkade">alexellis/arkade</a></li>
 <li><a href="https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD">Alex Ellis - arkade</a></li>

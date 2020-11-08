@@ -39,9 +39,9 @@
 <meta property="og:url" content="https://rasor.github.io/developing-with-openshift.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-04-15 15:00:00+02:00"/>
-<meta property="article:modified_time" content="2019-04-06 20:00:00+02:00"/>
+<meta property="article:modified_time" content="2020-10-27 20:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
-<meta property="article:section" content="DevOp"/>
+<meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#openshift"/>
 <meta property="article:tag" content="#docker"/>
 <meta property="article:tag" content="#kubernetes"/>
@@ -136,10 +136,10 @@
       
     <h1 id="developing-with-openshift">Developing with OpenShift</h1>
     <p>
-          Posted on April 15, 2018 in <a href="https://rasor.github.io/category/devop.html">DevOp</a>
+          Posted on April 15, 2018 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
 
       </br>
-        Updated: April 06, 2019
+        Updated: October 27, 2020
     </p>
   </header>
 
@@ -276,7 +276,7 @@ So if you build your OpenShift environment (including DBs and other microservice
 Fig 3. Continuous Deployment to Kubernetes Engine using Jenkins (Drawing hosted by google.com)<br>
 <a href="https://cloud.google.com/solutions/continuous-delivery-jenkins-kubernetes-engine?hl=en"><img alt="Continuous Deployment to Kubernetes Engine using Jenkins" src="https://cloud.google.com/solutions/images/jenkins-cd-container-engine.svg"></a>  </p>
 <p>Fig 4. RedHats own picture of OpenShift runtime environment (Drawing by <a href="https://blog.openshift.com/author/mikebarrett/">Mike Barret</a> hosted by openshift.com)
-<a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"><img alt="OpenShift runtime environment" src="https://blog.openshift.com/wp-content/uploads/arch-diagram.png"></a></p>
+<a href="https://blog.openshift.com/openshift-enterprise-3-evolving-paas-future/"><img alt="OpenShift runtime environment" src="https://www.openshift.com/hubfs/Imported_Blog_Media/arch-diagram.png"></a></p>
 <h2>Installation</h2>
 <h3>VirtualBox</h3>
 <p>I am installing on Windows 10.<br>
@@ -299,8 +299,8 @@ Fig 5. Your network will disconnect<br>
 
 
 <h3>MiniShift</h3>
-<p>I downloded and unzipped <a href="https://github.com/minishift/minishift/releases">minishift/minishift</a> for Windows.<br>
-It could be unzipped to anywhere. I chose <code>C:\Program Files\</code>, so after unzip the MiniShift path was <code>C:\Program Files\minishift-1.15.1-windows-amd64</code>. That path had to be added to the enviroment %path%.</p>
+<p>I downloaded and unzipped <a href="https://github.com/minishift/minishift/releases">minishift/minishift</a> for Windows.<br>
+It could be unzipped to anywhere. I chose <code>C:\Program Files\</code>, so after unzip the MiniShift path was <code>C:\Program Files\minishift-1.15.1-windows-amd64</code>. That path had to be added to the environment %path%.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Verify minishift can be reached from any local path</span>
 <span class="c1"># Note: On Windows minishift cannot be executed from a network drive</span>
 minishift --help

@@ -28,13 +28,13 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="OpenFaaS Cleanup After having started OpenFaaS on Windows Devbox then Swarm will start new containers each time Docker On Windows (DoW) starts. This means you end up with a lot of containers which have been exited. So howto get rid of all the OpenFaaS exited images? # Print images - tab delimted …" />
-<meta name="keywords" content="#openfaas, #docker">
+<meta name="description" content="PreRequisites Docker OpenFaaS jq OpenFaaS Cleanup After having started OpenFaaS on Windows Devbox then Swarm will start new containers each time Docker On Windows (DoW) starts. This means you end up with a lot of containers which have been exited. So howto get rid of all the OpenFaaS exited images …" />
+<meta name="keywords" content="#openfaas, #docker, #jq">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="OpenFaaS Cleanup"/>
-<meta property="og:description" content="OpenFaaS Cleanup After having started OpenFaaS on Windows Devbox then Swarm will start new containers each time Docker On Windows (DoW) starts. This means you end up with a lot of containers which have been exited. So howto get rid of all the OpenFaaS exited images? # Print images - tab delimted …"/>
+<meta property="og:description" content="PreRequisites Docker OpenFaaS jq OpenFaaS Cleanup After having started OpenFaaS on Windows Devbox then Swarm will start new containers each time Docker On Windows (DoW) starts. This means you end up with a lot of containers which have been exited. So howto get rid of all the OpenFaaS exited images …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/openfaas-cleanup.html"/>
 <meta property="og:type" content="article"/>
@@ -44,6 +44,7 @@
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#openfaas"/>
 <meta property="article:tag" content="#docker"/>
+<meta property="article:tag" content="#jq"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; OpenFaaS Cleanup</title>
@@ -136,7 +137,13 @@
 
 
   <div>
-    <h2>OpenFaaS Cleanup</h2>
+    <h2>PreRequisites</h2>
+<ul>
+<li>Docker</li>
+<li>OpenFaaS</li>
+<li><a href="https://stedolan.github.io/jq/download/">jq</a></li>
+</ul>
+<h2>OpenFaaS Cleanup</h2>
 <p>After having started <a href="https://rasor.github.io/openfaas-on-windows-devbox.html">OpenFaaS on Windows Devbox</a> then Swarm will start new containers each time Docker On Windows (DoW) starts.<br>
 This means you end up with a lot of containers which have been exited.<br>
 So howto get rid of all the OpenFaaS exited images?</p>
@@ -242,6 +249,7 @@ docker ps -a
     <p>
       <a href="https://rasor.github.io/tag/openfaas.html">#openfaas</a>
       <a href="https://rasor.github.io/tag/docker.html">#docker</a>
+      <a href="https://rasor.github.io/tag/jq.html">#jq</a>
     </p>
   </div>
 

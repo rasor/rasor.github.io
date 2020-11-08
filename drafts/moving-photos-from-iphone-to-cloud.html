@@ -28,26 +28,27 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="For the last many years I&#39;ve been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB. I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup. One of …" />
-<meta name="keywords" content="#nas, #storage, #cloud">
+<meta name="description" content="HowTo move photos from iPhone to PCloud without using iCloud Intro iPhone holds more than 80GB iCloud only holds free 5GB On PCloud we have 2TB So obviosly we wants to move the files to PCloud instead of iCloud. Problems When we did this the last time we were using …" />
+<meta name="keywords" content="#ios, #mac, #pcloud, #photos">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
-<meta property="og:title" content="NAS in the cloud"/>
-<meta property="og:description" content="For the last many years I&#39;ve been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB. I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup. One of …"/>
+<meta property="og:title" content="Moving photos from iPhone to cloud"/>
+<meta property="og:description" content="HowTo move photos from iPhone to PCloud without using iCloud Intro iPhone holds more than 80GB iCloud only holds free 5GB On PCloud we have 2TB So obviosly we wants to move the files to PCloud instead of iCloud. Problems When we did this the last time we were using …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rasor.github.io/nas-in-the-cloud.html"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/moving-photos-from-iphone-to-cloud.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2018-01-01 12:00:00+01:00"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOps"/>
-<meta property="article:tag" content="#nas"/>
-<meta property="article:tag" content="#storage"/>
-<meta property="article:tag" content="#cloud"/>
+<meta property="article:tag" content="#ios"/>
+<meta property="article:tag" content="#mac"/>
+<meta property="article:tag" content="#pcloud"/>
+<meta property="article:tag" content="#photos"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
-  <title>Rasor's Tech Blog &ndash; NAS in the cloud</title>
+  <title>Rasor's Tech Blog &ndash; Moving photos from iPhone to cloud</title>
 
 </head>
 <body>
@@ -127,9 +128,9 @@
 <article class="single">
   <header>
       
-    <h1 id="nas-in-the-cloud">NAS in the cloud</h1>
+    <h1 id="moving-photos-from-iphone-to-cloud">Moving photos from iPhone to cloud</h1>
     <p>
-          Posted on January 01, 2018 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
 
       </br>
     </p>
@@ -137,37 +138,75 @@
 
 
   <div>
-    <p>For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.</p>
-<p>I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
-One of those providers being pCloud.
-They have for long been sending me notices about my free space (10 GB) running out.
-This time I acted on one such notice and was sent to<br>
-<a href="https://www.pcloud.com/cloud-storage-pricing-plans.html"><img alt="Cloud Storage Pricing" src="img/2018/2017-12-31-pCloud.PNG"></a></p>
-<p>Now it was possible to get 2 TB storage for a onetime payment for a lifetime period for a price probably lower than I could get a mirrowed disk solution at home for.<br>
-Price: EUR 250,-</p>
-<h3>Pros</h3>
+    <h1>HowTo move photos from iPhone to PCloud without using iCloud</h1>
+<h2>Intro</h2>
 <ul>
-<li>Storage is striped or mirrowed on 5 disks - not only 2</li>
-<li>If one disk dies, I won't have to replace it - that's managed and included</li>
-<li>30 days backup - if wannacry hits my PC and encrypts my drives, I can just restore that cloud drive with a click</li>
-<li>I can share folders with other people without affecting adding cost for them</li>
-<li>Apps for IOS and Android</li>
-<li>Two phase authentication using my facebook account</li>
+<li><strong>iPhone</strong> holds more than 80GB</li>
+<li><strong>iCloud</strong> only holds free 5GB</li>
+<li>On <strong>PCloud</strong> we have 2TB</li>
 </ul>
-<h3>Cons</h3>
+<p>So obviosly we wants to move the files to PCloud instead of iCloud.</p>
+<h2>Problems</h2>
+<p>When we did this the last time we were using iTunes - probably from PC.<br>
+Now I tried also to use iTunes on PC, but it does not contain photos.  </p>
+<p>Then I tried to use Windows Explorer. You can import from iPhone, when you right-click on the iPhone (after you have trusted both on phone and PC). It takes 10th of minutes before the PC has read all the DCIM folders on the iPhone.<br>
+Select "delete after import".<br>
+Problem is that the import stalls after a while. And then you'll have to start all over. You'll never get a chance to get all imported.</p>
+<p>On Mac, if you have updated to OS <code>Catalina</code>, then you can't install iTunes (though a tool - <a href="https://github.com/cormiertyshawn895/Retroactive">Retroactive</a> lets you).</p>
+<h2>Solution</h2>
+<p>On Mac running Catalina <code>iTunes</code> were split into the programs normally handling the files.<br>
+So images files now uses <code>Photos</code>, audio files now uses <code>Music</code>. And I guess the rest are handled via <code>Finder</code>.<br>
+It seems like the <code>Photos</code> app is storing all photos in one library into a database file for that library - so when we want to move the photos further on to a cloud drive, then you have to export the images out.  </p>
+<p>There is a way to become able to handle all files manually - see video below. But that requires all iCloud settings on the phone has been disabled. When you disable them, then the phone wants to delete all the files on the phone, so you don't want to do that.  </p>
+<p>Instead we'll just use Photos program for import.</p>
 <ul>
-<li>Bandwitdh much lower than local wifi or USB</li>
-<li>The could drive takes up some space for caching on your local drive, which it uses for sync, so you won't have 2 TB locally, only whatever you assing for your cache</li>
-<li>Seems to not the best integration with uppload photos from IOS, but neither would a local NAS be, probably</li>
+<li>Disconnect Phone from iCloud<ul>
+<li>On Phone open <code>Settings</code></li>
+<li>Open <code>iCloud</code></li>
+<li>Open <code>Photos</code></li>
+<li>Turn off all the options, that does not delete files on the phone</li>
 </ul>
-<p>So finally I won't have to worry about loosing photos and other content.</p>
+</li>
+<li>Disable sync from phone to Mac<ul>
+<li>Connect iPhone to Mac</li>
+<li>In <code>Finder</code> select your phone under <code>Locations</code></li>
+<li>Select tab <code>Photos</code></li>
+<li>Unselect <code>Sync</code></li>
+<li>Press <code>Apply</code></li>
+</ul>
+</li>
+<li>Import from phone to Mac<ul>
+<li>In <code>Photos</code> select your phone under <code>Devices</code></li>
+<li>Change target from <code>Library</code> to <code>New Album</code> to avoid mixing the imported photos with others.</li>
+<li>Press <code>Delete after import</code></li>
+<li>Press <code>import</code></li>
+<li>It happens the connection to the phone gets lost. But when you restart the import, then it won't import photos you already have imported.</li>
+</ul>
+</li>
+<li>Move files from Mac to cloud<ul>
+<li>TBD ....</li>
+</ul>
+</li>
+<li>Delete copied photos on phone<ul>
+<li>On phone open <code>Photos</code></li>
+<li>TBD ....</li>
+</ul>
+</li>
+</ul>
+<h2>Links</h2>
+<ul>
+<li>Vid: <a href="https://www.youtube.com/watch?v=BSkHVZIY8EA">How to Transfer Music, Videos to iPhone, iPad in macOS Catalina?</a></li>
+<li>Guide: <a href="https://www.cleverfiles.com/howto/move-photos-hard-drive.html">How to Transfer Photos from Mac to External Drive [Solved]</a></li>
+<li><a href="https://support.apple.com/en-us/HT201517">Move your Photos library to save space on your Mac</a></li>
+</ul>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="https://rasor.github.io/tag/nas.html">#nas</a>
-      <a href="https://rasor.github.io/tag/storage.html">#storage</a>
-      <a href="https://rasor.github.io/tag/cloud.html">#cloud</a>
+      <a href="https://rasor.github.io/tag/ios.html">#ios</a>
+      <a href="https://rasor.github.io/tag/mac.html">#mac</a>
+      <a href="https://rasor.github.io/tag/pcloud.html">#pcloud</a>
+      <a href="https://rasor.github.io/tag/photos.html">#photos</a>
     </p>
   </div>
 
