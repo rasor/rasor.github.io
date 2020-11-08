@@ -2,7 +2,7 @@ Title: Deploying Express REST API to Azure
 Status: published
 Date: 2017-10-29 21:00
 Modified: 2017-10-30 17:00
-Category: DevOp
+Category: DevOps
 Tags: #npm, #git, #express, #nodejs, #azure
 
 This blog is part of a series.

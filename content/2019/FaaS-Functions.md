@@ -1,6 +1,6 @@
 Title: FaaS - Functions as a Service - Serverless
 Date: 2099-01-01 00:00
-Category: DevOp
+Category: DevOps
 Tags: #google, #mobile, #web, #pwa, #serverless, #vuejs, #react, #faas
 
 # Microservices

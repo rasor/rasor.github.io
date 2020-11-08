@@ -1,6 +1,6 @@
 Title: Developing with OpenShift
 Date: 2099-01-01 00:00
-Category: DevOp
+Category: DevOps
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #dockerswarm
 
 This a blog in 2 parts

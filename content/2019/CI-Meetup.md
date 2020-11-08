@@ -1,6 +1,6 @@
 Title:  CI meetup-2019
 Date: 2099-01-01 00:00
-Category: DevOp
+Category: DevOps
 Tags: #ci, 
 
 ## CI meetup 2019

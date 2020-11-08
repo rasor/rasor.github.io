@@ -2,7 +2,7 @@ Title: Using NVM for Windows and Yarn
 Status: published
 Date: 2017-10-08 11:00
 Modified: 2019-04-19 11:00
-Category: DevOp
+Category: DevOps
 Tags: #nvm, #nodejs, #npm, #yarn, #chocolatay
 
 Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.

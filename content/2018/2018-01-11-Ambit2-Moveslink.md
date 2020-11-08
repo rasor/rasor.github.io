@@ -1,7 +1,7 @@
 Title: Moveslink 2 crash
 Status: published
 Date: 2018-01-11 19:00
-Category: DevOp
+Category: DevOps
 Tags: #ambit, #moveslink, #drivers, #windows
 
 A few days ago I [resat my Windows 10](https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options), so I could start from scratch.

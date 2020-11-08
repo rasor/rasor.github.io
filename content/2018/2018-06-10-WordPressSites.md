@@ -1,7 +1,7 @@
 Title: Tools for Wordpress sites
 Status: published
 Date: 2018-06-10 22:00
-Category: DevOp
+Category: DevOps
 Tags: #wordpress, #themes, #seo
 
 Wordpress sites is still going strong with a large community creating beautiful themes.

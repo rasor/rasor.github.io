@@ -6,7 +6,7 @@ The categories are much fewer than in my last blog.
 ----------------
 Category: Biz - #StartUp, #ProdMgmt, #ProjMgmt, #ITS
 Category: Design - #Media, #Graphics
-Category: DevOp - #HW, #Admin, #Network, #Install, #Cloud, #Servers, #OS
+Category: DevOps - #HW, #Admin, #Network, #Install, #Cloud, #Servers, #OS
 Category: Develop - #SW, #Programming, #VCS
 Category: Study - #Blog, #Exam
 Category: NonGeek

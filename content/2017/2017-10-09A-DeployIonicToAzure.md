@@ -2,7 +2,7 @@ Title: Deploying Ionic to Azure
 Status: published
 Date: 2017-10-10 21:00
 Modified: 2018-05-10 12:00
-Category: DevOp
+Category: DevOps
 Tags: #npm, #git, #ionic, #ngx, #azure, #pwa, #azure
 
 This blog is part of a series.

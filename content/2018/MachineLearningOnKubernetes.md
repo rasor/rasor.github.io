@@ -1,6 +1,6 @@
 Title: Deploy Machine Learning on Kubernetes
 Date: 2099-01-01 00:00
-Category: DevOp
+Category: DevOps
 Tags: #machinelearning, #kubernetes, #openshift, #spark, #jupyter
 
 * Blog: [Machine Learning on OpenShift and Kubernetes SIG: An Invitation](https://blog.openshift.com/machine-learning-on-openshift-and-kubernetes-sig-an-invitation/)

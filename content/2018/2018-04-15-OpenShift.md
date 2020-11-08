@@ -2,7 +2,7 @@ Title: Developing with OpenShift
 Status: published
 Date: 2018-04-15 15:00
 Modified: 2020-10-27 20:00
-Category: DevOp
+Category: DevOps
 Tags: #openshift, #docker, #kubernetes, #redhat, #paas, #virtualbox, #ansible, #kubernetic, #openfaas, #footloose
 
 It has become time (for me) to explore OpenShift.

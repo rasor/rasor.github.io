@@ -2,7 +2,7 @@ Title: Using Pelican blog on Github pages
 Status: published
 Date: 2017-09-23 20:20
 Modified: 2017-11-26 21:00
-Category: DevOp
+Category: DevOps
 Tags: #blog, #pelican, #githubpages, #cms, #git, #install, #python
 
 This blog is part of a serie 

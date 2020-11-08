@@ -2,7 +2,7 @@ Title: Vue Storefront installation on Windows Dev box
 Status: published
 Date: 2018-05-15 23:00
 Modified: 2020-06-26 19:00
-Category: DevOp
+Category: DevOps
 Tags: #vue, #magento, #webshop, #seo, #pwa, #docker, #git, #yarn, #npm, #nvm, #shopify, #snipchart
 
 [Vue Storefront](https://medium.com/@piotrkarwatka/vue-storefront-1-0rc-3-has-arrived-5c770a338d4) will soon be out (june 2018).

@@ -2,7 +2,7 @@ Title: Neo4j on Windows
 Status: published
 Date: 2019-05-08 00:00
 Modified: 2019-05-15 00:00
-Category: DevOp
+Category: DevOps
 Tags: #graphdb, #cypher, #neo4j, #docker
 
 Time for me to play with Neo4j. I have a project, where a graph DB makes most sense. In this blog I'll install Neo4j on Windows.  

@@ -1,7 +1,7 @@
 Title: NAS in the cloud
 Status: published
 Date: 2018-01-01 12:00
-Category: DevOp
+Category: DevOps
 Tags: #nas, #storage, #cloud
 
 For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.

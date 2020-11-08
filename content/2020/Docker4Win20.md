@@ -1,7 +1,7 @@
 Title: Docker Desktop for Windows on WSL2
 Date: 2099-01-01 00:00
 Modified: 2019-03-28 09:00
-Category: DevOp
+Category: DevOps
 Tags: #docker, #hyperv, #virtualbox, #openfaas, #kitematic, #wsl2, #win10, #virtualmachineplatform
 
 ## Something nice-to-know
