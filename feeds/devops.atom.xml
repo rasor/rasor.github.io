@@ -1,15 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T10:30:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>k8s on Windows Devbox - Part 0.2</title><link href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html" rel="alternate"></link><published>2020-10-12T00:00:00+02:00</published><updated>2020-11-09T10:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-12:/k8s-on-windows-devbox-part-02.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T14:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;Part 1.2: Develop .NET docker images&lt;/li&gt;
+&lt;li&gt;Part 1.3: Run containers …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;Part 1.2: Develop .NET docker images&lt;/li&gt;
+&lt;li&gt;Part 1.3: Run containers in k8s&lt;/li&gt;
+&lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this blog (Part 1.1) I'll do basic execution of Docker images as preparation for the next blog (Part 1.2).&lt;br&gt;
+Part 1 is about developing C# docker containers and hosting them in k8s.&lt;/p&gt;
+&lt;p&gt;It is partly inspired by eBook &lt;a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly"&gt;Using .NET Core, Docker, and Kubernetes Succinctly&lt;/a&gt; and partly from documents from Microsoft.&lt;br&gt;
+So I'll be reusing chapter numbers from the eBook, when they fit into the context.  &lt;/p&gt;
+&lt;h1&gt;Chapters from eBook &lt;strong&gt;Using .NET Core, Docker, and Kubernetes&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;Chapter 1 ASP.NET and Docker Together&lt;/h2&gt;
+&lt;h3&gt;Chapter 1.1 Execute .NET Core application with Docker&lt;/h3&gt;
+&lt;p&gt;Install and start Docker.&lt;br&gt;
+Then open a shell.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify docker CLI is installed&lt;/span&gt;
+docker --version
+&lt;span class="c1"&gt;# Docker version 19.03.13, build 4484c46d9d&lt;/span&gt;
+
+&lt;span class="c1"&gt;# View docker images cached on your machine&lt;/span&gt;
+docker image ls
+&lt;span class="c1"&gt;# or&lt;/span&gt;
+docker images
+&lt;span class="c1"&gt;# REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we'll run a console app.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# pull specific images into your cache&lt;/span&gt;
+docker pull microsoft/dotnet-samples &lt;span class="c1"&gt;# this is a console app&lt;/span&gt;
+docker images
+&lt;span class="c1"&gt;# REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE&lt;/span&gt;
+&lt;span class="c1"&gt;# microsoft/dotnet-samples   latest              70e25069fca7        20 months ago       181MB&lt;/span&gt;
+
+&lt;span class="c1"&gt;# start an image&lt;/span&gt;
+docker run --name consoleapp 70e25069fca7
+&lt;span class="c1"&gt;#    Hello from .NET Core!&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Which containers are running?&lt;/span&gt;
+docker ps
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# none - the above one fineshed and exited&lt;/span&gt;
+
+&lt;span class="c1"&gt;# show all containers&lt;/span&gt;
+docker ps -a
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                     PORTS                       NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# a51691a1650f        70e25069fca7           &amp;quot;dotnet dotnetapp.dll&amp;quot;   3 minutes ago       Exited (0) 3 minutes ago                               consoleapp&lt;/span&gt;
+
+&lt;span class="c1"&gt;# run again - to avoid creating more images&lt;/span&gt;
+docker start consoleapp &lt;span class="c1"&gt;# runs in background by default, so you won&amp;#39;t see print here - instead do&lt;/span&gt;
+docker start consoleapp -i &lt;span class="c1"&gt;# interactive mode&lt;/span&gt;
+
+&lt;span class="c1"&gt;# remove the image&lt;/span&gt;
+docker rm consoleapp &lt;span class="c1"&gt;# by name&lt;/span&gt;
+&lt;span class="c1"&gt;# or&lt;/span&gt;
+docker rm a51691a1650f &lt;span class="c1"&gt;# by id&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Next we'll run a web app.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 1:&lt;/span&gt;
+&lt;span class="c1"&gt;# pull a web app&lt;/span&gt;
+docker pull microsoft/dotnet-samples:aspnetapp &lt;span class="c1"&gt;# this is a web app&lt;/span&gt;
+docker images
+&lt;span class="c1"&gt;# REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE&lt;/span&gt;
+&lt;span class="c1"&gt;# microsoft/dotnet-samples   aspnetapp           575d85b4a69b        20 months ago       263MB&lt;/span&gt;
+&lt;span class="c1"&gt;# microsoft/dotnet-samples   latest              70e25069fca7        20 months ago       181MB&lt;/span&gt;
+
+&lt;span class="c1"&gt;# start a new image&lt;/span&gt;
+docker run --name mvcapp 575d85b4a69b &lt;span class="c1"&gt;# you can add -d to run in damon/background mode, which gives you the prompt back, but you then won&amp;#39;t see its outputs&lt;/span&gt;
+&lt;span class="c1"&gt;# Hosting environment: Production&lt;/span&gt;
+&lt;span class="c1"&gt;# Content root path: /app&lt;/span&gt;
+&lt;span class="c1"&gt;# Now listening on: http://[::]:80&lt;/span&gt;
+&lt;span class="c1"&gt;# Application started. Press Ctrl+C to shut down.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 2:&lt;/span&gt;
+docker ps
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# 82225a6f9672        575d85b4a69b           &amp;quot;dotnet aspnetapp.dll&amp;quot;   36 seconds ago      Up 34 seconds                                        mvcapp&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;But you can't access it on http://[::]:80 ... You have to redirect an outer port into its port 80.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 1:&lt;/span&gt;
+&lt;span class="c1"&gt;# stop the image&lt;/span&gt;
+docker stop mvcapp &lt;span class="c1"&gt;# notice - stopping by name&lt;/span&gt;
+&lt;span class="c1"&gt;# remove image&lt;/span&gt;
+docker rm mvcapp
+
+&lt;span class="c1"&gt;# start the image with access from port 8080 &lt;/span&gt;
+docker run -p &lt;span class="m"&gt;8080&lt;/span&gt;:80 --name mvcapp 575d85b4a69b  &lt;span class="c1"&gt;# notice - starting by name, so we don&amp;#39;t add yet an image&lt;/span&gt;
+&lt;span class="c1"&gt;#or&lt;/span&gt;
+docker create -p &lt;span class="m"&gt;8080&lt;/span&gt;:80 --name mvcapp 575d85b4a69b
+docker start mvcapp &lt;span class="c1"&gt;# runs in background by default - use -i to see its outputs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 2:&lt;/span&gt;
+&lt;span class="c1"&gt;# open browser&lt;/span&gt;
+start http://localhost:8080
+docker ps
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# bab98369a976        575d85b4a69b           &amp;quot;dotnet aspnetapp.dll&amp;quot;   45 seconds ago      Up 43 seconds            0.0.0.0:8080-&amp;gt;80/tcp        mvcapp&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 1:&lt;/span&gt;
+&lt;span class="c1"&gt;# stop the image&lt;/span&gt;
+docker stop mvcapp &lt;span class="c1"&gt;# notice - stopping by name&lt;/span&gt;
+&lt;span class="c1"&gt;# remove image&lt;/span&gt;
+docker rm mvcapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Chapter 2 Create Your Application with Docker&lt;/h2&gt;
+&lt;p&gt;See Part 1.2...&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#docker"></category></entry><entry><title>k8s on Windows Devbox - Part 0.2</title><link href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html" rel="alternate"></link><published>2020-10-12T00:00:00+02:00</published><updated>2020-11-09T10:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-12:/k8s-on-windows-devbox-part-02.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
-This time running on &lt;strong&gt;Kubernetes (k8s)&lt;/strong&gt;, &lt;strong&gt;Docker Desktop&lt;/strong&gt;, &lt;strong&gt;Windows Home …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+This time running on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
@@ -727,13 +856,14 @@ What I have in mind is the &lt;a href="https://kubeprod.io/"&gt;Bitnami stack&lt
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Other coming ...&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
-I ended up …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;In this blog I just wanted Docker on my Windows …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Other coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;

@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="This blog is part of a serie: Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL Part 0.2: Install k8s using kind on Windows - including arkade Part 1.1: Run docker containers (this blog) Part 1.2: Develop .NET docker images Part 1.3: Run containers …" />
+<meta name="keywords" content="#docker">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Run docker containers - Part 1.1"/>
+<meta property="og:description" content="This blog is part of a serie: Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL Part 0.2: Install k8s using kind on Windows - including arkade Part 1.1: Run docker containers (this blog) Part 1.2: Develop .NET docker images Part 1.3: Run containers …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/run-docker-containers-part-11.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-10-18 00:00:00+02:00"/>
+<meta property="article:modified_time" content="2020-11-09 14:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#docker"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Run docker containers - Part 1.1</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="run-docker-containers-part-11">Run docker containers - Part 1.1</h1>
+    <p>
+          Posted on October 18, 2020 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+      </br>
+        Updated: November 09, 2020
+    </p>
+  </header>
+
+
+  <div>
+    <p>This blog is part of a serie:</p>
+<ul>
+<li><a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html">Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL</a></li>
+<li><a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html">Part 0.2: Install k8s using kind on Windows - including arkade</a></li>
+<li><a href="https://rasor.github.io/run-docker-containers-part-11.html">Part 1.1: Run docker containers</a> (this blog)</li>
+<li>Part 1.2: Develop .NET docker images</li>
+<li>Part 1.3: Run containers in k8s</li>
+<li>Part 2: Deploy containers to Civo</li>
+</ul>
+<p>In this blog (Part 1.1) I'll do basic execution of Docker images as preparation for the next blog (Part 1.2).<br>
+Part 1 is about developing C# docker containers and hosting them in k8s.</p>
+<p>It is partly inspired by eBook <a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly">Using .NET Core, Docker, and Kubernetes Succinctly</a> and partly from documents from Microsoft.<br>
+So I'll be reusing chapter numbers from the eBook, when they fit into the context.  </p>
+<h1>Chapters from eBook <strong>Using .NET Core, Docker, and Kubernetes</strong></h1>
+<h2>Chapter 1 ASP.NET and Docker Together</h2>
+<h3>Chapter 1.1 Execute .NET Core application with Docker</h3>
+<p>Install and start Docker.<br>
+Then open a shell.  </p>
+<div class="highlight"><pre><span></span><span class="c1"># Verify docker CLI is installed</span>
+docker --version
+<span class="c1"># Docker version 19.03.13, build 4484c46d9d</span>
+
+<span class="c1"># View docker images cached on your machine</span>
+docker image ls
+<span class="c1"># or</span>
+docker images
+<span class="c1"># REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE</span>
+</pre></div>
+
+
+<p>Now we'll run a console app.</p>
+<div class="highlight"><pre><span></span><span class="c1"># pull specific images into your cache</span>
+docker pull microsoft/dotnet-samples <span class="c1"># this is a console app</span>
+docker images
+<span class="c1"># REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE</span>
+<span class="c1"># microsoft/dotnet-samples   latest              70e25069fca7        20 months ago       181MB</span>
+
+<span class="c1"># start an image</span>
+docker run --name consoleapp 70e25069fca7
+<span class="c1">#    Hello from .NET Core!</span>
+
+<span class="c1"># Which containers are running?</span>
+docker ps
+<span class="c1"># CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES</span>
+<span class="c1"># none - the above one fineshed and exited</span>
+
+<span class="c1"># show all containers</span>
+docker ps -a
+<span class="c1"># CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                     PORTS                       NAMES</span>
+<span class="c1"># a51691a1650f        70e25069fca7           &quot;dotnet dotnetapp.dll&quot;   3 minutes ago       Exited (0) 3 minutes ago                               consoleapp</span>
+
+<span class="c1"># run again - to avoid creating more images</span>
+docker start consoleapp <span class="c1"># runs in background by default, so you won&#39;t see print here - instead do</span>
+docker start consoleapp -i <span class="c1"># interactive mode</span>
+
+<span class="c1"># remove the image</span>
+docker rm consoleapp <span class="c1"># by name</span>
+<span class="c1"># or</span>
+docker rm a51691a1650f <span class="c1"># by id</span>
+</pre></div>
+
+
+<p>Next we'll run a web app.  </p>
+<div class="highlight"><pre><span></span><span class="c1"># Terminal 1:</span>
+<span class="c1"># pull a web app</span>
+docker pull microsoft/dotnet-samples:aspnetapp <span class="c1"># this is a web app</span>
+docker images
+<span class="c1"># REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE</span>
+<span class="c1"># microsoft/dotnet-samples   aspnetapp           575d85b4a69b        20 months ago       263MB</span>
+<span class="c1"># microsoft/dotnet-samples   latest              70e25069fca7        20 months ago       181MB</span>
+
+<span class="c1"># start a new image</span>
+docker run --name mvcapp 575d85b4a69b <span class="c1"># you can add -d to run in damon/background mode, which gives you the prompt back, but you then won&#39;t see its outputs</span>
+<span class="c1"># Hosting environment: Production</span>
+<span class="c1"># Content root path: /app</span>
+<span class="c1"># Now listening on: http://[::]:80</span>
+<span class="c1"># Application started. Press Ctrl+C to shut down.</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c1"># Terminal 2:</span>
+docker ps
+<span class="c1"># CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES</span>
+<span class="c1"># 82225a6f9672        575d85b4a69b           &quot;dotnet aspnetapp.dll&quot;   36 seconds ago      Up 34 seconds                                        mvcapp</span>
+</pre></div>
+
+
+<p>But you can't access it on http://[::]:80 ... You have to redirect an outer port into its port 80.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Terminal 1:</span>
+<span class="c1"># stop the image</span>
+docker stop mvcapp <span class="c1"># notice - stopping by name</span>
+<span class="c1"># remove image</span>
+docker rm mvcapp
+
+<span class="c1"># start the image with access from port 8080 </span>
+docker run -p <span class="m">8080</span>:80 --name mvcapp 575d85b4a69b  <span class="c1"># notice - starting by name, so we don&#39;t add yet an image</span>
+<span class="c1">#or</span>
+docker create -p <span class="m">8080</span>:80 --name mvcapp 575d85b4a69b
+docker start mvcapp <span class="c1"># runs in background by default - use -i to see its outputs</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c1"># Terminal 2:</span>
+<span class="c1"># open browser</span>
+start http://localhost:8080
+docker ps
+<span class="c1"># CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES</span>
+<span class="c1"># bab98369a976        575d85b4a69b           &quot;dotnet aspnetapp.dll&quot;   45 seconds ago      Up 43 seconds            0.0.0.0:8080-&gt;80/tcp        mvcapp</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c1"># Terminal 1:</span>
+<span class="c1"># stop the image</span>
+docker stop mvcapp <span class="c1"># notice - stopping by name</span>
+<span class="c1"># remove image</span>
+docker rm mvcapp
+</pre></div>
+
+
+<h2>Chapter 2 Create Your Application with Docker</h2>
+<p>See Part 1.2...</p>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/docker.html">#docker</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

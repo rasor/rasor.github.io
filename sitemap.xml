@@ -5,36 +5,43 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2020-11-09T14:19:03-00:00</lastmod>
+<lastmod>2020-11-09T15:14:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2020-11-09T14:19:03-00:00</lastmod>
+<lastmod>2020-11-09T15:14:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2020-11-09T14:19:03-00:00</lastmod>
+<lastmod>2020-11-09T15:14:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2020-11-09T14:19:03-00:00</lastmod>
+<lastmod>2020-11-09T15:14:01-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2020-11-09T14:19:03-00:00</lastmod>
+<lastmod>2020-11-09T15:14:01-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/run-docker-containers-part-11.html</loc>
+<lastmod>2020-11-09T14:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -257,7 +264,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/devops.html</loc>
-<lastmod>2020-11-09T10:30:00+00:50</lastmod>
+<lastmod>2020-11-09T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -270,14 +277,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/arkade.html</loc>
-<lastmod>2020-11-09T10:30:00+00:50</lastmod>
+<loc>https://rasor.github.io/tag/docker.html</loc>
+<lastmod>2020-11-09T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/docker.html</loc>
+<loc>https://rasor.github.io/tag/arkade.html</loc>
 <lastmod>2020-11-09T10:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -999,7 +1006,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2020-11-09T10:30:00+00:50</lastmod>
+<lastmod>2020-11-09T14:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
