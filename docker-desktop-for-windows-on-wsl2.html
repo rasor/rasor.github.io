@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/docker-desktop-for-windows-on-wsl2.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2020-09-07 00:00:00+02:00"/>
-<meta property="article:modified_time" content="2020-11-08 16:00:00+01:00"/>
+<meta property="article:modified_time" content="2020-11-09 06:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#docker"/>
@@ -137,7 +137,7 @@
           Posted on September 07, 2020 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
 
       </br>
-        Updated: November 08, 2020
+        Updated: November 09, 2020
     </p>
   </header>
 
@@ -149,7 +149,7 @@ This is the path I took to get there and some additional experiments I had with 
 <h1>Get Docker up working</h1>
 <h2>Something nice-to-know</h2>
 <p>I have run docker some times before, where it was running on Hyper-V on a Windows 10 Pro. I thought I was going to perhaps run on Hyper-V or VirtualBox.  </p>
-<p>Info: 
+<p>Info:<br>
 * Docker needs a hypervisor, which on Windows can either be <strong>hyper-v</strong>, <strong>VirtualBox</strong> and now also <strong>Virtual Machine Platform</strong>.<br>
     * Ref: <a href="https://superuser.com/a/1510175">Hypervisor alternatives</a>
 * <strong>Docker Desktop For Windows (DD4W)</strong> superseeds <strong>Docker CE For Windows (DCE4W)</strong>
@@ -171,56 +171,65 @@ Here is how it went on:  </p>
 
 <p>to see if you already have docker installed.  </p>
 <p>I Downloaded latest DD4W. I tried to use <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2304">v.2.3.0.4</a>  </p>
-<p>I had several issues and possible solutions:
-* Tryed to install v.2.3.0.4 gave me this error:
-    * Error: <code>Docker Desktop requires Windows 10 Pro/Enterprise (15063+) or Windows 10 Home (19018+).</code>
-    * Mine was only Home os 18362 / <a href="https://docs.microsoft.com/en-us/windows/release-information/">v1909</a> (see System Information) 
-* Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2105">Download DD4W v.2.1.0.5</a>
-    * Error: <code>Docker Desktop requires Windows 10 Pro or Enterprise version 15063 to run.</code>
-* Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-2000-win81-2018-12-07">Download DCE4W v.2.0.0.0</a>
-    * Error: <code>Docker for Windows requires Windows 10 Pro or Enterprise version 14393 to run.</code>
-* Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17091-ce-win42-2017-12-11">Download DCE4W v.17.0.9.1</a>
-    * Error: <code>Docker for Windows requires Windows 10 Pro or Enterprise version 10586, or Windows server 2016 RTM to run</code>
-* Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17090-ce-win33-2017-10-06">Download DCE4W v.17.0.9.0</a>
-    * Error: <code>Unable to stop: The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The specified module 'Hyper-V' was not loaded because no valid module file was found in any module directory.</code>
-    * OK, Hyper-V needs to be activated - Activate the <code>windows hypervisor platform</code> feature.
-    <img alt="Activate win hypervisor" src="../img/2020/2020-09-06-OpenFaaS10.PNG" title="Activate win hypervisor">
-    * Boot the PC
-    * Uninstall DCE4W
-    * Re-install DCE4w
-    * Start DCE4w
-    * Error - same as above - yak!
-    * Deactivate <code>windows hypervisor platform</code>
-    * Please uninstall DCE4W again.
-    * Boot PC
-    * Apparently win Hypervisor does not cover for hyper-v from this old Docker version!<br>
-* Yet a failed try: Trying to install hyper-v on win 10 home:
-    ```bash
-    # https://answers.microsoft.com/en-us/windows/forum/all/hyper-v-is-missing/191e7c79-2c95-4417-b877-f40f6f856108
-    dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All</p>
-<div class="highlight"><pre><span></span><span class="o">#</span> <span class="n">Deployment</span> <span class="n">Image</span> <span class="n">Servicing</span> <span class="k">and</span> <span class="n">Management</span> <span class="n">tool</span>
-<span class="o">#</span> <span class="k">Version</span><span class="p">:</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">18362</span><span class="p">.</span><span class="mi">900</span>
+<p>I had several issues and possible solutions:  </p>
+<ul>
+<li>Tried to install v.2.3.0.4 gave me this error:<ul>
+<li>Error: <code>Docker Desktop requires Windows 10 Pro/Enterprise (15063+) or Windows 10 Home (19018+).</code></li>
+<li>Mine was only Home os 18362 / <a href="https://docs.microsoft.com/en-us/windows/release-information/">v1909</a> (see System Information) </li>
+</ul>
+</li>
+<li>Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2105">Download DD4W v.2.1.0.5</a><ul>
+<li>Error: <code>Docker Desktop requires Windows 10 Pro or Enterprise version 15063 to run.</code></li>
+</ul>
+</li>
+<li>Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-2000-win81-2018-12-07">Download DCE4W v.2.0.0.0</a><ul>
+<li>Error: <code>Docker for Windows requires Windows 10 Pro or Enterprise version 14393 to run.</code></li>
+</ul>
+</li>
+<li>Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17091-ce-win42-2017-12-11">Download DCE4W v.17.0.9.1</a><ul>
+<li>Error: <code>Docker for Windows requires Windows 10 Pro or Enterprise version 10586, or Windows server 2016 RTM to run</code></li>
+</ul>
+</li>
+<li>Yet a failed try: <a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-community-edition-17090-ce-win33-2017-10-06">Download DCE4W v.17.0.9.0</a><ul>
+<li>Error: <code>Unable to stop: The running command stopped because the preference variable "ErrorActionPreference" or common parameter is set to Stop: The specified module 'Hyper-V' was not loaded because no valid module file was found in any module directory.</code></li>
+<li>OK, Hyper-V needs to be activated - Activate the <code>windows hypervisor platform</code> feature.<br>
+<img alt="Activate win hypervisor" src="../img/2020/2020-09-06-OpenFaaS10.PNG" title="Activate win hypervisor">  </li>
+<li>Boot the PC</li>
+<li>Uninstall DCE4W</li>
+<li>Re-install DCE4w</li>
+<li>Start DCE4w</li>
+<li>Error - same as above - yak!</li>
+<li>Deactivate <code>windows hypervisor platform</code></li>
+<li>Please uninstall DCE4W again.</li>
+<li>Boot PC</li>
+<li>Apparently win Hypervisor does not cover for hyper-v from this old Docker version!  </li>
+</ul>
+</li>
+<li>Yet a failed try: Trying to install hyper-v on win 10 home:  </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># https://answers.microsoft.com/en-us/windows/forum/all/hyper-v-is-missing/191e7c79-2c95-4417-b877-f40f6f856108</span>
+dism.exe /Online /Enable-Feature:Microsoft-Hyper-V /All
 
-<span class="o">#</span> <span class="n">Image</span> <span class="k">Version</span><span class="p">:</span> <span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">18362</span><span class="p">.</span><span class="mi">1016</span>
+<span class="c1"># Deployment Image Servicing and Management tool</span>
+<span class="c1"># Version: 10.0.18362.900</span>
 
-<span class="o">#</span> <span class="n">Error</span><span class="p">:</span> <span class="mi">0</span><span class="n">x800f080c</span>
+<span class="c1"># Image Version: 10.0.18362.1016</span>
 
-<span class="o">#</span> <span class="n">Feature</span> <span class="n">name</span> <span class="n">Microsoft</span><span class="o">-</span><span class="n">Hyper</span><span class="o">-</span><span class="n">V</span> <span class="k">is</span> <span class="k">unknown</span><span class="p">.</span>
-<span class="o">#</span> <span class="n">A</span> <span class="n">Windows</span> <span class="n">feature</span> <span class="n">name</span> <span class="n">was</span> <span class="k">not</span> <span class="n">recognized</span><span class="p">.</span>
-<span class="o">#</span> <span class="n">Use</span> <span class="n">the</span> <span class="o">/</span><span class="k">Get</span><span class="o">-</span><span class="n">Features</span> <span class="k">option</span> <span class="k">to</span> <span class="n">find</span> <span class="n">the</span> <span class="n">name</span> <span class="k">of</span> <span class="n">the</span> <span class="n">feature</span> <span class="k">in</span> <span class="n">the</span> <span class="n">image</span> <span class="k">and</span> <span class="n">try</span> <span class="n">the</span> <span class="n">command</span> <span class="n">again</span><span class="p">.</span>
+<span class="c1"># Error: 0x800f080c</span>
 
-<span class="o">#</span> <span class="n">The</span> <span class="n">DISM</span> <span class="n">log</span> <span class="n">file</span> <span class="n">can</span> <span class="n">be</span> <span class="k">found</span> <span class="k">at</span> <span class="k">C</span><span class="p">:</span><span class="err">\</span><span class="n">windows</span><span class="err">\</span><span class="n">Logs</span><span class="err">\</span><span class="n">DISM</span><span class="err">\</span><span class="n">dism</span><span class="p">.</span><span class="n">log</span>
-<span class="o">```</span>
-<span class="o">*</span> <span class="n">Hyper</span><span class="o">-</span><span class="n">V</span> <span class="n">can</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">be</span> <span class="n">installed</span> <span class="k">on</span> <span class="n">Win</span> <span class="mi">10</span> <span class="n">Home</span><span class="o">!</span> <span class="n">It</span> <span class="n">requires</span> <span class="n">Pro</span> <span class="k">or</span> <span class="k">more</span><span class="p">:</span>
-<span class="o">*</span> <span class="n">So</span> <span class="k">instead</span> <span class="n">we</span> <span class="n">could</span> <span class="n">let</span> <span class="n">it</span> <span class="n">run</span> <span class="k">on</span> <span class="n">VirtualBox</span>
-<span class="o">*</span> <span class="n">Other</span> <span class="n">alternatives</span><span class="p">:</span> <span class="p">[</span><span class="n">How</span> <span class="k">to</span> <span class="n">install</span> <span class="n">Windows</span> <span class="mi">10</span> <span class="n">Home</span> <span class="mi">19018</span> <span class="k">update</span><span class="o">?</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">superuser</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">questions</span><span class="o">/</span><span class="mi">1550291</span><span class="o">/</span><span class="n">how</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">windows</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">home</span><span class="o">-</span><span class="mi">19018</span><span class="o">-</span><span class="k">update</span><span class="p">)</span>
+<span class="c1"># Feature name Microsoft-Hyper-V is unknown.</span>
+<span class="c1"># A Windows feature name was not recognized.</span>
+<span class="c1"># Use the /Get-Features option to find the name of the feature in the image and try the command again.</span>
+
+<span class="c1"># The DISM log file can be found at C:\windows\Logs\DISM\dism.log</span>
 </pre></div>
 
 
 <p>Status:<br>
-I could not install Hyper-V on the Windows 10 Home.<br>
+I could not install Hyper-V on the Windows 10 Home! It requires Pro or more.<br>
 So I could choose between running on VirtualBox or update Windows so I could run on WSL2.<br>
 I thought that now I had already wasted much time, then I could just as well go for the trouble and install WSL2:  </p>
+<p>Install WSL2:  </p>
 <ul>
 <li><a href="https://www.microsoft.com/en-us/software-download/windows10">Download Windows 10 may 2020 update (v 2004)</a><ul>
 <li>Click Update Now - this takes a loooong time.</li>
@@ -229,11 +238,14 @@ I thought that now I had already wasted much time, then I could just as well go 
 <li>OK, another Hypervisor needs to be activated - Activate the <code>Virtual Machine Platform</code> feature.
 <img alt="Activate Virtual Machine Platform" src="../img/2020/2020-09-06-OpenFaaS11.PNG" title="Activate Virtual Machine Platform"></li>
 <li>Boot the PC</li>
-<li>
-<p><a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2304">Download DD4W v.2.3.0.4</a></p>
+</ul>
+</li>
+</ul>
+<p>Next install Docker Desktop:  </p>
 <ul>
+<li><a href="https://docs.docker.com/docker-for-windows/release-notes/#docker-desktop-community-2304">Download DD4W v.2.3.0.4</a><ul>
 <li>Choose to enable WSL2<br>
-<img alt="Enable WSL2" src="../img/2020/2020-09-06-OpenFaaS12.PNG" title="Enable WSL2"></li>
+<img alt="Enable WSL2" src="../img/2020/2020-09-06-OpenFaaS12.PNG" title="Enable WSL2">  </li>
 <li>Boot the PC</li>
 <li>WSL2 is now enabled<br>
 <img alt="WSL2 enabled" src="../img/2020/2020-09-06-OpenFaaS15.PNG" title="WSL2 enabled">  </li>
@@ -243,28 +255,31 @@ I thought that now I had already wasted much time, then I could just as well go 
 <img alt="WSL2 Update wiz" src="../img/2020/2020-09-06-OpenFaaS14.PNG" title="WSL2 Update wiz">  </li>
 <li>Now press <code>Restart</code> - This restarts DD4W - and now it will come up in state <code>runnning</code>. You can see it in the taskbar.
 <img alt="DD4W running" src="../img/2020/2020-09-06-OpenFaaS17.PNG" title="DD4W running">  </li>
-<li>There is a new <code>virtual network adapter (WSL)</code>. Before - with Hyper-V there were two: Default switch and DockerNAT<br>
-<img alt="WSL virtual network adapter" src="../img/2020/2020-09-06-OpenFaaS19.PNG" title="WSL virtual network adapter"><br>
-```bash</li>
-</ul>
-<h1>Check that Docker is installed</h1>
-<p>docker -v</p>
-<h1>Docker version 19.03.12, build 48a66213fe</h1>
-<h1>Check WSL modes (1 or 2):</h1>
-<p>wsl -l -v</p>
-<h1>NAME                   STATE           VERSION</h1>
-<h1>* docker-desktop         Running         2</h1>
-<h1>docker-desktop-data    Running         2</h1>
-<p>```
-* Visual Studio Code recommends to install <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL extension</a><br>
-<img alt="VSCode WSL extension" src="../img/2020/2020-09-06-OpenFaaS16.PNG" title="VSCode WSL extension"><br>
-<em> This enables you to start a terminal into the Linux machines running in WSL2<br>
-<img alt="Connect to WSL2 machines" src="../img/2020/2020-09-06-OpenFaaS18.PNG" title="Connect to WSL2 machines"><br>
-</em> In DD4W settings you see that with Win Home you can only run in WSL2 (opposed to WSL1). We know that - we had to update Win 10 to v2004 in order to install DD4W!<br>
-<img alt="DD4W settings" src="../img/2020/2020-09-06-OpenFaaS20.PNG" title="DD4W settings">  </p>
-</li>
+<li>There is a new <code>virtual network adapter (WSL)</code>. Before - with Hyper-V there were two: <code>Default switch</code> and <code>DockerNAT</code><br>
+<img alt="WSL virtual network adapter" src="../img/2020/2020-09-06-OpenFaaS19.PNG" title="WSL virtual network adapter">  </li>
 </ul>
 </li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Check that Docker is installed</span>
+docker -v
+<span class="c1"># Docker version 19.03.12, build 48a66213fe</span>
+
+<span class="c1"># Check WSL modes (1 or 2):</span>
+wsl -l -v
+<span class="c1">#   NAME                   STATE           VERSION</span>
+<span class="c1"># * docker-desktop         Running         2</span>
+<span class="c1">#   docker-desktop-data    Running         2</span>
+</pre></div>
+
+
+<p>Some extra tips:   </p>
+<ul>
+<li>Visual Studio Code recommends to install <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote - WSL extension</a><br>
+<img alt="VSCode WSL extension" src="../img/2020/2020-09-06-OpenFaaS16.PNG" title="VSCode WSL extension">  </li>
+<li>This enables you to start a terminal into the Linux machines running in WSL2<br>
+<img alt="Connect to WSL2 machines" src="../img/2020/2020-09-06-OpenFaaS18.PNG" title="Connect to WSL2 machines">  </li>
+<li>In DD4W settings you see that with Win Home you can only run in WSL2 (opposed to Hyper-V or VirtualBox). We know that - we had to update Win 10 to v2004 in order to install DD4W!<br>
+<img alt="DD4W settings" src="../img/2020/2020-09-06-OpenFaaS20.PNG" title="DD4W settings">  </li>
 </ul>
 <p>Great - Docker is running on WSL2 now.  </p>
 <h1>Using Docker</h1>
@@ -287,16 +302,18 @@ Using VSCode extention <a href="https://marketplace.visualstudio.com/items?itemN
 From the remote CLI you startup vscode just as when you work locally: <code>code .</code></p>
 <h3>Choosing and installing a Linux Distro</h3>
 <p>But you might be missing a WSL2 distro - I did:
-<img alt="Missing WSL2 distro" src="../img/2020/2020-09-06-OpenFaaS22.PNG" title="Missing WSL2 distro">.<br>
-There are a small <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice">selection of distros</a>.<br>
-Most of all I wanted a CenOS distro, since I want to have OpenShift in it and CentOS is the RedHat community version coming with OpenShift.<br>
-There is <a href="https://www.microsoft.com/da-dk/p/pengwin-enterprise/9n8lp0x93vcp?rtc=1&amp;activetab=pivot:overviewtab">Pengwin Enterprise</a> based on CentOS, but what - now Microsoft wants me to pay for Linúx???<br>
-And also Biz users are required to get a Red Hat Enterprise Linux subscription, when using it.<br>
-I'll go for 2nd best which is <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based">another RPM based distro</a>.<br>
-I can choose between Fedora and OpenSuse.
-Also <a href="https://www.microsoft.com/da-dk/p/fedora-remix-for-wsl/9n6gdm4k2hnc?rtc=1&amp;activetab=pivot:overviewtab">Fedora Remix for WSL</a> is not free....<br>
-So remaining is <a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;activetab=pivot:overviewtab">openSUSE-Leap-15-1</a>, which still is free.<br>
-Also there are two SUSE Enterprise for free.  </p>
+<img alt="Missing WSL2 distro" src="../img/2020/2020-09-06-OpenFaaS22.PNG" title="Missing WSL2 distro"><br>
+There is a small <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-your-linux-distribution-of-choice">selection of distros</a>.  </p>
+<ul>
+<li>Most of all I wanted a CenOS distro, since I want to have OpenShift in it and CentOS is the RedHat community version coming with OpenShift.  </li>
+<li>There is <a href="https://www.microsoft.com/da-dk/p/pengwin-enterprise/9n8lp0x93vcp?rtc=1&amp;activetab=pivot:overviewtab">Pengwin Enterprise</a> based on CentOS, but what - now Microsoft wants me to pay for Linúx???<br>
+And also Biz users are required to get a Red Hat Enterprise Linux subscription, when using it.  </li>
+<li>I'll go for 2nd best which is <a href="https://en.wikipedia.org/wiki/List_of_Linux_distributions#RPM-based">another RPM based distro</a>.  </li>
+<li>I can choose between Fedora and OpenSuse.
+Also <a href="https://www.microsoft.com/da-dk/p/fedora-remix-for-wsl/9n6gdm4k2hnc?rtc=1&amp;activetab=pivot:overviewtab">Fedora Remix for WSL</a> is not free....  </li>
+<li>So remaining is <a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;activetab=pivot:overviewtab">openSUSE-Leap-15-1</a>, which still is free.  </li>
+<li>Also there are two SUSE Enterprise for free.  </li>
+</ul>
 <h3>A little sidestep to OpenShift</h3>
 <p>As an alternative to have CentOS there are</p>
 <ul>
