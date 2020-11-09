@@ -1,9 +1,742 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T06:30:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Docker Desktop for Windows on WSL2</title><link href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2.html" rel="alternate"></link><published>2020-09-07T00:00:00+02:00</published><updated>2020-11-09T06:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-09-07:/docker-desktop-for-windows-on-wsl2.html</id><summary type="html">&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
-I ended up with upgrading Windows allowing me to install Docker Desktop running on WSL2.&lt;br&gt;
-This is the path I took to get there and some additional experiments I had with WSL2.  &lt;/p&gt;
-&lt;h1&gt;Getting Docker up working&lt;/h1&gt;
-&lt;h2&gt;Something …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T10:30:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>k8s on Windows Devbox - Part 0.2</title><link href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html" rel="alternate"></link><published>2020-10-12T00:00:00+02:00</published><updated>2020-11-09T10:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-12:/k8s-on-windows-devbox-part-02.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;Others coming ...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
+This time running on &lt;strong&gt;Kubernetes (k8s)&lt;/strong&gt;, &lt;strong&gt;Docker Desktop&lt;/strong&gt;, &lt;strong&gt;Windows Home …&lt;/strong&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;Others coming ...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
+This time running on &lt;strong&gt;Kubernetes (k8s)&lt;/strong&gt;, &lt;strong&gt;Docker Desktop&lt;/strong&gt;, &lt;strong&gt;Windows Home 10&lt;/strong&gt; with &lt;strong&gt;Virtual Machine Platform&lt;/strong&gt; on &lt;strong&gt;WSL2&lt;/strong&gt;.&lt;br&gt;
+Running Docker Desktop with &lt;a href="https://docs.docker.com/docker-for-windows/wsl/"&gt;WSL2 backend has many improvements&lt;/a&gt; over alternatives.&lt;br&gt;
+Last time I installed Docker (in this &lt;a href="https://rasor.github.io/openfaas-on-windows-devbox.html"&gt;blog&lt;/a&gt;), I was running on &lt;strong&gt;Docker Swarm&lt;/strong&gt;, &lt;strong&gt;Docker CE&lt;/strong&gt;, &lt;strong&gt;Windows Pro 10&lt;/strong&gt; and &lt;strong&gt;Hyper-V&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/alexellisuk"&gt;@alexellisuk&lt;/a&gt; has build great tools. One being &lt;a href="https://github.com/alexellis/arkade"&gt;Arkade&lt;/a&gt;.&lt;br&gt;
+It is great for installing lots of K8s goodies both locally and in cloud. It also includes OpenFaaS.&lt;/p&gt;
+&lt;h1&gt;Install k8s and Arkade on devbox on Windows&lt;/h1&gt;
+&lt;h2&gt;Prerequisites.&lt;/h2&gt;
+&lt;p&gt;You need Docker. Start by typing    &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker -v
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to see if you already have it installed.&lt;br&gt;
+If not then follow &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;this tutorial to get it&lt;/a&gt;.&lt;br&gt;
+In that blog I ended up with &lt;strong&gt;Docker Desktop&lt;/strong&gt; on &lt;strong&gt;Windows Home 10&lt;/strong&gt; with &lt;strong&gt;Virtual Machine Platform&lt;/strong&gt; incl. &lt;strong&gt;WSL2&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;About&lt;/h2&gt;
+&lt;h3&gt;About Akade&lt;/h3&gt;
+&lt;p&gt;What is Arkade?&lt;br&gt;
+&lt;em&gt;Your one-stop CLI for Kubernetes&lt;/em&gt; (its slogan)&lt;/p&gt;
+&lt;p&gt;I'll use arkade for installing various k8s CLIs and Apps.  &lt;/p&gt;
+&lt;h3&gt;About K8S clusters&lt;/h3&gt;
+&lt;p&gt;Now that we have Docker, then it is time to play with Arkade to install k8s and other stuff&lt;/p&gt;
+&lt;p&gt;But there are other options than &lt;strong&gt;Arkade&lt;/strong&gt; to install k8s&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;On localhost&lt;ul&gt;
+&lt;li&gt;Using &lt;strong&gt;Kind&lt;/strong&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/setup/learning-environment/kind/"&gt;Installing Kubernetes with Kind&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kind.sigs.k8s.io/docs/user/quick-start/"&gt;kind Quick Start&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Using &lt;strong&gt;k3d&lt;/strong&gt; - for dev, Raspberry Pi or IoT&lt;/li&gt;
+&lt;li&gt;Using &lt;strong&gt;Minikube&lt;/strong&gt; - for dev&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/tasks/tools/install-minikube/"&gt;Install Minikube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/setup/learning-environment/minikube/"&gt;Installing Kubernetes with Minikube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Enable k8s in &lt;strong&gt;Docker Desktop&lt;/strong&gt; - for dev&lt;/li&gt;
+&lt;li&gt;OpenShift&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;In cloud&lt;ul&gt;
+&lt;li&gt;All cloud providers have their own k8s services:&lt;ul&gt;
+&lt;li&gt;EKS (AWS)&lt;/li&gt;
+&lt;li&gt;AKS (Az)&lt;/li&gt;
+&lt;li&gt;GKE (Google)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/kube100"&gt;Kube100&lt;/a&gt; (Civo) - a k3s cluster&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Using &lt;strong&gt;&lt;a href="https://rancher.com/products"&gt;RKE&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So why use Arkade to install k8s?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you only need a single node cluster then option 3 - using &lt;strong&gt;Docker Desktop&lt;/strong&gt; automates the work you manually can do with &lt;strong&gt;Minikube&lt;/strong&gt;.  &lt;/li&gt;
+&lt;li&gt;If you need a multi node cluster then option 0 - using &lt;strong&gt;Arkade&lt;/strong&gt; automates the work you manually can do with &lt;strong&gt;Kind&lt;/strong&gt;.  &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arkade&lt;/strong&gt; also automates the work you need to do with other k8s related tools.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Already have a k8s cluster?&lt;/h3&gt;
+&lt;p&gt;k8s install is only the top of the iceberg of Arkade.&lt;br&gt;
+If you already have a k8s cluster then Arkade kicks in by installing lost of &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;k8s apps from e.g. &lt;a href="https://hub.helm.sh/"&gt;Helm Hub&lt;/a&gt; (with &lt;code&gt;ark install&lt;/code&gt;) and/or&lt;/li&gt;
+&lt;li&gt;CLIs for k8s or apps (with &lt;code&gt;ark get&lt;/code&gt;) &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Arkade then &lt;strong&gt;unifies fetching packages&lt;/strong&gt; across platforms.&lt;br&gt;
+Before you would use package tools like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;apt-get&lt;/code&gt; on some Linux versions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;yum&lt;/code&gt; on some other Linux versions&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;choco&lt;/code&gt; on Windows&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;brew&lt;/code&gt; on Mac&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and having to deal with all their parameters.  &lt;/p&gt;
+&lt;p&gt;Under the hood Arkade &lt;strong&gt;simplifies commands&lt;/strong&gt; by using &lt;a href="https://helm.sh/"&gt;Helm&lt;/a&gt; as the k8s package manager and &lt;code&gt;kubectl&lt;/code&gt; commands.&lt;/p&gt;
+&lt;h2&gt;Install Arkade&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Check that curl is installed&lt;/span&gt;
+curl --version
+&lt;span class="c1"&gt;# curl 7.67.0 (x86_64-w64-mingw32) libcurl/7.67.0 OpenSSL/1.1.1d (Schannel) zlib/1.2.11 libidn2/2.3.0 nghttp2/1.39.2&lt;/span&gt;
+&lt;span class="c1"&gt;# Release-Date: 2019-11-06&lt;/span&gt;
+&lt;span class="c1"&gt;# Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s rtsp smtp smtps telnet tftp&lt;/span&gt;
+&lt;span class="c1"&gt;# Features: AsynchDNS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz Metalink MultiSSL NTLM SPNEGO SSL SSPI TLS-SRP&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check that docker is installed&lt;/span&gt;
+docker -v
+&lt;span class="c1"&gt;# Docker version 19.03.12, build 48a66213fe&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check that a k8s cluster is not yet installed&lt;/span&gt;
+kubectl version
+&lt;span class="c1"&gt;# Client Version: version.Info{Major:&amp;quot;1&amp;quot;, Minor:&amp;quot;16+&amp;quot;, GitVersion:&amp;quot;v1.16.6-beta.0&amp;quot;, GitCommit:&amp;quot;e7f962ba86f4ce7033828210ca3556393c377bcc&amp;quot;, GitTreeState:&amp;quot;clean&amp;quot;, BuildDate:&amp;quot;2020-01-15T08:26:26Z&amp;quot;, GoVersion:&amp;quot;go1.13.5&amp;quot;, Compiler:&amp;quot;gc&amp;quot;, Platform:&amp;quot;windows/amd64&amp;quot;}&lt;/span&gt;
+&lt;span class="c1"&gt;# Unable to connect to the server: dial tcp [::1]:8080: connectex: No connection could be made because the target machine actively refused it.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check that arkade is not installed&lt;/span&gt;
+arkade --help
+&lt;span class="c1"&gt;# bash: arkade: command not found&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Install Arkade on Windows&lt;/span&gt;
+&lt;span class="c1"&gt;# https://github.com/alexellis/arkade#get-arkade&lt;/span&gt;
+curl -sLS https://dl.get-arkade.dev &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;span class="c1"&gt;# Downloading package https://github.com/alexellis/arkade/releases/download/0.6.12/arkade.exe as //arkade.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# curl: (23) Failed writing body (0 != 16360)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Trying as-admin&lt;/span&gt;
+curl -sLS https://dl.get-arkade.dev &lt;span class="p"&gt;|&lt;/span&gt; sh
+&lt;span class="c1"&gt;# Downloading package https://github.com/alexellis/arkade/releases/download/0.6.12/arkade.exe as //arkade.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# chmod: cannot access &amp;#39;//arkade.exe&amp;#39;: No such file or directory&lt;/span&gt;
+&lt;span class="c1"&gt;# Download complete.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Running with sufficient permissions to attempt to move arkade to /c/Users/Soren/bin&lt;/span&gt;
+&lt;span class="c1"&gt;# mv: cannot stat &amp;#39;//arkade.exe&amp;#39;: No such file or directory&lt;/span&gt;
+&lt;span class="c1"&gt;# ln: failed to create symbolic link &amp;#39;/c/Users/Soren/bin/ark&amp;#39;: No such file or directory&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating alias &amp;#39;ark&amp;#39; for &amp;#39;arkade&amp;#39;.&lt;/span&gt;
+&lt;span class="c1"&gt;# main: line 172: arkade: command not found&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Both attemps failed - instead get manual recipe from &lt;a href="https://raw.githubusercontent.com/alexellis/arkade/master/get.sh"&gt;get.sh&lt;/a&gt;  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open your web browser and go to https://github.com/alexellis/arkade/releases&lt;/li&gt;
+&lt;li&gt;Download the latest release for windows to C:\Users\yourusername.arkade\bin\arkade`&lt;/li&gt;
+&lt;li&gt;Add path to environment&lt;br&gt;
+&lt;code&gt;setx PATH "%path%;C:\Users\yourusername\.arkade\bin"&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create a symbolic link&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;ALIAS_NAME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ark&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;REPO&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;arkade
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;BINLOCATION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;/c/users/yourusername/.arkade/bin&amp;quot;&lt;/span&gt;
+chmod +x &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$BINLOCATION&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;$REPO&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+ln -sf &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$BINLOCATION&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;$REPO&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$BINLOCATION&lt;/span&gt;&lt;span class="s2"&gt;/&lt;/span&gt;&lt;span class="nv"&gt;$ALIAS_NAME&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Did it work?&lt;/span&gt;
+arkade version
+&lt;span class="c1"&gt;#             _             _&lt;/span&gt;
+&lt;span class="c1"&gt;#   __ _ _ __| | ____ _  __| | ___&lt;/span&gt;
+&lt;span class="c1"&gt;#  / _` | &amp;#39;__| |/ / _` |/ _` |/ _ \&lt;/span&gt;
+&lt;span class="c1"&gt;# | (_| | |  |   &amp;lt; (_| | (_| |  __/&lt;/span&gt;
+&lt;span class="c1"&gt;#  \__,_|_|  |_|\_\__,_|\__,_|\___|&lt;/span&gt;
+&lt;span class="c1"&gt;# Get Kubernetes apps the easy way&lt;/span&gt;
+&lt;span class="c1"&gt;# Version: 0.6.12&lt;/span&gt;
+&lt;span class="c1"&gt;# Git Commit: 0415b5fa9d0a6740feb3d9093b7555d38c7e1a51&lt;/span&gt;
+
+ark get --help
+&lt;span class="c1"&gt;# The get command downloads a CLI or application from the specific tool&amp;#39;s releases or downloads page. &lt;/span&gt;
+&lt;span class="c1"&gt;# The tool is usually downloaded in binary format and provides a fast and easy alternative to a package manager.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Usage:&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade get [flags]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Examples:&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade get helm&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade get linkerd2 --stash=false&lt;/span&gt;
+
+&lt;span class="c1"&gt;# See which CLIs arkade can install:&lt;/span&gt;
+ark get
+&lt;span class="c1"&gt;# Use &amp;quot;arkade get TOOL&amp;quot; to download a tool or application:&lt;/span&gt;
+&lt;span class="c1"&gt;# faas-cli&lt;/span&gt;
+&lt;span class="c1"&gt;# helm&lt;/span&gt;
+&lt;span class="c1"&gt;# kubectl&lt;/span&gt;
+&lt;span class="c1"&gt;# kubectx&lt;/span&gt;
+&lt;span class="c1"&gt;# kind&lt;/span&gt;
+&lt;span class="c1"&gt;# k3d&lt;/span&gt;
+&lt;span class="c1"&gt;# k3sup&lt;/span&gt;
+&lt;span class="c1"&gt;# kubeseal&lt;/span&gt;
+&lt;span class="c1"&gt;# inletsctl&lt;/span&gt;
+&lt;span class="c1"&gt;# osm&lt;/span&gt;
+&lt;span class="c1"&gt;# linkerd2&lt;/span&gt;
+&lt;span class="c1"&gt;# kubebuilder&lt;/span&gt;
+&lt;span class="c1"&gt;# kustomize&lt;/span&gt;
+&lt;span class="c1"&gt;# doctl&lt;/span&gt;
+&lt;span class="c1"&gt;# k9s&lt;/span&gt;
+&lt;span class="c1"&gt;# civo&lt;/span&gt;
+&lt;span class="c1"&gt;# terraform&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Great - we have Arkade now.  &lt;/p&gt;
+&lt;h2&gt;Install k8s cluster&lt;/h2&gt;
+&lt;p&gt;Now lets install a k8s cluster.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# We need kubectl to manage k8s. Install it:&lt;/span&gt;
+arkade get kubectl
+&lt;span class="c1"&gt;# Downloading kubectl&lt;/span&gt;
+&lt;span class="c1"&gt;# https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# Tool written to: C:\Users\yourusername/.arkade/bin/kubectl.exe&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Did it install?&lt;/span&gt;
+kubectl version
+&lt;span class="c1"&gt;# Client Version: version.Info{Major:&amp;quot;1&amp;quot;, Minor:&amp;quot;19&amp;quot;,&lt;/span&gt;
+
+&lt;span class="c1"&gt;# We will use kind to create a k8s cluster, but first install it:&lt;/span&gt;
+arkade get kind
+&lt;span class="c1"&gt;# Downloading kind&lt;/span&gt;
+&lt;span class="c1"&gt;# https://github.com/kubernetes-sigs/kind/releases/download/v0.9.0/kind-windows-amd64&lt;/span&gt;
+&lt;span class="c1"&gt;# Tool written to: C:\Users\yourusername/.arkade/bin/kind.exe&lt;/span&gt;
+kind version
+&lt;span class="c1"&gt;# kind v0.9.0 go1.15.2 windows/amd64&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Crate a k8s cluster:&lt;/span&gt;
+kind create cluster
+&lt;span class="c1"&gt;# Creating cluster &amp;quot;kind&amp;quot; ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  • Ensuring node image (kindest/node:v1.19.1) 🖼  ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  ✓ Ensuring node image (kindest/node:v1.19.1) 🖼&lt;/span&gt;
+&lt;span class="c1"&gt;#  • Preparing nodes 📦   ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  ✓ Preparing nodes 📦&lt;/span&gt;
+&lt;span class="c1"&gt;#  • Writing configuration 📜  ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  ✓ Writing configuration 📜&lt;/span&gt;
+&lt;span class="c1"&gt;#  • Starting control-plane 🕹️  ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  ✓ Starting control-plane 🕹️&lt;/span&gt;
+&lt;span class="c1"&gt;#  • Installing CNI 🔌  ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  ✓ Installing CNI 🔌&lt;/span&gt;
+&lt;span class="c1"&gt;#  • Installing StorageClass 💾  ...&lt;/span&gt;
+&lt;span class="c1"&gt;#  ✓ Installing StorageClass 💾&lt;/span&gt;
+&lt;span class="c1"&gt;# Set kubectl context to &amp;quot;kind-kind&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# You can now use your cluster with:&lt;/span&gt;
+kubectl cluster-info --context kind-kind
+&lt;span class="c1"&gt;# Kubernetes master is running at https://127.0.0.1:52295&lt;/span&gt;
+&lt;span class="c1"&gt;# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy&lt;/span&gt;
+&lt;span class="c1"&gt;# To further debug and diagnose cluster problems, use &amp;#39;kubectl cluster-info dump&amp;#39;.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# And what is the name of cluster?&lt;/span&gt;
+kind get clusters
+&lt;span class="c1"&gt;# kind&lt;/span&gt;
+
+&lt;span class="c1"&gt;# If you need to delete your cluster:&lt;/span&gt;
+&lt;span class="c1"&gt;# kind delete cluster&lt;/span&gt;
+&lt;span class="c1"&gt;# kind delete cluster --name kind&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Seems like I have a client version from docker and a server version is in the cluster with the version installed by arkade.&lt;/span&gt;
+kubectl version
+&lt;span class="c1"&gt;# Client Version: version.Info{Major:&amp;quot;1&amp;quot;, Minor:&amp;quot;16+&amp;quot;, GitVersion:&amp;quot;v1.16.6-beta.0&amp;quot;, GitCommit:&amp;quot;e7f962ba86f4ce7033828210ca3556393c377bcc&amp;quot;, GitTreeState:&amp;quot;clean&amp;quot;, BuildDate:&amp;quot;2020-01-15T08:26:26Z&amp;quot;, GoVersion:&amp;quot;go1.13.5&amp;quot;, Compiler:&amp;quot;gc&amp;quot;, Platform:&amp;quot;windows/amd64&amp;quot;}&lt;/span&gt;
+&lt;span class="c1"&gt;# Server Version: version.Info{Major:&amp;quot;1&amp;quot;, Minor:&amp;quot;19&amp;quot;, GitVersion:&amp;quot;v1.19.1&amp;quot;, GitCommit:&amp;quot;206bcadf021e76c27513500ca24182692aabd17e&amp;quot;, GitTreeState:&amp;quot;clean&amp;quot;, BuildDate:&amp;quot;2020-09-14T07:30:52Z&amp;quot;, GoVersion:&amp;quot;go1.15&amp;quot;, Compiler:&amp;quot;gc&amp;quot;, Platform:&amp;quot;linux/amd64&amp;quot;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check cluster location and credentials that kubectl knows about:&lt;/span&gt;
+kubectl config view
+&lt;span class="c1"&gt;# apiVersion: v1&lt;/span&gt;
+&lt;span class="c1"&gt;# clusters:&lt;/span&gt;
+&lt;span class="c1"&gt;# - cluster:&lt;/span&gt;
+&lt;span class="c1"&gt;#     certificate-authority-data: DATA+OMITTED&lt;/span&gt;
+&lt;span class="c1"&gt;#     server: https://127.0.0.1:55555&lt;/span&gt;
+&lt;span class="c1"&gt;#   name: kind-kind&lt;/span&gt;
+&lt;span class="c1"&gt;# contexts:&lt;/span&gt;
+&lt;span class="c1"&gt;# - context:&lt;/span&gt;
+&lt;span class="c1"&gt;#     cluster: kind-kind&lt;/span&gt;
+&lt;span class="c1"&gt;#     user: kind-kind&lt;/span&gt;
+&lt;span class="c1"&gt;#   name: kind-kind&lt;/span&gt;
+&lt;span class="c1"&gt;# current-context: kind-kind&lt;/span&gt;
+&lt;span class="c1"&gt;# kind: Config&lt;/span&gt;
+&lt;span class="c1"&gt;# preferences: {}&lt;/span&gt;
+&lt;span class="c1"&gt;# users:&lt;/span&gt;
+&lt;span class="c1"&gt;# - name: kind-kind&lt;/span&gt;
+&lt;span class="c1"&gt;#   user:&lt;/span&gt;
+&lt;span class="c1"&gt;#     client-certificate-data: REDACTED&lt;/span&gt;
+&lt;span class="c1"&gt;#     client-key-data: REDACTED&lt;/span&gt;
+
+kubectl get nodes
+&lt;span class="c1"&gt;# NAME                 STATUS   ROLES    AGE   VERSION&lt;/span&gt;
+&lt;span class="c1"&gt;# kind-control-plane   Ready    master   18m   v1.19.1&lt;/span&gt;
+
+kubectl get pods
+&lt;span class="c1"&gt;# No resources found in default namespace.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The cluster config seen in &lt;code&gt;kubectl config view&lt;/code&gt; is stored in C:\Users\youruserid.kube\config &lt;br&gt;
+When you want to connect to other clusters you need to modify or replace that file.&lt;br&gt;
+In the file one cluster will be your default.  &lt;/p&gt;
+&lt;p&gt;So now having a master node running and no pod what is next?  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;We could add worker nodes to the cluster&lt;/li&gt;
+&lt;li&gt;We could install apps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Issues: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Booting Windows made bash unable to access cluster. Why?&lt;ul&gt;
+&lt;li&gt;It was not an envir var problem, since after delete + create cluster then no new envir vars were created&lt;/li&gt;
+&lt;li&gt;In vid &lt;a href="https://www.youtube.com/watch?v=8wU9s_mua8M"&gt;Walk-through of arkade - for Kubernetes&lt;/a&gt;, Alex think boot persistence has been implemented - and before we had to recreate cluster after boot.&lt;/li&gt;
+&lt;li&gt;Tips about accessing clusters: &lt;a href="https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/"&gt;Accessing Clusters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Perhaps you just need to start the master node: &lt;code&gt;docker start kind-control-plane&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Stop and start the cluster&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# stop the k8s cluster&lt;/span&gt;
+docker stop kind-control-plane
+
+&lt;span class="c1"&gt;# check if k8s cluster is running&lt;/span&gt;
+kubectl cluster-info
+&lt;span class="c1"&gt;# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check if there are any clusters&lt;/span&gt;
+$ kind get clusters
+&lt;span class="c1"&gt;# kind&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check it the container is running&lt;/span&gt;
+docker ps -a &lt;span class="p"&gt;|&lt;/span&gt; grep kind
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# 0b9a7220b4f8        kindest/node:v1.19.1   &amp;quot;/usr/local/bin/entr…&amp;quot;   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295-&amp;gt;6443/tcp   kind-control-plane&lt;/span&gt;
+
+&lt;span class="c1"&gt;# start the k8s cluster&lt;/span&gt;
+docker start kind-control-plane
+
+&lt;span class="c1"&gt;# check if k8s cluster is running&lt;/span&gt;
+kubectl cluster-info
+&lt;span class="c1"&gt;# Kubernetes master is running at https://127.0.0.1:52295&lt;/span&gt;
+&lt;span class="c1"&gt;# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Install k8s apps&lt;/h2&gt;
+&lt;p&gt;Arkade makes it easy to install many ready-to-use apps. You can print the list it contains:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Check which apps arkade lets you easily install:&lt;/span&gt;
+ark install --help
+&lt;span class="c1"&gt;# Install Kubernetes apps from helm charts or YAML files using the &amp;quot;install&amp;quot; command.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# You can also find the post-install message for each app with the &amp;quot;info&amp;quot; command.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Usage:&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade install [flags]&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade install [command]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Examples:&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade install&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade install openfaas  --gateways=2&lt;/span&gt;
+&lt;span class="c1"&gt;#   arkade install inlets-operator --token-file $HOME/do-token&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Available Commands:&lt;/span&gt;
+&lt;span class="c1"&gt;#   argocd                  Install argocd&lt;/span&gt;
+&lt;span class="c1"&gt;#   cert-manager            Install cert-manager&lt;/span&gt;
+&lt;span class="c1"&gt;#   chart                   Install the specified helm chart&lt;/span&gt;
+&lt;span class="c1"&gt;#   cron-connector          Install cron-connector for OpenFaaS&lt;/span&gt;
+&lt;span class="c1"&gt;#   crossplane              Install Crossplane&lt;/span&gt;
+&lt;span class="c1"&gt;#   docker-registry         Install a Docker registry&lt;/span&gt;
+&lt;span class="c1"&gt;#   docker-registry-ingress Install registry ingress with TLS&lt;/span&gt;
+&lt;span class="c1"&gt;#   gitea                   Install gitea&lt;/span&gt;
+&lt;span class="c1"&gt;#   grafana                 Install grafana&lt;/span&gt;
+&lt;span class="c1"&gt;#   info                    Find info about a Kubernetes app&lt;/span&gt;
+&lt;span class="c1"&gt;#   ingress-nginx           Install ingress-nginx&lt;/span&gt;
+&lt;span class="c1"&gt;#   inlets-operator         Install inlets-operator&lt;/span&gt;
+&lt;span class="c1"&gt;#   istio                   Install istio&lt;/span&gt;
+&lt;span class="c1"&gt;#   jenkins                 Install jenkins&lt;/span&gt;
+&lt;span class="c1"&gt;#   kafka-connector         Install kafka-connector for OpenFaaS&lt;/span&gt;
+&lt;span class="c1"&gt;#   kube-image-prefetch     Install kube-image-prefetch&lt;/span&gt;
+&lt;span class="c1"&gt;#   kube-state-metrics      Install kube-state-metrics&lt;/span&gt;
+&lt;span class="c1"&gt;#   kubernetes-dashboard    Install kubernetes-dashboard&lt;/span&gt;
+&lt;span class="c1"&gt;#   linkerd                 Install linkerd&lt;/span&gt;
+&lt;span class="c1"&gt;#   loki                    Install Loki for monitoring and tracing&lt;/span&gt;
+&lt;span class="c1"&gt;#   metrics-server          Install metrics-server&lt;/span&gt;
+&lt;span class="c1"&gt;#   minio                   Install minio&lt;/span&gt;
+&lt;span class="c1"&gt;#   mongodb                 Install mongodb&lt;/span&gt;
+&lt;span class="c1"&gt;#   nats-connector          Install OpenFaaS connector for NATS&lt;/span&gt;
+&lt;span class="c1"&gt;#   nfs-client-provisioner  Install nfs client provisioner&lt;/span&gt;
+&lt;span class="c1"&gt;#   openfaas                Install openfaas&lt;/span&gt;
+&lt;span class="c1"&gt;#   openfaas-ingress        Install openfaas ingress with TLS&lt;/span&gt;
+&lt;span class="c1"&gt;#   openfaas-loki           Install Loki-OpenFaaS and Configure Loki logs provider for OpenFaaS&lt;/span&gt;
+&lt;span class="c1"&gt;#   osm                     Install osm&lt;/span&gt;
+&lt;span class="c1"&gt;#   portainer               Install portainer to visualise and manage containers&lt;/span&gt;
+&lt;span class="c1"&gt;#   postgresql              Install postgresql&lt;/span&gt;
+&lt;span class="c1"&gt;#   redis                   Install redis&lt;/span&gt;
+&lt;span class="c1"&gt;#   registry-creds          Install registry-creds&lt;/span&gt;
+&lt;span class="c1"&gt;#   tekton                  Install Tekton pipelines and dashboard&lt;/span&gt;
+&lt;span class="c1"&gt;#   traefik2                Install traefik2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Flags:&lt;/span&gt;
+&lt;span class="c1"&gt;#   -h, --help                help for install&lt;/span&gt;
+&lt;span class="c1"&gt;#       --kubeconfig string   Local path for your kubeconfig file (default &amp;quot;kubeconfig&amp;quot;)&lt;/span&gt;
+&lt;span class="c1"&gt;#       --wait                If we should wait for the resource to be ready before returning (helm3 only, default false)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Install k8s app kubernetes-dashboard&lt;/h3&gt;
+&lt;p&gt;kubernetes-dashboard gives you a GUI for viewing what your cluster contains. Let's install it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;arkade install kubernetes-dashboard
+&lt;span class="c1"&gt;# Using kubeconfig: C:\Users\youruserid/.kube/config&lt;/span&gt;
+&lt;span class="c1"&gt;# Node architecture: &amp;quot;amd64&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# # To create the Service Account and the ClusterRoleBinding&lt;/span&gt;
+&lt;span class="c1"&gt;# # @See https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md#creating-sample-user&lt;/span&gt;
+
+cat &lt;span class="s"&gt;&amp;lt;&amp;lt;EOF | kubectl apply -f -&lt;/span&gt;
+&lt;span class="s"&gt;---&lt;/span&gt;
+&lt;span class="s"&gt;apiVersion: v1&lt;/span&gt;
+&lt;span class="s"&gt;kind: ServiceAccount&lt;/span&gt;
+&lt;span class="s"&gt;metadata:&lt;/span&gt;
+&lt;span class="s"&gt;    name: admin-user&lt;/span&gt;
+&lt;span class="s"&gt;    namespace: kubernetes-dashboard&lt;/span&gt;
+&lt;span class="s"&gt;---&lt;/span&gt;
+&lt;span class="s"&gt;apiVersion: rbac.authorization.k8s.io/v1&lt;/span&gt;
+&lt;span class="s"&gt;kind: ClusterRoleBinding&lt;/span&gt;
+&lt;span class="s"&gt;metadata:&lt;/span&gt;
+&lt;span class="s"&gt;    name: admin-user&lt;/span&gt;
+&lt;span class="s"&gt;roleRef:&lt;/span&gt;
+&lt;span class="s"&gt;    apiGroup: rbac.authorization.k8s.io&lt;/span&gt;
+&lt;span class="s"&gt;    kind: ClusterRole&lt;/span&gt;
+&lt;span class="s"&gt;    name: cluster-admin&lt;/span&gt;
+&lt;span class="s"&gt;subjects:&lt;/span&gt;
+&lt;span class="s"&gt;- kind: ServiceAccount&lt;/span&gt;
+&lt;span class="s"&gt;    name: admin-user&lt;/span&gt;
+&lt;span class="s"&gt;    namespace: kubernetes-dashboard&lt;/span&gt;
+&lt;span class="s"&gt;---&lt;/span&gt;
+&lt;span class="s"&gt;EOF&lt;/span&gt;
+
+&lt;span class="c1"&gt;# #To get your Token for logging in&lt;/span&gt;
+kubectl -n kubernetes-dashboard describe secret &lt;span class="k"&gt;$(&lt;/span&gt;kubectl -n kubernetes-dashboard get secret &lt;span class="p"&gt;|&lt;/span&gt; grep admin-user-token &lt;span class="p"&gt;|&lt;/span&gt; awk &lt;span class="s1"&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# Shown last part of the output&lt;/span&gt;
+&lt;span class="c1"&gt;# Name:         admin-user-token-8ltkm&lt;/span&gt;
+&lt;span class="c1"&gt;# Namespace:    kubernetes-dashboard&lt;/span&gt;
+&lt;span class="c1"&gt;# Labels:       &amp;lt;none&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;# Annotations:  kubernetes.io/service-account.name: admin-user&lt;/span&gt;
+&lt;span class="c1"&gt;#               kubernetes.io/service-account.uid: cf8c00d4-e353-46cd-a60f-52b976278a5c&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Type:  kubernetes.io/service-account-token&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Data&lt;/span&gt;
+&lt;span class="c1"&gt;# ====&lt;/span&gt;
+&lt;span class="c1"&gt;# ca.crt:     1066 bytes&lt;/span&gt;
+&lt;span class="c1"&gt;# namespace:  20 bytes&lt;/span&gt;
+&lt;span class="c1"&gt;# token:      eyJhbGciOiJSUzI1NiIsImtpZCI6InBXbUdUMG01cHU1b21mWl9HQ2hvckpnc2piTE8xZFhraE16Qnl6b0FUYWsifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlcm5ldGVzLWRhc2hib2FyZCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJhZG1pbi11c2VyLXRva2VuLThsdGttIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImFkbWluLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiJjZjhjMDBkNC1lMzUzLTQ2Y2QtYTYwZi01MmI5NzYyNzhhNWMiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6a3ViZXJuZXRlcy1kYXNoYm9hcmQ6YWRtaW4tdXNlciJ9.HOkirmDW_KEpNcH_W2kotH5V_r_MgxzMiZnYctyP2bdCt7yBZijfwVK6rv3SuYizZM5FuxWsHARR8aFmsIG5wtL4Pv1mS0wHggt1Tt3rX-8Du2kj0UZwjM6pKZ5zECSC-JM1fItUAjsZyad2qxAThPaYtaJw2HVbJHdrQxn7I65kZY9qNGTPevwVrfs8PeUnpeUqlmaeZ9doob0x1zB_3TKvvST9r38m9nsRblfQU2P9QY82Q4qU74sV3lwE5cRs0XuviyQBEvfGxH5od7ahTXea5B5zHA-3_7SSyvLWHvjMMk4fn8_ZWwxJKFYc1zbxL2JqNvqzvvqRqsfbwOjX8g&lt;/span&gt;
+
+&lt;span class="c1"&gt;# #To forward the dashboard to your local machine&lt;/span&gt;
+kubectl proxy
+&lt;span class="c1"&gt;# Starting to serve on 127.0.0.1:8001&lt;/span&gt;
+
+&lt;span class="c1"&gt;# # Once Proxying you can navigate to the below&lt;/span&gt;
+&lt;span class="c1"&gt;# http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login&lt;/span&gt;
+&lt;span class="c1"&gt;# Paste the token above into the Dashboard login screen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You need to copy-paste your token from above to the login screen:  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="k8s dashboard login" src="../img/2020/2020-09-06-OpenFaaS25.PNG" title="k8s dashboard login"&gt;  &lt;/p&gt;
+&lt;p&gt;When logged in:&lt;br&gt;
+&lt;img alt="k8s dashboard logged in" src="../img/2020/2020-09-06-OpenFaaS26.PNG" title="k8s dashboard logged in"&gt;  &lt;/p&gt;
+&lt;p&gt;There are several k8s namespaces. Select some to see what they are comprised of:&lt;br&gt;
+&lt;img alt="k8s dashboard namespaces" src="../img/2020/2020-09-06-OpenFaaS27.PNG" title="k8s dashboard namespaces"&gt;  &lt;/p&gt;
+&lt;p&gt;Issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You get "Default user has too little permissions", if you forget to paste the &lt;code&gt;cat &amp;lt;&amp;lt; EOF&lt;/code&gt; block.&lt;ul&gt;
+&lt;li&gt;Create An &lt;a href="https://github.com/kubernetes/dashboard#create-an-authentication-token-rbac"&gt;Authentication Token (RBAC)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Read about &lt;a href="https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md"&gt;Access control&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More info: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Other apis exposed though &lt;a href="http://127.0.0.1:8001/"&gt;local proxy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/"&gt;Web UI (Dashboard)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github: &lt;a href="https://github.com/kubernetes/dashboard"&gt;kubernetes/dashboard&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Install k8s app metrics-server (- and heml)&lt;/h3&gt;
+&lt;p&gt;Metrics Server is a cluster-wide aggregator of resource usage data.  &lt;/p&gt;
+&lt;p&gt;Apparently installing metrics-server does also do &lt;code&gt;arkade get helm&lt;/code&gt;, when it is not yet installed.&lt;br&gt;
+Helm is a package manager for k8s apps (packaged in helm charts).  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;arkade install metrics-server
+&lt;span class="c1"&gt;# Using kubeconfig: C:\Users\youruserid/.kube/config&lt;/span&gt;
+&lt;span class="c1"&gt;# Node architecture: &amp;quot;amd64&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Client: &amp;quot;x86_64&amp;quot;, &amp;quot;MINGW64_NT-10.0-19041&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# 2020/09/22 12:41:45 User dir established as: C:\Users\youruserid/.arkade/&lt;/span&gt;
+&lt;span class="c1"&gt;# https://get.helm.sh/helm-v3.2.4-windows-amd64.zip&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\Soren\AppData\Local\Temp/windows-amd64&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\Soren\AppData\Local\Temp/helm.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\Soren\AppData\Local\Temp/README.md&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\Soren\AppData\Local\Temp/LICENSE&lt;/span&gt;
+&lt;span class="c1"&gt;# 2020/09/22 12:42:19 extracted zip into C:\Users\youruserid\AppData\Local\Temp: 4 files, 0 dirs (991.479ms)&lt;/span&gt;
+&lt;span class="c1"&gt;# Downloaded to:  C:\Users\youruserid/.arkade/bin/helm.exe helm.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# Error: no repositories found. You must add one before updating&lt;/span&gt;
+&lt;span class="c1"&gt;# Error: exit code 1&lt;/span&gt;
+
+helm version
+&lt;span class="c1"&gt;# version.BuildInfo{Version:&amp;quot;v3.2.4&amp;quot;, GitCommit:&amp;quot;0ad800ef43d3b826f31a5ad8dfbb4fe05d143688&amp;quot;, GitTreeState:&amp;quot;clean&amp;quot;, GoVersion:&amp;quot;go1.13.12&amp;quot;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So what's with &lt;code&gt;Error: no repositories found&lt;/code&gt;?
+&lt;a href="https://www.jforte.me/2020/01/getting-started-with-helm-v3/"&gt;Getting Started with Helm v3&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Verify repo (list of helm charts) is missing&lt;/span&gt;
+helm repo update
+&lt;span class="c1"&gt;# Error: no repositories found. You must add one before updating&lt;/span&gt;
+
+&lt;span class="c1"&gt;# get stable repo - this can take 10s of minutes without output in the shell...&lt;/span&gt;
+helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+&lt;span class="c1"&gt;# &amp;quot;stable&amp;quot; has been added to your repositories&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;On https://helm.sh/docs/intro/quickstart/ in the version dropdown you will see which version of Helm is the latest stable version, which was installed above.  &lt;/p&gt;
+&lt;p&gt;Having the helm chart list downloaded we try again:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;arkade install metrics-server
+&lt;span class="c1"&gt;# Using kubeconfig: C:\Users\youruserid/.kube/config&lt;/span&gt;
+&lt;span class="c1"&gt;# Node architecture: &amp;quot;amd64&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Client: &amp;quot;x86_64&amp;quot;, &amp;quot;MINGW64_NT-10.0-19041&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# 2020/09/24 17:27:20 User dir established as: C:\Users\youruserid/.arkade/&lt;/span&gt;
+&lt;span class="c1"&gt;# https://get.helm.sh/helm-v3.2.4-windows-amd64.zip&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\youruserid\AppData\Local\Temp/windows-amd64&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\youruserid\AppData\Local\Temp/helm.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\youruserid\AppData\Local\Temp/README.md&lt;/span&gt;
+&lt;span class="c1"&gt;# C:\Users\youruserid\AppData\Local\Temp/LICENSE&lt;/span&gt;
+&lt;span class="c1"&gt;# 2020/09/24 17:27:22 extracted zip into C:\Users\youruserid\AppData\Local\Temp: 4 files, 0 dirs (406.024ms)&lt;/span&gt;
+&lt;span class="c1"&gt;# Downloaded to:  C:\Users\youruserid/.arkade/bin/helm.exe helm.exe&lt;/span&gt;
+&lt;span class="c1"&gt;# Hang tight while we grab the latest from your chart repositories...&lt;/span&gt;
+&lt;span class="c1"&gt;# ...Successfully got an update from the &amp;quot;stable&amp;quot; chart repository&lt;/span&gt;
+&lt;span class="c1"&gt;# Update Complete. ⎈ Happy Helming!⎈&lt;/span&gt;
+&lt;span class="c1"&gt;# Chart path:  C:\Users\youruserid\AppData\Local\Temp/charts&lt;/span&gt;
+&lt;span class="c1"&gt;# VALUES values.yaml&lt;/span&gt;
+&lt;span class="c1"&gt;# Command: C:\Users\youruserid/.arkade/bin/helm [upgrade --install metrics-server stable/metrics-server --namespace kube-system --values C:\Users\youruserid\AppData\Local\Temp/charts/metrics-server/values.yaml --set args={--kubelet-insecure-tls,--kubelet-preferred-address-types=InternalIP\,ExternalIP\,Hostname}]&lt;/span&gt;
+&lt;span class="c1"&gt;# Release &amp;quot;metrics-server&amp;quot; does not exist. Installing it now.&lt;/span&gt;
+&lt;span class="c1"&gt;# NAME: metrics-server&lt;/span&gt;
+&lt;span class="c1"&gt;# LAST DEPLOYED: Thu Sep 24 17:27:29 2020&lt;/span&gt;
+&lt;span class="c1"&gt;# NAMESPACE: kube-system&lt;/span&gt;
+&lt;span class="c1"&gt;# STATUS: deployed&lt;/span&gt;
+&lt;span class="c1"&gt;# REVISION: 1&lt;/span&gt;
+&lt;span class="c1"&gt;# NOTES:&lt;/span&gt;
+&lt;span class="c1"&gt;# The metric server has been deployed.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# In a few minutes you should be able to list metrics using the following&lt;/span&gt;
+&lt;span class="c1"&gt;# command:&lt;/span&gt;
+
+&lt;span class="c1"&gt;#   kubectl get --raw &amp;quot;/apis/metrics.k8s.io/v1beta1/nodes&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# =======================================================================&lt;/span&gt;
+&lt;span class="c1"&gt;# = metrics-server has been installed.                                  =&lt;/span&gt;
+&lt;span class="c1"&gt;# =======================================================================&lt;/span&gt;
+
+&lt;span class="c1"&gt;# # It can take a few minutes for the metrics-server to collect data&lt;/span&gt;
+&lt;span class="c1"&gt;# # from the cluster. Try these commands and wait a few moments if&lt;/span&gt;
+&lt;span class="c1"&gt;# # no data is showing.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# # Check pod usage&lt;/span&gt;
+&lt;span class="c1"&gt;# kubectl top pod&lt;/span&gt;
+
+&lt;span class="c1"&gt;# # Check node usage&lt;/span&gt;
+kubectl top node
+&lt;span class="c1"&gt;# Error from server (ServiceUnavailable): the server is currently unable to handle the request (get nodes.metrics.k8s.io)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# # Find out more at:&lt;/span&gt;
+&lt;span class="c1"&gt;# # https://github.com/helm/charts/tree/master/stable/metrics-server&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Thanks for using arkade!&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So now we have &lt;code&gt;Error from server (ServiceUnavailable)&lt;/code&gt;.&lt;br&gt;
+Try fix: &lt;a href="https://github.com/kubernetes-sigs/metrics-server/issues/448"&gt;issue 448&lt;/a&gt;.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Is pod running?&lt;/span&gt;
+kubectl get pods -n kube-system
+&lt;span class="c1"&gt;# NAME                                         READY   STATUS    RESTARTS   AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# metrics-server-56c4ff648b-jdzv6              1/1     Running   0          53m&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Is service running?&lt;/span&gt;
+kubectl get svc -n kube-system
+&lt;span class="c1"&gt;# NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# metrics-server   ClusterIP   10.106.132.12   &amp;lt;none&amp;gt;        443/TCP                  55m&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;3 days later ...&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kubectl top node
+&lt;span class="c1"&gt;# NAME                 CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%&lt;/span&gt;
+&lt;span class="c1"&gt;# kind-control-plane   473m         5%     952Mi           8%&lt;/span&gt;
+
+kubectl top pod
+
+kubectl get --raw &lt;span class="s2"&gt;&amp;quot;/apis/metrics.k8s.io/v1beta1/nodes&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Error from server (NotFound): the server could not find the requested resource&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Start proxy in another terminal&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kubectl proxy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then open browser http://127.0.0.1:8001/&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;quot;paths&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;/apis/metrics.k8s.io&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;/apis/metrics.k8s.io/v1beta1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;http://127.0.0.1:8001/apis/metrics.k8s.io/v1beta1/nodes 
+gives "ERR_CONNECTION_REFUSED"&lt;/p&gt;
+&lt;p&gt;OK, I'm not done with this, but I'll fill in, when focus comes back onto it...&lt;/p&gt;
+&lt;p&gt;More info:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Metrics Server:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/helm/charts/tree/master/stable/metrics-server"&gt;helm/charts - metrics-server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Github: &lt;a href="https://github.com/kubernetes-sigs/metrics-server"&gt;kubernetes-sigs/metrics-server&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;k8s Debug: &lt;a href="https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/"&gt;Resource metrics pipeline&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Helm:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://helm.sh/docs/intro/quickstart/"&gt;Quickstart Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Download: &lt;a href="https://github.com/helm/helm/releases"&gt;Releases · helm/helm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/helm/charts/tree/master/stable"&gt;helm/charts&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;What's next?&lt;/h1&gt;
+&lt;p&gt;I didn't get the the OpenFaaS part, yet - I'll park that for later.  &lt;/p&gt;
+&lt;p&gt;I also want to build apps on a solid setup.&lt;br&gt;
+What I have in mind is the &lt;a href="https://kubeprod.io/"&gt;Bitnami stack&lt;/a&gt;&lt;br&gt;
+&lt;img alt="Bitnami stack" src="https://kubeprod.io/assets/images/bkpr.png"&gt;&lt;br&gt;
+(&lt;em&gt;Image on kubeprod.io&lt;/em&gt;)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apps - e.g &lt;a href="https://kubeapps.com/"&gt;Kubeapps, deploy your applications in Kubernetes&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://hub.kubeapps.com/charts"&gt;Charts hub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md"&gt;Get Started with Kubeapps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;BKPR (Bitnami Kubernetes Production Runtime)&lt;ul&gt;
+&lt;li&gt;Monitoring&lt;ul&gt;
+&lt;li&gt;Prometheus&lt;/li&gt;
+&lt;li&gt;Grafana&lt;/li&gt;
+&lt;li&gt;Alertmanager&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Logging&lt;ul&gt;
+&lt;li&gt;Fluentd&lt;/li&gt;
+&lt;li&gt;Elasticsearch&lt;/li&gt;
+&lt;li&gt;Kibana&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ingress&lt;ul&gt;
+&lt;li&gt;nginx-ingress&lt;/li&gt;
+&lt;li&gt;ExternalDNS&lt;/li&gt;
+&lt;li&gt;cert-manager&lt;/li&gt;
+&lt;li&gt;OAuth2 Proxy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;k8s&lt;ul&gt;
+&lt;li&gt;Google Kubernetes Engine (GKE), &lt;/li&gt;
+&lt;li&gt;Azure Kubernetes Service (AKS) and &lt;/li&gt;
+&lt;li&gt;Amazon Elastic Container Service for Kubernetes (EKS)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I might want to add to the stack:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://hub.kubeapps.com/charts?q=rabbitmq"&gt;charts/rabbitmq&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some apps I have in mind could be &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A DeFi app using &lt;ul&gt;
+&lt;li&gt;a private &lt;a href="https://hub.kubeapps.com/charts/stable/ethereum"&gt;ethereum&lt;/a&gt; network as transaction and currency cluster&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hub.kubeapps.com/charts/vulcanlink"&gt;vulcanlink&lt;/a&gt; - chainlink as Dapp GW&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://vulcan.link/"&gt;Vulcan Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Dedicated &lt;a href="https://elastos.academy/did/"&gt;Elastos DID sidechain&lt;/a&gt; as customer IdM cluster&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://medium.com/@leo.vigna/bringing-chainlink-to-elastos-mainnet-9134bb3da6c9"&gt;Bringing Chainlink to Elastos Mainnet&lt;/a&gt;    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gnosis-safe.io/"&gt;Gnosis Safe&lt;/a&gt; as multisig provider&lt;/li&gt;
+&lt;li&gt;Perhaps use aelf as common sidechain?&lt;br&gt;
+&lt;img alt="aelf" src="https://pbs.twimg.com/media/EiliSVUVkAAH1Kc?format=jpg&amp;amp;name=large"&gt;&lt;br&gt;
+(&lt;em&gt;Image on &lt;a href="https://twitter.com/aelfblockchain/status/1308688001073991680/photo/1"&gt;twitter&lt;/a&gt;&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;More Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/docker-for-windows/troubleshoot/"&gt;Logs and troubleshooting&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;k8s:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands"&gt;Kubectl Reference Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/reference/kubectl/cheatsheet/"&gt;kubectl Cheat Sheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/docker-for-windows/kubernetes/"&gt;Deploy on Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/docker-for-windows/kubernetes/#example-app"&gt;Deploy on Kubernetes - Example app&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vid 2017: &lt;a href="https://www.youtube.com/watch?v=6xJwQgDnMFE"&gt;Create a 2-node Kubernetes cluster in 10 minutes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When k8s? &lt;a href="https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343"&gt;Alex Ellis posted on LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vid: &lt;a href="https://www.youtube.com/watch?v=3RTvoI-A7UQ"&gt;Kubernetes and Container Orchestration 101 - Hanselman&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/concepts/workloads/pods/init-containers/"&gt;Init Containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rancher.com/learning-paths/best-practices-for-monitoring-and-alerting-on-kubernetes/"&gt;Best Practices for Monitoring and Alerting on Kubernetes&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/bashofmann/rancher-2.5-monitoring"&gt;bashofmann/rancher-2.5-monitoring&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rancher.com/events"&gt;Events&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;k3s (k8s that can run on Raspberry Pi):&lt;ul&gt;
+&lt;li&gt;SaaS: &lt;a href="https://www.civo.com/"&gt;Managed Kubernetes service, powered by k3s - Civo.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Kind:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kind.sigs.k8s.io/#installation-and-usage"&gt;Installation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://kind.sigs.k8s.io/docs/user/quick-start/"&gt;Quick start&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;helm: &lt;ul&gt;
+&lt;li&gt;&lt;a href="https://artifacthub.io/"&gt;Artifact Hub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Arkade:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/alexellis/arkade"&gt;alexellis/arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD"&gt;Alex Ellis - arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Vid 2020: &lt;a href="https://www.youtube.com/watch?v=8wU9s_mua8M"&gt;Walk-through of arkade - for Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OpenFaaS:&lt;ul&gt;
+&lt;li&gt;My blog 2019:&lt;a href="https://rasor.github.io/openfaas-on-windows-devbox.html"&gt;OpenFaaS on Windows Devbox&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.openfaas.com/deployment/kubernetes/"&gt;Kubernetes - OpenFaaS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;VPN Connect to OnPrem server/service&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.inlets.dev/#/"&gt;inlets: Cloud Native Tunnel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Ngrok&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#arkade"></category><category term="#docker"></category><category term="#openfaas"></category><category term="#curl"></category><category term="#hyperv"></category><category term="#virtualbox"></category><category term="#kitematic"></category><category term="#wsl2"></category><category term="#win10"></category><category term="#virtualmachineplatform"></category><category term="#kubernetes-dashboard"></category><category term="#metrics-server"></category><category term="#k8s"></category></entry><entry><title>Docker Desktop for Windows on WSL2 - Part 0.1</title><link href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html" rel="alternate"></link><published>2020-09-07T00:00:00+02:00</published><updated>2020-11-09T10:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-09-07:/docker-desktop-for-windows-on-wsl2-part-01.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Other coming ...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
+I ended up …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Other coming ...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
 I ended up with upgrading Windows allowing me to install Docker Desktop running on WSL2.&lt;br&gt;
 This is the path I took to get there and some additional experiments I had with WSL2.  &lt;/p&gt;
 &lt;h1&gt;Getting Docker up working&lt;/h1&gt;
