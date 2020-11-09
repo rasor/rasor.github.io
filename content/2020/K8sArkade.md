@@ -1,36 +1,51 @@
-Title:  k8s on Windows Devbox
-Date: 2099-01-01 00:00
-Category: Develop
-Tags: #arkade, #docker, #kubernetes, #openfaas, #curl, #hyperv, #virtualbox, #kitematic, #wsl2, #win10, #virtualmachineplatform
+Title:  k8s on Windows Devbox - Part 0.2
+Status: draft
+Date: 2020-10-12 00:00
+Modified: 2020-11-09 10:30
+Category: DevOps
+Tags: #arkade, #docker, #openfaas, #curl, #hyperv, #virtualbox, #kitematic, #wsl2, #win10, #virtualmachineplatform, #kubernetes-dashboard, #metrics-server, #k8s
+
+This blog is part of a serie:
+
+* [Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL]({filename}/2020/2020-09-07-Docker4Win20.md)
+* [Part 0.2: Install k8s using kind on Windows - including arkade]({filename}/2020/2020-10-12-K8sArkade.md) (this blog)
+* Others coming ...
 
 I want to install **OpenFaaS** again.  
 This time running on **Kubernetes (k8s)**, **Docker Desktop**, **Windows Home 10** with **Virtual Machine Platform** on **WSL2**.  
 Running Docker Desktop with [WSL2 backend has many improvements](https://docs.docker.com/docker-for-windows/wsl/) over alternatives.  
 Last time I installed Docker (in this [blog](https://rasor.github.io/openfaas-on-windows-devbox.html)), I was running on **Docker Swarm**, **Docker CE**, **Windows Pro 10** and **Hyper-V**.
 
-[@alexellisuk](https://twitter.com/alexellisuk) has build yet a great tool. One being [Arkade](https://github.com/alexellis/arkade).  
-It is great for installing lots of K8s goodies both locally and in cloud. I also includes OpenFaaS.
+[@alexellisuk](https://twitter.com/alexellisuk) has build great tools. One being [Arkade](https://github.com/alexellis/arkade).  
+It is great for installing lots of K8s goodies both locally and in cloud. It also includes OpenFaaS.
 
-## Arkade
-Your one-stop CLI for Kubernetes
+# Install k8s and Arkade on devbox on Windows
 
-### Install on devbox on Windows
-
-#### Prerequisites.
+## Prerequisites.
 
 You need Docker. Start by typing    
 ```bash
 docker -v
 ```  
 to see if you already have it installed.  
-If not then follow [this tutorial to get it](Docker4Win20.md).  
+If not then follow [this tutorial to get it]({filename}/2020/2020-09-07-Docker4Win20.md).  
 In that blog I ended up with **Docker Desktop** on **Windows Home 10** with **Virtual Machine Platform** incl. **WSL2**.
 
-### K8S
+## About
+
+### About Akade
+
+What is Arkade?  
+_Your one-stop CLI for Kubernetes_ (its slogan)
+
+I'll use arkade for installing various k8s CLIs and Apps.  
+
+### About K8S clusters
 
 Now that we have Docker, then it is time to play with Arkade to install k8s and other stuff
 
-But there are other options than **Arkade** to install k8s?
+But there are other options than **Arkade** to install k8s
+
 * On localhost
     * Using **Kind**
         * [Installing Kubernetes with Kind](https://kubernetes.io/docs/setup/learning-environment/kind/)
@@ -42,30 +57,40 @@ But there are other options than **Arkade** to install k8s?
     * Enable k8s in **Docker Desktop** - for dev
     * OpenShift
 * In cloud
-    * All cloud providers have their own k8s services [EKS (AWS), AKS (Az), GKE (Google)]
+    * All cloud providers have their own k8s services:
+        * EKS (AWS)
+        * AKS (Az)
+        * GKE (Google)
+        * [Kube100](https://www.civo.com/kube100) (Civo) - a k3s cluster
     * Using **[RKE](https://rancher.com/products)**
 
 So why use Arkade to install k8s?
+
 * If you only need a single node cluster then option 3 - using **Docker Desktop** automates the work you manually can do with **Minikube**.  
 * If you need a multi node cluster then option 0 - using **Arkade** automates the work you manually can do with **Kind**.  
 * **Arkade** also automates the work you need to do with other k8s related tools.
 
-#### Already have a k8s cluster?
+### Already have a k8s cluster?
 
 k8s install is only the top of the iceberg of Arkade.  
 If you already have a k8s cluster then Arkade kicks in by installing lost of 
+
 * k8s apps from e.g. [Helm Hub](https://hub.helm.sh/) (with `ark install`) and/or
 * CLIs for k8s or apps (with `ark get`) 
 
-Arkade then __unifies fetching packages__ across platforms. Before:
+Arkade then __unifies fetching packages__ across platforms.  
+Before you would use package tools like:
+
 * `apt-get` on some Linux versions
 * `yum` on some other Linux versions
 * `choco` on Windows
 * `brew` on Mac
 
+and having to deal with all their parameters.  
+
 Under the hood Arkade __simplifies commands__ by using [Helm](https://helm.sh/) as the k8s package manager and `kubectl` commands.
 
-#### Install Arkade
+## Install Arkade
 
 ```bash
 # Check that curl is installed
@@ -108,13 +133,12 @@ curl -sLS https://dl.get-arkade.dev | sh
 
 ```
 
-Both attemps failed - instead get manual recipe: [get.sh](https://raw.githubusercontent.com/alexellis/arkade/master/get.sh)  
+Both attemps failed - instead get manual recipe from [get.sh](https://raw.githubusercontent.com/alexellis/arkade/master/get.sh)  
+
 1. Open your web browser and go to https://github.com/alexellis/arkade/releases
 2. Download the latest release for windows to C:\Users\yourusername\.arkade\bin\arkade`
 3. Add path to environment  
-```cmd
-setx PATH "%path%;C:\Users\yourusername\.arkade\bin"
-```
+`setx PATH "%path%;C:\Users\yourusername\.arkade\bin"`
 4. Create a symbolic link
 ```bash
 export ALIAS_NAME="ark"
@@ -123,6 +147,7 @@ export BINLOCATION="/c/users/yourusername/.arkade/bin"
 chmod +x "$BINLOCATION/$REPO"
 ln -sf "$BINLOCATION/$REPO" "$BINLOCATION/$ALIAS_NAME"
 
+# Did it work?
 arkade version
 #             _             _
 #   __ _ _ __| | ____ _  __| | ___
@@ -166,13 +191,22 @@ ark get
 # terraform
 ```
 
-#### Install k8s cluster
+Great - we have Arkade now.  
+
+## Install k8s cluster
+
+Now lets install a k8s cluster.  
 
 ```bash
+# We need kubectl to manage k8s. Install it:
 arkade get kubectl
 # Downloading kubectl
 # https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/windows/amd64/kubectl.exe
 # Tool written to: C:\Users\yourusername/.arkade/bin/kubectl.exe
+
+# Did it install?
+kubectl version
+# Client Version: version.Info{Major:"1", Minor:"19",
 
 # We will use kind to create a k8s cluster, but first install it:
 arkade get kind
@@ -223,7 +257,7 @@ kubectl config view
 # clusters:
 # - cluster:
 #     certificate-authority-data: DATA+OMITTED
-#     server: https://127.0.0.1:52295
+#     server: https://127.0.0.1:55555
 #   name: kind-kind
 # contexts:
 # - context:
@@ -247,19 +281,52 @@ kubectl get pods
 # No resources found in default namespace.
 ```
 
-The cluster config seen in `kubectl config view` is stored in C:\Users\youruserid\.kube\config
+The cluster config seen in `kubectl config view` is stored in C:\Users\youruserid\.kube\config   
+When you want to connect to other clusters you need to modify or replace that file.  
+In the file one cluster will be your default.  
 
 So now having a master node running and no pod what is next?  
+
 * We could add worker nodes to the cluster
 * We could install apps
 
 Issues: 
+
 * Booting Windows made bash unable to access cluster. Why?
     * It was not an envir var problem, since after delete + create cluster then no new envir vars were created
     * In vid [Walk-through of arkade - for Kubernetes](https://www.youtube.com/watch?v=8wU9s_mua8M), Alex think boot persistence has been implemented - and before we had to recreate cluster after boot.
     * Tips about accessing clusters: [Accessing Clusters](https://kubernetes.io/docs/tasks/access-application-cluster/access-cluster/)
+    * Perhaps you just need to start the master node: `docker start kind-control-plane`
 
-#### Install k8s apps
+## Stop and start the cluster
+
+```bash
+# stop the k8s cluster
+docker stop kind-control-plane
+
+# check if k8s cluster is running
+kubectl cluster-info
+# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made
+
+# Check if there are any clusters
+$ kind get clusters
+# kind
+
+# Check it the container is running
+docker ps -a | grep kind
+# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES
+# 0b9a7220b4f8        kindest/node:v1.19.1   "/usr/local/bin/entr…"   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295->6443/tcp   kind-control-plane
+
+# start the k8s cluster
+docker start kind-control-plane
+
+# check if k8s cluster is running
+kubectl cluster-info
+# Kubernetes master is running at https://127.0.0.1:52295
+# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+```
+
+## Install k8s apps
 
 Arkade makes it easy to install many ready-to-use apps. You can print the list it contains:  
 
@@ -321,7 +388,9 @@ ark install --help
 #       --kubeconfig string   Local path for your kubeconfig file (default "kubeconfig")
 #       --wait                If we should wait for the resource to be ready before returning (helm3 only, default false)
 ```
-##### Install k8s app kubernetes-dashboard
+### Install k8s app kubernetes-dashboard
+
+kubernetes-dashboard gives you a GUI for viewing what your cluster contains. Let's install it:
 
 ```bash
 arkade install kubernetes-dashboard
@@ -335,21 +404,21 @@ cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: admin-user
-  namespace: kubernetes-dashboard
+    name: admin-user
+    namespace: kubernetes-dashboard
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: admin-user
+    name: admin-user
 roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: cluster-admin
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: cluster-admin
 subjects:
 - kind: ServiceAccount
-  name: admin-user
-  namespace: kubernetes-dashboard
+    name: admin-user
+    namespace: kubernetes-dashboard
 ---
 EOF
 
@@ -379,6 +448,8 @@ kubectl proxy
 # Paste the token above into the Dashboard login screen
 ```
 
+You need to copy-paste your token from above to the login screen:  
+
 ![k8s dashboard login](../img/2020/2020-09-06-OpenFaaS25.PNG "k8s dashboard login")  
 
 When logged in:  
@@ -388,16 +459,20 @@ There are several k8s namespaces. Select some to see what they are comprised of:
 ![k8s dashboard namespaces](../img/2020/2020-09-06-OpenFaaS27.PNG "k8s dashboard namespaces")  
 
 Issues:
-* Default user has too little permissions, if you forget to paste the `cat << EOF` block.
+
+* You get "Default user has too little permissions", if you forget to paste the `cat << EOF` block.
     * Create An [Authentication Token (RBAC)](https://github.com/kubernetes/dashboard#create-an-authentication-token-rbac)
     * Read about [Access control](https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/README.md)
 
 More info: 
+
 * Other apis exposed though [local proxy](http://127.0.0.1:8001/)
 * [Web UI (Dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
 * Github: [kubernetes/dashboard](https://github.com/kubernetes/dashboard)
 
-##### Install k8s app metrics-server (- and heml)
+### Install k8s app metrics-server (- and heml)
+
+Metrics Server is a cluster-wide aggregator of resource usage data.  
 
 Apparently installing metrics-server does also do `arkade get helm`, when it is not yet installed.  
 Helm is a package manager for k8s apps (packaged in helm charts).  
@@ -504,15 +579,9 @@ kubectl get pods -n kube-system
 kubectl get svc -n kube-system
 # NAME             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE
 # metrics-server   ClusterIP   10.106.132.12   <none>        443/TCP                  55m
-
-# Can we ping?
-ping 10.106.132.12
-# Pinging 10.106.132.12 with 32 bytes of data:
-# Request timed out.
-# Nope!
 ```
 
-3 days later
+3 days later ...
 
 ```bash
 kubectl top node
@@ -532,128 +601,108 @@ kubectl proxy
 Then open browser http://127.0.0.1:8001/
 ```json
 {
-  "paths": [
-    "/apis/metrics.k8s.io",
-    "/apis/metrics.k8s.io/v1beta1",
+    "paths": [
+        "/apis/metrics.k8s.io",
+        "/apis/metrics.k8s.io/v1beta1",
 ```
 
 http://127.0.0.1:8001/apis/metrics.k8s.io/v1beta1/nodes 
 gives "ERR_CONNECTION_REFUSED"
 
+OK, I'm not done with this, but I'll fill in, when focus comes back onto it...
+
 More info:
+
 * Metrics Server:
-  * [helm/charts - metrics-server](https://github.com/helm/charts/tree/master/stable/metrics-server)
-  * Github: [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
-  * k8s Debug: [Resource metrics pipeline](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
+    * [helm/charts - metrics-server](https://github.com/helm/charts/tree/master/stable/metrics-server)
+    * Github: [kubernetes-sigs/metrics-server](https://github.com/kubernetes-sigs/metrics-server)
+    * k8s Debug: [Resource metrics pipeline](https://kubernetes.io/docs/tasks/debug-application-cluster/resource-metrics-pipeline/)
 * Helm:
-  * [Quickstart Guide](https://helm.sh/docs/intro/quickstart/)
-  * Download: [Releases · helm/helm](https://github.com/helm/helm/releases)
-  * [helm/charts](https://github.com/helm/charts/tree/master/stable)
+    * [Quickstart Guide](https://helm.sh/docs/intro/quickstart/)
+    * Download: [Releases · helm/helm](https://github.com/helm/helm/releases)
+    * [helm/charts](https://github.com/helm/charts/tree/master/stable)
 
-## Stop and start the cluster
 
-```bash
-# stop the k8s cluster
-docker stop kind-control-plane
+# What's next?
 
-# check if k8s cluster is running
-kubectl cluster-info
-# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made
+I didn't get the the OpenFaaS part, yet - I'll park that for later.  
 
-# Check if there are any clusters
-$ kind get clusters
-# kind
-
-# Check it the container is running
-docker ps -a | grep kind
-# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES
-# 0b9a7220b4f8        kindest/node:v1.19.1   "/usr/local/bin/entr…"   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295->6443/tcp   kind-control-plane
-
-# start the k8s cluster
-docker start kind-control-plane
-
-# check if k8s cluster is running
-kubectl cluster-info
-# Kubernetes master is running at https://127.0.0.1:52295
-# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
-```
-
-## What's next?
-
-I want to build apps on a solid setup.  
+I also want to build apps on a solid setup.  
 What I have in mind is the [Bitnami stack](https://kubeprod.io/)  
 ![Bitnami stack](https://kubeprod.io/assets/images/bkpr.png)  
 (_Image on kubeprod.io_)
+
 * Apps - e.g [Kubeapps, deploy your applications in Kubernetes](https://kubeapps.com/)
-  * [Charts hub](https://hub.kubeapps.com/charts)
-  * [Get Started with Kubeapps](https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md)
+    * [Charts hub](https://hub.kubeapps.com/charts)
+    * [Get Started with Kubeapps](https://github.com/kubeapps/kubeapps/blob/master/docs/user/getting-started.md)
 * BKPR (Bitnami Kubernetes Production Runtime)
-  * Monitoring
-    * Prometheus
-    * Grafana
-    * Alertmanager
-  * Logging
-    * Fluentd
-    * Elasticsearch
-    * Kibana
-  * Ingress
-    * nginx-ingress
-    * ExternalDNS
-    * cert-manager
-    * OAuth2 Proxy
+    * Monitoring
+        * Prometheus
+        * Grafana
+        * Alertmanager
+    * Logging
+        * Fluentd
+        * Elasticsearch
+        * Kibana
+    * Ingress
+        * nginx-ingress
+        * ExternalDNS
+        * cert-manager
+        * OAuth2 Proxy
 * k8s
-  * Google Kubernetes Engine (GKE), 
-  * Azure Kubernetes Service (AKS) and 
-  * Amazon Elastic Container Service for Kubernetes (EKS)
+    * Google Kubernetes Engine (GKE), 
+    * Azure Kubernetes Service (AKS) and 
+    * Amazon Elastic Container Service for Kubernetes (EKS)
 
 I might want to add to the stack:
+
 * [charts/rabbitmq](https://hub.kubeapps.com/charts?q=rabbitmq)
 
 Some apps I have in mind could be 
-* A DeFi app using 
-  * a private [ethereum](https://hub.kubeapps.com/charts/stable/ethereum) network as transaction and currency cluster
-  * [vulcanlink](https://hub.kubeapps.com/charts/vulcanlink) - chainlink as Dapp GW
-    * [Vulcan Link](https://vulcan.link/)
-  * Dedicated [Elastos DID sidechain](https://elastos.academy/did/) as customer IdM cluster
-    * [Bringing Chainlink to Elastos Mainnet](https://medium.com/@leo.vigna/bringing-chainlink-to-elastos-mainnet-9134bb3da6c9)    
-  * [Gnosis Safe](https://gnosis-safe.io/) as multisig provider
-  * Perhaps use aelf as common sidechain?  
-  ![aelf](https://pbs.twimg.com/media/EiliSVUVkAAH1Kc?format=jpg&name=large)  
-  (_Image on[twitter](https://twitter.com/aelfblockchain/status/1308688001073991680/photo/1)_)
 
-## More Links
+* A DeFi app using 
+    * a private [ethereum](https://hub.kubeapps.com/charts/stable/ethereum) network as transaction and currency cluster
+    * [vulcanlink](https://hub.kubeapps.com/charts/vulcanlink) - chainlink as Dapp GW
+        * [Vulcan Link](https://vulcan.link/)
+    * Dedicated [Elastos DID sidechain](https://elastos.academy/did/) as customer IdM cluster
+        * [Bringing Chainlink to Elastos Mainnet](https://medium.com/@leo.vigna/bringing-chainlink-to-elastos-mainnet-9134bb3da6c9)    
+    * [Gnosis Safe](https://gnosis-safe.io/) as multisig provider
+    * Perhaps use aelf as common sidechain?  
+    ![aelf](https://pbs.twimg.com/media/EiliSVUVkAAH1Kc?format=jpg&name=large)  
+    (_Image on [twitter](https://twitter.com/aelfblockchain/status/1308688001073991680/photo/1)_)
+
+# More Links
 
 * Docker:
-  * My blog 2020: [Docker Desktop for Windows on WSL2](./Docker4Win20.md)
-  * [Logs and troubleshooting](https://docs.docker.com/docker-for-windows/troubleshoot/)
+    * [Logs and troubleshooting](https://docs.docker.com/docker-for-windows/troubleshoot/)
 * k8s:
-  * [Kubectl Reference Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
-  * [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
-  * [Deploy on Kubernetes](https://docs.docker.com/docker-for-windows/kubernetes/)
-  * [Deploy on Kubernetes - Example app](https://docs.docker.com/docker-for-windows/kubernetes/#example-app)
-  * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
-  * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
-  * Vid: [Kubernetes and Container Orchestration 101 - Hanselman](https://www.youtube.com/watch?v=3RTvoI-A7UQ)
-  * [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-  * [Best Practices for Monitoring and Alerting on Kubernetes](https://rancher.com/learning-paths/best-practices-for-monitoring-and-alerting-on-kubernetes/)
-    * [bashofmann/rancher-2.5-monitoring](https://github.com/bashofmann/rancher-2.5-monitoring)
-    * [Events](https://rancher.com/events)
+    * [Kubectl Reference Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+    * [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+    * [Deploy on Kubernetes](https://docs.docker.com/docker-for-windows/kubernetes/)
+    * [Deploy on Kubernetes - Example app](https://docs.docker.com/docker-for-windows/kubernetes/#example-app)
+    * Vid 2017: [Create a 2-node Kubernetes cluster in 10 minutes](https://www.youtube.com/watch?v=6xJwQgDnMFE)
+    * When k8s? [Alex Ellis posted on LinkedIn](https://www.linkedin.com/posts/alexellisuk_then-he-asked-me-is-kubernetes-right-for-activity-6703625976351346688-6343)
+    * Vid: [Kubernetes and Container Orchestration 101 - Hanselman](https://www.youtube.com/watch?v=3RTvoI-A7UQ)
+    * [Init Containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+    * [Best Practices for Monitoring and Alerting on Kubernetes](https://rancher.com/learning-paths/best-practices-for-monitoring-and-alerting-on-kubernetes/)
+        * [bashofmann/rancher-2.5-monitoring](https://github.com/bashofmann/rancher-2.5-monitoring)
+        * [Events](https://rancher.com/events)
 * k3s (k8s that can run on Raspberry Pi):
-  * SaaS: [Managed Kubernetes service, powered by k3s - Civo.com](https://www.civo.com/)
+    * SaaS: [Managed Kubernetes service, powered by k3s - Civo.com](https://www.civo.com/)
 * Kind:
-  * [Installation](https://kind.sigs.k8s.io/#installation-and-usage)
-  * [Quick start](https://kind.sigs.k8s.io/docs/user/quick-start/)
+    * [Installation](https://kind.sigs.k8s.io/#installation-and-usage)
+    * [Quick start](https://kind.sigs.k8s.io/docs/user/quick-start/)
 * helm: 
-  * [Artifact Hub](https://artifacthub.io/)
+    * [Artifact Hub](https://artifacthub.io/)
 * Arkade:
-  * [alexellis/arkade](https://github.com/alexellis/arkade)
-  * [Alex Ellis - arkade](https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD)
-  * Vid 2020: [Walk-through of arkade - for Kubernetes](https://www.youtube.com/watch?v=8wU9s_mua8M)
+    * [alexellis/arkade](https://github.com/alexellis/arkade)
+    * [Alex Ellis - arkade](https://www.linkedin.com/posts/alexellisuk_kubernetes-cloudnative-cncf-activity-6702550586610487296-atGD)
+    * Vid 2020: [Walk-through of arkade - for Kubernetes](https://www.youtube.com/watch?v=8wU9s_mua8M)
 * OpenFaaS:
-  * My blog 2019:[OpenFaaS on Windows Devbox](https://rasor.github.io/openfaas-on-windows-devbox.html)
-  * [Kubernetes - OpenFaaS](https://docs.openfaas.com/deployment/kubernetes/)
+    * My blog 2019:[OpenFaaS on Windows Devbox](https://rasor.github.io/openfaas-on-windows-devbox.html)
+    * [Kubernetes - OpenFaaS](https://docs.openfaas.com/deployment/kubernetes/)
 * VPN Connect to OnPrem server/service
-  * [inlets: Cloud Native Tunnel](https://docs.inlets.dev/#/)
-  * Ngrok
+    * [inlets: Cloud Native Tunnel](https://docs.inlets.dev/#/)
+    * Ngrok
 
 The End

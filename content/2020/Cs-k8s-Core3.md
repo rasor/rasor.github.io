@@ -3,6 +3,15 @@ Date: 2099-01-01 00:00
 Category: Develop
 Tags: #csharp, #netcore3, #docker, #k8s, #jq, #vscode
 
+This blog is part of a serie:
+
+* [Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL]({filename}/2020/2020-09-07-Docker4Win20.md) (this blog)
+* [Part 0.2: Install k8s using kind on Windows - including arkade]({filename}/2020/2020-10-12-K8sArkade.md)
+* Part 1.1: Run docker containers  (this blog)
+* Part 1.2: Develop .NET docker images
+* Part 1.3: Run containers in k8s
+* Part 2: Deploy containers to Civo
+
 # Intro
 
 This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  
