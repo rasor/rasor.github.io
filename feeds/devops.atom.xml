@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T06:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Docker Desktop for Windows on WSL2</title><link href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2.html" rel="alternate"></link><published>2020-09-07T00:00:00+02:00</published><updated>2020-11-09T06:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-09-07:/docker-desktop-for-windows-on-wsl2.html</id><summary type="html">&lt;p&gt;In this blog I just wanted Docker onm my Windows 10 Home box.&lt;br&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T06:30:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Docker Desktop for Windows on WSL2</title><link href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2.html" rel="alternate"></link><published>2020-09-07T00:00:00+02:00</published><updated>2020-11-09T06:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-09-07:/docker-desktop-for-windows-on-wsl2.html</id><summary type="html">&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
 I ended up with upgrading Windows allowing me to install Docker Desktop running on WSL2.&lt;br&gt;
 This is the path I took to get there and some additional experiments I had with WSL2.  &lt;/p&gt;
-&lt;h1&gt;Get Docker up working&lt;/h1&gt;
-&lt;h2&gt;Something …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;In this blog I just wanted Docker onm my Windows 10 Home box.&lt;br&gt;
+&lt;h1&gt;Getting Docker up working&lt;/h1&gt;
+&lt;h2&gt;Something …&lt;/h2&gt;</summary><content type="html">&lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
 I ended up with upgrading Windows allowing me to install Docker Desktop running on WSL2.&lt;br&gt;
 This is the path I took to get there and some additional experiments I had with WSL2.  &lt;/p&gt;
-&lt;h1&gt;Get Docker up working&lt;/h1&gt;
+&lt;h1&gt;Getting Docker up working&lt;/h1&gt;
 &lt;h2&gt;Something nice-to-know&lt;/h2&gt;
 &lt;p&gt;I have run docker some times before, where it was running on Hyper-V on a Windows 10 Pro. I thought I was going to perhaps run on Hyper-V or VirtualBox.  &lt;/p&gt;
-&lt;p&gt;Info:&lt;br&gt;
-* Docker needs a hypervisor, which on Windows can either be &lt;strong&gt;hyper-v&lt;/strong&gt;, &lt;strong&gt;VirtualBox&lt;/strong&gt; and now also &lt;strong&gt;Virtual Machine Platform&lt;/strong&gt;.&lt;br&gt;
-    * Ref: &lt;a href="https://superuser.com/a/1510175"&gt;Hypervisor alternatives&lt;/a&gt;
-* &lt;strong&gt;Docker Desktop For Windows (DD4W)&lt;/strong&gt; superseeds &lt;strong&gt;Docker CE For Windows (DCE4W)&lt;/strong&gt;
-* Presumingly DD4W runs on top of &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-about"&gt;WSL2&lt;/a&gt;, so it is only on Windows 10 from May 2020
-* DCE4W:
-    * By default &lt;a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows"&gt;DCE4W&lt;/a&gt; will use hyper-v.&lt;br&gt;
-    * If you wanted to use VirtualBox you could get it included with &lt;a href="https://kitematic.com/"&gt;Kitematic&lt;/a&gt; in &lt;a href="https://docs.docker.com/toolbox/overview/"&gt;Docker Toolbox&lt;/a&gt;. You could then can use Kitematic to swap from hyper-v to ViretualBox.&lt;br&gt;
-    * With DD4W then &lt;strong&gt;Docker Toolbox&lt;/strong&gt;, &lt;strong&gt;Kitematic&lt;/strong&gt; and &lt;strong&gt;Docker machine&lt;/strong&gt; are &lt;a href="https://docs.docker.com/kitematic/userguide/"&gt;superceeded products&lt;/a&gt;
-    * My older blogs on howto install DCE4W:
-        * &lt;a href="https://rasor.github.io/docker-for-windows.html"&gt;Docker for Windows&lt;/a&gt;
-        * Heading Practice &lt;a href="https://rasor.github.io/openfaas-on-windows-devbox.html"&gt;on this blog&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Info:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Docker needs a hypervisor, which on Windows can either be &lt;strong&gt;hyper-v&lt;/strong&gt;, &lt;strong&gt;VirtualBox&lt;/strong&gt; and now also &lt;strong&gt;Virtual Machine Platform&lt;/strong&gt;.  &lt;ul&gt;
+&lt;li&gt;Ref: &lt;a href="https://superuser.com/a/1510175"&gt;Hypervisor alternatives&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker Desktop For Windows (DD4W)&lt;/strong&gt; superseeds &lt;strong&gt;Docker CE For Windows (DCE4W)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Presumingly DD4W runs on top of &lt;a href="https://docs.microsoft.com/en-us/windows/wsl/wsl2-about"&gt;WSL2&lt;/a&gt;, so it is only on Windows 10 from May 2020&lt;/li&gt;
+&lt;li&gt;DCE4W:&lt;ul&gt;
+&lt;li&gt;By default &lt;a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows"&gt;DCE4W&lt;/a&gt; will use hyper-v.  &lt;/li&gt;
+&lt;li&gt;If you wanted to use VirtualBox you could get it included with &lt;a href="https://kitematic.com/"&gt;Kitematic&lt;/a&gt; in &lt;a href="https://docs.docker.com/toolbox/overview/"&gt;Docker Toolbox&lt;/a&gt;. You could then can use Kitematic to swap from hyper-v to ViretualBox.  &lt;/li&gt;
+&lt;li&gt;With DD4W then &lt;strong&gt;Docker Toolbox&lt;/strong&gt;, &lt;strong&gt;Kitematic&lt;/strong&gt; and &lt;strong&gt;Docker machine&lt;/strong&gt; are &lt;a href="https://docs.docker.com/kitematic/userguide/"&gt;superceeded products&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;My older blogs on howto install DCE4W:&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-for-windows.html"&gt;Docker for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Heading Practice &lt;a href="https://rasor.github.io/openfaas-on-windows-devbox.html"&gt;on this blog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Install Docker&lt;/h2&gt;
 &lt;p&gt;In the beginning I didn't want to upgrade Windows - I thought I could make it work without upgrade.&lt;br&gt;
 Here is how it went on:  &lt;/p&gt;

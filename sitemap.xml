@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2020-11-09T06:20:31-00:00</lastmod>
+<lastmod>2020-11-09T06:26:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2020-11-09T06:20:31-00:00</lastmod>
+<lastmod>2020-11-09T06:26:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2020-11-09T06:20:31-00:00</lastmod>
+<lastmod>2020-11-09T06:26:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2020-11-09T06:20:31-00:00</lastmod>
+<lastmod>2020-11-09T06:26:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2020-11-09T06:20:31-00:00</lastmod>
+<lastmod>2020-11-09T06:26:12-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/docker-desktop-for-windows-on-wsl2.html</loc>
-<lastmod>2020-11-09T06:00:00+01:00</lastmod>
+<lastmod>2020-11-09T06:30:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -250,7 +250,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/devops.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -264,56 +264,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/docker.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/hyperv.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/virtualbox.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/openfaas.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/kitematic.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/wsl2.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/win10.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/virtualmachineplatform.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -964,7 +964,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2020-11-09T06:00:00+00:50</lastmod>
+<lastmod>2020-11-09T06:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
