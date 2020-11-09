@@ -10,7 +10,7 @@ This blog is part of a serie:
 * [Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL]({filename}/2020/2020-09-07-Docker4Win20.md)
 * [Part 0.2: Install k8s using kind on Windows - including arkade]({filename}/2020/2020-10-12-K8sArkade.md)
 * [Part 1.1: Run docker containers]({filename}/2020/2020-10-18-DockerRun.md) (this blog)
-* Part 1.2: Develop .NET docker images
+* [Part 1.2: Develop .NET docker images]({filename}/2020/2020-10-25-CsCore3DevDocker.md)
 * Part 1.3: Run containers in k8s
 * Part 2: Deploy containers to Civo
 
@@ -125,9 +125,8 @@ docker stop mvcapp # notice - stopping by name
 docker rm mvcapp
 ```
 
-
 ## Chapter 2 Create Your Application with Docker
 
-See Part 1.2...
+See [Part 1.2: Develop .NET docker images]({filename}/2020/2020-10-25-CsCore3DevDocker.md)
 
 The End
