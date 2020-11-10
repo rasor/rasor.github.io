@@ -4,13 +4,13 @@
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;Part 1.2: Develop .NET docker images&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 1.3: Run containers …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;Part 1.2: Develop .NET docker images&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 1.3: Run containers in k8s&lt;/li&gt;
 &lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
 &lt;/ul&gt;
@@ -125,20 +125,21 @@ docker rm mvcapp
 
 
 &lt;h2&gt;Chapter 2 Create Your Application with Docker&lt;/h2&gt;
-&lt;p&gt;See Part 1.2...&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#docker"></category></entry><entry><title>k8s on Windows Devbox - Part 0.2</title><link href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html" rel="alternate"></link><published>2020-10-12T00:00:00+02:00</published><updated>2020-11-09T10:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-12:/k8s-on-windows-devbox-part-02.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
-This time running on …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;I want to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
@@ -857,13 +858,15 @@ What I have in mind is the &lt;a href="https://kubeprod.io/"&gt;Bitnami stack&lt
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Other coming ...&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;In this blog I just wanted Docker on my Windows …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;In this blog …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Other coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
