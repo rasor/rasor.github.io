@@ -26,5 +26,9 @@ HowTo setup your own vault?
     * Doc: [Architecture | Vault by HashiCorp](https://www.vaultproject.io/docs/internals/architecture.html)
         * [Key Rotation | Vault by HashiCorp](https://www.vaultproject.io/docs/internals/rotation)
     * eBook: [Learning DevOps](https://www.packtpub.com/product/learning-devops/9781838642730) Cpt 12 - Page 366 - Installing Vault locally.
+* HSM and Cold Storage 
+    * [square/subzero](https://github.com/square/subzero)
+    * [Ledger Vault - solution to scale your digital asset business](https://vaultplatform.ledger.com/why-vault)
+    * CustodianS: [Leading US-based Crypto Custodian Providers for Institutional Clients](https://medium.com/blockchain4all/leading-us-based-crypto-custodian-providers-for-institutional-clients-3ba9b8683c6d)
 
 The End

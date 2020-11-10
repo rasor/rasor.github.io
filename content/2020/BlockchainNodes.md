@@ -14,6 +14,15 @@ Tags: #blockchain
     * [Casa Node - Casa Blog](https://blog.keys.casa/tag/casa-node/)
 
 Learn:
+* [Jameson Lopp's Bitcoin Resources](https://www.lopp.net/bitcoin-information.html)
+    * [Recommended Bitcoin Books](https://www.lopp.net/bitcoin-information/books.html)
+        * [bitcoinbook/shatoshi-paper](https://github.com/bitcoinbook/shatoshi-paper)
+            * [wbnns/bitcoinwhitepaper](https://github.com/wbnns/bitcoinwhitepaper)
+        * [bitcoinbook/bitcoinbook](https://github.com/bitcoinbook/bitcoinbook/blob/develop/book.asciidoc)
+            * [Mastering Bitcoin - Bitcoin Wiki](https://en.bitcoin.it/wiki/Mastering_Bitcoin)
+        * [kallerosenbaum/grokkingbitcoin](https://github.com/kallerosenbaum/grokkingbitcoin)
+        * Build container: [Docker Hub](https://hub.docker.com/r/asciidoctor/docker-asciidoctor)
+            * HowTo: [Convert AsciiDoc to HTML/PDF &amp; publish to GitHub Pages with Travis CI and Asciidoctor Docker containers](http://mgreau.com/posts/2016/03/28/asciidoc-to-gh-pages-with-travis-ci-docker-asciidoctor.html)
 * [Jameson Lopp's Lightning Network Resources](https://www.lopp.net/lightning-information.html)
 
 The End
