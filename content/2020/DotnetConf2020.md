@@ -12,6 +12,33 @@ Tags: #csharp, #netcore5
     * [Learn TV](https://docs.microsoft.com/en-us/learn/tv/)
     * [Twitch](https://www.twitch.tv/visualstudio)
 
+Today Microsoft released .NET core 5 and C# 9.  
+The conference is about what´s new in it.  
+
+Here is what you get when installing [.NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0):
+```text
+The installation was successful.
+
+The following were installed at: 'C:\Program Files\dotnet'
+    • .NET SDK 5.0.100
+    • .NET Runtime 5.0.0
+    • ASP.NET Core Runtime 5.0.0
+    • .NET Windows Desktop Runtime 5.0.0
+
+This product collects usage data
+    • More information and opt-out https://aka.ms/dotnet-cli-telemetry
+
+Resources
+    • .NET Documentation https://aka.ms/dotnet-docs
+    • SDK Documentation https://aka.ms/dotnet-sdk-docs
+    • Release Notes https://aka.ms/dotnet5-release-notes
+    • Tutorials https://aka.ms/dotnet-tutorials
+```
+```bash
+dotnet --version
+# 5.0.100
+```
+
 ---
 # Day #1
 ## 01 Keynote - Welcome to .NET 5  -  Scott Hunter  
