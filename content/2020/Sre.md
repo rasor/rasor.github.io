@@ -1,5 +1,4 @@
 Title: Site Reliability Engineering (SRE)
-Status: hidden
 Date: 2099-01-01 00:00
 Modified: 2099-01-01 00:00
 Category: DevOps
