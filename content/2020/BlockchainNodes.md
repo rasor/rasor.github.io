@@ -9,6 +9,14 @@ Tags: #blockchain
     * Taylor Helsper - coder [tehelsper](https://github.com/tehelsper)
     * Podcast: [https://twitter.com/stephanlivera/status/1182611916222451714](https://twitter.com/stephanlivera/status/1182611916222451714)
         * [SLP116 Taylor Helsper - Easy Bitcoin Nodes with myNode](https://www.youtube.com/watch?v=NEj1WwGaH8g&feature=youtu.be)
+    * [HW](https://mynodebtc.com/download):
+        * [Raspberry Pi 4B Device](https://www.amazon.com/gp/product/B07XTN5YRN/ref=as_li_tl)
+        * Aluminum Case - included above
+        * Power Cord - included above
+        * Ethernet Cable
+        * [16 GB SD Card](https://www.amazon.com/gp/product/B073JWXGNT/ref=as_li_tl)
+        * 1 TB [SSD](https://www.amazon.com/SanDisk-SSD-PLUS-Internal-SDSSDA-1T00-G26/dp/B07D998212/ref=as_li_ss_tl) / [HDD](https://www.amazon.com/Sabrent-Tool-free-Enclosure-Optimized-EC-UASP/dp/B00OJ3UJ2S/ref=as_li_ss_tl)
+        * [micro hdmi to hdmi - Google](https://www.google.com/search?q=micro+hdmi+to+hdmi)
 * [Build Your Own Casa Node](https://blog.keys.casa/build-your-own-casa-node/)
     * [Why You Should Run a Casa Node](https://blog.keys.casa/why-you-should-run-a-casa-node/)
     * [Casa Node - Casa Blog](https://blog.keys.casa/tag/casa-node/)
