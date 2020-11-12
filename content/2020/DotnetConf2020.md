@@ -4,12 +4,12 @@ Category: Develop
 Tags: #csharp, #netcore5
 
 * Home: [.NET Conf 2020](https://www.dotnetconf.net/agenda)
+    * [Learn TV](https://docs.microsoft.com/en-us/learn/tv/)
     * [.NET Conf 2020 - Day 1](https://www.youtube.com/watch?v=mS6ykjdOVRg)
     * [.NET Conf Day 2/3](https://www.youtube.com/watch?v=Uq4qyHi3sYM)
     * [.NET Live TV | Live developer streams every day](https://dotnet.microsoft.com/live)
 * Slides: [dotnet-presentations/dotNETConf](https://github.com/dotnet-presentations/dotNETConf/tree/master/2020/MainEvent)
 * Blog: [.NET 5.0 Launches at .NET Conf, November 10-12 | .NET Blog](https://devblogs.microsoft.com/dotnet/net-5-0-launches-at-net-conf-november-10-12/)
-    * [Learn TV](https://docs.microsoft.com/en-us/learn/tv/)
     * [Twitch](https://www.twitch.tv/visualstudio)
 
 Today Microsoft released .NET core 5 and C# 9.  
@@ -428,19 +428,34 @@ Is your search engine missing word semantics? What if I want my search for "elec
 
 The Power Apps component framework empowers professional developers and app makers to create code components for model-driven and canvas apps and provides enhanced user experiences for users working with data on forms, views, and dashboards. In this session, I am going to explain how we can build reusable rich UI controls using the PowerApps Component framework(PCF).
 
+* [@crmindian](https://twitter.com/crmindian)
+
 ## 47 Architecting Cloud Native Application in Azure using .NET Core  -  Menaka Baskar  
 23:00 (PT) | 07:00 (UTC) | 08:00 (Local)
 
 In this session we will discuss about why .NET is a perfect blend to deliver Cloud Native applications.
 
-* ---
+* [@MenakaBasker](https://twitter.com/MenakaBasker)
+* DevOps starter
+    * [DevOps Starter documentation](https://docs.microsoft.com/en-us/azure/devops-project/)
+    * [Overview of DevOps Starter for Azure](https://docs.microsoft.com/en-us/azure/devops-project/overview)
 
-## -- 48 Controlling My Home Sauna Using .NET 5  -  Johnny Hooyberghs  
+## 48 Controlling My Home Sauna Using .NET 5  -  Johnny Hooyberghs  
 23:30 (PT) | 07:30 (UTC) | 08:30 (Local)
 
 Today, .NET can really run everywhere. Come see how I was able to completely modernize my sauna controller by using .NET on a Raspberry Pi with Gpio support, .NET on Xamarin Forms, and .NET in a Docker container on a Linux host.
 
 * [@djohnnieke](https://twitter.com/djohnnieke)
+* [Johnny Hooyberghs Blog](https://blog.djohnnie.be/)
+* [Djohnnie/MySauna-DotNetConf-2020](https://github.com/Djohnnie/MySauna-DotNetConf-2020)
+* Raspberry Pi workers
+    * System.Device.Gpio # Raspberry Pi GPIO interface
+* Xamarin App
+    * `adb connect <ip>` # connect and build to android
+    * XAML hot reload
+* Deploy containers to NAS in home
+* [Modern Infrastructure as Code for Microsoft Azure | Pulumi](https://www.pulumi.com/azure/)
+* [.NET Core (C#, VB, F#)](https://www.pulumi.com/docs/intro/languages/dotnet/)
 
 --- ------------------------------------------------------------------
 # Day #3
@@ -450,6 +465,30 @@ Today, .NET can really run everywhere. Come see how I was able to completely mod
 Managing infrastructure as code is a vital skill in today's cloud-first world. Learn how you can use C# or TypeScript to define and deploy Azure infrastructure and applications, including serverless functions, Kubernetes clusters, Cosmos DB, and much more.
 
 * [@MikhailShilkov](https://twitter.com/MikhailShilkov)
+* [Mikhail Shilkov](https://mikhail.io/)
+* [mikhailshilkov - Overview](https://github.com/mikhailshilkov?tab=repositories)
+* Pulumi - IaC
+* [pulumi/examples](https://github.com/pulumi/examples)
+    * [azure-nextgen-cs-aks](https://github.com/pulumi/examples/tree/master/azure-nextgen-cs-aks)
+    ```bash
+    # Create isolated deployment target
+    pulumi stack init dev
+    # Login to Azure CLI
+    az login
+    # azure location in which to run
+    pulumi config set location westus2
+    # Create infra from your cs code
+    pulumi up
+    # wait for up - then grap kubeconfig
+    pulumi stack output KubeConfig > kubeconfig.yaml
+    # work with your cluster - e.g. deploy something
+    KUBECONFIG=./kubeconfig.yaml kubectl get nodes
+    # tear down infra
+    pulumi destroy --yes
+    pulumi stack rm --yes
+    ```
+* [Announcing Next Generation Pulumi Azure Provider](https://mikhail.io/2020/09/announcing-nextgen-azure-provider/)
+* Tool convert ARM to C#
 
 ## 51 Cross-platform Applications with Xamarin.Forms  -  Codrina Merigo  
 00:30 (PT) | 08:30 (UTC) | 09:30 (Local)
@@ -616,3 +655,25 @@ Use the Meadow IoT platform to build enterprise-grade hardware solutions that ru
 
 YARP is an open source reverse proxy being built on top of .NET, to provide an extensible proxy for use by 1P and 3P customers. Its being built on top of .NET and we have used it as forcing function to ensure that the platform has sufficient infrastructure and has been the driver for a number of improvements to ASP.NET and System.Net.Http libraries. We’ll walk through YARP and some of the lessons we learned building it.
 
+--- 
+# Takeaways
+
+* Inner loop
+    * 09, 30 `Tye` as inner loop
+    * 10 Include `.NET runtime` with `.NET core scripts`
+* IaC:
+    * 50 `Pulumi` as IaC deploy
+* CI/CD:
+    * 47 `DevOps Starter` using `Github Actions` or `ADO` as CI/CD
+    * 25 `github actions`
+    * 48 Deploy to NAS via ADO
+* Debug
+    * 29 `dotnet-trace`
+    * 23 Dev using `Roslyn Analyzers`
+* Other
+    * 42 CodeGen in .NET
+    * 27 Using `Azure SDK`
+    * 24 `Swagger` included in 5.0
+    * 20 Remote dev in `github codespaces`
+
+The End
