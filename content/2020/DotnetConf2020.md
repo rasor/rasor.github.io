@@ -271,6 +271,7 @@ GitHub Actions makes it easy to automate all your software workflows, now with w
 * [@isaacrlevin](https://twitter.com/isaacrlevin)
 * [isaacrlevin/.NET-Conf-Demos](https://github.com/isaacrlevin/.NET-Conf-Demos)
 * [Building My Blog with GitHub Actions](https://www.isaaclevin.com/post/blog-on-actions/)
+* [GitHub Actions Documentation - GitHub Docs](https://docs.github.com/en/free-pro-team@latest/actions)
 
 ## 26 Real-time 3D Games with .NET and Unity  -  John Miller   Abdullah Hamed  
 12:30 (PT) | 20:30 (UTC) | 21:30 (Local)
@@ -500,6 +501,15 @@ You are a .NET developer and want to explore mobile apps? You struggle between J
 
 You would really like to take advantage of Entitly Framewrk Core 5.0, but you are not familiar with the dotnet command line and the EF Core commands. See how the "EF Core Power Tools" for Visual Studio 2019 comes to your rescue!
 
+* [@erikej](https://twitter.com/erikej)
+* [ErikEJs blog](https://erikej.github.io/)
+* EF core power tools
+* [ErikEJ/EFCorePowerTools](https://github.com/ErikEJ/EFCorePowerTools)
+* [EF Core Power Tools database reverse engineering: renaming of entities and properties](https://erikej.github.io/efcore/2020/09/07/ef-core-power-tools-renaming-advanced.html)
+* Reverse eng from DB proj
+* Reverse eng from existing DB
+* [ErikEJ/SqlCeToolbox](https://github.com/ErikEJ/SqlCeToolbox)
+
 ## 53 Microfrontends with Blazor: Welcome to the Party!  -  Florian Rappl  
 01:30 (PT) | 09:30 (UTC) | 10:30 (Local)
 
@@ -520,25 +530,72 @@ Documents and images are great information sources. But when it comes to search,
 
 The SignalR real-time framework has been there for ages, but how do you connect to services like Azure Functions? In my session, I will show you how to create a SignalR service, send messages to the SignalR service and handle events on a connected SPA application.
 
+* [@ed_dotnet](https://twitter.com/ed_dotnet)
+* [nikneem/serverless-realtime-import](https://github.com/nikneem/serverless-realtime-import)
+
 ## 57 Building React Applications in F#  -  Zaid Ajaj  
 03:30 (PT) | 11:30 (UTC) | 12:30 (Local)
 
 In this talk, I will show you how to build modern and type-safe frontend applications in React with F# as well as showcase the mature ecosystem of tools around it.
+
+* [@zaid_ajaj](https://twitter.com/zaid_ajaj)
+* F#
+* [Zaid-Ajaj/dotnetconf-react-with-fsharp](https://github.com/Zaid-Ajaj/dotnetconf-react-with-fsharp)
+* `Fable` - F# to Js compiler
+    * Feliz
+    * React fast-refresh
+    * Webpack dev server
+    * `[<ReactComponent>]`
+* React
+    * [Pigeon Maps - ReactJS with OpenStreetMap Tile Layers](https://pigeon-maps.js.org/)
+    * [mariusandra/pigeon-maps](https://github.com/mariusandra/pigeon-maps)
+
 
 ## 58 Building Real-time Applications with Blazor and GraphQL  -  Michael Staib  
 04:00 (PT) | 12:00 (UTC) | 13:00 (Local)
 
 Come see how Blazor and GraphQL combined will revolutionize how we build rich SPA applications with .NET.
 
+* [@michael_staib](https://twitter.com/michael_staib)
+* [michaelstaib/PublicSpeaking](https://github.com/michaelstaib/PublicSpeaking)
+* [chillicream](https://chillicream.com/)
+    * [ChilliCream/hotchocolate](https://github.com/ChilliCream/hotchocolate)
+    * [HotChocolate](https://twitter.com/Chilli_Cream/status/1324384158060322823)
+* Banana Cake Pop
+* [ChilliCream/graphql-workshop](https://github.com/ChilliCream/graphql-workshop)
+
 ## 59 A Piece of Cake - C# Powered Cross-platform Build Automation  -  Gary Ewan Park  
 04:30 (PT) | 12:30 (UTC) | 13:30 (Local)
 
 In this session we will start with a standard .NET Solution and incrementally add a build and orchestration script to compile the application, run unit tests, perform static analysis, package the application, and more, with the C# skills that you already have, using the Cake Build Automation System.
 
+* [@gep13](https://twitter.com/gep13)
+* [gep13 - Overview](https://github.com/gep13)
+* Cake
+    * [@cakebuildnet](https://twitter.com/cakebuildnet)
+    * [Cake](https://github.com/cake-build/)
+    * [cake-build/cake](https://github.com/cake-build/cake)
+    * [cake-build/example](https://github.com/cake-build/example)
+    * Cake won't make you vendor locked-in e.g. ADO
+    * [Gary Ewan Park - Getting started with GitHub Actions](https://www.gep13.co.uk/blog/getting-started-with-github-actions)
+    * [Gary Ewan Park - Using Cake GitHub Action](https://www.gep13.co.uk/blog/using-cake-github-action)
+* PSake
+    * [@devblackops](https://twitter.com/devblackops)
+    * [psake/psake](https://github.com/psake/psake)
+    * [devblackops/psake-github-action](https://github.com/devblackops/psake-github-action)
+    * [GitHub Actions Tweet](https://twitter.com/devblackops/status/1072036355855671297)
+* Github Actions:
+    * [GitHub Actions Documentation - GitHub Docs](https://docs.github.com/en/free-pro-team@latest/actions)
+
 ## 60 Language Server Protocol and .NET  -  David Driscoll  
 05:00 (PT) | 13:00 (UTC) | 14:00 (Local)
 
-OmniSharp powers the C# experience in Visual Studio Code. It also inspired the Language Server Protocol that is used to make it such a great editor for your language of choice. Learn about how OmniSharp and the Language Server Protocol are helping build better experiences for Visual Studio and Visual Studio Code!
+OmniSharp powers the C# experience in Visual Studio Code. It also inspired the Language Server Protocol that is used to make it such a great editor for your languag
+* e of choice. Learn about how OmniSharp and the Language Server Protocol are helping build better experiences for Visual Studio and Visual Studio Code!
+
+* [@david_dotnet](https://twitter.com/david_dotnet)
+* OmniSharp
+* [Language Server Protocol](https://microsoft.github.io/language-server-protocol/)
 
 ## 61 Getting Started With Blazor  -  Carole Rennie Logan  
 05:30 (PT) | 13:30 (UTC) | 14:30 (Local)
@@ -655,6 +712,10 @@ Use the Meadow IoT platform to build enterprise-grade hardware solutions that ru
 
 YARP is an open source reverse proxy being built on top of .NET, to provide an extensible proxy for use by 1P and 3P customers. Its being built on top of .NET and we have used it as forcing function to ensure that the platform has sufficient infrastructure and has been the driver for a number of improvements to ASP.NET and System.Net.Http libraries. We’ll walk through YARP and some of the lessons we learned building it.
 
+* [YARP Documentation](https://microsoft.github.io/reverse-proxy/)
+* [Getting Started with YARP](https://microsoft.github.io/reverse-proxy/articles/getting_started.html)
+* [microsoft/reverse-proxy](https://github.com/microsoft/reverse-proxy)
+
 --- 
 # Takeaways
 
@@ -665,8 +726,9 @@ YARP is an open source reverse proxy being built on top of .NET, to provide an e
     * 50 `Pulumi` as IaC deploy
 * CI/CD:
     * 47 `DevOps Starter` using `Github Actions` or `ADO` as CI/CD
-    * 25 `github actions`
+    * 25, 59 `github actions`
     * 48 Deploy to NAS via ADO
+    * 59 `Cake` - Cs build
 * Debug
     * 29 `dotnet-trace`
     * 23 Dev using `Roslyn Analyzers`
@@ -675,5 +737,8 @@ YARP is an open source reverse proxy being built on top of .NET, to provide an e
     * 27 Using `Azure SDK`
     * 24 `Swagger` included in 5.0
     * 20 Remote dev in `github codespaces`
+    * 52 EF reverse eng with `EF core Power Tools`
+    * 58 `Blazor` and `GraphQl`
+
 
 The End
