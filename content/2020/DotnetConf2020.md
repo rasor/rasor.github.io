@@ -395,6 +395,18 @@ Get familiar with with Custom Vision, its API and ML algorithms for image classi
 With C# 9 there is finally an officially supported mechanism for generating source code into your .NET projects as part of the compiler pipeline. Lets run through how they work, some of the pros and cons, and play around with ideas to get your mind racing with the possibilities.
 
 * [@davidwengier](https://twitter.com/davidwengier)
+* [David Wengier](https://wengier.com/)
+* Other generators: 
+    * T4 - runs in runtime
+    * RoslunSyntaxTree
+* This runs in the compiler
+* Starter Template: [davidwengier/SourceGeneratorTemplate](https://github.com/davidwengier/SourceGeneratorTemplate)
+* SVG2Cs: [wieslawsoltes/SourceGenerators](https://github.com/wieslawsoltes/SourceGenerators)
+    * SVG2PNG-PDF: [wieslawsoltes/Svg.Skia](https://github.com/wieslawsoltes/Svg.Skia)
+* Sample validator: [davidwengier/EnumValidatorGenerator](https://github.com/davidwengier/EnumValidatorGenerator)
+* Adv sample: [chsienki/Kittitas](https://github.com/chsienki/kittitas)
+* Davids online generator: [sourcegen.dev - Source Generator Playground - @davidwengier](https://sourcegen.dev/)
+    * [davidwengier/SourceGeneratorPlayground](https://github.com/davidwengier/SourceGeneratorPlayground)
 
 ## 43 Setting up Health Checks for an ASP.NET Core application and its Dependencies  -  Clyde D'Souza  
 21:00 (PT) | 05:00 (UTC) | 06:00 (Local)
