@@ -457,6 +457,7 @@ Today, .NET can really run everywhere. Come see how I was able to completely mod
 * Deploy containers to NAS in home
 * [Modern Infrastructure as Code for Microsoft Azure | Pulumi](https://www.pulumi.com/azure/)
 * [.NET Core (C#, VB, F#)](https://www.pulumi.com/docs/intro/languages/dotnet/)
+* [pi-top [4]](https://www.pi-top.com/products/pi-top-4)
 
 --- ------------------------------------------------------------------
 # Day #3
@@ -579,6 +580,7 @@ In this session we will start with a standard .NET Solution and incrementally ad
     * Cake won't make you vendor locked-in e.g. ADO
     * [Gary Ewan Park - Getting started with GitHub Actions](https://www.gep13.co.uk/blog/getting-started-with-github-actions)
     * [Gary Ewan Park - Using Cake GitHub Action](https://www.gep13.co.uk/blog/using-cake-github-action)
+    * AddIns: [cake-contrib/Home](https://github.com/cake-contrib/Home/blob/master/Audit_for_Cake_0.33.0.md)
 * PSake
     * [@devblackops](https://twitter.com/devblackops)
     * [psake/psake](https://github.com/psake/psake)
@@ -687,34 +689,79 @@ Learn how to spend less time validating users' input and improve the experience 
 
 Leverage your ASP.NET skills to deliver native applications for Windows, Mac, and Linux environments using Electron.NET.
 
+* [@jjuback](https://twitter.com/jjuback)
+* [ElectronNET/Electron.NET](https://github.com/ElectronNET/Electron.NET)
+* [jjuback/NETConf2020](https://github.com/jjuback/NETConf2020)
+* debug:
+    * dotnet core attach
+        * electron proc
+* VSCode Excel Viewer to view csv and xsl
+* [.NET UI Controls | Tools for WinForms, WPF, UWP, ASP.NET MVC | ComponentOne](https://www.grapecity.com/componentone)
+* Electron Alternative: [Chromely](http://chromely.org/)
+
 ## 79 Running an Azure Static Web App with an API  -  Vaibhav Gujral  
 14:30 (PT) | 22:30 (UTC) | 23:30 (Local)
 
 Heard of Azure Static Web Apps? Come join this session to learn how to build and publish an Azure Static Web app in minutes with a backend API.
+
+* [@vabgujral](https://twitter.com/vabgujral)
+* [Vaibhav Gujrals Blog](https://vaibhavgujral.com/)
+* [vabgujral - Overview](https://github.com/vabgujral)
+* [vabgujral/MyBlazorDemo](https://github.com/vabgujral/MyBlazorDemo)
+* [staticwebdev/blazor-starter](https://github.com/staticwebdev/blazor-starter)
 
 ## 80 Writing Event Based Microservices using Steeltoe  -  David Tillman  
 15:00 (PT) | 23:00 (UTC) | 00:00 (Local)
 
 Steeltoe has become a popular .NET framework used in building enterprise grade microservices. Recently Steeltoe added support for building event based microservices using common off the shelf message brokers. In this session see how to create message based microservices using the framework.
 
+* [dtillman - Overview](https://github.com/dtillman)
+* [SteeltoeOSS/Steeltoe](https://github.com/SteeltoeOSS/Steeltoe)
+* [Enabling .NET Apps with Monitoring and Management Using Steeltoe](https://tanzu.vmware.com/content/slides/enabling-net-apps-with-monitoring-and-management-using-steeltoe-2)
+
 ## 81 Build native and hybrid mobile apps with Mobile Blazor Bindings  -  Eilon Lipton  
 15:30 (PT) | 23:30 (UTC) | 00:30 (Local)
 
-Extend your Blazor skills from the web to mobile apps with Mobile Blazor Bindings. This experimental project enables using Blazor to build native and hybrid apps for mobile and desktop platforms using a single code base and single skill set. Build your app and it will run on the most popular platforms, while getting all the native advantages that each platform has to offer.
+Extend your Blazor skills from the web to mobile apps with `Mobile Blazor Bindings`. This experimental project enables using Blazor to build native and `hybrid apps` for mobile and desktop platforms using a single code base and single skill set. Build your app and it will run on the most popular platforms, while getting all the native advantages that each platform has to offer.
+
+* [@original_ejl](https://twitter.com/original_ejl)
+* pInvoke into native
+* [Eilon/CatTrackerDemo](https://github.com/Eilon/CatTrackerDemo)
+* [Unified Blazor UI in the Mobile Blazor Bindings Preview 5 | ASP.NET Blog](https://devblogs.microsoft.com/aspnet/unified-ui-mobile-blazor-bindings-preview-5/)
+* [xamarin/MobileBlazorBindings](https://github.com/xamarin/MobileBlazorBindings)
 
 ## 82 Build Real Embedded IoT with C# using Meadow  -  Adrian Stevens  
 16:00 (PT) | 00:00 (UTC) | 01:00 (Local)
 
-Use the Meadow IoT platform to build enterprise-grade hardware solutions that run full .NET on embeddable microcontrollers. We'll deploy C# apps to real hardware with Visual Studio. Learn how to control hardware using software patterns and techniques you already use for cloud, desktop and mobile!
+Use the `Meadow IoT platform` to build enterprise-grade hardware solutions that run full .NET on embeddable microcontrollers. We'll deploy C# apps to real hardware with Visual Studio. Learn how to control hardware using software patterns and techniques you already use for cloud, desktop and mobile!
+
+* [@adrian_stevens](https://twitter.com/adrian_stevens)
+* [adrianstevens - Overview](https://github.com/adrianstevens)
+* [Home page](https://www.wildernesslabs.co/)
+* [Wilderness Labs Developer Portal](http://developer.wildernesslabs.co/)
+* [Meadow.Foundation API Reference Documentation | Meadow.Foundation API website](http://developer.wildernesslabs.co/docs/api/Meadow.Foundation/)
+* [WildernessLabs/Clima](https://github.com/WildernessLabs/Clima)
+* [Meadow F7 Micro Development kit w/Hack Kit Pro.](https://store.wildernesslabs.co/collections/frontpage/products/meadow-f7-micro-development-board-w-hack-kit-pro)
+* [Hackster.io - The community dedicated to learning hardware.](https://www.hackster.io/WildernessLabs)
 
 ## 83 Lessons Learned from Building the YARP Proxy on .NET  -  Sam Spencer  
 16:30 (PT) | 00:30 (UTC) | 01:30 (Local)
 
 YARP is an open source reverse proxy being built on top of .NET, to provide an extensible proxy for use by 1P and 3P customers. Its being built on top of .NET and we have used it as forcing function to ensure that the platform has sufficient infrastructure and has been the driver for a number of improvements to ASP.NET and System.Net.Http libraries. We’ll walk through YARP and some of the lessons we learned building it.
 
+* [@samsp](https://twitter.com/samsp)
 * [YARP Documentation](https://microsoft.github.io/reverse-proxy/)
 * [Getting Started with YARP](https://microsoft.github.io/reverse-proxy/articles/getting_started.html)
 * [microsoft/reverse-proxy](https://github.com/microsoft/reverse-proxy)
+* route
+* load-balance
+* handle some part self
+* terminate ssl
+* http/2 e.g. for gRPC
+* async callbacks
+* Alternatives
+    * [HAProxy](https://www.haproxy.org/)
+    * NginX
 
 --- 
 # Takeaways
@@ -727,7 +774,7 @@ YARP is an open source reverse proxy being built on top of .NET, to provide an e
 * CI/CD:
     * 47 `DevOps Starter` using `Github Actions` or `ADO` as CI/CD
     * 25, 59 `github actions`
-    * 48 Deploy to NAS via ADO
+    * 48 Deploy to NAS via ADO (+ IoT)
     * 59 `Cake` - Cs build
 * Debug
     * 29 `dotnet-trace`
@@ -739,6 +786,9 @@ YARP is an open source reverse proxy being built on top of .NET, to provide an e
     * 20 Remote dev in `github codespaces`
     * 52 EF reverse eng with `EF core Power Tools`
     * 58 `Blazor` and `GraphQl`
+* IoT: 
+    * 48 Raspberry Pi
+    * 82 Meadow
 
 
 The End
