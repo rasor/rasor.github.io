@@ -11,12 +11,21 @@ Tags: #blockchain
         * [SLP116 Taylor Helsper - Easy Bitcoin Nodes with myNode](https://www.youtube.com/watch?v=NEj1WwGaH8g&feature=youtu.be)
     * [HW](https://mynodebtc.com/download):
         * [Raspberry Pi 4B Device](https://www.amazon.com/gp/product/B07XTN5YRN/ref=as_li_tl)
+        * [Raspberry Pi 400](https://dk.rs-online.com/web/p/raspberry-pi/2048263/)
         * Aluminum Case - included above
         * Power Cord - included above
+            * [rs-online](https://dk.rs-online.com/web/p/raspberry-pi-stromforsyninger/1873417/)
         * Ethernet Cable
-        * [16 GB SD Card](https://www.amazon.com/gp/product/B073JWXGNT/ref=as_li_tl)
-        * 1 TB [SSD](https://www.amazon.com/SanDisk-SSD-PLUS-Internal-SDSSDA-1T00-G26/dp/B07D998212/ref=as_li_ss_tl) / [HDD](https://www.amazon.com/Sabrent-Tool-free-Enclosure-Optimized-EC-UASP/dp/B00OJ3UJ2S/ref=as_li_ss_tl)
+        * Boot/internal drive:
+            * [16 GB SD Card](https://www.amazon.com/gp/product/B073JWXGNT/ref=as_li_tl)
+                * HowTo use 256GB SD card: [What Micro SD Card is Best for a Raspberry Pi 4? | Raspberry Pi](https://maker.pro/raspberry-pi/tutorial/what-micro-sd-card-is-best-for-a-raspberry-pi-4)
+                * [Raspberry Pi NOOBS Setup](https://www.raspberrypi.org/help/noobs-setup./)
+        * External drive:
+            * 1 TB [SSD](https://www.amazon.com/SanDisk-SSD-PLUS-Internal-SDSSDA-1T00-G26/dp/B07D998212/ref=as_li_ss_tl) / [HDD](https://www.amazon.com/Sabrent-Tool-free-Enclosure-Optimized-EC-UASP/dp/B00OJ3UJ2S/ref=as_li_ss_tl)
         * [micro hdmi to hdmi - Google](https://www.google.com/search?q=micro+hdmi+to+hdmi)
+        * [Buy a Raspberry Pi 400 Personal Computer Kit – Raspberry Pi](https://www.raspberrypi.org/products/raspberry-pi-400/?resellerType=home&variant=raspberry-pi-400-us-kit)
+            * [rs-online](https://dk.rs-online.com/web/p/products/2048269/)
+            * [Officiel Raspberry Pi 400 Kit - EU • RaspberryPi.dk](https://raspberrypi.dk/produkt/raspberry-pi-400-kit/)
 * [Build Your Own Casa Node](https://blog.keys.casa/build-your-own-casa-node/)
     * [Why You Should Run a Casa Node](https://blog.keys.casa/why-you-should-run-a-casa-node/)
     * [Casa Node - Casa Blog](https://blog.keys.casa/tag/casa-node/)
