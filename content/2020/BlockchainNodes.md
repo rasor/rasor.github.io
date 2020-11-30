@@ -20,6 +20,7 @@ Tags: #blockchain
             * [16 GB SD Card](https://www.amazon.com/gp/product/B073JWXGNT/ref=as_li_tl)
                 * HowTo use 256GB SD card: [What Micro SD Card is Best for a Raspberry Pi 4? | Raspberry Pi](https://maker.pro/raspberry-pi/tutorial/what-micro-sd-card-is-best-for-a-raspberry-pi-4)
                 * [Raspberry Pi NOOBS Setup](https://www.raspberrypi.org/help/noobs-setup./)
+                * [Upgrade your Raspberry Pi 4 with a NVMe boot drive](https://alexellisuk.medium.com/upgrade-your-raspberry-pi-4-with-a-nvme-boot-drive-d9ab4e8aa3c2)
         * External drive:
             * 1 TB [SSD](https://www.amazon.com/SanDisk-SSD-PLUS-Internal-SDSSDA-1T00-G26/dp/B07D998212/ref=as_li_ss_tl) / [HDD](https://www.amazon.com/Sabrent-Tool-free-Enclosure-Optimized-EC-UASP/dp/B00OJ3UJ2S/ref=as_li_ss_tl)
         * [micro hdmi to hdmi - Google](https://www.google.com/search?q=micro+hdmi+to+hdmi)
