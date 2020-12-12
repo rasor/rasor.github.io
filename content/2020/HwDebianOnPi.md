@@ -1,11 +1,16 @@
 Title: Install "Raspberry Pi OS with desktop" on Pi 400
 Date: 2099-01-01 00:00
 Category: DevOps
-Tags: #linux, #os, #debian
+Tags: #linux, #os, #debian, #pi, #pi400
 
 # Intro
 
-I wanted to use a [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400) as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.
+I wanted to use a [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400) as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  
+
+Info: 
+
+* A Pi 400 is almost a Pi 4B with keyboard included and fixed 4GB RAM
+* A Pi 4B typical bare-board active current consumption is just [600mA](https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md)
 
 ## HW
 
@@ -51,12 +56,24 @@ _(Image on ostoday.org)_
 
 # Installation
 
+
 ## OS
 
-
+The OS installation steps I follow are mostly part of these articles: 
+* [Raspberry Pi NOOBS Setup](https://www.raspberrypi.org/help/noobs-setup./)
+* [NOOBS - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/installation/noobs.md)
 
 Steps:
 
-* Down
- 
+* Download OS
+
+
+* [Wireless connectivity - Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/configuration/wireless/)
+
+# Links
+
+* [Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
+* [Pi Apps](https://www.raspberrypi.org/documentation/usage/)
+* Get help: [Raspberry Pi Forums](https://www.raspberrypi.org/forums/)
+
 The End
