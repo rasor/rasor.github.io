@@ -1,5 +1,7 @@
 Title: Install "Raspberry Pi OS with desktop" on Pi 400
-Date: 2099-01-01 00:00
+Status: published
+Date: 2020-12-14 00:00
+Modified: 2020-12-20 00:00
 Category: DevOps
 Tags: #linux, #os, #debian, #pi, #pi400
 
@@ -7,7 +9,7 @@ Tags: #linux, #os, #debian, #pi, #pi400
 
 I wanted to use a [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400) as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  
 
-This blog is about setting up the Pi and prepares its SD Card from Windows.  
+This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  
 
 Info: 
 
@@ -82,89 +84,89 @@ Steps:
     * Extract the setup from the zip
     * Install `SD Card Formatter 5.0.1 Setup.exe`
     * Insert the empty micro SD Card into SD Card adapter and insert it into PC SD Card slot
-    * Start `SD Card Formatter`
-    ![SD Card Formatter](img/2020/2020-12-13-Pi01.JPG)  
+    * Start `SD Card Formatter`  
+    ![SD Card Formatter](img/2020/2020-12-13-Pi01.PNG)  
     * Press Format
 * Burn OS to SD card:
     * Download [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
     * Install the Imager by running `imager_1.4.exe`
     * Run the Imager
-    * Select OS `Raspberry Pi OS with desktop`
-    ![OS selected](img/2020/2020-12-13-Pi02.JPG)  
-    * Select SD card
-    ![Card selected](img/2020/2020-12-13-Pi03.JPG)  
+    * Select OS `Raspberry Pi OS with desktop`  
+    ![OS selected](img/2020/2020-12-13-Pi02.PNG)  
+    * Select SD card  
+    ![Card selected](img/2020/2020-12-13-Pi03.PNG)  
     * Press `Write`
     * This burn these files on the card:  
-    ![OS Files](img/2020/2020-12-13-Pi04.JPG)  
+    ![OS Files](img/2020/2020-12-13-Pi04.PNG)  
     * In the config.txt there are settings you can modify:  
-    ```ini
-    # For more options and information see
-    # http://rpf.io/configtxt
-    # Some settings may impact device functionality. See link above for details
+```ini
+# For more options and information see
+# http://rpf.io/configtxt
+# Some settings may impact device functionality. See link above for details
 
-    # uncomment if you get no picture on HDMI for a default "safe" mode
-    #hdmi_safe=1
+# uncomment if you get no picture on HDMI for a default "safe" mode
+#hdmi_safe=1
 
-    # uncomment this if your display has a black border of unused pixels visible
-    # and your display can output without overscan
-    #disable_overscan=1
+# uncomment this if your display has a black border of unused pixels visible
+# and your display can output without overscan
+#disable_overscan=1
 
-    # uncomment the following to adjust overscan. Use positive numbers if console
-    # goes off screen, and negative if there is too much border
-    #overscan_left=16
-    #overscan_right=16
-    #overscan_top=16
-    #overscan_bottom=16
+# uncomment the following to adjust overscan. Use positive numbers if console
+# goes off screen, and negative if there is too much border
+#overscan_left=16
+#overscan_right=16
+#overscan_top=16
+#overscan_bottom=16
 
-    # uncomment to force a console size. By default it will be display's size minus
-    # overscan.
-    #framebuffer_width=1280
-    #framebuffer_height=720
+# uncomment to force a console size. By default it will be display's size minus
+# overscan.
+#framebuffer_width=1280
+#framebuffer_height=720
 
-    # uncomment if hdmi display is not detected and composite is being output
-    #hdmi_force_hotplug=1
+# uncomment if hdmi display is not detected and composite is being output
+#hdmi_force_hotplug=1
 
-    # uncomment to force a specific HDMI mode (this will force VGA)
-    #hdmi_group=1
-    #hdmi_mode=1
+# uncomment to force a specific HDMI mode (this will force VGA)
+#hdmi_group=1
+#hdmi_mode=1
 
-    # uncomment to force a HDMI mode rather than DVI. This can make audio work in
-    # DMT (computer monitor) modes
-    #hdmi_drive=2
+# uncomment to force a HDMI mode rather than DVI. This can make audio work in
+# DMT (computer monitor) modes
+#hdmi_drive=2
 
-    # uncomment to increase signal to HDMI, if you have interference, blanking, or
-    # no display
-    #config_hdmi_boost=4
+# uncomment to increase signal to HDMI, if you have interference, blanking, or
+# no display
+#config_hdmi_boost=4
 
-    # uncomment for composite PAL
-    #sdtv_mode=2
+# uncomment for composite PAL
+#sdtv_mode=2
 
-    #uncomment to overclock the arm. 700 MHz is the default.
-    #arm_freq=800
+#uncomment to overclock the arm. 700 MHz is the default.
+#arm_freq=800
 
-    # Uncomment some or all of these to enable the optional hardware interfaces
-    #dtparam=i2c_arm=on
-    #dtparam=i2s=on
-    #dtparam=spi=on
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+#dtparam=spi=on
 
-    # Uncomment this to enable infrared communication.
-    #dtoverlay=gpio-ir,gpio_pin=17
-    #dtoverlay=gpio-ir-tx,gpio_pin=18
+# Uncomment this to enable infrared communication.
+#dtoverlay=gpio-ir,gpio_pin=17
+#dtoverlay=gpio-ir-tx,gpio_pin=18
 
-    # Additional overlays and parameters are documented /boot/overlays/README
+# Additional overlays and parameters are documented /boot/overlays/README
 
-    # Enable audio (loads snd_bcm2835)
-    dtparam=audio=on
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
 
-    [pi4]
-    # Enable DRM VC4 V3D driver on top of the dispmanx display stack
-    dtoverlay=vc4-fkms-v3d
-    max_framebuffers=2
+[pi4]
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
 
-    [all]
-    #dtoverlay=vc4-fkms-v3d
-    ```
-* Boot:
+[all]
+#dtoverlay=vc4-fkms-v3d
+```
+* Boot the Pi:
     * The card is auto dismounted by the app, so you can just take it out of the slot and put it into your Pi
     * Plug in `SD Card`, `Monitor` and `Mouse`
     * Plug in `Power`
