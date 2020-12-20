@@ -29,21 +29,22 @@
 
 <meta name="author" content="rasor" />
 <meta name="description" content="This blog is part of a serie: Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL Part 0.2: Install k8s using kind on Windows - including arkade Part 1.1: Run docker containers Part 1.2: Develop .NET docker images (this blog) Part 1.3: Run containers …" />
-<meta name="keywords" content="#docker, #csharp">
+<meta name="keywords" content="#docker, #csharp, #netcore">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="Develop .NET docker images - Part 1.2"/>
 <meta property="og:description" content="This blog is part of a serie: Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL Part 0.2: Install k8s using kind on Windows - including arkade Part 1.1: Run docker containers Part 1.2: Develop .NET docker images (this blog) Part 1.3: Run containers …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"/>
+<meta property="og:url" content="https://rasor.github.io/develop-net-docker-images-part-12.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2020-10-25 00:00:00+02:00"/>
-<meta property="article:modified_time" content="2020-11-09 15:00:00+01:00"/>
+<meta property="article:modified_time" content="2020-12-20 00:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#docker"/>
 <meta property="article:tag" content="#csharp"/>
+<meta property="article:tag" content="#netcore"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; Develop .NET docker images - Part 1.2</title>
@@ -131,7 +132,7 @@
           Posted on October 25, 2020 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
       </br>
-        Updated: November 09, 2020
+        Updated: December 20, 2020
     </p>
   </header>
 
@@ -142,7 +143,7 @@
 <li><a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html">Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL</a></li>
 <li><a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html">Part 0.2: Install k8s using kind on Windows - including arkade</a></li>
 <li><a href="https://rasor.github.io/run-docker-containers-part-11.html">Part 1.1: Run docker containers</a></li>
-<li><a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html">Part 1.2: Develop .NET docker images</a> (this blog)</li>
+<li><a href="https://rasor.github.io/develop-net-docker-images-part-12.html">Part 1.2: Develop .NET docker images</a> (this blog)</li>
 <li>Part 1.3: Run containers in k8s</li>
 <li>Part 2: Deploy containers to Civo</li>
 </ul>
@@ -150,12 +151,16 @@
 <p>This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  </p>
 <p>This blog is inspired by content from an eBook and some tutorials.<br>
 You find its code in this git repo: <a href="https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes">rasor/eBook-UsingNETCoreDockerKubernetes</a>.  </p>
-<p>Main Sources are:
-* Free eBook (2019): <a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly">Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly</a>
-  * By <a href="https://twitter.com/apomic80">@apomic80</a>      <br>
-    * Github: <a href="https://github.com/apomic80">apomic80</a>
-* Guide: <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow">Inner-loop development workflow for Docker apps</a>
-  * from free eBook (2020): <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/">Containerized Docker Application Lifecycle with Microsoft Platform and Tools</a> from Microsoft</p>
+<p>Main Sources are:</p>
+<ul>
+<li>Free eBook (2019): <a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly">Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly</a></li>
+<li>By <a href="https://twitter.com/apomic80">@apomic80</a>        <ul>
+<li>Github: <a href="https://github.com/apomic80">apomic80</a></li>
+</ul>
+</li>
+<li>Guide: <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow">Inner-loop development workflow for Docker apps</a></li>
+<li>from free eBook (2020): <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/">Containerized Docker Application Lifecycle with Microsoft Platform and Tools</a> from Microsoft</li>
+</ul>
 <h1>PreRequisites</h1>
 <ul>
 <li>Windows 10</li>
@@ -210,10 +215,14 @@ start https://localhost:5001/
 
 
 <p>Stop the webserver in Teminal 1 with ctrl-c.  </p>
-<p>Now create <code>.vscode</code> files <code>launch.json</code> and <code>tasks.json</code>:<br>
-* Ctrl-shft-p # to open cmd palette
-* <code>.NET: Generate Assets for Build and Debug</code>
-    * Choose <code>ASPNET Core</code>, <code>linux</code> container and ports <code>5000, 5001</code></p>
+<p>Now create <code>.vscode</code> files <code>launch.json</code> and <code>tasks.json</code>:  </p>
+<ul>
+<li>Ctrl-shft-p # to open cmd palette</li>
+<li><code>.NET: Generate Assets for Build and Debug</code><ul>
+<li>Choose <code>ASPNET Core</code>, <code>linux</code> container and ports <code>5000, 5001</code></li>
+</ul>
+</li>
+</ul>
 <p>You can now goto <strong>RUN</strong> pane with <code>ctrl-shft-d</code>, select the <code>.NET Core Launch (web)</code> config and press run.  <br>
 In the Debug console you will see</p>
 <div class="highlight"><pre><span></span><span class="c1"># Debug console</span>
@@ -224,13 +233,17 @@ In the Debug console you will see</p>
 
 
 <p>You can hit breakpoints.  </p>
-<p>Now create a <code>Dockerfile</code>, <code>.dockerignore</code> and <code>docker-compose.yml</code>:<br>
-* In explorer put cursor on cpt2\frontend
-* Ctrl-shft-p # to open cmd palette
-* <code>Docker: Add Docker files to workspace</code>
-    * Choose <code>ASPNET Core</code>, <code>linux</code> container and ports <code>5000, 5001</code>, <code>yes</code> to create compose file
-    <img alt="Add Dockerfile" src="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png"><br>
-<em>(Img from Microsoft) Add Dockerfile in VSCode</em></p>
+<p>Now create a <code>Dockerfile</code>, <code>.dockerignore</code> and <code>docker-compose.yml</code>:  </p>
+<ul>
+<li>In explorer put cursor on cpt2\frontend</li>
+<li>Ctrl-shft-p # to open cmd palette</li>
+<li><code>Docker: Add Docker files to workspace</code><ul>
+<li>Choose <code>ASPNET Core</code>, <code>linux</code> container and ports <code>5000, 5001</code>, <code>yes</code> to create compose file
+<img alt="Add Dockerfile" src="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png"><br>
+<em>(Img from Microsoft) Add Dockerfile in VSCode</em></li>
+</ul>
+</li>
+</ul>
 <div class="highlight"><pre><span></span><span class="c"># Generated Dockerfile</span>
 <span class="c"># 1. Target img to deploy to</span>
 <span class="k">FROM</span> <span class="s">mcr.microsoft.com/dotnet/core/aspnet:3.1</span> <span class="k">AS</span> <span class="s">base</span>
@@ -680,6 +693,7 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
     <p>
       <a href="https://rasor.github.io/tag/docker.html">#docker</a>
       <a href="https://rasor.github.io/tag/csharp.html">#csharp</a>
+      <a href="https://rasor.github.io/tag/netcore.html">#netcore</a>
     </p>
   </div>
 

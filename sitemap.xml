@@ -5,41 +5,48 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2020-12-20T16:02:14-00:00</lastmod>
+<lastmod>2020-12-20T16:40:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2020-12-20T16:02:14-00:00</lastmod>
+<lastmod>2020-12-20T16:40:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2020-12-20T16:02:14-00:00</lastmod>
+<lastmod>2020-12-20T16:40:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2020-12-20T16:02:14-00:00</lastmod>
+<lastmod>2020-12-20T16:40:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2020-12-20T16:02:14-00:00</lastmod>
+<lastmod>2020-12-20T16:40:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html</loc>
+<lastmod>2020-12-20T16:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/develop-net-docker-images-part-12.html</loc>
 <lastmod>2020-12-20T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
@@ -264,14 +271,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2020-10-18T10:00:00+00:50</lastmod>
+<lastmod>2020-12-20T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/category/devops.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -285,42 +292,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/linux.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/os.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/debian.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/pi.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/pi400.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/docker.html</loc>
-<lastmod>2020-11-09T14:00:00+00:50</lastmod>
+<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/csharp.html</loc>
+<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/netcore.html</loc>
+<lastmod>2020-12-20T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1048,7 +1069,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T16:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

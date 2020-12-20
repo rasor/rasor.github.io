@@ -1,11 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-12-20T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
-&lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  &lt;/p&gt;
-&lt;p&gt;This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  &lt;/p&gt;
-&lt;p&gt;Info: &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-12-20T16:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T16:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.&lt;br&gt;
+The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;A Pi 400 is almost a Pi …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;Intro&lt;/h1&gt;
-&lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  &lt;/p&gt;
+&lt;li&gt;including &lt;ul&gt;
+&lt;li&gt;shipping&lt;/li&gt;
+&lt;li&gt;128 GB SD Card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;excluding&lt;ul&gt;
+&lt;li&gt;mouse&lt;/li&gt;
+&lt;li&gt;monitor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This blog is about setting up the Pi and …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.&lt;br&gt;
+The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;including &lt;ul&gt;
+&lt;li&gt;shipping&lt;/li&gt;
+&lt;li&gt;128 GB SD Card&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;excluding&lt;ul&gt;
+&lt;li&gt;mouse&lt;/li&gt;
+&lt;li&gt;monitor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  &lt;/p&gt;
 &lt;p&gt;Info: &lt;/p&gt;
 &lt;ul&gt;
@@ -194,18 +217,573 @@ It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/configuration/wireless/"&gt;Wireless connectivity - Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Get help: &lt;a href="https://www.raspberrypi.org/forums/"&gt;Raspberry Pi Forums&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>Develop .NET docker images - Part 1.2</title><link href="https://rasor.github.io/develop-net-docker-images-part-12.html" rel="alternate"></link><published>2020-10-25T00:00:00+02:00</published><updated>2020-12-20T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-25:/develop-net-docker-images-part-12.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;Part 1.3: Run containers …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;Part 1.3: Run containers in k8s&lt;/li&gt;
+&lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  &lt;/p&gt;
+&lt;p&gt;This blog is inspired by content from an eBook and some tutorials.&lt;br&gt;
+You find its code in this git repo: &lt;a href="https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes"&gt;rasor/eBook-UsingNETCoreDockerKubernetes&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;Main Sources are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free eBook (2019): &lt;a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly"&gt;Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;By &lt;a href="https://twitter.com/apomic80"&gt;@apomic80&lt;/a&gt;        &lt;ul&gt;
+&lt;li&gt;Github: &lt;a href="https://github.com/apomic80"&gt;apomic80&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Guide: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow"&gt;Inner-loop development workflow for Docker apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;from free eBook (2020): &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/"&gt;Containerized Docker Application Lifecycle with Microsoft Platform and Tools&lt;/a&gt; from Microsoft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;PreRequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dotnet.microsoft.com/download"&gt;.NET Core 3.1 SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitforwindows.org/"&gt;Git Bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/download"&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp"&gt;C# for VSCode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/docker-for-windows/"&gt;Docker Desktop for Windows user manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;k8s&lt;/code&gt; (I am using &lt;code&gt;kind&lt;/code&gt; for &lt;a href="K8sArkade.md"&gt;creating cluster&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://chocolatey.org/install"&gt;choco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://stedolan.github.io/jq/download/"&gt;jq&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://helm.sh/"&gt;helm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;choco install kubernetes-helm&lt;/code&gt; or &lt;code&gt;arkade get helm&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://github.com/Azure/draft/blob/master/docs/quickstart.md"&gt;draft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Chapters from eBook &lt;strong&gt;Using .NET Core, Docker, and Kubernetes&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;Chapter 1 ASP.NET and Docker Together&lt;/h2&gt;
+&lt;h3&gt;Chapter 1.1 Execute .NET Core application with Docker&lt;/h3&gt;
+&lt;p&gt;See &lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Chapter 2 Create Your Application with Docker&lt;/h2&gt;
+&lt;h3&gt;Chapter 2.1 Develop your ASP.NET Core application using Docker&lt;/h3&gt;
+&lt;p&gt;Dotnet core commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dotnet new: Creates a new project from the specified template. If you want to create an MVC application, you can use dotnet new mvc.&lt;/li&gt;
+&lt;li&gt;dotnet restore: Restores all the NuGet dependencies of our application.&lt;/li&gt;
+&lt;li&gt;dotnet build: Builds our project.&lt;/li&gt;
+&lt;li&gt;dotnet run: Executes our project.&lt;/li&gt;
+&lt;li&gt;dotnet watch run: Runs our project and watches for file changes to rebuild and re-run it.&lt;/li&gt;
+&lt;li&gt;dotnet publish: Creates a deployable build (the .dll) of our project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Install VSCode plugin &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"&gt;Docker&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 1:&lt;/span&gt;
+&lt;span class="c1"&gt;# Create a C# gitignore file in the root&lt;/span&gt;
+dotnet new gitignore
+
+&lt;span class="c1"&gt;# create a folder for MVC frontend&lt;/span&gt;
+mkdir -p cpt2/frontend
+&lt;span class="nb"&gt;cd&lt;/span&gt; cpt2/frontend
+&lt;span class="c1"&gt;# Create mvc web&lt;/span&gt;
+dotnet new mvc
+
+&lt;span class="c1"&gt;# Build an run a webserver&lt;/span&gt;
+dotnet build
+dotnet run
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 2:&lt;/span&gt;
+&lt;span class="c1"&gt;# open a browser&lt;/span&gt;
+start https://localhost:5001/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Stop the webserver in Teminal 1 with ctrl-c.  &lt;/p&gt;
+&lt;p&gt;Now create &lt;code&gt;.vscode&lt;/code&gt; files &lt;code&gt;launch.json&lt;/code&gt; and &lt;code&gt;tasks.json&lt;/code&gt;:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ctrl-shft-p # to open cmd palette&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.NET: Generate Assets for Build and Debug&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Choose &lt;code&gt;ASPNET Core&lt;/code&gt;, &lt;code&gt;linux&lt;/code&gt; container and ports &lt;code&gt;5000, 5001&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can now goto &lt;strong&gt;RUN&lt;/strong&gt; pane with &lt;code&gt;ctrl-shft-d&lt;/code&gt;, select the &lt;code&gt;.NET Core Launch (web)&lt;/code&gt; config and press run.  &lt;br&gt;
+In the Debug console you will see&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Debug console&lt;/span&gt;
+&lt;span class="c1"&gt;# Using launch settings from &amp;#39;C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend\Properties\launchSettings.json&amp;#39; [Profile &amp;#39;frontend&amp;#39;]...&lt;/span&gt;
+&lt;span class="c1"&gt;# Loaded &amp;#39;C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes\cpt2\frontend\bin\Debug\netcoreapp3.1\frontend.dll&amp;#39;. Symbols loaded.&lt;/span&gt;
+&lt;span class="c1"&gt;# .....&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can hit breakpoints.  &lt;/p&gt;
+&lt;p&gt;Now create a &lt;code&gt;Dockerfile&lt;/code&gt;, &lt;code&gt;.dockerignore&lt;/code&gt; and &lt;code&gt;docker-compose.yml&lt;/code&gt;:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In explorer put cursor on cpt2\frontend&lt;/li&gt;
+&lt;li&gt;Ctrl-shft-p # to open cmd palette&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Docker: Add Docker files to workspace&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Choose &lt;code&gt;ASPNET Core&lt;/code&gt;, &lt;code&gt;linux&lt;/code&gt; container and ports &lt;code&gt;5000, 5001&lt;/code&gt;, &lt;code&gt;yes&lt;/code&gt; to create compose file
+&lt;img alt="Add Dockerfile" src="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/media/docker-apps-inner-loop-workflow/add-docker-files-to-workspace-command.png"&gt;&lt;br&gt;
+&lt;em&gt;(Img from Microsoft) Add Dockerfile in VSCode&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# Generated Dockerfile&lt;/span&gt;
+&lt;span class="c"&gt;# 1. Target img to deploy to&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;mcr.microsoft.com/dotnet/core/aspnet:3.1&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="s"&gt;base&lt;/span&gt;
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /app&lt;/span&gt;
+&lt;span class="k"&gt;EXPOSE&lt;/span&gt;&lt;span class="s"&gt; 5000&lt;/span&gt;
+&lt;span class="k"&gt;EXPOSE&lt;/span&gt;&lt;span class="s"&gt; 5001&lt;/span&gt;
+
+&lt;span class="c"&gt;# 5. Source img to build on&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;mcr.microsoft.com/dotnet/core/sdk:3.1&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="s"&gt;build&lt;/span&gt;
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /src&lt;/span&gt;
+&lt;span class="c"&gt;# 7. Copy project file from local pc into Source img&lt;/span&gt;
+&lt;span class="k"&gt;COPY&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;cpt2/frontend/frontend.csproj&amp;quot;&lt;/span&gt;, &lt;span class="s2"&gt;&amp;quot;cpt2/frontend/&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;span class="k"&gt;RUN&lt;/span&gt; dotnet restore &lt;span class="s2"&gt;&amp;quot;cpt2/frontend/frontend.csproj&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;COPY&lt;/span&gt; . .
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; &amp;quot;/src/cpt2/frontend&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;# 11. Build .dll&lt;/span&gt;
+&lt;span class="k"&gt;RUN&lt;/span&gt; dotnet build &lt;span class="s2"&gt;&amp;quot;frontend.csproj&amp;quot;&lt;/span&gt; -c Release -o /app/build
+
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;build&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="s"&gt;publish&lt;/span&gt;
+&lt;span class="c"&gt;# 13. Create a deployable package&lt;/span&gt;
+&lt;span class="k"&gt;RUN&lt;/span&gt; dotnet publish &lt;span class="s2"&gt;&amp;quot;frontend.csproj&amp;quot;&lt;/span&gt; -c Release -o /app/publish
+
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="s"&gt;base&lt;/span&gt; &lt;span class="k"&gt;AS&lt;/span&gt; &lt;span class="s"&gt;final&lt;/span&gt;
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /app&lt;/span&gt;
+&lt;span class="c"&gt;# 16. Copy from Source img to Target img&lt;/span&gt;
+&lt;span class="k"&gt;COPY&lt;/span&gt; --from&lt;span class="o"&gt;=&lt;/span&gt;publish /app/publish .
+&lt;span class="c"&gt;# 17. Define start command&lt;/span&gt;
+&lt;span class="k"&gt;ENTRYPOINT&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;dotnet&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;frontend.dll&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Change cmd 7 to 10, so you'll be able to &lt;code&gt;docker build&lt;/code&gt; from inside folder &lt;code&gt;cpt2/frontend&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# 7. Copy project file from local pc into Source img&lt;/span&gt;
+&lt;span class="k"&gt;COPY&lt;/span&gt; ./frontend.csproj .
+&lt;span class="k"&gt;RUN&lt;/span&gt; dotnet restore frontend.csproj
+&lt;span class="k"&gt;COPY&lt;/span&gt; . .
+&lt;span class="k"&gt;WORKDIR&lt;/span&gt;&lt;span class="s"&gt; /src&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/engine/reference/builder/"&gt;Dockerfile reference&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Let's build our docker img&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# verify docker is running&lt;/span&gt;
+docker images
+&lt;span class="c1"&gt;# goto folder with Dockerfile&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; cpt2/frontend
+docker build --help
+&lt;span class="c1"&gt;# build img and tag it frontend2&lt;/span&gt;
+docker build -t frontend2 .
+
+&lt;span class="c1"&gt;# System.InvalidOperationException: Unable to configure HTTPS endpoint. No server certificate was specified, and the default developer certificate could not be found or is out of date.&lt;/span&gt;
+
+
+&lt;span class="c1"&gt;# Sending build context to Docker daemon  6.432MB&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 1/17 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base&lt;/span&gt;
+&lt;span class="c1"&gt;# 3.1: Pulling from dotnet/core/aspnet&lt;/span&gt;
+&lt;span class="c1"&gt;# bb79b6b2107f: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# fd6f53cfcb35: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 29b35ed07a14: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# fd068c4127c7: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# dc51486f316e: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# Digest: sha256:4030ec40f9b5c1e8cac5d550639b7b05d1d6af0c89b4b47d66bad7f93379c9eb&lt;/span&gt;
+&lt;span class="c1"&gt;# Status: Downloaded newer image for mcr.microsoft.com/dotnet/core/aspnet:3.1&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; e3559b2d50bb&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 2/17 : WORKDIR /app&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 14fd02991c3d&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 14fd02991c3d&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; df46b5f3b46a&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 3/17 : EXPOSE 5000&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 5adf5a71198d&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 5adf5a71198d&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 817df2c51839&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 4/17 : EXPOSE 5001&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 1815541a6c6a&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 1815541a6c6a&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 02891abd8059&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 5/17 : FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build&lt;/span&gt;
+&lt;span class="c1"&gt;# 3.1: Pulling from dotnet/core/sdk&lt;/span&gt;
+&lt;span class="c1"&gt;# e4c3d3e4f7b0: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 101c41d0463b: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 8275efcd805f: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 751620502a7a: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 8e306865fd07: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 9d2f53e752c2: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# 143a93e01eba: Pull complete&lt;/span&gt;
+&lt;span class="c1"&gt;# Digest: sha256:d09eefeaad2129f0a0ac047095792afc6792e7aae4b8bb1c1fa5b6650caae240&lt;/span&gt;
+&lt;span class="c1"&gt;# Status: Downloaded newer image for mcr.microsoft.com/dotnet/core/sdk:3.1&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 5fe503d51830&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 6/17 : WORKDIR /src&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 143a136929b6&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 143a136929b6&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 0e5a8185b7a2&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 7/17 : COPY ./frontend.csproj .&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 203c96e3d357&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 8/17 : RUN dotnet restore frontend.csproj&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in cd917bface5b&lt;/span&gt;
+&lt;span class="c1"&gt;#   Determining projects to restore...&lt;/span&gt;
+&lt;span class="c1"&gt;#   Restored /src/frontend.csproj (in 170 ms).&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container cd917bface5b&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 866543516985&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 9/17 : COPY . .&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 6ac6636b092c&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 10/17 : WORKDIR /src&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 40c27a3098f1&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 40c27a3098f1&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; d3f07b018611&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 11/17 : RUN dotnet build &amp;quot;frontend.csproj&amp;quot; -c Release -o /app/build&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 56cc1964bf83&lt;/span&gt;
+&lt;span class="c1"&gt;# Microsoft (R) Build Engine version 16.7.0+7fb82e5b2 for .NET&lt;/span&gt;
+&lt;span class="c1"&gt;# Copyright (C) Microsoft Corporation. All rights reserved.&lt;/span&gt;
+&lt;span class="c1"&gt;#   Determining projects to restore...&lt;/span&gt;
+&lt;span class="c1"&gt;#   Restored /src/frontend.csproj (in 185 ms).&lt;/span&gt;
+&lt;span class="c1"&gt;#   frontend -&amp;gt; /app/build/frontend.dll&lt;/span&gt;
+&lt;span class="c1"&gt;#   frontend -&amp;gt; /app/build/frontend.Views.dll&lt;/span&gt;
+&lt;span class="c1"&gt;# Build succeeded.&lt;/span&gt;
+&lt;span class="c1"&gt;#     0 Warning(s)&lt;/span&gt;
+&lt;span class="c1"&gt;#     0 Error(s)&lt;/span&gt;
+&lt;span class="c1"&gt;# Time Elapsed 00:00:05.03&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 56cc1964bf83&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 7ccf08805a5b&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 12/17 : FROM build AS publish&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 7ccf08805a5b&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 13/17 : RUN dotnet publish &amp;quot;frontend.csproj&amp;quot; -c Release -o /app/publish&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 27507652111d&lt;/span&gt;
+&lt;span class="c1"&gt;# Microsoft (R) Build Engine version 16.7.0+7fb82e5b2 for .NET&lt;/span&gt;
+&lt;span class="c1"&gt;# Copyright (C) Microsoft Corporation. All rights reserved.&lt;/span&gt;
+&lt;span class="c1"&gt;#   Determining projects to restore...&lt;/span&gt;
+&lt;span class="c1"&gt;#   All projects are up-to-date for restore.&lt;/span&gt;
+&lt;span class="c1"&gt;#   frontend -&amp;gt; /src/bin/Release/netcoreapp3.1/frontend.dll&lt;/span&gt;
+&lt;span class="c1"&gt;#   frontend -&amp;gt; /src/bin/Release/netcoreapp3.1/frontend.Views.dll&lt;/span&gt;
+&lt;span class="c1"&gt;#   frontend -&amp;gt; /app/publish/&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 27507652111d&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; c08c7122d789&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 14/17 : FROM base AS final&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 02891abd8059&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 15/17 : WORKDIR /app&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in b52e89be9e92&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container b52e89be9e92&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 97d3ac799145&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 16/17 : COPY --from=publish /app/publish .&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 2ac048ea1f90&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 17/17 : ENTRYPOINT [&amp;quot;dotnet&amp;quot;, &amp;quot;frontend.dll&amp;quot;]&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Running in 7359a524012b&lt;/span&gt;
+&lt;span class="c1"&gt;# Removing intermediate container 7359a524012b&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; f7828ef4f47e&lt;/span&gt;
+&lt;span class="c1"&gt;# Successfully built f7828ef4f47e&lt;/span&gt;
+&lt;span class="c1"&gt;# Successfully tagged frontend2:latest&lt;/span&gt;
+&lt;span class="c1"&gt;# SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have &lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;#39;-rwxr-xr-x&amp;#39; permissions. It is recommended to double check and reset permissions for sensitive files and directories.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Print image&lt;/span&gt;
+docker images
+&lt;span class="c1"&gt;# REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE  &lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2                              latest              f7828ef4f47e        5 minutes ago       212MB &lt;/span&gt;
+&lt;span class="c1"&gt;# mcr.microsoft.com/dotnet/core/aspnet   3.1                 e3559b2d50bb        7 days ago          207MB &lt;/span&gt;
+&lt;span class="c1"&gt;# mcr.microsoft.com/dotnet/core/sdk      3.1                 5fe503d51830        7 days ago          708MB &lt;/span&gt;
+
+&lt;span class="c1"&gt;# Test run the img&lt;/span&gt;
+docker run -p &lt;span class="m"&gt;5000&lt;/span&gt;:5000 --name nfrontend2 -t frontend2 -e &lt;span class="s2"&gt;&amp;quot;ASPNETCORE_URLS=http://+:5000&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;#docker run -p 5000:5000 -p 5001:5001 --name nfrontend2 -t frontend2&lt;/span&gt;
+&lt;span class="c1"&gt;#docker create -p 5000:5000 -p 5001:5001 --name nfrontend2 -t frontend2 --entrypoint &amp;#39;dotnet dev-certs https &amp;amp;&amp;amp; # warn: Microsoft.AspNetCore.DataProtection.Repositories.FileSystemXmlRepository[60]&lt;/span&gt;
+&lt;span class="c1"&gt;#       Storing keys in a directory &amp;#39;/root/.aspnet/DataProtection-Keys&amp;#39; that may not be persisted outside of the container. Protected data will be unavailable &lt;/span&gt;
+&lt;span class="c1"&gt;# when container is destroyed.&lt;/span&gt;
+&lt;span class="c1"&gt;#       No XML encryptor configured. Key {22010cbd-95fa-4543-9ae3-63ee61afff7f} may be persisted to storage in unencrypted form.&lt;/span&gt;
+&lt;span class="c1"&gt;#       Now listening on: http://[::]:80&lt;/span&gt;
+&lt;span class="c1"&gt;#       Application started. Press Ctrl+C to shut down.&lt;/span&gt;
+&lt;span class="c1"&gt;#       Hosting environment: Production&lt;/span&gt;
+&lt;span class="c1"&gt;#       Content root path: /app&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Terminal 2:&lt;/span&gt;
+docker start nfrontend2
+&lt;span class="c1"&gt;# Which containers are running?&lt;/span&gt;
+docker ps
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE               COMMAND                 CREATED             STATUS              PORTS                              NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# 6fc16e63dbd5        frontend2           &amp;quot;dotnet frontend.dll&amp;quot;   18 seconds ago      Up 17 seconds       0.0.0.0:5000-5001-&amp;gt;5000-5001/tcp   nfrontend2   &lt;/span&gt;
+
+&lt;span class="c1"&gt;# Print entry point&lt;/span&gt;
+docker ps -a --format &lt;span class="s2"&gt;&amp;quot;table {{.Image}}:\t {{.Command}}&amp;quot;&lt;/span&gt; --no-trunc
+&lt;span class="c1"&gt;# IMAGE:                   COMMAND&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2:               &amp;quot;dotnet frontend.dll…&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Print as json&lt;/span&gt;
+docker ps -a --format &lt;span class="s2"&gt;&amp;quot; {{json .}}&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; jq &lt;span class="s1"&gt;&amp;#39;{ID, Image, Command}&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Open browser&lt;/span&gt;
+start http://localhost:5000
+
+&lt;span class="c1"&gt;# Cleanup&lt;/span&gt;
+docker stop nfrontend2
+docker rm nfrontend2
+&lt;span class="c1"&gt;# Cleanup done?&lt;/span&gt;
+docker ps -a
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Chapter 2.1B (not in eBook) Debug your docker container&lt;/h3&gt;
+&lt;p&gt;To be able to debug on port 5000 you need to do a change in the launcsetting:&lt;/p&gt;
+&lt;p&gt;Before:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;// .vscode/tasks.json&lt;/span&gt;
+&lt;span class="err"&gt;            &amp;quot;label&amp;quot;: &amp;quot;docker-run: debug&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;            &amp;quot;dependsOn&amp;quot;: [&lt;/span&gt;
+&lt;span class="err"&gt;                &amp;quot;docker-build: debug&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;            ],&lt;/span&gt;
+&lt;span class="err"&gt;            &amp;quot;dockerRun&amp;quot;: {},&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;// .vscode/tasks.json&lt;/span&gt;
+&lt;span class="err"&gt;            &amp;quot;label&amp;quot;: &amp;quot;docker-run: debug&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;            &amp;quot;dependsOn&amp;quot;: [&lt;/span&gt;
+&lt;span class="err"&gt;                &amp;quot;docker-build: debug&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;            ],&lt;/span&gt;
+&lt;span class="err"&gt;            &amp;quot;dockerRun&amp;quot;: {&lt;/span&gt;
+&lt;span class="err"&gt;                &amp;quot;env&amp;quot;: {&lt;/span&gt;
+&lt;span class="err"&gt;                    &amp;quot;ASPNETCORE_URLS&amp;quot;: &amp;quot;https://+:5001;http://+:5000&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;                },&lt;/span&gt;
+&lt;span class="err"&gt;                &amp;quot;ports&amp;quot;: [&lt;/span&gt;
+&lt;span class="err"&gt;                    { &amp;quot;hostPort&amp;quot;: 5000, &amp;quot;containerPort&amp;quot;: 5000 },&lt;/span&gt;
+&lt;span class="err"&gt;                    { &amp;quot;hostPort&amp;quot;: 5001, &amp;quot;containerPort&amp;quot;: 5001 }&lt;/span&gt;
+&lt;span class="err"&gt;                ]&lt;/span&gt;
+&lt;span class="err"&gt;            },&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you goto &lt;strong&gt;RUN&lt;/strong&gt; pane and choose &lt;code&gt;Docker .NET Core Launch&lt;/code&gt; in the dropdown and then press the "Play" button then you can place breakpoints in your code and remote debug into your container. VSCode will show this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#&amp;gt; Executing task: docker-build: debug &amp;lt;&lt;/span&gt;
+
+docker build --rm --pull -f &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend/Dockerfile&amp;quot;&lt;/span&gt; --label &lt;span class="s2"&gt;&amp;quot;com.microsoft.created-by=visual-studio-code&amp;quot;&lt;/span&gt; -t &lt;span class="s2"&gt;&amp;quot;ebookusingnetcoredockerkubernetes:dev&amp;quot;&lt;/span&gt; --target &lt;span class="s2"&gt;&amp;quot;base&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Where&lt;/span&gt;
+&lt;span class="c1"&gt;# -f, --file string         Name of the Dockerfile (Default is &amp;#39;PATH/Dockerfile&amp;#39;)&lt;/span&gt;
+&lt;span class="c1"&gt;# --label list              Set metadata for an image&lt;/span&gt;
+&lt;span class="c1"&gt;# --pull                    Always attempt to pull a newer version of the image&lt;/span&gt;
+&lt;span class="c1"&gt;# --rm                      Remove intermediate containers after a successful build (default true)&lt;/span&gt;
+&lt;span class="c1"&gt;# -t, --tag list            Name and optionally a tag in the &amp;#39;name:tag&amp;#39; format&lt;/span&gt;
+&lt;span class="c1"&gt;# --target string           Set the target build stage to build.&lt;/span&gt;
+
+&lt;span class="c1"&gt;#&amp;gt; Executing task: docker-run: debug &amp;lt;&lt;/span&gt;
+
+docker run -dt -P --name &lt;span class="s2"&gt;&amp;quot;ebookusingnetcoredockerkubernetes-dev&amp;quot;&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;DOTNET_USE_POLLING_FILE_WATCHER=1&amp;quot;&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;ASPNETCORE_ENVIRONMENT=Development&amp;quot;&lt;/span&gt; -e &lt;span class="s2"&gt;&amp;quot;ASPNETCORE_URLS=https://+:5001;http://+:5000&amp;quot;&lt;/span&gt; --label &lt;span class="s2"&gt;&amp;quot;com.microsoft.created-by=visual-studio-code&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\eBook-UsingNETCoreDockerKubernetes/cpt2/frontend:/app:rw&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;c:\Users\zzz\eBook-UsingNETCoreDockerKubernetes:/src:rw&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\.vsdbg:/remote_debugger:ro&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\.nuget\packages:/root/.nuget/packages:ro&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;C:\Program Files\dotnet\sdk\NuGetFallbackFolder:/root/.nuget/fallbackpackages:ro&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro&amp;quot;&lt;/span&gt; -v &lt;span class="s2"&gt;&amp;quot;C:\Users\zzz\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro&amp;quot;&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;5000:5000&amp;quot;&lt;/span&gt; -p &lt;span class="s2"&gt;&amp;quot;5001:5001&amp;quot;&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;ebookusingnetcoredockerkubernetes:dev&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Where&lt;/span&gt;
+&lt;span class="c1"&gt;# -d, --detach                         Run container in background and print container ID&lt;/span&gt;
+&lt;span class="c1"&gt;# -t, --tty                            Allocate a pseudo-TTY&lt;/span&gt;
+&lt;span class="c1"&gt;# -l, --label list                     Set meta data on a container&lt;/span&gt;
+&lt;span class="c1"&gt;# -P, --publish-all                    Publish all exposed ports to random ports&lt;/span&gt;
+&lt;span class="c1"&gt;# -v, --volume list                    Bind mount a volume&lt;/span&gt;
+&lt;span class="c1"&gt;# Some from tasks.json:&lt;/span&gt;
+&lt;span class="c1"&gt;# -e, --env list                       Set environment variables&lt;/span&gt;
+&lt;span class="c1"&gt;# -p, --publish list                   Publish a container&amp;#39;s port(s) to the host&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Isn't that nice?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ref: &lt;a href="https://code.visualstudio.com/docs/containers/debug-common"&gt;Debug an app running in a Docker container&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Chapter 2.2 Add containers to your project&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;To Be Added&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;Chapter 2.3 Run your container with Docker Compose&lt;/h3&gt;
+&lt;p&gt;When you used Command Palette command &lt;code&gt;Docker: Add Docker files to workspace&lt;/code&gt; then you said yes to create compose files:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Generated docker-compose.debug.yml&lt;/span&gt;
+&lt;span class="c1"&gt;# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP .NET Core service.&lt;/span&gt;
+
+&lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;3.4&amp;#39;&lt;/span&gt;
+
+&lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;frontend&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend&lt;/span&gt;
+    &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;context&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;.&lt;/span&gt;
+      &lt;span class="nt"&gt;dockerfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cpt2/frontend/Dockerfile&lt;/span&gt;
+    &lt;span class="nt"&gt;ports&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;5000&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;5001&lt;/span&gt;
+    &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_ENVIRONMENT=Development&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_URLS=http://+:5000&lt;/span&gt;
+    &lt;span class="nt"&gt;volumes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;~/.vsdbg:/remote_debugger:rw&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Change frontend in both the .debug.yml and then non-debug yml to:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="nt"&gt;frontend&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend2&lt;/span&gt;
+    &lt;span class="c1"&gt;# Add this&lt;/span&gt;
+    &lt;span class="nt"&gt;container_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend2&lt;/span&gt; &lt;span class="c1"&gt;# then you can attach to this name&lt;/span&gt;
+    &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="nt"&gt;context&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./cpt2/frontend&lt;/span&gt;
+      &lt;span class="nt"&gt;dockerfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Dockerfile&lt;/span&gt;
+    &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="c1"&gt;# Add this to the non-debug&lt;/span&gt;
+      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_URLS=https://+:5001;http://+:5000&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So now we can start several containers at once (if more containeres were present in the compose file).&lt;br&gt;
+Compose will also create a docker network for the containers to communicate through.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ensure you find the root folder&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; cpt2/frontend
+&lt;span class="c1"&gt;# go back to root, where docker-compose.yml exists&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; ../..
+
+docker-compose up
+
+start http://localhost:5000
+
+&lt;span class="c1"&gt;# ctrl-c to stop the servers&lt;/span&gt;
+&lt;span class="c1"&gt;# or&lt;/span&gt;
+docker-compose stop
+&lt;span class="c1"&gt;# or&lt;/span&gt;
+docker-compose down &lt;span class="c1"&gt;# will also remove (docker-compose rm)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# check which containers exists&lt;/span&gt;
+docker ps -a
+
+&lt;span class="c1"&gt;# then restart # if not removed&lt;/span&gt;
+docker-compose start
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Refs: &lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/compose/reference/overview/"&gt;Overview of docker-compose CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Can we debug code running in a container by attiching our local code to it?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goto the &lt;strong&gt;RUN&lt;/strong&gt; pane&lt;/li&gt;
+&lt;li&gt;In the Run-dropdown - do &lt;code&gt;Àdd Confuguration&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Choose &lt;code&gt;Docker .NET Core Attach (Preview)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This will create most of this&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;//.vscode/launch.json&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Docker .NET Core Attach (Preview)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;docker&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;quot;request&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;attach&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;quot;containerName&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;frontend2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;netCore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;quot;sourceFileMap&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nt"&gt;&amp;quot;/src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;${workspaceFolder}&amp;quot;&lt;/span&gt;
+        &lt;span class="p"&gt;},&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Optionally add &lt;code&gt;containerName&lt;/code&gt; in or to auto attach to a specific running container.  &lt;/p&gt;
+&lt;p&gt;Now spin up the container&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# use debug compose file&lt;/span&gt;
+docker-compose -f docker-compose.debug.yml up
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;That will show in a docker terminal:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Docker terminal&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; Executing task: docker-compose -f &amp;quot;docker-compose.debug.yml&amp;quot; up -d --build &amp;lt;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Creating network &amp;quot;ebook-usingnetcoredockerkubernetes_default&amp;quot; with the default driver&lt;/span&gt;
+&lt;span class="c1"&gt;# Building frontend&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 1/17 : FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; e3559b2d50bb&lt;/span&gt;
+&lt;span class="c1"&gt;# ......&lt;/span&gt;
+&lt;span class="c1"&gt;# Step 17/17 : ENTRYPOINT [&amp;quot;dotnet&amp;quot;, &amp;quot;frontend.dll&amp;quot;]&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; Using cache&lt;/span&gt;
+&lt;span class="c1"&gt;#  ---&amp;gt; 6572076fad45&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Successfully built 6572076fad45&lt;/span&gt;
+&lt;span class="c1"&gt;# Successfully tagged frontend2:latest&lt;/span&gt;
+&lt;span class="c1"&gt;# Creating frontend2 ... done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now in the &lt;strong&gt;RUN&lt;/strong&gt; pane select the &lt;code&gt;Docker .NET Core Attach (Preview)&lt;/code&gt; config and press run.&lt;br&gt;
+In the Debug console you will see&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Debug console&lt;/span&gt;
+&lt;span class="c1"&gt;# Starting: &amp;quot;docker&amp;quot; exec -i frontend2 /remote_debugger/vsdbg --interpreter=vscode&lt;/span&gt;
+&lt;span class="c1"&gt;# .....&lt;/span&gt;
+&lt;span class="c1"&gt;# Loaded &amp;#39;/app/frontend.dll&amp;#39;. Symbols loaded.&lt;/span&gt;
+&lt;span class="c1"&gt;# .....&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You should be able to set breakpoints in your code and break.&lt;br&gt;
+But something is not quite right, yet. It does not work on my PC.  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Refs: &lt;ul&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/docs/containers/docker-compose"&gt;Use Docker Compose to work with multiple containers&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Debug NetCore: &lt;a href="https://code.visualstudio.com/docs/containers/docker-compose#_net"&gt;NetCore&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/docs/remote/attach-container"&gt;Attach to a running container using Visual Studio Code Remote Development&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Chapter 2.4 Create the final image for publication&lt;/h3&gt;
+&lt;h4&gt;Publish image to docker hub&lt;/h4&gt;
+&lt;p&gt;Create a docker hub repo. I'll publish to&lt;br&gt;
+https://hub.docker.com/repository/docker/rasor/usingnetcoredockerkubernetes &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# goto folder with Dockerfile&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; cpt2/frontend
+docker build --help
+&lt;span class="c1"&gt;# build img and tag it&lt;/span&gt;
+docker build -t frontend2:v1 .
+&lt;span class="c1"&gt;# Successfully built 6572076fad45&lt;/span&gt;
+&lt;span class="c1"&gt;# Successfully tagged frontend2:v1&lt;/span&gt;
+
+docker images &lt;span class="p"&gt;|&lt;/span&gt; grep frontend2
+&lt;span class="c1"&gt;# frontend2                              latest              6572076fad45        3 days ago          212MB&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2                              v1                  6572076fad45        3 days ago          212MB&lt;/span&gt;
+
+&lt;span class="c1"&gt;# tag the image, so you can upload it to docker hub&lt;/span&gt;
+&lt;span class="c1"&gt;# docker tag local-image:tagname new-repo:tagname&lt;/span&gt;
+docker tag frontend2:v1 rasor/usingnetcoredockerkubernetes:frontend2-v1
+
+docker images &lt;span class="p"&gt;|&lt;/span&gt; grep frontend2
+&lt;span class="c1"&gt;# REPOSITORY                             TAG                 IMAGE ID            CREATED             SIZE&lt;/span&gt;
+&lt;span class="c1"&gt;# rasor/usingnetcoredockerkubernetes     frontend2-v1        6572076fad45        3 days ago          212MB&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2                              latest              6572076fad45        3 days ago          212MB&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2                              v1                  6572076fad45        3 days ago          212MB&lt;/span&gt;
+
+&lt;span class="c1"&gt;# upload docker img to https://hub.docker.com/repository/docker/rasor/usingnetcoredockerkubernetes&lt;/span&gt;
+&lt;span class="c1"&gt;# docker push new-repo:tagname&lt;/span&gt;
+docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
+&lt;span class="c1"&gt;# The push refers to repository [docker.io/rasor/usingnetcoredockerkubernetes]&lt;/span&gt;
+&lt;span class="c1"&gt;# ...&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2-v1: digest: sha256:e413934f1dba2e85b66f69125f6b4ac9944122c8f1c3d8f0f97355abb6ad8ec9 size: 1793&lt;/span&gt;
+
+&lt;span class="c1"&gt;# When you want to download it do:&lt;/span&gt;
+&lt;span class="c1"&gt;# docker pull rasor/usingnetcoredockerkubernetes:frontend2-v1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Chapter 3 Deploy Your Application on Kubernetes&lt;/h2&gt;
+&lt;h3&gt;Chapter 3.2 Deploy your images in Kubernetes&lt;/h3&gt;
+&lt;p&gt;See Part 1.3&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#docker"></category><category term="#csharp"></category><category term="#netcore"></category></entry><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 1.3: Run containers …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 1.3: Run containers in k8s&lt;/li&gt;
 &lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
 &lt;/ul&gt;
@@ -320,13 +898,13 @@ docker rm mvcapp
 
 
 &lt;h2&gt;Chapter 2 Create Your Application with Docker&lt;/h2&gt;
-&lt;p&gt;See &lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#docker"></category></entry><entry><title>k8s on Windows Devbox - Part 0.2</title><link href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html" rel="alternate"></link><published>2020-10-12T00:00:00+02:00</published><updated>2020-11-09T10:30:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-12:/k8s-on-windows-devbox-part-02.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
@@ -334,7 +912,7 @@ docker rm mvcapp
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
@@ -1053,7 +1631,7 @@ What I have in mind is the &lt;a href="https://kubeprod.io/"&gt;Bitnami stack&lt
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Other coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
@@ -1061,7 +1639,7 @@ What I have in mind is the &lt;a href="https://kubeprod.io/"&gt;Bitnami stack&lt
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Other coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
