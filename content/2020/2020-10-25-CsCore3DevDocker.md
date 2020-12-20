@@ -12,7 +12,7 @@ This blog is part of a serie:
 * [Part 1.1: Run docker containers]({filename}/2020/2020-10-18-DockerRun.md)
 * [Part 1.2: Develop .NET docker images]({filename}/2020/2020-10-25-CsCore3DevDocker.md) (this blog)
 * [Part 1.3: Run containers in k8s]({filename}/2020/2020-10-27-Cs-k8s-Core3.md)
-* Part 2: Deploy containers to Civo
+* [Part 2.0: Deploy containers to Civo]({filename}/2020/2020-11-02-K3sCivo.md)
 
 # Intro
 
