@@ -93,19 +93,19 @@ Steps:
     * Install `SD Card Formatter 5.0.1 Setup.exe`
     * Insert the empty micro SD Card into SD Card adapter and insert it into PC SD Card slot
     * Start `SD Card Formatter`  
-    ![SD Card Formatter](img/2020/2020-12-13-Pi01.PNG)  
+    ![SD Card Formatter](../img/2020/2020-12-13-Pi01.PNG)  
     * Press Format
 * Burn OS to SD card:
     * Download [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
     * Install the Imager by running `imager_1.4.exe`
     * Run the Imager
     * Select OS `Raspberry Pi OS with desktop`  
-    ![OS selected](img/2020/2020-12-13-Pi02.PNG)  
+    ![OS selected](../img/2020/2020-12-13-Pi02.PNG)  
     * Select SD card  
-    ![Card selected](img/2020/2020-12-13-Pi03.PNG)  
+    ![Card selected](../img/2020/2020-12-13-Pi03.PNG)  
     * Press `Write`
     * This burn these files on the card:  
-    ![OS Files](img/2020/2020-12-13-Pi04.PNG)  
+    ![OS Files](../img/2020/2020-12-13-Pi04.PNG)  
     * In the config.txt there are settings you can modify:  
 ```ini
 # For more options and information see

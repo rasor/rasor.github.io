@@ -1,7 +1,7 @@
 Title: Develop .NET docker images - Part 1.2
 Status: published
 Date: 2020-10-25 00:00
-Modified: 2020-12-20 00:00
+Modified: 2020-12-20 17:00
 Category: Develop
 Tags: #docker, #csharp, #netcore
 
@@ -11,7 +11,7 @@ This blog is part of a serie:
 * [Part 0.2: Install k8s using kind on Windows - including arkade]({filename}/2020/2020-10-12-K8sArkade.md)
 * [Part 1.1: Run docker containers]({filename}/2020/2020-10-18-DockerRun.md)
 * [Part 1.2: Develop .NET docker images]({filename}/2020/2020-10-25-CsCore3DevDocker.md) (this blog)
-* Part 1.3: Run containers in k8s
+* [Part 1.3: Run containers in k8s]({filename}/2020/2020-10-27-Cs-k8s-Core3.md)
 * Part 2: Deploy containers to Civo
 
 # Intro
@@ -24,10 +24,10 @@ You find its code in this git repo: [rasor/eBook-UsingNETCoreDockerKubernetes](h
 Main Sources are:
 
 * Free eBook (2019): [Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly)
-  * By [@apomic80](https://twitter.com/apomic80)        
-    * Github: [apomic80](https://github.com/apomic80)
+    * By [@apomic80](https://twitter.com/apomic80)        
+        * Github: [apomic80](https://github.com/apomic80)
 * Guide: [Inner-loop development workflow for Docker apps](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow)
-  * from free eBook (2020): [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/) from Microsoft
+    * from free eBook (2020): [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/) from Microsoft
 
 # PreRequisites
 
@@ -35,13 +35,13 @@ Main Sources are:
 * [.NET Core 3.1 SDK](https://dotnet.microsoft.com/download)
 * [Git Bash](https://gitforwindows.org/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
-  * [C# for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+    * [C# for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 * [Docker Desktop for Windows user manual](https://docs.docker.com/docker-for-windows/)
 * `k8s` (I am using `kind` for [creating cluster](K8sArkade.md))
 * Optional: [choco](https://chocolatey.org/install)
 * Optional: [jq](https://stedolan.github.io/jq/download/)
 * Optional: [helm](https://helm.sh/)
-  * `choco install kubernetes-helm` or `arkade get helm`
+    * `choco install kubernetes-helm` or `arkade get helm`
 * Optional: [draft](https://github.com/Azure/draft/blob/master/docs/quickstart.md)
 
 # Chapters from eBook **Using .NET Core, Docker, and Kubernetes**
@@ -319,28 +319,28 @@ To be able to debug on port 5000 you need to do a change in the launcsetting:
 Before:
 ```jsonc
 // .vscode/tasks.json
-            "label": "docker-run: debug",
-            "dependsOn": [
-                "docker-build: debug"
-            ],
-            "dockerRun": {},
+                        "label": "docker-run: debug",
+                        "dependsOn": [
+                                "docker-build: debug"
+                        ],
+                        "dockerRun": {},
 ```
 After:
 ```jsonc
 // .vscode/tasks.json
-            "label": "docker-run: debug",
-            "dependsOn": [
-                "docker-build: debug"
-            ],
-            "dockerRun": {
-                "env": {
-                    "ASPNETCORE_URLS": "https://+:5001;http://+:5000"
-                },
-                "ports": [
-                    { "hostPort": 5000, "containerPort": 5000 },
-                    { "hostPort": 5001, "containerPort": 5001 }
-                ]
-            },
+                        "label": "docker-run: debug",
+                        "dependsOn": [
+                                "docker-build: debug"
+                        ],
+                        "dockerRun": {
+                                "env": {
+                                        "ASPNETCORE_URLS": "https://+:5001;http://+:5000"
+                                },
+                                "ports": [
+                                        { "hostPort": 5000, "containerPort": 5000 },
+                                        { "hostPort": 5001, "containerPort": 5001 }
+                                ]
+                        },
 ```
 
 If you goto **RUN** pane and choose `Docker .NET Core Launch` in the dropdown and then press the "Play" button then you can place breakpoints in your code and remote debug into your container. VSCode will show this:
@@ -393,34 +393,34 @@ When you used Command Palette command `Docker: Add Docker files to workspace` th
 version: '3.4'
 
 services:
-  frontend:
-    image: frontend
-    build:
-      context: .
-      dockerfile: cpt2/frontend/Dockerfile
-    ports:
-      - 5000
-      - 5001
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:5000
-    volumes:
-      - ~/.vsdbg:/remote_debugger:rw
+    frontend:
+        image: frontend
+        build:
+            context: .
+            dockerfile: cpt2/frontend/Dockerfile
+        ports:
+            - 5000
+            - 5001
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
+            - ASPNETCORE_URLS=http://+:5000
+        volumes:
+            - ~/.vsdbg:/remote_debugger:rw
 ```
 
 Change frontend in both the .debug.yml and then non-debug yml to:
 
 ```yaml
-  frontend:
-    image: frontend2
-    # Add this
-    container_name: frontend2 # then you can attach to this name
-    build:
-      context: ./cpt2/frontend
-      dockerfile: Dockerfile
-    environment:
-    # Add this to the non-debug
-      - ASPNETCORE_URLS=https://+:5001;http://+:5000
+    frontend:
+        image: frontend2
+        # Add this
+        container_name: frontend2 # then you can attach to this name
+        build:
+            context: ./cpt2/frontend
+            dockerfile: Dockerfile
+        environment:
+        # Add this to the non-debug
+            - ASPNETCORE_URLS=https://+:5001;http://+:5000
 ```
 
 So now we can start several containers at once (if more containeres were present in the compose file).  
@@ -462,16 +462,16 @@ This will create most of this
 
 ```json
 //.vscode/launch.json
-    {
-        "name": "Docker .NET Core Attach (Preview)",
-        "type": "docker",
-        "request": "attach",
-        "containerName": "frontend2",
-        "platform": "netCore",
-        "sourceFileMap": {
-            "/src": "${workspaceFolder}"
+        {
+                "name": "Docker .NET Core Attach (Preview)",
+                "type": "docker",
+                "request": "attach",
+                "containerName": "frontend2",
+                "platform": "netCore",
+                "sourceFileMap": {
+                        "/src": "${workspaceFolder}"
+                },
         },
-    },
 ```
 
 Optionally add `containerName` in or to auto attach to a specific running container.  
@@ -562,6 +562,6 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 ## Chapter 3 Deploy Your Application on Kubernetes
 ### Chapter 3.2 Deploy your images in Kubernetes
 
-See Part 1.3
+See [Part 1.3]({filename}/2020/2020-10-27-Cs-k8s-Core3.md)
 
 The End
