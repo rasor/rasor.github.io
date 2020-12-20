@@ -1,5 +1,200 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-11-09T14:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-12-20T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  &lt;/p&gt;
+&lt;p&gt;This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  &lt;/p&gt;
+&lt;p&gt;Info: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Pi 400 is almost a Pi …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  &lt;/p&gt;
+&lt;p&gt;This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  &lt;/p&gt;
+&lt;p&gt;Info: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A Pi 400 is almost a Pi 4B with keyboard included and fixed 4GB RAM&lt;/li&gt;
+&lt;li&gt;A Pi 4B typical bare-board active current consumption is just &lt;a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md"&gt;600mA&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;HW&lt;/h2&gt;
+&lt;p&gt;The Pi 400 comes with&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;quad-core 64-bit ARM processor&lt;/li&gt;
+&lt;li&gt;4GB of RAM&lt;/li&gt;
+&lt;li&gt;wireless networking&lt;/li&gt;
+&lt;li&gt;dual-display output, and 4K video playback&lt;/li&gt;
+&lt;li&gt;a 40-pin GPIO header&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Apart from the Pi 400 I also bought&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.raspberrypi.org/products/type-c-power-supply"&gt;Raspberry Pi 15.3W USB-C Power Supply&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.de/-/en/gp/product/B07G5JV2B5/"&gt;USB Reader for microSD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.de/-/en/gp/product/B07G3H5RBT"&gt;microSD card, 128 GB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Monitor + hdmi cable&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.deltaco.lt/lten/adapter-deltaco-hdmi-m-hdmi-f-micro-0-1m-hdmi-24b-k.html"&gt;micro hdmi to hdmi adapter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;OS&lt;/h2&gt;
+&lt;p&gt;Raspberry supplies  &lt;a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit"&gt;two desktop OS's&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi OS with desktop and recommended software (Size: 2,949MB)&lt;/li&gt;
+&lt;li&gt;Raspberry Pi OS with desktop (Size: 1,177MB)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Alternatively there is also a 3rd-party &lt;a href="https://www.raspberrypi.org/software/operating-systems/#third-party-software"&gt;Ubuntu Desktop&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I want to see if the minimal Pi without extra sw (#2 in the list) will be enough for my needs.  &lt;/p&gt;
+&lt;p&gt;Info: According to &lt;a href="https://en.wikipedia.org/wiki/Raspberry_Pi_OS"&gt;Wikipedia&lt;/a&gt; &lt;code&gt;Raspberry Pi OS&lt;/code&gt; is a &lt;code&gt;Debian&lt;/code&gt; distru (as also is Ubuntu). This will do just fine.  &lt;/p&gt;
+&lt;p&gt;The current &lt;code&gt;Pi OS&lt;/code&gt; release &lt;code&gt;August 2020&lt;/code&gt; includes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian: &lt;code&gt;10 (Buster)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Browser: &lt;a href="https://www.chromium.org/"&gt;Chromium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GUI/Desktop: LXDE&lt;/li&gt;
+&lt;li&gt;GCC (GNU Compiler Collection): &lt;code&gt;8.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Linux kernel: &lt;code&gt;5.4.51&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://ostoday.org/linux/what-is-gcc-in-linux.html"&gt;&lt;img alt="Linux OS Components" src="https://ostoday.org/wp-content/uploads/2019/06/what-is-gcc-in-linux-300x225.png"&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;(Image on ostoday.org)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;On the download page there is also an integrety hash&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;# Powershell:&lt;/span&gt;
+&lt;span class="c"&gt;# Check file integrety hash&lt;/span&gt;
+&lt;span class="nb"&gt;Get-Filehash&lt;/span&gt; &lt;span class="n"&gt;-path&lt;/span&gt; &lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="err"&gt;:&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;Users&lt;/span&gt;&lt;span class="p"&gt;\&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;\&lt;/span&gt;&lt;span class="n"&gt;Downloads&lt;/span&gt;&lt;span class="p"&gt;\&lt;/span&gt;&lt;span class="n"&gt;2020&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;12&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="n"&gt;02-raspios-buster-armhf&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zip&lt;/span&gt; &lt;span class="n"&gt;-algorithm&lt;/span&gt; &lt;span class="n"&gt;SHA256&lt;/span&gt;
+&lt;span class="c"&gt;# Hash&lt;/span&gt;
+&lt;span class="c"&gt;# 32034189474585C521748A6A4B21388FDE9AE2C6B0C5C2D32F8ABFBF508EE865&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;Installation&lt;/h1&gt;
+&lt;h2&gt;OS&lt;/h2&gt;
+&lt;p&gt;The OS installation steps I follow are mostly part of these articles: 
+* &lt;a href="https://www.raspberrypi.org/help/noobs-setup./"&gt;Raspberry Pi NOOBS Setup&lt;/a&gt;
+* &lt;a href="https://www.raspberrypi.org/documentation/installation/noobs.md"&gt;NOOBS - Raspberry Pi Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Steps:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Format your SD card:&lt;ul&gt;
+&lt;li&gt;Download &lt;a href="https://www.sdcard.org/downloads/formatter/index.html"&gt;SD Memory Card Formatter 5.0 for SD/SDHC/SDXC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Extract the setup from the zip&lt;/li&gt;
+&lt;li&gt;Install &lt;code&gt;SD Card Formatter 5.0.1 Setup.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Insert the empty micro SD Card into SD Card adapter and insert it into PC SD Card slot&lt;/li&gt;
+&lt;li&gt;Start &lt;code&gt;SD Card Formatter&lt;/code&gt;&lt;br&gt;
+&lt;img alt="SD Card Formatter" src="img/2020/2020-12-13-Pi01.PNG"&gt;  &lt;/li&gt;
+&lt;li&gt;Press Format&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Burn OS to SD card:&lt;ul&gt;
+&lt;li&gt;Download &lt;a href="https://www.raspberrypi.org/software/"&gt;Raspberry Pi Imager&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Install the Imager by running &lt;code&gt;imager_1.4.exe&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Run the Imager&lt;/li&gt;
+&lt;li&gt;Select OS &lt;code&gt;Raspberry Pi OS with desktop&lt;/code&gt;&lt;br&gt;
+&lt;img alt="OS selected" src="img/2020/2020-12-13-Pi02.PNG"&gt;  &lt;/li&gt;
+&lt;li&gt;Select SD card&lt;br&gt;
+&lt;img alt="Card selected" src="img/2020/2020-12-13-Pi03.PNG"&gt;  &lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;Write&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;This burn these files on the card:&lt;br&gt;
+&lt;img alt="OS Files" src="img/2020/2020-12-13-Pi04.PNG"&gt;  &lt;/li&gt;
+&lt;li&gt;In the config.txt there are settings you can modify:  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# For more options and information see&lt;/span&gt;
+&lt;span class="c1"&gt;# http://rpf.io/configtxt&lt;/span&gt;
+&lt;span class="c1"&gt;# Some settings may impact device functionality. See link above for details&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment if you get no picture on HDMI for a default &amp;quot;safe&amp;quot; mode&lt;/span&gt;
+&lt;span class="c1"&gt;#hdmi_safe=1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment this if your display has a black border of unused pixels visible&lt;/span&gt;
+&lt;span class="c1"&gt;# and your display can output without overscan&lt;/span&gt;
+&lt;span class="c1"&gt;#disable_overscan=1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment the following to adjust overscan. Use positive numbers if console&lt;/span&gt;
+&lt;span class="c1"&gt;# goes off screen, and negative if there is too much border&lt;/span&gt;
+&lt;span class="c1"&gt;#overscan_left=16&lt;/span&gt;
+&lt;span class="c1"&gt;#overscan_right=16&lt;/span&gt;
+&lt;span class="c1"&gt;#overscan_top=16&lt;/span&gt;
+&lt;span class="c1"&gt;#overscan_bottom=16&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment to force a console size. By default it will be display&amp;#39;s size minus&lt;/span&gt;
+&lt;span class="c1"&gt;# overscan.&lt;/span&gt;
+&lt;span class="c1"&gt;#framebuffer_width=1280&lt;/span&gt;
+&lt;span class="c1"&gt;#framebuffer_height=720&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment if hdmi display is not detected and composite is being output&lt;/span&gt;
+&lt;span class="c1"&gt;#hdmi_force_hotplug=1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment to force a specific HDMI mode (this will force VGA)&lt;/span&gt;
+&lt;span class="c1"&gt;#hdmi_group=1&lt;/span&gt;
+&lt;span class="c1"&gt;#hdmi_mode=1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment to force a HDMI mode rather than DVI. This can make audio work in&lt;/span&gt;
+&lt;span class="c1"&gt;# DMT (computer monitor) modes&lt;/span&gt;
+&lt;span class="c1"&gt;#hdmi_drive=2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment to increase signal to HDMI, if you have interference, blanking, or&lt;/span&gt;
+&lt;span class="c1"&gt;# no display&lt;/span&gt;
+&lt;span class="c1"&gt;#config_hdmi_boost=4&lt;/span&gt;
+
+&lt;span class="c1"&gt;# uncomment for composite PAL&lt;/span&gt;
+&lt;span class="c1"&gt;#sdtv_mode=2&lt;/span&gt;
+
+&lt;span class="c1"&gt;#uncomment to overclock the arm. 700 MHz is the default.&lt;/span&gt;
+&lt;span class="c1"&gt;#arm_freq=800&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Uncomment some or all of these to enable the optional hardware interfaces&lt;/span&gt;
+&lt;span class="c1"&gt;#dtparam=i2c_arm=on&lt;/span&gt;
+&lt;span class="c1"&gt;#dtparam=i2s=on&lt;/span&gt;
+&lt;span class="c1"&gt;#dtparam=spi=on&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Uncomment this to enable infrared communication.&lt;/span&gt;
+&lt;span class="c1"&gt;#dtoverlay=gpio-ir,gpio_pin=17&lt;/span&gt;
+&lt;span class="c1"&gt;#dtoverlay=gpio-ir-tx,gpio_pin=18&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Additional overlays and parameters are documented /boot/overlays/README&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Enable audio (loads snd_bcm2835)&lt;/span&gt;
+&lt;span class="na"&gt;dtparam&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;audio=on&lt;/span&gt;
+
+&lt;span class="k"&gt;[pi4]&lt;/span&gt;
+&lt;span class="c1"&gt;# Enable DRM VC4 V3D driver on top of the dispmanx display stack&lt;/span&gt;
+&lt;span class="na"&gt;dtoverlay&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;vc4-fkms-v3d&lt;/span&gt;
+&lt;span class="na"&gt;max_framebuffers&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;2&lt;/span&gt;
+
+&lt;span class="k"&gt;[all]&lt;/span&gt;
+&lt;span class="c1"&gt;#dtoverlay=vc4-fkms-v3d&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Boot the Pi:&lt;ul&gt;
+&lt;li&gt;The card is auto dismounted by the app, so you can just take it out of the slot and put it into your Pi&lt;/li&gt;
+&lt;li&gt;Plug in &lt;code&gt;SD Card&lt;/code&gt;, &lt;code&gt;Monitor&lt;/code&gt; and &lt;code&gt;Mouse&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Plug in &lt;code&gt;Power&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Written on the screen: &lt;code&gt;Resized root filesystem booting in 5 sec&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;After boot it will start up the desktop&lt;/li&gt;
+&lt;li&gt;According to &lt;a href="https://www.raspberrypi.org/help/noobs-setup./"&gt;Pi NOOBS Setup&lt;/a&gt; it uses&lt;ul&gt;
+&lt;li&gt;Username: &lt;code&gt;pi&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Psw: &lt;code&gt;raspberry&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;and starts the desktop with &lt;code&gt;startx&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;When you open the &lt;code&gt;File Manager&lt;/code&gt; it will tell you &lt;strong&gt;Free space: 109,2 GiB (Total: 116.9 GiB)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;An app &lt;code&gt;Get Started&lt;/code&gt; auto runs on first run.&lt;ul&gt;
+&lt;li&gt;Click &lt;code&gt;Next&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set Time Zone and Keyboard&lt;/li&gt;
+&lt;li&gt;Set psw - unclick Hide characters, so you are sure the keyboards layout match your typing&lt;/li&gt;
+&lt;li&gt;Select Wifi network and enter Wifi psw&lt;/li&gt;
+&lt;li&gt;On the &lt;code&gt;Update Software&lt;/code&gt; you might want to skip download system updates, but  if you have time why not do it now&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I tested running Youtube from the browser in the box: Chromium on a TV.&lt;br&gt;
+Sound and picture and responsivenes are all great.&lt;br&gt;
+It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
+&lt;p&gt;Enjoy.  &lt;/p&gt;
+&lt;h1&gt;Links&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/"&gt;Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/usage/"&gt;Pi Apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/installation/sdxc_formatting.md"&gt;Formatting an SDXC card for use with NOOBS - Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/configuration/wireless/"&gt;Wireless connectivity - Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Get help: &lt;a href="https://www.raspberrypi.org/forums/"&gt;Raspberry Pi Forums&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;

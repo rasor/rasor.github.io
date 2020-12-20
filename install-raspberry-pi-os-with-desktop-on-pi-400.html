@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Intro I wanted to use a Raspberry Pi 400 as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet. This blog is about setting up the Pi and prepare a bootable SD Card from Windows. Info: A Pi 400 is almost a Pi …" />
+<meta name="keywords" content="#linux, #os, #debian, #pi, #pi400">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Install &#34;Raspberry Pi OS with desktop&#34; on Pi 400"/>
+<meta property="og:description" content="Intro I wanted to use a Raspberry Pi 400 as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet. This blog is about setting up the Pi and prepare a bootable SD Card from Windows. Info: A Pi 400 is almost a Pi …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-12-14 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2020-12-20 00:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#linux"/>
+<meta property="article:tag" content="#os"/>
+<meta property="article:tag" content="#debian"/>
+<meta property="article:tag" content="#pi"/>
+<meta property="article:tag" content="#pi400"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Install &#34;Raspberry Pi OS with desktop&#34; on Pi 400</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="install-raspberry-pi-os-with-desktop-on-pi-400">Install "Raspberry Pi OS with desktop" on Pi 400</h1>
+    <p>
+          Posted on December 14, 2020 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+
+      </br>
+        Updated: December 20, 2020
+    </p>
+  </header>
+
+
+  <div>
+    <h1>Intro</h1>
+<p>I wanted to use a <a href="https://www.raspberrypi.org/products/raspberry-pi-400">Raspberry Pi 400</a> as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  </p>
+<p>This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  </p>
+<p>Info: </p>
+<ul>
+<li>A Pi 400 is almost a Pi 4B with keyboard included and fixed 4GB RAM</li>
+<li>A Pi 4B typical bare-board active current consumption is just <a href="https://www.raspberrypi.org/documentation/hardware/raspberrypi/power/README.md">600mA</a></li>
+</ul>
+<h2>HW</h2>
+<p>The Pi 400 comes with</p>
+<ul>
+<li>quad-core 64-bit ARM processor</li>
+<li>4GB of RAM</li>
+<li>wireless networking</li>
+<li>dual-display output, and 4K video playback</li>
+<li>a 40-pin GPIO header</li>
+</ul>
+<p>Apart from the Pi 400 I also bought</p>
+<ul>
+<li><a href="https://www.raspberrypi.org/products/type-c-power-supply">Raspberry Pi 15.3W USB-C Power Supply</a></li>
+<li><a href="https://www.amazon.de/-/en/gp/product/B07G5JV2B5/">USB Reader for microSD</a></li>
+<li><a href="https://www.amazon.de/-/en/gp/product/B07G3H5RBT">microSD card, 128 GB</a></li>
+<li>Monitor + hdmi cable</li>
+<li><a href="https://www.deltaco.lt/lten/adapter-deltaco-hdmi-m-hdmi-f-micro-0-1m-hdmi-24b-k.html">micro hdmi to hdmi adapter</a></li>
+</ul>
+<h2>OS</h2>
+<p>Raspberry supplies  <a href="https://www.raspberrypi.org/software/operating-systems/#raspberry-pi-os-32-bit">two desktop OS's</a>:</p>
+<ul>
+<li>Raspberry Pi OS with desktop and recommended software (Size: 2,949MB)</li>
+<li>Raspberry Pi OS with desktop (Size: 1,177MB)</li>
+</ul>
+<p>Alternatively there is also a 3rd-party <a href="https://www.raspberrypi.org/software/operating-systems/#third-party-software">Ubuntu Desktop</a></p>
+<p>I want to see if the minimal Pi without extra sw (#2 in the list) will be enough for my needs.  </p>
+<p>Info: According to <a href="https://en.wikipedia.org/wiki/Raspberry_Pi_OS">Wikipedia</a> <code>Raspberry Pi OS</code> is a <code>Debian</code> distru (as also is Ubuntu). This will do just fine.  </p>
+<p>The current <code>Pi OS</code> release <code>August 2020</code> includes</p>
+<ul>
+<li>Debian: <code>10 (Buster)</code></li>
+<li>Browser: <a href="https://www.chromium.org/">Chromium</a></li>
+<li>GUI/Desktop: LXDE</li>
+<li>GCC (GNU Compiler Collection): <code>8.3</code></li>
+<li>Linux kernel: <code>5.4.51</code></li>
+</ul>
+<p><a href="https://ostoday.org/linux/what-is-gcc-in-linux.html"><img alt="Linux OS Components" src="https://ostoday.org/wp-content/uploads/2019/06/what-is-gcc-in-linux-300x225.png"></a><br>
+<em>(Image on ostoday.org)</em></p>
+<p>On the download page there is also an integrety hash</p>
+<div class="highlight"><pre><span></span><span class="c"># Powershell:</span>
+<span class="c"># Check file integrety hash</span>
+<span class="nb">Get-Filehash</span> <span class="n">-path</span> <span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">Users</span><span class="p">\&lt;</span><span class="n">user</span><span class="p">&gt;\</span><span class="n">Downloads</span><span class="p">\</span><span class="n">2020</span><span class="p">-</span><span class="n">12</span><span class="p">-</span><span class="n">02-raspios-buster-armhf</span><span class="p">.</span><span class="n">zip</span> <span class="n">-algorithm</span> <span class="n">SHA256</span>
+<span class="c"># Hash</span>
+<span class="c"># 32034189474585C521748A6A4B21388FDE9AE2C6B0C5C2D32F8ABFBF508EE865</span>
+</pre></div>
+
+
+<h1>Installation</h1>
+<h2>OS</h2>
+<p>The OS installation steps I follow are mostly part of these articles: 
+* <a href="https://www.raspberrypi.org/help/noobs-setup./">Raspberry Pi NOOBS Setup</a>
+* <a href="https://www.raspberrypi.org/documentation/installation/noobs.md">NOOBS - Raspberry Pi Documentation</a></p>
+<p>Steps:</p>
+<ul>
+<li>Format your SD card:<ul>
+<li>Download <a href="https://www.sdcard.org/downloads/formatter/index.html">SD Memory Card Formatter 5.0 for SD/SDHC/SDXC</a></li>
+<li>Extract the setup from the zip</li>
+<li>Install <code>SD Card Formatter 5.0.1 Setup.exe</code></li>
+<li>Insert the empty micro SD Card into SD Card adapter and insert it into PC SD Card slot</li>
+<li>Start <code>SD Card Formatter</code><br>
+<img alt="SD Card Formatter" src="img/2020/2020-12-13-Pi01.PNG">  </li>
+<li>Press Format</li>
+</ul>
+</li>
+<li>Burn OS to SD card:<ul>
+<li>Download <a href="https://www.raspberrypi.org/software/">Raspberry Pi Imager</a></li>
+<li>Install the Imager by running <code>imager_1.4.exe</code></li>
+<li>Run the Imager</li>
+<li>Select OS <code>Raspberry Pi OS with desktop</code><br>
+<img alt="OS selected" src="img/2020/2020-12-13-Pi02.PNG">  </li>
+<li>Select SD card<br>
+<img alt="Card selected" src="img/2020/2020-12-13-Pi03.PNG">  </li>
+<li>Press <code>Write</code></li>
+<li>This burn these files on the card:<br>
+<img alt="OS Files" src="img/2020/2020-12-13-Pi04.PNG">  </li>
+<li>In the config.txt there are settings you can modify:  </li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># For more options and information see</span>
+<span class="c1"># http://rpf.io/configtxt</span>
+<span class="c1"># Some settings may impact device functionality. See link above for details</span>
+
+<span class="c1"># uncomment if you get no picture on HDMI for a default &quot;safe&quot; mode</span>
+<span class="c1">#hdmi_safe=1</span>
+
+<span class="c1"># uncomment this if your display has a black border of unused pixels visible</span>
+<span class="c1"># and your display can output without overscan</span>
+<span class="c1">#disable_overscan=1</span>
+
+<span class="c1"># uncomment the following to adjust overscan. Use positive numbers if console</span>
+<span class="c1"># goes off screen, and negative if there is too much border</span>
+<span class="c1">#overscan_left=16</span>
+<span class="c1">#overscan_right=16</span>
+<span class="c1">#overscan_top=16</span>
+<span class="c1">#overscan_bottom=16</span>
+
+<span class="c1"># uncomment to force a console size. By default it will be display&#39;s size minus</span>
+<span class="c1"># overscan.</span>
+<span class="c1">#framebuffer_width=1280</span>
+<span class="c1">#framebuffer_height=720</span>
+
+<span class="c1"># uncomment if hdmi display is not detected and composite is being output</span>
+<span class="c1">#hdmi_force_hotplug=1</span>
+
+<span class="c1"># uncomment to force a specific HDMI mode (this will force VGA)</span>
+<span class="c1">#hdmi_group=1</span>
+<span class="c1">#hdmi_mode=1</span>
+
+<span class="c1"># uncomment to force a HDMI mode rather than DVI. This can make audio work in</span>
+<span class="c1"># DMT (computer monitor) modes</span>
+<span class="c1">#hdmi_drive=2</span>
+
+<span class="c1"># uncomment to increase signal to HDMI, if you have interference, blanking, or</span>
+<span class="c1"># no display</span>
+<span class="c1">#config_hdmi_boost=4</span>
+
+<span class="c1"># uncomment for composite PAL</span>
+<span class="c1">#sdtv_mode=2</span>
+
+<span class="c1">#uncomment to overclock the arm. 700 MHz is the default.</span>
+<span class="c1">#arm_freq=800</span>
+
+<span class="c1"># Uncomment some or all of these to enable the optional hardware interfaces</span>
+<span class="c1">#dtparam=i2c_arm=on</span>
+<span class="c1">#dtparam=i2s=on</span>
+<span class="c1">#dtparam=spi=on</span>
+
+<span class="c1"># Uncomment this to enable infrared communication.</span>
+<span class="c1">#dtoverlay=gpio-ir,gpio_pin=17</span>
+<span class="c1">#dtoverlay=gpio-ir-tx,gpio_pin=18</span>
+
+<span class="c1"># Additional overlays and parameters are documented /boot/overlays/README</span>
+
+<span class="c1"># Enable audio (loads snd_bcm2835)</span>
+<span class="na">dtparam</span><span class="o">=</span><span class="s">audio=on</span>
+
+<span class="k">[pi4]</span>
+<span class="c1"># Enable DRM VC4 V3D driver on top of the dispmanx display stack</span>
+<span class="na">dtoverlay</span><span class="o">=</span><span class="s">vc4-fkms-v3d</span>
+<span class="na">max_framebuffers</span><span class="o">=</span><span class="s">2</span>
+
+<span class="k">[all]</span>
+<span class="c1">#dtoverlay=vc4-fkms-v3d</span>
+</pre></div>
+
+
+<ul>
+<li>Boot the Pi:<ul>
+<li>The card is auto dismounted by the app, so you can just take it out of the slot and put it into your Pi</li>
+<li>Plug in <code>SD Card</code>, <code>Monitor</code> and <code>Mouse</code></li>
+<li>Plug in <code>Power</code></li>
+<li>Written on the screen: <code>Resized root filesystem booting in 5 sec</code></li>
+<li>After boot it will start up the desktop</li>
+<li>According to <a href="https://www.raspberrypi.org/help/noobs-setup./">Pi NOOBS Setup</a> it uses<ul>
+<li>Username: <code>pi</code></li>
+<li>Psw: <code>raspberry</code></li>
+<li>and starts the desktop with <code>startx</code></li>
+</ul>
+</li>
+<li>When you open the <code>File Manager</code> it will tell you <strong>Free space: 109,2 GiB (Total: 116.9 GiB)</strong></li>
+<li>An app <code>Get Started</code> auto runs on first run.<ul>
+<li>Click <code>Next</code></li>
+<li>Set Time Zone and Keyboard</li>
+<li>Set psw - unclick Hide characters, so you are sure the keyboards layout match your typing</li>
+<li>Select Wifi network and enter Wifi psw</li>
+<li>On the <code>Update Software</code> you might want to skip download system updates, but  if you have time why not do it now</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>I tested running Youtube from the browser in the box: Chromium on a TV.<br>
+Sound and picture and responsivenes are all great.<br>
+It has to 4k hdmi ports, so you can have two monitors.</p>
+<p>Enjoy.  </p>
+<h1>Links</h1>
+<ul>
+<li><a href="https://www.raspberrypi.org/documentation/">Raspberry Pi Documentation</a></li>
+<li><a href="https://www.raspberrypi.org/documentation/usage/">Pi Apps</a></li>
+<li><a href="https://www.raspberrypi.org/documentation/installation/sdxc_formatting.md">Formatting an SDXC card for use with NOOBS - Raspberry Pi Documentation</a></li>
+<li><a href="https://www.raspberrypi.org/documentation/configuration/wireless/">Wireless connectivity - Raspberry Pi Documentation</a></li>
+<li>Get help: <a href="https://www.raspberrypi.org/forums/">Raspberry Pi Forums</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/linux.html">#linux</a>
+      <a href="https://rasor.github.io/tag/os.html">#os</a>
+      <a href="https://rasor.github.io/tag/debian.html">#debian</a>
+      <a href="https://rasor.github.io/tag/pi.html">#pi</a>
+      <a href="https://rasor.github.io/tag/pi400.html">#pi400</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
