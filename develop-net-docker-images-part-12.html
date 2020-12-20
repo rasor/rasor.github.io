@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/develop-net-docker-images-part-12.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2020-10-25 00:00:00+02:00"/>
-<meta property="article:modified_time" content="2020-12-20 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2020-12-20 17:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#docker"/>
@@ -144,7 +144,7 @@
 <li><a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html">Part 0.2: Install k8s using kind on Windows - including arkade</a></li>
 <li><a href="https://rasor.github.io/run-docker-containers-part-11.html">Part 1.1: Run docker containers</a></li>
 <li><a href="https://rasor.github.io/develop-net-docker-images-part-12.html">Part 1.2: Develop .NET docker images</a> (this blog)</li>
-<li>Part 1.3: Run containers in k8s</li>
+<li><a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html">Part 1.3: Run containers in k8s</a></li>
 <li>Part 2: Deploy containers to Civo</li>
 </ul>
 <h1>Intro</h1>
@@ -153,27 +153,35 @@
 You find its code in this git repo: <a href="https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes">rasor/eBook-UsingNETCoreDockerKubernetes</a>.  </p>
 <p>Main Sources are:</p>
 <ul>
-<li>Free eBook (2019): <a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly">Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly</a></li>
+<li>Free eBook (2019): <a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly">Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly</a><ul>
 <li>By <a href="https://twitter.com/apomic80">@apomic80</a>        <ul>
 <li>Github: <a href="https://github.com/apomic80">apomic80</a></li>
 </ul>
 </li>
-<li>Guide: <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow">Inner-loop development workflow for Docker apps</a></li>
+</ul>
+</li>
+<li>Guide: <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow">Inner-loop development workflow for Docker apps</a><ul>
 <li>from free eBook (2020): <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/">Containerized Docker Application Lifecycle with Microsoft Platform and Tools</a> from Microsoft</li>
+</ul>
+</li>
 </ul>
 <h1>PreRequisites</h1>
 <ul>
 <li>Windows 10</li>
 <li><a href="https://dotnet.microsoft.com/download">.NET Core 3.1 SDK</a></li>
 <li><a href="https://gitforwindows.org/">Git Bash</a></li>
-<li><a href="https://code.visualstudio.com/download">Visual Studio Code</a></li>
+<li><a href="https://code.visualstudio.com/download">Visual Studio Code</a><ul>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp">C# for VSCode</a></li>
+</ul>
+</li>
 <li><a href="https://docs.docker.com/docker-for-windows/">Docker Desktop for Windows user manual</a></li>
 <li><code>k8s</code> (I am using <code>kind</code> for <a href="K8sArkade.md">creating cluster</a>)</li>
 <li>Optional: <a href="https://chocolatey.org/install">choco</a></li>
 <li>Optional: <a href="https://stedolan.github.io/jq/download/">jq</a></li>
-<li>Optional: <a href="https://helm.sh/">helm</a></li>
+<li>Optional: <a href="https://helm.sh/">helm</a><ul>
 <li><code>choco install kubernetes-helm</code> or <code>arkade get helm</code></li>
+</ul>
+</li>
 <li>Optional: <a href="https://github.com/Azure/draft/blob/master/docs/quickstart.md">draft</a></li>
 </ul>
 <h1>Chapters from eBook <strong>Using .NET Core, Docker, and Kubernetes</strong></h1>
@@ -447,29 +455,29 @@ docker ps -a
 <p>To be able to debug on port 5000 you need to do a change in the launcsetting:</p>
 <p>Before:</p>
 <div class="highlight"><pre><span></span><span class="err">// .vscode/tasks.json</span>
-<span class="err">            &quot;label&quot;: &quot;docker-run: debug&quot;,</span>
-<span class="err">            &quot;dependsOn&quot;: [</span>
-<span class="err">                &quot;docker-build: debug&quot;</span>
-<span class="err">            ],</span>
-<span class="err">            &quot;dockerRun&quot;: {},</span>
+<span class="err">                        &quot;label&quot;: &quot;docker-run: debug&quot;,</span>
+<span class="err">                        &quot;dependsOn&quot;: [</span>
+<span class="err">                                &quot;docker-build: debug&quot;</span>
+<span class="err">                        ],</span>
+<span class="err">                        &quot;dockerRun&quot;: {},</span>
 </pre></div>
 
 
 <p>After:</p>
 <div class="highlight"><pre><span></span><span class="err">// .vscode/tasks.json</span>
-<span class="err">            &quot;label&quot;: &quot;docker-run: debug&quot;,</span>
-<span class="err">            &quot;dependsOn&quot;: [</span>
-<span class="err">                &quot;docker-build: debug&quot;</span>
-<span class="err">            ],</span>
-<span class="err">            &quot;dockerRun&quot;: {</span>
-<span class="err">                &quot;env&quot;: {</span>
-<span class="err">                    &quot;ASPNETCORE_URLS&quot;: &quot;https://+:5001;http://+:5000&quot;</span>
-<span class="err">                },</span>
-<span class="err">                &quot;ports&quot;: [</span>
-<span class="err">                    { &quot;hostPort&quot;: 5000, &quot;containerPort&quot;: 5000 },</span>
-<span class="err">                    { &quot;hostPort&quot;: 5001, &quot;containerPort&quot;: 5001 }</span>
-<span class="err">                ]</span>
-<span class="err">            },</span>
+<span class="err">                        &quot;label&quot;: &quot;docker-run: debug&quot;,</span>
+<span class="err">                        &quot;dependsOn&quot;: [</span>
+<span class="err">                                &quot;docker-build: debug&quot;</span>
+<span class="err">                        ],</span>
+<span class="err">                        &quot;dockerRun&quot;: {</span>
+<span class="err">                                &quot;env&quot;: {</span>
+<span class="err">                                        &quot;ASPNETCORE_URLS&quot;: &quot;https://+:5001;http://+:5000&quot;</span>
+<span class="err">                                },</span>
+<span class="err">                                &quot;ports&quot;: [</span>
+<span class="err">                                        { &quot;hostPort&quot;: 5000, &quot;containerPort&quot;: 5000 },</span>
+<span class="err">                                        { &quot;hostPort&quot;: 5001, &quot;containerPort&quot;: 5001 }</span>
+<span class="err">                                ]</span>
+<span class="err">                        },</span>
 </pre></div>
 
 
@@ -516,33 +524,33 @@ docker run -dt -P --name <span class="s2">&quot;ebookusingnetcoredockerkubernete
 <span class="nt">version</span><span class="p">:</span> <span class="s">&#39;3.4&#39;</span>
 
 <span class="nt">services</span><span class="p">:</span>
-  <span class="nt">frontend</span><span class="p">:</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">frontend</span>
-    <span class="nt">build</span><span class="p">:</span>
-      <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
-      <span class="nt">dockerfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cpt2/frontend/Dockerfile</span>
-    <span class="nt">ports</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">5000</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">5001</span>
-    <span class="nt">environment</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_ENVIRONMENT=Development</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_URLS=http://+:5000</span>
-    <span class="nt">volumes</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">~/.vsdbg:/remote_debugger:rw</span>
+    <span class="nt">frontend</span><span class="p">:</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">frontend</span>
+        <span class="nt">build</span><span class="p">:</span>
+            <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+            <span class="nt">dockerfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cpt2/frontend/Dockerfile</span>
+        <span class="nt">ports</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">5000</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">5001</span>
+        <span class="nt">environment</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_ENVIRONMENT=Development</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_URLS=http://+:5000</span>
+        <span class="nt">volumes</span><span class="p">:</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">~/.vsdbg:/remote_debugger:rw</span>
 </pre></div>
 
 
 <p>Change frontend in both the .debug.yml and then non-debug yml to:</p>
-<div class="highlight"><pre><span></span>  <span class="nt">frontend</span><span class="p">:</span>
-    <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">frontend2</span>
-    <span class="c1"># Add this</span>
-    <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">frontend2</span> <span class="c1"># then you can attach to this name</span>
-    <span class="nt">build</span><span class="p">:</span>
-      <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./cpt2/frontend</span>
-      <span class="nt">dockerfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
-    <span class="nt">environment</span><span class="p">:</span>
-    <span class="c1"># Add this to the non-debug</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_URLS=https://+:5001;http://+:5000</span>
+<div class="highlight"><pre><span></span>    <span class="nt">frontend</span><span class="p">:</span>
+        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">frontend2</span>
+        <span class="c1"># Add this</span>
+        <span class="nt">container_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">frontend2</span> <span class="c1"># then you can attach to this name</span>
+        <span class="nt">build</span><span class="p">:</span>
+            <span class="nt">context</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">./cpt2/frontend</span>
+            <span class="nt">dockerfile</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Dockerfile</span>
+        <span class="nt">environment</span><span class="p">:</span>
+        <span class="c1"># Add this to the non-debug</span>
+            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ASPNETCORE_URLS=https://+:5001;http://+:5000</span>
 </pre></div>
 
 
@@ -585,16 +593,16 @@ docker-compose start
 </ul>
 <p>This will create most of this</p>
 <div class="highlight"><pre><span></span><span class="err">//.vscode/launch.json</span>
-    <span class="p">{</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Docker .NET Core Attach (Preview)&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;docker&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;attach&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;containerName&quot;</span><span class="p">:</span> <span class="s2">&quot;frontend2&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;netCore&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;sourceFileMap&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;/src&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceFolder}&quot;</span>
-        <span class="p">},</span>
-    <span class="p">}</span><span class="err">,</span>
+        <span class="p">{</span>
+                <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Docker .NET Core Attach (Preview)&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;docker&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="s2">&quot;attach&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;containerName&quot;</span><span class="p">:</span> <span class="s2">&quot;frontend2&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="s2">&quot;netCore&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;sourceFileMap&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="nt">&quot;/src&quot;</span><span class="p">:</span> <span class="s2">&quot;${workspaceFolder}&quot;</span>
+                <span class="p">},</span>
+        <span class="p">}</span><span class="err">,</span>
 </pre></div>
 
 
@@ -686,7 +694,7 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 
 <h2>Chapter 3 Deploy Your Application on Kubernetes</h2>
 <h3>Chapter 3.2 Deploy your images in Kubernetes</h3>
-<p>See Part 1.3</p>
+<p>See <a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html">Part 1.3</a></p>
 <p>The End</p>
   </div>
   <div class="tag-cloud">

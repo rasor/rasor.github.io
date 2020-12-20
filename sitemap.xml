@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2020-12-20T16:40:44-00:00</lastmod>
+<lastmod>2020-12-20T17:38:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2020-12-20T16:40:44-00:00</lastmod>
+<lastmod>2020-12-20T17:38:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2020-12-20T16:40:44-00:00</lastmod>
+<lastmod>2020-12-20T17:38:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2020-12-20T16:40:44-00:00</lastmod>
+<lastmod>2020-12-20T17:38:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2020-12-20T16:40:44-00:00</lastmod>
+<lastmod>2020-12-20T17:38:47-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -46,8 +46,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/develop-net-docker-images-part-12.html</loc>
+<loc>https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html</loc>
 <lastmod>2020-12-20T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/develop-net-docker-images-part-12.html</loc>
+<lastmod>2020-12-20T17:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -271,7 +278,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -326,14 +333,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/docker.html</loc>
+<loc>https://rasor.github.io/tag/csharp.html</loc>
+<lastmod>2020-12-20T17:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/netcore3.html</loc>
 <lastmod>2020-12-20T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/csharp.html</loc>
+<loc>https://rasor.github.io/tag/docker.html</loc>
+<lastmod>2020-12-20T17:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/k8s.html</loc>
+<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/jq.html</loc>
+<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/vscode.html</loc>
 <lastmod>2020-12-20T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -341,7 +376,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/netcore.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2020-12-20T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -418,13 +453,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/metrics-server.html</loc>
-<lastmod>2020-11-09T10:30:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/k8s.html</loc>
 <lastmod>2020-11-09T10:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -601,13 +629,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://rasor.github.io/tag/markdown.html</loc>
 <lastmod>2018-09-07T17:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/vscode.html</loc>
-<lastmod>2018-09-07T11:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1069,7 +1090,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2020-12-20T16:00:00+00:50</lastmod>
+<lastmod>2020-12-20T17:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

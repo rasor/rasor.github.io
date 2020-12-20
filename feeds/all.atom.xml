@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-12-20T16:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T16:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-12-20T17:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T16:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
 &lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.&lt;br&gt;
 The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
 &lt;ul&gt;
@@ -93,7 +93,7 @@ The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
 &lt;li&gt;Install &lt;code&gt;SD Card Formatter 5.0.1 Setup.exe&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Insert the empty micro SD Card into SD Card adapter and insert it into PC SD Card slot&lt;/li&gt;
 &lt;li&gt;Start &lt;code&gt;SD Card Formatter&lt;/code&gt;&lt;br&gt;
-&lt;img alt="SD Card Formatter" src="img/2020/2020-12-13-Pi01.PNG"&gt;  &lt;/li&gt;
+&lt;img alt="SD Card Formatter" src="../img/2020/2020-12-13-Pi01.PNG"&gt;  &lt;/li&gt;
 &lt;li&gt;Press Format&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -102,12 +102,12 @@ The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
 &lt;li&gt;Install the Imager by running &lt;code&gt;imager_1.4.exe&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Run the Imager&lt;/li&gt;
 &lt;li&gt;Select OS &lt;code&gt;Raspberry Pi OS with desktop&lt;/code&gt;&lt;br&gt;
-&lt;img alt="OS selected" src="img/2020/2020-12-13-Pi02.PNG"&gt;  &lt;/li&gt;
+&lt;img alt="OS selected" src="../img/2020/2020-12-13-Pi02.PNG"&gt;  &lt;/li&gt;
 &lt;li&gt;Select SD card&lt;br&gt;
-&lt;img alt="Card selected" src="img/2020/2020-12-13-Pi03.PNG"&gt;  &lt;/li&gt;
+&lt;img alt="Card selected" src="../img/2020/2020-12-13-Pi03.PNG"&gt;  &lt;/li&gt;
 &lt;li&gt;Press &lt;code&gt;Write&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;This burn these files on the card:&lt;br&gt;
-&lt;img alt="OS Files" src="img/2020/2020-12-13-Pi04.PNG"&gt;  &lt;/li&gt;
+&lt;img alt="OS Files" src="../img/2020/2020-12-13-Pi04.PNG"&gt;  &lt;/li&gt;
 &lt;li&gt;In the config.txt there are settings you can modify:  &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -217,19 +217,19 @@ It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/configuration/wireless/"&gt;Wireless connectivity - Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Get help: &lt;a href="https://www.raspberrypi.org/forums/"&gt;Raspberry Pi Forums&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>Develop .NET docker images - Part 1.2</title><link href="https://rasor.github.io/develop-net-docker-images-part-12.html" rel="alternate"></link><published>2020-10-25T00:00:00+02:00</published><updated>2020-12-20T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-25:/develop-net-docker-images-part-12.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>ASP.NET Core with k8s hosting - Part 1.3</title><link href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html" rel="alternate"></link><published>2020-10-27T00:00:00+01:00</published><updated>2020-12-20T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-27:/aspnet-core-with-k8s-hosting-part-13.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;Part 1.3: Run containers …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;Part 1.3: Run containers in k8s&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
@@ -238,27 +238,418 @@ It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
 You find its code in this git repo: &lt;a href="https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes"&gt;rasor/eBook-UsingNETCoreDockerKubernetes&lt;/a&gt;.  &lt;/p&gt;
 &lt;p&gt;Main Sources are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Free eBook (2019): &lt;a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly"&gt;Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Free eBook (2019): &lt;a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly"&gt;Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;By &lt;a href="https://twitter.com/apomic80"&gt;@apomic80&lt;/a&gt;        &lt;ul&gt;
 &lt;li&gt;Github: &lt;a href="https://github.com/apomic80"&gt;apomic80&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;Guide: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow"&gt;Inner-loop development workflow for Docker apps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Guide: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow"&gt;Inner-loop development workflow for Docker apps&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;from free eBook (2020): &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/"&gt;Containerized Docker Application Lifecycle with Microsoft Platform and Tools&lt;/a&gt; from Microsoft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;PreRequisites&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows 10&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://dotnet.microsoft.com/download"&gt;.NET Core 3.1 SDK&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://gitforwindows.org/"&gt;Git Bash&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://code.visualstudio.com/download"&gt;Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/download"&gt;Visual Studio Code&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp"&gt;C# for VSCode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.docker.com/docker-for-windows/"&gt;Docker Desktop for Windows user manual&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;k8s&lt;/code&gt; (I am using &lt;code&gt;kind&lt;/code&gt; for &lt;a href="K8sArkade.md"&gt;creating cluster&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Optional: &lt;a href="https://chocolatey.org/install"&gt;choco&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Optional: &lt;a href="https://stedolan.github.io/jq/download/"&gt;jq&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Optional: &lt;a href="https://helm.sh/"&gt;helm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://helm.sh/"&gt;helm&lt;/a&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;choco install kubernetes-helm&lt;/code&gt; or &lt;code&gt;arkade get helm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://github.com/Azure/draft/blob/master/docs/quickstart.md"&gt;draft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Chapters from eBook &lt;strong&gt;Using .NET Core, Docker, and Kubernetes&lt;/strong&gt;&lt;/h1&gt;
+&lt;h2&gt;Chapter 1 ASP.NET and Docker Together&lt;/h2&gt;
+&lt;h3&gt;Chapter 1.1 Execute .NET Core application with Docker&lt;/h3&gt;
+&lt;p&gt;See &lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Chapter 2 Create Your Application with Docker&lt;/h2&gt;
+&lt;h3&gt;Chapter 2.1 Develop your ASP.NET Core application using Docker&lt;/h3&gt;
+&lt;p&gt;See &lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Chapter 3 Deploy Your Application on Kubernetes&lt;/h2&gt;
+&lt;h3&gt;Chapter 3.2 Deploy your images in Kubernetes&lt;/h3&gt;
+&lt;p&gt;I am using &lt;code&gt;kind&lt;/code&gt; for creating a &lt;code&gt;k8s&lt;/code&gt; cluster. I did that in &lt;a href="K8sArkade.md"&gt;this blog&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;kubectl is a CLI using API to access k8s.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# check if k8s cluster is running&lt;/span&gt;
+kubectl cluster-info
+&lt;span class="c1"&gt;# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check if there are any clusters&lt;/span&gt;
+$ kind get clusters
+&lt;span class="c1"&gt;# kind&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Check it the container is running&lt;/span&gt;
+docker ps -a &lt;span class="p"&gt;|&lt;/span&gt; grep kind
+&lt;span class="c1"&gt;# CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                   PORTS                       NAMES&lt;/span&gt;
+&lt;span class="c1"&gt;# 0b9a7220b4f8        kindest/node:v1.19.1   &amp;quot;/usr/local/bin/entr…&amp;quot;   5 weeks ago         Exited (0) 3 weeks ago   127.0.0.1:52295-&amp;gt;6443/tcp   kind-control-plane&lt;/span&gt;
+
+&lt;span class="c1"&gt;# start the k8s cluster&lt;/span&gt;
+docker start kind-control-plane
+
+&lt;span class="c1"&gt;# check if k8s cluster is running&lt;/span&gt;
+kubectl cluster-info
+&lt;span class="c1"&gt;# Kubernetes master is running at https://127.0.0.1:52295&lt;/span&gt;
+&lt;span class="c1"&gt;# KubeDNS is running at https://127.0.0.1:52295/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Testing starting the image in a pod manually:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Manually start the container in k8s - and never restart it, when it dies - let proxy know that pod should listen to :5000 and give container env-vars.  &lt;/span&gt;
+kubectl run frontend2 --image&lt;span class="o"&gt;=&lt;/span&gt;rasor/usingnetcoredockerkubernetes:frontend2-v1 --port&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;5000&lt;/span&gt; --restart&lt;span class="o"&gt;=&lt;/span&gt;Never --env&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;ASPNETCORE_URLS=http://+:5000&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# pod/frontend2 created&lt;/span&gt;
+
+kubectl get pods
+&lt;span class="c1"&gt;# NAME        READY   STATUS    RESTARTS   AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2   1/1     Running   0          24s&lt;/span&gt;
+
+kubectl describe pod frontend2
+&lt;span class="c1"&gt;# Name:         frontend2&lt;/span&gt;
+&lt;span class="c1"&gt;# Namespace:    default&lt;/span&gt;
+&lt;span class="c1"&gt;# Priority:     0&lt;/span&gt;
+&lt;span class="c1"&gt;# Node:         kind-control-plane/172.18.0.2&lt;/span&gt;
+&lt;span class="c1"&gt;# Start Time:   Tue, 27 Oct 2020 12:24:42 +0100&lt;/span&gt;
+&lt;span class="c1"&gt;# Labels:       run=frontend2&lt;/span&gt;
+&lt;span class="c1"&gt;# Annotations:  &amp;lt;none&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;# Status:       Running&lt;/span&gt;
+&lt;span class="c1"&gt;# IP:           10.244.0.9&lt;/span&gt;
+&lt;span class="c1"&gt;# IPs:&lt;/span&gt;
+&lt;span class="c1"&gt;#   IP:  10.244.0.9&lt;/span&gt;
+&lt;span class="c1"&gt;# Containers:&lt;/span&gt;
+&lt;span class="c1"&gt;#   frontend2:&lt;/span&gt;
+&lt;span class="c1"&gt;#     Container ID:   containerd://6134c6c308d49c4c49835009333ca5aaedf18d235712bec49a4ae4fbe9606c12&lt;/span&gt;
+&lt;span class="c1"&gt;#     Image:          rasor/usingnetcoredockerkubernetes:frontend2-v1&lt;/span&gt;
+&lt;span class="c1"&gt;#     Image ID:       docker.io/rasor/usingnetcoredockerkubernetes@sha256:e413934f1dba2e85b66f69125f6b4ac9944122c8f1c3d8f0f97355abb6ad8ec9       &lt;/span&gt;
+&lt;span class="c1"&gt;#     Port:           5000/TCP&lt;/span&gt;
+&lt;span class="c1"&gt;#     Host Port:      0/TCP&lt;/span&gt;
+&lt;span class="c1"&gt;#     State:          Running&lt;/span&gt;
+&lt;span class="c1"&gt;#       Started:      Tue, 27 Oct 2020 12:24:42 +0100&lt;/span&gt;
+&lt;span class="c1"&gt;#     Ready:          True&lt;/span&gt;
+&lt;span class="c1"&gt;#     Restart Count:  0&lt;/span&gt;
+&lt;span class="c1"&gt;#     Environment:    &amp;lt;none&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;#     Mounts:&lt;/span&gt;
+&lt;span class="c1"&gt;#       /var/run/secrets/kubernetes.io/serviceaccount from default-token-95gtj (ro)&lt;/span&gt;
+&lt;span class="c1"&gt;# Conditions:&lt;/span&gt;
+&lt;span class="c1"&gt;#   Type              Status&lt;/span&gt;
+&lt;span class="c1"&gt;#   Initialized       True&lt;/span&gt;
+&lt;span class="c1"&gt;#   Ready             True&lt;/span&gt;
+&lt;span class="c1"&gt;#   ContainersReady   True&lt;/span&gt;
+&lt;span class="c1"&gt;#   PodScheduled      True&lt;/span&gt;
+&lt;span class="c1"&gt;# Volumes:&lt;/span&gt;
+&lt;span class="c1"&gt;#   default-token-95gtj:&lt;/span&gt;
+&lt;span class="c1"&gt;#     Type:        Secret (a volume populated by a Secret)&lt;/span&gt;
+&lt;span class="c1"&gt;#     SecretName:  default-token-95gtj&lt;/span&gt;
+&lt;span class="c1"&gt;#     Optional:    false&lt;/span&gt;
+&lt;span class="c1"&gt;# QoS Class:       BestEffort&lt;/span&gt;
+&lt;span class="c1"&gt;# Node-Selectors:  &amp;lt;none&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;# Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s&lt;/span&gt;
+&lt;span class="c1"&gt;#                  node.kubernetes.io/unreachable:NoExecute for 300s&lt;/span&gt;
+&lt;span class="c1"&gt;# Events:&lt;/span&gt;
+&lt;span class="c1"&gt;#   Type    Reason     Age        From                         Message&lt;/span&gt;
+&lt;span class="c1"&gt;#   ----    ------     ----       ----                         -------&lt;/span&gt;
+&lt;span class="c1"&gt;#   Normal  Scheduled  &amp;lt;unknown&amp;gt;                               Successfully assigned default/frontend2 to kind-control-plane&lt;/span&gt;
+&lt;span class="c1"&gt;#   Normal  Pulled     11s        kubelet, kind-control-plane  Container image &amp;quot;rasor/usingnetcoredockerkubernetes:frontend2-v1&amp;quot; already present &lt;/span&gt;
+&lt;span class="c1"&gt;# on machine&lt;/span&gt;
+&lt;span class="c1"&gt;#   Normal  Created    11s        kubelet, kind-control-plane  Created container frontend2&lt;/span&gt;
+&lt;span class="c1"&gt;#   Normal  Started    11s        kubelet, kind-control-plane  Started container frontend2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# And what does that mean?&lt;/span&gt;
+kubectl explain pods
+
+&lt;span class="c1"&gt;# read all deployed in default namespace&lt;/span&gt;
+kubectl get all
+&lt;span class="c1"&gt;# NAME            READY   STATUS    RESTARTS   AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# pod/frontend2   1/1     Running   0          6m57s&lt;/span&gt;
+
+&lt;span class="c1"&gt;# NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# service/kubernetes   ClusterIP   10.96.0.1    &amp;lt;none&amp;gt;        443/TCP   38d&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;API into k8s&lt;/h4&gt;
+&lt;p&gt;Start proxy in another terminal.&lt;br&gt;
+This gives HTTP access to the k8s API on port 8001  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;kubectl proxy
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then open browser http://127.0.0.1:8001/&lt;/p&gt;
+&lt;p&gt;Try to reach pod via api:
+http://127.0.0.1:8001/api/v1/namespaces/default/pods/frontend2/proxy/&lt;/p&gt;
+&lt;p&gt;Nice - the pod responds with a webpage :-)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# print stdout from the container&lt;/span&gt;
+kubectl logs frontend2
+&lt;span class="c1"&gt;#       Storing keys in a directory &amp;#39;/root/.aspnet/DataProtection-Keys&amp;#39; that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.&lt;/span&gt;
+&lt;span class="c1"&gt;#       No XML encryptor configured. Key {d848e8f7-df39-44b3-902c-b11019a1d9ab} may be persisted to storage in unencrypted form.&lt;/span&gt;
+&lt;span class="c1"&gt;#       Now listening on: http://[::]:5000&lt;/span&gt;
+&lt;span class="c1"&gt;#       Application started. Press Ctrl+C to shut down.&lt;/span&gt;
+&lt;span class="c1"&gt;#       Hosting environment: Production&lt;/span&gt;
+&lt;span class="c1"&gt;#       Content root path: /app&lt;/span&gt;
+&lt;span class="c1"&gt;#       Failed to determine the https port for redirect.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Stop the proxy with ctrl-c and instead use port forwarding:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Give localhost TCP access from port 5000 to the POD port 5000&lt;/span&gt;
+kubectl port-forward pod/frontend2 &lt;span class="m"&gt;5000&lt;/span&gt;:5000
+&lt;span class="c1"&gt;# Forwarding from 127.0.0.1:5000 -&amp;gt; 5000&lt;/span&gt;
+&lt;span class="c1"&gt;# Forwarding from [::1]:5000 -&amp;gt; 5000&lt;/span&gt;
+
+&lt;span class="c1"&gt;# browse to pod&lt;/span&gt;
+start http://localhost:5000
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Web responds from pod" src="../img/2020/2020-10-27-K8s02.PNG"&gt;  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Delete the pod&lt;/span&gt;
+kubectl delete pod frontend2
+&lt;span class="c1"&gt;# pod &amp;quot;frontend2&amp;quot; deleted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Tip:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://stackoverflow.com/a/51469150/750989"&gt;Port-forward also can forward to RS, SVC or Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://stackoverflow.com/a/62727416/750989"&gt;Port-forward also has --address to listen to&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Port-forward tool for local dev: &lt;a href="https://github.com/txn2/kubefwd"&gt;kubefwd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;UI into k8s&lt;/h4&gt;
+&lt;p&gt;To manage k8s you could use many different apps like&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-kubernetes-tools.vscode-kubernetes-tools"&gt;Kubernetes VSCode plugin&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;Double-click on a resource to see its yaml&lt;/li&gt;
+&lt;li&gt;View helm repos&lt;/li&gt;
+&lt;li&gt;View cloud clusters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;kubernetes-dashboard - just read - install via arkade or from remote yml file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# install kubernetes-dashboard as a k8s app&lt;/span&gt;
+kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+&lt;span class="c1"&gt;# get login token&lt;/span&gt;
+kubectl -n kube-system get secret
+kubectl -n kube-system describe secret deployment-controller-token-?????
+kubectl proxy
+&lt;span class="c1"&gt;# paste login token into&lt;/span&gt;
+start http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;portainer - install via arkade&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rancher.com/quick-start/"&gt;Rancher&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;docker run -d --restart=unless-stopped -p 80:80 -p 443:443 rancher/rancher&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.kubernetic.com/"&gt;Kubernetic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="rancher" src="../img/2020/2020-10-27-K8s01.PNG"&gt;&lt;br&gt;
+(&lt;em&gt;Image from Rancher&lt;/em&gt;)&lt;/p&gt;
+&lt;h4&gt;Declare your infrastructure using yaml&lt;/h4&gt;
+&lt;p&gt;To define managed k8s infrastructure you write k8s yaml.&lt;br&gt;
+Install &lt;a href="https://marketplace.visualstudio.com/items?itemName=ipedrazas.kubernetes-snippets"&gt;Kubernetes Support&lt;/a&gt; in VSCode.&lt;br&gt;
+This will provide you with snippets for pods, services, deployments, etc.  &lt;/p&gt;
+&lt;p&gt;Now create a new file called &lt;code&gt;k8s-deploy-dev.yml&lt;/code&gt;  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Write &lt;code&gt;kind: De&lt;/code&gt; then &lt;/li&gt;
+&lt;li&gt;Press ctrl-space and select a Deployment template.   &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;With yml created you &lt;code&gt;create&lt;/code&gt; or &lt;code&gt;apply&lt;/code&gt; the file using &lt;code&gt;-f&lt;/code&gt;.&lt;br&gt;
+When you &lt;code&gt;apply&lt;/code&gt; k8s will create-if-not-exist or change-if-not-correct.&lt;br&gt;
+If you &lt;code&gt;create&lt;/code&gt; you should &lt;code&gt;create --save-config&lt;/code&gt;. Create will throw error, if resource exists.&lt;br&gt;
+&lt;a href="https://stackoverflow.com/a/54248723/750989"&gt;Read more...&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These are the resources you can create (with the snippets):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;clusterrole         - Create a ClusterRole.
+clusterrolebinding  - Create a ClusterRoleBinding for a particular ClusterRole
+configmap           - Create a configmap from a local file, directory or literal value
+cronjob             - Create a cronjob with the specified name.
+deployment          - Create a deployment with the specified name.
+job                 - Create a job with the specified name.
+namespace           - Create a namespace with the specified name
+poddisruptionbudget - Create a pod disruption budget with the specified name.
+priorityclass       - Create a priorityclass with the specified name.
+quota               - Create a quota with the specified name.
+role                - Create a role with single rule.
+rolebinding         - Create a RoleBinding for a particular Role or ClusterRole
+secret              - Create a secret using specified subcommand
+service             - Create a service using specified subcommand.
+serviceaccount      - Create a service account with the specified name
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Besides those above snippets you can find &lt;code&gt;C#&lt;/code&gt; helm chart templates for&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/Azure/draft/blob/master/packs/csharp/charts/templates/deployment.yaml"&gt;deployment&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Azure/draft/blob/master/packs/csharp/charts/templates/ingress.yaml"&gt;ingress&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/Azure/draft/blob/master/packs/csharp/charts/templates/service.yaml"&gt;service&lt;/a&gt;
+... used by the k8s App builder tool &lt;a href="https://github.com/Azure/draft/blob/master/docs/quickstart.md"&gt;Draft&lt;/a&gt;.&lt;br&gt;
+Note: draft is not yet upgraded to core 3.1, but is using core 2.1. The project is archieved!  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also just grap the whole yaml from this blog: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes#deploy-webappyml"&gt;Build ASP.NET Core applications deployed as Linux containers into AKS/Kubernetes clusters&lt;/a&gt;&lt;br&gt;
+and correct then names.  &lt;/p&gt;
+&lt;p&gt;You can print all resource types with&lt;br&gt;
+&lt;code&gt;kubectl api-resources --sort-by=kind&lt;/code&gt;&lt;br&gt;
+They are&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;NAME                              SHORTNAMES   APIGROUP                       NAMESPACED   KIND
+bindings                                                                      true         Binding
+componentstatuses                 cs                                          false        ComponentStatus
+configmaps                        cm                                          true         ConfigMap
+endpoints                         ep                                          true         Endpoints
+limitranges                       limits                                      true         LimitRange
+namespaces                        ns                                          false        Namespace
+nodes                             no                                          false        Node
+persistentvolumes                 pv                                          false        PersistentVolume
+persistentvolumeclaims            pvc                                         true         PersistentVolumeClaim
+pods                              po                                          true         Pod
+podtemplates                                                                  true         PodTemplate
+replicationcontrollers            rc                                          true         ReplicationController
+resourcequotas                    quota                                       true         ResourceQuota
+secrets                                                                       true         Secret
+services                          svc                                         true         Service
+serviceaccounts                   sa                                          true         ServiceAccount
+
+mutatingwebhookconfigurations                  admissionregistration.k8s.io   false        MutatingWebhookConfiguration
+validatingwebhookconfigurations                admissionregistration.k8s.io   false        ValidatingWebhookConfiguration
+customresourcedefinitions         crd,crds     apiextensions.k8s.io           false        CustomResourceDefinition
+apiservices                                    apiregistration.k8s.io         false        APIService
+controllerrevisions                            apps                           true         ControllerRevision
+daemonsets                        ds           apps                           true         DaemonSet
+deployments                       deploy       apps                           true         Deployment
+replicasets                       rs           apps                           true         ReplicaSet
+statefulsets                      sts          apps                           true         StatefulSet
+tokenreviews                                   authentication.k8s.io          false        TokenReview
+selfsubjectaccessreviews                       authorization.k8s.io           false        SelfSubjectAccessReview
+selfsubjectrulesreviews                        authorization.k8s.io           false        SelfSubjectRulesReview
+subjectaccessreviews                           authorization.k8s.io           false        SubjectAccessReview
+localsubjectaccessreviews                      authorization.k8s.io           true         LocalSubjectAccessReview
+horizontalpodautoscalers          hpa          autoscaling                    true         HorizontalPodAutoscaler
+cronjobs                          cj           batch                          true         CronJob
+jobs                                           batch                          true         Job
+certificatesigningrequests        csr          certificates.k8s.io            false        CertificateSigningRequest
+leases                                         coordination.k8s.io            true         Lease
+endpointslices                                 discovery.k8s.io               true         EndpointSlice
+events                            ev           events.k8s.io                  true         Event
+nodes                                          metrics.k8s.io                 false        NodeMetrics
+pods                                           metrics.k8s.io                 true         PodMetrics
+ingresses                         ing          networking.k8s.io              true         Ingress
+ingressclasses                                 networking.k8s.io              false        IngressClass
+networkpolicies                   netpol       networking.k8s.io              true         NetworkPolicy
+runtimeclasses                                 node.k8s.io                    false        RuntimeClass
+poddisruptionbudgets              pdb          policy                         true         PodDisruptionBudget
+podsecuritypolicies               psp          policy                         false        PodSecurityPolicy
+clusterroles                                   rbac.authorization.k8s.io      false        ClusterRole
+clusterrolebindings                            rbac.authorization.k8s.io      false        ClusterRoleBinding
+roles                                          rbac.authorization.k8s.io      true         Role
+rolebindings                                   rbac.authorization.k8s.io      true         RoleBinding
+priorityclasses                   pc           scheduling.k8s.io              false        PriorityClass
+csidrivers                                     storage.k8s.io                 false        CSIDriver
+csinodes                                       storage.k8s.io                 false        CSINode
+storageclasses                    sc           storage.k8s.io                 false        StorageClass
+volumeattachments                              storage.k8s.io                 false        VolumeAttachment
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;With the yaml in place you can now &lt;code&gt;create&lt;/code&gt; or &lt;code&gt;apply&lt;/code&gt; it:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# deploy image to k8s&lt;/span&gt;
+kubectl create -f k8s-deploy-dev.yml
+&lt;span class="c1"&gt;# deployment.apps/frontend2 created&lt;/span&gt;
+&lt;span class="c1"&gt;# service/frontend2 created&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print&lt;/span&gt;
+kubectl get services &lt;span class="p"&gt;|&lt;/span&gt; grep frontend2
+&lt;span class="c1"&gt;# NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2    LoadBalancer   10.106.254.38   &amp;lt;pending&amp;gt;     5000:30300/TCP   53s&lt;/span&gt;
+
+&lt;span class="c1"&gt;# remove service&lt;/span&gt;
+kubectl delete service frontend2
+&lt;span class="c1"&gt;# service &amp;quot;frontend2&amp;quot; deleted&lt;/span&gt;
+
+&lt;span class="c1"&gt;# remove replicaset, pod and deployment&lt;/span&gt;
+kubectl delete deployment frontend2
+&lt;span class="c1"&gt;# deployment.apps &amp;quot;frontend2&amp;quot; deleted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# stop the k8s cluster&lt;/span&gt;
+docker stop kind-control-plane
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h1&gt;REFs&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands"&gt;Kubectl Reference Docs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Using VSCode: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow"&gt;Inner-loop development workflow for Docker apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Using Visual Studio: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/docker-application-development-process/docker-app-development-workflow"&gt;Development workflow for Docker apps&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/docs/containers/debug-common"&gt;Debug an app running in a Docker container&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Debug using launch.json: &lt;a href="https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md"&gt;OmniSharp/omnisharp-vscode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tasks.json: &lt;a href="https://code.visualstudio.com/docs/containers/quickstart-aspnet-core"&gt;Build and run an ASP.NET Core app in a container&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;tasks.json: &lt;a href="https://code.visualstudio.com/docs/editor/tasks"&gt;Tasks in Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Dockerfile: &lt;a href="https://vsupalov.com/docker-build-time-env-values/"&gt;Setting Default Docker Environment Variables During Image Build&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Change entry point: &lt;a href="https://docs.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=linux#change-the-entrypoint"&gt;Containerize an app with Docker tutorial - .NET Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;k8s: &lt;a href="https://colinsalmcorner.com/devops-with-kubernetes-and-vsts-part-1/"&gt;DevOps with Kubernetes and VSTS: Part 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;AKS: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/deploy-azure-kubernetes-service"&gt;Deploy to Azure Kubernetes Service (AKS)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Using VS - AKS: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes"&gt;Build ASP.NET Core applications deployed as Linux containers into AKS/Kubernetes clusters&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Program.cs &lt;a href="https://wakeupandcode.com/generic-host-builder-in-asp-net-core-3-1/"&gt;Generic Host Builder in ASP .NET Core 3.1&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#csharp"></category><category term="#netcore3"></category><category term="#docker"></category><category term="#k8s"></category><category term="#jq"></category><category term="#vscode"></category></entry><entry><title>Develop .NET docker images - Part 1.2</title><link href="https://rasor.github.io/develop-net-docker-images-part-12.html" rel="alternate"></link><published>2020-10-25T00:00:00+02:00</published><updated>2020-12-20T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-25:/develop-net-docker-images-part-12.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Intro&lt;/h1&gt;
+&lt;p&gt;This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  &lt;/p&gt;
+&lt;p&gt;This blog is inspired by content from an eBook and some tutorials.&lt;br&gt;
+You find its code in this git repo: &lt;a href="https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes"&gt;rasor/eBook-UsingNETCoreDockerKubernetes&lt;/a&gt;.  &lt;/p&gt;
+&lt;p&gt;Main Sources are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Free eBook (2019): &lt;a href="https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly"&gt;Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;By &lt;a href="https://twitter.com/apomic80"&gt;@apomic80&lt;/a&gt;        &lt;ul&gt;
+&lt;li&gt;Github: &lt;a href="https://github.com/apomic80"&gt;apomic80&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Guide: &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/docker-apps-inner-loop-workflow"&gt;Inner-loop development workflow for Docker apps&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;from free eBook (2020): &lt;a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/"&gt;Containerized Docker Application Lifecycle with Microsoft Platform and Tools&lt;/a&gt; from Microsoft&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;PreRequisites&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Windows 10&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://dotnet.microsoft.com/download"&gt;.NET Core 3.1 SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://gitforwindows.org/"&gt;Git Bash&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/download"&gt;Visual Studio Code&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp"&gt;C# for VSCode&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.docker.com/docker-for-windows/"&gt;Docker Desktop for Windows user manual&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;k8s&lt;/code&gt; (I am using &lt;code&gt;kind&lt;/code&gt; for &lt;a href="K8sArkade.md"&gt;creating cluster&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://chocolatey.org/install"&gt;choco&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://stedolan.github.io/jq/download/"&gt;jq&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optional: &lt;a href="https://helm.sh/"&gt;helm&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;choco install kubernetes-helm&lt;/code&gt; or &lt;code&gt;arkade get helm&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;Optional: &lt;a href="https://github.com/Azure/draft/blob/master/docs/quickstart.md"&gt;draft&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Chapters from eBook &lt;strong&gt;Using .NET Core, Docker, and Kubernetes&lt;/strong&gt;&lt;/h1&gt;
@@ -532,29 +923,29 @@ docker ps -a
 &lt;p&gt;To be able to debug on port 5000 you need to do a change in the launcsetting:&lt;/p&gt;
 &lt;p&gt;Before:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;// .vscode/tasks.json&lt;/span&gt;
-&lt;span class="err"&gt;            &amp;quot;label&amp;quot;: &amp;quot;docker-run: debug&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;            &amp;quot;dependsOn&amp;quot;: [&lt;/span&gt;
-&lt;span class="err"&gt;                &amp;quot;docker-build: debug&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;            ],&lt;/span&gt;
-&lt;span class="err"&gt;            &amp;quot;dockerRun&amp;quot;: {},&lt;/span&gt;
+&lt;span class="err"&gt;                        &amp;quot;label&amp;quot;: &amp;quot;docker-run: debug&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;                        &amp;quot;dependsOn&amp;quot;: [&lt;/span&gt;
+&lt;span class="err"&gt;                                &amp;quot;docker-build: debug&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;                        ],&lt;/span&gt;
+&lt;span class="err"&gt;                        &amp;quot;dockerRun&amp;quot;: {},&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;After:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;// .vscode/tasks.json&lt;/span&gt;
-&lt;span class="err"&gt;            &amp;quot;label&amp;quot;: &amp;quot;docker-run: debug&amp;quot;,&lt;/span&gt;
-&lt;span class="err"&gt;            &amp;quot;dependsOn&amp;quot;: [&lt;/span&gt;
-&lt;span class="err"&gt;                &amp;quot;docker-build: debug&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;            ],&lt;/span&gt;
-&lt;span class="err"&gt;            &amp;quot;dockerRun&amp;quot;: {&lt;/span&gt;
-&lt;span class="err"&gt;                &amp;quot;env&amp;quot;: {&lt;/span&gt;
-&lt;span class="err"&gt;                    &amp;quot;ASPNETCORE_URLS&amp;quot;: &amp;quot;https://+:5001;http://+:5000&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;                },&lt;/span&gt;
-&lt;span class="err"&gt;                &amp;quot;ports&amp;quot;: [&lt;/span&gt;
-&lt;span class="err"&gt;                    { &amp;quot;hostPort&amp;quot;: 5000, &amp;quot;containerPort&amp;quot;: 5000 },&lt;/span&gt;
-&lt;span class="err"&gt;                    { &amp;quot;hostPort&amp;quot;: 5001, &amp;quot;containerPort&amp;quot;: 5001 }&lt;/span&gt;
-&lt;span class="err"&gt;                ]&lt;/span&gt;
-&lt;span class="err"&gt;            },&lt;/span&gt;
+&lt;span class="err"&gt;                        &amp;quot;label&amp;quot;: &amp;quot;docker-run: debug&amp;quot;,&lt;/span&gt;
+&lt;span class="err"&gt;                        &amp;quot;dependsOn&amp;quot;: [&lt;/span&gt;
+&lt;span class="err"&gt;                                &amp;quot;docker-build: debug&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;                        ],&lt;/span&gt;
+&lt;span class="err"&gt;                        &amp;quot;dockerRun&amp;quot;: {&lt;/span&gt;
+&lt;span class="err"&gt;                                &amp;quot;env&amp;quot;: {&lt;/span&gt;
+&lt;span class="err"&gt;                                        &amp;quot;ASPNETCORE_URLS&amp;quot;: &amp;quot;https://+:5001;http://+:5000&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;                                },&lt;/span&gt;
+&lt;span class="err"&gt;                                &amp;quot;ports&amp;quot;: [&lt;/span&gt;
+&lt;span class="err"&gt;                                        { &amp;quot;hostPort&amp;quot;: 5000, &amp;quot;containerPort&amp;quot;: 5000 },&lt;/span&gt;
+&lt;span class="err"&gt;                                        { &amp;quot;hostPort&amp;quot;: 5001, &amp;quot;containerPort&amp;quot;: 5001 }&lt;/span&gt;
+&lt;span class="err"&gt;                                ]&lt;/span&gt;
+&lt;span class="err"&gt;                        },&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -601,33 +992,33 @@ docker run -dt -P --name &lt;span class="s2"&gt;&amp;quot;ebookusingnetcoredocke
 &lt;span class="nt"&gt;version&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;3.4&amp;#39;&lt;/span&gt;
 
 &lt;span class="nt"&gt;services&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-  &lt;span class="nt"&gt;frontend&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend&lt;/span&gt;
-    &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-      &lt;span class="nt"&gt;context&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;.&lt;/span&gt;
-      &lt;span class="nt"&gt;dockerfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cpt2/frontend/Dockerfile&lt;/span&gt;
-    &lt;span class="nt"&gt;ports&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;5000&lt;/span&gt;
-      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;5001&lt;/span&gt;
-    &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_ENVIRONMENT=Development&lt;/span&gt;
-      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_URLS=http://+:5000&lt;/span&gt;
-    &lt;span class="nt"&gt;volumes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;~/.vsdbg:/remote_debugger:rw&lt;/span&gt;
+    &lt;span class="nt"&gt;frontend&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend&lt;/span&gt;
+        &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nt"&gt;context&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;.&lt;/span&gt;
+            &lt;span class="nt"&gt;dockerfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;cpt2/frontend/Dockerfile&lt;/span&gt;
+        &lt;span class="nt"&gt;ports&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;5000&lt;/span&gt;
+            &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;5001&lt;/span&gt;
+        &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_ENVIRONMENT=Development&lt;/span&gt;
+            &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_URLS=http://+:5000&lt;/span&gt;
+        &lt;span class="nt"&gt;volumes&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;~/.vsdbg:/remote_debugger:rw&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;Change frontend in both the .debug.yml and then non-debug yml to:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="nt"&gt;frontend&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend2&lt;/span&gt;
-    &lt;span class="c1"&gt;# Add this&lt;/span&gt;
-    &lt;span class="nt"&gt;container_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend2&lt;/span&gt; &lt;span class="c1"&gt;# then you can attach to this name&lt;/span&gt;
-    &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-      &lt;span class="nt"&gt;context&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./cpt2/frontend&lt;/span&gt;
-      &lt;span class="nt"&gt;dockerfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Dockerfile&lt;/span&gt;
-    &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="c1"&gt;# Add this to the non-debug&lt;/span&gt;
-      &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_URLS=https://+:5001;http://+:5000&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nt"&gt;frontend&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nt"&gt;image&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend2&lt;/span&gt;
+        &lt;span class="c1"&gt;# Add this&lt;/span&gt;
+        &lt;span class="nt"&gt;container_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;frontend2&lt;/span&gt; &lt;span class="c1"&gt;# then you can attach to this name&lt;/span&gt;
+        &lt;span class="nt"&gt;build&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="nt"&gt;context&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;./cpt2/frontend&lt;/span&gt;
+            &lt;span class="nt"&gt;dockerfile&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;Dockerfile&lt;/span&gt;
+        &lt;span class="nt"&gt;environment&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="c1"&gt;# Add this to the non-debug&lt;/span&gt;
+            &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;ASPNETCORE_URLS=https://+:5001;http://+:5000&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -670,16 +1061,16 @@ docker-compose start
 &lt;/ul&gt;
 &lt;p&gt;This will create most of this&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;//.vscode/launch.json&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Docker .NET Core Attach (Preview)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;docker&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;quot;request&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;attach&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;quot;containerName&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;frontend2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;netCore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;quot;sourceFileMap&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="nt"&gt;&amp;quot;/src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;${workspaceFolder}&amp;quot;&lt;/span&gt;
-        &lt;span class="p"&gt;},&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;quot;name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Docker .NET Core Attach (Preview)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;docker&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;quot;request&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;attach&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;quot;containerName&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;frontend2&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;quot;platform&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;netCore&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="nt"&gt;&amp;quot;sourceFileMap&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                        &lt;span class="nt"&gt;&amp;quot;/src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;${workspaceFolder}&amp;quot;&lt;/span&gt;
+                &lt;span class="p"&gt;},&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="err"&gt;,&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -771,20 +1162,20 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 
 &lt;h2&gt;Chapter 3 Deploy Your Application on Kubernetes&lt;/h2&gt;
 &lt;h3&gt;Chapter 3.2 Deploy your images in Kubernetes&lt;/h3&gt;
-&lt;p&gt;See Part 1.3&lt;/p&gt;
+&lt;p&gt;See &lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#docker"></category><category term="#csharp"></category><category term="#netcore"></category></entry><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 1.3: Run containers …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 1.3: Run containers in k8s&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog (Part 1.1) I'll do basic execution of Docker images as preparation for the next blog (Part 1.2).&lt;br&gt;
@@ -905,14 +1296,13 @@ docker rm mvcapp
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Others coming ...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I want to …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Others coming ...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
