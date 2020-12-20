@@ -1,13 +1,21 @@
 Title: Install "Raspberry Pi OS with desktop" on Pi 400
 Status: published
 Date: 2020-12-14 00:00
-Modified: 2020-12-20 00:00
+Modified: 2020-12-20 16:00
 Category: DevOps
 Tags: #linux, #os, #debian, #pi, #pi400
 
 # Intro
 
 I wanted to use a [Raspberry Pi 400](https://www.raspberrypi.org/products/raspberry-pi-400) as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.  
+The price is approx **EUR 140,-** 
+
+* including 
+    * shipping
+    * 128 GB SD Card
+* excluding
+    * mouse
+    * monitor
 
 This blog is about setting up the Pi and prepare a bootable SD Card from Windows.  
 

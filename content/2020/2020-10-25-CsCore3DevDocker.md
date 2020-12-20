@@ -1,9 +1,9 @@
 Title: Develop .NET docker images - Part 1.2
-Status: draft
+Status: published
 Date: 2020-10-25 00:00
-Modified: 2020-11-09 15:00
+Modified: 2020-12-20 00:00
 Category: Develop
-Tags: #docker, #csharp
+Tags: #docker, #csharp, #netcore
 
 This blog is part of a serie:
 
@@ -22,6 +22,7 @@ This blog is inspired by content from an eBook and some tutorials.
 You find its code in this git repo: [rasor/eBook-UsingNETCoreDockerKubernetes](https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes).  
 
 Main Sources are:
+
 * Free eBook (2019): [Syncfusion Free Ebooks | Using .NET Core, Docker, and Kubernetes Succinctly](https://www.syncfusion.com/ebooks/using-netcore-docker-and-kubernetes-succinctly)
   * By [@apomic80](https://twitter.com/apomic80)        
     * Github: [apomic80](https://github.com/apomic80)
@@ -86,6 +87,7 @@ start https://localhost:5001/
 Stop the webserver in Teminal 1 with ctrl-c.  
 
 Now create `.vscode` files `launch.json` and `tasks.json`:  
+
 * Ctrl-shft-p # to open cmd palette
 * `.NET: Generate Assets for Build and Debug`
     * Choose `ASPNET Core`, `linux` container and ports `5000, 5001`
@@ -101,6 +103,7 @@ In the Debug console you will see
 You can hit breakpoints.  
 
 Now create a `Dockerfile`, `.dockerignore` and `docker-compose.yml`:  
+
 * In explorer put cursor on cpt2\frontend
 * Ctrl-shft-p # to open cmd palette
 * `Docker: Add Docker files to workspace`
