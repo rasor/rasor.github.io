@@ -1,5 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2020-12-20T17:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T16:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-01-17T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Setting Pelican blogs in "draft" - 4 review. HowTo</title><link href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html" rel="alternate"></link><published>2021-01-17T00:00:00+01:00</published><updated>2021-01-17T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-01-17:/setting-pelican-blogs-in-draft-4-review-howto.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html"&gt;Setting Pelican blogs in "draft"&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sometimes you want your pelican blog to be set into draft for review.&lt;br&gt;
+I always forget some part of howto do.&lt;br&gt;
+So here is a small HowTo …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html"&gt;Setting Pelican blogs in "draft"&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sometimes you want your pelican blog to be set into draft for review.&lt;br&gt;
+I always forget some part of howto do.&lt;br&gt;
+So here is a small HowTo.  &lt;/p&gt;
+&lt;p&gt;First you need the top metadata of your blog. For this blog it is:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Title: Setting Pelican blogs in draft - 4 review. HowTo
+Status: draft
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From the title you transform it into an url: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Metadata&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Setting&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="n"&gt;blogs&lt;/span&gt; &lt;span class="k"&gt;in&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;draft&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="n"&gt;review&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;HowTo&lt;/span&gt;
+&lt;span class="n"&gt;Url&lt;/span&gt;     &lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;setting&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;pelican&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;blogs&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="k"&gt;in&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;draft&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;review&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;howto&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;html&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;From cmd run &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;.\serve&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and browse to
+http://localhost:8000/drafts/setting-pelican-blogs-in-draft-4-review-howto.html&lt;/p&gt;
+&lt;p&gt;When you then decide to deploy using&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;.\publish &amp;quot;commit msg&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;then you can find your blog on&lt;br&gt;
+https://rasor.github.io/drafts/setting-pelican-blogs-in-draft-4-review-howto.html&lt;/p&gt;
+&lt;p&gt;The blog wil not be visible in any of the lists in this mode.&lt;br&gt;
+First when you change the blogs state to&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Status: published
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then you will find it  on&lt;br&gt;
+https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html&lt;/p&gt;
+&lt;p&gt;Notice: The commands &lt;code&gt;serve&lt;/code&gt; and &lt;code&gt;publish&lt;/code&gt; are two small scrips I created in &lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;The End  &lt;/p&gt;</content><category term="DevOps"></category><category term="#blog"></category><category term="#pelican"></category><category term="#cms"></category><category term="#python"></category></entry><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T16:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
 &lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.&lt;br&gt;
 The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
 &lt;ul&gt;
@@ -230,7 +282,7 @@ It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt; (this blog)&lt;/li&gt;
-&lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;p&gt;This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  &lt;/p&gt;
@@ -285,7 +337,7 @@ kubectl cluster-info
 &lt;span class="c1"&gt;# Unable to connect to the server: dial tcp 127.0.0.1:52295: connectex: No connection could be made&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Check if there are any clusters&lt;/span&gt;
-$ kind get clusters
+kind get clusters
 &lt;span class="c1"&gt;# kind&lt;/span&gt;
 
 &lt;span class="c1"&gt;# Check it the container is running&lt;/span&gt;
@@ -613,7 +665,7 @@ docker stop kind-control-plane
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;Intro&lt;/h1&gt;
 &lt;p&gt;This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  &lt;/p&gt;
@@ -1176,7 +1228,7 @@ docker push rasor/usingnetcoredockerkubernetes:frontend2-v1
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Part 2: Deploy containers to Civo&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog (Part 1.1) I'll do basic execution of Docker images as preparation for the next blog (Part 1.2).&lt;br&gt;
 Part 1 is about developing C# docker containers and hosting them in k8s.&lt;/p&gt;
@@ -1303,7 +1355,7 @@ docker rm mvcapp
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Others coming ...&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
 This time running on &lt;strong&gt;Kubernetes (k8s)&lt;/strong&gt;, &lt;strong&gt;Docker Desktop&lt;/strong&gt;, &lt;strong&gt;Windows Home 10&lt;/strong&gt; with &lt;strong&gt;Virtual Machine Platform&lt;/strong&gt; on &lt;strong&gt;WSL2&lt;/strong&gt;.&lt;br&gt;
@@ -6457,14 +6509,16 @@ The first one I found useful was &lt;a href="https://chrome.google.com/webstore/
 &lt;p&gt;The End&lt;/p&gt;</content><category term="Biz"></category><category term="#googledrive"></category><category term="#chrome"></category><category term="#desktop"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html"&gt;Setting Pelican blogs in "draft"&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
 &lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
-To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best to clone them to place with an …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+To be able to reach them from &lt;code&gt;pelicanconf.py&lt;/code&gt; is best …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html"&gt;Setting Pelican blogs in "draft"&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;Installation - Plugins and Themes&lt;/h2&gt;
 &lt;p&gt;Plugins and Themes are two seperate repos being used by some themes.
@@ -6745,14 +6799,16 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;/ul&gt;
 &lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Using Pelican blog on Github pages</title><link href="https://rasor.github.io/using-pelican-blog-on-github-pages.html" rel="alternate"></link><published>2017-09-23T20:20:00+02:00</published><updated>2017-11-26T21:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-23:/using-pelican-blog-on-github-pages.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html"&gt;Setting Pelican blogs in "draft"&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;In this blog I setup a …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html"&gt;Setting Pelican blogs in "draft"&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons &lt;a href="https://rasor.github.io/welcome-to-my-pelican-blog-on-github-pages.html" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;In this blog I setup a &lt;a href="http://docs.getpelican.com/en/stable/quickstart.html" target="_blank"&gt;Pelican blog site&lt;/a&gt; from Windows and host it on &lt;a href="https://pages.github.com/" target="_blank"&gt;GitHub Pages&lt;/a&gt;.&lt;/p&gt;
