@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-01-17T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Setting Pelican blogs in "draft" - 4 review. HowTo</title><link href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html" rel="alternate"></link><published>2021-01-17T00:00:00+01:00</published><updated>2021-01-17T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-01-17:/setting-pelican-blogs-in-draft-4-review-howto.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-01-17T17:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Setting Pelican blogs in "draft" - 4 review. HowTo</title><link href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html" rel="alternate"></link><published>2021-01-17T00:00:00+01:00</published><updated>2021-01-17T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-01-17:/setting-pelican-blogs-in-draft-4-review-howto.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -35,6 +35,7 @@ Status: draft
 
 &lt;p&gt;and browse to
 http://localhost:8000/drafts/setting-pelican-blogs-in-draft-4-review-howto.html&lt;/p&gt;
+&lt;p&gt;Tip: After running &lt;code&gt;serve&lt;/code&gt; you will also find the file in &lt;code&gt;\output\drafts\&lt;/code&gt;, if you don´t want to do this manual transform.  &lt;/p&gt;
 &lt;p&gt;When you then decide to deploy using&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;.\publish &amp;quot;commit msg&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -50,7 +51,11 @@ First when you change the blogs state to&lt;/p&gt;
 
 &lt;p&gt;Then you will find it  on&lt;br&gt;
 https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html&lt;/p&gt;
-&lt;p&gt;Notice: The commands &lt;code&gt;serve&lt;/code&gt; and &lt;code&gt;publish&lt;/code&gt; are two small scrips I created in &lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;Notice: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The commands &lt;code&gt;serve&lt;/code&gt; and &lt;code&gt;publish&lt;/code&gt; are two small scrips I created in &lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;After &lt;code&gt;publish&lt;/code&gt; has run it will take 1 - 2 minutes before you see it deployed to Github pages&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;The End  &lt;/p&gt;</content><category term="DevOps"></category><category term="#blog"></category><category term="#pelican"></category><category term="#cms"></category><category term="#python"></category></entry><entry><title>Install "Raspberry Pi OS with desktop" on Pi 400</title><link href="https://rasor.github.io/install-raspberry-pi-os-with-desktop-on-pi-400.html" rel="alternate"></link><published>2020-12-14T00:00:00+01:00</published><updated>2020-12-20T16:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-12-14:/install-raspberry-pi-os-with-desktop-on-pi-400.html</id><summary type="html">&lt;h1&gt;Intro&lt;/h1&gt;
 &lt;p&gt;I wanted to use a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-400"&gt;Raspberry Pi 400&lt;/a&gt; as a desktop alternative to a ChromeBook meaning a cheap PC mostly just for browsing the internet.&lt;br&gt;
 The price is approx &lt;strong&gt;EUR 140,-&lt;/strong&gt; &lt;/p&gt;
