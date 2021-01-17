@@ -1,6 +1,7 @@
 Title: Setting Pelican blogs in "draft" - 4 review. HowTo
 Status: published
 Date: 2021-01-17 00:00
+Modified: 2021-01-17 17:00
 Category: DevOps
 Tags: #blog, #pelican, #cms, #python
 
@@ -37,6 +38,7 @@ From cmd run
 and browse to
 http://localhost:8000/drafts/setting-pelican-blogs-in-draft-4-review-howto.html
 
+Tip: After running `serve` you will also find the file in `\output\drafts\`, if you don´t want to do this manual transform.  
 
 When you then decide to deploy using
 
