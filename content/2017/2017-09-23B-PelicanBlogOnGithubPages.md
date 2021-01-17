@@ -7,8 +7,9 @@ Tags: #blog, #pelican, #githubpages, #cms, #git, #install, #python
 
 This blog is part of a serie 
 
-1. [Using Pelican blog on Github pages]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md)
+1. [Using Pelican blog on Github pages]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md) (this blog)
 2. [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
+3. [Setting Pelican blogs in "draft"]({filename}/2021/2021-01-17-PelicanBlogDrafts.md)
 
 I had some reasons for moving a blog from Wordpress to GitHubPages. You can read about reason, pro and cons [here]({filename}/2017/2017-09-23A-Welcome.md){:target="_blank"}
 

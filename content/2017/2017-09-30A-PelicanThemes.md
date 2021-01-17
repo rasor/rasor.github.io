@@ -8,7 +8,8 @@ Tags: #blog, #pelican, #themes, #cms, #install
 This blog is part of a serie 
 
 1. [Using Pelican blog on Github pages]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md)
-2. [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md)
+2. [Using Pelican Themes]({filename}/2017/2017-09-30A-PelicanThemes.md) (this blog)
+3. [Setting Pelican blogs in "draft"]({filename}/2021/2021-01-17-PelicanBlogDrafts.md)
 
 ## Installation - Plugins and Themes
 
