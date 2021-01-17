@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2021-01-17T16:56:10-00:00</lastmod>
+<lastmod>2021-01-17T20:55:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2021-01-17T16:56:10-00:00</lastmod>
+<lastmod>2021-01-17T20:55:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2021-01-17T16:56:10-00:00</lastmod>
+<lastmod>2021-01-17T20:55:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2021-01-17T16:56:10-00:00</lastmod>
+<lastmod>2021-01-17T20:55:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2021-01-17T16:56:10-00:00</lastmod>
+<lastmod>2021-01-17T20:55:44-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -53,8 +53,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://rasor.github.io/k3s-hosted-in-civo-part-20.html</loc>
+<lastmod>2020-11-02T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html</loc>
-<lastmod>2020-12-20T00:00:00+01:00</lastmod>
+<lastmod>2021-01-17T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -285,7 +292,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2020-12-20T17:00:00+00:50</lastmod>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -368,43 +375,57 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/csharp.html</loc>
-<lastmod>2020-12-20T17:00:00+00:50</lastmod>
+<loc>https://rasor.github.io/tag/k3s.html</loc>
+<lastmod>2020-11-02T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/netcore3.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/docker.html</loc>
-<lastmod>2020-12-20T17:00:00+00:50</lastmod>
+<loc>https://rasor.github.io/tag/civo.html</loc>
+<lastmod>2020-11-02T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/k8s.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/csharp.html</loc>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/netcore3.html</loc>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/docker.html</loc>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/jq.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/vscode.html</loc>
-<lastmod>2020-12-20T00:00:00+00:50</lastmod>
+<lastmod>2021-01-17T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

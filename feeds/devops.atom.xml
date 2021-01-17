@@ -274,7 +274,285 @@ It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://www.raspberrypi.org/documentation/configuration/wireless/"&gt;Wireless connectivity - Raspberry Pi Documentation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Get help: &lt;a href="https://www.raspberrypi.org/forums/"&gt;Raspberry Pi Forums&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#linux"></category><category term="#os"></category><category term="#debian"></category><category term="#pi"></category><category term="#pi400"></category></entry><entry><title>k3s hosted in Civo - Part 2.0</title><link href="https://rasor.github.io/k3s-hosted-in-civo-part-20.html" rel="alternate"></link><published>2020-11-02T00:00:00+01:00</published><updated>2020-11-02T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-11-02:/k3s-hosted-in-civo-part-20.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt; (this blog)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.civo.com/features"&gt;Civo&lt;/a&gt; offers a hosted k3s cluster with an app market: &lt;a href="https://github.com/civo/kubernetes-marketplace"&gt;civo/kubernetes-marketplace&lt;/a&gt;, like Arkade.&lt;/p&gt;
+&lt;p&gt;At time of writing Civo k8s is in beta. You can &lt;a href="https://www.civo.com/kube100"&gt;apply&lt;/a&gt; for $70 monthly free service.&lt;/p&gt;
+&lt;p&gt;You can work with Civo from  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Civo web via &lt;a href="https://www.civo.com/account/kubernetes"&gt;https://www.civo.com/account/kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/learn/kubernetes-cluster-administration-using-civo-cli"&gt;Civo CLI&lt;/a&gt; that you download from &lt;a href="https://github.com/civo/cli/releases/tag/v0.6.39"&gt;Release v0.6.39 · civo/cli&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;From those you create a k8s cluster.&lt;br&gt;
+Then you download the kubeconfig and continue work on that remote cluster via your local installed kubectl.  &lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;You must have &lt;code&gt;kubectl&lt;/code&gt; installed.  &lt;/p&gt;
+&lt;h2&gt;Get started - using apps from Civo's k8s marketplace&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;First you &lt;a href="https://github.com/civo/cli/releases/tag/v0.6.39"&gt;download civo cli&lt;/a&gt; and save it into &lt;code&gt;C:\Program Files\Civo&lt;/code&gt;.  &lt;/li&gt;
+&lt;li&gt;Next add that path to environment path.  &lt;/li&gt;
+&lt;li&gt;Test civo:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# is civo reachable?&lt;/span&gt;
+civo version
+&lt;span class="c1"&gt;# Civo CLI v0.6.39&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Get &lt;a href="https://www.civo.com/account/security"&gt;API key&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# save API key into civo CLI&lt;/span&gt;
+civo apikey add My_Api_Key DAb75oyqVeaE7BI6Aa74FaRSP0E2tMZXkDWLC9wNQdcpGfH51r
+&lt;span class="c1"&gt;# Saved the API Key DAb75oyqVeaE7BI6Aa74FaRSP0E2tMZXkDWLC9wNQdcpGfH51r as My_Api_Key&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Set the key as current&lt;/span&gt;
+civo apikey current My_Api_Key
+&lt;span class="c1"&gt;# The current API Key is now My_Api_Key&lt;/span&gt;
+
+&lt;span class="c1"&gt;# help me create a cluster&lt;/span&gt;
+civo k8s create -h
+&lt;span class="c1"&gt;# create a cluster and wait for it to finish&lt;/span&gt;
+civo k8s create Cluster-1-just-dashboard --size&lt;span class="o"&gt;=&lt;/span&gt;g2.xsmall --nodes&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --wait -a&lt;span class="o"&gt;=&lt;/span&gt;kubernetes-dashboard
+
+&lt;span class="c1"&gt;# print kube config for the created cluster&lt;/span&gt;
+civo k8s config Cluster-1-just-dashboard
+&lt;span class="c1"&gt;# apiVersion: v1&lt;/span&gt;
+&lt;span class="c1"&gt;# clusters:&lt;/span&gt;
+&lt;span class="c1"&gt;# - cluster:&lt;/span&gt;
+&lt;span class="c1"&gt;#   name: cluster-1-just-dashboard&lt;/span&gt;
+
+&lt;span class="c1"&gt;# save (or merge) the config into your kubeconfig&lt;/span&gt;
+civo k8s config Cluster-1-just-dashboard --save
+&lt;span class="c1"&gt;# Saved config to ~/.kube/config&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print nodes and apps in your cluster&lt;/span&gt;
+civo k8s show Cluster-1-just-dashboard
+&lt;span class="c1"&gt;#           ID : 18779094-3e4e-4db5-85d4-6294c5ffffff&lt;/span&gt;
+&lt;span class="c1"&gt;#         Name : Cluster-1-just-dashboard&lt;/span&gt;
+&lt;span class="c1"&gt;#        Nodes : 1&lt;/span&gt;
+&lt;span class="c1"&gt;#         Size : g2.xsmall&lt;/span&gt;
+&lt;span class="c1"&gt;#       Status : ACTIVE&lt;/span&gt;
+&lt;span class="c1"&gt;#      Version : 1.18.6+k3s1&lt;/span&gt;
+&lt;span class="c1"&gt;# API Endpoint : https://91.211.144.244:6443&lt;/span&gt;
+&lt;span class="c1"&gt;#    Master IP : 91.211.144.244&lt;/span&gt;
+&lt;span class="c1"&gt;# DNS A record : 18779094-3e4e-4db5-85d4-6294c5ffffff.k8s.civo.com&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Nodes:&lt;/span&gt;
+&lt;span class="c1"&gt;# +------------------+----+--------+-----------+-----------+------+----------+&lt;/span&gt;
+&lt;span class="c1"&gt;# | Name             | IP | Status | Size      | Cpu Cores | Ram  | SSD disk |&lt;/span&gt;
+&lt;span class="c1"&gt;# +------------------+----+--------+-----------+-----------+------+----------+&lt;/span&gt;
+&lt;span class="c1"&gt;# | kube-master-5cbc |    | ACTIVE | g2.xsmall |         1 | 1024 |       25 |&lt;/span&gt;
+&lt;span class="c1"&gt;# +------------------+----+--------+-----------+-----------+------+----------+&lt;/span&gt;
+&lt;span class="c1"&gt;# Applications:&lt;/span&gt;
+&lt;span class="c1"&gt;# +----------------------+---------+-----------+------------+&lt;/span&gt;
+&lt;span class="c1"&gt;# | Name                 | Version | Installed | Category   |&lt;/span&gt;
+&lt;span class="c1"&gt;# +----------------------+---------+-----------+------------+&lt;/span&gt;
+&lt;span class="c1"&gt;# | kubernetes-dashboard | v2.0.0  | true      | management |&lt;/span&gt;
+&lt;span class="c1"&gt;# +----------------------+---------+-----------+------------+&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;With the cluster up browse to&lt;br&gt;
+https://www.civo.com/account/kubernetes/18779094-3e4e-4db5-85d4-6294c5ffffff&lt;br&gt;
+and expand kubernetes-dashboard.
+It will tell you howto connect:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Get login token&lt;/span&gt;
+kubectl -n kubernetes-dashboard describe secret admin-user-token &lt;span class="p"&gt;|&lt;/span&gt; grep ^token
+&lt;span class="c1"&gt;# get api access&lt;/span&gt;
+kubectl proxy
+
+&lt;span class="c1"&gt;# Open dashboard in browser&lt;/span&gt;
+start http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+&lt;span class="c1"&gt;# Signin and paste token&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can add more apps out of the box:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Print the apps you can install&lt;/span&gt;
+civo k8s applications list
+&lt;span class="c1"&gt;# +---------------------------+------------------+--------------+-----------------+-----------------------------+&lt;/span&gt;
+&lt;span class="c1"&gt;# | Name                      | Version          | Category     | Plans           | Dependencies                |&lt;/span&gt;
+&lt;span class="c1"&gt;# +---------------------------+------------------+--------------+-----------------+-----------------------------+&lt;/span&gt;
+&lt;span class="c1"&gt;# | argo                      | (default)        | ci_cd        |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | cert-manager              | v1.0.2           | architecture |                 | Helm                        |&lt;/span&gt;
+&lt;span class="c1"&gt;# | docker-registry           | ALPHA            | architecture |                 | Helm, cert-manager, Traefik |&lt;/span&gt;
+&lt;span class="c1"&gt;# | dynamic-pv-scaler         | 0.1.0            | storage      |                 | prometheus-operator         |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Ghost                     | 3.35.5           | management   | 5GB, 10GB, 15GB | longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | gitea                     | 1.12.5           | management   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | haproxy                   | 1.4.6            | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Helm                      | 2.16.5           | management   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Jaeger-Operator           | 1.2.0            | monitoring   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Jenkins                   | 2.190.1          | ci_cd        | 5GB, 10GB, 20GB | Longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | keptn                     | 0.7.1            | ci_cd        |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | kube-hunter               | latest           | security     |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | kube-scan                 | v20.5            | security     |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | KubeDB                    | v0.12.0-r1       | database     |                 | Longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Kubei                     | 1.0.7            | security     |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Kubeless                  | 1.0.5            | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | kubernetes-dashboard      | v2.0.0           | management   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Linkerd                   | Latest           | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | loki-stack                | v0.41.2          | monitoring   |                 | prometheus-operator         |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Longhorn                  | 1.0.2            | storage      |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Maesh                     | Latest           | architecture |                 | Helm                        |&lt;/span&gt;
+&lt;span class="c1"&gt;# | MariaDB                   | 10.4.7           | database     | 5GB, 10GB, 20GB | Longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | metrics-server            | (default)        | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | MinIO                     | 2019-08-29       | storage      | 5GB, 10GB, 20GB | Longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | MongoDB                   | 4.2.0            | database     | 5GB, 10GB, 20GB | Longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Netdata                   | Latest           | monitoring   |                 | Helm                        |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Nginx                     | latest           | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | OpenFaaS                  | 0.18.0           | architecture |                 | Helm                        |&lt;/span&gt;
+&lt;span class="c1"&gt;# | permission-manager        | 1.6.0            | management   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Polaris                   | 1.2.0            | security     |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Portainer                 | ce               | management   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | PostgreSQL                |             11.5 | database     | 5GB, 10GB, 20GB | Longhorn                    |&lt;/span&gt;
+&lt;span class="c1"&gt;# | prometheus-operator       | 0.35.0           | monitoring   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | RabbitMQ                  | 3.8.8-management | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Rancher                   | v2.5.0           | management   |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Redis                     |              3.2 | database     |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | sealed-secrets            | v0.12.4          | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Selenium                  | 3.141.59-r1      | ci_cd        |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | system-upgrade-controller | v0.6.2           | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Tekton                    | v0.17.0          | ci_cd        |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Traefik                   | (default)        | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Traefik-v2                |              2.3 | architecture |                 |                             |&lt;/span&gt;
+&lt;span class="c1"&gt;# | Wordpress                 | 5.5.1            | management   | 5GB, 10GB, 20GB | longhorn, mariadb:5GB       |&lt;/span&gt;
+&lt;span class="c1"&gt;# +---------------------------+------------------+--------------+-----------------+-----------------------------+&lt;/span&gt;
+
+civo kubernetes applications add PostgreSQL --cluster&lt;span class="o"&gt;=&lt;/span&gt;Cluster-1-just-dashboard
+&lt;span class="c1"&gt;# You requested to add PostgreSQL but didn&amp;#39;t select a plan. Please choose one... (5GB, 10GB, 20GB) [5GB]: 5GB&lt;/span&gt;
+&lt;span class="c1"&gt;# Thank you, next time you could use &amp;quot;PostgreSQL:5GB&amp;quot; to choose automatically&lt;/span&gt;
+&lt;span class="c1"&gt;# Added PostgreSQL 11.5 to Kubernetes cluster Cluster-1-just-dashboard&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And finally - tear down and stop costs:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Delete cluster&lt;/span&gt;
+civo kubernetes remove Cluster-1-just-dashboard
+&lt;span class="c1"&gt;# The Kubernetes cluster called Cluster-1-just-dashboard with ID 18779094-3e4e-4db5-85d4-6294c5ffffff was deleted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Hosting your own image in Civo&lt;/h2&gt;
+&lt;p&gt;If you read &lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;, then you probably want to host your image in Civo. In that previous lab the image was hosted on your own dev PC. Now we want to host it in the cloud instead.  &lt;/p&gt;
+&lt;p&gt;We created a &lt;a href="https://github.com/rasor/eBook-UsingNETCoreDockerKubernetes/blob/master/cpt2/frontend/k8s-deploy-dev.yml"&gt;k8s-deploy-dev.yml&lt;/a&gt; for deploying the image. We will just use that same yaml for deploying to another host.&lt;br&gt;
+Cool or what :-)  &lt;/p&gt;
+&lt;p&gt;So lets repeat creating a civo cluster (this time I'll omit the dashboard):  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# help me create a cluster&lt;/span&gt;
+civo k8s create -h
+&lt;span class="c1"&gt;# create a cluster and wait for it to finish&lt;/span&gt;
+civo k8s create Cluster-2-netcore-webapp --size&lt;span class="o"&gt;=&lt;/span&gt;g2.xsmall --nodes&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt; --wait
+
+&lt;span class="c1"&gt;# print kube config for the created cluster&lt;/span&gt;
+civo k8s config Cluster-2-netcore-webapp
+&lt;span class="c1"&gt;# apiVersion: v1&lt;/span&gt;
+&lt;span class="c1"&gt;# clusters:&lt;/span&gt;
+&lt;span class="c1"&gt;# - cluster:&lt;/span&gt;
+&lt;span class="c1"&gt;#   name: cluster-1-just-dashboard&lt;/span&gt;
+
+&lt;span class="c1"&gt;# save (or merge) the config into your kubeconfig&lt;/span&gt;
+civo k8s config Cluster-2-netcore-webapp --save
+&lt;span class="c1"&gt;# Saved config to ~/.kube/config&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print nodes and apps in your cluster&lt;/span&gt;
+civo k8s show Cluster-2-netcore-webapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now with the cluster running you can just repeat what you did locally in the previous blog.&lt;br&gt;
+You deploy the website With the yaml with either &lt;code&gt;create&lt;/code&gt; or &lt;code&gt;apply&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# deploy image to k8s&lt;/span&gt;
+kubectl create -f k8s-deploy-dev.yml
+&lt;span class="c1"&gt;# deployment.apps/frontend2 created&lt;/span&gt;
+&lt;span class="c1"&gt;# service/frontend2 created&lt;/span&gt;
+
+&lt;span class="c1"&gt;# print&lt;/span&gt;
+kubectl get services &lt;span class="p"&gt;|&lt;/span&gt; grep frontend2
+&lt;span class="c1"&gt;# NAME         TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE&lt;/span&gt;
+&lt;span class="c1"&gt;# frontend2    LoadBalancer   10.106.254.38   &amp;lt;pending&amp;gt;     5000:30300/TCP   53s&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now test if you can reach it on&lt;/span&gt;
+start https://www.civo.com/account/kubernetes/18779094-3e4e-4db5-85d4-6294c5eeeeee:5000 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# remove service&lt;/span&gt;
+kubectl delete service frontend2
+&lt;span class="c1"&gt;# service &amp;quot;frontend2&amp;quot; deleted&lt;/span&gt;
+
+&lt;span class="c1"&gt;# remove replicaset, pod and deployment&lt;/span&gt;
+kubectl delete deployment frontend2
+&lt;span class="c1"&gt;# deployment.apps &amp;quot;frontend2&amp;quot; deleted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# stop the k8s cluster&lt;/span&gt;
+docker stop Cluster-2-netcore-webapp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And finally - tear down and stop costs:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Delete cluster&lt;/span&gt;
+civo kubernetes remove Cluster-2-netcore-webapp
+&lt;span class="c1"&gt;# The Kubernetes cluster called Cluster-2-netcore-webapp with ID 18779094-3e4e-4db5-85d4-6294c5eeeeee was deleted&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Learn&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/learn"&gt;Learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/learn/civo-kubernetes-quick-start-guide"&gt;Civo Kubernetes Quick Start Guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/learn/kubernetes-cluster-administration-using-civo-cli"&gt;Kubernetes Cluster Administration Using Civo CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/blog/k8s-vs-k3s"&gt;What’s the difference between k3s vs k8s&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Signup&lt;ul&gt;
+&lt;li&gt;Apply: &lt;a href="https://www.civo.com/kube100"&gt;Join the world’s first managed k3s Kubernetes service&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Operate: &lt;a href="https://www.civo.com/account"&gt;https://www.civo.com/account&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/civo/kubernetes-marketplace"&gt;kubernetes-marketplace&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Incidents: &lt;a href="http://status.civo.com/"&gt;Civo Status&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;email: info@civo.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deploy&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/learn/deploy-openfaas-with-k3s-on-civo"&gt;Deploy OpenFaaS with k3s on Civo – Civo.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/learn/deploy-a-batch-monitoring-stack-with-prometheus-pushgateway"&gt;Deploy a Batch Monitoring Stack With Prometheus PushGateway – Civo.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Develop&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.civo.com/api"&gt;Civo Cloud API Documentation - Civo.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Rancher&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://k3s.io/"&gt;K3s: Lightweight Kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Persistent volumes: &lt;a href="https://github.com/longhorn/longhorn"&gt;longhorn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rancher.com/quick-start/"&gt;Quick Start&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Training: &lt;a href="https://rancher.com/kubernetes-master-class"&gt;Kubernetes Online Master Class Series&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://info.rancher.com/kubernetes-master-class-oct27-2020"&gt;Kubernetes Master Class: Cluster Monitoring with Prometheus, Grafana and Alertmanager in Rancher 2.5 - Oct 27&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://allthingsopen.6connex.com/event/ATO/en-us/?mcc=ato-day-8am#!/RancherBooth"&gt;All Things Open&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;k8s&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands"&gt;Kubectl Reference Docs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#k3s"></category><category term="#civo"></category><category term="#k8s"></category></entry><entry><title>Run docker containers - Part 1.1</title><link href="https://rasor.github.io/run-docker-containers-part-11.html" rel="alternate"></link><published>2020-10-18T00:00:00+02:00</published><updated>2020-11-09T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-18:/run-docker-containers-part-11.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
@@ -287,7 +565,7 @@ It has to 4k hdmi ports, so you can have two monitors.&lt;/p&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog (Part 1.1) I'll do basic execution of Docker images as preparation for the next blog (Part 1.2).&lt;br&gt;
 Part 1 is about developing C# docker containers and hosting them in k8s.&lt;/p&gt;
@@ -414,7 +692,7 @@ docker rm mvcapp
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I want to install &lt;strong&gt;OpenFaaS&lt;/strong&gt; again.&lt;br&gt;
 This time running on &lt;strong&gt;Kubernetes (k8s)&lt;/strong&gt;, &lt;strong&gt;Docker Desktop&lt;/strong&gt;, &lt;strong&gt;Windows Home 10&lt;/strong&gt; with &lt;strong&gt;Virtual Machine Platform&lt;/strong&gt; on &lt;strong&gt;WSL2&lt;/strong&gt;.&lt;br&gt;
@@ -1133,15 +1411,14 @@ What I have in mind is the &lt;a href="https://kubeprod.io/"&gt;Bitnami stack&lt
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Other coming ...&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In this blog …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers …&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt; (this blog)&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/run-docker-containers-part-11.html"&gt;Part 1.1: Run docker containers&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/develop-net-docker-images-part-12.html"&gt;Part 1.2: Develop .NET docker images&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Other coming ...&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"&gt;Part 1.3: Run containers in k8s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://rasor.github.io/k3s-hosted-in-civo-part-20.html"&gt;Part 2.0: Deploy containers to Civo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;In this blog I just wanted Docker on my Windows 10 Home box.&lt;br&gt;
 I ended up with upgrading Windows allowing me to install Docker Desktop running on WSL2.&lt;br&gt;

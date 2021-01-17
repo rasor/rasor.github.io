@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2020-10-27 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2020-12-20 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2021-01-17 00:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#csharp"/>
@@ -135,7 +135,7 @@
           Posted on October 27, 2020 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
 
       </br>
-        Updated: December 20, 2020
+        Updated: January 17, 2021
     </p>
   </header>
 
@@ -148,7 +148,7 @@
 <li><a href="https://rasor.github.io/run-docker-containers-part-11.html">Part 1.1: Run docker containers</a></li>
 <li><a href="https://rasor.github.io/develop-net-docker-images-part-12.html">Part 1.2: Develop .NET docker images</a></li>
 <li><a href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html">Part 1.3: Run containers in k8s</a> (this blog)</li>
-<li><a href="https://rasor.github.io/drafts/k3s-hosted-in-civo-part-20.html">Part 2.0: Deploy containers to Civo</a></li>
+<li><a href="https://rasor.github.io/k3s-hosted-in-civo-part-20.html">Part 2.0: Deploy containers to Civo</a></li>
 </ul>
 <h1>Intro</h1>
 <p>This blog is an example of a development cycle developing in C# on Windows using VSCode editor - also for debugging docker containers - and deploying to k8s.  </p>
@@ -414,6 +414,55 @@ Note: draft is not yet upgraded to core 3.1, but is using core 2.1. The project 
 </ul>
 <p>You can also just grap the whole yaml from this blog: <a href="https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes#deploy-webappyml">Build ASP.NET Core applications deployed as Linux containers into AKS/Kubernetes clusters</a><br>
 and correct then names.  </p>
+<p>Here is the file:</p>
+<div class="highlight"><pre><span></span><span class="err"># k8s-deploy-dev.yml</span>
+<span class="err"># https://docs.microsoft.com/en-us/dotnet/architecture/containerized-lifecycle/design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes#deploy-webappyml</span>
+<span class="c">apiVersion: apps/v1</span>
+<span class="c">kind: Deployment</span>
+<span class="c">metadata:</span>
+<span class="c">  name: frontend2</span>
+<span class="c">  labels:</span>
+<span class="c">    app: usingnetcoredockerkubernetes</span>
+<span class="c">spec:</span>
+<span class="c">  replicas: 1</span>
+<span class="c">  selector:</span>
+<span class="c">    matchLabels:</span>
+<span class="c">      service: frontend2</span>
+<span class="c">  template:</span>
+<span class="c">    metadata:</span>
+<span class="c">      labels:</span>
+<span class="c">        app: usingnetcoredockerkubernetes</span>
+<span class="c">        service: frontend2</span>
+<span class="c">    spec:</span>
+<span class="c">      containers:</span>
+<span class="c">        - name: frontend2</span>
+<span class="c">          image: rasor/usingnetcoredockerkubernetes:frontend2-v1</span>
+<span class="c">          imagePullPolicy: IfNotPresent</span>
+<span class="c">          ports:</span>
+<span class="c">            - containerPort: 5000</span>
+<span class="c">              protocol: TCP</span>
+<span class="c">          env:</span>
+<span class="c">            - name: ASPNETCORE_URLS</span>
+<span class="c">              value: http://+:5000</span>
+<span class="err">---</span>
+<span class="c">apiVersion: v1</span>
+<span class="c">kind: Service</span>
+<span class="c">metadata:</span>
+<span class="c">  name: frontend2</span>
+<span class="c">  labels:</span>
+<span class="c">    app: usingnetcoredockerkubernetes</span>
+<span class="c">    service: frontend2</span>
+<span class="c">spec:</span>
+<span class="c">  type: LoadBalancer</span>
+<span class="c">  ports:</span>
+<span class="c">    - port: 5000</span>
+<span class="c">      targetPort: 5000</span>
+<span class="c">      protocol: TCP</span>
+<span class="c">  selector:</span>
+<span class="c">    service: frontend2</span>
+</pre></div>
+
+
 <p>You can print all resource types with<br>
 <code>kubectl api-resources --sort-by=kind</code><br>
 They are</p>
