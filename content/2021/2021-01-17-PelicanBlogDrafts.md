@@ -57,6 +57,9 @@ Status: published
 Then you will find it  on  
 https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html
 
-Notice: The commands `serve` and `publish` are two small scrips I created in [Using Pelican blog on Github pages]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md)  
+Notice: 
+
+* The commands `serve` and `publish` are two small scrips I created in [Using Pelican blog on Github pages]({filename}/2017/2017-09-23B-PelicanBlogOnGithubPages.md)  
+* After `publish` has run it will take 1 - 2 minutes before you see it deployed to Github pages
 
 The End  
