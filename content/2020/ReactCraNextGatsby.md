@@ -40,7 +40,7 @@ Next.js vs Gatsby vs create-react-app
     * App CLI: `npm init next-app nextjs-blog --example "https://github.com/zeit/next-learn-starter/tree/master/learn-starter --use-npm"` - [Create a Next.js App](https://nextjs.org/learn/basics/create-nextjs-app/setup)
     * Guide: [The Next.js Handbook](https://www.freecodecamp.org/news/the-next-js-handbook/)
 * [CRL - create-react-library](https://www.npmjs.com/package/create-react-library)
-    * Lib CLI: `npx create-react-library --template typescript --mananger npm` - [create-react-library](https://www.npmjs.com/package/create-react-library)
+    * Lib CLI: `npx create-react-library --template typescript --manager npm` - [create-react-library](https://www.npmjs.com/package/create-react-library)
 * [Neutrino](https://neutrinojs.org/)
     * Lib CLI: `npx @neutrinojs/create-project my-lib`- @neutrinojs/react-components - [React Components - Neutrino](https://neutrinojs.org/packages/react-components/)
     * App CLI: `npx @neutrinojs/create-project my-app` - @neutrinojs/react - [React - Neutrino](https://neutrinojs.org/packages/react/)
