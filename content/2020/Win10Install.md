@@ -119,6 +119,14 @@ code -v
 # 1.41.1
 ```
 
+## Visual Studio
+
+* Download [Visual Studio IDE, Code Editor](https://visualstudio.microsoft.com/)[Getting Title at 17:33](https://visualstudio.microsoft.com/)
+
+## SMSS
+
+[Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
+
 ## Brave browser
 
 * Download [Brave](https://laptop-updates.brave.com/latest/winx64)
@@ -177,7 +185,7 @@ It [integrates into filemanagers](https://www.pcloud.com/how-to-install-pcloud-d
 
 ## iTunes
 
-* [Service Unavailable](https://www.microsoft.com/en-us/p/itunes/9pb2mz1zmb1s)
+* [iTunes](https://www.microsoft.com/en-us/p/itunes/9pb2mz1zmb1s)
 
 ## PDF reader
 

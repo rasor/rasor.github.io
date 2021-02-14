@@ -33,7 +33,7 @@ Tags: #blockchain,
 * Desktop Wallet: [MyCrypto](https://github.com/MyCryptoHQ)
 * Pay gas with tokens: [Gas Station Service](https://medium.com/mycrypto/the-future-of-ethereum-doesnt-have-wallets-232fcee708bf)
 
-# Identity
+# Identity - DID
 
 * [DIF](https://identity.foundation/)
     * [DIF (@DecentralizedID) | Twitter](https://twitter.com/DecentralizedID)
@@ -48,8 +48,26 @@ Tags: #blockchain,
     * [https://developer.uport.me/](https://developer.uport.me/)
 * [Veres One - A Globally Interoperable Blockchain for Identity](https://veres.one/)
 * [Sovrin](https://sovrin.org/)
+* [Iden3](https://iden3.io/)
+    * [iden3](https://github.com/iden3)
+* [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
+* [3Box](https://3box.io/)
+* [Blockchain and Digital Identity: Ultimate Guide](https://blockgeeks.com/guides/blockchain-and-digital-identity-ultimate-guide/)
+    * [Workshop: Understanding Identity Tokens and ERC 725 - Blockchain Courses](https://courses.blockgeeks.com/course/understanding-identity-tokens-and-erc-725/)
+    * [Identity smart contract using ERC 725](https://blockgeeks.com/abg/identity-smart-contract-using-erc-725/)
+* [Identity Cryptocurrencies | CryptoSlate](https://cryptoslate.com/cryptos/identity)
+    * Ontology
+    * Civic (erc-20)
+    * Elastos
+    * Dock
+* [Ontology | A blockchain for self-sovereign ID and DATA](https://ont.io/)
 * [Civic Secure Identity Ecosystem](https://www.civic.com/)
     * [Civic Secure Identity Ecosystem - Partners and Users](https://www.civic.com/solutions/partners/)
+* [Elastos DID](https://elastos.academy/did/)
+    * [Bringing Chainlink to Elastos Mainnet](https://medium.com/@leo.vigna/bringing-chainlink-to-elastos-mainnet-9134bb3da6c9)
+    * [Elastos | Welcome to the Modern Internet](https://www.elastos.org/)
+* [Dock: Verifiable Credentials](https://www.dock.io/)
+    * [Healthcare Credential Verification &amp; Monitoring](https://verifiable.com/)
 
 # IoT
 
