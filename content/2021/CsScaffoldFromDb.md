@@ -83,12 +83,37 @@ Open the web in a browser on either
 
 Above code is [V.0.0.1](https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.1)
 
-### 
+### Add EF to dotnet
+
+```bash
+# In project folder add Nuget Package for your code
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+# info : PackageReference for package 'Microsoft.EntityFrameworkCore.SqlServer' version '5.0.3' added to file \CsScaffoldNorthwind.csproj'.
+
+# Install the EF Tool
+dotnet ef -help
+# Could not execute because the specified command or file was not found.
+dotnet tool install --global dotnet-ef
+# You can invoke the tool using the following command: dotnet-ef
+# Tool 'dotnet-ef' (version '5.0.3') was successfully installed.
+dotnet ef --version
+# Entity Framework Core .NET Command-line Tools
+# 5.0.3
+
+# When you need to update do:
+dotnet tool update
+
+# Add yet a Nuget package
+dotnet add package Microsoft.EntityFrameworkCore.Design
+# info : PackageReference for package 'Microsoft.EntityFrameworkCore.Design' version '5.0.3' added to file \CsScaffoldNorthwind.csproj'.
+
+```
 
 ## Links
 
 * [Scaffolding ASP.NET Core MVC](https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/)
 * [ASP.NET MVC - Scaffolding - Tutorialspoint](https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm)
+* [Installing Entity Framework Core - EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/overview/install)
 * [Get the sample SQL Server databases for ADO.NET code samples - ADO.NET](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server)
 
 The End.
