@@ -127,6 +127,10 @@ code -v
 
 [Download SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
 
+## Agent Ransack
+
+* Download [Agent Ransack - Mythicsoft](https://www.mythicsoft.com/agentransack/download/)
+
 ## Brave browser
 
 * Download [Brave](https://laptop-updates.brave.com/latest/winx64)
