@@ -26,9 +26,16 @@ HowTo setup your own vault?
     * Doc: [Architecture | Vault by HashiCorp](https://www.vaultproject.io/docs/internals/architecture.html)
         * [Key Rotation | Vault by HashiCorp](https://www.vaultproject.io/docs/internals/rotation)
     * eBook: [Learning DevOps](https://www.packtpub.com/product/learning-devops/9781838642730) Cpt 12 - Page 366 - Installing Vault locally.
+    * Pros:
+        * Can be installed as a k8s app
 * HSM and Cold Storage 
     * [square/subzero](https://github.com/square/subzero)
     * [Ledger Vault - solution to scale your digital asset business](https://vaultplatform.ledger.com/why-vault)
     * CustodianS: [Leading US-based Crypto Custodian Providers for Institutional Clients](https://medium.com/blockchain4all/leading-us-based-crypto-custodian-providers-for-institutional-clients-3ba9b8683c6d)
-
+* Bitwarden Secure Notes (can be Onprem installed)
+    * Code: [Bitwarden](https://github.com/bitwarden)
+    * [Host It Yourself](https://bitwarden.com/open-source/)
+    * Automate with [bitwarden/cli](https://github.com/bitwarden/cli)
+* Keybase Private files (in Cloud)
+    
 The End
