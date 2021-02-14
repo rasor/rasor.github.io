@@ -114,11 +114,49 @@ dotnet add package Microsoft.EntityFrameworkCore.Design
 dotnet ef dbcontext scaffold "Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
 ```
 
+This added approx 25 models from the DB.  
+
+Above code is [V.0.0.2](https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.2)
+
+* In VS Right click on Controller folder - Add - New scaffolding Item
+    * Select `MVC Controller with views, using EF`
+    * Select model (customers) and DB  
+    ![Scaffold Controller and View](../img/2021/2021-02-14-Scaffold01.PNG)  
+* Run (F5)
+* Browse to https://localhost:5001/customers
+    * Gives you `InvalidOperationException: Unable to resolve service for type 'CsScaffoldNorthwind.Models.NorthwindContext'`
+* Add to `appsettings.Development.json`:
+
+```jsonc
+// appsettings.Development.json
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;"
+  },
+```
+* Add to `startup.cs`:
+
+```csharp
+// startup.cs
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllersWithViews();
+
+            // Add this:
+            var connectionString = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<NorthwindContext>(options => options.UseSqlServer(connectionString));
+        }
+```
+* Run (F5)
+* Browse to https://localhost:5001/customers
+
+Above code is [V.0.0.3](https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.3)
+
 ## Links
 
 * [Scaffolding ASP.NET Core MVC](https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/)
 * [ASP.NET MVC - Scaffolding - Tutorialspoint](https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm)
 * [Installing Entity Framework Core - EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/overview/install)
+* [Connection Strings - EF Core](https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-strings)
 * [Get the sample SQL Server databases for ADO.NET code samples - ADO.NET](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server)
 
 The End.
