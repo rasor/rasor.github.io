@@ -106,7 +106,12 @@ dotnet tool update
 # Add yet a Nuget package
 dotnet add package Microsoft.EntityFrameworkCore.Design
 # info : PackageReference for package 'Microsoft.EntityFrameworkCore.Design' version '5.0.3' added to file \CsScaffoldNorthwind.csproj'.
+```
 
+### Scaffold using EF
+
+```
+dotnet ef dbcontext scaffold "Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models
 ```
 
 ## Links
