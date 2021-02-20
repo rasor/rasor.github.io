@@ -195,9 +195,26 @@ So we [need an older one from disco (19.04)](https://launchpad.net/~yubico/+arch
 
 ```bash
 # verify source list is updated
-kate /etc/apt/sources.list
+sudo xdg-open /etc/apt/sources.list # or
+sudo kate /etc/apt/sources.list
+# if not add manually:
+```
+
+```bash
+# /etc/apt/sources.list:
+deb http://ppa.launchpad.net/yubico/stable/ubuntu disco main
+```
+
+```bash
 # update sw from Other Software (and all the other sources)
 sudo apt update
+# The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 43D5C49532CBA1A9
+
+# If you get error above then
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 43D5C49532CBA1A9
+# Retry
+sudo apt update
+
 # you should now be able to find the authenticator in your repos
 apt list yubi*
 # if you got it in the list you can install it
