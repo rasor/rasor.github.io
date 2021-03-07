@@ -2,7 +2,7 @@ Title: Moveslink 2 crash
 Status: published
 Date: 2018-01-11 19:00
 Category: DevOps
-Tags: #ambit, #moveslink, #drivers, #windows
+Tags: #ambit, #moveslink, #drivers, #windows, #suuntoapp
 
 A few days ago I [resat my Windows 10](https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options), so I could start from scratch.
 
@@ -54,5 +54,7 @@ In Devices Manager I could not see Ambit, but now I knew which drivers it used
 
 * [Garmin 305 display misbehaving](https://rasor.wordpress.com/2012/11/09/garmin-305-display-misbehaving/)
 * [Suunto Ruter (in danish)](https://rasordk.wordpress.com/2015/01/08/suunto-ruter/)
+* [Moveslink2 is dead - Suunto App long live](https://www.facebook.com/soren.raarup/posts/10158624883721939)
+    * [How do I use the Suunto services with Ambit2?](https://www.suunto.com/da-dk/Support/faq-articles/transition/how-do-i-use-the-suunto-services-with-ambit2/)
 
 The End
