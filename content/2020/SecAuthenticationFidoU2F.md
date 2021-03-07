@@ -21,6 +21,7 @@ FIDO **U2F** uses **public keys**. The private key stays in your device, which c
     * [FIDO NFC Protocol Specification v1.0](https://fidoalliance.org/specs/fido-u2f-v1.2-ps-20170411/fido-u2f-nfc-protocol-v1.2-ps-20170411.html)
     * [U2F Security Key - Buy Guide - FIDO & YubiKey](https://u2f-key.tech/)
 * [FIDO® Certified products](https://fidoalliance.org/certification/fido-certified-products/)
+* [Top 10 U2F Security Keys of 2021 | Video Review](https://wiki.ezvid.com/best-u2f-security-keys)
 
 ### FIDO2, WebAuthn & CTAP
 
@@ -96,6 +97,8 @@ News:
 |VASCO|[]()|
 |WWPass|[]()|
 |Yubikey 5|[32 OATH-TOTP](https://support.yubico.com/support/solutions/articles/15000014174--yubikey-5-nfc)|
+|[HyperFIDO](https://www.hypersecu.com/hyperfido)|[HYPERFIDO Pro MINI](https://www.amazon.co.uk/HYPERFIDO-MINI-FIDO2-HOTP-Security/dp/B0813YWZB2/ref=sr_1_1?dchild=1&keywords=hyperfido&qid=1615104282&sr=8-1)|U2F/FIDO2/HOTP Security Key|
+|[HyperFIDO](https://www.hypersecu.com/hyperfido)|[HyperFIDO Pro FIDO2 Security Key](https://www.amazon.co.uk/HyperFIDO-Pro-Titanium-FIDO2-Security/dp/B07T7SPMJB/ref=sr_1_2?dchild=1&keywords=hyperfido&qid=1615104419&sr=8-2)|Metal case|
 
 ### Who else supports U2F?
 
