@@ -1,5 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-01-17T17:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Setting Pelican blogs in "draft" - 4 review. HowTo</title><link href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html" rel="alternate"></link><published>2021-01-17T00:00:00+01:00</published><updated>2021-01-17T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-01-17:/setting-pelican-blogs-in-draft-4-review-howto.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-03-13T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-03-13T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
+&lt;p&gt;In this blog I want to start using Ubuntu 20.04 and see if it gives an ok …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
+&lt;p&gt;In this blog I want to start using Ubuntu 20.04 and see if it gives an ok experience running Linux on Windows (and using it as a developer PC).  &lt;/p&gt;
+&lt;p&gt;If you have installed WSL2 and a default linux disto and in Visual Studio Code have installed &lt;a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl"&gt;Remote WSL&lt;/a&gt; then you should open Remote WSL and be able to see your default distro:
+&lt;img alt="Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-01.png"&gt;.  &lt;/p&gt;
+&lt;h2&gt;Install Linux distro&lt;/h2&gt;
+&lt;p&gt;Now I want to use Ubuntu instead. 
+&lt;a href="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;Get Ubuntu 20.04 LTS - Microsoft Store&lt;/a&gt;
+&lt;img alt="Ubuntu distro on the web" src="../img/2021/2021-03-13-wsl2-03.png"&gt;.&lt;br&gt;
+Press &lt;code&gt;Get&lt;/code&gt;. This will open &lt;code&gt;Microsoft Store&lt;/code&gt; on your PC and yet again press &lt;code&gt;Get&lt;/code&gt;. It will download 0.5 GB!&lt;br&gt;
+When downloaded it will ask you to &lt;code&gt;Launch&lt;/code&gt; or to &lt;code&gt;Pin to start&lt;/code&gt;. When you Launch you start installing Ubuntu - you just follow the steps.&lt;br&gt;
+&lt;img alt="Ubuntu distro install" src="../img/2021/2021-03-13-wsl2-04.png"&gt;.  &lt;/p&gt;
+&lt;p&gt;Now you can see the Ubuntu running, but not default (*)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# CMD on Win10&lt;/span&gt;
+wsl -l -v
+&lt;span class="c1"&gt;#   NAME                   STATE           VERSION&lt;/span&gt;
+&lt;span class="c1"&gt;# * openSUSE-Leap-15-1     Stopped         2&lt;/span&gt;
+&lt;span class="c1"&gt;#   docker-desktop-data    Stopped         2&lt;/span&gt;
+&lt;span class="c1"&gt;#   Ubuntu-20.04           Running         2&lt;/span&gt;
+&lt;span class="c1"&gt;#   docker-desktop         Stopped         2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Set Ubunto default&lt;/span&gt;
+wsl --set-default Ubuntu-20.04
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png"&gt;.  &lt;/p&gt;
+&lt;p&gt;Next you should right-click the distro and &lt;code&gt;Connect to WSL&lt;/code&gt;.  &lt;/p&gt;
+&lt;h2&gt;Install apps into the distro&lt;/h2&gt;
+&lt;h3&gt;What's in the box?&lt;/h3&gt;
+&lt;p&gt;Open a terminal. You will be in your home folder &lt;code&gt;~&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="Terminal in WSL2" src="../img/2021/2021-03-13-wsl2-06.png"&gt;.&lt;br&gt;
+Nice - so now you can install stuff:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Do we have curl?&lt;/span&gt;
+curl --version
+&lt;span class="c1"&gt;# curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Do we have wget?&lt;/span&gt;
+wget --version
+&lt;span class="c1"&gt;# GNU Wget 1.20.3 built on linux-gnu.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Do we have git?&lt;/span&gt;
+git --version
+&lt;span class="c1"&gt;# git version 2.25.1&lt;/span&gt;
+
+&lt;span class="c1"&gt;# update packages&lt;/span&gt;
+sudo apt update
+
+&lt;span class="c1"&gt;# Do we have python?&lt;/span&gt;
+python3 -V
+&lt;span class="c1"&gt;# Python 3.8.5&lt;/span&gt;
+pip3 -V
+&lt;span class="c1"&gt;# Command &amp;#39;pip3&amp;#39; not found, but can be installed with:&lt;/span&gt;
+&lt;span class="c1"&gt;# sudo apt install python3-pip&lt;/span&gt;
+sudo apt install python3-pip
+pip3 -V
+&lt;span class="c1"&gt;# pip 20.0.2 from /usr/lib/python3/dist-packages/pip (python 3.8)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;xClip&lt;/h3&gt;
+&lt;p&gt;A copy-paste tool  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Used during Git config &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Install &lt;a href="https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/"&gt;xClip&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install xclip
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Git&lt;/h3&gt;
+&lt;p&gt;Though git is installed you'll probably want configuraions like SSH access to your github repo.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Guides&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/en/articles/connecting-to-github-with-ssh"&gt;Connecting to GitHub with SSH&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://help.github.com/en/articles/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh"&gt;Changing a remote URL&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Optionally add some author info:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git config --global user.name &lt;span class="s2"&gt;&amp;quot;Your Name&amp;quot;&lt;/span&gt;
+git config --global user.email &lt;span class="s2"&gt;&amp;quot;youremail@domain.com&amp;quot;&lt;/span&gt;
+git config --list
+&lt;span class="c1"&gt;# The information you entered is stored in your Git configuration file ~/.gitconfig&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;If you use 2FA on github, then SSH access with a private key avoids having a &lt;code&gt;Personal Access Token&lt;/code&gt; to risk to loose and having to cache. More info on &lt;a href="https://help.github.com/en/articles/which-remote-url-should-i-use#cloning-with-ssh-urls"&gt;Which remote URL should I use?&lt;/a&gt;.&lt;br&gt;
+So from VSCode rather like to use SSH access (opposed to HTTPS access).&lt;br&gt;
+Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  &lt;/p&gt;
+&lt;p&gt;Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode
+* Ref: 
+&lt;a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code"&gt;Version Control in Visual Studio Code&lt;/a&gt;
+* But you might get it working by &lt;a href="https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases"&gt;Storing SSH key passphrase in KDE Wallet&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Check for existing SSH keys&lt;/span&gt;
+ls -al ~/.ssh
+&lt;span class="c1"&gt;# Are there any you want to reuse?&lt;/span&gt;
+&lt;span class="c1"&gt;# ls: cannot access &amp;#39;/home/rasor/.ssh&amp;#39;: No such file or directory&lt;/span&gt;
+mkdir ~/.ssh
+
+&lt;span class="c1"&gt;# I want to generate a new key pair&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/.ssh
+ssh-keygen -t rsa -b &lt;span class="m"&gt;4096&lt;/span&gt; -C &lt;span class="s2"&gt;&amp;quot;youremail@domain.com&amp;quot;&lt;/span&gt; -f id_rsa_youruserid_github
+&lt;span class="c1"&gt;# Generating public/private rsa key pair.&lt;/span&gt;
+&lt;span class="c1"&gt;# Enter file in which to save the key (/home/youruserid/.ssh/id_rsa): id_rsa_youruserid_github&lt;/span&gt;
+&lt;span class="c1"&gt;# Enter passphrase (empty for no passphrase): &lt;/span&gt;
+&lt;span class="c1"&gt;# Enter same passphrase again: &lt;/span&gt;
+&lt;span class="c1"&gt;# Your identification has been saved in id_rsa_youruserid_github.&lt;/span&gt;
+&lt;span class="c1"&gt;# Your public key has been saved in id_rsa_youruserid_github.pub.&lt;/span&gt;
+&lt;span class="c1"&gt;# The key fingerprint is:&lt;/span&gt;
+&lt;span class="c1"&gt;# SHA256:X4uMb123456789012345678901234567rWzWRZD1Szl youremail@domain.com&lt;/span&gt;
+&lt;span class="c1"&gt;# The key&amp;#39;s randomart image is:&lt;/span&gt;
+&lt;span class="c1"&gt;# +---[RSA 4096]----+&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Avoid error &amp;quot;Can&amp;#39;t clone git repo and getting error ssh_askpass: exec(/usr/bin/ssh-askpass): No such file or directory Host key verification failed&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# https://stackoverflow.com/questions/52711525/cant-clone-git-repo-and-getting-error-ssh-askpass-exec-usr-bin-ssh-askpass&lt;/span&gt;
+ssh-keyscan -t rsa github.com &amp;gt;&amp;gt; ~/.ssh/known_hosts
+&lt;span class="c1"&gt;# github.com:22 SSH-2.0-OpenSSH_7.2p2 Ubuntu-4ubuntu2.8&lt;/span&gt;
+ssh-keyscan -t rsa gitlab.com &amp;gt;&amp;gt; ~/.ssh/known_hosts
+ssh-keyscan -t rsa bitbucket.org &amp;gt;&amp;gt; ~/.ssh/known_hosts
+ssh-keyscan -t rsa ssh.dev.azure.com &amp;gt;&amp;gt; ~/.ssh/known_hosts
+
+&lt;span class="c1"&gt;# later on you will put your keys in a keychain - for that you need to install one&lt;/span&gt;
+sudo apt install keychain
+&lt;span class="c1"&gt;# vExtra info on [keychain...](https://www.funtoo.org/Keychain)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now you are ready to use your keychain.  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/
+touch ~/.bash_profile
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In VSCode you can blowse to  ~/.bash_profile add your newly generated ssh key to the keychain whenever you open a terminal&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# ~/.bash_profile&lt;/span&gt;
+&lt;span class="c1"&gt;# Add your SSH key to SSH Agent&lt;/span&gt;
+&lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;keychain --eval --agents ssh id_rsa_youruserid_github&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="c1"&gt;# Now you don&amp;#39;t have to add your SSH key to agent (`ssh-add`) before you commit to github.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Open a new terminal to make it take effect.&lt;/p&gt;
+&lt;p&gt;Add a new SSH key to your GitHub (bitbucket, gitlab, etc) account&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# verify that keychain in installed&lt;/span&gt;
+&lt;span class="nb"&gt;eval&lt;/span&gt; &lt;span class="sb"&gt;`&lt;/span&gt;keychain&lt;span class="sb"&gt;`&lt;/span&gt;
+&lt;span class="c1"&gt;# * keychain 2.8.5 ~ http://www.funtoo.org&lt;/span&gt;
+&lt;span class="c1"&gt;# * Starting ssh-agent...&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Copy the contents of the id_rsa_youruserid_github.pub file to your clipboard&lt;/span&gt;
+xclip -sel clip &amp;lt; ~/.ssh/id_rsa_youruserid_github.pub
+&lt;span class="c1"&gt;# Error: Can&amp;#39;t open display: (null)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Hmm - xclip not working in WSL - then instead open the file ~/.ssh/id_rsa_youruserid_github.pub in VSCode and select-all and copy (ctrl-a ctrl-c).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Goto &lt;a href="https://github.com/settings/keys"&gt;https://github.com/settings/keys&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;or &lt;a href="https://bitbucket.org/account/user/your_userid/"&gt;bitbucket&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;or &lt;a href="https://dev.azure.com/your_userid/_usersSettings/keys"&gt;dev.azure&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;or &lt;a href="https://gitlab.com/profile/keys"&gt;gitlab.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;New SSH key&lt;/li&gt;
+&lt;li&gt;Paste key: Ctrl-V&lt;/li&gt;
+&lt;li&gt;Title: vscode_youruserid_github&lt;/li&gt;
+&lt;li&gt;Save key: Add SSH key&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally you need to change urls on your local repos remote origin from HTTPS to SSH&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; your_local_repo
+&lt;span class="c1"&gt;# Print remote url&lt;/span&gt;
+git remote -v
+&lt;span class="c1"&gt;# is it using HTTPS?&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Change to SSH (get the SSH url from your remote repo on github)&lt;/span&gt;
+git remote set-url origin git@github.com:USERNAME/REPOSITORY.git
+&lt;span class="c1"&gt;# or if origin was removed:&lt;/span&gt;
+git remote add origin git@github.com:USERNAME/REPOSITORY.git
+&lt;span class="c1"&gt;# Print remote url&lt;/span&gt;
+git remote -v
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Troubleshooting github connection:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone git@github.com:USERNAME/REPOSITORY.git
+&lt;span class="c1"&gt;# Cloning into &amp;#39;REPOSITORY&amp;#39;...&lt;/span&gt;
+&lt;span class="c1"&gt;# Warning: Permanently added the RSA host key for IP address &amp;#39;250.50.50.50&amp;#39; to the list of known hosts.&lt;/span&gt;
+&lt;span class="c1"&gt;# git@github.com: Permission denied (publickey).&lt;/span&gt;
+&lt;span class="c1"&gt;# fatal: Could not read from remote repository.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# hmmm - do we have our key in the keychain?&lt;/span&gt;
+keychain --list
+&lt;span class="c1"&gt;# Could not open a connection to your authentication agent.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# does not seem so.&lt;/span&gt;
+&lt;span class="c1"&gt;# Try close VSCode - re-open VSCode and a terminal and retry&lt;/span&gt;
+keychain --list
+&lt;span class="c1"&gt;#v4096 SHA256:zCtiTmbxxxxxxxxxxxxxxxxxxxxxxxxx youremail@aa.bb (RSA)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Nice - try clone again&lt;/span&gt;
+git clone git@github.com:USERNAME/REPOSITORY.git
+&lt;span class="c1"&gt;# Cloning into &amp;#39;REPOSITORY&amp;#39;...&lt;/span&gt;
+&lt;span class="c1"&gt;# remote: Enumerating objects: 3, done.&lt;/span&gt;
+&lt;span class="c1"&gt;# Receiving objects: 100% (3/3), done.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now we can clone using the SSH key, then add a file, commit and try to see if you can push, too.&lt;/p&gt;
+&lt;h3&gt;NVM and NodeJs&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/nvm-sh/nvm"&gt;nvm @ github&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Do we have nvm?&lt;/span&gt;
+nvm -list
+&lt;span class="c1"&gt;# Nope&lt;/span&gt;
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh &lt;span class="p"&gt;|&lt;/span&gt; bash
+&lt;span class="c1"&gt;# =&amp;gt; Appending nvm source string to /home/rasor/.bashrc&lt;/span&gt;
+&lt;span class="c1"&gt;# =&amp;gt; Appending bash_completion source string to /home/rasor/.bashrc&lt;/span&gt;
+&lt;span class="c1"&gt;# internal/modules/cjs/loader.js:796&lt;/span&gt;
+&lt;span class="c1"&gt;#     throw err;&lt;/span&gt;
+&lt;span class="c1"&gt;#     ^&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Error: Cannot find module &amp;#39;\\wsl$\Ubuntu-20.04\mnt\c\Program Files\nodejs\node_modules\npm\bin\npm-cli.js&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;#     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:793:17)&lt;/span&gt;
+&lt;span class="c1"&gt;#     at Function.Module._load (internal/modules/cjs/loader.js:686:27)&lt;/span&gt;
+&lt;span class="c1"&gt;#     at Function.Module.runMain (internal/modules/cjs/loader.js:1043:10)&lt;/span&gt;
+&lt;span class="c1"&gt;#     at internal/main/run_main_module.js:17:11 {&lt;/span&gt;
+&lt;span class="c1"&gt;#   code: &amp;#39;MODULE_NOT_FOUND&amp;#39;,&lt;/span&gt;
+&lt;span class="c1"&gt;#   requireStack: []&lt;/span&gt;
+&lt;span class="c1"&gt;# }&lt;/span&gt;
+&lt;span class="c1"&gt;# =&amp;gt; Close and reopen your terminal to start using nvm or run the following to use it now:&lt;/span&gt;
+
+&lt;span class="c1"&gt;# export NVM_DIR=&amp;quot;$HOME/.nvm&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# [ -s &amp;quot;$NVM_DIR/nvm.sh&amp;quot; ] &amp;amp;&amp;amp; \. &amp;quot;$NVM_DIR/nvm.sh&amp;quot;  # This loads nvm&lt;/span&gt;
+&lt;span class="c1"&gt;# [ -s &amp;quot;$NVM_DIR/bash_completion&amp;quot; ] &amp;amp;&amp;amp; \. &amp;quot;$NVM_DIR/bash_completion&amp;quot;  # This loads nvm bash_completion&lt;/span&gt;
+
+&lt;span class="c1"&gt;# ..... something went wrong - but did it matter? Check if it added a NVM envir key:&lt;/span&gt;
+printenv NVM_DIR
+&lt;span class="c1"&gt;# /home/rasor/.nvm&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Now start yet a terminal and&lt;/span&gt;
+nvm -list
+&lt;span class="c1"&gt;#             N/A&lt;/span&gt;
+&lt;span class="c1"&gt;# iojs -&amp;gt; N/A (default)&lt;/span&gt;
+&lt;span class="c1"&gt;# node -&amp;gt; stable (-&amp;gt; N/A) (default)&lt;/span&gt;
+&lt;span class="c1"&gt;# unstable -&amp;gt; N/A (default)&lt;/span&gt;
+
+&lt;span class="c1"&gt;# nice - it is installed. Now install latest Node LTS - see https://nodejs.org/en/&lt;/span&gt;
+nvm install &lt;span class="m"&gt;14&lt;/span&gt;.16.0
+nvm list
+&lt;span class="c1"&gt;# -&amp;gt;     v14.16.0&lt;/span&gt;
+&lt;span class="c1"&gt;# default -&amp;gt; 14.16.0 (-&amp;gt; v14.16.0)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Great - now I have a fine start with git, python and nodejs&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#ubuntu"></category><category term="#wsl2"></category><category term="#win10"></category></entry><entry><title>Setting Pelican blogs in "draft" - 4 review. HowTo</title><link href="https://rasor.github.io/setting-pelican-blogs-in-draft-4-review-howto.html" rel="alternate"></link><published>2021-01-17T00:00:00+01:00</published><updated>2021-01-17T17:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-01-17:/setting-pelican-blogs-in-draft-4-review-howto.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt;&lt;/li&gt;
@@ -530,6 +788,7 @@ civo kubernetes remove Cluster-2-netcore-webapp
 &lt;li&gt;Deploy&lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.civo.com/learn/deploy-openfaas-with-k3s-on-civo"&gt;Deploy OpenFaaS with k3s on Civo – Civo.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://www.civo.com/learn/deploy-a-batch-monitoring-stack-with-prometheus-pushgateway"&gt;Deploy a Batch Monitoring Stack With Prometheus PushGateway – Civo.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://toolkit.fluxcd.io/guides/sealed-secrets/"&gt;Sealed Secrets - Flux | GitOps Toolkit&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;Develop&lt;ul&gt;
@@ -3087,8 +3346,12 @@ Then I installed &lt;a href="http://www.movescount.com/connect/moveslink"&gt;Mov
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.wordpress.com/2012/11/09/garmin-305-display-misbehaving/"&gt;Garmin 305 display misbehaving&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasordk.wordpress.com/2015/01/08/suunto-ruter/"&gt;Suunto Ruter (in danish)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.facebook.com/soren.raarup/posts/10158624883721939"&gt;Moveslink2 is dead - Suunto App long live&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.suunto.com/da-dk/Support/faq-articles/transition/how-do-i-use-the-suunto-services-with-ambit2/"&gt;How do I use the Suunto services with Ambit2?&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#ambit"></category><category term="#moveslink"></category><category term="#drivers"></category><category term="#windows"></category></entry><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#ambit"></category><category term="#moveslink"></category><category term="#drivers"></category><category term="#windows"></category><category term="#suuntoapp"></category></entry><entry><title>NAS in the cloud</title><link href="https://rasor.github.io/nas-in-the-cloud.html" rel="alternate"></link><published>2018-01-01T12:00:00+01:00</published><updated>2018-01-01T12:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2018-01-01:/nas-in-the-cloud.html</id><summary type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
 &lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.
 One of …&lt;/p&gt;</summary><content type="html">&lt;p&gt;For the last many years I've been warming up to buy a NAS solution for my home with mirroved disks and at least 1 TB.&lt;/p&gt;
 &lt;p&gt;I have I-drives at several providers, since the free veersion does not give much space compared to what you often wants to backup.

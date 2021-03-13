@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="Intro ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010. It is a great feature to use for PoCs and demos. In this blog I&#39;ll use Northwind …" />
+<meta name="keywords" content="#csharp, #ef, #db, #mvc">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Scaffolding DB layer from DB"/>
+<meta property="og:description" content="Intro ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010. It is a great feature to use for PoCs and demos. In this blog I&#39;ll use Northwind …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/scaffolding-db-layer-from-db.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#csharp"/>
+<meta property="article:tag" content="#ef"/>
+<meta property="article:tag" content="#db"/>
+<meta property="article:tag" content="#mvc"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Scaffolding DB layer from DB</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="scaffolding-db-layer-from-db">Scaffolding DB layer from DB</h1>
+    <p>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+        Updated: January 01, 2099
+    </p>
+  </header>
+
+
+  <div>
+    <h2>Intro</h2>
+<p>ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010.  </p>
+<p>It is a great feature to use for PoCs and demos.  </p>
+<p>In this blog I'll use Northwind DB and scaffold a master-detail view of <code>orders</code> and <code>order details</code></p>
+<h2>Install</h2>
+<h3>Prerequisites</h3>
+<ul>
+<li>SMSS</li>
+<li>Visual Studio</li>
+</ul>
+<h3>Install Northwind SQL DB</h3>
+<ul>
+<li>Clone <a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs">Northwind DB</a></li>
+<li>or clone a <a href="https://github.com/microsoft/sql-server-samples#cloning-only-a-subset-of-the-repo-with-sparse-checkout">subset</a></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># Bash:</span>
+<span class="c1"># full clone</span>
+git clone https://github.com/microsoft/sql-server-samples.git
+<span class="nb">cd</span> sql-server-samples/samples/databases/northwind-pubs
+</pre></div>
+
+
+<ul>
+<li>Open SMSS</li>
+<li>Connect to the target SQL Server<ul>
+<li>In my case I connect to <code>localhost\SQLEXPRESS</code></li>
+</ul>
+</li>
+<li>Open <code>instnwnd.sql</code> in SMSS</li>
+<li>Execute <code>instnwnd.sql</code></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1">-- check if we got some data</span>
+<span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">orders</span>
+<span class="c1">-- gives 830 rows</span>
+</pre></div>
+
+
+<h2>Scaffold</h2>
+<h3>Create a webapp</h3>
+<div class="highlight"><pre><span></span><span class="c1"># Bash:</span>
+mkdir CsScaffoldNorthwind
+<span class="nb">cd</span> CsScaffoldNorthwind
+
+<span class="c1"># We need a c# web template - what is its name?</span>
+dotnet new -l
+<span class="c1"># dotnet gitignore file                             gitignore                                  Config</span>
+<span class="c1"># ASP.NET Core Web App (Model-View-Controller)      mvc                      [C#], F#          Web/MVC</span>
+<span class="c1"># Solution File                                     sln                                        Solution</span>
+dotnet new mvc
+<span class="c1"># We need a solution file</span>
+dotnet new sln
+<span class="c1"># We need a gitignore file</span>
+dotnet new gitignore
+
+<span class="c1"># Test build and run</span>
+dotnet build
+dotnet run
+</pre></div>
+
+
+<p>Open the web in a browser on either  </p>
+<ul>
+<li>https://localhost:5001/ or</li>
+<li>http://localhost:5000/</li>
+<li>Press Ctrl-C to stop the webserver</li>
+</ul>
+<h4>Testing the webapp from VS</h4>
+<ul>
+<li>Open the sln file in VS</li>
+<li>In Sln Explorer right-click sln and add existing project - select CsScaffoldNorthwind.csproj</li>
+<li>In the Run-dropdown select <code>CsScaffoldNorthwind</code></li>
+<li>Press F5. Now VS will run <code>dotnet run</code> in the background and start a browser for you.</li>
+</ul>
+<p>Above code is <a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.1">V.0.0.1</a></p>
+<h3>Add EF to dotnet</h3>
+<div class="highlight"><pre><span></span><span class="c1"># In project folder add Nuget Package for your code</span>
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+<span class="c1"># info : PackageReference for package &#39;Microsoft.EntityFrameworkCore.SqlServer&#39; version &#39;5.0.3&#39; added to file \CsScaffoldNorthwind.csproj&#39;.</span>
+
+<span class="c1"># Install the EF Tool</span>
+dotnet ef -help
+<span class="c1"># Could not execute because the specified command or file was not found.</span>
+dotnet tool install --global dotnet-ef
+<span class="c1"># You can invoke the tool using the following command: dotnet-ef</span>
+<span class="c1"># Tool &#39;dotnet-ef&#39; (version &#39;5.0.3&#39;) was successfully installed.</span>
+dotnet ef --version
+<span class="c1"># Entity Framework Core .NET Command-line Tools</span>
+<span class="c1"># 5.0.3</span>
+
+<span class="c1"># When you need to update do:</span>
+dotnet tool update
+
+<span class="c1"># Add yet a Nuget package</span>
+dotnet add package Microsoft.EntityFrameworkCore.Design
+<span class="c1"># info : PackageReference for package &#39;Microsoft.EntityFrameworkCore.Design&#39; version &#39;5.0.3&#39; added to file \CsScaffoldNorthwind.csproj&#39;.</span>
+</pre></div>
+
+
+<h3>Scaffold using EF</h3>
+<div class="highlight"><pre><span></span><span class="err">dotnet ef dbcontext scaffold &quot;Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;&quot; Microsoft.EntityFrameworkCore.SqlServer --output-dir Models</span>
+</pre></div>
+
+
+<p>This added approx 25 models from the DB.  </p>
+<p>Above code is <a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.2">V.0.0.2</a></p>
+<ul>
+<li>In VS Right click on Controller folder - Add - New scaffolding Item<ul>
+<li>Select <code>MVC Controller with views, using EF</code></li>
+<li>Select model (customers) and DB<br>
+<img alt="Scaffold Controller and View" src="../img/2021/2021-02-14-Scaffold01.PNG">  </li>
+</ul>
+</li>
+<li>Run (F5)</li>
+<li>Browse to https://localhost:5001/customers<ul>
+<li>Gives you <code>InvalidOperationException: Unable to resolve service for type 'CsScaffoldNorthwind.Models.NorthwindContext'</code></li>
+</ul>
+</li>
+<li>Add to <code>appsettings.Development.json</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="err">// appsettings.Development.json</span>
+<span class="err">  &quot;ConnectionStrings&quot;: {</span>
+<span class="err">    &quot;DefaultConnection&quot;: &quot;Server=localhost\\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;&quot;</span>
+<span class="err">  },</span>
+</pre></div>
+
+
+<ul>
+<li>Add to <code>startup.cs</code>:</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1">// startup.cs</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">ConfigureServices</span><span class="p">(</span><span class="n">IServiceCollection</span> <span class="n">services</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">services</span><span class="p">.</span><span class="n">AddControllersWithViews</span><span class="p">();</span>
+
+            <span class="c1">// Add this:</span>
+            <span class="kt">var</span> <span class="n">connectionString</span> <span class="p">=</span> <span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&quot;DefaultConnection&quot;</span><span class="p">);</span>
+            <span class="n">services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="p">&lt;</span><span class="n">NorthwindContext</span><span class="p">&gt;(</span><span class="n">options</span> <span class="p">=&gt;</span> <span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span><span class="n">connectionString</span><span class="p">));</span>
+        <span class="p">}</span>
+</pre></div>
+
+
+<ul>
+<li>Run (F5)</li>
+<li>Browse to https://localhost:5001/customers</li>
+</ul>
+<p>Above code is <a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.3">V.0.0.3</a></p>
+<h2>Links</h2>
+<ul>
+<li><a href="https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/">Scaffolding ASP.NET Core MVC</a></li>
+<li><a href="https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm">ASP.NET MVC - Scaffolding - Tutorialspoint</a></li>
+<li><a href="https://docs.microsoft.com/en-us/ef/core/get-started/overview/install">Installing Entity Framework Core - EF Core</a></li>
+<li><a href="https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-strings">Connection Strings - EF Core</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server">Get the sample SQL Server databases for ADO.NET code samples - ADO.NET</a></li>
+</ul>
+<p>The End.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/csharp.html">#csharp</a>
+      <a href="https://rasor.github.io/tag/ef.html">#ef</a>
+      <a href="https://rasor.github.io/tag/db.html">#db</a>
+      <a href="https://rasor.github.io/tag/mvc.html">#mvc</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>

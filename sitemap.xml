@@ -5,36 +5,43 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2021-01-17T20:55:44-00:00</lastmod>
+<lastmod>2021-03-13T18:14:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2021-01-17T20:55:44-00:00</lastmod>
+<lastmod>2021-03-13T18:14:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2021-01-17T20:55:44-00:00</lastmod>
+<lastmod>2021-03-13T18:14:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2021-01-17T20:55:44-00:00</lastmod>
+<lastmod>2021-03-13T18:14:10-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2021-01-17T20:55:44-00:00</lastmod>
+<lastmod>2021-03-13T18:14:10-00:00</lastmod>
 <changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</loc>
+<lastmod>2021-03-13T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 
@@ -299,7 +306,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/devops.html</loc>
-<lastmod>2021-01-17T17:00:00+00:50</lastmod>
+<lastmod>2021-03-13T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -307,6 +314,27 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://rasor.github.io/category/study.html</loc>
 <lastmod>2019-10-09T22:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/ubuntu.html</loc>
+<lastmod>2021-03-13T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/wsl2.html</loc>
+<lastmod>2021-03-13T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/win10.html</loc>
+<lastmod>2021-03-13T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -474,20 +502,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/kitematic.html</loc>
-<lastmod>2020-11-09T10:30:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/wsl2.html</loc>
-<lastmod>2020-11-09T10:30:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
-<loc>https://rasor.github.io/tag/win10.html</loc>
 <lastmod>2020-11-09T10:30:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
@@ -949,6 +963,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://rasor.github.io/tag/suuntoapp.html</loc>
+<lastmod>2018-01-11T19:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://rasor.github.io/tag/nas.html</loc>
 <lastmod>2018-01-01T12:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -1118,7 +1139,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2021-01-17T17:00:00+00:50</lastmod>
+<lastmod>2021-03-13T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>

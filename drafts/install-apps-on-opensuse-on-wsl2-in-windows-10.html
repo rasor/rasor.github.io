@@ -27,18 +27,27 @@
 
 
 
-    <meta name="author" content="rasor" />
-    <meta name="description" content="" />
+<meta name="author" content="rasor" />
+<meta name="description" content="This blog is a continuation from Install Docker Desktop on Windows 10 Home - including WSL, where I installed WSL2 on a Windows 10 laptop including openSUSE-Leap-15-1 as default distro in WSL2. In this blog I want to start using OpenSuse and see if it gives an ok experience running Linux …" />
+<meta name="keywords" content="#opensuse, #wsl2, #win10">
+
+
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Rasor's Tech Blog"/>
-<meta property="og:description" content=""/>
+<meta property="og:title" content="Install apps on OpenSuse on Wsl2 in Windows 10"/>
+<meta property="og:description" content="This blog is a continuation from Install Docker Desktop on Windows 10 Home - including WSL, where I installed WSL2 on a Windows 10 laptop including openSUSE-Leap-15-1 as default distro in WSL2. In this blog I want to start using OpenSuse and see if it gives an ok experience running Linux …"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://rasor.github.io"/>
+<meta property="og:url" content="https://rasor.github.io/drafts/install-apps-on-opensuse-on-wsl2-in-windows-10.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2099-01-01 00:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="DevOps"/>
+<meta property="article:tag" content="#opensuse"/>
+<meta property="article:tag" content="#wsl2"/>
+<meta property="article:tag" content="#win10"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
-  <title>Rasor's Tech Blog &ndash;     Tag #windows
-</title>
+  <title>Rasor's Tech Blog &ndash; Install apps on OpenSuse on Wsl2 in Windows 10</title>
 
 </head>
 <body>
@@ -115,63 +124,70 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="https://rasor.github.io/moveslink-2-crash.html#moveslink-2-crash">Moveslink 2 crash</a></h2>
+      
+    <h1 id="install-apps-on-opensuse-on-wsl2-in-windows-10">Install apps on OpenSuse on Wsl2 in Windows 10</h1>
     <p>
-          Posted on January 11, 2018 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
+          Posted on January 01, 2099 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
 
-
-          &#8226;     Tagged with
-
-              <a href="https://rasor.github.io/tag/ambit.html">#ambit</a>,              <a href="https://rasor.github.io/tag/moveslink.html">#moveslink</a>,              <a href="https://rasor.github.io/tag/drivers.html">#drivers</a>,              <a href="https://rasor.github.io/tag/windows.html">#windows</a>,              <a href="https://rasor.github.io/tag/suuntoapp.html">#suuntoapp</a>
+      </br>
+        Updated: January 01, 2099
     </p>
   </header>
+
+
   <div>
-      <p>A few days ago I <a href="https://support.microsoft.com/ml-in/help/12415/windows-10-recovery-options">resat my Windows 10</a>, so I could start from scratch.</p>
-<h2>Problem</h2>
-<p>The USB driver for my GPS watch, Suunto Ambit 2 misbehaved.</p>
-<p>I just connected the watch with USB cable.<br>
-Then I installed <a href="http://www.movescount.com/connect/moveslink">Moveslink2</a>.</p>
-<p>I would see Moveslink in the taskbar and the taskmanager for …</p>
-        <br>
-        <a class="btn" href="https://rasor.github.io/moveslink-2-crash.html#moveslink-2-crash">    Continue reading
-</a>
+    <p>This blog is a continuation from <a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html">Install Docker Desktop on Windows 10 Home - including WSL</a>, where I installed WSL2 on a Windows 10 laptop including <a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;activetab=pivot:overviewtab">openSUSE-Leap-15-1</a> as default distro in WSL2.  </p>
+<p>In this blog I want to start using OpenSuse and see if it gives an ok experience running Linux on Windows.  </p>
+<p>If you have installed WSL2 and a default linux disto and in Visual Studio Code have installed <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote WSL</a> then you should open Remote WSL and be able to see your default distro:
+<img alt="Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-01.png">.  </p>
+<p>Next you should right-click the distro and <code>Connect to WSL</code>.<br>
+Then open a terminal. You will be in your home folder <code>~</code>.<br>
+<img alt="Terminal in WSL2" src="../img/2021/2021-03-13-wsl2-02.png">.<br>
+Nice - so now you can install stuff:</p>
+<div class="highlight"><pre><span></span><span class="c1"># Do we have curl?</span>
+curl --version
+<span class="c1"># curl 7.60.0 (x86_64-suse-linux-gnu) libcurl/7.60.0 OpenSSL/1.1.0i zlib/1.2.11 libidn2/2.0.4 libpsl/0.20.1 (+libidn2/2.0.4) libssh/0.8.4/openssl/zlib nghttp2/1.31.1</span>
+
+<span class="c1"># Do we have wget?</span>
+wget --version
+<span class="c1"># GNU Wget 1.19.5 built on linux-gnu.</span>
+
+<span class="c1"># Do we have git?</span>
+git --version
+<span class="c1">#git version 2.16.4</span>
+
+
+<span class="c1"># Do we have nvm?</span>
+<span class="c1"># https://github.com/nvm-sh/nvm</span>
+nvm -list
+<span class="c1"># Nope</span>
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh <span class="p">|</span> bash
+<span class="c1"># Something fails with this command - and it opens an editor in the terminal - kill the terminal</span>
+<span class="c1"># It does download nvm to ~/nvm</span>
+<span class="c1"># But it does not add envir var</span>
+printenv NVM_DIR
+<span class="c1"># Also the distro does not have a ~/.bash_profile</span>
+</pre></div>
+
+
+<p>I think I should try an Ubunto distro instead</p>
+<p>The End</p>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows">cUrl CLI on Windows</a></h2>
+  <div class="tag-cloud">
     <p>
-          Posted on December 11, 2017 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="https://rasor.github.io/tag/curl.html">#curl</a>,              <a href="https://rasor.github.io/tag/windows.html">#windows</a>,              <a href="https://rasor.github.io/tag/shell.html">#shell</a>,              <a href="https://rasor.github.io/tag/ssl.html">#ssl</a>,              <a href="https://rasor.github.io/tag/git.html">#git</a>,              <a href="https://rasor.github.io/tag/openssl.html">#openssl</a>
+      <a href="https://rasor.github.io/tag/opensuse.html">#opensuse</a>
+      <a href="https://rasor.github.io/tag/wsl2.html">#wsl2</a>
+      <a href="https://rasor.github.io/tag/win10.html">#win10</a>
     </p>
-  </header>
-  <div>
-      <p>cUrl on Windows is not trouble-free to get working, when posting to SSL domains.</p>
-<p>Here is howto:</p>
-<ul>
-<li>Download latest <a href="https://curl.haxx.se/dlwiz/?type=bin&amp;os=Win64&amp;flav=-&amp;ver=*&amp;cpu=x86_64">windows version of cUrl</a>. I used <a href="https://dl.uxnr.de/build/curl/curl_winssl_msys2_mingw64_stc/curl-7.57.0/curl-7.57.0.zip">curl-7.57.0</a>, which is SSL and SSH enabled.</li>
-<li>Extract the files from the zip file to <code>C:\Program Files\curl-7.57.0\</code></li>
-<li>Add to …</li></ul>
-        <br>
-        <a class="btn" href="https://rasor.github.io/curl-cli-on-windows.html#curl-cli-on-windows">    Continue reading
-</a>
   </div>
+
+
+
+
+
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>

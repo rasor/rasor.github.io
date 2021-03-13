@@ -313,9 +313,26 @@ So we <a href="https://launchpad.net/~yubico/+archive/ubuntu/stable/+index?field
 <li>Add <code>deb http://ppa.launchpad.net/yubico/stable/ubuntu disco main</code> and select it</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="c1"># verify source list is updated</span>
-kate /etc/apt/sources.list
-<span class="c1"># update sw from Other Software (and all the other sources)</span>
+sudo xdg-open /etc/apt/sources.list <span class="c1"># or</span>
+sudo kate /etc/apt/sources.list
+<span class="c1"># if not add manually:</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c1"># /etc/apt/sources.list:</span>
+deb http://ppa.launchpad.net/yubico/stable/ubuntu disco main
+</pre></div>
+
+
+<div class="highlight"><pre><span></span><span class="c1"># update sw from Other Software (and all the other sources)</span>
 sudo apt update
+<span class="c1"># The following signatures couldn&#39;t be verified because the public key is not available: NO_PUBKEY 43D5C49532CBA1A9</span>
+
+<span class="c1"># If you get error above then</span>
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 43D5C49532CBA1A9
+<span class="c1"># Retry</span>
+sudo apt update
+
 <span class="c1"># you should now be able to find the authenticator in your repos</span>
 apt list yubi*
 <span class="c1"># if you got it in the list you can install it</span>
