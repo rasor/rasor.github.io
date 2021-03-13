@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2021-03-13 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2021-03-13 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2021-03-13 18:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#ubuntu"/>
@@ -141,16 +141,17 @@
     <h2>Intro</h2>
 <p>This blog is a continuation from <a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html">Install Docker Desktop on Windows 10 Home - including WSL</a>, where I installed WSL2 on a Windows 10 laptop including <a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;activetab=pivot:overviewtab">openSUSE-Leap-15-1</a> as default distro in WSL2.  </p>
 <p>In this blog I want to start using Ubuntu 20.04 and see if it gives an ok experience running Linux on Windows (and using it as a developer PC).  </p>
-<p>If you have installed WSL2 and a default linux disto and in Visual Studio Code have installed <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote WSL</a> then you should open Remote WSL and be able to see your default distro:
-<img alt="Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-01.png">.  </p>
+<p>If you have installed WSL2 and a default linux disto and in Visual Studio Code have installed <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl">Remote WSL</a> then you should open Remote WSL and be able to see your default distro:<br>
+<img alt="Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-01.png">  </p>
 <h2>Install Linux distro</h2>
 <p>Now I want to use Ubuntu instead. 
 <a href="https://www.microsoft.com/en-us/p/ubuntu-2004-lts/9n6svws3rx71?rtc=1&amp;activetab=pivot:overviewtab">Get Ubuntu 20.04 LTS - Microsoft Store</a>
-<img alt="Ubuntu distro on the web" src="../img/2021/2021-03-13-wsl2-03.png">.<br>
+<img alt="Ubuntu distro on the web" src="../img/2021/2021-03-13-wsl2-03.png"><br>
 Press <code>Get</code>. This will open <code>Microsoft Store</code> on your PC and yet again press <code>Get</code>. It will download 0.5 GB!<br>
 When downloaded it will ask you to <code>Launch</code> or to <code>Pin to start</code>. When you Launch you start installing Ubuntu - you just follow the steps.<br>
-<img alt="Ubuntu distro install" src="../img/2021/2021-03-13-wsl2-04.png">.  </p>
-<p>Now you can see the Ubuntu running, but not default (*)</p>
+<img alt="Ubuntu distro install" src="../img/2021/2021-03-13-wsl2-04.png">  </p>
+<p>Open CMD in your PC.<br>
+Now you can see the Ubuntu running, but not default (*)</p>
 <div class="highlight"><pre><span></span><span class="c1"># CMD on Win10</span>
 wsl -l -v
 <span class="c1">#   NAME                   STATE           VERSION</span>
@@ -164,14 +165,17 @@ wsl --set-default Ubuntu-20.04
 </pre></div>
 
 
-<p><img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png">.  </p>
-<p>Next you should right-click the distro and <code>Connect to WSL</code>.  </p>
+<p>And you can see it in VSCode
+<img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png">  </p>
+<p>Next you should right-click the distro and <code>Connect to WSL</code>.<br>
+This will open up a new VSCode which is directly connected to your WSL, so you can browse its files, edit the files and run the terminal.  </p>
 <h2>Install apps into the distro</h2>
 <h3>What's in the box?</h3>
 <p>Open a terminal. You will be in your home folder <code>~</code>.  </p>
 <p><img alt="Terminal in WSL2" src="../img/2021/2021-03-13-wsl2-06.png">.<br>
-Nice - so now you can install stuff:</p>
-<div class="highlight"><pre><span></span><span class="c1"># Do we have curl?</span>
+Nice - so what's in the box?</p>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="c1"># Do we have curl?</span>
 curl --version
 <span class="c1"># curl 7.68.0 (x86_64-pc-linux-gnu) libcurl/7.68.0 OpenSSL/1.1.1f zlib/1.2.11 brotli/1.0.7 libidn2/2.2.0 libpsl/0.21.0 (+libidn2/2.2.0) libssh/0.9.3/openssl/zlib nghttp2/1.40.0 librtmp/2.3</span>
 
@@ -204,7 +208,8 @@ pip3 -V
 <li>Used during Git config </li>
 </ul>
 <p>Install <a href="https://www.cyberciti.biz/faq/xclip-linux-insert-files-command-output-intoclipboard/">xClip</a></p>
-<div class="highlight"><pre><span></span>sudo apt-get install xclip
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+sudo apt-get install xclip
 </pre></div>
 
 
@@ -218,7 +223,8 @@ pip3 -V
 </li>
 </ul>
 <p>Optionally add some author info:</p>
-<div class="highlight"><pre><span></span>git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+git config --global user.name <span class="s2">&quot;Your Name&quot;</span>
 git config --global user.email <span class="s2">&quot;youremail@domain.com&quot;</span>
 git config --list
 <span class="c1"># The information you entered is stored in your Git configuration file ~/.gitconfig</span>
@@ -232,7 +238,8 @@ Since you can just regenerate a new SSH key pair, then you don't have to save yo
 * Ref: 
 <a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code">Version Control in Visual Studio Code</a>
 * But you might get it working by <a href="https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases">Storing SSH key passphrase in KDE Wallet</a></p>
-<div class="highlight"><pre><span></span><span class="c1"># Check for existing SSH keys</span>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="c1"># Check for existing SSH keys</span>
 ls -al ~/.ssh
 <span class="c1"># Are there any you want to reuse?</span>
 <span class="c1"># ls: cannot access &#39;/home/rasor/.ssh&#39;: No such file or directory</span>
@@ -267,7 +274,8 @@ sudo apt install keychain
 
 
 <p>Now you are ready to use your keychain.  </p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="nb">cd</span> ~/
 touch ~/.bash_profile
 </pre></div>
 
@@ -282,7 +290,8 @@ touch ~/.bash_profile
 
 <p>Open a new terminal to make it take effect.</p>
 <p>Add a new SSH key to your GitHub (bitbucket, gitlab, etc) account</p>
-<div class="highlight"><pre><span></span><span class="c1"># verify that keychain in installed</span>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="c1"># verify that keychain in installed</span>
 <span class="nb">eval</span> <span class="sb">`</span>keychain<span class="sb">`</span>
 <span class="c1"># * keychain 2.8.5 ~ http://www.funtoo.org</span>
 <span class="c1"># * Starting ssh-agent...</span>
@@ -307,7 +316,8 @@ xclip -sel clip &lt; ~/.ssh/id_rsa_youruserid_github.pub
 <li>Save key: Add SSH key</li>
 </ul>
 <p>Finally you need to change urls on your local repos remote origin from HTTPS to SSH</p>
-<div class="highlight"><pre><span></span><span class="nb">cd</span> your_local_repo
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="nb">cd</span> your_local_repo
 <span class="c1"># Print remote url</span>
 git remote -v
 <span class="c1"># is it using HTTPS?</span>
@@ -322,7 +332,8 @@ git remote -v
 
 
 <p>Troubleshooting github connection:</p>
-<div class="highlight"><pre><span></span>git clone git@github.com:USERNAME/REPOSITORY.git
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+git clone git@github.com:USERNAME/REPOSITORY.git
 <span class="c1"># Cloning into &#39;REPOSITORY&#39;...</span>
 <span class="c1"># Warning: Permanently added the RSA host key for IP address &#39;250.50.50.50&#39; to the list of known hosts.</span>
 <span class="c1"># git@github.com: Permission denied (publickey).</span>
@@ -335,7 +346,7 @@ keychain --list
 <span class="c1"># does not seem so.</span>
 <span class="c1"># Try close VSCode - re-open VSCode and a terminal and retry</span>
 keychain --list
-<span class="c1">#v4096 SHA256:zCtiTmbxxxxxxxxxxxxxxxxxxxxxxxxx youremail@aa.bb (RSA)</span>
+<span class="c1">#v4096 SHA256:X4uMb123456789012345678901234567rWzWRZD1Szl youremail@aa.bb (RSA)</span>
 
 <span class="c1"># Nice - try clone again</span>
 git clone git@github.com:USERNAME/REPOSITORY.git
@@ -350,7 +361,8 @@ git clone git@github.com:USERNAME/REPOSITORY.git
 <ul>
 <li><a href="https://github.com/nvm-sh/nvm">nvm @ github</a></li>
 </ul>
-<div class="highlight"><pre><span></span><span class="c1"># Do we have nvm?</span>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="c1"># Do we have nvm?</span>
 nvm -list
 <span class="c1"># Nope</span>
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh <span class="p">|</span> bash
@@ -393,7 +405,7 @@ nvm list
 </pre></div>
 
 
-<p>Great - now I have a fine start with git, python and nodejs</p>
+<p>Great - now I have a fine start with git, python and nodejs in my Ubuntu box on Windows :-)</p>
 <p>The End</p>
   </div>
   <div class="tag-cloud">
