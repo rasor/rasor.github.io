@@ -1,5 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-01-17T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>ASP.NET Core with k8s hosting - Part 1.3</title><link href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html" rel="alternate"></link><published>2020-10-27T00:00:00+01:00</published><updated>2021-01-17T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-27:/aspnet-core-with-k8s-hosting-part-13.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - Develop</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/develop.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-03-14T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Testing templates from NEAR blockchain</title><link href="https://rasor.github.io/testing-templates-from-near-blockchain.html" rel="alternate"></link><published>2021-03-14T00:00:00+01:00</published><updated>2021-03-14T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-14:/testing-templates-from-near-blockchain.html</id><summary type="html">&lt;p&gt;&lt;em&gt;(The code for this blog is located &lt;a href="https://github.com/rasor/near-app-default-react"&gt;here&lt;/a&gt;)&lt;/em&gt;  &lt;/p&gt;
+&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;For the blockcahin &lt;a href="https://docs.near.org/docs/develop/basics/getting-started"&gt;NEAR protocol&lt;/a&gt; there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  &lt;/p&gt;
+&lt;p&gt;First I want to see the React template with AssemblyScript smart contract.&lt;br&gt;
+There are two &lt;a href="https://github.com/near/create-near-app#readme"&gt;options&lt;/a&gt; you …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;em&gt;(The code for this blog is located &lt;a href="https://github.com/rasor/near-app-default-react"&gt;here&lt;/a&gt;)&lt;/em&gt;  &lt;/p&gt;
+&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;For the blockcahin &lt;a href="https://docs.near.org/docs/develop/basics/getting-started"&gt;NEAR protocol&lt;/a&gt; there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  &lt;/p&gt;
+&lt;p&gt;First I want to see the React template with AssemblyScript smart contract.&lt;br&gt;
+There are two &lt;a href="https://github.com/near/create-near-app#readme"&gt;options&lt;/a&gt; you can add:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;--frontend=react&lt;/code&gt; – use React for your frontend template (opposed to vanilla JS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--contract=rust&lt;/code&gt; – use Rust for your WebAssembly smart contract (opposed to &lt;a href="https://www.assemblyscript.org/"&gt;AssemblyScript&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll use the React option in this blog.&lt;br&gt;
+Hang on and see what you get out of it!  &lt;/p&gt;
+&lt;p&gt;Before going on there is a quickfix you need todo if you are on Windows. &lt;/p&gt;
+&lt;h3&gt;Avoid error "ln: EPERM: operation not permitted, symlink" on Windows&lt;/h3&gt;
+&lt;p&gt;To avoid seeing err &lt;code&gt;ln: EPERM: operation not permitted, symlink&lt;/code&gt; on windows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ln&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;EPERM&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;operation&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;permitted&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;symlink&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;../contract/build/release/greeter.wasm&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;-&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;C:/Users/rasor/projs-git/projs-near/near_app_default_react/out/main.wasm&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;... then you should &lt;a href="https://github.com/lovell/sharp/issues/1671#issuecomment-490023743"&gt;run CMD as admin&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Install app&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash - run as admin on windows&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Switch to node v12 (v14 is too new for fsevents@1)&lt;/span&gt;
+nvm use &lt;span class="m"&gt;12&lt;/span&gt;.14.1
+
+&lt;span class="c1"&gt;# Testing NEAR react template&lt;/span&gt;
+&lt;span class="c1"&gt;# Using https://www.npmjs.com/package/create-near-app/v/1.3.6&lt;/span&gt;
+npx create-near-app near-app-default-react --frontend&lt;span class="o"&gt;=&lt;/span&gt;react
+&lt;span class="c1"&gt;# npx: installed 75 in 15.801s&lt;/span&gt;
+&lt;span class="c1"&gt;# Installing project dependencies...&lt;/span&gt;
+&lt;span class="c1"&gt;# yarn install v1.22.10&lt;/span&gt;
+&lt;span class="c1"&gt;# info No lockfile found.&lt;/span&gt;
+&lt;span class="c1"&gt;# [1/4] Resolving packages...&lt;/span&gt;
+&lt;span class="c1"&gt;# [2/4] Fetching packages...&lt;/span&gt;
+&lt;span class="c1"&gt;# [3/4] Linking dependencies...&lt;/span&gt;
+&lt;span class="c1"&gt;# [4/4] Building fresh packages...&lt;/span&gt;
+&lt;span class="c1"&gt;# success Saved lockfile.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# &amp;gt; near-vm@1.1.0 preinstall C:\Users\rasor\projs-git\projs-near\near-app-default-react\contract\node_modules\near-vm&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; node ./uninstall.js&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; near-vm@1.1.0 postinstall C:\Users\rasor\projs-git\projs-near\near-app-default-react\contract\node_modules\near-vm&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; node ./install.js&lt;/span&gt;
+
+&lt;span class="c1"&gt;# npm notice created a lockfile as package-lock.json. You should commit this file.&lt;/span&gt;
+&lt;span class="c1"&gt;# npm WARN visitor-as@0.3.2 requires a peer of assemblyscript@^0.13.3 but none is installed. You must install peer dependencies yourself.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# added 105 packages from 86 contributors and audited 105 packages in 10.211s&lt;/span&gt;
+&lt;span class="c1"&gt;# Success! Created near-app-default-react&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Inside that directory, you can run several commands:&lt;/span&gt;
+&lt;span class="c1"&gt;#   yarn dev&lt;/span&gt;
+&lt;span class="c1"&gt;#     Starts the development server. Both contract and client-side code will&lt;/span&gt;
+&lt;span class="c1"&gt;#     auto-reload once you change source files.&lt;/span&gt;
+&lt;span class="c1"&gt;#   yarn test&lt;/span&gt;
+&lt;span class="c1"&gt;#     Starts the test runner.&lt;/span&gt;
+&lt;span class="c1"&gt;#   yarn deploy&lt;/span&gt;
+&lt;span class="c1"&gt;#     Deploys contract in permanent location (as configured in src/config.js).&lt;/span&gt;
+&lt;span class="c1"&gt;#     Also deploys web frontend using GitHub Pages.&lt;/span&gt;
+&lt;span class="c1"&gt;#     Consult with README.md for details on how to deploy and package.json for full list of commands.&lt;/span&gt;
+&lt;span class="c1"&gt;# We suggest that you begin by typing:&lt;/span&gt;
+&lt;span class="c1"&gt;#   cd near-app-default-react&lt;/span&gt;
+&lt;span class="c1"&gt;#   yarn dev&lt;/span&gt;
+&lt;span class="c1"&gt;# Happy hacking!&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; near-app-default-react
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;I have removed lots of what was output above.&lt;br&gt;
+The script installed &lt;code&gt;yarn&lt;/code&gt; if you did not yet have it and it also ran yarn install and created a &lt;code&gt;yarn-lock.json&lt;/code&gt; file, which it later converted to a &lt;code&gt;package-lock.json&lt;/code&gt; file.  &lt;/p&gt;
+&lt;p&gt;If you ran the script on Ubuntu it would have stayed a &lt;code&gt;yarn-lock&lt;/code&gt; file.&lt;/p&gt;
+&lt;p&gt;Currently there are a few workarounds I had todo to make the web work.&lt;/p&gt;
+&lt;h3&gt;Avoding error "Invalid Version: undefined"&lt;/h3&gt;
+&lt;p&gt;To avoid seeing err &lt;code&gt;Invalid Version: undefined&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# details of the error:&lt;/span&gt;
+&amp;gt; parcel build src/index.html --public-url ./
+×  C:&lt;span class="se"&gt;\U&lt;/span&gt;sers&lt;span class="se"&gt;\r&lt;/span&gt;asor&lt;span class="se"&gt;\p&lt;/span&gt;rojs-git&lt;span class="se"&gt;\p&lt;/span&gt;rojs-near&lt;span class="se"&gt;\n&lt;/span&gt;ear-app-default-react&lt;span class="se"&gt;\s&lt;/span&gt;rc&lt;span class="se"&gt;\i&lt;/span&gt;ndex.js: Invalid Version: undefined
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;... then we pin version of &lt;a href="https://github.com/parcel-bundler/parcel/issues/5943#issuecomment-788715242"&gt;parcel-bundler&lt;/a&gt;&lt;br&gt;
+from: &lt;code&gt;~1.12.4&lt;/code&gt;&lt;br&gt;
+to: &lt;code&gt;1.12.3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;... then do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash&lt;/span&gt;
+npm install parcel-bundler@1.12.3 --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Avoid warn "requires a peer of assemblyscript"&lt;/h3&gt;
+&lt;p&gt;To avoid seeing warn &lt;code&gt;requires a peer of assemblyscript&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# details of the warn:&lt;/span&gt;
+npm WARN visitor-as@0.3.2 requires a peer of assemblyscript@^0.13.3 but none is installed. You must install peer dependencies yourself.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;... then do:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash&lt;/span&gt;
+npm install assemblyscript@0.17.14 --save-dev
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Avoid warn "lifecycle The node binary used for scripts" on Ubuntu&lt;/h3&gt;
+&lt;p&gt;To avoid seeing warn:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# details of the warn:&lt;/span&gt;
+npm WARN lifecycle The node binary used &lt;span class="k"&gt;for&lt;/span&gt; scripts is /tmp/yarn--1615665488049-0.7742038105254476/node but npm is using /home/rasor/.nvm/versions/node/v14.16.0/bin/node itself. Use the &lt;span class="sb"&gt;`&lt;/span&gt;--scripts-prepend-node-path&lt;span class="sb"&gt;`&lt;/span&gt; option to include the path &lt;span class="k"&gt;for&lt;/span&gt; the node binary npm was executed with.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This happens if you are using nvm on Ubuntu, when running &lt;code&gt;yarn dev&lt;/code&gt;, since the install script both installed yarn and node. It installed node another place than nvm did.&lt;br&gt;
+So when the dev script executes it uses its own npm.&lt;br&gt;
+One fix can be to install dependencies from yarn-lock - then create a package-lock - then use npm instead of yarn &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash&lt;/span&gt;
+&lt;span class="c1"&gt;# Install dependencies from yarn-lock&lt;/span&gt;
+yarn install
+&lt;span class="c1"&gt;# Create a lock file for npm from node_modules&lt;/span&gt;
+npm shrinkwrap
+&lt;span class="c1"&gt;# Rename the created file to package-lock&lt;/span&gt;
+mv npm-shrinkwrap.json package-lock.json
+&lt;span class="c1"&gt;# ... so now we can use npm instead of yarn&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Build and Run&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash - run as admin on windows&lt;/span&gt;
+&lt;span class="c1"&gt;# install reamining dependencies&lt;/span&gt;
+npm install
+&lt;span class="c1"&gt;# Build&lt;/span&gt;
+npm run build
+
+&lt;span class="c1"&gt;# Run&lt;/span&gt;
+npm run dev
+&lt;span class="c1"&gt;# &amp;gt; near-app-default-react@0.1.0 dev C:\Users\rasor\projs-git\projs-near\near-app-default-react&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; nodemon --watch contract -e ts --exec &amp;quot;npm run start&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# [nodemon] starting `npm run start`&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; near-app-default-react@0.1.0 prestart C:\Users\rasor\projs-git\projs-near\near-app-default-react&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; npm run build:contract:debug &amp;amp;&amp;amp; npm run dev:deploy:contract&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; near-app-default-react@0.1.0 build:contract:debug C:\Users\rasor\projs-git\projs-near\near-app-default-react&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; node contract/compile.js --debug&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; greeter@0.0.1 build:debug C:\Users\rasor\projs-git\projs-near\near-app-default-react\contract&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; asb --target debug&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; near-app-default-react@0.1.0 dev:deploy:contract C:\Users\rasor\projs-git\projs-near\near-app-default-react&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; near dev-deploy&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Starting deployment. Account id: dev-1615723157990-5306378, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: ./out/main.wasm&lt;/span&gt;
+&lt;span class="c1"&gt;# Transaction Id HezJKn5ZpiD2axYBoki5bjJSdUJuZJmZfJT6V6NWDb95&lt;/span&gt;
+&lt;span class="c1"&gt;# To see the transaction in the transaction explorer, please open this url in your browser&lt;/span&gt;
+&lt;span class="c1"&gt;# https://explorer.testnet.near.org/transactions/HezJKn5ZpiD2axYBoki5bjJSdUJuZJmZfJT6V6NWDb95&lt;/span&gt;
+&lt;span class="c1"&gt;# Done deploying to dev-1615723157990-5306378&lt;/span&gt;
+
+&lt;span class="c1"&gt;# &amp;gt; near-app-default-react@0.1.0 start C:\Users\rasor\projs-git\projs-near\near-app-default-react&lt;/span&gt;
+&lt;span class="c1"&gt;# &amp;gt; echo The app is starting! It will automatically open in your browser when ready &amp;amp;&amp;amp; env-cmd -f ./neardev/dev-account.env parcel src/index.html --open&lt;/span&gt;
+
+&lt;span class="c1"&gt;# The app is starting! It will automatically open in your browser when ready&lt;/span&gt;
+&lt;span class="c1"&gt;# Server running at http://localhost:1234&lt;/span&gt;
+&lt;span class="c1"&gt;# √  Built in 9.75s.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;The web created a transaction that you can see on the &lt;a href="https://explorer.testnet.near.org/transactions/HezJKn5ZpiD2axYBoki5bjJSdUJuZJmZfJT6V6NWDb95"&gt;transaction explorer&lt;/a&gt; meaning the webapp is controlling a wallet and its private key, which was used to sign that transaction.&lt;br&gt;
+My signer-id was &lt;code&gt;dev-1615723157990-5306378&lt;/code&gt;. I'll use that later, when creating an &lt;a href="https://docs.near.org/docs/concepts/account"&gt;account&lt;/a&gt;.&lt;br&gt;
+What the script did was it deployed the smart contract (found in &lt;code&gt;contract\assembly\index.ts&lt;/code&gt;) in that transaction.  &lt;/p&gt;
+&lt;p&gt;The dev script also opened the web in a browser:&lt;br&gt;
+&lt;img alt="NEAR web local" src="../img/2021/2021-03-14-near-01.png"&gt;  &lt;/p&gt;
+&lt;p&gt;Clicking on &lt;code&gt;Sign In&lt;/code&gt; redirects to external &lt;code&gt;testnet&lt;/code&gt; site:&lt;br&gt;
+&lt;img alt="NEAR testnet" src="../img/2021/2021-03-14-near-02.png"&gt;&lt;br&gt;
+It wants you to create an account. Click on &lt;code&gt;Create Account&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;Now re-use your signer-id:
+&lt;img alt="NEAR create account" src="../img/2021/2021-03-14-near-03.png"&gt;&lt;br&gt;
+and press &lt;code&gt;Create Account&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Now you will have to choose recovery mode:&lt;br&gt;
+&lt;img alt="NEAR account recovery" src="../img/2021/2021-03-14-near-04.png"&gt;&lt;br&gt;
+Just continue with Recovery Phrase and write down the 12 word seed on the follwing page.&lt;/p&gt;
+&lt;p&gt;Lastly you are redirected to your &lt;a href="https://wallet.testnet.near.org/profile"&gt;NEAR Wallet&lt;/a&gt; page on the testnet:
+&lt;img alt="NEAR wallet" src="../img/2021/2021-03-14-near-05.png"&gt;  &lt;/p&gt;
+&lt;p&gt;So what you have is a wallet webapp containing the private key to do transactions on the near blockchain.&lt;br&gt;
+As you can see you could can also have chosen to use a Ledger as a HW device for your private key.  &lt;/p&gt;
+&lt;p&gt;When you look on you disk you'll find
+* &lt;code&gt;&amp;lt;HOME&amp;gt;\.near-config\&lt;/code&gt; - containing session config
+* &lt;code&gt;&amp;lt;HOME&amp;gt;\.near-credentials\testnet\&lt;/code&gt; - containing public key and private key. So remember to include a backup strategy for that.&lt;br&gt;
+* &lt;code&gt;src\config.js&lt;/code&gt; - containing links to different NEAR networks (e.g. testnet, mainnet).&lt;br&gt;
+When you build for dev, then it will use testnet! - and for prod then mainnet.  &lt;/p&gt;
+&lt;h3&gt;.gitignore&lt;/h3&gt;
+&lt;p&gt;.gitignore is missing some folders it should ignore. You can add:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .gitignore&lt;/span&gt;
+/contract/node_modules
+/contract/build
+/.cache
+/dist
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Community: &lt;a href="https://discord.com/invite/UY9Xf2k"&gt;Join the NEAR Discord Server!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;JS API&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.near.org/docs/tutorials/create-transactions#sign-transaction"&gt;Sign Transactions · NEAR Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/near/near-api-js/blob/d4d4cf1ac3182fa998b1e004e6782219325a641b/src/transaction.ts#L112-L123"&gt;class SignedTransaction&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://borsh.io/"&gt;Borsh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#blockchain"></category><category term="#near"></category><category term="#npm"></category></entry><entry><title>ASP.NET Core with k8s hosting - Part 1.3</title><link href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html" rel="alternate"></link><published>2020-10-27T00:00:00+01:00</published><updated>2021-01-17T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-27:/aspnet-core-with-k8s-hosting-part-13.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;

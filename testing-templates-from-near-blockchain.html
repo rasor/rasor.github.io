@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="https://rasor.github.io/theme/font-awesome/css/solid.css">
+
+    <link href="https://rasor.github.io/static/custom.css" rel="stylesheet">
+
+    <link href="https://rasor.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Rasor's Tech Blog Atom">
+
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+
+
+<meta name="author" content="rasor" />
+<meta name="description" content="(The code for this blog is located here) Intro For the blockcahin NEAR protocol there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain. First I want to see the React template with AssemblyScript smart contract. There are two options you …" />
+<meta name="keywords" content="#blockchain, #near, #npm">
+
+
+<meta property="og:site_name" content="Rasor's Tech Blog"/>
+<meta property="og:title" content="Testing templates from NEAR blockchain"/>
+<meta property="og:description" content="(The code for this blog is located here) Intro For the blockcahin NEAR protocol there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain. First I want to see the React template with AssemblyScript smart contract. There are two options you …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://rasor.github.io/testing-templates-from-near-blockchain.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2021-03-14 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2021-03-14 00:00:00+01:00"/>
+<meta property="article:author" content="https://rasor.github.io/author/rasor.html">
+<meta property="article:section" content="Develop"/>
+<meta property="article:tag" content="#blockchain"/>
+<meta property="article:tag" content="#near"/>
+<meta property="article:tag" content="#npm"/>
+<meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
+
+  <title>Rasor's Tech Blog &ndash; Testing templates from NEAR blockchain</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://rasor.github.io">
+        <img src="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120" alt="Rasor's Tech Blog" title="Rasor's Tech Blog">
+      </a>
+      <h1><a href="https://rasor.github.io">Rasor's Tech Blog</a></h1>
+
+<p>... still playing with this Lego</p>
+      <nav>
+        <ul class="list">
+
+
+            <li><a target="_blank" href="https://stackoverflow.com/users/750989/rasor" >StackOverflow</a></li>
+            <li><a target="_blank" href="https://www.npmjs.com/~rasor" >npm</a></li>
+            <li><a target="_blank" href="https://dock.io?r=sorenraarup:aaaaCSAu" >dock.io</a></li>
+            <li><a target="_blank" href="https://keybase.io/rasor" >Keybase</a></li>
+            <li><a target="_blank" href="https://stackoverflow.com/cv/rasor" >-- CV --</a></li>
+            <li><a target="_blank" href="https://angel.co/rasor" >AngelList</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-twitter" href="https://twitter.com/rasor" target="_blank">
+            <i class="fab fa-twitter">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-linkedin" href="https://www.linkedin.com/in/rasor" target="_blank">
+            <i class="fab fa-linkedin">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-wordpress" href="https://rasor.wordpress.com" target="_blank">
+            <i class="fab fa-wordpress">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-github" href="https://github.com/rasor" target="_blank">
+            <i class="fab fa-github">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-bitbucket" href="https://bitbucket.org/rasor" target="_blank">
+            <i class="fab fa-bitbucket">
+            </i>
+          </a></li>
+          <li>
+            <a  class="sc-rss" href="/feeds/all.atom.xml" target="_blank">
+            <i class="fas fa-rss">
+            </i>
+          </a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="https://rasor.github.io">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+      <a href="/sitemap.xml">Sitemap</a>
+
+      <a href="https://rasor.github.io/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+      
+    <h1 id="testing-templates-from-near-blockchain">Testing templates from NEAR blockchain</h1>
+    <p>
+          Posted on March 14, 2021 in <a href="https://rasor.github.io/category/develop.html">Develop</a>
+
+      </br>
+        Updated: March 14, 2021
+    </p>
+  </header>
+
+
+  <div>
+    <p><em>(The code for this blog is located <a href="https://github.com/rasor/near-app-default-react">here</a>)</em>  </p>
+<h2>Intro</h2>
+<p>For the blockcahin <a href="https://docs.near.org/docs/develop/basics/getting-started">NEAR protocol</a> there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  </p>
+<p>First I want to see the React template with AssemblyScript smart contract.<br>
+There are two <a href="https://github.com/near/create-near-app#readme">options</a> you can add:</p>
+<ul>
+<li><code>--frontend=react</code> – use React for your frontend template (opposed to vanilla JS)</li>
+<li><code>--contract=rust</code> – use Rust for your WebAssembly smart contract (opposed to <a href="https://www.assemblyscript.org/">AssemblyScript</a>)</li>
+</ul>
+<p>I'll use the React option in this blog.<br>
+Hang on and see what you get out of it!  </p>
+<p>Before going on there is a quickfix you need todo if you are on Windows. </p>
+<h3>Avoid error "ln: EPERM: operation not permitted, symlink" on Windows</h3>
+<p>To avoid seeing err <code>ln: EPERM: operation not permitted, symlink</code> on windows:</p>
+<div class="highlight"><pre><span></span><span class="n">ln</span><span class="o">:</span> <span class="n">EPERM</span><span class="o">:</span> <span class="n">operation</span> <span class="n">not</span> <span class="n">permitted</span><span class="o">,</span> <span class="n">symlink</span> <span class="s1">&#39;../contract/build/release/greeter.wasm&#39;</span> <span class="o">-&gt;</span> <span class="s1">&#39;C:/Users/rasor/projs-git/projs-near/near_app_default_react/out/main.wasm&#39;</span>
+</pre></div>
+
+
+<p>... then you should <a href="https://github.com/lovell/sharp/issues/1671#issuecomment-490023743">run CMD as admin</a></p>
+<h3>Install app</h3>
+<div class="highlight"><pre><span></span><span class="c1"># bash - run as admin on windows</span>
+
+<span class="c1"># Switch to node v12 (v14 is too new for fsevents@1)</span>
+nvm use <span class="m">12</span>.14.1
+
+<span class="c1"># Testing NEAR react template</span>
+<span class="c1"># Using https://www.npmjs.com/package/create-near-app/v/1.3.6</span>
+npx create-near-app near-app-default-react --frontend<span class="o">=</span>react
+<span class="c1"># npx: installed 75 in 15.801s</span>
+<span class="c1"># Installing project dependencies...</span>
+<span class="c1"># yarn install v1.22.10</span>
+<span class="c1"># info No lockfile found.</span>
+<span class="c1"># [1/4] Resolving packages...</span>
+<span class="c1"># [2/4] Fetching packages...</span>
+<span class="c1"># [3/4] Linking dependencies...</span>
+<span class="c1"># [4/4] Building fresh packages...</span>
+<span class="c1"># success Saved lockfile.</span>
+
+<span class="c1"># &gt; near-vm@1.1.0 preinstall C:\Users\rasor\projs-git\projs-near\near-app-default-react\contract\node_modules\near-vm</span>
+<span class="c1"># &gt; node ./uninstall.js</span>
+<span class="c1"># &gt; near-vm@1.1.0 postinstall C:\Users\rasor\projs-git\projs-near\near-app-default-react\contract\node_modules\near-vm</span>
+<span class="c1"># &gt; node ./install.js</span>
+
+<span class="c1"># npm notice created a lockfile as package-lock.json. You should commit this file.</span>
+<span class="c1"># npm WARN visitor-as@0.3.2 requires a peer of assemblyscript@^0.13.3 but none is installed. You must install peer dependencies yourself.</span>
+
+<span class="c1"># added 105 packages from 86 contributors and audited 105 packages in 10.211s</span>
+<span class="c1"># Success! Created near-app-default-react</span>
+
+<span class="c1"># Inside that directory, you can run several commands:</span>
+<span class="c1">#   yarn dev</span>
+<span class="c1">#     Starts the development server. Both contract and client-side code will</span>
+<span class="c1">#     auto-reload once you change source files.</span>
+<span class="c1">#   yarn test</span>
+<span class="c1">#     Starts the test runner.</span>
+<span class="c1">#   yarn deploy</span>
+<span class="c1">#     Deploys contract in permanent location (as configured in src/config.js).</span>
+<span class="c1">#     Also deploys web frontend using GitHub Pages.</span>
+<span class="c1">#     Consult with README.md for details on how to deploy and package.json for full list of commands.</span>
+<span class="c1"># We suggest that you begin by typing:</span>
+<span class="c1">#   cd near-app-default-react</span>
+<span class="c1">#   yarn dev</span>
+<span class="c1"># Happy hacking!</span>
+<span class="nb">cd</span> near-app-default-react
+</pre></div>
+
+
+<p>I have removed lots of what was output above.<br>
+The script installed <code>yarn</code> if you did not yet have it and it also ran yarn install and created a <code>yarn-lock.json</code> file, which it later converted to a <code>package-lock.json</code> file.  </p>
+<p>If you ran the script on Ubuntu it would have stayed a <code>yarn-lock</code> file.</p>
+<p>Currently there are a few workarounds I had todo to make the web work.</p>
+<h3>Avoding error "Invalid Version: undefined"</h3>
+<p>To avoid seeing err <code>Invalid Version: undefined</code>:</p>
+<div class="highlight"><pre><span></span><span class="c1"># details of the error:</span>
+&gt; parcel build src/index.html --public-url ./
+×  C:<span class="se">\U</span>sers<span class="se">\r</span>asor<span class="se">\p</span>rojs-git<span class="se">\p</span>rojs-near<span class="se">\n</span>ear-app-default-react<span class="se">\s</span>rc<span class="se">\i</span>ndex.js: Invalid Version: undefined
+</pre></div>
+
+
+<p>... then we pin version of <a href="https://github.com/parcel-bundler/parcel/issues/5943#issuecomment-788715242">parcel-bundler</a><br>
+from: <code>~1.12.4</code><br>
+to: <code>1.12.3</code></p>
+<p>... then do:</p>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+npm install parcel-bundler@1.12.3 --save-dev
+</pre></div>
+
+
+<h3>Avoid warn "requires a peer of assemblyscript"</h3>
+<p>To avoid seeing warn <code>requires a peer of assemblyscript</code>:</p>
+<div class="highlight"><pre><span></span><span class="c1"># details of the warn:</span>
+npm WARN visitor-as@0.3.2 requires a peer of assemblyscript@^0.13.3 but none is installed. You must install peer dependencies yourself.
+</pre></div>
+
+
+<p>... then do:</p>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+npm install assemblyscript@0.17.14 --save-dev
+</pre></div>
+
+
+<h3>Avoid warn "lifecycle The node binary used for scripts" on Ubuntu</h3>
+<p>To avoid seeing warn:</p>
+<div class="highlight"><pre><span></span><span class="c1"># details of the warn:</span>
+npm WARN lifecycle The node binary used <span class="k">for</span> scripts is /tmp/yarn--1615665488049-0.7742038105254476/node but npm is using /home/rasor/.nvm/versions/node/v14.16.0/bin/node itself. Use the <span class="sb">`</span>--scripts-prepend-node-path<span class="sb">`</span> option to include the path <span class="k">for</span> the node binary npm was executed with.
+</pre></div>
+
+
+<p>This happens if you are using nvm on Ubuntu, when running <code>yarn dev</code>, since the install script both installed yarn and node. It installed node another place than nvm did.<br>
+So when the dev script executes it uses its own npm.<br>
+One fix can be to install dependencies from yarn-lock - then create a package-lock - then use npm instead of yarn </p>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="c1"># Install dependencies from yarn-lock</span>
+yarn install
+<span class="c1"># Create a lock file for npm from node_modules</span>
+npm shrinkwrap
+<span class="c1"># Rename the created file to package-lock</span>
+mv npm-shrinkwrap.json package-lock.json
+<span class="c1"># ... so now we can use npm instead of yarn</span>
+</pre></div>
+
+
+<h3>Build and Run</h3>
+<div class="highlight"><pre><span></span><span class="c1"># bash - run as admin on windows</span>
+<span class="c1"># install reamining dependencies</span>
+npm install
+<span class="c1"># Build</span>
+npm run build
+
+<span class="c1"># Run</span>
+npm run dev
+<span class="c1"># &gt; near-app-default-react@0.1.0 dev C:\Users\rasor\projs-git\projs-near\near-app-default-react</span>
+<span class="c1"># &gt; nodemon --watch contract -e ts --exec &quot;npm run start&quot;</span>
+<span class="c1"># [nodemon] starting `npm run start`</span>
+<span class="c1"># &gt; near-app-default-react@0.1.0 prestart C:\Users\rasor\projs-git\projs-near\near-app-default-react</span>
+<span class="c1"># &gt; npm run build:contract:debug &amp;&amp; npm run dev:deploy:contract</span>
+<span class="c1"># &gt; near-app-default-react@0.1.0 build:contract:debug C:\Users\rasor\projs-git\projs-near\near-app-default-react</span>
+<span class="c1"># &gt; node contract/compile.js --debug</span>
+<span class="c1"># &gt; greeter@0.0.1 build:debug C:\Users\rasor\projs-git\projs-near\near-app-default-react\contract</span>
+<span class="c1"># &gt; asb --target debug</span>
+<span class="c1"># &gt; near-app-default-react@0.1.0 dev:deploy:contract C:\Users\rasor\projs-git\projs-near\near-app-default-react</span>
+<span class="c1"># &gt; near dev-deploy</span>
+
+<span class="c1"># Starting deployment. Account id: dev-1615723157990-5306378, node: https://rpc.testnet.near.org, helper: https://helper.testnet.near.org, file: ./out/main.wasm</span>
+<span class="c1"># Transaction Id HezJKn5ZpiD2axYBoki5bjJSdUJuZJmZfJT6V6NWDb95</span>
+<span class="c1"># To see the transaction in the transaction explorer, please open this url in your browser</span>
+<span class="c1"># https://explorer.testnet.near.org/transactions/HezJKn5ZpiD2axYBoki5bjJSdUJuZJmZfJT6V6NWDb95</span>
+<span class="c1"># Done deploying to dev-1615723157990-5306378</span>
+
+<span class="c1"># &gt; near-app-default-react@0.1.0 start C:\Users\rasor\projs-git\projs-near\near-app-default-react</span>
+<span class="c1"># &gt; echo The app is starting! It will automatically open in your browser when ready &amp;&amp; env-cmd -f ./neardev/dev-account.env parcel src/index.html --open</span>
+
+<span class="c1"># The app is starting! It will automatically open in your browser when ready</span>
+<span class="c1"># Server running at http://localhost:1234</span>
+<span class="c1"># √  Built in 9.75s.</span>
+</pre></div>
+
+
+<p>The web created a transaction that you can see on the <a href="https://explorer.testnet.near.org/transactions/HezJKn5ZpiD2axYBoki5bjJSdUJuZJmZfJT6V6NWDb95">transaction explorer</a> meaning the webapp is controlling a wallet and its private key, which was used to sign that transaction.<br>
+My signer-id was <code>dev-1615723157990-5306378</code>. I'll use that later, when creating an <a href="https://docs.near.org/docs/concepts/account">account</a>.<br>
+What the script did was it deployed the smart contract (found in <code>contract\assembly\index.ts</code>) in that transaction.  </p>
+<p>The dev script also opened the web in a browser:<br>
+<img alt="NEAR web local" src="../img/2021/2021-03-14-near-01.png">  </p>
+<p>Clicking on <code>Sign In</code> redirects to external <code>testnet</code> site:<br>
+<img alt="NEAR testnet" src="../img/2021/2021-03-14-near-02.png"><br>
+It wants you to create an account. Click on <code>Create Account</code>  </p>
+<p>Now re-use your signer-id:
+<img alt="NEAR create account" src="../img/2021/2021-03-14-near-03.png"><br>
+and press <code>Create Account</code></p>
+<p>Now you will have to choose recovery mode:<br>
+<img alt="NEAR account recovery" src="../img/2021/2021-03-14-near-04.png"><br>
+Just continue with Recovery Phrase and write down the 12 word seed on the follwing page.</p>
+<p>Lastly you are redirected to your <a href="https://wallet.testnet.near.org/profile">NEAR Wallet</a> page on the testnet:
+<img alt="NEAR wallet" src="../img/2021/2021-03-14-near-05.png">  </p>
+<p>So what you have is a wallet webapp containing the private key to do transactions on the near blockchain.<br>
+As you can see you could can also have chosen to use a Ledger as a HW device for your private key.  </p>
+<p>When you look on you disk you'll find
+* <code>&lt;HOME&gt;\.near-config\</code> - containing session config
+* <code>&lt;HOME&gt;\.near-credentials\testnet\</code> - containing public key and private key. So remember to include a backup strategy for that.<br>
+* <code>src\config.js</code> - containing links to different NEAR networks (e.g. testnet, mainnet).<br>
+When you build for dev, then it will use testnet! - and for prod then mainnet.  </p>
+<h3>.gitignore</h3>
+<p>.gitignore is missing some folders it should ignore. You can add:</p>
+<div class="highlight"><pre><span></span><span class="c1"># .gitignore</span>
+/contract/node_modules
+/contract/build
+/.cache
+/dist
+</pre></div>
+
+
+<h2>Links</h2>
+<ul>
+<li>Community: <a href="https://discord.com/invite/UY9Xf2k">Join the NEAR Discord Server!</a></li>
+<li>JS API<ul>
+<li><a href="https://docs.near.org/docs/tutorials/create-transactions#sign-transaction">Sign Transactions · NEAR Documentation</a></li>
+<li><a href="https://github.com/near/near-api-js/blob/d4d4cf1ac3182fa998b1e004e6782219325a641b/src/transaction.ts#L112-L123">class SignedTransaction</a></li>
+</ul>
+</li>
+<li><a href="https://borsh.io/">Borsh</a></li>
+</ul>
+<p>The End</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://rasor.github.io/tag/blockchain.html">#blockchain</a>
+      <a href="https://rasor.github.io/tag/near.html">#near</a>
+      <a href="https://rasor.github.io/tag/npm.html">#npm</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>
+  &copy; rasor 2017 - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+</p>
+<p>    Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p><p>
+  <a rel="license"
+     href="http://creativecommons.org/licenses/by-sa/4.0/"
+     target="_blank">
+    <img alt="Creative Commons License"
+         title="Creative Commons License"
+         style="border-width:0"
+           src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png"
+         width="80"
+         height="15"/>
+  </a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Rasor's Tech Blog ",
+  "url" : "https://rasor.github.io",
+  "image": "//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120",
+  "description": ""
+}
+</script>
+
+</body>
+</html>
