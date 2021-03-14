@@ -1,7 +1,7 @@
 Title: Testing templates from NEAR blockchain
 Status: published
 Date: 2021-03-14 00:00
-Modified: 2021-03-14 14:00
+Modified: 2021-03-14 15:00
 Category: Develop
 Tags: #blockchain, #near, #npm
 
@@ -9,7 +9,7 @@ _(The code for this blog is located [here](https://github.com/rasor/near-app-def
 
 ## Intro
 
-For the blockcahin [NEAR protocol](https://docs.near.org/docs/develop/basics/getting-started) there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  
+For the blockchain [NEAR protocol](https://docs.near.org/docs/develop/basics/getting-started) there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  
 
 First I want to see the React template with AssemblyScript smart contract.  
 There are two [options](https://github.com/near/create-near-app#readme) you can add:
@@ -210,7 +210,7 @@ As you can see you could also have chosen to use a Ledger as a HW device for you
 When you look on you disk you'll find
 
 * `<HOME>\.near-config\` - containing session config
-* `<HOME>\.near-credentials\testnet\` - containing public key and private key. So remember to include a backup strategy for that.  
+* `<HOME>\.near-credentials\testnet\` - containing **public key** and **private key**. So remember to include a backup strategy for that.  
 * `src\config.js` - containing links to different NEAR networks (e.g. testnet, mainnet).  
 
 When you build **for dev**, then it will use **testnet**! - and **for prod** then **mainnet**.  
