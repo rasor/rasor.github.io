@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-03-14T00:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Testing templates from NEAR blockchain</title><link href="https://rasor.github.io/testing-templates-from-near-blockchain.html" rel="alternate"></link><published>2021-03-14T00:00:00+01:00</published><updated>2021-03-14T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-14:/testing-templates-from-near-blockchain.html</id><summary type="html">&lt;p&gt;&lt;em&gt;(The code for this blog is located &lt;a href="https://github.com/rasor/near-app-default-react"&gt;here&lt;/a&gt;)&lt;/em&gt;  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-03-14T14:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Testing templates from NEAR blockchain</title><link href="https://rasor.github.io/testing-templates-from-near-blockchain.html" rel="alternate"></link><published>2021-03-14T00:00:00+01:00</published><updated>2021-03-14T14:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-14:/testing-templates-from-near-blockchain.html</id><summary type="html">&lt;p&gt;&lt;em&gt;(The code for this blog is located &lt;a href="https://github.com/rasor/near-app-default-react"&gt;here&lt;/a&gt;)&lt;/em&gt;  &lt;/p&gt;
 &lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;For the blockcahin &lt;a href="https://docs.near.org/docs/develop/basics/getting-started"&gt;NEAR protocol&lt;/a&gt; there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  &lt;/p&gt;
 &lt;p&gt;First I want to see the React template with AssemblyScript smart contract.&lt;br&gt;
@@ -169,7 +169,7 @@ What the script did was it deployed the smart contract (found in &lt;code&gt;con
 &lt;p&gt;Clicking on &lt;code&gt;Sign In&lt;/code&gt; redirects to external &lt;code&gt;testnet&lt;/code&gt; site:&lt;br&gt;
 &lt;img alt="NEAR testnet" src="../img/2021/2021-03-14-near-02.png"&gt;&lt;br&gt;
 It wants you to create an account. Click on &lt;code&gt;Create Account&lt;/code&gt;  &lt;/p&gt;
-&lt;p&gt;Now re-use your signer-id:
+&lt;p&gt;Now re-use your signer-id:&lt;br&gt;
 &lt;img alt="NEAR create account" src="../img/2021/2021-03-14-near-03.png"&gt;&lt;br&gt;
 and press &lt;code&gt;Create Account&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Now you will have to choose recovery mode:&lt;br&gt;
@@ -178,12 +178,14 @@ Just continue with Recovery Phrase and write down the 12 word seed on the follwi
 &lt;p&gt;Lastly you are redirected to your &lt;a href="https://wallet.testnet.near.org/profile"&gt;NEAR Wallet&lt;/a&gt; page on the testnet:
 &lt;img alt="NEAR wallet" src="../img/2021/2021-03-14-near-05.png"&gt;  &lt;/p&gt;
 &lt;p&gt;So what you have is a wallet webapp containing the private key to do transactions on the near blockchain.&lt;br&gt;
-As you can see you could can also have chosen to use a Ledger as a HW device for your private key.  &lt;/p&gt;
-&lt;p&gt;When you look on you disk you'll find
-* &lt;code&gt;&amp;lt;HOME&amp;gt;\.near-config\&lt;/code&gt; - containing session config
-* &lt;code&gt;&amp;lt;HOME&amp;gt;\.near-credentials\testnet\&lt;/code&gt; - containing public key and private key. So remember to include a backup strategy for that.&lt;br&gt;
-* &lt;code&gt;src\config.js&lt;/code&gt; - containing links to different NEAR networks (e.g. testnet, mainnet).&lt;br&gt;
-When you build for dev, then it will use testnet! - and for prod then mainnet.  &lt;/p&gt;
+As you can see you could also have chosen to use a Ledger as a HW device for your private key.  &lt;/p&gt;
+&lt;p&gt;When you look on you disk you'll find&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;HOME&amp;gt;\.near-config\&lt;/code&gt; - containing session config&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;HOME&amp;gt;\.near-credentials\testnet\&lt;/code&gt; - containing public key and private key. So remember to include a backup strategy for that.  &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src\config.js&lt;/code&gt; - containing links to different NEAR networks (e.g. testnet, mainnet).  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you build &lt;strong&gt;for dev&lt;/strong&gt;, then it will use &lt;strong&gt;testnet&lt;/strong&gt;! - and &lt;strong&gt;for prod&lt;/strong&gt; then &lt;strong&gt;mainnet&lt;/strong&gt;.  &lt;/p&gt;
 &lt;h3&gt;.gitignore&lt;/h3&gt;
 &lt;p&gt;.gitignore is missing some folders it should ignore. You can add:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# .gitignore&lt;/span&gt;

@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/testing-templates-from-near-blockchain.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2021-03-14 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2021-03-14 00:00:00+01:00"/>
+<meta property="article:modified_time" content="2021-03-14 14:00:00+01:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="Develop"/>
 <meta property="article:tag" content="#blockchain"/>
@@ -304,7 +304,7 @@ What the script did was it deployed the smart contract (found in <code>contract\
 <p>Clicking on <code>Sign In</code> redirects to external <code>testnet</code> site:<br>
 <img alt="NEAR testnet" src="../img/2021/2021-03-14-near-02.png"><br>
 It wants you to create an account. Click on <code>Create Account</code>  </p>
-<p>Now re-use your signer-id:
+<p>Now re-use your signer-id:<br>
 <img alt="NEAR create account" src="../img/2021/2021-03-14-near-03.png"><br>
 and press <code>Create Account</code></p>
 <p>Now you will have to choose recovery mode:<br>
@@ -313,12 +313,14 @@ Just continue with Recovery Phrase and write down the 12 word seed on the follwi
 <p>Lastly you are redirected to your <a href="https://wallet.testnet.near.org/profile">NEAR Wallet</a> page on the testnet:
 <img alt="NEAR wallet" src="../img/2021/2021-03-14-near-05.png">  </p>
 <p>So what you have is a wallet webapp containing the private key to do transactions on the near blockchain.<br>
-As you can see you could can also have chosen to use a Ledger as a HW device for your private key.  </p>
-<p>When you look on you disk you'll find
-* <code>&lt;HOME&gt;\.near-config\</code> - containing session config
-* <code>&lt;HOME&gt;\.near-credentials\testnet\</code> - containing public key and private key. So remember to include a backup strategy for that.<br>
-* <code>src\config.js</code> - containing links to different NEAR networks (e.g. testnet, mainnet).<br>
-When you build for dev, then it will use testnet! - and for prod then mainnet.  </p>
+As you can see you could also have chosen to use a Ledger as a HW device for your private key.  </p>
+<p>When you look on you disk you'll find</p>
+<ul>
+<li><code>&lt;HOME&gt;\.near-config\</code> - containing session config</li>
+<li><code>&lt;HOME&gt;\.near-credentials\testnet\</code> - containing public key and private key. So remember to include a backup strategy for that.  </li>
+<li><code>src\config.js</code> - containing links to different NEAR networks (e.g. testnet, mainnet).  </li>
+</ul>
+<p>When you build <strong>for dev</strong>, then it will use <strong>testnet</strong>! - and <strong>for prod</strong> then <strong>mainnet</strong>.  </p>
 <h3>.gitignore</h3>
 <p>.gitignore is missing some folders it should ignore. You can add:</p>
 <div class="highlight"><pre><span></span><span class="c1"># .gitignore</span>
