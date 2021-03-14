@@ -1,7 +1,7 @@
 Title: Testing templates from NEAR blockchain
 Status: published
 Date: 2021-03-14 00:00
-Modified: 2021-03-14 00:00
+Modified: 2021-03-14 14:00
 Category: Develop
 Tags: #blockchain, #near, #npm
 
@@ -193,7 +193,7 @@ Clicking on `Sign In` redirects to external `testnet` site:
 ![NEAR testnet](../img/2021/2021-03-14-near-02.png)  
 It wants you to create an account. Click on `Create Account`  
 
-Now re-use your signer-id:
+Now re-use your signer-id:  
 ![NEAR create account](../img/2021/2021-03-14-near-03.png)  
 and press `Create Account`
 
@@ -205,13 +205,15 @@ Lastly you are redirected to your [NEAR Wallet](https://wallet.testnet.near.org/
 ![NEAR wallet](../img/2021/2021-03-14-near-05.png)  
 
 So what you have is a wallet webapp containing the private key to do transactions on the near blockchain.  
-As you can see you could can also have chosen to use a Ledger as a HW device for your private key.  
+As you can see you could also have chosen to use a Ledger as a HW device for your private key.  
 
 When you look on you disk you'll find
+
 * `<HOME>\.near-config\` - containing session config
 * `<HOME>\.near-credentials\testnet\` - containing public key and private key. So remember to include a backup strategy for that.  
 * `src\config.js` - containing links to different NEAR networks (e.g. testnet, mainnet).  
-When you build for dev, then it will use testnet! - and for prod then mainnet.  
+
+When you build **for dev**, then it will use **testnet**! - and **for prod** then **mainnet**.  
 
 ### .gitignore
 
