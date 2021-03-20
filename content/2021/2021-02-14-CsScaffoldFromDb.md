@@ -1,7 +1,7 @@
 Title: Scaffolding DB layer from DB
 Status: published
 Date: 2021-02-14 00:00
-Modified: 2021-02-14 00:00
+Modified: 2021-03-20 00:00
 Category: Develop
 Tags: #csharp, #ef, #db, #mvc, #scaffold, #northwind
 
@@ -154,10 +154,13 @@ Above code is [V.0.0.3](https://github.com/rasor/CsScaffoldNorthwind/releases/ta
 
 ## Links
 
-* [Scaffolding ASP.NET Core MVC](https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/)
-* [ASP.NET MVC - Scaffolding - Tutorialspoint](https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm)
-* [Installing Entity Framework Core - EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/overview/install)
-* [Connection Strings - EF Core](https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-strings)
-* [Get the sample SQL Server databases for ADO.NET code samples - ADO.NET](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server)
+* Scaffolding
+  * [Scaffolding ASP.NET Core MVC](https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/)
+  * [ASP.NET MVC - Scaffolding - Tutorialspoint](https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm)
+  * [Tutorial: Customize view for EF Database First with ASP.NET MVC app](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/database-first-development/customizing-a-view)
+* Preparing Scaffold setup
+  * [Installing Entity Framework Core - EF Core](https://docs.microsoft.com/en-us/ef/core/get-started/overview/install)
+  * [Connection Strings - EF Core](https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-strings)
+  * [Get the sample SQL Server databases for ADO.NET code samples - ADO.NET](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server)
 
 The End.
