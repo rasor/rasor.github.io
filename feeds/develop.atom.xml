@@ -206,7 +206,164 @@ As you can see you could also have chosen to use a Ledger as a HW device for you
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://borsh.io/"&gt;Borsh&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#blockchain"></category><category term="#near"></category><category term="#npm"></category></entry><entry><title>ASP.NET Core with k8s hosting - Part 1.3</title><link href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html" rel="alternate"></link><published>2020-10-27T00:00:00+01:00</published><updated>2021-01-17T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-27:/aspnet-core-with-k8s-hosting-part-13.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#blockchain"></category><category term="#near"></category><category term="#npm"></category></entry><entry><title>Scaffolding DB layer from DB</title><link href="https://rasor.github.io/scaffolding-db-layer-from-db.html" rel="alternate"></link><published>2021-02-14T00:00:00+01:00</published><updated>2021-02-14T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-02-14:/scaffolding-db-layer-from-db.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010.  &lt;/p&gt;
+&lt;p&gt;It is a great feature to use for PoCs and demos.  &lt;/p&gt;
+&lt;p&gt;In this blog I'll use Northwind …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010.  &lt;/p&gt;
+&lt;p&gt;It is a great feature to use for PoCs and demos.  &lt;/p&gt;
+&lt;p&gt;In this blog I'll use Northwind DB and scaffold a view of &lt;code&gt;customers&lt;/code&gt; - and later on other views.&lt;/p&gt;
+&lt;h2&gt;Install&lt;/h2&gt;
+&lt;h3&gt;Prerequisites&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SMSS&lt;/li&gt;
+&lt;li&gt;Visual Studio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Install Northwind SQL DB&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Clone &lt;a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs"&gt;Northwind DB&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;or clone a &lt;a href="https://github.com/microsoft/sql-server-samples#cloning-only-a-subset-of-the-repo-with-sparse-checkout"&gt;subset&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Bash:&lt;/span&gt;
+&lt;span class="c1"&gt;# full clone&lt;/span&gt;
+git clone https://github.com/microsoft/sql-server-samples.git
+&lt;span class="nb"&gt;cd&lt;/span&gt; sql-server-samples/samples/databases/northwind-pubs
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Open SMSS&lt;/li&gt;
+&lt;li&gt;Connect to the target SQL Server&lt;ul&gt;
+&lt;li&gt;In my case I connect to &lt;code&gt;localhost\SQLEXPRESS&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open &lt;code&gt;instnwnd.sql&lt;/code&gt; in SMSS&lt;/li&gt;
+&lt;li&gt;Execute &lt;code&gt;instnwnd.sql&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- check if we got some data&lt;/span&gt;
+&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;orders&lt;/span&gt;
+&lt;span class="c1"&gt;-- gives 830 rows&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;Scaffold&lt;/h2&gt;
+&lt;h3&gt;Create a webapp&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Bash:&lt;/span&gt;
+mkdir CsScaffoldNorthwind
+&lt;span class="nb"&gt;cd&lt;/span&gt; CsScaffoldNorthwind
+
+&lt;span class="c1"&gt;# We need a c# web template - what is its name?&lt;/span&gt;
+dotnet new -l
+&lt;span class="c1"&gt;# dotnet gitignore file                             gitignore                                  Config&lt;/span&gt;
+&lt;span class="c1"&gt;# ASP.NET Core Web App (Model-View-Controller)      mvc                      [C#], F#          Web/MVC&lt;/span&gt;
+&lt;span class="c1"&gt;# Solution File                                     sln                                        Solution&lt;/span&gt;
+dotnet new mvc
+&lt;span class="c1"&gt;# We need a solution file&lt;/span&gt;
+dotnet new sln
+&lt;span class="c1"&gt;# We need a gitignore file&lt;/span&gt;
+dotnet new gitignore
+
+&lt;span class="c1"&gt;# Test build and run&lt;/span&gt;
+dotnet build
+dotnet run
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Open the web in a browser on either  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://localhost:5001/ or&lt;/li&gt;
+&lt;li&gt;http://localhost:5000/&lt;/li&gt;
+&lt;li&gt;Press Ctrl-C to stop the webserver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Testing the webapp from VS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Open the sln file in VS&lt;/li&gt;
+&lt;li&gt;In Sln Explorer right-click sln and add existing project - select CsScaffoldNorthwind.csproj&lt;/li&gt;
+&lt;li&gt;In the Run-dropdown select &lt;code&gt;CsScaffoldNorthwind&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Press F5. Now VS will run &lt;code&gt;dotnet run&lt;/code&gt; in the background and start a browser for you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Above code is &lt;a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.1"&gt;V.0.0.1&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Add EF to dotnet&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# In project folder add Nuget Package for your code&lt;/span&gt;
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+&lt;span class="c1"&gt;# info : PackageReference for package &amp;#39;Microsoft.EntityFrameworkCore.SqlServer&amp;#39; version &amp;#39;5.0.3&amp;#39; added to file \CsScaffoldNorthwind.csproj&amp;#39;.&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Install the EF Tool&lt;/span&gt;
+dotnet ef -help
+&lt;span class="c1"&gt;# Could not execute because the specified command or file was not found.&lt;/span&gt;
+dotnet tool install --global dotnet-ef
+&lt;span class="c1"&gt;# You can invoke the tool using the following command: dotnet-ef&lt;/span&gt;
+&lt;span class="c1"&gt;# Tool &amp;#39;dotnet-ef&amp;#39; (version &amp;#39;5.0.3&amp;#39;) was successfully installed.&lt;/span&gt;
+dotnet ef --version
+&lt;span class="c1"&gt;# Entity Framework Core .NET Command-line Tools&lt;/span&gt;
+&lt;span class="c1"&gt;# 5.0.3&lt;/span&gt;
+
+&lt;span class="c1"&gt;# When you need to update do:&lt;/span&gt;
+dotnet tool update
+
+&lt;span class="c1"&gt;# Add yet a Nuget package&lt;/span&gt;
+dotnet add package Microsoft.EntityFrameworkCore.Design
+&lt;span class="c1"&gt;# info : PackageReference for package &amp;#39;Microsoft.EntityFrameworkCore.Design&amp;#39; version &amp;#39;5.0.3&amp;#39; added to file \CsScaffoldNorthwind.csproj&amp;#39;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Scaffold using EF&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;dotnet ef dbcontext scaffold &amp;quot;Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;&amp;quot; Microsoft.EntityFrameworkCore.SqlServer --output-dir Models&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This added approx 25 models from the DB.  &lt;/p&gt;
+&lt;p&gt;Above code is &lt;a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.2"&gt;V.0.0.2&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;In VS Right click on Controller folder - Add - New scaffolding Item&lt;ul&gt;
+&lt;li&gt;Select &lt;code&gt;MVC Controller with views, using EF&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Select model (customers) and DB&lt;br&gt;
+&lt;img alt="Scaffold Controller and View" src="../img/2021/2021-02-14-Scaffold01.png"&gt;  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Run (F5)&lt;/li&gt;
+&lt;li&gt;Browse to https://localhost:5001/customers&lt;ul&gt;
+&lt;li&gt;Gives you &lt;code&gt;InvalidOperationException: Unable to resolve service for type 'CsScaffoldNorthwind.Models.NorthwindContext'&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Add to &lt;code&gt;appsettings.Development.json&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;// appsettings.Development.json&lt;/span&gt;
+&lt;span class="err"&gt;  &amp;quot;ConnectionStrings&amp;quot;: {&lt;/span&gt;
+&lt;span class="err"&gt;    &amp;quot;DefaultConnection&amp;quot;: &amp;quot;Server=localhost\\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;&amp;quot;&lt;/span&gt;
+&lt;span class="err"&gt;  },&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Add to &lt;code&gt;startup.cs&lt;/code&gt;:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// startup.cs&lt;/span&gt;
+        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;ConfigureServices&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IServiceCollection&lt;/span&gt; &lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddControllersWithViews&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+            &lt;span class="c1"&gt;// Add this:&lt;/span&gt;
+            &lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;connectionString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetConnectionString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DefaultConnection&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddDbContext&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;NorthwindContext&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;UseSqlServer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;connectionString&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;Run (F5)&lt;/li&gt;
+&lt;li&gt;Browse to https://localhost:5001/customers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Above code is &lt;a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.3"&gt;V.0.0.3&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/"&gt;Scaffolding ASP.NET Core MVC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm"&gt;ASP.NET MVC - Scaffolding - Tutorialspoint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/ef/core/get-started/overview/install"&gt;Installing Entity Framework Core - EF Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-strings"&gt;Connection Strings - EF Core&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server"&gt;Get the sample SQL Server databases for ADO.NET code samples - ADO.NET&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The End.&lt;/p&gt;</content><category term="Develop"></category><category term="#csharp"></category><category term="#ef"></category><category term="#db"></category><category term="#mvc"></category><category term="#scaffold"></category><category term="#northwind"></category></entry><entry><title>ASP.NET Core with k8s hosting - Part 1.3</title><link href="https://rasor.github.io/aspnet-core-with-k8s-hosting-part-13.html" rel="alternate"></link><published>2020-10-27T00:00:00+01:00</published><updated>2021-01-17T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2020-10-27:/aspnet-core-with-k8s-hosting-part-13.html</id><summary type="html">&lt;p&gt;This blog is part of a serie:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Part 0.1: Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/k8s-on-windows-devbox-part-02.html"&gt;Part 0.2: Install k8s using kind on Windows - including arkade&lt;/a&gt;&lt;/li&gt;
@@ -3176,161 +3333,4 @@ Now you can see that it is Angular CLI (via .angular-cli.json) that in both case
 &lt;li&gt;&lt;a href="https://www.npmjs.com/package/@angular/cli/" target="_blank"&gt;@angular/cli&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://angular.io/guide/visual-studio-2015" target="_blank"&gt;Visual Studio 2015 QuickStart&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry><entry><title>Scaffolding DB layer from DB</title><link href="https://rasor.github.io/scaffolding-db-layer-from-db.html" rel="alternate"></link><published>2012-02-14T00:00:00+01:00</published><updated>2012-02-14T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2012-02-14:/scaffolding-db-layer-from-db.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
-&lt;p&gt;ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010.  &lt;/p&gt;
-&lt;p&gt;It is a great feature to use for PoCs and demos.  &lt;/p&gt;
-&lt;p&gt;In this blog I'll use Northwind …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;
-&lt;p&gt;ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010.  &lt;/p&gt;
-&lt;p&gt;It is a great feature to use for PoCs and demos.  &lt;/p&gt;
-&lt;p&gt;In this blog I'll use Northwind DB and scaffold a view of &lt;code&gt;customers&lt;/code&gt; - and later on other views.&lt;/p&gt;
-&lt;h2&gt;Install&lt;/h2&gt;
-&lt;h3&gt;Prerequisites&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;SMSS&lt;/li&gt;
-&lt;li&gt;Visual Studio&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Install Northwind SQL DB&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Clone &lt;a href="https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs"&gt;Northwind DB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;or clone a &lt;a href="https://github.com/microsoft/sql-server-samples#cloning-only-a-subset-of-the-repo-with-sparse-checkout"&gt;subset&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Bash:&lt;/span&gt;
-&lt;span class="c1"&gt;# full clone&lt;/span&gt;
-git clone https://github.com/microsoft/sql-server-samples.git
-&lt;span class="nb"&gt;cd&lt;/span&gt; sql-server-samples/samples/databases/northwind-pubs
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;Open SMSS&lt;/li&gt;
-&lt;li&gt;Connect to the target SQL Server&lt;ul&gt;
-&lt;li&gt;In my case I connect to &lt;code&gt;localhost\SQLEXPRESS&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Open &lt;code&gt;instnwnd.sql&lt;/code&gt; in SMSS&lt;/li&gt;
-&lt;li&gt;Execute &lt;code&gt;instnwnd.sql&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- check if we got some data&lt;/span&gt;
-&lt;span class="k"&gt;SELECT&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;orders&lt;/span&gt;
-&lt;span class="c1"&gt;-- gives 830 rows&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Scaffold&lt;/h2&gt;
-&lt;h3&gt;Create a webapp&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Bash:&lt;/span&gt;
-mkdir CsScaffoldNorthwind
-&lt;span class="nb"&gt;cd&lt;/span&gt; CsScaffoldNorthwind
-
-&lt;span class="c1"&gt;# We need a c# web template - what is its name?&lt;/span&gt;
-dotnet new -l
-&lt;span class="c1"&gt;# dotnet gitignore file                             gitignore                                  Config&lt;/span&gt;
-&lt;span class="c1"&gt;# ASP.NET Core Web App (Model-View-Controller)      mvc                      [C#], F#          Web/MVC&lt;/span&gt;
-&lt;span class="c1"&gt;# Solution File                                     sln                                        Solution&lt;/span&gt;
-dotnet new mvc
-&lt;span class="c1"&gt;# We need a solution file&lt;/span&gt;
-dotnet new sln
-&lt;span class="c1"&gt;# We need a gitignore file&lt;/span&gt;
-dotnet new gitignore
-
-&lt;span class="c1"&gt;# Test build and run&lt;/span&gt;
-dotnet build
-dotnet run
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Open the web in a browser on either  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;https://localhost:5001/ or&lt;/li&gt;
-&lt;li&gt;http://localhost:5000/&lt;/li&gt;
-&lt;li&gt;Press Ctrl-C to stop the webserver&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;Testing the webapp from VS&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Open the sln file in VS&lt;/li&gt;
-&lt;li&gt;In Sln Explorer right-click sln and add existing project - select CsScaffoldNorthwind.csproj&lt;/li&gt;
-&lt;li&gt;In the Run-dropdown select &lt;code&gt;CsScaffoldNorthwind&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Press F5. Now VS will run &lt;code&gt;dotnet run&lt;/code&gt; in the background and start a browser for you.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Above code is &lt;a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.1"&gt;V.0.0.1&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Add EF to dotnet&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# In project folder add Nuget Package for your code&lt;/span&gt;
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-&lt;span class="c1"&gt;# info : PackageReference for package &amp;#39;Microsoft.EntityFrameworkCore.SqlServer&amp;#39; version &amp;#39;5.0.3&amp;#39; added to file \CsScaffoldNorthwind.csproj&amp;#39;.&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Install the EF Tool&lt;/span&gt;
-dotnet ef -help
-&lt;span class="c1"&gt;# Could not execute because the specified command or file was not found.&lt;/span&gt;
-dotnet tool install --global dotnet-ef
-&lt;span class="c1"&gt;# You can invoke the tool using the following command: dotnet-ef&lt;/span&gt;
-&lt;span class="c1"&gt;# Tool &amp;#39;dotnet-ef&amp;#39; (version &amp;#39;5.0.3&amp;#39;) was successfully installed.&lt;/span&gt;
-dotnet ef --version
-&lt;span class="c1"&gt;# Entity Framework Core .NET Command-line Tools&lt;/span&gt;
-&lt;span class="c1"&gt;# 5.0.3&lt;/span&gt;
-
-&lt;span class="c1"&gt;# When you need to update do:&lt;/span&gt;
-dotnet tool update
-
-&lt;span class="c1"&gt;# Add yet a Nuget package&lt;/span&gt;
-dotnet add package Microsoft.EntityFrameworkCore.Design
-&lt;span class="c1"&gt;# info : PackageReference for package &amp;#39;Microsoft.EntityFrameworkCore.Design&amp;#39; version &amp;#39;5.0.3&amp;#39; added to file \CsScaffoldNorthwind.csproj&amp;#39;.&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Scaffold using EF&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;dotnet ef dbcontext scaffold &amp;quot;Server=localhost\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;&amp;quot; Microsoft.EntityFrameworkCore.SqlServer --output-dir Models&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;This added approx 25 models from the DB.  &lt;/p&gt;
-&lt;p&gt;Above code is &lt;a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.2"&gt;V.0.0.2&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;In VS Right click on Controller folder - Add - New scaffolding Item&lt;ul&gt;
-&lt;li&gt;Select &lt;code&gt;MVC Controller with views, using EF&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Select model (customers) and DB&lt;br&gt;
-&lt;img alt="Scaffold Controller and View" src="../img/2021/2021-02-14-Scaffold01.PNG"&gt;  &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Run (F5)&lt;/li&gt;
-&lt;li&gt;Browse to https://localhost:5001/customers&lt;ul&gt;
-&lt;li&gt;Gives you &lt;code&gt;InvalidOperationException: Unable to resolve service for type 'CsScaffoldNorthwind.Models.NorthwindContext'&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Add to &lt;code&gt;appsettings.Development.json&lt;/code&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;// appsettings.Development.json&lt;/span&gt;
-&lt;span class="err"&gt;  &amp;quot;ConnectionStrings&amp;quot;: {&lt;/span&gt;
-&lt;span class="err"&gt;    &amp;quot;DefaultConnection&amp;quot;: &amp;quot;Server=localhost\\SQLEXPRESS;Database=Northwind;Trusted_Connection=True;&amp;quot;&lt;/span&gt;
-&lt;span class="err"&gt;  },&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;Add to &lt;code&gt;startup.cs&lt;/code&gt;:&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;// startup.cs&lt;/span&gt;
-        &lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;ConfigureServices&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IServiceCollection&lt;/span&gt; &lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="p"&gt;{&lt;/span&gt;
-            &lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddControllersWithViews&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-
-            &lt;span class="c1"&gt;// Add this:&lt;/span&gt;
-            &lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;connectionString&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Configuration&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;GetConnectionString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;DefaultConnection&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-            &lt;span class="n"&gt;services&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AddDbContext&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;NorthwindContext&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;(&lt;/span&gt;&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;UseSqlServer&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;connectionString&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
-        &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;Run (F5)&lt;/li&gt;
-&lt;li&gt;Browse to https://localhost:5001/customers&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Above code is &lt;a href="https://github.com/rasor/CsScaffoldNorthwind/releases/tag/0.0.3"&gt;V.0.0.3&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Links&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.c-sharpcorner.com/article/scaffolding-asp-net-core-mvc/"&gt;Scaffolding ASP.NET Core MVC&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.tutorialspoint.com/asp.net_mvc/asp.net_mvc_scaffolding.htm"&gt;ASP.NET MVC - Scaffolding - Tutorialspoint&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/ef/core/get-started/overview/install"&gt;Installing Entity Framework Core - EF Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-strings"&gt;Connection Strings - EF Core&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/downloading-sample-databases#get-the-northwind-sample-database-for-sql-server"&gt;Get the sample SQL Server databases for ADO.NET code samples - ADO.NET&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The End.&lt;/p&gt;</content><category term="Develop"></category><category term="#csharp"></category><category term="#ef"></category><category term="#db"></category><category term="#mvc"></category><category term="#scaffold"></category><category term="#northwind"></category></entry></feed>
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#npm"></category><category term="#ngx"></category><category term="#typescript"></category><category term="#visualstudio"></category><category term="#tfs"></category></entry></feed>
