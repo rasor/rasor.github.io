@@ -5,42 +5,42 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2021-03-14T14:59:26-00:00</lastmod>
+<lastmod>2021-03-20T18:38:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2021-03-14T14:59:26-00:00</lastmod>
+<lastmod>2021-03-20T18:38:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2021-03-14T14:59:26-00:00</lastmod>
+<lastmod>2021-03-20T18:38:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2021-03-14T14:59:26-00:00</lastmod>
+<lastmod>2021-03-20T18:38:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2021-03-14T14:59:26-00:00</lastmod>
+<lastmod>2021-03-20T18:38:13-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/testing-templates-from-near-blockchain.html</loc>
-<lastmod>2021-03-14T14:00:00+01:00</lastmod>
+<lastmod>2021-03-14T15:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -298,6 +298,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://rasor.github.io/scaffolding-db-layer-from-db.html</loc>
+<lastmod>2012-02-14T00:00:00+01:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://rasor.github.io/category/biz.html</loc>
 <lastmod>2017-09-30T12:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -306,7 +313,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2021-03-14T14:00:00+00:50</lastmod>
+<lastmod>2021-03-14T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -327,21 +334,21 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/blockchain.html</loc>
-<lastmod>2021-03-14T14:00:00+00:50</lastmod>
+<lastmod>2021-03-14T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/near.html</loc>
-<lastmod>2021-03-14T14:00:00+00:50</lastmod>
+<lastmod>2021-03-14T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/npm.html</loc>
-<lastmod>2021-03-14T14:00:00+00:50</lastmod>
+<lastmod>2021-03-14T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1159,8 +1166,36 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+<loc>https://rasor.github.io/tag/db.html</loc>
+<lastmod>2012-02-14T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/mvc.html</loc>
+<lastmod>2012-02-14T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/scaffold.html</loc>
+<lastmod>2012-02-14T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/northwind.html</loc>
+<lastmod>2012-02-14T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2021-03-14T14:00:00+00:50</lastmod>
+<lastmod>2021-03-14T15:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
