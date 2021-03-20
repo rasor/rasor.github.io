@@ -1,7 +1,7 @@
 Title: Scaffolding DB layer from DB
 Status: published
-Date: 2012-02-14 00:00
-Modified: 2012-02-14 00:00
+Date: 2021-02-14 00:00
+Modified: 2021-02-14 00:00
 Category: Develop
 Tags: #csharp, #ef, #db, #mvc, #scaffold, #northwind
 
@@ -122,7 +122,7 @@ Above code is [V.0.0.2](https://github.com/rasor/CsScaffoldNorthwind/releases/ta
 * In VS Right click on Controller folder - Add - New scaffolding Item
     * Select `MVC Controller with views, using EF`
     * Select model (customers) and DB  
-    ![Scaffold Controller and View](../img/2021/2021-02-14-Scaffold01.PNG)  
+    ![Scaffold Controller and View](../img/2021/2021-02-14-Scaffold01.png)  
 * Run (F5)
 * Browse to https://localhost:5001/customers
     * Gives you `InvalidOperationException: Unable to resolve service for type 'CsScaffoldNorthwind.Models.NorthwindContext'`
