@@ -1,8 +1,9 @@
 Title: Scaffolding DB layer from DB
-Date: 2099-01-01 00:00
-Modified: 2099-01-01 00:00
+Status: published
+Date: 2012-02-14 00:00
+Modified: 2012-02-14 00:00
 Category: Develop
-Tags: #csharp, #ef, #db, #mvc
+Tags: #csharp, #ef, #db, #mvc, #scaffold, #northwind
 
 ## Intro
 
@@ -10,7 +11,7 @@ ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a 
 
 It is a great feature to use for PoCs and demos.  
 
-In this blog I'll use Northwind DB and scaffold a master-detail view of `orders` and `order details`
+In this blog I'll use Northwind DB and scaffold a view of `customers` - and later on other views.
 
 ## Install
 
