@@ -30,6 +30,52 @@ Tags: #csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch
         * [Create a REST client using .NET Core](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient) // #JsonSerializer.DeserializeAsync, #JsonPropertyName
     * Array: [Explore ranges of data using indices and ranges](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes) // #`arr[..]`
     * Capabilities with Interfaces: [Create mixin types using default interface methods](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/mixins-with-default-interface-methods#mix-and-match-capabilities)
-    * Interface methods: [Safely update interfaces using default interface methods in C#](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-methods-versions)
+    * "Multiple inheritace" / Interface methods: [Safely update interfaces using default interface methods in C#](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-methods-versions)
+    * Authentication
+        * [Cutting Edge - Cookies, Claims and Authentication in ASP.NET Core](https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/cutting-edge-cookies-claims-and-authentication-in-asp-net-core)
+            * Flow:
+                * `User` -> 
+                * `Claims` -> 
+                * `ClaimsIdentity` (which claim is userid? which is role? use cookies (authscheme) or?) -> 
+                * `ClaimsPrincipal` (1 principal can have many identities - think cards) -> 
+                * Authenticate
+                    * Can be challenge to e.g. Twitter
+                    * Can optionally inspect and edit external principal: 
+                    ```csharp
+                    app.UseXxxAuthentication(new Options(){
+                        AuthenticationScheme = "Xxx", //where to do auth - e.g. Twitter
+                        SingInScheme = "NextAuthScheme" //next auth after twitter
+                    });
+                    app.UseYyyyAuthentication(new Options(){
+                        AuthenticationScheme = "NextAuthScheme", //where to do auth - e.g. cookie from Twitter
+                        AutomaticAuthenticate = false
+                    });
+                    // where to manual do auth
+                    var props = new AuthenticationProperties(){
+                        RedirectUri = "/account/external"  
+                    };
+                    // Controller
+                    public async Task<IActionResult> External(){
+                        var principal = await HttpContext
+                            .Authentication()
+                            .AuthenticateAsync("ExternalCookie");
+                        // Edit the principal
+                        // ...
+                        await HttpContext.Authentication.SignInAsync("Cookies", principal);
+                        await HttpContext.Authentication.SignOutAsync("ExternalCookie "); // remove temp twitter cookie
+                    }
+                    ```
+                * Endpoint (can require cookies, roles or other)  
+                ```csharp
+                [Authorize(ActiveAuthenticationSchemes = "Bearer")]
+                public class ApiController : Controller
+                {
+                    // Your API action methods here
+                }
+                ```
+    * dotnet/standard
+        * [So devs understand](https://github.com/dotnet/standard/blob/master/docs/metaphor.md)
+        * [FAQ](https://github.com/dotnet/standard/blob/master/docs/faq.md)
+        * [.NET Standard - Demystifying .NET Core and .NET Standard](https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/net-standard-demystifying-net-core-and-net-standard)
 
 The End
