@@ -52,6 +52,8 @@ Tags: #blockchain,
     * [iden3](https://github.com/iden3)
 * [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/)
 * [3Box](https://3box.io/)
+    * [IDX: Identity protocol for open applications](https://idx.xyz/)
+        * [Overview | IDX Developers](https://developers.idx.xyz/learn/overview/)
 * [Blockchain and Digital Identity: Ultimate Guide](https://blockgeeks.com/guides/blockchain-and-digital-identity-ultimate-guide/)
     * [Workshop: Understanding Identity Tokens and ERC 725 - Blockchain Courses](https://courses.blockgeeks.com/course/understanding-identity-tokens-and-erc-725/)
     * [Identity smart contract using ERC 725](https://blockgeeks.com/abg/identity-smart-contract-using-erc-725/)

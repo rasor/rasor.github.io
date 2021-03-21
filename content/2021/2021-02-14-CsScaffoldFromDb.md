@@ -1,9 +1,9 @@
 Title: Scaffolding DB layer from DB
 Status: published
 Date: 2021-02-14 00:00
-Modified: 2021-03-20 00:00
+Modified: 2021-03-21 00:00
 Category: Develop
-Tags: #csharp, #ef, #db, #mvc, #scaffold, #northwind
+Tags: #csharp, #ef, #db, #mvc, #scaffold, #northwind, #git, #sparsecheckout
 
 ## Intro
 

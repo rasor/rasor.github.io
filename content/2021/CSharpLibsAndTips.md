@@ -1,7 +1,7 @@
 Title:  C# libs and tips
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch
+Tags: #csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch, #git, #sparsecheckout
 
 ## C# librarie and Nuget packages
 
@@ -11,13 +11,28 @@ Tags: #csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch
 
 ## C# tips
 
+* Code
+    * [dotnet/runtime/libs](https://github.com/dotnet/runtime/tree/main/src/libraries)
 * Articles
     * Readonly structs: [Write safe and efficient C# code](https://docs.microsoft.com/en-us/dotnet/csharp/write-safe-efficient-code#conclusions)
     * Convert ValueTypes
         * Case ValueType: [How to safely cast by using pattern matching and the is and as operators](https://docs.microsoft.com/en-us/dotnet/csharp/how-to/safely-cast-using-pattern-matching-is-and-as-operators)
         * Object to value: [Tutorial: Build algorithms with pattern matching](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/pattern-matching#implement-the-basic-toll-calculations)
         * State checking: [Implement the commands with patterns](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/exploration/patterns-objects#implement-the-commands-with-patterns)
+        * [How to: Implement a Type Converter](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2013/ayybcxe5(v=vs.120))
     * Serialization
+        * Github: [System.Text.Json](https://github.com/dotnet/runtime/tree/main/src/libraries/System.Text.Json/src)  
+        ```ps1
+        # ps1
+        git clone -n git@github.com:dotnet/runtime.git
+        cd runtime
+        git config core.sparsecheckout true
+        echo "src/libraries/System.Text.Json/*" | out-file -append -encoding ascii .git/info/sparse-checkout
+        echo "src/libraries/System.Formats.Cbor/*" | out-file -append -encoding ascii .git/info/sparse-checkout
+        echo "src/libraries/System.Formats.Asn1/*" | out-file -append -encoding ascii .git/info/sparse-checkout
+        git checkout
+        ```
+        * Github: [dotnet/samples/serialization](https://github.com/dotnet/samples/tree/main/csharp/serialization)
         * [Custom serialization](https://docs.microsoft.com/en-us/dotnet/standard/serialization/custom-serialization)
             * [BinaryWriter Class (System.IO)](https://docs.microsoft.com/en-us/dotnet/api/system.io.binarywriter?view=net-5.0#examples)
         * [Define custom integer-based type?](https://stackoverflow.com/questions/7615113/define-custom-integer-based-type)
@@ -28,8 +43,11 @@ Tags: #csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch
     * Webservice streams
         * Async streams: [Generate and consume async streams](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/generate-consume-asynchronous-stream#async-streams-provide-a-better-way) // #github-GraphQl, #JObject, #JArray
         * [Create a REST client using .NET Core](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient) // #JsonSerializer.DeserializeAsync, #JsonPropertyName
-    * Array: [Explore ranges of data using indices and ranges](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes) // #`arr[..]`
-    * Capabilities with Interfaces: [Create mixin types using default interface methods](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/mixins-with-default-interface-methods#mix-and-match-capabilities)
+    * Arrays: 
+        * [Explore ranges of data using indices and ranges](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes) // #`arr[..]`
+        * byte[]:
+            * System .IsLittleEndian: [How to convert a byte array to an int - C# Programming Guide](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int)
+        * Capabilities with Interfaces: [Create mixin types using default interface methods](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/mixins-with-default-interface-methods#mix-and-match-capabilities)
     * "Multiple inheritace" / Interface methods: [Safely update interfaces using default interface methods in C#](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-methods-versions)
     * Authentication
         * [Cutting Edge - Cookies, Claims and Authentication in ASP.NET Core](https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/cutting-edge-cookies-claims-and-authentication-in-asp-net-core)
@@ -77,5 +95,6 @@ Tags: #csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch
         * [So devs understand](https://github.com/dotnet/standard/blob/master/docs/metaphor.md)
         * [FAQ](https://github.com/dotnet/standard/blob/master/docs/faq.md)
         * [.NET Standard - Demystifying .NET Core and .NET Standard](https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/net-standard-demystifying-net-core-and-net-standard)
+    * Invoke Py from C#: [Walkthrough: Creating and Using Dynamic Objects (C# and Visual Basic)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects)
 
 The End
