@@ -1,7 +1,7 @@
 Title: Fiat transfers
 Date: 2099-01-01 00:00
 Category: Biz
-Tags: #blockchain, #fiat, #sepa, #mnemoniccode, #u2f
+Tags: #blockchain, #fiat, #sepa, #mnemoniccode, #u2f, #defi, #wallet, #dec
 
 ## Crypto Shops ---------------------------
 
@@ -154,7 +154,7 @@ In this definition of Crypto banks the banks
 * Kucoin
 * Article: [One Person Drove Bitcoin from $150 to $1,000, Study Finds](https://www.calcalistech.com/ctech/articles/0,7340,L-3729964,00.html)
 
-## UniSwap DEXs, Lending protocols, Yield Farming ---------------------------
+## DeFi - UniSwap DEXs, Lending protocols, Yield Farming ---------------------------
 
 * Guides:
     * [DeFi Crypto Lending Platforms & Decentralized Finance News](https://defirate.com/)
@@ -188,6 +188,12 @@ In this definition of Crypto banks the banks
     * [Top 10 Liquidity Pools](https://pools.fyi/#/)
     * [DexWallet DeFi Tracker - The Open Financial System of the future. Today.](https://www.defitracker.io/)
     * [DeFi Pulse | The DeFi Leaderboard | Stats, Charts and Guides](https://defipulse.com/)
+* Webs
+    * [Instadapp](https://defi.instadapp.io/)
+* Wallets:
+    * [Dharma — Your Ethereum Wallet](https://www.dharma.io/)
+        * [dharmaprotocol/dharmaOS](https://github.com/dharmaprotocol/dharmaOS)
+        * [Dharma Blog -](https://blog.dharma.io/)
 
 ### HowTo Buy, Trade and calculate tax
 
