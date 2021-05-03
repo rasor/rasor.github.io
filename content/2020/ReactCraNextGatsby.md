@@ -1,7 +1,7 @@
 Title: React starters: CRA vs Next vs Gatsby
 Date: 2099-01-01 00:00
 Category: Develop
-Tags: #react, #gatsby, #next, #cra, #ssr
+Tags: #react, #gatsby, #next, #cra, #ssr, #tailwind, #capacitor, #ionic
 
 Next.js vs Gatsby vs create-react-app
 
@@ -17,6 +17,7 @@ Next.js vs Gatsby vs create-react-app
     * Razzle
     * CRL: CLI For creating React component libraries with (or without) TypeScript
 * [When to Use Static Generation (Gatsby) v.s. Server-side Rendering (Next)](https://next-learn-starter.now.sh/posts/ssg-ssr)
+* [Build Mobile Apps with Tailwind CSS, Next.js, Ionic Framework, and Capacitor](https://capacitorjs.com/blog/mobile-apps-with-tailwind-css-nextjs-ionic-and-capacitor)
 
 # Individual starters
 
