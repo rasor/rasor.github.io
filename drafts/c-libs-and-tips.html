@@ -28,13 +28,13 @@
 
 
 <meta name="author" content="rasor" />
-<meta name="description" content="C# librarie and Nuget packages mexx/FeatureSwitcher FeatureSwitcher emardini/FeatureSwitcherDemo C# tips Articles Readonly structs: Write safe and efficient C# code Convert ValueTypes Case ValueType: How to safely cast by using pattern matching and the is and as operators Object to value: Tutorial: Build algorithms with pattern matching State checking …" />
-<meta name="keywords" content="#csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch">
+<meta name="description" content="C# librarie and Nuget packages mexx/FeatureSwitcher FeatureSwitcher emardini/FeatureSwitcherDemo C# tips Code dotnet/runtime/libs Articles Readonly structs: Write safe and efficient C# code Convert ValueTypes Case ValueType: How to safely cast by using pattern matching and the is and as operators Object to value: Tutorial: Build algorithms with …" />
+<meta name="keywords" content="#csharp, #nuget, #fsm, #valuetype, #heap, #stack, #featureswitch, #git, #sparsecheckout">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
 <meta property="og:title" content="C# libs and tips"/>
-<meta property="og:description" content="C# librarie and Nuget packages mexx/FeatureSwitcher FeatureSwitcher emardini/FeatureSwitcherDemo C# tips Articles Readonly structs: Write safe and efficient C# code Convert ValueTypes Case ValueType: How to safely cast by using pattern matching and the is and as operators Object to value: Tutorial: Build algorithms with pattern matching State checking …"/>
+<meta property="og:description" content="C# librarie and Nuget packages mexx/FeatureSwitcher FeatureSwitcher emardini/FeatureSwitcherDemo C# tips Code dotnet/runtime/libs Articles Readonly structs: Write safe and efficient C# code Convert ValueTypes Case ValueType: How to safely cast by using pattern matching and the is and as operators Object to value: Tutorial: Build algorithms with …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="https://rasor.github.io/drafts/c-libs-and-tips.html"/>
 <meta property="og:type" content="article"/>
@@ -49,6 +49,8 @@
 <meta property="article:tag" content="#heap"/>
 <meta property="article:tag" content="#stack"/>
 <meta property="article:tag" content="#featureswitch"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#sparsecheckout"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; C# libs and tips</title>
@@ -151,34 +153,111 @@
 </ul>
 <h2>C# tips</h2>
 <ul>
+<li>Code<ul>
+<li><a href="https://github.com/dotnet/runtime/tree/main/src/libraries">dotnet/runtime/libs</a></li>
+</ul>
+</li>
 <li>Articles<ul>
 <li>Readonly structs: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/write-safe-efficient-code#conclusions">Write safe and efficient C# code</a></li>
 <li>Convert ValueTypes<ul>
 <li>Case ValueType: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/how-to/safely-cast-using-pattern-matching-is-and-as-operators">How to safely cast by using pattern matching and the is and as operators</a></li>
 <li>Object to value: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/pattern-matching#implement-the-basic-toll-calculations">Tutorial: Build algorithms with pattern matching</a></li>
 <li>State checking: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/exploration/patterns-objects#implement-the-commands-with-patterns">Implement the commands with patterns</a></li>
+<li><a href="https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2013/ayybcxe5(v=vs.120)">How to: Implement a Type Converter</a></li>
 </ul>
 </li>
 <li>Serialization<ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/custom-serialization">Custom serialization</a><ul>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.binarywriter?view=net-5.0#examples">BinaryWriter Class (System.IO)</a></li>
+<li>Github: <a href="https://github.com/dotnet/runtime/tree/main/src/libraries/System.Text.Json/src">System.Text.Json</a><br>
+```ps1</li>
 </ul>
-</li>
-<li><a href="https://stackoverflow.com/questions/7615113/define-custom-integer-based-type">Define custom integer-based type?</a></li>
-<li>Custom BinaryFormatter: <a href="https://www.codeproject.com/articles/151946/a-high-performance-binary-serializer-using-microso">A High Performance Binary Serializer using Microsoft Common Intermediate Language</a></li>
-<li>Custom Serializer using Attributes: <a href="https://codereview.stackexchange.com/questions/44625/writing-and-reading-of-a-custom-binary-protocol">Writing and reading of a custom binary protocol</a></li>
-<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.bufferedstream?view=net-5.0#examples">BufferedStream Class (System.IO)</a></li>
-<li>Warning on deserialization: <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide">BinaryFormatter security guide</a></li>
-</ul>
+<h1>ps1</h1>
+<p>git clone -n git@github.com:dotnet/runtime.git
+cd runtime
+git config core.sparsecheckout true
+echo "src/libraries/System.Text.Json/<em>" | out-file -append -encoding ascii .git/info/sparse-checkout
+echo "src/libraries/System.Formats.Cbor/</em>" | out-file -append -encoding ascii .git/info/sparse-checkout
+echo "src/libraries/System.Formats.Asn1/*" | out-file -append -encoding ascii .git/info/sparse-checkout
+git checkout
+```
+* Github: <a href="https://github.com/dotnet/samples/tree/main/csharp/serialization">dotnet/samples/serialization</a>
+* <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/custom-serialization">Custom serialization</a>
+    * <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.binarywriter?view=net-5.0#examples">BinaryWriter Class (System.IO)</a>
+* <a href="https://stackoverflow.com/questions/7615113/define-custom-integer-based-type">Define custom integer-based type?</a>
+* Custom BinaryFormatter: <a href="https://www.codeproject.com/articles/151946/a-high-performance-binary-serializer-using-microso">A High Performance Binary Serializer using Microsoft Common Intermediate Language</a>
+* Custom Serializer using Attributes: <a href="https://codereview.stackexchange.com/questions/44625/writing-and-reading-of-a-custom-binary-protocol">Writing and reading of a custom binary protocol</a>
+* <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.bufferedstream?view=net-5.0#examples">BufferedStream Class (System.IO)</a>
+* Warning on deserialization: <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide">BinaryFormatter security guide</a></p>
 </li>
 <li>Webservice streams<ul>
 <li>Async streams: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/generate-consume-asynchronous-stream#async-streams-provide-a-better-way">Generate and consume async streams</a> // #github-GraphQl, #JObject, #JArray</li>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient">Create a REST client using .NET Core</a> // #JsonSerializer.DeserializeAsync, #JsonPropertyName</li>
 </ul>
 </li>
-<li>Array: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes">Explore ranges of data using indices and ranges</a> // #<code>arr[..]</code></li>
+<li>Arrays: <ul>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/ranges-indexes">Explore ranges of data using indices and ranges</a> // #<code>arr[..]</code></li>
+<li>byte[]:<ul>
+<li>System .IsLittleEndian: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/how-to-convert-a-byte-array-to-an-int">How to convert a byte array to an int - C# Programming Guide</a></li>
+</ul>
+</li>
 <li>Capabilities with Interfaces: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/mixins-with-default-interface-methods#mix-and-match-capabilities">Create mixin types using default interface methods</a></li>
-<li>Interface methods: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-methods-versions">Safely update interfaces using default interface methods in C#</a></li>
+</ul>
+</li>
+<li>"Multiple inheritace" / Interface methods: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/default-interface-methods-versions">Safely update interfaces using default interface methods in C#</a></li>
+<li>Authentication<ul>
+<li><a href="https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/cutting-edge-cookies-claims-and-authentication-in-asp-net-core">Cutting Edge - Cookies, Claims and Authentication in ASP.NET Core</a><ul>
+<li>Flow:<ul>
+<li><code>User</code> -&gt; </li>
+<li><code>Claims</code> -&gt; </li>
+<li><code>ClaimsIdentity</code> (which claim is userid? which is role? use cookies (authscheme) or?) -&gt; </li>
+<li><code>ClaimsPrincipal</code> (1 principal can have many identities - think cards) -&gt; </li>
+<li>Authenticate<ul>
+<li>Can be challenge to e.g. Twitter</li>
+<li>Can optionally inspect and edit external principal: 
+<code>csharp
+app.UseXxxAuthentication(new Options(){
+    AuthenticationScheme = "Xxx", //where to do auth - e.g. Twitter
+    SingInScheme = "NextAuthScheme" //next auth after twitter
+});
+app.UseYyyyAuthentication(new Options(){
+    AuthenticationScheme = "NextAuthScheme", //where to do auth - e.g. cookie from Twitter
+    AutomaticAuthenticate = false
+});
+// where to manual do auth
+var props = new AuthenticationProperties(){
+    RedirectUri = "/account/external"  
+};
+// Controller
+public async Task&lt;IActionResult&gt; External(){
+    var principal = await HttpContext
+        .Authentication()
+        .AuthenticateAsync("ExternalCookie");
+    // Edit the principal
+    // ...
+    await HttpContext.Authentication.SignInAsync("Cookies", principal);
+    await HttpContext.Authentication.SignOutAsync("ExternalCookie "); // remove temp twitter cookie
+}</code></li>
+</ul>
+</li>
+<li>Endpoint (can require cookies, roles or other)<br>
+<code>csharp
+[Authorize(ActiveAuthenticationSchemes = "Bearer")]
+public class ApiController : Controller
+{
+    // Your API action methods here
+}</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>dotnet/standard<ul>
+<li><a href="https://github.com/dotnet/standard/blob/master/docs/metaphor.md">So devs understand</a></li>
+<li><a href="https://github.com/dotnet/standard/blob/master/docs/faq.md">FAQ</a></li>
+<li><a href="https://docs.microsoft.com/en-us/archive/msdn-magazine/2017/september/net-standard-demystifying-net-core-and-net-standard">.NET Standard - Demystifying .NET Core and .NET Standard</a></li>
+</ul>
+</li>
+<li>Invoke Py from C#: <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects">Walkthrough: Creating and Using Dynamic Objects (C# and Visual Basic)</a></li>
 </ul>
 </li>
 </ul>
@@ -193,6 +272,8 @@
       <a href="https://rasor.github.io/tag/heap.html">#heap</a>
       <a href="https://rasor.github.io/tag/stack.html">#stack</a>
       <a href="https://rasor.github.io/tag/featureswitch.html">#featureswitch</a>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+      <a href="https://rasor.github.io/tag/sparsecheckout.html">#sparsecheckout</a>
     </p>
   </div>
 

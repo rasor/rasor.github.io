@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-03-13T18:00:00+01:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-03-13T18:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-06-15T11:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-03-13T18:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
 &lt;p&gt;In this blog I want to start using Ubuntu 20.04 and see if it gives an ok …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
@@ -3869,7 +3869,7 @@ I don't think Azure Storage can handle SSR. Instead it is a great place for stat
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/cli/azure/overview?view=azure-cli-latest"&gt;Azure CLI 2.0&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/azure/app-service/app-service-cli-samples"&gt;Azure CLI Samples - App Service&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2019-04-19T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#npm"></category><category term="#git"></category><category term="#ionic"></category><category term="#ngx"></category><category term="#azure"></category><category term="#pwa"></category></entry><entry><title>Using NVM for Windows and Yarn</title><link href="https://rasor.github.io/using-nvm-for-windows-and-yarn.html" rel="alternate"></link><published>2017-10-08T11:00:00+02:00</published><updated>2021-06-15T11:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-10-08:/using-nvm-for-windows-and-yarn.html</id><summary type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;With Nvm For Windows you can stay in the shell …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it &lt;a href="https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/" target="_blank"&gt;here&lt;/a&gt;&lt;/p&gt;
@@ -3934,6 +3934,38 @@ If not you need to add &lt;code&gt;%ProgramFiles%\nodejs&lt;/code&gt; to &lt;cod
 &lt;p&gt;Well it seems like installation of nvm must be done to the default paths, since in the setup on my PC -g installs still ends up in a common place. I'll have to test that on another occation.&lt;/p&gt;
 &lt;p&gt;You might also need to set environment variable (for Express?):
 &lt;code&gt;NODE_ENV=%NVM_SYMLINK%&lt;/code&gt; and &lt;code&gt;refreshenv&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Using nvm for multiple users&lt;/h3&gt;
+&lt;p&gt;If you have two users on one PC that wants to use nvm then you must make some workaround for the symbolic link under program files.  &lt;/p&gt;
+&lt;p&gt;For the first user you would have &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# User1&lt;/span&gt;
+&lt;span class="c1"&gt;# PrintEnv # from bash&lt;/span&gt;
+&lt;span class="c1"&gt;# Set # from CMD&lt;/span&gt;
+&lt;span class="na"&gt;NVM_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;C:\Users\user1\AppData\Roaming\nvm&lt;/span&gt;
+&lt;span class="na"&gt;NVM_SYMLINK&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;C:\Program Files\nodejs&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;For user 2 you should make some local environment settings with these values&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# User2&lt;/span&gt;
+&lt;span class="c1"&gt;# PrintEnv # from bash&lt;/span&gt;
+&lt;span class="c1"&gt;# Set # from CMD&lt;/span&gt;
+&lt;span class="na"&gt;NVM_HOME&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;C:\Users\user2\AppData\Roaming\nvm&lt;/span&gt;
+&lt;span class="na"&gt;NVM_SYMLINK&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;C:\Program Files\nodejs-user2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then install nvm for user 2.&lt;/p&gt;
+&lt;p&gt;When you do &lt;code&gt;nvm install 8.6.0&lt;/code&gt; it should install node under &lt;code&gt;NVM_HOME&lt;/code&gt;.&lt;br&gt;
+When you do &lt;code&gt;nvm use 8.6.0&lt;/code&gt; it should add a symlink named &lt;code&gt;nodejs-user2&lt;/code&gt; under &lt;code&gt;C:\Program Files&lt;/code&gt; pointing to the selected node version under &lt;code&gt;NVM_HOME&lt;/code&gt;.  &lt;/p&gt;
+&lt;p&gt;If it does not work out you can also create the symlink from gitbash: &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash&lt;/span&gt;
+&lt;span class="c1"&gt;# Create a symnlink called nodejs-user2&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; /C/&lt;span class="s1"&gt;&amp;#39;Program Files&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;MSYS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;winsymlinks:nativestrict
+ln -s /C/Users/user2/AppData/Roaming/nvm/v8.6.0 nodejs-user2
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Using Yarn&lt;/h2&gt;
 &lt;p&gt;The npm v5 coming with node v8 has a package.lock file - yes idea taken from Yarn. Meaning we don't need Yarn anymore - unless you need other features from Yarn.&lt;br&gt;
 For npm v3 (node v6) we often need yarn.lock.&lt;/p&gt;
@@ -3986,7 +4018,7 @@ yarn install &lt;span class="c1"&gt;# same as npm install, but using yarn.lock: 
 &lt;li&gt;&lt;a href="https://docs.npmjs.com/cli" target="_blank"&gt;Npm commands&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/rasor/awesome-tables/blob/master/awesome-cli-on-windows.md#chocolatey" target="_blank"&gt;Awesome CLI - on Windows - Chocolatey&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category><category term="#chocolatay"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#nvm"></category><category term="#nodejs"></category><category term="#npm"></category><category term="#yarn"></category><category term="#chocolatay"></category><category term="#symlink"></category></entry><entry><title>Using Pelican Themes</title><link href="https://rasor.github.io/using-pelican-themes.html" rel="alternate"></link><published>2017-09-30T11:00:00+02:00</published><updated>2017-09-30T15:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2017-09-30:/using-pelican-themes.html</id><summary type="html">&lt;p&gt;This blog is part of a serie &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-blog-on-github-pages.html"&gt;Using Pelican blog on Github pages&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://rasor.github.io/using-pelican-themes.html"&gt;Using Pelican Themes&lt;/a&gt; (this blog)&lt;/li&gt;

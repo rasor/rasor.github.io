@@ -29,7 +29,7 @@
 
 <meta name="author" content="rasor" />
 <meta name="description" content="Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps. I blogged about it here With Nvm For Windows you can stay in the shell …" />
-<meta name="keywords" content="#nvm, #nodejs, #npm, #yarn, #chocolatay">
+<meta name="keywords" content="#nvm, #nodejs, #npm, #yarn, #chocolatay, #symlink">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/using-nvm-for-windows-and-yarn.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2017-10-08 11:00:00+02:00"/>
-<meta property="article:modified_time" content="2019-04-19 11:00:00+02:00"/>
+<meta property="article:modified_time" content="2021-06-15 11:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#nvm"/>
@@ -47,6 +47,7 @@
 <meta property="article:tag" content="#npm"/>
 <meta property="article:tag" content="#yarn"/>
 <meta property="article:tag" content="#chocolatay"/>
+<meta property="article:tag" content="#symlink"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; Using NVM for Windows and Yarn</title>
@@ -134,7 +135,7 @@
           Posted on October 08, 2017 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
 
       </br>
-        Updated: April 19, 2019
+        Updated: June 15, 2021
     </p>
   </header>
 
@@ -203,6 +204,38 @@ If not you need to add <code>%ProgramFiles%\nodejs</code> to <code>%path%</code>
 <p>Well it seems like installation of nvm must be done to the default paths, since in the setup on my PC -g installs still ends up in a common place. I'll have to test that on another occation.</p>
 <p>You might also need to set environment variable (for Express?):
 <code>NODE_ENV=%NVM_SYMLINK%</code> and <code>refreshenv</code></p>
+<h3>Using nvm for multiple users</h3>
+<p>If you have two users on one PC that wants to use nvm then you must make some workaround for the symbolic link under program files.  </p>
+<p>For the first user you would have </p>
+<div class="highlight"><pre><span></span><span class="c1"># User1</span>
+<span class="c1"># PrintEnv # from bash</span>
+<span class="c1"># Set # from CMD</span>
+<span class="na">NVM_HOME</span><span class="o">=</span><span class="s">C:\Users\user1\AppData\Roaming\nvm</span>
+<span class="na">NVM_SYMLINK</span><span class="o">=</span><span class="s">C:\Program Files\nodejs</span>
+</pre></div>
+
+
+<p>For user 2 you should make some local environment settings with these values</p>
+<div class="highlight"><pre><span></span><span class="c1"># User2</span>
+<span class="c1"># PrintEnv # from bash</span>
+<span class="c1"># Set # from CMD</span>
+<span class="na">NVM_HOME</span><span class="o">=</span><span class="s">C:\Users\user2\AppData\Roaming\nvm</span>
+<span class="na">NVM_SYMLINK</span><span class="o">=</span><span class="s">C:\Program Files\nodejs-user2</span>
+</pre></div>
+
+
+<p>Then install nvm for user 2.</p>
+<p>When you do <code>nvm install 8.6.0</code> it should install node under <code>NVM_HOME</code>.<br>
+When you do <code>nvm use 8.6.0</code> it should add a symlink named <code>nodejs-user2</code> under <code>C:\Program Files</code> pointing to the selected node version under <code>NVM_HOME</code>.  </p>
+<p>If it does not work out you can also create the symlink from gitbash: </p>
+<div class="highlight"><pre><span></span><span class="c1"># bash</span>
+<span class="c1"># Create a symnlink called nodejs-user2</span>
+<span class="nb">cd</span> /C/<span class="s1">&#39;Program Files&#39;</span>
+<span class="nb">export</span> <span class="nv">MSYS</span><span class="o">=</span>winsymlinks:nativestrict
+ln -s /C/Users/user2/AppData/Roaming/nvm/v8.6.0 nodejs-user2
+</pre></div>
+
+
 <h2>Using Yarn</h2>
 <p>The npm v5 coming with node v8 has a package.lock file - yes idea taken from Yarn. Meaning we don't need Yarn anymore - unless you need other features from Yarn.<br>
 For npm v3 (node v6) we often need yarn.lock.</p>
@@ -264,6 +297,7 @@ yarn install <span class="c1"># same as npm install, but using yarn.lock: downlo
       <a href="https://rasor.github.io/tag/npm.html">#npm</a>
       <a href="https://rasor.github.io/tag/yarn.html">#yarn</a>
       <a href="https://rasor.github.io/tag/chocolatay.html">#chocolatay</a>
+      <a href="https://rasor.github.io/tag/symlink.html">#symlink</a>
     </p>
   </div>
 

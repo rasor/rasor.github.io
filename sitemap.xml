@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2021-03-20T18:48:46-00:00</lastmod>
+<lastmod>2021-06-15T10:20:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2021-03-20T18:48:46-00:00</lastmod>
+<lastmod>2021-06-15T10:20:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2021-03-20T18:48:46-00:00</lastmod>
+<lastmod>2021-06-15T10:20:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2021-03-20T18:48:46-00:00</lastmod>
+<lastmod>2021-06-15T10:20:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2021-03-20T18:48:46-00:00</lastmod>
+<lastmod>2021-06-15T10:20:11-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -54,7 +54,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/scaffolding-db-layer-from-db.html</loc>
-<lastmod>2021-02-14T00:00:00+01:00</lastmod>
+<lastmod>2021-03-21T00:00:00+01:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -257,7 +257,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/using-nvm-for-windows-and-yarn.html</loc>
-<lastmod>2019-04-19T11:00:00+02:00</lastmod>
+<lastmod>2021-06-15T11:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -313,14 +313,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2021-03-14T15:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/category/devops.html</loc>
-<lastmod>2021-03-13T18:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -348,7 +348,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/npm.html</loc>
-<lastmod>2021-03-14T15:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -376,42 +376,56 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/csharp.html</loc>
-<lastmod>2021-02-14T00:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/ef.html</loc>
-<lastmod>2021-02-14T00:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/db.html</loc>
-<lastmod>2021-02-14T00:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/mvc.html</loc>
-<lastmod>2021-02-14T00:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/scaffold.html</loc>
-<lastmod>2021-02-14T00:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/northwind.html</loc>
-<lastmod>2021-02-14T00:00:00+00:50</lastmod>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/git.html</loc>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/sparsecheckout.html</loc>
+<lastmod>2021-03-21T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -648,13 +662,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>https://rasor.github.io/tag/git.html</loc>
-<lastmod>2020-06-26T19:00:00+00:50</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.6</priority>
-</url>
-
-<url>
 <loc>https://rasor.github.io/tag/gitlab.html</loc>
 <lastmod>2019-10-19T00:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
@@ -873,14 +880,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/yarn.html</loc>
-<lastmod>2020-06-26T19:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tag/nvm.html</loc>
-<lastmod>2020-06-26T19:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1118,7 +1125,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/nodejs.html</loc>
-<lastmod>2019-04-19T11:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1139,7 +1146,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/chocolatay.html</loc>
-<lastmod>2019-04-19T11:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.6</priority>
+</url>
+
+<url>
+<loc>https://rasor.github.io/tag/symlink.html</loc>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1195,7 +1209,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/author/rasor.html</loc>
-<lastmod>2021-03-14T15:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
