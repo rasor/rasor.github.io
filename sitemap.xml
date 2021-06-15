@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/</loc>
-<lastmod>2021-06-15T10:20:11-00:00</lastmod>
+<lastmod>2021-06-15T11:34:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/tags.html</loc>
-<lastmod>2021-06-15T10:20:11-00:00</lastmod>
+<lastmod>2021-06-15T11:34:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/categories.html</loc>
-<lastmod>2021-06-15T10:20:11-00:00</lastmod>
+<lastmod>2021-06-15T11:34:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/authors.html</loc>
-<lastmod>2021-06-15T10:20:11-00:00</lastmod>
+<lastmod>2021-06-15T11:34:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
 
 <url>
 <loc>https://rasor.github.io/archives.html</loc>
-<lastmod>2021-06-15T10:20:11-00:00</lastmod>
+<lastmod>2021-06-15T11:34:42-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -264,7 +264,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/using-ssh-keys-connect-to-ionic-pro.html</loc>
-<lastmod>2020-01-13T22:00:00+01:00</lastmod>
+<lastmod>2021-06-15T11:00:00+02:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
@@ -313,7 +313,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/category/develop.html</loc>
-<lastmod>2021-03-21T00:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -418,7 +418,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/git.html</loc>
-<lastmod>2021-03-21T00:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1132,7 +1132,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/ionic.html</loc>
-<lastmod>2020-01-13T22:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
@@ -1160,7 +1160,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>https://rasor.github.io/tag/ssh.html</loc>
-<lastmod>2020-01-13T22:00:00+00:50</lastmod>
+<lastmod>2021-06-15T11:00:00+00:50</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.6</priority>
 </url>
