@@ -1,7 +1,7 @@
 Title: Using SSH keys - Connect to Ionic Pro
 Status: published
 Date: 2017-10-03 20:30
-Modified: 2020-01-13 22:00
+Modified: 2021-06-15 11:00
 Category: Develop
 Tags: #git, #ssh, #ionic
 
@@ -176,5 +176,8 @@ ssh-add -l
 
 * <http://ionicframework.com/docs/pro/basics/getting-started/>{:target="_blank"}
 * <https://github.com/PowerShell/Win32-OpenSSH/wiki/ssh.exe-examples>{:target="_blank"}
+* [How to Setup SSH Authentication for Git Bash on Windows](https://dev.to/bsara/how-to-setup-ssh-authentication-for-git-bash-on-windows-a63)
+* Scripts: [Setup ssh auth on windows](https://gist.github.com/rasor/3970bf55838c0f53f77ba2e5f350ed66)
+* [LinuxKubuntuInstall - Git](https://github.com/rasor/rasor.github.io/blob/pelican/content/2020/LinuxKubuntuInstall.md#git)
 
 The End
