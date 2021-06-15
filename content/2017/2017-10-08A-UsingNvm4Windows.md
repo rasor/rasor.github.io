@@ -1,9 +1,9 @@
 Title: Using NVM for Windows and Yarn
 Status: published
 Date: 2017-10-08 11:00
-Modified: 2019-04-19 11:00
+Modified: 2021-06-15 11:00
 Category: DevOps
-Tags: #nvm, #nodejs, #npm, #yarn, #chocolatay
+Tags: #nvm, #nodejs, #npm, #yarn, #chocolatay, #symlink
 
 Microsoft created Taco (Tools for Apache Cordova) - a set of Node.js tools with specific versions. It was to be used from within Visual Studio, so they knew what was global in their Cordova apps.
 I blogged about it [here](https://rasor.wordpress.com/2017/03/13/ionic-in-visual-studio-2017/){:target="_blank"}
@@ -70,6 +70,45 @@ Well it seems like installation of nvm must be done to the default paths, since 
 
 You might also need to set environment variable (for Express?):
 `NODE_ENV=%NVM_SYMLINK%` and `refreshenv`
+
+### Using nvm for multiple users
+
+If you have two users on one PC that wants to use nvm then you must make some workaround for the symbolic link under program files.  
+
+For the first user you would have 
+
+```ini
+# User1
+# PrintEnv # from bash
+# Set # from CMD
+NVM_HOME=C:\Users\user1\AppData\Roaming\nvm
+NVM_SYMLINK=C:\Program Files\nodejs
+```
+
+For user 2 you should make some local environment settings with these values
+
+```ini
+# User2
+# PrintEnv # from bash
+# Set # from CMD
+NVM_HOME=C:\Users\user2\AppData\Roaming\nvm
+NVM_SYMLINK=C:\Program Files\nodejs-user2
+```
+
+Then install nvm for user 2.
+
+When you do `nvm install 8.6.0` it should install node under `NVM_HOME`.  
+When you do `nvm use 8.6.0` it should add a symlink named `nodejs-user2` under `C:\Program Files` pointing to the selected node version under `NVM_HOME`.  
+
+If it does not work out you can also create the symlink from gitbash: 
+
+```bash
+# bash
+# Create a symnlink called nodejs-user2
+cd /C/'Program Files'
+export MSYS=winsymlinks:nativestrict
+ln -s /C/Users/user2/AppData/Roaming/nvm/v8.6.0 nodejs-user2
+```
 
 ## Using Yarn
 
