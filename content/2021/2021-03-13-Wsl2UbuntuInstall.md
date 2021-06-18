@@ -1,9 +1,9 @@
 Title: Install apps on Ubuntu on Wsl2 in Windows 10
 Status: published
 Date: 2021-03-13 00:00
-Modified: 2021-03-13 18:00
+Modified: 2021-06-18 12:00
 Category: DevOps
-Tags: #ubuntu, #wsl2, #win10
+Tags: #ubuntu, #wsl2, #win10, #git, #ssh, #nvm, #nodejs
 
 ## Intro
 
@@ -37,8 +37,35 @@ wsl -l -v
 # Set Ubunto default
 wsl --set-default Ubuntu-20.04
 ```
+### Udate to WSL2
 
-And you can see it in VSCode
+In case WSL Version 2 is not default then you need to download WSL2 update, set WSL2 default and finally change your distro to using WSL2.  
+
+Verify that you are not running WSL2:
+
+```bash
+wsl -l -v
+#   NAME            STATE           VERSION
+# * Ubuntu-20.04    Stopped         1
+```
+
+* [Download the Linux kernel update package](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package) and install it.
+
+```bash
+# with Linux kernel update package installed
+# Update your distro to WSL2
+wsl --set-version Ubuntu-20.04 2
+
+# wait a while.....
+
+wsl -l -v
+#   NAME            STATE           VERSION
+# * Ubuntu-20.04    Stopped         2
+```
+
+### Using WSL from VSCode
+
+You can see your WSL distros in VSCode  
 ![Ubuntu is now Default distro in WSL2](../img/2021/2021-03-13-wsl2-05.png)  
 
 Next you should right-click the distro and `Connect to WSL`.  
@@ -116,6 +143,7 @@ So from VSCode rather like to use SSH access (opposed to HTTPS access).
 Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  
 
 Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode
+
 * Ref: 
 [Version Control in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code)
 * But you might get it working by [Storing SSH key passphrase in KDE Wallet](https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases)
