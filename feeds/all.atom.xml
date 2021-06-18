@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-06-15T11:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Testing templates from NEAR blockchain</title><link href="https://rasor.github.io/testing-templates-from-near-blockchain.html" rel="alternate"></link><published>2021-03-14T00:00:00+01:00</published><updated>2021-03-14T15:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-14:/testing-templates-from-near-blockchain.html</id><summary type="html">&lt;p&gt;&lt;em&gt;(The code for this blog is located &lt;a href="https://github.com/rasor/near-app-default-react"&gt;here&lt;/a&gt;)&lt;/em&gt;  &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/all.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-06-18T12:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Testing templates from NEAR blockchain</title><link href="https://rasor.github.io/testing-templates-from-near-blockchain.html" rel="alternate"></link><published>2021-03-14T00:00:00+01:00</published><updated>2021-03-14T15:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-14:/testing-templates-from-near-blockchain.html</id><summary type="html">&lt;p&gt;&lt;em&gt;(The code for this blog is located &lt;a href="https://github.com/rasor/near-app-default-react"&gt;here&lt;/a&gt;)&lt;/em&gt;  &lt;/p&gt;
 &lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;For the blockchain &lt;a href="https://docs.near.org/docs/develop/basics/getting-started"&gt;NEAR protocol&lt;/a&gt; there is a npm starter template that makes it easy to start to write web-wallets that uses the blockchain.  &lt;/p&gt;
 &lt;p&gt;First I want to see the React template with AssemblyScript smart contract.&lt;br&gt;
@@ -206,7 +206,7 @@ As you can see you could also have chosen to use a Ledger as a HW device for you
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="https://borsh.io/"&gt;Borsh&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#blockchain"></category><category term="#near"></category><category term="#npm"></category></entry><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-03-13T18:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="Develop"></category><category term="#blockchain"></category><category term="#near"></category><category term="#npm"></category></entry><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-06-18T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
 &lt;p&gt;In this blog I want to start using Ubuntu 20.04 and see if it gives an ok …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
@@ -235,7 +235,32 @@ wsl --set-default Ubuntu-20.04
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;And you can see it in VSCode
+&lt;h3&gt;Udate to WSL2&lt;/h3&gt;
+&lt;p&gt;In case WSL Version 2 is not default then you need to download WSL2 update, set WSL2 default and finally change your distro to using WSL2.  &lt;/p&gt;
+&lt;p&gt;Verify that you are not running WSL2:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wsl -l -v
+&lt;span class="c1"&gt;#   NAME            STATE           VERSION&lt;/span&gt;
+&lt;span class="c1"&gt;# * Ubuntu-20.04    Stopped         1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package"&gt;Download the Linux kernel update package&lt;/a&gt; and install it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# with Linux kernel update package installed&lt;/span&gt;
+&lt;span class="c1"&gt;# Update your distro to WSL2&lt;/span&gt;
+wsl --set-version Ubuntu-20.04 &lt;span class="m"&gt;2&lt;/span&gt;
+
+&lt;span class="c1"&gt;# wait a while.....&lt;/span&gt;
+
+wsl -l -v
+&lt;span class="c1"&gt;#   NAME            STATE           VERSION&lt;/span&gt;
+&lt;span class="c1"&gt;# * Ubuntu-20.04    Stopped         2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Using WSL from VSCode&lt;/h3&gt;
+&lt;p&gt;You can see your WSL distros in VSCode&lt;br&gt;
 &lt;img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png"&gt;  &lt;/p&gt;
 &lt;p&gt;Next you should right-click the distro and &lt;code&gt;Connect to WSL&lt;/code&gt;.&lt;br&gt;
 This will open up a new VSCode which is directly connected to your WSL, so you can browse its files, edit the files and run the terminal.  &lt;/p&gt;
@@ -304,10 +329,12 @@ git config --list
 &lt;p&gt;If you use 2FA on github, then SSH access with a private key avoids having a &lt;code&gt;Personal Access Token&lt;/code&gt; to risk to loose and having to cache. More info on &lt;a href="https://help.github.com/en/articles/which-remote-url-should-i-use#cloning-with-ssh-urls"&gt;Which remote URL should I use?&lt;/a&gt;.&lt;br&gt;
 So from VSCode rather like to use SSH access (opposed to HTTPS access).&lt;br&gt;
 Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  &lt;/p&gt;
-&lt;p&gt;Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode
-* Ref: 
-&lt;a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code"&gt;Version Control in Visual Studio Code&lt;/a&gt;
-* But you might get it working by &lt;a href="https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases"&gt;Storing SSH key passphrase in KDE Wallet&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ref: 
+&lt;a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code"&gt;Version Control in Visual Studio Code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;But you might get it working by &lt;a href="https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases"&gt;Storing SSH key passphrase in KDE Wallet&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# bash&lt;/span&gt;
 &lt;span class="c1"&gt;# Check for existing SSH keys&lt;/span&gt;
 ls -al ~/.ssh
@@ -476,7 +503,7 @@ nvm list
 
 
 &lt;p&gt;Great - now I have a fine start with git, python and nodejs in my Ubuntu box on Windows :-)&lt;/p&gt;
-&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#ubuntu"></category><category term="#wsl2"></category><category term="#win10"></category></entry><entry><title>Scaffolding DB layer from DB</title><link href="https://rasor.github.io/scaffolding-db-layer-from-db.html" rel="alternate"></link><published>2021-02-14T00:00:00+01:00</published><updated>2021-03-21T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-02-14:/scaffolding-db-layer-from-db.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;The End&lt;/p&gt;</content><category term="DevOps"></category><category term="#ubuntu"></category><category term="#wsl2"></category><category term="#win10"></category><category term="#git"></category><category term="#ssh"></category><category term="#nvm"></category><category term="#nodejs"></category></entry><entry><title>Scaffolding DB layer from DB</title><link href="https://rasor.github.io/scaffolding-db-layer-from-db.html" rel="alternate"></link><published>2021-02-14T00:00:00+01:00</published><updated>2021-03-21T00:00:00+01:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-02-14:/scaffolding-db-layer-from-db.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;ASP.NET MVC has build-in scaffolding enabling you to generate a frontend from a DB with a snap, so you can browse your DB. This has been a feature since around 2010.  &lt;/p&gt;
 &lt;p&gt;It is a great feature to use for PoCs and demos.  &lt;/p&gt;
 &lt;p&gt;In this blog I'll use Northwind …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;

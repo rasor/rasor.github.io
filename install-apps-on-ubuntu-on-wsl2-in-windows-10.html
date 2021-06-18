@@ -29,7 +29,7 @@
 
 <meta name="author" content="rasor" />
 <meta name="description" content="Intro This blog is a continuation from Install Docker Desktop on Windows 10 Home - including WSL, where I installed WSL2 on a Windows 10 laptop including openSUSE-Leap-15-1 as default distro in WSL2. In this blog I want to start using Ubuntu 20.04 and see if it gives an ok …" />
-<meta name="keywords" content="#ubuntu, #wsl2, #win10">
+<meta name="keywords" content="#ubuntu, #wsl2, #win10, #git, #ssh, #nvm, #nodejs">
 
 
 <meta property="og:site_name" content="Rasor's Tech Blog"/>
@@ -39,12 +39,16 @@
 <meta property="og:url" content="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2021-03-13 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2021-03-13 18:00:00+01:00"/>
+<meta property="article:modified_time" content="2021-06-18 12:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#ubuntu"/>
 <meta property="article:tag" content="#wsl2"/>
 <meta property="article:tag" content="#win10"/>
+<meta property="article:tag" content="#git"/>
+<meta property="article:tag" content="#ssh"/>
+<meta property="article:tag" content="#nvm"/>
+<meta property="article:tag" content="#nodejs"/>
 <meta property="og:image" content="//s.gravatar.com/avatar/5b6cf6c4e0fa216452dccc8158bf673f?s=120">
 
   <title>Rasor's Tech Blog &ndash; Install apps on Ubuntu on Wsl2 in Windows 10</title>
@@ -132,7 +136,7 @@
           Posted on March 13, 2021 in <a href="https://rasor.github.io/category/devops.html">DevOps</a>
 
       </br>
-        Updated: March 13, 2021
+        Updated: June 18, 2021
     </p>
   </header>
 
@@ -165,7 +169,32 @@ wsl --set-default Ubuntu-20.04
 </pre></div>
 
 
-<p>And you can see it in VSCode
+<h3>Udate to WSL2</h3>
+<p>In case WSL Version 2 is not default then you need to download WSL2 update, set WSL2 default and finally change your distro to using WSL2.  </p>
+<p>Verify that you are not running WSL2:</p>
+<div class="highlight"><pre><span></span>wsl -l -v
+<span class="c1">#   NAME            STATE           VERSION</span>
+<span class="c1"># * Ubuntu-20.04    Stopped         1</span>
+</pre></div>
+
+
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-4---download-the-linux-kernel-update-package">Download the Linux kernel update package</a> and install it.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="c1"># with Linux kernel update package installed</span>
+<span class="c1"># Update your distro to WSL2</span>
+wsl --set-version Ubuntu-20.04 <span class="m">2</span>
+
+<span class="c1"># wait a while.....</span>
+
+wsl -l -v
+<span class="c1">#   NAME            STATE           VERSION</span>
+<span class="c1"># * Ubuntu-20.04    Stopped         2</span>
+</pre></div>
+
+
+<h3>Using WSL from VSCode</h3>
+<p>You can see your WSL distros in VSCode<br>
 <img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png">  </p>
 <p>Next you should right-click the distro and <code>Connect to WSL</code>.<br>
 This will open up a new VSCode which is directly connected to your WSL, so you can browse its files, edit the files and run the terminal.  </p>
@@ -234,10 +263,12 @@ git config --list
 <p>If you use 2FA on github, then SSH access with a private key avoids having a <code>Personal Access Token</code> to risk to loose and having to cache. More info on <a href="https://help.github.com/en/articles/which-remote-url-should-i-use#cloning-with-ssh-urls">Which remote URL should I use?</a>.<br>
 So from VSCode rather like to use SSH access (opposed to HTTPS access).<br>
 Since you can just regenerate a new SSH key pair, then you don't have to save your private key for later use.  </p>
-<p>Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode
-* Ref: 
-<a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code">Version Control in Visual Studio Code</a>
-* But you might get it working by <a href="https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases">Storing SSH key passphrase in KDE Wallet</a></p>
+<p>Warning: You should not give the SSH key a passphrase to avoid trouble in VSCode</p>
+<ul>
+<li>Ref: 
+<a href="https://code.visualstudio.com/docs/editor/versioncontrol#_can-i-use-ssh-git-authentication-with-vs-code">Version Control in Visual Studio Code</a></li>
+<li>But you might get it working by <a href="https://wiki.archlinux.org/index.php/KDE_Wallet#Using_the_KDE_Wallet_to_store_ssh_key_passphrases">Storing SSH key passphrase in KDE Wallet</a></li>
+</ul>
 <div class="highlight"><pre><span></span><span class="c1"># bash</span>
 <span class="c1"># Check for existing SSH keys</span>
 ls -al ~/.ssh
@@ -413,6 +444,10 @@ nvm list
       <a href="https://rasor.github.io/tag/ubuntu.html">#ubuntu</a>
       <a href="https://rasor.github.io/tag/wsl2.html">#wsl2</a>
       <a href="https://rasor.github.io/tag/win10.html">#win10</a>
+      <a href="https://rasor.github.io/tag/git.html">#git</a>
+      <a href="https://rasor.github.io/tag/ssh.html">#ssh</a>
+      <a href="https://rasor.github.io/tag/nvm.html">#nvm</a>
+      <a href="https://rasor.github.io/tag/nodejs.html">#nodejs</a>
     </p>
   </div>
 
