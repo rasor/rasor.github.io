@@ -1,7 +1,7 @@
 Title: Install apps on Ubuntu on Wsl2 in Windows 10
 Status: published
 Date: 2021-03-13 00:00
-Modified: 2021-06-18 12:00
+Modified: 2021-06-18 22:00
 Category: DevOps
 Tags: #ubuntu, #wsl2, #win10, #git, #ssh, #nvm, #nodejs
 
@@ -70,6 +70,22 @@ You can see your WSL distros in VSCode
 
 Next you should right-click the distro and `Connect to WSL`.  
 This will open up a new VSCode which is directly connected to your WSL, so you can browse its files, edit the files and run the terminal.  
+
+## Copying files from Windows to WSL
+
+When using CMD you can copy to WSL home dir
+
+```bash
+# CMD (in Windows)
+C:\Users\rasorwin>wsl
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ # still in a windows folder!
+# copy a file from homedir of windows to homedir of wsl
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ cp somewinfile.text ~/somewinfile.text
+# Install dos2unix into wsl
+sudo apt install dos2unix
+# convert the winfile to a unixfile
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ dos2unix ~/somewinfile.text ~/someunixfile.text
+```
 
 ## Install apps into the distro
 
@@ -318,6 +334,8 @@ nvm list
 # ->     v14.16.0
 # default -> 14.16.0 (-> v14.16.0)
 ```
+
+
 
 Great - now I have a fine start with git, python and nodejs in my Ubuntu box on Windows :-)
 
