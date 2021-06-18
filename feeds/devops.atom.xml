@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-06-18T12:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-06-18T12:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Rasor's Tech Blog - DevOps</title><link href="https://rasor.github.io/" rel="alternate"></link><link href="https://rasor.github.io/feeds/devops.atom.xml" rel="self"></link><id>https://rasor.github.io/</id><updated>2021-06-18T22:00:00+02:00</updated><subtitle>... still playing with this Lego</subtitle><entry><title>Install apps on Ubuntu on Wsl2 in Windows 10</title><link href="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html" rel="alternate"></link><published>2021-03-13T00:00:00+01:00</published><updated>2021-06-18T22:00:00+02:00</updated><author><name>rasor</name></author><id>tag:rasor.github.io,2021-03-13:/install-apps-on-ubuntu-on-wsl2-in-windows-10.html</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
 &lt;p&gt;In this blog I want to start using Ubuntu 20.04 and see if it gives an ok …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;This blog is a continuation from &lt;a href="https://rasor.github.io/docker-desktop-for-windows-on-wsl2-part-01.html"&gt;Install Docker Desktop on Windows 10 Home - including WSL&lt;/a&gt;, where I installed WSL2 on a Windows 10 laptop including &lt;a href="https://www.microsoft.com/da-dk/p/opensuse-leap-15-1/9njfzk00fgkv?rtc=1&amp;amp;activetab=pivot:overviewtab"&gt;openSUSE-Leap-15-1&lt;/a&gt; as default distro in WSL2.  &lt;/p&gt;
@@ -57,6 +57,20 @@ wsl -l -v
 &lt;img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png"&gt;  &lt;/p&gt;
 &lt;p&gt;Next you should right-click the distro and &lt;code&gt;Connect to WSL&lt;/code&gt;.&lt;br&gt;
 This will open up a new VSCode which is directly connected to your WSL, so you can browse its files, edit the files and run the terminal.  &lt;/p&gt;
+&lt;h2&gt;Copying files from Windows to WSL&lt;/h2&gt;
+&lt;p&gt;When using CMD you can copy to WSL home dir&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# CMD (in Windows)&lt;/span&gt;
+C:&lt;span class="se"&gt;\U&lt;/span&gt;sers&lt;span class="se"&gt;\r&lt;/span&gt;asorwin&amp;gt;wsl
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ &lt;span class="c1"&gt;# still in a windows folder!&lt;/span&gt;
+&lt;span class="c1"&gt;# copy a file from homedir of windows to homedir of wsl&lt;/span&gt;
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ cp somewinfile.text ~/somewinfile.text
+&lt;span class="c1"&gt;# Install dos2unix into wsl&lt;/span&gt;
+sudo apt install dos2unix
+&lt;span class="c1"&gt;# convert the winfile to a unixfile&lt;/span&gt;
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ dos2unix ~/somewinfile.text ~/someunixfile.text
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;h2&gt;Install apps into the distro&lt;/h2&gt;
 &lt;h3&gt;What's in the box?&lt;/h3&gt;
 &lt;p&gt;Open a terminal. You will be in your home folder &lt;code&gt;~&lt;/code&gt;.  &lt;/p&gt;

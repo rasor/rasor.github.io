@@ -39,7 +39,7 @@
 <meta property="og:url" content="https://rasor.github.io/install-apps-on-ubuntu-on-wsl2-in-windows-10.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2021-03-13 00:00:00+01:00"/>
-<meta property="article:modified_time" content="2021-06-18 12:00:00+02:00"/>
+<meta property="article:modified_time" content="2021-06-18 22:00:00+02:00"/>
 <meta property="article:author" content="https://rasor.github.io/author/rasor.html">
 <meta property="article:section" content="DevOps"/>
 <meta property="article:tag" content="#ubuntu"/>
@@ -198,6 +198,20 @@ wsl -l -v
 <img alt="Ubuntu is now Default distro in WSL2" src="../img/2021/2021-03-13-wsl2-05.png">  </p>
 <p>Next you should right-click the distro and <code>Connect to WSL</code>.<br>
 This will open up a new VSCode which is directly connected to your WSL, so you can browse its files, edit the files and run the terminal.  </p>
+<h2>Copying files from Windows to WSL</h2>
+<p>When using CMD you can copy to WSL home dir</p>
+<div class="highlight"><pre><span></span><span class="c1"># CMD (in Windows)</span>
+C:<span class="se">\U</span>sers<span class="se">\r</span>asorwin&gt;wsl
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ <span class="c1"># still in a windows folder!</span>
+<span class="c1"># copy a file from homedir of windows to homedir of wsl</span>
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ cp somewinfile.text ~/somewinfile.text
+<span class="c1"># Install dos2unix into wsl</span>
+sudo apt install dos2unix
+<span class="c1"># convert the winfile to a unixfile</span>
+rasor@DESKTOP:/mnt/c/Users/rasorwin$ dos2unix ~/somewinfile.text ~/someunixfile.text
+</pre></div>
+
+
 <h2>Install apps into the distro</h2>
 <h3>What's in the box?</h3>
 <p>Open a terminal. You will be in your home folder <code>~</code>.  </p>
